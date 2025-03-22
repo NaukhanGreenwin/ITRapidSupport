@@ -20,6 +20,7 @@ import Cookies from './pages/Cookies';
 import NotFound from './pages/NotFound';
 import Accessibility from './pages/Accessibility';
 import ResourceDetails from './pages/ResourceDetails';
+import TorontoSecurityServices from './pages/TorontoSecurityServices';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -50,6 +51,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/security-assessment" element={<SecurityAssessment />} />
+            <Route path="/toronto-security-services" element={<TorontoSecurityServices />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:id" element={<ResourceDetails />} />
             <Route path="/privacy" element={<Privacy />} />
