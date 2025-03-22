@@ -15,15 +15,15 @@ export default function Footer() {
               Your trusted partner in enterprise IT security. Protecting businesses in the digital age.
             </p>
             <div className="flex space-x-4 mb-4">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors bg-slate-800 p-3 rounded-full">
+              <a href="https://www.linkedin.com/company/itrapidsupport" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors bg-slate-800 p-3 rounded-full">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors bg-slate-800 p-3 rounded-full">
+              <a href="https://twitter.com/itrapidsupport" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors bg-slate-800 p-3 rounded-full">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors bg-slate-800 p-3 rounded-full">
+              <a href="https://facebook.com/itrapidsupport" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors bg-slate-800 p-3 rounded-full">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
