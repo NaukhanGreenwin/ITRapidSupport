@@ -71,12 +71,13 @@ export default function Header() {
     }
   };
 
+  // Optimized mobile menu animation for faster response
   const mobileMenuVariants = {
     hidden: {
       opacity: 0,
       height: 0,
       transition: {
-        duration: 0.2,
+        duration: 0.15, // Reduced from 0.2
         ease: "easeInOut"
       }
     },
@@ -84,42 +85,43 @@ export default function Header() {
       opacity: 1,
       height: "auto",
       transition: {
-        duration: 0.3,
+        duration: 0.2, // Reduced from 0.3
         ease: "easeInOut",
         when: "beforeChildren",
-        staggerChildren: 0.05
+        staggerChildren: 0.03 // Reduced from 0.05
       }
     },
     exit: {
       opacity: 0,
       height: 0,
       transition: {
-        duration: 0.2,
+        duration: 0.15, // Reduced from 0.2
         ease: "easeInOut",
         when: "afterChildren",
-        staggerChildren: 0.05,
+        staggerChildren: 0.03, // Reduced from 0.05
         staggerDirection: -1
       }
     }
   };
 
+  // Optimized mobile menu item animation
   const mobileMenuItemVariants = {
     hidden: {
       opacity: 0,
-      y: 10,
+      y: 5, // Reduced from 10
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.2
+        duration: 0.15 // Reduced from 0.2
       }
     },
     exit: {
       opacity: 0,
-      y: 10,
+      y: 5, // Reduced from 10
       transition: {
-        duration: 0.1
+        duration: 0.08 // Reduced from 0.1
       }
     }
   };
@@ -150,8 +152,8 @@ export default function Header() {
                   setSolutionsDropdownOpen(!solutionsDropdownOpen);
                   if (resourcesDropdownOpen) setResourcesDropdownOpen(false);
                 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
+                aria-expanded={solutionsDropdownOpen}
+                aria-controls="solutions-dropdown"
               >
                 Solutions <ChevronDown className="ml-1 h-4 w-4" />
               </motion.button>
@@ -159,7 +161,8 @@ export default function Header() {
               <AnimatePresence>
                 {solutionsDropdownOpen && (
                   <motion.div 
-                    className="absolute top-full left-0 w-56 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 origin-top"
+                    id="solutions-dropdown"
+                    className="absolute top-full left-0 w-48 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 origin-top"
                     initial="hidden"
                     animate="visible"
                     exit="exit"
@@ -169,7 +172,7 @@ export default function Header() {
                       className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                       onClick={() => setSolutionsDropdownOpen(false)}
                     >
-                      All Solutions
+                      Enterprise Solutions
                     </Link>
                     <Link to="/security-assessment" 
                       className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
@@ -195,8 +198,8 @@ export default function Header() {
                   setResourcesDropdownOpen(!resourcesDropdownOpen);
                   if (solutionsDropdownOpen) setSolutionsDropdownOpen(false);
                 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
+                aria-expanded={resourcesDropdownOpen}
+                aria-controls="resources-dropdown"
               >
                 Resources <ChevronDown className="ml-1 h-4 w-4" />
               </motion.button>
@@ -247,14 +250,14 @@ export default function Header() {
             </Button>
           </div>
           
-          {/* Mobile menu button */}
+          {/* Mobile menu button - Optimized for faster response */}
           <div className="md:hidden flex items-center space-x-2">
             <motion.button 
               id="mobile-menu-button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-700 hover:text-red-600 transition-colors p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.1 }}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
               aria-label={mobileMenuOpen ? "Close main menu" : "Open main menu"}
@@ -323,15 +326,6 @@ export default function Header() {
               <motion.div variants={mobileMenuItemVariants}>
                 <button
                   className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
-                  onClick={() => handleNavigation("/blog")}
-                >
-                  Blog
-                </button>
-              </motion.div>
-              
-              <motion.div variants={mobileMenuItemVariants}>
-                <button
-                  className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
                   onClick={() => handleNavigation("/resources")}
                 >
                   Resources
@@ -365,12 +359,14 @@ export default function Header() {
                 </button>
               </motion.div>
               
-              <motion.div variants={mobileMenuItemVariants} className="mt-6 pt-4 border-t border-gray-100">
+              <motion.div variants={mobileMenuItemVariants}>
                 <button
-                  className="block w-full py-4 px-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium text-center transition-colors text-lg"
+                  className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-t border-gray-100 pt-6 mt-4 text-lg"
                   onClick={() => handleNavigation("/contact")}
                 >
-                  Get Started
+                  <span className="px-4 py-2.5 bg-red-600 text-white rounded-lg inline-flex items-center justify-center">
+                    Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                  </span>
                 </button>
               </motion.div>
             </div>
