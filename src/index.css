@@ -33,22 +33,25 @@
     touch-action: manipulation;
   }
   
-  /* Custom active state for mobile touches */
+  /* Custom active state for mobile touches - faster response */
   .hover\:bg-gray-50:active,
   .hover\:bg-red-50:active {
     background-color: rgba(249, 250, 251, 0.8); /* light gray */
-    transition: background-color 0.1s;
+    transition: background-color 0.05s; /* Faster transition */
   }
   
   .hover\:text-red-600:active {
     color: #dc2626; /* red-600 */
+    transition: color 0.05s; /* Faster transition */
   }
   
-  /* Improve active state for mobile buttons */
-  button:active, 
-  a.bg-red-600:active {
-    transform: scale(0.98);
-    transition: transform 0.1s;
+  /* Improve active state for mobile buttons - no scale animation for faster response */
+  @media (max-width: 768px) {
+    button:active, 
+    a.bg-red-600:active {
+      transform: none; /* Remove scale animation for instant feedback */
+      transition: background-color 0.05s; /* Faster transition */
+    }
   }
   
   /* Improve mobile tappability */
@@ -60,6 +63,12 @@
     .md\:hidden a,
     .md\:hidden button {
       padding: 0.5rem;
+    }
+    
+    /* Ensure menu buttons are instantly responsive */
+    #mobile-menu-button,
+    .mobile-nav-button {
+      transition-duration: 0.05s;
     }
   }
 }

@@ -252,12 +252,10 @@ export default function Header() {
           
           {/* Mobile menu button - Optimized for faster response */}
           <div className="md:hidden flex items-center space-x-2">
-            <motion.button 
+            <button 
               id="mobile-menu-button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 hover:text-red-600 transition-colors p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-              whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.1 }}
+              className="text-gray-700 hover:text-red-600 transition-colors p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
               aria-label={mobileMenuOpen ? "Close main menu" : "Open main menu"}
@@ -267,7 +265,7 @@ export default function Header() {
               ) : (
                 <Menu className="h-7 w-7" />
               )}
-            </motion.button>
+            </button>
           </div>
         </div>
       </nav>
