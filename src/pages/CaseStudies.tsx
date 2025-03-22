@@ -79,10 +79,6 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
             </div>
           </div>
         )}
-        
-        <Link to={`/case-studies/${id}`} className="inline-flex items-center text-red-600 hover:text-red-700 font-medium">
-          Read full case study <ChevronRight className="ml-1 h-4 w-4" />
-        </Link>
       </div>
     </div>
   );
@@ -308,22 +304,10 @@ function CaseStudies() {
                   <span className="text-slate-400 ml-1">— Chief Information Security Officer</span>
                 </div>
               </div>
-              
-              <a 
-                href="#" 
-                className="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
-              >
-                Read Full Case Study <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
             </div>
             
             <div className="hidden md:block relative">
               <div className="absolute inset-0 bg-red-600/20 rounded-2xl backdrop-blur-sm transform -rotate-3"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1557597774-9d475d7c8301?auto=format&fit=crop&w=800&q=80" 
-                alt="Security Operations Center" 
-                className="rounded-2xl shadow-2xl relative z-10"
-              />
             </div>
           </div>
         </div>
