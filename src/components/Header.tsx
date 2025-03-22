@@ -213,12 +213,6 @@ export default function Header() {
                     exit="exit"
                     variants={dropdownVariants}
                   >
-                    <Link to="/blog" 
-                      className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
-                      onClick={() => setResourcesDropdownOpen(false)}
-                    >
-                      Blog
-                    </Link>
                     <Link to="/resources" 
                       className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                       onClick={() => setResourcesDropdownOpen(false)}

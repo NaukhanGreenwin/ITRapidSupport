@@ -63,7 +63,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       // Get page metadata for enhanced reporting
       const pageTitle = document.title || 'IT Rapid Support';
       const pageType = location.pathname === '/' ? 'home' : 
-                     location.pathname.includes('/blog/') ? 'article' :
                      location.pathname.includes('/services/') ? 'service' : 'page';
                      
       window.gtag('event', 'page_view', {

@@ -56,16 +56,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itrapidsupport.com/contact"/>
   </url>
   
-  <!-- Blog Pages -->
-  <url>
-    <loc>https://itrapidsupport.com/blog</loc>
-    <lastmod>2024-03-22T18:30:00+00:00</lastmod>
-    <priority>0.80</priority>
-    <changefreq>weekly</changefreq>
-    <xhtml:link rel="alternate" hreflang="en" href="https://itrapidsupport.com/blog"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itrapidsupport.com/blog"/>
-  </url>
-  
   <!-- Resources -->
   <url>
     <loc>https://itrapidsupport.com/resources</loc>

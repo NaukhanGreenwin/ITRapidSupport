@@ -46,7 +46,6 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link to="/about" className="text-slate-400 hover:text-white transition-colors block py-1">About Us</Link></li>
               <li><Link to="/careers" className="text-slate-400 hover:text-white transition-colors block py-1">Careers</Link></li>
-              <li><Link to="/blog" className="text-slate-400 hover:text-white transition-colors block py-1">Blog</Link></li>
               <li><Link to="/resources" className="text-slate-400 hover:text-white transition-colors block py-1">Resource Center</Link></li>
               <li><Link to="/faq" className="text-slate-400 hover:text-white transition-colors block py-1">FAQ</Link></li>
             </ul>
