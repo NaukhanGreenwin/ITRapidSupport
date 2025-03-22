@@ -244,7 +244,7 @@ export default function Header() {
           <div className="md:hidden flex items-center space-x-2">
             <motion.button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 hover:text-red-600 transition-colors p-2 rounded-lg"
+              className="text-gray-700 hover:text-red-600 transition-colors p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-expanded={mobileMenuOpen}
@@ -252,9 +252,9 @@ export default function Header() {
               aria-label={mobileMenuOpen ? "Close main menu" : "Open main menu"}
             >
               {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className="h-7 w-7" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="h-7 w-7" />
               )}
             </motion.button>
           </div>
@@ -278,7 +278,7 @@ export default function Header() {
             <div className="space-y-0 px-4 pb-6">
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/services" 
-                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Services
@@ -287,7 +287,7 @@ export default function Header() {
               
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/solutions" 
-                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Solutions
@@ -296,7 +296,7 @@ export default function Header() {
               
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/security-assessment" 
-                  className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
+                  className="block py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Security Assessment
@@ -305,7 +305,7 @@ export default function Header() {
               
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/case-studies" 
-                  className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
+                  className="block py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Case Studies
@@ -314,7 +314,7 @@ export default function Header() {
               
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/blog" 
-                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Blog
@@ -323,7 +323,7 @@ export default function Header() {
               
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/resources" 
-                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Resources
@@ -332,7 +332,7 @@ export default function Header() {
               
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/faq" 
-                  className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
+                  className="block py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   FAQ
@@ -341,7 +341,7 @@ export default function Header() {
               
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/about" 
-                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About
@@ -350,16 +350,16 @@ export default function Header() {
               
               <motion.div variants={mobileMenuItemVariants}>
                 <Link to="/careers" 
-                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Careers
                 </Link>
               </motion.div>
               
-              <motion.div variants={mobileMenuItemVariants} className="mt-4 pt-4 border-t border-gray-100">
+              <motion.div variants={mobileMenuItemVariants} className="mt-6 pt-4 border-t border-gray-100">
                 <Link to="/contact"
-                  className="block py-3 px-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium text-center transition-colors"
+                  className="block py-4 px-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium text-center transition-colors text-lg"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Started
