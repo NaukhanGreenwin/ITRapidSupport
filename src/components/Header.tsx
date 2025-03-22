@@ -243,6 +243,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <motion.button 
+              id="mobile-menu-button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-700 hover:text-red-600 transition-colors p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
               whileHover={{ scale: 1.05 }}

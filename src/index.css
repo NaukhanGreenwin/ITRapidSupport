@@ -10,6 +10,29 @@
   body {
     @apply antialiased;
   }
+  
+  /* Remove default tap highlight */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Custom active state for mobile touches */
+  .hover\:bg-gray-50:active,
+  .hover\:bg-red-50:active {
+    background-color: rgba(249, 250, 251, 0.8); /* light gray */
+    transition: background-color 0.1s;
+  }
+  
+  .hover\:text-red-600:active {
+    color: #dc2626; /* red-600 */
+  }
+  
+  /* Improve active state for mobile buttons */
+  button:active, 
+  a.bg-red-600:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
 }
 
 @keyframes float {
