@@ -5,15 +5,32 @@
 @layer base {
   html {
     font-family: 'Roboto Condensed', system-ui, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
   }
   
   body {
     @apply antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   /* Remove default tap highlight */
   * {
     -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Fix iOS Safari button behavior */
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Fix for iOS safari click events not triggering properly */
+  a, button {
+    cursor: pointer;
+    touch-action: manipulation;
   }
   
   /* Custom active state for mobile touches */
@@ -32,6 +49,18 @@
   a.bg-red-600:active {
     transform: scale(0.98);
     transition: transform 0.1s;
+  }
+  
+  /* Improve mobile tappability */
+  @media (max-width: 768px) {
+    a, button {
+      min-height: 44px; /* Apple's recommendation for touch targets */
+    }
+    
+    .md\:hidden a,
+    .md\:hidden button {
+      padding: 0.5rem;
+    }
   }
 }
 

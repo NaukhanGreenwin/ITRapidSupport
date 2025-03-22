@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeSwitcher from './ThemeSwitcher';
@@ -11,6 +11,7 @@ export default function Header() {
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -38,6 +39,12 @@ export default function Header() {
       document.body.style.overflow = '';
     };
   }, [mobileMenuOpen]);
+  
+  // Handle navigation with proper menu closing
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setMobileMenuOpen(false);
+  };
 
   const dropdownVariants = {
     hidden: { 
@@ -278,93 +285,93 @@ export default function Header() {
           >
             <div className="space-y-0 px-4 pb-6">
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/services" 
-                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
+                  onClick={() => handleNavigation("/services")}
                 >
                   Services
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/solutions" 
-                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
+                  onClick={() => handleNavigation("/solutions")}
                 >
                   Solutions
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/security-assessment" 
-                  className="block py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                  onClick={() => handleNavigation("/security-assessment")}
                 >
                   Security Assessment
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/case-studies" 
-                  className="block py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                  onClick={() => handleNavigation("/case-studies")}
                 >
                   Case Studies
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/blog" 
-                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
+                  onClick={() => handleNavigation("/blog")}
                 >
                   Blog
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/resources" 
-                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
+                  onClick={() => handleNavigation("/resources")}
                 >
                   Resources
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/faq" 
-                  className="block py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                  onClick={() => handleNavigation("/faq")}
                 >
                   FAQ
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/about" 
-                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
+                  onClick={() => handleNavigation("/about")}
                 >
                   About
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants}>
-                <Link to="/careers" 
-                  className="block py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
+                  onClick={() => handleNavigation("/careers")}
                 >
                   Careers
-                </Link>
+                </button>
               </motion.div>
               
               <motion.div variants={mobileMenuItemVariants} className="mt-6 pt-4 border-t border-gray-100">
-                <Link to="/contact"
-                  className="block py-4 px-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium text-center transition-colors text-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="block w-full py-4 px-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium text-center transition-colors text-lg"
+                  onClick={() => handleNavigation("/contact")}
                 >
                   Get Started
-                </Link>
+                </button>
               </motion.div>
             </div>
           </motion.div>

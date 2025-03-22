@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Search, Phone, Menu, Info } from 'lucide-react';
+import { Home, FileText, Phone, Menu, Briefcase } from 'lucide-react';
 
 const MobileNavBar: React.FC = () => {
   const location = useLocation();
@@ -18,18 +18,18 @@ const MobileNavBar: React.FC = () => {
         </Link>
         
         <Link to="/services" className={`flex flex-col items-center p-2 ${isActive('/services') ? 'text-red-600' : 'text-gray-600'}`}>
-          <Info className="h-5 w-5" />
+          <Briefcase className="h-5 w-5" />
           <span className="text-xs mt-1">Services</span>
+        </Link>
+        
+        <Link to="/case-studies" className={`flex flex-col items-center p-2 ${isActive('/case-studies') ? 'text-red-600' : 'text-gray-600'}`}>
+          <FileText className="h-5 w-5" />
+          <span className="text-xs mt-1">Case Studies</span>
         </Link>
         
         <Link to="/contact" className={`flex flex-col items-center p-2 ${isActive('/contact') ? 'text-red-600' : 'text-gray-600'}`}>
           <Phone className="h-5 w-5" />
           <span className="text-xs mt-1">Contact</span>
-        </Link>
-        
-        <Link to="/search" className={`flex flex-col items-center p-2 ${isActive('/search') ? 'text-red-600' : 'text-gray-600'}`}>
-          <Search className="h-5 w-5" />
-          <span className="text-xs mt-1">Search</span>
         </Link>
         
         <button 
