@@ -7,166 +7,7 @@ import PageTransition from '../components/PageTransition';
 import { Helmet } from 'react-helmet-async';
 import LazyImage from '../components/LazyImage';
 import SwipeContainer from '../components/SwipeContainer';
-
-// All blog posts data - in a real app this would come from an API or database
-const allBlogPosts = [
-  {
-    id: "1",
-    title: "The Rising Threat of Ransomware and How to Protect Your Organization",
-    content: [
-      "Ransomware attacks have increased by 150% in the last year, with organizations of all sizes falling victim to these devastating cyber threats. The average ransom payment has also increased, now exceeding $200,000 per incident, with some demands reaching millions of dollars.",
-      "But the ransom itself is only part of the cost. Organizations face significant downtime, recovery expenses, and potential reputational damage that can far exceed the ransom amount. Understanding this evolving threat landscape is essential for developing effective protection strategies.",
-      "## What Makes Ransomware So Dangerous",
-      "Modern ransomware attacks have evolved into sophisticated operations, often employing a double-extortion model where criminals not only encrypt data but first exfiltrate it and threaten to publish sensitive information. This tactic puts pressure on organizations to pay even if they have proper backups.",
-      "Ransomware groups are also increasingly targeting critical infrastructure and essential services, as seen in high-profile attacks against healthcare organizations, fuel pipelines, and food suppliers. These attacks have demonstrated the potential for real-world harm beyond just financial damage.",
-      "## Effective Protection Strategies",
-      "While no security approach can guarantee complete protection, organizations can significantly reduce their risk by implementing a comprehensive security strategy:",
-      "### 1. Maintain Robust Backup Systems",
-      "Implement the 3-2-1 backup rule: maintain three copies of your data on two different media types with one copy stored off-site. Regularly test your backup restoration processes to ensure they work when needed.",
-      "### 2. Implement Zero Trust Security",
-      "Move beyond traditional perimeter-based security to a Zero Trust model that verifies every user and device attempting to access your resources, regardless of location.",
-      "### 3. Deploy Advanced Endpoint Protection",
-      "Modern endpoint protection solutions use behavioral analysis and machine learning to detect and block ransomware before it can encrypt your files.",
-      "### 4. Conduct Regular Security Training",
-      "Employees remain the first line of defense. Regular security awareness training helps staff recognize phishing attempts and other social engineering tactics used to deliver ransomware.",
-      "### 5. Develop an Incident Response Plan",
-      "Create and regularly test a comprehensive incident response plan that details exactly how your organization will respond to a ransomware attack.",
-      "## The Role of Government and Industry Cooperation",
-      "Recent initiatives from government agencies are helping organizations combat ransomware. The Cybersecurity and Infrastructure Security Agency (CISA) has published detailed ransomware guides and the FBI's Internet Crime Complaint Center provides valuable threat intelligence.",
-      "Industry partnerships are also emerging to share threat intelligence and best practices. These collaborative efforts are essential in the fight against increasingly sophisticated criminal organizations.",
-      "## Conclusion",
-      "As ransomware continues to evolve, organizations must adopt a proactive security posture. By implementing a defense-in-depth strategy and staying informed about emerging threats, you can significantly reduce your risk of becoming the next ransomware victim.",
-      "Remember that prevention is always less costly than recovery. Investing in robust security measures today can protect your organization from potentially devastating attacks tomorrow."
-    ].join('\n\n'),
-    date: "May 15, 2023",
-    readTime: "8 min read",
-    author: "Elena Rodriguez",
-    authorTitle: "Chief Security Analyst",
-    authorImage: "https://randomuser.me/api/portraits/women/23.jpg",
-    category: "Threat Intelligence",
-    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=1200&q=80",
-    tags: ["Ransomware", "Threat Protection", "Security Strategy", "Zero Trust"]
-  },
-  {
-    id: "2",
-    title: "Zero Trust Security: Beyond the Buzzword",
-    content: [
-      "Zero Trust is more than just a security model—it's a comprehensive approach to protecting your most valuable assets in today's complex digital landscape.",
-      "The traditional security model of 'trust but verify' is no longer sufficient in an era where perimeters are dissolving and threats can come from both inside and outside an organization.",
-      "## The Core Principles of Zero Trust",
-      "At its core, Zero Trust operates on the principle of 'never trust, always verify.' This means treating every access request as though it originates from an untrusted network, regardless of whether it comes from inside or outside your corporate perimeter.",
-      "Key components of a Zero Trust architecture include:",
-      "### 1. Verify explicitly",
-      "Always authenticate and authorize based on all available data points, including user identity, location, device health, service or workload, data classification, and anomalies.",
-      "### 2. Use least privilege access",
-      "Limit user access with Just-In-Time and Just-Enough-Access to protect both data and productivity.",
-      "### 3. Assume breach",
-      "Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to improve defenses."
-    ].join('\n\n'),
-    date: "April 28, 2023",
-    readTime: "6 min read",
-    author: "Michael Lee",
-    authorTitle: "Network Security Architect",
-    authorImage: "https://randomuser.me/api/portraits/men/32.jpg",
-    category: "Security Strategy",
-    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=600&q=80",
-    tags: ["Zero Trust", "Network Security", "Identity Management"]
-  },
-  {
-    id: "3",
-    title: "Cloud Security Best Practices for 2023",
-    content: [
-      "As more organizations migrate to the cloud, understanding these security best practices is essential for protecting your data and applications.",
-      "Cloud computing offers tremendous benefits in terms of scalability, cost-efficiency, and flexibility, but it also introduces new security challenges that organizations must address.",
-      "## Key Cloud Security Best Practices",
-      "### 1. Implement Strong Identity and Access Management",
-      "Use multi-factor authentication (MFA) for all users, especially privileged accounts. Implement the principle of least privilege and regularly review and remove unused accounts and excessive permissions.",
-      "### 2. Encrypt Data at Rest and in Transit",
-      "Ensure all sensitive data is encrypted both when stored and when moving between services. Manage encryption keys carefully and consider using customer-managed keys where possible.",
-      "### 3. Secure Your Cloud Configuration",
-      "Misconfigurations are one of the leading causes of cloud security incidents. Use cloud security posture management (CSPM) tools to continuously scan for and remediate misconfigurations.",
-      "### 4. Monitor Cloud Environments",
-      "Implement comprehensive logging and monitoring across all cloud services. Use cloud-native security tools along with third-party solutions to gain visibility into potential threats."
-    ].join('\n\n'),
-    date: "April 15, 2023",
-    readTime: "7 min read",
-    author: "Sarah Johnson",
-    authorTitle: "Cloud Security Specialist",
-    authorImage: "https://randomuser.me/api/portraits/women/45.jpg",
-    category: "Cloud Security",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
-    tags: ["Cloud Security", "AWS", "Azure", "Data Protection"]
-  },
-  {
-    id: "4",
-    title: "The Role of AI in Modern Cybersecurity",
-    content: [
-      "Artificial intelligence is transforming how we detect and respond to threats. Here's how AI is changing the security landscape.",
-      "As cyber threats grow in sophistication and volume, traditional security approaches struggle to keep pace. AI and machine learning technologies offer powerful new capabilities to enhance detection and response.",
-      "## How AI is Transforming Cybersecurity",
-      "### 1. Advanced Threat Detection",
-      "AI systems can analyze vast amounts of data to identify patterns and anomalies that might indicate a security threat, often detecting novel attacks that signature-based systems would miss.",
-      "### 2. Automated Response Capabilities",
-      "When threats are detected, AI can automatically initiate response actions, containing threats in real-time before significant damage occurs.",
-      "### 3. Reducing Alert Fatigue",
-      "By consolidating and prioritizing alerts, AI helps security teams focus on genuine threats rather than being overwhelmed by false positives."
-    ].join('\n\n'),
-    date: "March 22, 2023",
-    readTime: "5 min read",
-    author: "David Kim",
-    authorTitle: "AI Security Researcher",
-    authorImage: "https://randomuser.me/api/portraits/men/67.jpg",
-    category: "Technology",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
-    tags: ["AI", "Machine Learning", "Threat Detection"]
-  },
-  {
-    id: "5",
-    title: "Securing Your Remote Workforce",
-    content: [
-      "With remote work becoming permanent for many organizations, addressing these security challenges is more important than ever.",
-      "The rapid shift to remote work has expanded the attack surface for many organizations, creating new security challenges that require innovative solutions.",
-      "## Key Remote Work Security Challenges",
-      "### 1. Unsecured Home Networks",
-      "Home networks typically lack the security controls present in corporate environments, making them more vulnerable to compromise.",
-      "### 2. Personal Device Usage",
-      "When employees use personal devices for work (BYOD), organizations have less control over the security of these endpoints.",
-      "### 3. Increased Phishing Attacks",
-      "Remote workers are prime targets for phishing attacks that exploit COVID-19 concerns and remote work themes."
-    ].join('\n\n'),
-    date: "March 10, 2023",
-    readTime: "6 min read",
-    author: "Jessica Martinez",
-    authorTitle: "Remote Security Expert",
-    authorImage: "https://randomuser.me/api/portraits/women/63.jpg",
-    category: "Business Security",
-    image: "https://images.unsplash.com/photo-1521898284481-a5ec348cb555?auto=format&fit=crop&w=600&q=80",
-    tags: ["Remote Work", "VPN", "Endpoint Security"]
-  },
-  {
-    id: "6",
-    title: "GDPR Compliance: What You Need to Know in 2023",
-    content: [
-      "Stay up to date with the latest GDPR requirements and how they impact your organization's data handling practices.",
-      "Five years after its implementation, the General Data Protection Regulation (GDPR) continues to evolve through court decisions, regulatory guidance, and enforcement actions.",
-      "## Recent GDPR Developments",
-      "### 1. Increased Enforcement Activity",
-      "Regulatory authorities are stepping up enforcement, with larger fines being imposed for violations. Organizations must ensure their compliance measures are robust and up-to-date.",
-      "### 2. International Data Transfers",
-      "Following the Schrems II decision, requirements for transferring data outside the EU have become more stringent. Organizations must implement additional safeguards when using standard contractual clauses.",
-      "### 3. The Right to Be Forgotten",
-      "Recent court decisions have clarified the scope of the right to erasure, balancing privacy rights against other legitimate interests."
-    ].join('\n\n'),
-    date: "February 28, 2023",
-    readTime: "7 min read",
-    author: "Thomas Anderson",
-    authorTitle: "Privacy Compliance Officer",
-    authorImage: "https://randomuser.me/api/portraits/men/91.jpg",
-    category: "Compliance",
-    image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=600&q=80",
-    tags: ["GDPR", "Compliance", "Data Privacy"]
-  }
-];
+import { allBlogPosts } from './BlogData';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -362,13 +203,13 @@ const BlogPost: React.FC = () => {
                     <div className="mt-10 pt-10 border-t border-gray-200">
                       <div className="flex flex-wrap gap-2">
                         {post.tags.map((tag: string) => (
-                          <a
+                          <Link
                             key={tag}
-                            href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+                            to={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
                             className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-red-100 hover:text-red-600 transition-colors"
                           >
                             <Tag className="h-3 w-3 mr-1" /> {tag}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -420,12 +261,12 @@ const BlogPost: React.FC = () => {
                         in threat intelligence and incident response. They regularly advise
                         Fortune 500 companies on security strategy.
                       </p>
-                      <a 
-                        href="#" 
+                      <Link 
+                        to={`/author/${post.author.toLowerCase().replace(/\s+/g, '-')}`} 
                         className="block w-full py-2 px-4 bg-red-600 text-white text-center rounded-lg hover:bg-red-700 transition-colors"
                       >
                         View all articles
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

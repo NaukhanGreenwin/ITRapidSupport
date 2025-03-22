@@ -22,6 +22,8 @@ import Cookies from './pages/Cookies';
 import NotFound from './pages/NotFound';
 import Accessibility from './pages/Accessibility';
 import ResourceDetails from './pages/ResourceDetails';
+import BlogTag from './pages/BlogTag';
+import BlogCategory from './pages/BlogCategory';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -48,6 +50,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/tag/:tag" element={<BlogTag />} />
+            <Route path="/blog/category/:category" element={<BlogCategory />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />

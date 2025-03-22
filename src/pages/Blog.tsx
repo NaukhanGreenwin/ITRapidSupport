@@ -4,87 +4,13 @@ import { Link } from 'react-router-dom';
 import PullToRefresh from '../components/PullToRefresh';
 import LazyImage from '../components/LazyImage';
 import MobileSearch from '../components/MobileSearch';
+import { allBlogPosts, blogCategories, popularTags } from './BlogData';
 
 const Blog: React.FC = () => {
   const [isRefreshing, setIsRefreshing] = useState(false);
   // Sample blog data
-  const featuredPost = {
-    id: "1",
-    title: "The Rising Threat of Ransomware and How to Protect Your Organization",
-    excerpt: "Ransomware attacks have increased by 150% in the last year. Learn how your organization can implement effective defenses against this growing threat.",
-    date: "May 15, 2023",
-    author: "Elena Rodriguez",
-    category: "Threat Intelligence",
-    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=1200&q=80",
-    tags: ["Ransomware", "Threat Protection", "Security Strategy"]
-  };
-
-  const recentPosts = [
-    {
-      id: "2",
-      title: "Zero Trust Security: Beyond the Buzzword",
-      excerpt: "Zero Trust is more than just a security model—it's a comprehensive approach to protecting your most valuable assets.",
-      date: "April 28, 2023",
-      author: "Michael Lee",
-      category: "Security Strategy",
-      image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=600&q=80",
-      tags: ["Zero Trust", "Network Security"]
-    },
-    {
-      id: "3",
-      title: "Cloud Security Best Practices for 2023",
-      excerpt: "As more organizations migrate to the cloud, understanding these security best practices is essential for protecting your data.",
-      date: "April 15, 2023",
-      author: "Sarah Johnson",
-      category: "Cloud Security",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
-      tags: ["Cloud Security", "AWS", "Azure"]
-    },
-    {
-      id: "4",
-      title: "The Role of AI in Modern Cybersecurity",
-      excerpt: "Artificial intelligence is transforming how we detect and respond to threats. Here's how AI is changing the security landscape.",
-      date: "March 22, 2023",
-      author: "David Kim",
-      category: "Technology",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
-      tags: ["AI", "Machine Learning", "Threat Detection"]
-    },
-    {
-      id: "5",
-      title: "Securing Your Remote Workforce",
-      excerpt: "With remote work becoming permanent for many organizations, addressing these security challenges is more important than ever.",
-      date: "March 10, 2023",
-      author: "Jessica Martinez",
-      category: "Business Security",
-      image: "https://images.unsplash.com/photo-1521898284481-a5ec348cb555?auto=format&fit=crop&w=600&q=80",
-      tags: ["Remote Work", "VPN", "Endpoint Security"]
-    },
-    {
-      id: "6",
-      title: "GDPR Compliance: What You Need to Know in 2023",
-      excerpt: "Stay up to date with the latest GDPR requirements and how they impact your organization's data handling practices.",
-      date: "February 28, 2023",
-      author: "Thomas Anderson",
-      category: "Compliance",
-      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=600&q=80",
-      tags: ["GDPR", "Compliance", "Data Privacy"]
-    }
-  ];
-
-  const categories = [
-    { name: "Threat Intelligence", count: 18 },
-    { name: "Cloud Security", count: 12 },
-    { name: "Security Strategy", count: 9 },
-    { name: "Technology", count: 14 },
-    { name: "Compliance", count: 8 },
-    { name: "Business Security", count: 11 }
-  ];
-
-  const popularTags = [
-    "Ransomware", "Cloud Security", "Zero Trust", "AI", "Compliance", 
-    "GDPR", "Remote Work", "Threat Intelligence", "Data Privacy"
-  ];
+  const featuredPost = allBlogPosts[0];
+  const recentPosts = allBlogPosts.slice(1);
 
   // Handle refresh for mobile pull-to-refresh
   const handleRefresh = async () => {
@@ -290,14 +216,14 @@ const Blog: React.FC = () => {
               <h2 className="text-xl font-bold text-gray-900 mb-6">Categories</h2>
               <div className="bg-slate-50 rounded-2xl p-6 mb-8">
                 <ul className="space-y-3">
-                  {categories.map(category => (
+                  {blogCategories.map(category => (
                     <li key={category.name}>
-                      <a href="#" className="flex items-center justify-between py-2 text-gray-700 hover:text-red-600 transition-colors">
+                      <Link to={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center justify-between py-2 text-gray-700 hover:text-red-600 transition-colors">
                         <span>{category.name}</span>
                         <span className="bg-white px-2 py-1 rounded-full text-xs text-gray-500">
                           {category.count}
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -307,13 +233,13 @@ const Blog: React.FC = () => {
               <div className="bg-slate-50 rounded-2xl p-6">
                 <div className="flex flex-wrap gap-2">
                   {popularTags.map(tag => (
-                    <a
+                    <Link
                       key={tag}
-                      href="#"
+                      to={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
                       className="inline-flex items-center px-3 py-1 rounded-full bg-white text-gray-700 text-sm font-medium hover:bg-red-100 hover:text-red-600 transition-colors"
                     >
                       <Tag className="h-3 w-3 mr-1" /> {tag}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
