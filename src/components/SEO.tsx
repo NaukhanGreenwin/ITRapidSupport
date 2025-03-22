@@ -17,9 +17,6 @@ interface SEOProps {
   noIndex?: boolean;
   articleTags?: string[];
   breadcrumbs?: {name: string; url: string}[];
-  primaryKeyword?: string;
-  secondaryKeywords?: string[];
-  pageType?: 'home' | 'service' | 'blog' | 'contact' | 'about' | 'case-study' | 'resources';
 }
 
 // Helper function to generate breadcrumb schema
@@ -42,7 +39,6 @@ export const generateOrganizationSchema = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "IT Rapid Support",
-    "alternateName": "Toronto's Premier IT Security Provider",
     "url": "https://itrapidsupport.com",
     "logo": "https://itrapidsupport.com/images/ITRapid-logo.svg",
     "sameAs": [
@@ -50,71 +46,27 @@ export const generateOrganizationSchema = () => {
       "https://www.linkedin.com/company/itrapidsupport",
       "https://twitter.com/ITRapidSupport"
     ],
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+1-800-123-4567",
-        "contactType": "customer service",
-        "areaServed": "Greater Toronto Area",
-        "availableLanguage": ["English"]
-      },
-      {
-        "@type": "ContactPoint",
-        "telephone": "+1-800-123-4567",
-        "contactType": "technical support",
-        "areaServed": "Greater Toronto Area",
-        "availableLanguage": ["English"]
-      }
-    ],
-    "description": "IT Rapid Support provides enterprise-grade cybersecurity solutions and managed IT services for businesses across the Greater Toronto Area, including Vaughan, Mississauga, Brampton, Woodbridge, and Concord.",
-    "foundingDate": "2012",
-    "founders": [
-      {
-        "@type": "Person",
-        "name": "John Smith",
-        "jobTitle": "Founder & CEO"
-      }
-    ],
-    "numberOfEmployees": {
-      "@type": "QuantitativeValue",
-      "value": "50+"
-    },
-    "award": "Best IT Security Provider in Toronto 2023"
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-123-4567",
+      "contactType": "customer service",
+      "availableLanguage": ["English"]
+    }
   };
 };
 
 // Helper function to generate LocalBusiness schema
 export const generateLocalBusinessSchema = (location?: string) => {
   const locations = {
-    toronto: {
-      name: "IT Rapid Support - Toronto",
-      streetAddress: "123 Bay Street",
-      addressLocality: "Toronto",
-      addressRegion: "ON",
-      postalCode: "M5J2T3",
-      latitude: 43.6532,
-      longitude: -79.3832,
-      areaServed: "Toronto, North York, Scarborough, Etobicoke, East York"
-    },
     vaughan: {
-      name: "IT Rapid Support - Vaughan Headquarters",
+      name: "IT Rapid Support",
       streetAddress: "7810 Keele St",
       addressLocality: "Vaughan",
       addressRegion: "ON",
       postalCode: "L4K4G7",
       latitude: 43.7944,
       longitude: -79.5279,
-      areaServed: "Vaughan, Richmond Hill, Maple, Woodbridge, Concord"
-    },
-    mississauga: {
-      name: "IT Rapid Support - Mississauga Office",
-      streetAddress: "100 City Centre Dr",
-      addressLocality: "Mississauga",
-      addressRegion: "ON",
-      postalCode: "L5B2C9",
-      latitude: 43.5938,
-      longitude: -79.6433,
-      areaServed: "Mississauga, Brampton, Oakville, Milton, Georgetown"
+      areaServed: "Greater Toronto Area, Vaughan, Mississauga, Brampton, Woodbridge, Concord"
     },
     default: {
       name: "IT Rapid Support",
@@ -174,52 +126,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
       },
       "geoRadius": "50000"
     },
-    "areaServed": loc.areaServed,
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "IT Security Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Managed Security Services"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Cloud Security Solutions"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Identity & Access Management"
-          }
-        }
-      ]
-    },
-    "paymentAccepted": ["Credit Card", "Debit Card", "Invoice"],
-    "review": {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.9",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Michael Chen"
-      }
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "127"
-    }
+    "areaServed": loc.areaServed
   };
 };
 
@@ -247,8 +154,6 @@ export const generateServiceSchema = (service: {
   provider?: string;
   areaServed?: string;
   serviceType?: string;
-  image?: string;
-  offers?: any[];
 }) => {
   return {
     "@context": "https://schema.org",
@@ -259,64 +164,10 @@ export const generateServiceSchema = (service: {
       "@type": "Organization",
       "name": service.provider || "IT Rapid Support"
     },
-    "serviceType": service.serviceType || "IT Security Services",
+    "serviceType": service.serviceType || "IT Services",
     "areaServed": service.areaServed || "Greater Toronto Area, Ontario",
-    "url": service.url.startsWith("http") ? service.url : `https://itrapidsupport.com${service.url}`,
-    "image": service.image || "https://itrapidsupport.com/images/services/default-service.jpg",
-    "offers": service.offers || [
-      {
-        "@type": "Offer",
-        "price": "1000.00",
-        "priceCurrency": "CAD"
-      }
-    ]
+    "url": service.url.startsWith("http") ? service.url : `https://itrapidsupport.com${service.url}`
   };
-};
-
-// New schema for WebSite
-export const generateWebsiteSchema = () => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "IT Rapid Support - Toronto Cybersecurity & Managed IT Services",
-    "alternateName": "IT Rapid Support",
-    "url": "https://itrapidsupport.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://itrapidsupport.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-};
-
-// Helper function to generate review schema
-export const generateReviewSchema = (reviews: {
-  author: string;
-  reviewBody: string;
-  reviewRating: number;
-  datePublished: string;
-}[]) => {
-  return reviews.map(review => ({
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "itemReviewed": {
-      "@type": "LocalBusiness",
-      "name": "IT Rapid Support",
-      "@id": "https://itrapidsupport.com/#business"
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": review.reviewRating,
-      "bestRating": "5"
-    },
-    "name": `Review by ${review.author}`,
-    "author": {
-      "@type": "Person",
-      "name": review.author
-    },
-    "reviewBody": review.reviewBody,
-    "datePublished": review.datePublished
-  }));
 };
 
 const SEO: React.FC<SEOProps> = ({
@@ -335,9 +186,6 @@ const SEO: React.FC<SEOProps> = ({
   noIndex = false,
   articleTags = [],
   breadcrumbs,
-  primaryKeyword,
-  secondaryKeywords = [],
-  pageType = 'home',
 }) => {
   // Base domain for absolute URLs
   const baseUrl = 'https://itrapidsupport.com';
@@ -346,32 +194,15 @@ const SEO: React.FC<SEOProps> = ({
   
   // Generate breadcrumb schema if breadcrumbs are provided
   const breadcrumbSchema = breadcrumbs ? generateBreadcrumbSchema(breadcrumbs) : null;
-
-  // Enhanced title with primary keyword when available
-  const enhancedTitle = primaryKeyword 
-    ? `${title} | ${primaryKeyword} | IT Rapid Support` 
-    : `${title} | IT Rapid Support`;
   
-  // Combine keywords with secondary keywords
-  const enhancedKeywords = keywords 
-    ? secondaryKeywords.length > 0 
-      ? `${keywords}, ${secondaryKeywords.join(', ')}` 
-      : keywords
-    : secondaryKeywords.join(', ');
-
   return (
     <Helmet>
-      {/* Basic Meta Tags with Enhanced SEO */}
-      <title>{enhancedTitle}</title>
+      {/* Basic Meta Tags */}
+      <title>{title} | IT Rapid Support</title>
       <meta name="description" content={description} />
-      {enhancedKeywords && <meta name="keywords" content={enhancedKeywords} />}
+      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="author" content="IT Rapid Support" />
-      <meta name="theme-color" content="#E11D48" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="geo.region" content="CA-ON" />
-      <meta name="geo.placename" content="Toronto" />
 
       {/* Robots Control */}
       {noIndex ? (
@@ -412,7 +243,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullOgImage} />
       <meta name="twitter:creator" content="@ITRapidSupport" />
-      <meta name="twitter:site" content="@ITRapidSupport" />
       
       {/* Alternate Languages for International SEO */}
       {alternateLanguages.map((altLang) => (
@@ -438,12 +268,6 @@ const SEO: React.FC<SEOProps> = ({
           {JSON.stringify(breadcrumbSchema)}
         </script>
       )}
-
-      {/* Preconnect to critical resources */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://images.unsplash.com" />
-      <link rel="preconnect" href="https://randomuser.me" />
     </Helmet>
   );
 };

@@ -1,9 +1,23 @@
-# ITRapidSupport - Enterprise Cybersecurity Toronto - Optimized Robots.txt
+# ITRapidSupport - Comprehensive Robots.txt
 # Last updated: 2024-03-22
 
 # Allow all well-behaved crawlers
 User-agent: *
 Allow: /
+
+# Important crawlers
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Googlebot-Mobile
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Yahoo! Slurp
+Allow: /
+
+# Block specific folders
 Disallow: /admin/
 Disallow: /api/
 Disallow: /dev/
@@ -11,67 +25,15 @@ Disallow: /internal/
 Disallow: /temp/
 Disallow: /cdn-cgi/
 
-# Google specific crawlers with enhanced access
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Googlebot-Image
-Allow: /
-Crawl-delay: 1
-
-User-agent: Googlebot-Mobile
-Allow: /
-Crawl-delay: 1
-
-User-agent: Googlebot-News
-Allow: /
-Crawl-delay: 1
-
-User-agent: Googlebot-Video
-Allow: /
-Crawl-delay: 1
-
-# Bing specific crawlers
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-User-agent: bingbot
-Allow: /
-Crawl-delay: 2
-
-User-agent: msnbot
-Allow: /
-Crawl-delay: 2
-
-# Yahoo crawler
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-# DuckDuckGo crawler
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 2
-
-# Block specific patterns for all crawlers
+# Block duplicate content
 Disallow: /*/print/
 Disallow: /*?*
 Disallow: /*?q=*
 Disallow: /*&sort=*
 Disallow: /search?
 
-# Allow specific high-value paths to be crawled with priority
-Allow: /services
-Allow: /solutions
-Allow: /security-assessment
-Allow: /case-studies
-Allow: /contact
-Allow: /resources
+# Crawl rate controls
+Crawl-delay: 1
 
-# Primary Sitemap
-Sitemap: https://itrapidsupport.com/sitemap.xml
-
-# Host directive for canonical domain
-Host: itrapidsupport.com 
+# Sitemaps
+Sitemap: https://itrapidsupport.com/sitemap.xml 

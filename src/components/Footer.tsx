@@ -38,7 +38,6 @@ export default function Footer() {
               <li><Link to="/solutions" className="text-slate-400 hover:text-white transition-colors block py-1">Industry Solutions</Link></li>
               <li><Link to="/security-assessment" className="text-slate-400 hover:text-white transition-colors block py-1">Security Assessment</Link></li>
               <li><Link to="/case-studies" className="text-slate-400 hover:text-white transition-colors block py-1">Case Studies</Link></li>
-              <li><Link to="/toronto-security-services" className="text-slate-400 hover:text-white transition-colors block py-1">Toronto IT Security</Link></li>
             </ul>
           </div>
 
