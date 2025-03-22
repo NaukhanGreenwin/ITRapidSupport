@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Shield, 
   Building, 
@@ -34,18 +35,24 @@ function Solutions() {
                 Tailored cybersecurity solutions designed for your industry's specific challenges and compliance requirements. Protect your business with enterprise-grade security.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium">
+                <Link 
+                  to="/contact?subject=Demo%20Request" 
+                  className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium"
+                >
                   Request a Demo <ChevronRight className="ml-2 h-5 w-5" />
-                </button>
-                <button className="border border-white/20 bg-white/5 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center font-medium">
+                </Link>
+                <Link 
+                  to="/services" 
+                  className="border border-white/20 bg-white/5 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center font-medium"
+                >
                   View All Services
-                </button>
+                </Link>
               </div>
             </div>
             <div className="hidden md:block relative">
               <div className="absolute inset-0 bg-red-600/20 rounded-2xl backdrop-blur-sm transform rotate-3"></div>
               <img 
-                src="https://images.unsplash.com/photo-1557597774-9d475d7c8301?auto=format&fit=crop&w=800&q=80" 
+                src="/images/solutions/enterprise-security.jpg" 
                 alt="Enterprise Security" 
                 className="rounded-2xl shadow-2xl relative z-10"
               />
@@ -87,9 +94,9 @@ function Solutions() {
                   <span className="text-gray-600">Regulatory compliance</span>
                 </li>
               </ul>
-              <a href="#" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              </Link>
             </div>
 
             <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow group">
@@ -114,9 +121,9 @@ function Solutions() {
                   <span className="text-gray-600">Telehealth protection</span>
                 </li>
               </ul>
-              <a href="#" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              </Link>
             </div>
 
             <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow group">
@@ -141,9 +148,9 @@ function Solutions() {
                   <span className="text-gray-600">Supply chain security</span>
                 </li>
               </ul>
-              <a href="#" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              </Link>
             </div>
 
             <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow group">
@@ -168,9 +175,9 @@ function Solutions() {
                   <span className="text-gray-600">Classified data security</span>
                 </li>
               </ul>
-              <a href="#" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              </Link>
             </div>
 
             <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow group">
@@ -195,9 +202,9 @@ function Solutions() {
                   <span className="text-gray-600">E-commerce protection</span>
                 </li>
               </ul>
-              <a href="#" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              </Link>
             </div>
 
             <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow group">
@@ -222,9 +229,9 @@ function Solutions() {
                   <span className="text-gray-600">Application security</span>
                 </li>
               </ul>
-              <a href="#" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -289,14 +296,17 @@ function Solutions() {
                 </div>
               </div>
               
-              <button className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium inline-flex items-center">
+              <Link 
+                to="/contact?subject=Schedule%20a%20Demo" 
+                className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium inline-flex items-center"
+              >
                 Schedule a Demo <ChevronRight className="ml-2 h-5 w-5" />
-              </button>
+              </Link>
             </div>
             
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&q=80" 
+                src="/images/solutions/security-dashboard.jpg" 
                 alt="Enterprise Security Platform Dashboard" 
                 className="w-full h-auto"
               />
@@ -377,12 +387,18 @@ function Solutions() {
                 Contact our security experts today for a personalized consultation and discover how our solutions can protect your organization.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button className="bg-white text-red-700 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center font-medium">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-red-700 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center font-medium"
+                >
                   Contact Us <ChevronRight className="ml-2 h-5 w-5" />
-                </button>
-                <button className="border border-white/40 bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center font-medium">
+                </Link>
+                <Link 
+                  to="/contact?subject=Pricing%20Information" 
+                  className="border border-white/40 bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center font-medium"
+                >
                   View Pricing
-                </button>
+                </Link>
               </div>
             </div>
             <div className="hidden md:flex justify-end">
