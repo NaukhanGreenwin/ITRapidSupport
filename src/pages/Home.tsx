@@ -6,7 +6,7 @@ import ClientLogos from '../components/ClientLogos';
 import TestimonialSlider from '../components/TestimonialSlider';
 import PageTransition from '../components/PageTransition';
 import ContactForm from '../components/ContactForm';
-import SEO, { generateOrganizationSchema, generateLocalBusinessSchema, generateFAQSchema } from '../components/SEO';
+import SEO, { generateOrganizationSchema, generateLocalBusinessSchema, generateFAQSchema, generateWebsiteSchema } from '../components/SEO';
 import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
@@ -64,27 +64,11 @@ const Home: React.FC = () => {
   const combinedSchema = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "IT Rapid Support - Toronto's Premier IT Security Services",
-        "url": "https://itrapidsupport.com/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://itrapidsupport.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        },
-        "description": "IT Rapid Support provides enterprise-grade cybersecurity solutions and managed IT services for businesses across the Greater Toronto Area, including Vaughan, Mississauga, Brampton, Woodbridge, and Concord.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "IT Rapid Support",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://itrapidsupport.com/ITRapid-logo.svg"
-          }
-        }
-      },
+      generateWebsiteSchema(),
       generateOrganizationSchema(),
       generateLocalBusinessSchema("toronto"),
+      generateLocalBusinessSchema("vaughan"),
+      generateLocalBusinessSchema("mississauga"),
       generateFAQSchema(faqs),
       {
         "@type": "Service",
@@ -141,13 +125,25 @@ const Home: React.FC = () => {
     <PageTransition>
       <SEO 
         title="Toronto Cybersecurity & Managed IT Services | GTA Support" 
-        description="IT Rapid Support provides enterprise-grade cybersecurity and managed IT services for businesses in Toronto, Vaughan, Mississauga, Brampton, Woodbridge and Concord. 24/7 local support." 
+        description="Top-rated IT security services in Toronto: 24/7 local cybersecurity, managed IT support, and enterprise protection for businesses across GTA, Vaughan, Mississauga, and Brampton. 100% compliance guarantee."
         keywords="IT security Toronto, managed IT services GTA, cybersecurity Ontario, Toronto IT support, Vaughan IT services, Mississauga cybersecurity, Brampton IT support, enterprise security"
         schema={combinedSchema}
         breadcrumbs={[{ name: 'Home', url: '/' }]}
+        primaryKeyword="Toronto Cybersecurity"
+        secondaryKeywords={[
+          "Managed IT Toronto",
+          "24/7 IT Support GTA",
+          "Cybersecurity Ontario",
+          "IT Security Vaughan",
+          "Mississauga IT Services",
+          "Enterprise Security Solutions",
+          "Canadian Cybersecurity Compliance",
+          "Toronto IT Security Company"
+        ]}
+        pageType="home"
       />
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-slate-900">
+      <section className="relative overflow-hidden bg-slate-900" aria-label="Toronto IT Security Hero">
         {/* Abstract geometric shapes background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-24 -left-10 w-96 h-96 bg-red-600/30 rounded-full blur-3xl"></div>
@@ -161,21 +157,21 @@ const Home: React.FC = () => {
             <div className="grid md:grid-cols-12 gap-12 items-center">
               <div className="md:col-span-7">
                 <div className="inline-flex items-center px-4 py-2 bg-red-600/20 rounded-full mb-6 backdrop-blur-sm">
-                  <span className="text-red-100 text-sm font-medium">Toronto's Leading IT Security</span>
+                  <span className="text-red-100 text-sm font-medium">#1 Rated IT Security in Toronto</span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Next-Generation <br/>
+                  Toronto's Premier <br/>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">Cybersecurity</span> Solutions
                 </h1>
                 <p className="text-slate-300 text-lg mb-8 leading-relaxed max-w-xl">
-                  Protect your Greater Toronto Area business with advanced threat detection, 24/7 monitoring, and expert-led security operations from Toronto's trusted leader in IT security excellence.
+                  Protect your Greater Toronto Area business with advanced threat detection, 24/7 monitoring, and expert-led security operations from Toronto's most trusted leader in IT security excellence.
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                   <Link to="/contact" className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium">
-                    Get Protected <ChevronRight className="ml-2 h-5 w-5" />
+                    Get Protected Today <ChevronRight className="ml-2 h-5 w-5" />
                   </Link>
                   <Link to="/contact" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg hover:bg-white/15 transition-colors flex items-center justify-center font-medium">
-                    Schedule Demo
+                    Schedule Free Consultation
                   </Link>
                 </div>
               </div>
@@ -220,25 +216,25 @@ const Home: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <ShieldIcon className="h-6 w-6 text-red-400" />
-                <span className="text-white font-medium">Data Privacy Focus</span>
+                <span className="text-white font-medium">100% SOC 2 Compliant</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Users className="h-6 w-6 text-red-400" />
-                <span className="text-white font-medium">Ontario-Based Team</span>
+                <span className="text-white font-medium">Ontario-Based Experts</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       
       {/* Services Section */}
-      <div className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" id="toronto-it-services" aria-label="Toronto IT Security Services">
         <AnimateOnScroll variant="fadeInUp">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">IT Security Solutions for Ontario Businesses</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Enterprise-Grade IT Security Solutions for Toronto Businesses</h2>
               <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-                Protect your Toronto organization with our full suite of IT security services designed for modern Ontario enterprises.
+                Protect your Toronto organization with our comprehensive suite of IT security services designed for modern Ontario enterprises and backed by our 100% security guarantee.
               </p>
             </div>
             
@@ -248,9 +244,9 @@ const Home: React.FC = () => {
                   <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
                     <Users className="h-8 w-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Managed Security Services</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Toronto Managed Security Services</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    24/7 monitoring and response by our Toronto-based expert security team, ensuring your business stays protected around the clock.
+                    24/7 monitoring and response by our Toronto-based expert security team, ensuring your business stays protected around the clock with real-time threat detection.
                   </p>
                   <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
@@ -341,19 +337,19 @@ const Home: React.FC = () => {
             </div>
           </div>
         </AnimateOnScroll>
-      </div>
+      </section>
       
       {/* Client Logos Section */}
       <ClientLogos className="bg-gray-50 py-12 border-t border-gray-100" />
 
       {/* Testimonial Section */}
-      <div className="py-20 bg-white">
+      <section className="py-20 bg-white" id="toronto-security-testimonials" aria-label="Toronto IT Security Reviews">
         <AnimateOnScroll variant="fadeIn">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Toronto Businesses Say</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Toronto Businesses Say About Our IT Security</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Don't just take our word for it. See what leading organizations in the Greater Toronto Area have to say about their experience with IT Rapid Support.
+                Don't just take our word for it. See what leading organizations in the Greater Toronto Area have to say about their experience with IT Rapid Support's cybersecurity expertise.
               </p>
             </div>
             
@@ -363,12 +359,27 @@ const Home: React.FC = () => {
             
             <div className="mt-12 text-center">
               <Link to="/case-studies" className="inline-flex items-center justify-center border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
-                View All Case Studies <ChevronRight className="ml-2 h-5 w-5" />
+                View All Toronto Case Studies <ChevronRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>
         </AnimateOnScroll>
-      </div>
+
+        {/* CTA Section */}
+        <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-red-600 to-red-800 rounded-2xl p-8 md:p-12">
+            <div className="text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to secure your Toronto business?</h2>
+              <p className="text-white/90 max-w-2xl mx-auto mb-8">
+                Contact our Toronto security team today for a free consultation and security assessment. Find out how our enterprise-grade solutions can protect your business.
+              </p>
+              <Link to="/contact" className="inline-flex items-center justify-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                Get Your Free Toronto Security Assessment
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </PageTransition>
   );
 };

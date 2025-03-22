@@ -1,44 +1,103 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Users, Key, Brain, Lock, Cloud, Database, FileCode, Server, CheckCircle, ChevronRight, ArrowRight } from 'lucide-react';
+import SEO, { generateServiceSchema, generateFAQSchema } from '../components/SEO';
+import PageTransition from '../components/PageTransition';
 
 const Services: React.FC = () => {
+  // Create FAQ schema for services page
+  const serviceFaqs = [
+    {
+      question: "What managed security services do you offer in Toronto?",
+      answer: "Our Toronto managed security services include 24/7 monitoring, incident response, threat hunting, vulnerability management, and security operations center (SOC) services tailored to businesses in the Greater Toronto Area."
+    },
+    {
+      question: "How do your identity management solutions help businesses in the GTA?",
+      answer: "Our identity management solutions help GTA businesses by implementing multi-factor authentication, single sign-on, privileged access management and zero-trust architectures that reduce the risk of unauthorized access and data breaches."
+    },
+    {
+      question: "What compliance standards can your services help my Toronto business meet?",
+      answer: "Our security services can help Toronto businesses achieve and maintain compliance with multiple standards including SOC 2, ISO 27001, PIPEDA, PCI DSS, HIPAA, and other industry-specific regulations with our comprehensive compliance frameworks."
+    },
+    {
+      question: "Do you offer cloud security services for Mississauga businesses?",
+      answer: "Yes, we provide specialized cloud security services for Mississauga businesses including cloud infrastructure protection, secure configuration management, cloud access security brokers (CASB), and continuous compliance monitoring for AWS, Azure, and Google Cloud environments."
+    }
+  ];
+
+  // Create schema for the services page
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema({
+        name: "Toronto IT Security Services",
+        description: "Comprehensive IT security services for Toronto businesses including managed security, identity access management, cloud security, and compliance solutions.",
+        url: "/services",
+        areaServed: "Greater Toronto Area, Vaughan, Mississauga, Brampton",
+        serviceType: "IT Security Services"
+      }),
+      generateFAQSchema(serviceFaqs)
+    ]
+  };
+
   return (
-    <>
+    <PageTransition>
+      <SEO 
+        title="Toronto IT Security Services | Enterprise Cybersecurity Solutions" 
+        description="Comprehensive IT security services for Toronto businesses: 24/7 managed security, identity management, cloud protection, and compliance solutions. Industry-leading expertise for GTA companies."
+        keywords="IT security services Toronto, managed security services GTA, identity access management, cloud security solutions, enterprise cybersecurity Toronto, compliance services Ontario, Toronto SOC services, threat intelligence"
+        schema={servicesSchema}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services' }
+        ]}
+        primaryKeyword="Toronto IT Security Services"
+        secondaryKeywords={[
+          "Managed SOC Toronto",
+          "Identity Access Management GTA",
+          "Cloud Security Mississauga",
+          "Compliance Solutions Ontario",
+          "Enterprise Cybersecurity Toronto",
+          "Threat Intelligence Services",
+          "Vulnerability Management GTA",
+          "Toronto Security Operations"
+        ]}
+        pageType="service"
+      />
       {/* Hero Section */}
-      <div className="pt-20 bg-gradient-to-r from-slate-900 to-red-900">
+      <section className="pt-20 bg-gradient-to-r from-slate-900 to-red-900" aria-label="IT Security Services Toronto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-red-600/10 rounded-full mb-6">
-                <span className="text-red-200 text-sm font-medium">Enterprise Solutions</span>
+                <span className="text-red-200 text-sm font-medium">Toronto Enterprise Security</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Comprehensive Security Services
+                Toronto's Leading IT Security Services
               </h1>
               <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                From 24/7 monitoring to advanced threat intelligence, our suite of services is designed to protect your organization at every level.
+                From 24/7 monitoring to advanced threat intelligence, our comprehensive security services are designed to protect Toronto businesses at every level with enterprise-grade solutions.
               </p>
             </div>
             <div className="hidden md:block relative">
               <div className="absolute inset-0 bg-red-600/20 rounded-2xl backdrop-blur-sm transform rotate-3"></div>
               <img 
                 src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" 
-                alt="Security Operations" 
+                alt="Toronto Security Operations Center" 
                 className="rounded-2xl shadow-2xl relative z-10"
               />
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Services Overview */}
-      <div className="py-20 bg-white">
+      <section className="py-20 bg-white" id="toronto-security-services" aria-label="Toronto IT Security Services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Security Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">GTA's Most Comprehensive Security Services</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              IT Rapid Support offers a comprehensive suite of IT security services tailored to your organization's needs.
+              IT Rapid Support offers a complete suite of enterprise-grade IT security services tailored to the unique needs of Toronto businesses and organizations.
             </p>
           </div>
 
@@ -48,22 +107,22 @@ const Services: React.FC = () => {
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Shield className="h-8 w-8 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Managed Security Services</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Toronto Managed Security Services</h3>
               <p className="text-gray-600 mb-6">
-                24/7 monitoring and response to security incidents by our expert team of analysts, ensuring your business stays protected around the clock.
+                24/7 monitoring and response to security incidents by our Toronto-based expert team, ensuring your GTA business stays protected around the clock with real-time threat detection.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-red-600 mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-gray-600">Continuous monitoring</span>
+                  <span className="text-gray-600">24/7 continuous monitoring</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-red-600 mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-gray-600">Incident response</span>
+                  <span className="text-gray-600">Rapid incident response</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-red-600 mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-gray-600">Threat hunting</span>
+                  <span className="text-gray-600">Proactive threat hunting</span>
                 </li>
               </ul>
               <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
@@ -76,9 +135,9 @@ const Services: React.FC = () => {
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Key className="h-8 w-8 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Identity & Access Management</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">GTA Identity & Access Management</h3>
               <p className="text-gray-600 mb-6">
-                Secure your digital assets with advanced identity verification, multi-factor authentication, and access control solutions.
+                Secure your Toronto business's digital assets with advanced identity verification, multi-factor authentication, and comprehensive access control solutions.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
@@ -212,7 +271,7 @@ const Services: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Featured Service */}
       <div className="py-20 bg-slate-50">
@@ -336,7 +395,7 @@ const Services: React.FC = () => {
           </Link>
         </div>
       </div>
-    </>
+    </PageTransition>
   );
 };
 
