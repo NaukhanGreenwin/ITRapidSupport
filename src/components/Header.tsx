@@ -126,7 +126,7 @@ export default function Header() {
               <img 
                 src="/images/logo.png" 
                 alt="IT Rapid Support Logo" 
-                className="h-16 w-auto max-w-[240px] object-contain" 
+                className="h-10 sm:h-12 md:h-16 w-auto max-w-[200px] sm:max-w-[240px] object-contain" 
               />
               <span className="sr-only">IT Rapid Support</span>
             </Link>
