@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,6 +10,34 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    }
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const dropdownVariants = {
     hidden: { 
@@ -38,24 +66,53 @@ export default function Header() {
 
   const mobileMenuVariants = {
     hidden: {
-      height: 0,
       opacity: 0,
+      height: 0,
       transition: {
-        duration: 0.3
+        duration: 0.2,
+        ease: "easeInOut"
       }
     },
     visible: {
-      height: "auto",
       opacity: 1,
+      height: "auto",
       transition: {
-        duration: 0.5
+        duration: 0.3,
+        ease: "easeInOut",
+        when: "beforeChildren",
+        staggerChildren: 0.05
       }
     },
     exit: {
-      height: 0,
       opacity: 0,
+      height: 0,
       transition: {
-        duration: 0.3
+        duration: 0.2,
+        ease: "easeInOut",
+        when: "afterChildren",
+        staggerChildren: 0.05,
+        staggerDirection: -1
+      }
+    }
+  };
+
+  const mobileMenuItemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.2
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        duration: 0.1
       }
     }
   };
@@ -209,7 +266,8 @@ export default function Header() {
         {mobileMenuOpen && (
           <motion.div 
             id="mobile-menu"
-            className="md:hidden bg-white border-t border-gray-200 py-3 overflow-hidden"
+            ref={menuRef}
+            className="md:hidden bg-white border-t border-gray-200 py-3 overflow-hidden max-h-[calc(100vh-80px)] overflow-y-auto"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -217,70 +275,96 @@ export default function Header() {
             aria-label="Mobile navigation menu"
             role="navigation"
           >
-            <div className="space-y-0 px-4">
-              <Link to="/services" 
-                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link to="/solutions" 
-                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Solutions
-              </Link>
-              <Link to="/security-assessment" 
-                className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Security Assessment
-              </Link>
-              <Link to="/case-studies" 
-                className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Case Studies
-              </Link>
-              <Link to="/blog" 
-                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link to="/resources" 
-                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Resources
-              </Link>
-              <Link to="/faq" 
-                className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                FAQ
-              </Link>
-              <Link to="/about" 
-                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link to="/careers" 
-                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Careers
-              </Link>
+            <div className="space-y-0 px-4 pb-6">
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/services" 
+                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Services
+                </Link>
+              </motion.div>
               
-              <div className="mt-4 pt-4 border-t border-gray-100">
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/solutions" 
+                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Solutions
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/security-assessment" 
+                  className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Security Assessment
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/case-studies" 
+                  className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Case Studies
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/blog" 
+                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Blog
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/resources" 
+                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Resources
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/faq" 
+                  className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  FAQ
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/about" 
+                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={mobileMenuItemVariants}>
+                <Link to="/careers" 
+                  className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Careers
+                </Link>
+              </motion.div>
+              
+              <motion.div variants={mobileMenuItemVariants} className="mt-4 pt-4 border-t border-gray-100">
                 <Link to="/contact"
                   className="block py-3 px-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium text-center transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Started
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         )}
