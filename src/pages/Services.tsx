@@ -1,5 +1,6 @@
 import React from 'react';
-import { Shield, Users, Key, Brain, Lock, Cloud, Database, FileCode, Server, CheckCircle, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Shield, Users, Key, Brain, Lock, Cloud, Database, FileCode, Server, CheckCircle, ChevronRight, ArrowRight } from 'lucide-react';
 
 const Services: React.FC = () => {
   return (
@@ -65,9 +66,9 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Threat hunting</span>
                 </li>
               </ul>
-              <a href="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
 
             {/* Service 2 */}
@@ -93,9 +94,9 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Single sign-on solutions</span>
                 </li>
               </ul>
-              <a href="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
 
             {/* Service 3 */}
@@ -121,9 +122,9 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Proactive threat hunting</span>
                 </li>
               </ul>
-              <a href="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
 
             {/* Service 4 */}
@@ -149,9 +150,9 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Data loss prevention</span>
                 </li>
               </ul>
-              <a href="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
 
             {/* Service 5 */}
@@ -177,9 +178,9 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Red team exercises</span>
                 </li>
               </ul>
-              <a href="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
 
             {/* Service 6 */}
@@ -205,9 +206,9 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Data access governance</span>
                 </li>
               </ul>
-              <a href="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
         </div>
@@ -244,12 +245,12 @@ const Services: React.FC = () => {
                     <span className="text-white">Expert remediation</span>
                   </div>
                 </div>
-                <a 
-                  href="/contact" 
+                <Link 
+                  to="/contact" 
                   className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-slate-100 transition-colors font-medium"
                 >
                   Get a demo
-                </a>
+                </Link>
               </div>
               <div className="hidden md:block relative">
                 <img 
@@ -327,12 +328,12 @@ const Services: React.FC = () => {
           <p className="text-white/80 text-lg mb-8 max-w-3xl mx-auto">
             Contact our security experts today for a personalized consultation and discover how IT Rapid Support can protect your organization.
           </p>
-          <a 
-            href="/contact" 
+          <Link 
+            to="/contact" 
             className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-slate-100 transition-colors font-medium"
           >
             Schedule a consultation
-          </a>
+          </Link>
         </div>
       </div>
     </>

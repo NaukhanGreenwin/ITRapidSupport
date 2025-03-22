@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Shield, Users, Key, Brain, ChevronRight, Globe, Clock, Shield as ShieldIcon, Server, Code, FileCode } from 'lucide-react';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import ClientLogos from '../components/ClientLogos';
@@ -170,12 +171,12 @@ const Home: React.FC = () => {
                   Protect your Greater Toronto Area business with advanced threat detection, 24/7 monitoring, and expert-led security operations from Toronto's trusted leader in IT security excellence.
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <a href="/contact" className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium">
+                  <Link to="/contact" className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium">
                     Get Protected <ChevronRight className="ml-2 h-5 w-5" />
-                  </a>
-                  <a href="/contact" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg hover:bg-white/15 transition-colors flex items-center justify-center font-medium">
+                  </Link>
+                  <Link to="/contact" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg hover:bg-white/15 transition-colors flex items-center justify-center font-medium">
                     Schedule Demo
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="md:col-span-5 hidden md:block relative h-full min-h-[400px]">
@@ -251,9 +252,9 @@ const Home: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                     24/7 monitoring and response by our Toronto-based expert security team, ensuring your business stays protected around the clock.
                   </p>
-                  <a href="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
+                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </AnimateOnScroll>
 
@@ -266,9 +267,9 @@ const Home: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                     Secure your digital assets with advanced identity verification and access control solutions tailored for GTA businesses.
                   </p>
-                  <a href="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
+                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </AnimateOnScroll>
 
@@ -281,9 +282,9 @@ const Home: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                     Stay ahead of cyber threats with AI-powered threat detection and proactive security measures for Ontario enterprises.
                   </p>
-                  <a href="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
+                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </AnimateOnScroll>
 
@@ -296,9 +297,9 @@ const Home: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                     Protect your cloud infrastructure with comprehensive security controls, monitoring, and compliance solutions for Toronto businesses.
                   </p>
-                  <a href="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
+                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </AnimateOnScroll>
 
@@ -311,9 +312,9 @@ const Home: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                     Secure your applications from development to deployment with code analysis, penetration testing, and runtime protection for Mississauga organizations.
                   </p>
-                  <a href="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
+                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </AnimateOnScroll>
 
@@ -326,17 +327,17 @@ const Home: React.FC = () => {
                   <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                     Meet Canadian regulatory requirements with our compliance frameworks, audit support, and policy management services for Ontario enterprises.
                   </p>
-                  <a href="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
+                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
                     Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </AnimateOnScroll>
             </div>
             
             <div className="mt-14 text-center">
-              <a href="/services" className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium">
+              <Link to="/services" className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium">
                 View All Services <ChevronRight className="ml-2 h-5 w-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </AnimateOnScroll>
@@ -361,9 +362,9 @@ const Home: React.FC = () => {
             </div>
             
             <div className="mt-12 text-center">
-              <a href="/case-studies" className="inline-flex items-center justify-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors font-medium">
+              <Link to="/case-studies" className="inline-flex items-center justify-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors font-medium">
                 View All Case Studies <ChevronRight className="ml-2 h-5 w-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </AnimateOnScroll>

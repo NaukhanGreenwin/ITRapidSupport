@@ -1,5 +1,6 @@
 import React from 'react';
-import { Calendar, ChevronRight, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Calendar, ChevronRight, Shield, ArrowRight } from 'lucide-react';
 
 const Privacy = () => {
   return (
@@ -139,15 +140,13 @@ const Privacy = () => {
                 </p>
               </section>
 
-              <div className="flex items-center justify-between mt-12 pt-8 border-t border-gray-200">
-                <a href="/terms" className="text-red-600 hover:text-red-700 font-medium flex items-center">
-                  <ChevronRight className="h-4 w-4 mr-1 rotate-180" />
-                  Terms of Service
-                </a>
-                <a href="/cookies" className="text-red-600 hover:text-red-700 font-medium flex items-center">
-                  Cookie Policy
-                  <ChevronRight className="h-4 w-4 ml-1" />
-                </a>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 mt-8">
+                <Link to="/terms" className="text-red-600 hover:text-red-700 font-medium flex items-center">
+                  Terms of Service <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link to="/cookies" className="text-red-600 hover:text-red-700 font-medium flex items-center">
+                  Cookie Policy <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   FileText, 
   ChevronRight, 
@@ -27,10 +28,11 @@ interface CaseStudyProps {
     position: string;
   };
   icon: React.ReactNode;
+  id: string;
 }
 
 const CaseStudy: React.FC<CaseStudyProps> = ({ 
-  title, client, industry, challenge, solution, results, testimonial, icon 
+  title, client, industry, challenge, solution, results, testimonial, icon, id 
 }) => {
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
@@ -78,9 +80,9 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
           </div>
         )}
         
-        <a href="#" className="inline-flex items-center text-red-600 hover:text-red-700 font-medium">
+        <Link to={`/case-studies/${id}`} className="inline-flex items-center text-red-600 hover:text-red-700 font-medium">
           Read full case study <ChevronRight className="ml-1 h-4 w-4" />
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -89,6 +91,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 function CaseStudies() {
   const caseStudies: CaseStudyProps[] = [
     {
+      id: "financial-security",
       title: "Financial Institution Strengthens Security Posture",
       client: "Major North American Bank",
       industry: "Financial Services",
@@ -106,6 +109,7 @@ function CaseStudies() {
       icon: <Landmark className="h-6 w-6 text-red-600" />
     },
     {
+      id: "healthcare-security",
       title: "Healthcare Provider Secures Patient Data",
       client: "Regional Hospital Network",
       industry: "Healthcare",
@@ -125,6 +129,7 @@ function CaseStudies() {
       icon: <Stethoscope className="h-6 w-6 text-red-600" />
     },
     {
+      id: "retail-security",
       title: "Retail Chain Secures E-commerce Platform",
       client: "International Retail Brand",
       industry: "Retail",
@@ -144,6 +149,7 @@ function CaseStudies() {
       icon: <Globe className="h-6 w-6 text-red-600" />
     },
     {
+      id: "tech-zero-trust",
       title: "Technology Company Implements Zero Trust",
       client: "Enterprise Software Provider",
       industry: "Technology",
@@ -163,6 +169,7 @@ function CaseStudies() {
       icon: <Database className="h-6 w-6 text-red-600" />
     },
     {
+      id: "government-security",
       title: "Government Agency Modernizes Security Operations",
       client: "Federal Government Department",
       industry: "Government",
@@ -174,9 +181,15 @@ function CaseStudies() {
         "Achieved FISMA compliance ahead of deadline",
         "Optimized security operations saving $2.5M in annual costs"
       ],
+      testimonial: {
+        quote: "After the breach, we faced an existential threat. IT Rapid Support didn't just help us recover—they transformed us into a security leader in our industry. Three years later, our security program is now referenced as a gold standard.",
+        author: "James Anderson",
+        position: "Chief Information Security Officer"
+      },
       icon: <Building className="h-6 w-6 text-red-600" />
     },
     {
+      id: "manufacturing-security",
       title: "Manufacturer Secures Industrial Systems",
       client: "Global Manufacturing Company",
       industry: "Manufacturing",
