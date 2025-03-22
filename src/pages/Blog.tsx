@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Search, Calendar, User, ArrowRight, Tag } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PullToRefresh from '../components/PullToRefresh';
+import LazyImage from '../components/LazyImage';
+import MobileSearch from '../components/MobileSearch';
 
 const Blog: React.FC = () => {
+  const [isRefreshing, setIsRefreshing] = useState(false);
   // Sample blog data
   const featuredPost = {
     id: "1",
@@ -82,8 +86,35 @@ const Blog: React.FC = () => {
     "GDPR", "Remote Work", "Threat Intelligence", "Data Privacy"
   ];
 
+  // Handle refresh for mobile pull-to-refresh
+  const handleRefresh = async () => {
+    setIsRefreshing(true);
+    
+    // Simulate API call with delay
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    // In a real app, you would fetch fresh data here
+    setIsRefreshing(false);
+  };
+
+  // Create searchItems for mobile search
+  const searchItems = [
+    { 
+      title: featuredPost.title, 
+      path: `/blog/${featuredPost.id}`,
+      description: featuredPost.excerpt,
+      keywords: featuredPost.tags
+    },
+    ...recentPosts.map(post => ({
+      title: post.title,
+      path: `/blog/${post.id}`,
+      description: post.excerpt,
+      keywords: post.tags
+    }))
+  ];
+
   return (
-    <>
+    <PullToRefresh onRefresh={handleRefresh}>
       {/* Hero Section */}
       <div className="pt-20 bg-gradient-to-r from-slate-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -92,7 +123,7 @@ const Blog: React.FC = () => {
             <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-8">
               The latest cybersecurity news, trends, and expert insights to help protect your organization.
             </p>
-            <div className="max-w-xl mx-auto relative">
+            <div className="max-w-xl mx-auto relative md:block hidden">
               <input
                 type="text"
                 placeholder="Search articles..."
@@ -101,6 +132,13 @@ const Blog: React.FC = () => {
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <Search className="h-5 w-5 text-gray-400" />
               </div>
+            </div>
+            <div className="md:hidden">
+              <button 
+                className="bg-white text-red-600 px-5 py-3 rounded-lg font-medium flex items-center justify-center mx-auto"
+              >
+                <Search className="h-5 w-5 mr-2" /> Search Articles
+              </button>
             </div>
           </div>
         </div>
@@ -113,7 +151,7 @@ const Blog: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Featured Article</h2>
             <div className="grid md:grid-cols-5 gap-8 items-center">
               <div className="md:col-span-3">
-                <img 
+                <LazyImage 
                   src={featuredPost.image} 
                   alt={featuredPost.title} 
                   className="rounded-2xl shadow-lg w-full h-96 object-cover"
@@ -168,11 +206,11 @@ const Blog: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {recentPosts.map(post => (
               <div key={post.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <Link to={`/blog/${post.id}`} className="block">
-                  <img 
+                  <LazyImage 
                     src={post.image} 
                     alt={post.title} 
                     className="w-full h-48 object-cover"
@@ -302,7 +340,12 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+
+      {/* Mobile search button (fixed to bottom right for mobile only) */}
+      <div className="fixed bottom-24 right-4 md:hidden z-40">
+        <MobileSearch searchItems={searchItems} />
+      </div>
+    </PullToRefresh>
   );
 };
 

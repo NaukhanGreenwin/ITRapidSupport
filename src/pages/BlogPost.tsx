@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Calendar, User, Tag, ArrowRight, Share2, Clock, ChevronLeft } from 'lucide-react';
 import SEO from '../components/SEO';
 import { trackEvent } from '../components/AnalyticsTracker';
 import PageTransition from '../components/PageTransition';
+import { Helmet } from 'react-helmet-async';
+import LazyImage from '../components/LazyImage';
+import SwipeContainer from '../components/SwipeContainer';
 
 // All blog posts data - in a real app this would come from an API or database
 const allBlogPosts = [
@@ -169,6 +172,8 @@ const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [post, setPost] = useState(allBlogPosts.find(post => post.id === id));
   const [relatedPosts, setRelatedPosts] = useState<typeof allBlogPosts>([]);
+  const [prevPost, setPrevPost] = useState<typeof allBlogPosts | null>(null);
+  const [nextPost, setNextPost] = useState<typeof allBlogPosts | null>(null);
   
   useEffect(() => {
     // Find current post
@@ -322,7 +327,7 @@ const BlogPost: React.FC = () => {
           <div className="relative -mt-6">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="w-full rounded-t-3xl overflow-hidden shadow-xl">
-                <img 
+                <LazyImage 
                   src={post.image} 
                   alt={post.title} 
                   className="w-full h-96 object-cover"
@@ -332,96 +337,101 @@ const BlogPost: React.FC = () => {
           </div>
 
           {/* Article Content */}
-          <div className="py-12 bg-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-12 gap-8">
-                {/* Main Content */}
-                <div className="col-span-12 lg:col-span-8">
-                  <div className="prose prose-lg max-w-none prose-red">
-                    {post.content.split('\n\n').map((paragraph: string, index: number) => {
-                      if (paragraph.startsWith('## ')) {
-                        return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{paragraph.replace('## ', '')}</h2>;
-                      } else if (paragraph.startsWith('### ')) {
-                        return <h3 key={index} className="text-xl font-bold mt-6 mb-3">{paragraph.replace('### ', '')}</h3>;
-                      } else {
-                        return <p key={index} className="mb-4 text-gray-700">{paragraph}</p>;
-                      }
-                    })}
-                  </div>
+          <SwipeContainer
+            prevPath={prevPost ? `/blog/${prevPost.id}` : undefined}
+            nextPath={nextPost ? `/blog/${nextPost.id}` : undefined}
+          >
+            <div className="py-12 bg-white">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-12 gap-8">
+                  {/* Main Content */}
+                  <div className="col-span-12 lg:col-span-8">
+                    <div className="prose prose-lg max-w-none prose-red">
+                      {post.content.split('\n\n').map((paragraph: string, index: number) => {
+                        if (paragraph.startsWith('## ')) {
+                          return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{paragraph.replace('## ', '')}</h2>;
+                        } else if (paragraph.startsWith('### ')) {
+                          return <h3 key={index} className="text-xl font-bold mt-6 mb-3">{paragraph.replace('### ', '')}</h3>;
+                        } else {
+                          return <p key={index} className="mb-4 text-gray-700">{paragraph}</p>;
+                        }
+                      })}
+                    </div>
 
-                  {/* Tags */}
-                  <div className="mt-10 pt-10 border-t border-gray-200">
-                    <div className="flex flex-wrap gap-2">
-                      {post.tags.map((tag: string) => (
-                        <a
-                          key={tag}
-                          href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-red-100 hover:text-red-600 transition-colors"
+                    {/* Tags */}
+                    <div className="mt-10 pt-10 border-t border-gray-200">
+                      <div className="flex flex-wrap gap-2">
+                        {post.tags.map((tag: string) => (
+                          <a
+                            key={tag}
+                            href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+                            className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-sm font-medium hover:bg-red-100 hover:text-red-600 transition-colors"
+                          >
+                            <Tag className="h-3 w-3 mr-1" /> {tag}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Share */}
+                    <div className="mt-8">
+                      <p className="text-gray-700 font-medium mb-3">Share this article</p>
+                      <div className="flex space-x-2">
+                        <button 
+                          onClick={() => {
+                            // Share logic
+                            trackEvent('blog_post_share', {
+                              post_id: post.id,
+                              post_title: post.title,
+                              share_method: 'button'
+                            });
+                          }}
+                          className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"
                         >
-                          <Tag className="h-3 w-3 mr-1" /> {tag}
-                        </a>
-                      ))}
+                          <Share2 className="h-5 w-5" />
+                        </button>
+                        <button className="p-2 bg-blue-700 text-white rounded-full hover:bg-blue-800">
+                          <Share2 className="h-5 w-5" />
+                        </button>
+                        <button className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600">
+                          <Share2 className="h-5 w-5" />
+                        </button>
+                        <button className="p-2 bg-red-500 text-white rounded-full hover:bg-red-600">
+                          <Share2 className="h-5 w-5" />
+                        </button>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Share */}
-                  <div className="mt-8">
-                    <p className="text-gray-700 font-medium mb-3">Share this article</p>
-                    <div className="flex space-x-2">
-                      <button 
-                        onClick={() => {
-                          // Share logic
-                          trackEvent('blog_post_share', {
-                            post_id: post.id,
-                            post_title: post.title,
-                            share_method: 'button'
-                          });
-                        }}
-                        className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"
+                  {/* Author Section */}
+                  <div className="col-span-12 lg:col-span-4">
+                    <div className="bg-slate-50 rounded-2xl p-6 sticky top-24">
+                      <div className="text-center mb-4">
+                        <LazyImage 
+                          src={post.authorImage} 
+                          alt={post.author}
+                          className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-lg"
+                        />
+                        <h3 className="text-lg font-bold text-gray-900">{post.author}</h3>
+                        <p className="text-gray-600">{post.authorTitle}</p>
+                      </div>
+                      <p className="text-gray-700 text-sm mb-6">
+                        {post.author} is a cybersecurity expert with over 15 years of experience
+                        in threat intelligence and incident response. They regularly advise
+                        Fortune 500 companies on security strategy.
+                      </p>
+                      <a 
+                        href="#" 
+                        className="block w-full py-2 px-4 bg-red-600 text-white text-center rounded-lg hover:bg-red-700 transition-colors"
                       >
-                        <Share2 className="h-5 w-5" />
-                      </button>
-                      <button className="p-2 bg-blue-700 text-white rounded-full hover:bg-blue-800">
-                        <Share2 className="h-5 w-5" />
-                      </button>
-                      <button className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600">
-                        <Share2 className="h-5 w-5" />
-                      </button>
-                      <button className="p-2 bg-red-500 text-white rounded-full hover:bg-red-600">
-                        <Share2 className="h-5 w-5" />
-                      </button>
+                        View all articles
+                      </a>
                     </div>
-                  </div>
-                </div>
-
-                {/* Author Section */}
-                <div className="col-span-12 lg:col-span-4">
-                  <div className="bg-slate-50 rounded-2xl p-6 sticky top-24">
-                    <div className="text-center mb-4">
-                      <img 
-                        src={post.authorImage} 
-                        alt={post.author}
-                        className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-lg"
-                      />
-                      <h3 className="text-lg font-bold text-gray-900">{post.author}</h3>
-                      <p className="text-gray-600">{post.authorTitle}</p>
-                    </div>
-                    <p className="text-gray-700 text-sm mb-6">
-                      {post.author} is a cybersecurity expert with over 15 years of experience
-                      in threat intelligence and incident response. They regularly advise
-                      Fortune 500 companies on security strategy.
-                    </p>
-                    <a 
-                      href="#" 
-                      className="block w-full py-2 px-4 bg-red-600 text-white text-center rounded-lg hover:bg-red-700 transition-colors"
-                    >
-                      View all articles
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </SwipeContainer>
 
           {/* Recent Articles Section */}
           <div className="py-16 bg-slate-50">
@@ -442,7 +452,7 @@ const BlogPost: React.FC = () => {
                 {relatedPosts.map(post => (
                   <div key={post.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <Link to={`/blog/${post.id}`} className="block">
-                      <img 
+                      <LazyImage 
                         src={post.image} 
                         alt={post.title} 
                         className="w-full h-48 object-cover"
