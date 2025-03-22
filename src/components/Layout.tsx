@@ -4,7 +4,6 @@ import Footer from './Footer';
 import CookieConsent from './CookieConsent';
 import BackToTop from './BackToTop';
 import PageTransition from './PageTransition';
-import MobileNavBar from './MobileNavBar';
 import { AnimatePresence } from 'framer-motion';
 
 interface LayoutProps {
@@ -17,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Header />
       
       {/* Main Content */}
-      <main className="flex-grow pt-20 pb-16 md:pb-0">
+      <main className="flex-grow pt-20 pb-0">
         <AnimatePresence mode="wait">
           <PageTransition>
             {children}
@@ -28,7 +27,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Footer />
       <CookieConsent />
       <BackToTop />
-      <MobileNavBar />
     </div>
   );
 };

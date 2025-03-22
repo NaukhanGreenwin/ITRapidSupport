@@ -37,7 +37,7 @@ const BackToTop = () => {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed right-4 sm:right-6 bottom-16 sm:bottom-24 z-40 p-4 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-lg transition-colors"
+          className="fixed right-4 sm:right-6 bottom-6 sm:bottom-8 z-40 p-4 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-lg transition-colors"
           aria-label="Back to top"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
