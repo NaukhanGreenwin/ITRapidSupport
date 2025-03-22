@@ -248,6 +248,39 @@ export default function Header() {
               >
                 Blog
               </Link>
+              <Link to="/resources" 
+                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Resources
+              </Link>
+              <Link to="/faq" 
+                className="block py-3 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                FAQ
+              </Link>
+              <Link to="/about" 
+                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link to="/careers" 
+                className="block py-3 px-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Careers
+              </Link>
+              
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <Link to="/contact"
+                  className="block py-3 px-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium text-center transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}
