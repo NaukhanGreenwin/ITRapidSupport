@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 import AnalyticsTracker from './components/AnalyticsTracker';
+import ThemeSwitcher from './components/ThemeSwitcher';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -39,6 +40,7 @@ function App() {
       <Router>
         <ScrollToTop />
         <AnalyticsTracker googleAnalyticsId="G-XXXXXXXXXX" />
+        <ThemeSwitcher />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />

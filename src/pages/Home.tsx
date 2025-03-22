@@ -232,24 +232,24 @@ const Home: React.FC = () => {
       </div>
       
       {/* Services Section */}
-      <div className="py-20 bg-gray-50 dark:bg-slate-900">
+      <div className="py-20 bg-gray-50">
         <AnimateOnScroll variant="fadeInUp">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">IT Security Solutions for Ontario Businesses</h2>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">IT Security Solutions for Ontario Businesses</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                 Protect your Toronto organization with our full suite of IT security services designed for modern Ontario enterprises.
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <AnimateOnScroll variant="fadeInUp" delay={0.1}>
-                <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
+                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
                   <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
                     <Users className="h-8 w-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Managed Security Services</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Managed Security Services</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     24/7 monitoring and response by our Toronto-based expert security team, ensuring your business stays protected around the clock.
                   </p>
                   <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
@@ -259,12 +259,12 @@ const Home: React.FC = () => {
               </AnimateOnScroll>
 
               <AnimateOnScroll variant="fadeInUp" delay={0.2}>
-                <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
+                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
                   <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
                     <Key className="h-8 w-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Identity & Access Management</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Identity & Access Management</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     Secure your digital assets with advanced identity verification and access control solutions tailored for GTA businesses.
                   </p>
                   <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
@@ -274,12 +274,12 @@ const Home: React.FC = () => {
               </AnimateOnScroll>
 
               <AnimateOnScroll variant="fadeInUp" delay={0.3}>
-                <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
+                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
                   <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
                     <Brain className="h-8 w-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Threat Intelligence</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Threat Intelligence</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     Stay ahead of cyber threats with AI-powered threat detection and proactive security measures for Ontario enterprises.
                   </p>
                   <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
@@ -289,12 +289,12 @@ const Home: React.FC = () => {
               </AnimateOnScroll>
 
               <AnimateOnScroll variant="fadeInUp" delay={0.4}>
-                <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
+                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
                   <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
                     <Server className="h-8 w-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Cloud Security</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Security</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     Protect your cloud infrastructure with comprehensive security controls, monitoring, and compliance solutions for Toronto businesses.
                   </p>
                   <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
@@ -304,12 +304,12 @@ const Home: React.FC = () => {
               </AnimateOnScroll>
 
               <AnimateOnScroll variant="fadeInUp" delay={0.5}>
-                <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
+                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
                   <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
                     <Code className="h-8 w-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Application Security</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Application Security</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     Secure your applications from development to deployment with code analysis, penetration testing, and runtime protection for Mississauga organizations.
                   </p>
                   <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
@@ -319,12 +319,12 @@ const Home: React.FC = () => {
               </AnimateOnScroll>
 
               <AnimateOnScroll variant="fadeInUp" delay={0.6}>
-                <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
+                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
                   <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
                     <FileCode className="h-8 w-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Compliance & Governance</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Governance</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     Meet Canadian regulatory requirements with our compliance frameworks, audit support, and policy management services for Ontario enterprises.
                   </p>
                   <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
@@ -344,15 +344,15 @@ const Home: React.FC = () => {
       </div>
       
       {/* Client Logos Section */}
-      <ClientLogos className="bg-gray-50 dark:bg-slate-900 py-12 border-t border-gray-100 dark:border-slate-800" />
+      <ClientLogos className="bg-gray-50 py-12 border-t border-gray-100" />
 
       {/* Testimonial Section */}
-      <div className="py-20 bg-white dark:bg-slate-800">
+      <div className="py-20 bg-white">
         <AnimateOnScroll variant="fadeIn">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">What Toronto Businesses Say</h2>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Toronto Businesses Say</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
                 Don't just take our word for it. See what leading organizations in the Greater Toronto Area have to say about their experience with IT Rapid Support.
               </p>
             </div>
@@ -362,7 +362,7 @@ const Home: React.FC = () => {
             </div>
             
             <div className="mt-12 text-center">
-              <Link to="/case-studies" className="inline-flex items-center justify-center border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors font-medium">
+              <Link to="/case-studies" className="inline-flex items-center justify-center border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
                 View All Case Studies <ChevronRight className="ml-2 h-5 w-5" />
               </Link>
             </div>

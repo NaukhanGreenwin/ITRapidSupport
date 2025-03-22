@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 dark:bg-slate-950 border-t border-slate-800 dark:border-slate-900">
+    <footer className="bg-slate-900 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div>
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 dark:border-slate-900 pt-8">
+        <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-slate-400 text-sm mb-4 sm:mb-0 text-center sm:text-left">
               © 2025 <span className="text-white">IT Rapid Support</span>. All rights reserved.
