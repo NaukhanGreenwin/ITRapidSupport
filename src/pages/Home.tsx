@@ -8,6 +8,11 @@ import PageTransition from '../components/PageTransition';
 import ContactForm from '../components/ContactForm';
 import SEO, { generateOrganizationSchema, generateLocalBusinessSchema, generateFAQSchema } from '../components/SEO';
 import { motion } from 'framer-motion';
+import HeroSection from '../components/HeroSection';
+import Microsoft365CopilotSection from '../components/Microsoft365CopilotSection';
+import ServicesGrid from '../components/ServicesGrid';
+import CtaSection from '../components/CtaSection';
+import IndustrySecuritySolutions from '../components/IndustrySecuritySolutions';
 
 const Home: React.FC = () => {
   const testimonials = [
@@ -146,228 +151,34 @@ const Home: React.FC = () => {
         schema={combinedSchema}
         breadcrumbs={[{ name: 'Home', url: '/' }]}
       />
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-slate-900">
-        {/* Abstract geometric shapes background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-24 -left-10 w-96 h-96 bg-red-600/30 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/4 -right-20 w-80 h-80 bg-indigo-600/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-8 right-1/4 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl"></div>
+      
+      {/* Main content starts here */}
+      <div className="space-y-8 md:space-y-16">
+        {/* Hero section - back as first section */}
+        <HeroSection />
+        
+        {/* Services grid - now second */}
+        <ServicesGrid />
+
+        {/* Industry-specific security solutions */}
+        <IndustrySecuritySolutions />
+
+        {/* Trusted by section */}
+        <div className="bg-gray-50 py-2 md:py-3">
+          <div className="container mx-auto text-center mb-2 sm:mb-3">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">Trusted by Industry Leaders</h2>
+            <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+              Join hundreds of organizations that rely on our security expertise
+            </p>
+          </div>
+          <ClientLogos />
         </div>
 
-        <AnimateOnScroll variant="fadeIn">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
-            <div className="grid md:grid-cols-12 gap-12 items-center">
-              <div className="md:col-span-7">
-                <div className="inline-flex items-center px-4 py-2 bg-red-600/20 rounded-full mb-6 backdrop-blur-sm">
-                  <span className="text-red-100 text-sm font-medium">Toronto's Leading IT Security</span>
-                </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Next-Generation <br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">Cybersecurity</span> Solutions
-                </h1>
-                <p className="text-slate-300 text-lg mb-8 leading-relaxed max-w-xl">
-                  Protect your Greater Toronto Area business with advanced threat detection, 24/7 monitoring, and expert-led security operations from Toronto's trusted leader in IT security excellence.
-                </p>
-                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <Link to="/contact" className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium">
-                    Get Protected <ChevronRight className="ml-2 h-5 w-5" />
-                  </Link>
-                  <Link to="/contact" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg hover:bg-white/15 transition-colors flex items-center justify-center font-medium">
-                    Schedule Demo
-                  </Link>
-                </div>
-              </div>
-              <div className="md:col-span-5 hidden md:block relative h-full min-h-[400px]">
-                {/* Abstract line art */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-full h-full relative">
-                    {/* Animated grid lines */}
-                    <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
-                    
-                    {/* Floating 3D objects */}
-                    <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-red-600/80 rounded-lg transform rotate-45 animate-float"></div>
-                    <div className="absolute bottom-1/3 left-1/3 w-16 h-16 bg-blue-600/80 rounded-full animate-float-delay"></div>
-                    <div className="absolute top-1/3 left-1/4 w-24 h-24 border-2 border-white/30 rounded-lg transform -rotate-15 animate-float-slow"></div>
-                    
-                    {/* Data visualization element */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-64 h-64 border-4 border-red-600/40 rounded-full flex items-center justify-center animate-pulse-slow">
-                        <div className="w-48 h-48 border-4 border-white/30 rounded-full flex items-center justify-center">
-                          <div className="w-32 h-32 bg-gradient-to-br from-red-600/80 to-purple-600/80 rounded-full shadow-lg"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </AnimateOnScroll>
-
-        {/* Trust Bar */}
-        <div className="border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
-              <div className="flex items-center space-x-3">
-                <Globe className="h-6 w-6 text-red-400" />
-                <span className="text-white font-medium">Greater Toronto Area</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="h-6 w-6 text-red-400" />
-                <span className="text-white font-medium">24/7 Local Support</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <ShieldIcon className="h-6 w-6 text-red-400" />
-                <span className="text-white font-medium">Data Privacy Focus</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Users className="h-6 w-6 text-red-400" />
-                <span className="text-white font-medium">Ontario-Based Team</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Services Section */}
-      <div className="py-20 bg-gray-50">
-        <AnimateOnScroll variant="fadeInUp">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">IT Security Solutions for Ontario Businesses</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-                Protect your Toronto organization with our full suite of IT security services designed for modern Ontario enterprises.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <AnimateOnScroll variant="fadeInUp" delay={0.1}>
-                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
-                  <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
-                    <Users className="h-8 w-8 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Managed Security Services</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    24/7 monitoring and response by our Toronto-based expert security team, ensuring your business stays protected around the clock.
-                  </p>
-                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
-                    Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </div>
-              </AnimateOnScroll>
-
-              <AnimateOnScroll variant="fadeInUp" delay={0.2}>
-                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
-                  <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
-                    <Key className="h-8 w-8 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Identity & Access Management</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Secure your digital assets with advanced identity verification and access control solutions tailored for GTA businesses.
-                  </p>
-                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
-                    Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </div>
-              </AnimateOnScroll>
-
-              <AnimateOnScroll variant="fadeInUp" delay={0.3}>
-                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
-                  <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
-                    <Brain className="h-8 w-8 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Threat Intelligence</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Stay ahead of cyber threats with AI-powered threat detection and proactive security measures for Ontario enterprises.
-                  </p>
-                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
-                    Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </div>
-              </AnimateOnScroll>
-
-              <AnimateOnScroll variant="fadeInUp" delay={0.4}>
-                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
-                  <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
-                    <Server className="h-8 w-8 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Cloud Security</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Protect your cloud infrastructure with comprehensive security controls, monitoring, and compliance solutions for Toronto businesses.
-                  </p>
-                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
-                    Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </div>
-              </AnimateOnScroll>
-
-              <AnimateOnScroll variant="fadeInUp" delay={0.5}>
-                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
-                  <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
-                    <Code className="h-8 w-8 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Application Security</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Secure your applications from development to deployment with code analysis, penetration testing, and runtime protection for Mississauga organizations.
-                  </p>
-                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
-                    Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </div>
-              </AnimateOnScroll>
-
-              <AnimateOnScroll variant="fadeInUp" delay={0.6}>
-                <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow group h-full">
-                  <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6 group-hover:bg-red-600/20 transition-colors">
-                    <FileCode className="h-8 w-8 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Compliance & Governance</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Meet Canadian regulatory requirements with our compliance frameworks, audit support, and policy management services for Ontario enterprises.
-                  </p>
-                  <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto">
-                    Learn more <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </div>
-              </AnimateOnScroll>
-            </div>
-            
-            <div className="mt-14 text-center">
-              <Link to="/services" className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium">
-                View All Services <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </AnimateOnScroll>
-      </div>
-      
-      {/* Client Logos Section */}
-      <ClientLogos className="bg-gray-50 py-12 border-t border-gray-100" />
-
-      {/* Testimonial Section */}
-      <div className="py-20 bg-white">
-        <AnimateOnScroll variant="fadeIn">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Toronto Businesses Say</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Don't just take our word for it. See what leading organizations in the Greater Toronto Area have to say about their experience with IT Rapid Support.
-              </p>
-            </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <TestimonialSlider testimonials={testimonials} />
-            </div>
-            
-            <div className="mt-12 text-center">
-              <Link to="/case-studies" className="inline-flex items-center justify-center border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
-                View All Case Studies <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </AnimateOnScroll>
+        {/* Microsoft 365 Copilot section */}
+        <Microsoft365CopilotSection />
+        
+        {/* Call to action */}
+        <CtaSection />
       </div>
     </PageTransition>
   );

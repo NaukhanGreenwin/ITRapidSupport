@@ -123,15 +123,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '', compact = fal
     <div className={`${className} bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 md:p-8`}>
       {!isSubmitted ? (
         <>
-          {!compact && (
-            <div className="mb-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">Get in touch</h2>
-              <p className="text-gray-600 dark:text-gray-300">
-                Fill out the form below and our team will get back to you within 24 hours.
-              </p>
-            </div>
-          )}
-          
           <form onSubmit={handleSubmit} className="space-y-4" noValidate>
             <div className={compact ? "space-y-4" : "grid grid-cols-1 md:grid-cols-2 gap-4"}>
               <div>

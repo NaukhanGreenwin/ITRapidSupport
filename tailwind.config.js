@@ -33,8 +33,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Roboto Condensed', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        display: ['Roboto Condensed', 'ui-sans-serif', 'system-ui'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        display: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
       boxShadow: {
         'subtle': '0 2px 15px 0 rgba(0, 0, 0, 0.05)',
