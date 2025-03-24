@@ -73,10 +73,10 @@ const IndustrySecuritySolutions: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {industries.map((industry, index) => (
               <AnimateOnScroll key={industry.name} variant="fadeInUp" delay={index * 0.1}>
-                <div className="bg-gradient-to-br border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full">
+                <div className="bg-gradient-to-br border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
                   <div className={`bg-gradient-to-br ${industry.color} pt-5 px-5 pb-8`}>
                     <div className="flex items-center mb-2">
-                      <div className="bg-white/90 rounded-lg p-2 mr-3">
+                      <div className="bg-white/90 rounded-lg p-2 mr-3 flex-shrink-0">
                         {industry.icon}
                       </div>
                       <h3 className="text-lg font-bold text-gray-900">{industry.name}</h3>
@@ -85,8 +85,8 @@ const IndustrySecuritySolutions: React.FC = () => {
                       {industry.description}
                     </p>
                   </div>
-                  <div className="px-5 py-4 bg-white">
-                    <ul className="space-y-2">
+                  <div className="px-5 py-4 bg-white flex-grow flex flex-col">
+                    <ul className="space-y-2 mb-auto">
                       {industry.features.map((feature, i) => (
                         <li key={i} className="flex items-start">
                           <ShieldCheck className="h-4 w-4 text-red-600 mt-0.5 mr-2 flex-shrink-0" />
