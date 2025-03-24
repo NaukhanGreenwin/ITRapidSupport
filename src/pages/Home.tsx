@@ -152,32 +152,23 @@ const Home: React.FC = () => {
         breadcrumbs={[{ name: 'Home', url: '/' }]}
       />
       
-      {/* Main content starts here */}
+      {/* Main content starts here - Optimize for mobile loading */}
       <div className="space-y-8 md:space-y-16">
-        {/* Hero section - back as first section */}
-        <HeroSection />
+        {/* Critical path components */}
+        <div data-preload="true">
+          {/* Hero section - always preload */}
+          <HeroSection />
+        </div>
         
-        {/* Services grid - now second */}
-        <ServicesGrid />
-
-        {/* Industry-specific security solutions */}
-        <IndustrySecuritySolutions />
-
-        {/* Partners section - enhanced with more context */}
-        <div className="bg-gray-50 py-6 md:py-12">
-          <div className="container mx-auto text-center mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Strategic Technology Partners</h2>
-            <p className="text-xs md:text-sm text-gray-500 max-w-3xl mx-auto">
-              IT Rapid Support maintains strategic partnerships with leading technology providers to deliver comprehensive, enterprise-grade security and IT management solutions for businesses of all sizes.
-            </p>
-          </div>
-          <ClientLogos />
+        {/* Secondary components */}
+        <div data-preload="deferred">
+          {/* Services grid */}
+          <ServicesGrid />
         </div>
 
-        {/* Microsoft 365 Copilot section */}
+        {/* Below-fold components */}
+        <IndustrySecuritySolutions />
         <Microsoft365CopilotSection />
-        
-        {/* Call to action */}
         <CtaSection />
       </div>
     </PageTransition>

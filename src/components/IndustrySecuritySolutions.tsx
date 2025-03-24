@@ -53,20 +53,15 @@ const IndustrySecuritySolutions: React.FC = () => {
     <div className="py-8 sm:py-10 bg-white">
       <AnimateOnScroll variant="fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 sm:mb-8">
-            <div>
+          <div className="flex flex-col mb-8 sm:mb-10">
+            <div className="text-center mx-auto">
               <div className="inline-flex items-center px-3 py-1.5 bg-red-600/10 rounded-full mb-3 backdrop-blur-sm">
                 <span className="text-red-600 text-sm font-medium">Industry-Specific Solutions</span>
               </div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">Security Tailored for Your Industry</h2>
-              <p className="text-gray-600 max-w-2xl text-sm sm:text-base">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">Security Tailored for Your Industry</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base mb-6">
                 We understand the unique security challenges faced by different industries and provide specialized solutions designed to address industry-specific threats.
               </p>
-            </div>
-            <div className="mt-4 md:mt-0 flex justify-center md:justify-end">
-              <Link to="/industries" className="inline-flex items-center justify-center bg-red-600 text-white px-5 sm:px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium text-sm">
-                All Industries <ChevronRight className="ml-1 h-4 w-4" />
-              </Link>
             </div>
           </div>
 

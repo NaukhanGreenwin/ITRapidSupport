@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useAnimationControls } from 'framer-motion';
 import AnimateOnScroll from './AnimateOnScroll';
 
 interface ClientLogosProps {
@@ -52,12 +52,69 @@ export default function ClientLogos({ className = '', showHeader = false }: Clie
     }
   ];
 
+  // Create a longer array with 4 copies to ensure continuous looping
+  const scrollLogos = [...logos, ...logos, ...logos, ...logos];
+  const containerRef = useRef<HTMLDivElement>(null);
+  const controls = useAnimationControls();
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [logoRowWidth, setLogoRowWidth] = useState(0);
+
+  // Calculate widths on mount and window resize
+  useEffect(() => {
+    const calculateWidths = () => {
+      if (containerRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        setContainerWidth(containerWidth);
+        
+        // Calculate total width of one set of logos (with spacing)
+        const logoWidthWithSpacing = logos.reduce((total, logo) => {
+          return total + Math.min(logo.width * 0.4, 50) + 32; // 32px for spacing
+        }, 0);
+        
+        setLogoRowWidth(logoWidthWithSpacing);
+      }
+    };
+
+    calculateWidths();
+    window.addEventListener('resize', calculateWidths);
+    
+    return () => {
+      window.removeEventListener('resize', calculateWidths);
+    };
+  }, []);
+
+  // Set up continuous animation with improved performance
+  useEffect(() => {
+    if (logoRowWidth > 0) {
+      const animateContinuously = async () => {
+        // More aggressive speed factor for faster animation
+        const duration = logoRowWidth / 45; 
+        
+        // Reset position first if needed
+        await controls.set({ x: 0 });
+        
+        // Start animation from beginning
+        await controls.start({
+          x: -logoRowWidth,
+          transition: {
+            duration: duration,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'loop'
+          }
+        });
+      };
+      
+      animateContinuously();
+    }
+  }, [logoRowWidth, controls]);
+
   return (
     <AnimateOnScroll variant="fadeIn">
-      <section className={`py-2 sm:py-3 md:py-8 ${className}`}>
+      <section className={`py-2 sm:py-3 md:py-6 ${className}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {showHeader && (
-            <div className="text-center mb-2 sm:mb-3 md:mb-4">
+            <div className="text-center mb-2 sm:mb-3">
               <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">Strategic Technology Partners</h2>
               <p className="text-xs text-gray-500 max-w-3xl mx-auto">
                 IT Rapid Support maintains strategic partnerships with leading technology providers to deliver comprehensive security solutions.
@@ -65,35 +122,31 @@ export default function ClientLogos({ className = '', showHeader = false }: Clie
             </div>
           )}
           
-          {/* Logo carousel */}
-          <div className="relative overflow-hidden mx-auto">
-            {/* Gradient fade on sides for a smoother scroll experience */}
-            <div className="absolute left-0 top-0 h-full w-6 sm:w-8 md:w-12 bg-gradient-to-r from-white to-transparent z-10"></div>
-            <div className="absolute right-0 top-0 h-full w-6 sm:w-8 md:w-12 bg-gradient-to-l from-white to-transparent z-10"></div>
+          {/* Logo carousel with improved implementation */}
+          <div className="relative overflow-hidden mx-auto" ref={containerRef}>
+            {/* Stronger gradient fade on sides for cleaner edges */}
+            <div className="absolute left-0 top-0 h-full w-8 sm:w-10 md:w-12 bg-gradient-to-r from-white via-white to-transparent z-10"></div>
+            <div className="absolute right-0 top-0 h-full w-8 sm:w-10 md:w-12 bg-gradient-to-l from-white via-white to-transparent z-10"></div>
             
             <div className="flex overflow-hidden">
               <motion.div 
-                className="flex space-x-2 sm:space-x-3 md:space-x-8 py-2 md:py-3 items-center"
-                animate={{ x: [0, -1920] }}
-                transition={{
-                  x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 60,
-                    ease: "linear",
-                  },
-                }}
+                className="flex space-x-4 sm:space-x-6 md:space-x-8 py-2 md:py-3 items-center"
+                animate={controls}
+                initial={{ x: 0 }}
               >
-                {[...logos, ...logos].map((logo, index) => (
+                {scrollLogos.map((logo, index) => (
                   <div 
                     key={`${logo.name}-${index}`} 
-                    className="flex-shrink-0 flex items-center justify-center h-4 sm:h-5 md:h-8 transition-all duration-300"
+                    className="flex-shrink-0 flex items-center justify-center h-6 sm:h-7 md:h-8 transition-all duration-300"
                   >
                     <img 
                       src={logo.image} 
                       alt={`${logo.name} logo`} 
                       className="h-full object-contain" 
-                      style={{ maxWidth: `${Math.min(logo.width * 0.4, 50)}px` }}
+                      style={{ 
+                        maxWidth: `${Math.min(logo.width * 0.5, 60)}px`,
+                        filter: "grayscale(1) opacity(0.8)",
+                      }}
                     />
                   </div>
                 ))}

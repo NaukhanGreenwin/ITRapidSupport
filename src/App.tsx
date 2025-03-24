@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 import AnalyticsTracker from './components/AnalyticsTracker';
 import ThemeSwitcher from './components/ThemeSwitcher';
+import PreloadManager from './components/PreloadManager';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -11,7 +12,6 @@ import Solutions from './pages/Solutions';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Careers from './pages/Careers';
-import CaseStudies from './pages/CaseStudies';
 import SecurityAssessment from './pages/SecurityAssessment';
 import Resources from './pages/Resources';
 import Privacy from './pages/Privacy';
@@ -20,6 +20,9 @@ import Cookies from './pages/Cookies';
 import NotFound from './pages/NotFound';
 import Accessibility from './pages/Accessibility';
 import ResourceDetails from './pages/ResourceDetails';
+import Partners from './pages/Partners';
+import Support from './pages/Support';
+import CyberIncident from './pages/CyberIncident';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -39,17 +42,20 @@ function App() {
         <ScrollToTop />
         <AnalyticsTracker googleAnalyticsId="G-XXXXXXXXXX" />
         <ThemeSwitcher />
+        <PreloadManager />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/solutions" element={<Solutions />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/support" element={<Support />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/careers" element={<Careers />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/security-assessment" element={<SecurityAssessment />} />
+            <Route path="/cyber-incident" element={<CyberIncident />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:id" element={<ResourceDetails />} />
             <Route path="/privacy" element={<Privacy />} />
