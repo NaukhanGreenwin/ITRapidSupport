@@ -163,12 +163,12 @@ const Home: React.FC = () => {
         {/* Industry-specific security solutions */}
         <IndustrySecuritySolutions />
 
-        {/* Trusted by section */}
-        <div className="bg-gray-50 py-2 md:py-3">
-          <div className="container mx-auto text-center mb-2 sm:mb-3">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">Trusted by Industry Leaders</h2>
-            <p className="text-sm text-gray-600 max-w-2xl mx-auto">
-              Join hundreds of organizations that rely on our security expertise
+        {/* Partners section - enhanced with more context */}
+        <div className="bg-gray-50 py-6 md:py-12">
+          <div className="container mx-auto text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Strategic Technology Partners</h2>
+            <p className="text-xs md:text-sm text-gray-500 max-w-3xl mx-auto">
+              IT Rapid Support maintains strategic partnerships with leading technology providers to deliver comprehensive, enterprise-grade security and IT management solutions for businesses of all sizes.
             </p>
           </div>
           <ClientLogos />

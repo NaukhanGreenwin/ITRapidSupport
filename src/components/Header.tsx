@@ -10,8 +10,41 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const menuRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+
+  // Handle scroll effect for header
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Determine if we're scrolling up or down
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+      
+      // Set scrolled state for styling
+      if (currentScrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -126,16 +159,41 @@ export default function Header() {
     }
   };
 
+  // Header animation variants
+  const headerVariants = {
+    visible: { 
+      y: 0,
+      opacity: 1,
+      transition: { 
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    },
+    hidden: { 
+      y: -100,
+      opacity: 0,
+      transition: { 
+        duration: 0.3,
+        ease: "easeIn"
+      }
+    }
+  };
+
   return (
-    <header className="bg-white shadow-sm fixed w-full z-50">
+    <motion.header 
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white shadow-sm'}`}
+      initial="visible"
+      animate={isVisible ? "visible" : "hidden"}
+      variants={headerVariants}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className={`flex justify-between ${scrolled ? 'h-16' : 'h-20'} transition-all duration-300`}>
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
                 src="/images/logo.png" 
                 alt="IT Rapid Support Logo" 
-                className="h-10 sm:h-12 md:h-16 w-auto max-w-[200px] sm:max-w-[240px] object-contain" 
+                className={`w-auto max-w-[200px] sm:max-w-[240px] object-contain transition-all duration-300 ${scrolled ? 'h-8 sm:h-10' : 'h-10 sm:h-12 md:h-16'}`}
               />
               <span className="sr-only">IT Rapid Support</span>
             </Link>
@@ -365,6 +423,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 } 

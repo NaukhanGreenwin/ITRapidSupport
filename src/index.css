@@ -136,4 +136,49 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+  
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  /* Custom breakpoint for smaller phones */
+  @media (min-width: 400px) {
+    .xs\:flex-row {
+      flex-direction: row !important;
+    }
+    .xs\:mt-0 {
+      margin-top: 0 !important;
+    }
+    .xs\:justify-between {
+      justify-content: space-between !important;
+    }
+    .xs\:px-4 {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    .xs\:py-3 {
+      padding-top: 0.75rem !important;
+      padding-bottom: 0.75rem !important;
+    }
+  }
+  
+  /* Improved tap targets for mobile */
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Prevent text size adjustment after orientation changes on iOS */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Add smooth scrolling for better mobile experience */
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 }

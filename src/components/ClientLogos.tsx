@@ -54,13 +54,13 @@ export default function ClientLogos({ className = '', showHeader = false }: Clie
 
   return (
     <AnimateOnScroll variant="fadeIn">
-      <section className={`py-3 sm:py-5 md:py-8 ${className}`}>
+      <section className={`py-2 sm:py-3 md:py-8 ${className}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {showHeader && (
             <div className="text-center mb-2 sm:mb-3 md:mb-4">
-              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">Trusted by Industry Leaders</h2>
-              <p className="text-xs sm:text-sm text-gray-600 max-w-2xl mx-auto">
-                Join hundreds of organizations that rely on our security expertise
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">Strategic Technology Partners</h2>
+              <p className="text-xs text-gray-500 max-w-3xl mx-auto">
+                IT Rapid Support maintains strategic partnerships with leading technology providers to deliver comprehensive security solutions.
               </p>
             </div>
           )}
@@ -73,7 +73,7 @@ export default function ClientLogos({ className = '', showHeader = false }: Clie
             
             <div className="flex overflow-hidden">
               <motion.div 
-                className="flex space-x-3 sm:space-x-4 md:space-x-8 py-2 md:py-3 items-center"
+                className="flex space-x-2 sm:space-x-3 md:space-x-8 py-2 md:py-3 items-center"
                 animate={{ x: [0, -1920] }}
                 transition={{
                   x: {
@@ -87,13 +87,13 @@ export default function ClientLogos({ className = '', showHeader = false }: Clie
                 {[...logos, ...logos].map((logo, index) => (
                   <div 
                     key={`${logo.name}-${index}`} 
-                    className="flex-shrink-0 flex items-center justify-center h-5 sm:h-6 md:h-8 transition-all duration-300"
+                    className="flex-shrink-0 flex items-center justify-center h-4 sm:h-5 md:h-8 transition-all duration-300"
                   >
                     <img 
                       src={logo.image} 
                       alt={`${logo.name} logo`} 
                       className="h-full object-contain" 
-                      style={{ maxWidth: `${Math.min(logo.width * 0.5, 60)}px` }}
+                      style={{ maxWidth: `${Math.min(logo.width * 0.4, 50)}px` }}
                     />
                   </div>
                 ))}

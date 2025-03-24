@@ -8,10 +8,10 @@ const ServicesGrid: React.FC = () => {
     <div className="py-10 bg-gray-50">
       <AnimateOnScroll variant="fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">IT Security Solutions for Ontario Businesses</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-base">
-              Protect your Toronto organization with our full suite of IT security services designed for modern Ontario enterprises.
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Comprehensive IT Security Solutions</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Protect your organization with our full suite of IT security services designed for modern enterprises.
             </p>
           </div>
           

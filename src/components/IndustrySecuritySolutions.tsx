@@ -50,51 +50,52 @@ const IndustrySecuritySolutions: React.FC = () => {
   ];
 
   return (
-    <div className="py-10 bg-white">
+    <div className="py-8 sm:py-10 bg-white">
       <AnimateOnScroll variant="fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 sm:mb-8">
             <div>
               <div className="inline-flex items-center px-3 py-1.5 bg-red-600/10 rounded-full mb-3 backdrop-blur-sm">
                 <span className="text-red-600 text-sm font-medium">Industry-Specific Solutions</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Security Tailored for Your Industry</h2>
-              <p className="text-gray-600 max-w-2xl text-base">
-                We understand the unique security challenges faced by different industries in Ontario and provide specialized solutions designed to address industry-specific threats.
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2">Security Tailored for Your Industry</h2>
+              <p className="text-gray-600 max-w-2xl text-sm sm:text-base">
+                We understand the unique security challenges faced by different industries and provide specialized solutions designed to address industry-specific threats.
               </p>
             </div>
-            <div className="mt-4 md:mt-0">
-              <Link to="/industries" className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium text-sm">
+            <div className="mt-4 md:mt-0 flex justify-center md:justify-end">
+              <Link to="/industries" className="inline-flex items-center justify-center bg-red-600 text-white px-5 sm:px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium text-sm">
                 All Industries <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {industries.map((industry, index) => (
               <AnimateOnScroll key={industry.name} variant="fadeInUp" delay={index * 0.1}>
                 <div className="bg-gradient-to-br border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
-                  <div className={`bg-gradient-to-br ${industry.color} pt-5 px-5 pb-8`}>
+                  <div className={`bg-gradient-to-br ${industry.color} pt-4 px-4 sm:pt-5 sm:px-5 pb-4 sm:pb-5 h-[140px] sm:h-[145px]`}>
                     <div className="flex items-center mb-2">
                       <div className="bg-white/90 rounded-lg p-2 mr-3 flex-shrink-0">
                         {industry.icon}
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900">{industry.name}</h3>
+                      <h3 className="text-base sm:text-lg font-bold text-gray-900">{industry.name}</h3>
                     </div>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-600 text-xs sm:text-sm line-clamp-3">
                       {industry.description}
                     </p>
                   </div>
-                  <div className="px-5 py-4 bg-white flex-grow flex flex-col">
-                    <ul className="space-y-2 mb-auto">
+                  <div className="px-4 sm:px-5 py-4 bg-white flex-grow flex flex-col justify-between">
+                    <ul className="space-y-2">
                       {industry.features.map((feature, i) => (
                         <li key={i} className="flex items-start">
                           <ShieldCheck className="h-4 w-4 text-red-600 mt-0.5 mr-2 flex-shrink-0" />
-                          <span className="text-sm text-gray-700">{feature}</span>
+                          <span className="text-xs sm:text-sm text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <Link to={`/industries/${industry.name.toLowerCase().replace(/\s+/g, '-')}`} className="mt-4 inline-flex items-center text-red-600 text-sm font-medium hover:text-red-700">
+                    <Link to={`/industries/${industry.name.toLowerCase().replace(/\s+/g, '-')}`} 
+                          className="mt-4 inline-flex items-center text-red-600 text-xs sm:text-sm font-medium hover:text-red-700 touch-manipulation">
                       Learn more <ChevronRight className="ml-1 h-3 w-3" />
                     </Link>
                   </div>

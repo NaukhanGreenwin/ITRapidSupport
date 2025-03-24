@@ -80,6 +80,19 @@ export default {
         'none': 'none',
         'blur': 'blur(20px)',
       },
+      screens: {
+        'xs': '400px',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '68': '17rem',
+        '88': '22rem',
+        '100': '25rem',
+        '120': '30rem',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+      },
     },
   },
   plugins: [],
