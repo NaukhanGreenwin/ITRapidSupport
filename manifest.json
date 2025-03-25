@@ -2,7 +2,7 @@
   "name": "IT Rapid Support",
   "short_name": "IT Rapid",
   "description": "Enterprise-grade cybersecurity and managed IT support services for businesses across the Greater Toronto Area",
-  "start_url": "/#/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#dc2626",
@@ -76,12 +76,12 @@
   "shortcuts": [
     {
       "name": "Contact Us",
-      "url": "/#/contact",
+      "url": "/contact",
       "icons": [{ "src": "/icons/contact-96x96.png", "sizes": "96x96" }]
     },
     {
       "name": "Services",
-      "url": "/#/services",
+      "url": "/services",
       "icons": [{ "src": "/icons/services-96x96.png", "sizes": "96x96" }]
     }
   ],
