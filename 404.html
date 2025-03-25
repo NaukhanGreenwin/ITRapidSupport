@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>IT Rapid Support | Redirecting...</title>
+  <script>
+    // Single Page App Redirect Script
+    // This script takes the current URL and redirects to the root domain
+    // while preserving the route in the URL query parameter
+    (function() {
+      // Get the current path and hash
+      var path = window.location.pathname;
+      var hash = window.location.hash;
+      
+      // Redirect to the root with the path and hash in the query string
+      window.location.href = '/' + 
+        (path.length > 0 ? '?path=' + path.slice(1) : '') + 
+        (hash.length > 0 ? (path.length > 0 ? '&' : '?') + 'hash=' + hash.slice(1) : '');
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0;URL='/'">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <p style="text-align: center; font-family: sans-serif; padding-top: 50px;">
+    Redirecting to the homepage...
+  </p>
+</body>
+</html> 
