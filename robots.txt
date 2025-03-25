@@ -1,0 +1,39 @@
+# ITRapidSupport - Comprehensive Robots.txt
+# Last updated: 2024-03-22
+
+# Allow all well-behaved crawlers
+User-agent: *
+Allow: /
+
+# Important crawlers
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Googlebot-Mobile
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Yahoo! Slurp
+Allow: /
+
+# Block specific folders
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dev/
+Disallow: /internal/
+Disallow: /temp/
+Disallow: /cdn-cgi/
+
+# Block duplicate content
+Disallow: /*/print/
+Disallow: /*?*
+Disallow: /*?q=*
+Disallow: /*&sort=*
+Disallow: /search?
+
+# Crawl rate controls
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://itrapidsupport.com/sitemap.xml 
