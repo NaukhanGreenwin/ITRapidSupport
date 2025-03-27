@@ -227,7 +227,7 @@ export default function Header() {
       
       {/* Main header - positioned below phone banner on mobile */}
       <motion.header 
-        className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white shadow-sm'}`}
+        className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white shadow-sm'}`}
         initial="visible"
         animate={isVisible ? "visible" : "hidden"}
         variants={headerVariants}
