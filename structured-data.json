@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "IT Rapid Support",
+  "url": "https://itrapidsupport.com",
+  "logo": "https://itrapidsupport.com/ITRapid-logo.svg",
+  "description": "Professional IT support services for businesses. We provide comprehensive IT solutions, maintenance, and support to keep your business running smoothly.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7810 Keele St",
+    "addressLocality": "Vaughan",
+    "addressRegion": "ON",
+    "postalCode": "L4K4G7",
+    "addressCountry": "CA"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-289-582-9930",
+    "contactType": "customer service",
+    "areaServed": "CA",
+    "availableLanguage": ["English"]
+  }
+} 

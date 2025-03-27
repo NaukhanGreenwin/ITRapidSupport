@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What IT security services does IT Rapid Support offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IT Rapid Support offers comprehensive IT security services including vulnerability assessments, managed security monitoring, incident response, security compliance, penetration testing, and employee security awareness training. All our services are tailored to meet the specific needs of your business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I protect my business from cyber threats?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protecting your business from cyber threats requires a multi-layered approach including implementing strong security policies, using up-to-date security software, regular employee training, conducting vulnerability assessments, enabling multi-factor authentication, maintaining secure backups, and partnering with a managed security service provider like IT Rapid Support for 24/7 monitoring and protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cost of IT security services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost of IT security services varies based on the size of your business, the complexity of your IT infrastructure, and the specific services required. IT Rapid Support offers customized pricing based on your security needs. We provide flexible packages starting from $1,000 CAD per month for small businesses. Contact us for a personalized quote."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can IT Rapid Support respond to a security incident?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IT Rapid Support offers rapid incident response services with guaranteed response times. For critical security incidents, our initial response time is within 15 minutes. Our dedicated security team is available 24/7/365 to address security incidents promptly and efficiently, minimizing potential damage and downtime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does IT Rapid Support offer compliance assistance for regulations like GDPR, HIPAA, or PCI DSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, IT Rapid Support specializes in helping businesses achieve and maintain compliance with various regulations including GDPR, HIPAA, PCI DSS, PIPEDA, and other industry-specific requirements. Our compliance services include gap analysis, implementation of required security controls, documentation preparation, and ongoing compliance monitoring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas in Canada does IT Rapid Support serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IT Rapid Support provides services throughout Canada with a primary focus on the Greater Toronto Area (GTA), Vaughan, Markham, Mississauga, and surrounding regions in Ontario. We also offer remote services for clients across all Canadian provinces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I get started with IT Rapid Support's security services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Getting started with IT Rapid Support is easy. Contact us through our website at itrapidsupport.com/contact, call us at +1-289-582-9930, or email us at info@itrapidsupport.com. We'll schedule an initial consultation to assess your security needs and provide a customized security solution for your business."
+      }
+    }
+  ]
+} 
