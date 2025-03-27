@@ -1,0 +1,53 @@
+{
+  "header": {
+    "services": "Services",
+    "solutions": "Solutions",
+    "enterpriseSolutions": "Enterprise Solutions",
+    "securityEvaluation": "Security Evaluation",
+    "breachServices": "Breach Services",
+    "technologyPartners": "Technology Partners",
+    "support": "Support",
+    "resources": "Resources",
+    "resourceCenter": "Resource Center",
+    "faq": "FAQ",
+    "about": "About",
+    "careers": "Careers",
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "company": "IT Rapid Support",
+    "description": "Enterprise-grade cybersecurity and IT management solutions for Ontario businesses.",
+    "services": "Services",
+    "managedSecurity": "Managed Security",
+    "threatDetection": "Threat Detection",
+    "cloudSecurity": "Cloud Security",
+    "itSupport": "24/7 IT Support",
+    "solutions": "Solutions",
+    "securityEvaluation": "Security Evaluation",
+    "breachServices": "Breach Services",
+    "technologyPartners": "Technology Partners",
+    "technicalSupport": "Technical Support",
+    "contact": "Contact",
+    "email": "info@itrapidsupport.com",
+    "phone": "+1-289-582-9930",
+    "address": "7810 Keele St, Vaughan, ON",
+    "copyright": "© {{year}} IT Rapid Support. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "accessibility": "Accessibility"
+  },
+  "languageSwitcher": {
+    "language": "Language",
+    "english": "English",
+    "french": "French",
+    "spanish": "Spanish",
+    "german": "German"
+  },
+  "home": {
+    "hero": {
+      "title": "Professional IT Management",
+      "subtitle": "Advanced Cybersecurity",
+      "description": "Protect your digital assets with comprehensive managed IT services, proactive security monitoring, and cyberthreat defense."
+    }
+  }
+} 

@@ -5,8 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavLink from './NavLink';
 import Button from './Button';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
@@ -252,7 +255,7 @@ export default function Header() {
             
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-6">
-              <NavLink to="/services">Services</NavLink>
+              <NavLink to="/services">{t('header.services')}</NavLink>
               
               <div className="relative">
                 <motion.button 
@@ -264,7 +267,7 @@ export default function Header() {
                   aria-expanded={solutionsDropdownOpen}
                   aria-controls="solutions-dropdown"
                 >
-                  Solutions <ChevronDown className="ml-1 h-4 w-4" />
+                  {t('header.solutions')} <ChevronDown className="ml-1 h-4 w-4" />
                 </motion.button>
                 
                 <AnimatePresence>
@@ -281,32 +284,32 @@ export default function Header() {
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
-                        Enterprise Solutions
+                        {t('header.enterpriseSolutions')}
                       </Link>
                       <Link to="/security-assessment" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
-                        Security Evaluation
+                        {t('header.securityEvaluation')}
                       </Link>
                       <Link to="/cyber-incident" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
-                        Breach Services
+                        {t('header.breachServices')}
                       </Link>
                       <Link to="/partners" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
-                        Technology Partners
+                        {t('header.technologyPartners')}
                       </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/support">Support</NavLink>
+              <NavLink to="/support">{t('header.support')}</NavLink>
               
               <div className="relative">
                 <motion.button 
@@ -318,7 +321,7 @@ export default function Header() {
                   aria-expanded={resourcesDropdownOpen}
                   aria-controls="resources-dropdown"
                 >
-                  Resources <ChevronDown className="ml-1 h-4 w-4" />
+                  {t('header.resources')} <ChevronDown className="ml-1 h-4 w-4" />
                 </motion.button>
                 
                 <AnimatePresence>
@@ -334,21 +337,23 @@ export default function Header() {
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setResourcesDropdownOpen(false)}
                       >
-                        Resource Center
+                        {t('header.resourceCenter')}
                       </Link>
                       <Link to="/faq" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setResourcesDropdownOpen(false)}
                       >
-                        FAQ
+                        {t('header.faq')}
                       </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/about">About</NavLink>
-              <NavLink to="/careers">Careers</NavLink>
+              <NavLink to="/about">{t('header.about')}</NavLink>
+              <NavLink to="/careers">{t('header.careers')}</NavLink>
+              
+              <LanguageSwitcher />
               
               <Button 
                 to="/contact" 
@@ -357,12 +362,13 @@ export default function Header() {
                 icon={<ArrowRight className="h-4 w-4" />}
                 iconPosition="right"
               >
-                Get Started
+                {t('header.getStarted')}
               </Button>
             </div>
             
-            {/* Mobile menu button - Optimized for faster response */}
+            {/* Mobile menu button and language switcher */}
             <div className="md:hidden flex items-center space-x-2">
+              <LanguageSwitcher />
               <button 
                 id="mobile-menu-button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
