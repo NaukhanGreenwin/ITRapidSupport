@@ -1,11 +1,11 @@
 {
-  "name": "IT Rapid Support",
-  "short_name": "IT Rapid",
-  "description": "Enterprise-grade cybersecurity and managed IT support services for businesses across the Greater Toronto Area",
+  "name": "Defenda Security Solutions",
+  "short_name": "Defenda",
+  "description": "Enterprise-grade cybersecurity solutions to protect your business",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#dc2626",
+  "theme_color": "#0055FF",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -63,14 +63,14 @@
       "sizes": "375x812",
       "type": "image/jpeg",
       "form_factor": "narrow",
-      "label": "Homescreen of IT Rapid Support"
+      "label": "Homescreen of Defenda Security"
     },
     {
       "src": "/screenshots/desktop-home.jpg",
       "sizes": "1280x800",
       "type": "image/jpeg",
       "form_factor": "wide",
-      "label": "Homescreen of IT Rapid Support"
+      "label": "Homescreen of Defenda Security"
     }
   ],
   "shortcuts": [
