@@ -41,10 +41,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-base mb-4">Services</h3>
             <ul className="space-y-2.5">
-              <li><Link to="/services" className="text-slate-300 hover:text-white text-sm block">Managed Security</Link></li>
-              <li><Link to="/services" className="text-slate-300 hover:text-white text-sm block">Threat Detection</Link></li>
-              <li><Link to="/services" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
-              <li><Link to="/services" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
+              <li><Link to="/services#managed-security" className="text-slate-300 hover:text-white text-sm block">Managed Security</Link></li>
+              <li><Link to="/services#threat-detection" className="text-slate-300 hover:text-white text-sm block">Threat Detection</Link></li>
+              <li><Link to="/services#cloud-security" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
+              <li><Link to="/services#it-support" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
             </ul>
           </div>
 

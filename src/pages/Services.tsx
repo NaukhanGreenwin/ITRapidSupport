@@ -44,7 +44,7 @@ const Services: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">
             {/* Service 1 */}
-            <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div id="managed-security" className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Shield className="h-8 w-8 text-red-600" />
               </div>
@@ -72,7 +72,7 @@ const Services: React.FC = () => {
             </div>
 
             {/* Service 2 */}
-            <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div id="identity-management" className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Key className="h-8 w-8 text-red-600" />
               </div>
@@ -100,7 +100,7 @@ const Services: React.FC = () => {
             </div>
 
             {/* Service 3 */}
-            <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div id="threat-detection" className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Brain className="h-8 w-8 text-red-600" />
               </div>
@@ -128,7 +128,7 @@ const Services: React.FC = () => {
             </div>
 
             {/* Service 4 */}
-            <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div id="cloud-security" className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Cloud className="h-8 w-8 text-red-600" />
               </div>
@@ -156,7 +156,7 @@ const Services: React.FC = () => {
             </div>
 
             {/* Service 5 */}
-            <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div id="security-testing" className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Lock className="h-8 w-8 text-red-600" />
               </div>
@@ -184,7 +184,7 @@ const Services: React.FC = () => {
             </div>
 
             {/* Service 6 */}
-            <div className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+            <div id="it-support" className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-shadow">
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Database className="h-8 w-8 text-red-600" />
               </div>
