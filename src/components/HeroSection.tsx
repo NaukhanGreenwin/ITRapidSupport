@@ -97,7 +97,7 @@ const HeroSection: React.FC = () => {
             
             {/* Optimized button - simplified for better performance */}
             <div className="w-full max-w-xl mt-2">
-              <Link to="/get-started" className="flex items-center justify-center bg-red-600 text-white px-6 py-4 rounded-lg hover:bg-red-700 transition-colors text-lg font-medium shadow-lg group w-full">
+              <Link to="/contact" className="flex items-center justify-center bg-red-600 text-white px-6 py-4 rounded-lg hover:bg-red-700 transition-colors text-lg font-medium shadow-lg group w-full">
                 Secure Your Business 
                 <ArrowRight className="ml-3 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
               </Link>

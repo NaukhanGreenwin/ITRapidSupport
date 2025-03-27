@@ -39,12 +39,28 @@ export default function Footer() {
 
           {/* Quick links - Services */}
           <div>
-            <h3 className="text-white font-semibold text-base mb-4">Services</h3>
-            <ul className="space-y-2.5">
-              <li><Link to="/services#managed-security" className="text-slate-300 hover:text-white text-sm block">Managed Security</Link></li>
-              <li><Link to="/services#threat-detection" className="text-slate-300 hover:text-white text-sm block">Threat Detection</Link></li>
-              <li><Link to="/services#cloud-security" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
-              <li><Link to="/services#it-support" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
+            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Services</h3>
+            <ul className="mt-4 space-y-4">
+              <li>
+                <Link to="/services/managed-security" className="text-base text-gray-300 hover:text-white">
+                  Managed Security
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/threat-detection" className="text-base text-gray-300 hover:text-white">
+                  Threat Detection
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/cloud-security" className="text-base text-gray-300 hover:text-white">
+                  Cloud Security
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/it-support" className="text-base text-gray-300 hover:text-white">
+                  24/7 IT Support
+                </Link>
+              </li>
             </ul>
           </div>
 

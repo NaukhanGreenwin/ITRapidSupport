@@ -23,6 +23,10 @@ import ResourceDetails from './pages/ResourceDetails';
 import Partners from './pages/Partners';
 import Support from './pages/Support';
 import CyberIncident from './pages/CyberIncident';
+import ManagedSecurity from './pages/ManagedSecurity';
+import ThreatDetection from './pages/ThreatDetection';
+import CloudSecurity from './pages/CloudSecurity';
+import ITSupport from './pages/ITSupport';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -62,6 +66,10 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/services/managed-security" element={<ManagedSecurity />} />
+            <Route path="/services/threat-detection" element={<ThreatDetection />} />
+            <Route path="/services/cloud-security" element={<CloudSecurity />} />
+            <Route path="/services/it-support" element={<ITSupport />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
