@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavLink from './NavLink';
 import Button from './Button';
+import { Menu as HeadlessUIMenu, Transition } from '@headlessui/react'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -262,7 +263,75 @@ export default function Header() {
             
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-6">
-              <NavLink to="/services">Services</NavLink>
+              <div className="relative">
+                <HeadlessUIMenu as="div" className="relative inline-block text-left">
+                  <HeadlessUIMenu.Button className="inline-flex items-center text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">
+                    Services
+                    <ChevronDown className="ml-1 h-4 w-4" />
+                  </HeadlessUIMenu.Button>
+                  <Transition
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <HeadlessUIMenu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-800 rounded-md bg-gray-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div className="px-1 py-1">
+                        <HeadlessUIMenu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/services/managed-security"
+                              className={`${
+                                active ? 'bg-gray-800 text-white' : 'text-gray-300'
+                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                            >
+                              Managed Security
+                            </Link>
+                          )}
+                        </HeadlessUIMenu.Item>
+                        <HeadlessUIMenu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/services/threat-detection"
+                              className={`${
+                                active ? 'bg-gray-800 text-white' : 'text-gray-300'
+                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                            >
+                              Threat Detection
+                            </Link>
+                          )}
+                        </HeadlessUIMenu.Item>
+                        <HeadlessUIMenu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/services/cloud-security"
+                              className={`${
+                                active ? 'bg-gray-800 text-white' : 'text-gray-300'
+                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                            >
+                              Cloud Security
+                            </Link>
+                          )}
+                        </HeadlessUIMenu.Item>
+                        <HeadlessUIMenu.Item>
+                          {({ active }) => (
+                            <Link
+                              to="/services/it-support"
+                              className={`${
+                                active ? 'bg-gray-800 text-white' : 'text-gray-300'
+                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                            >
+                              24/7 IT Support
+                            </Link>
+                          )}
+                        </HeadlessUIMenu.Item>
+                      </div>
+                    </HeadlessUIMenu.Items>
+                  </Transition>
+                </HeadlessUIMenu>
+              </div>
               
               <div className="relative">
                 <motion.button 
