@@ -5,11 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavLink from './NavLink';
 import Button from './Button';
-import LanguageSwitcher from './LanguageSwitcher';
-import { useTranslation } from 'react-i18next';
 
 export default function Header() {
-  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
@@ -218,15 +215,25 @@ export default function Header() {
   return (
     <>
       {/* Mobile phone banner - fixed at top of screen on mobile */}
-      <div className="bg-red-600 text-white pt-2 pb-7 text-center md:hidden fixed w-full z-40 top-0 flex items-center justify-center">
+      <motion.div 
+        className={`bg-red-600 text-white pt-2 pb-7 text-center md:hidden fixed w-full z-40 top-0 flex items-center justify-center transition-all duration-300 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: scrolled ? 0 : 1 }}
+        transition={{ duration: 0.3 }}
+      >
         <a href="tel:+12895829930" className="inline-flex items-center justify-center">
           <Phone className="h-5 w-5 mr-3 text-white" strokeWidth={2} />
           <span className="font-medium text-lg tracking-wide">289-582-9930</span>
         </a>
-      </div>
+      </motion.div>
       
       {/* Fixed spacer for non-scrolled mobile */}
-      <div className="h-[57px] md:hidden"></div>
+      <motion.div 
+        className={`h-[57px] md:hidden transition-all duration-300 ${scrolled ? 'h-0' : 'h-[57px]'}`}
+        initial={{ height: '57px' }}
+        animate={{ height: scrolled ? '0px' : '57px' }}
+        transition={{ duration: 0.3 }}
+      ></motion.div>
       
       {/* Main header - positioned below phone banner on mobile */}
       <motion.header 
@@ -255,7 +262,7 @@ export default function Header() {
             
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-6">
-              <NavLink to="/services">{t('header.services')}</NavLink>
+              <NavLink to="/services">Services</NavLink>
               
               <div className="relative">
                 <motion.button 
@@ -267,7 +274,7 @@ export default function Header() {
                   aria-expanded={solutionsDropdownOpen}
                   aria-controls="solutions-dropdown"
                 >
-                  {t('header.solutions')} <ChevronDown className="ml-1 h-4 w-4" />
+                  Solutions <ChevronDown className="ml-1 h-4 w-4" />
                 </motion.button>
                 
                 <AnimatePresence>
@@ -284,32 +291,32 @@ export default function Header() {
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
-                        {t('header.enterpriseSolutions')}
+                        Enterprise Solutions
                       </Link>
                       <Link to="/security-assessment" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
-                        {t('header.securityEvaluation')}
+                        Security Evaluation
                       </Link>
                       <Link to="/cyber-incident" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
-                        {t('header.breachServices')}
+                        Breach Services
                       </Link>
                       <Link to="/partners" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
-                        {t('header.technologyPartners')}
+                        Technology Partners
                       </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/support">{t('header.support')}</NavLink>
+              <NavLink to="/support">Support</NavLink>
               
               <div className="relative">
                 <motion.button 
@@ -321,7 +328,7 @@ export default function Header() {
                   aria-expanded={resourcesDropdownOpen}
                   aria-controls="resources-dropdown"
                 >
-                  {t('header.resources')} <ChevronDown className="ml-1 h-4 w-4" />
+                  Resources <ChevronDown className="ml-1 h-4 w-4" />
                 </motion.button>
                 
                 <AnimatePresence>
@@ -337,23 +344,21 @@ export default function Header() {
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setResourcesDropdownOpen(false)}
                       >
-                        {t('header.resourceCenter')}
+                        Resource Center
                       </Link>
                       <Link to="/faq" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setResourcesDropdownOpen(false)}
                       >
-                        {t('header.faq')}
+                        FAQ
                       </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/about">{t('header.about')}</NavLink>
-              <NavLink to="/careers">{t('header.careers')}</NavLink>
-              
-              <LanguageSwitcher />
+              <NavLink to="/about">About</NavLink>
+              <NavLink to="/careers">Careers</NavLink>
               
               <Button 
                 to="/contact" 
@@ -362,13 +367,12 @@ export default function Header() {
                 icon={<ArrowRight className="h-4 w-4" />}
                 iconPosition="right"
               >
-                {t('header.getStarted')}
+                Get Started
               </Button>
             </div>
             
-            {/* Mobile menu button and language switcher */}
+            {/* Mobile menu button - Optimized for faster response */}
             <div className="md:hidden flex items-center space-x-2">
-              <LanguageSwitcher />
               <button 
                 id="mobile-menu-button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
