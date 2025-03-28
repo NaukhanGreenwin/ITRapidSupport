@@ -265,7 +265,7 @@ export default function Header() {
             <div className="hidden md:flex items-center space-x-6">
               <div className="relative">
                 <HeadlessUIMenu as="div" className="relative inline-block text-left">
-                  <HeadlessUIMenu.Button className="inline-flex items-center text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">
+                  <HeadlessUIMenu.Button className="inline-flex items-center text-gray-700 hover:text-red-600 font-medium py-2">
                     Services
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </HeadlessUIMenu.Button>
@@ -277,15 +277,15 @@ export default function Header() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <HeadlessUIMenu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-800 rounded-md bg-gray-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <HeadlessUIMenu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <div className="px-1 py-1">
                         <HeadlessUIMenu.Item>
                           {({ active }) => (
                             <Link
                               to="/services/managed-security"
                               className={`${
-                                active ? 'bg-gray-800 text-white' : 'text-gray-300'
-                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                active ? 'bg-red-50 text-red-600' : 'text-gray-700'
+                              } group flex w-full items-center rounded-md px-4 py-2 text-sm font-medium`}
                             >
                               Managed Security
                             </Link>
@@ -296,8 +296,8 @@ export default function Header() {
                             <Link
                               to="/services/threat-detection"
                               className={`${
-                                active ? 'bg-gray-800 text-white' : 'text-gray-300'
-                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                active ? 'bg-red-50 text-red-600' : 'text-gray-700'
+                              } group flex w-full items-center rounded-md px-4 py-2 text-sm font-medium`}
                             >
                               Threat Detection
                             </Link>
@@ -308,8 +308,8 @@ export default function Header() {
                             <Link
                               to="/services/cloud-security"
                               className={`${
-                                active ? 'bg-gray-800 text-white' : 'text-gray-300'
-                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                active ? 'bg-red-50 text-red-600' : 'text-gray-700'
+                              } group flex w-full items-center rounded-md px-4 py-2 text-sm font-medium`}
                             >
                               Cloud Security
                             </Link>
@@ -320,8 +320,8 @@ export default function Header() {
                             <Link
                               to="/services/it-support"
                               className={`${
-                                active ? 'bg-gray-800 text-white' : 'text-gray-300'
-                              } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                active ? 'bg-red-50 text-red-600' : 'text-gray-700'
+                              } group flex w-full items-center rounded-md px-4 py-2 text-sm font-medium`}
                             >
                               24/7 IT Support
                             </Link>
