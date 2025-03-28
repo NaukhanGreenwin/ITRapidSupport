@@ -285,7 +285,7 @@ export default function Header() {
                               to="/services/managed-security"
                               className={`${
                                 active ? 'bg-red-50 text-red-600' : 'text-gray-700'
-                              } group flex w-full items-center rounded-md px-4 py-2 text-sm font-medium`}
+                              } group flex w-full items-center rounded-md px-4 py-2 text-lg font-medium`}
                             >
                               Managed Security
                             </Link>
@@ -297,7 +297,7 @@ export default function Header() {
                               to="/services/threat-detection"
                               className={`${
                                 active ? 'bg-red-50 text-red-600' : 'text-gray-700'
-                              } group flex w-full items-center rounded-md px-4 py-2 text-sm font-medium`}
+                              } group flex w-full items-center rounded-md px-4 py-2 text-lg font-medium`}
                             >
                               Threat Detection
                             </Link>
@@ -309,7 +309,7 @@ export default function Header() {
                               to="/services/cloud-security"
                               className={`${
                                 active ? 'bg-red-50 text-red-600' : 'text-gray-700'
-                              } group flex w-full items-center rounded-md px-4 py-2 text-sm font-medium`}
+                              } group flex w-full items-center rounded-md px-4 py-2 text-lg font-medium`}
                             >
                               Cloud Security
                             </Link>
@@ -321,7 +321,7 @@ export default function Header() {
                               to="/services/it-support"
                               className={`${
                                 active ? 'bg-red-50 text-red-600' : 'text-gray-700'
-                              } group flex w-full items-center rounded-md px-4 py-2 text-sm font-medium`}
+                              } group flex w-full items-center rounded-md px-4 py-2 text-lg font-medium`}
                             >
                               24/7 IT Support
                             </Link>
