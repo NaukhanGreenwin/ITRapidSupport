@@ -1,5 +1,5 @@
 # ITRapidSupport - Comprehensive Robots.txt
-# Last updated: 2024-03-22
+# Last updated: 2024-05-17
 
 # Allow all well-behaved crawlers
 User-agent: *
@@ -17,22 +17,33 @@ Allow: /
 User-agent: Yahoo! Slurp
 Allow: /
 
-# Block specific folders
+# Block specific folders and URLs
 Disallow: /admin/
 Disallow: /api/
 Disallow: /dev/
 Disallow: /internal/
 Disallow: /temp/
 Disallow: /cdn-cgi/
+Disallow: /404.html
+Disallow: /404
 
-# Block duplicate content
+# Block duplicate content and parameters
 Disallow: /*/print/
 Disallow: /*?*
 Disallow: /*?q=*
 Disallow: /*&sort=*
 Disallow: /search?
 
-# Crawl rate controls
+# URL Parameters to Ignore
+Allow: /$
+Allow: /index.html$
+
+# Special rules for specific bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+# Crawl rate controls for main bots
+User-agent: *
 Crawl-delay: 1
 
 # Sitemaps
