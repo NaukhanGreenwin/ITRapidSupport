@@ -14,7 +14,7 @@ export default function NavLink({ to, children, onClick, className = '' }: NavLi
     <Link 
       to={to} 
       onClick={onClick}
-      className={`relative text-gray-700 dark:text-gray-300 font-medium py-2 ${className}`}
+      className={`relative text-gray-700 font-medium py-2 ${className}`}
     >
       <span className="relative z-10">{children}</span>
       <motion.span 

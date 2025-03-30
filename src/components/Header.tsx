@@ -376,7 +376,7 @@ export default function Header() {
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/support" className="text-gray-400 hover:text-gray-600">Support</NavLink>
+              <NavLink to="/support">Support</NavLink>
               
               <div className="relative">
                 <motion.button 
@@ -417,8 +417,8 @@ export default function Header() {
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/about" className="text-gray-400 hover:text-gray-600">About</NavLink>
-              <NavLink to="/careers" className="text-gray-400 hover:text-gray-600">Careers</NavLink>
+              <NavLink to="/about">About</NavLink>
+              <NavLink to="/careers">Careers</NavLink>
               
               <Button 
                 to="/contact" 
