@@ -317,7 +317,7 @@ export default function Header() {
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
-                        High Net Worth Security
+                        Elite Security
                       </Link>
                     </motion.div>
                   )}
@@ -376,7 +376,7 @@ export default function Header() {
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/support">Support</NavLink>
+              <NavLink to="/support" className="text-gray-400 hover:text-gray-600">Support</NavLink>
               
               <div className="relative">
                 <motion.button 
@@ -417,8 +417,8 @@ export default function Header() {
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/about">About</NavLink>
-              <NavLink to="/careers">Careers</NavLink>
+              <NavLink to="/about" className="text-gray-400 hover:text-gray-600">About</NavLink>
+              <NavLink to="/careers" className="text-gray-400 hover:text-gray-600">Careers</NavLink>
               
               <Button 
                 to="/contact" 
