@@ -27,6 +27,7 @@ import ManagedSecurity from './pages/ManagedSecurity';
 import ThreatDetection from './pages/ThreatDetection';
 import CloudSecurity from './pages/CloudSecurity';
 import ITSupport from './pages/ITSupport';
+import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -70,6 +71,7 @@ function App() {
             <Route path="/services/threat-detection" element={<ThreatDetection />} />
             <Route path="/services/cloud-security" element={<CloudSecurity />} />
             <Route path="/services/it-support" element={<ITSupport />} />
+            <Route path="/services/high-net-worth" element={<HighNetWorthSecurity />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

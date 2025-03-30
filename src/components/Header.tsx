@@ -313,6 +313,12 @@ export default function Header() {
                       >
                         24/7 IT Support
                       </Link>
+                      <Link to="/services/high-net-worth" 
+                        className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
+                        onClick={() => setServicesDropdownOpen(false)}
+                      >
+                        High Net Worth Security
+                      </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>

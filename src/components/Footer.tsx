@@ -45,6 +45,7 @@ export default function Footer() {
               <li><Link to="/services/threat-detection" className="text-slate-300 hover:text-white text-sm block">Threat Detection</Link></li>
               <li><Link to="/services/cloud-security" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
               <li><Link to="/services/it-support" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
+              <li><Link to="/services/high-net-worth" className="text-slate-300 hover:text-white text-sm block">High Net Worth Security</Link></li>
             </ul>
           </div>
 
