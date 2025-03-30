@@ -67,7 +67,7 @@ const Services: React.FC = () => {
                 </li>
               </ul>
               <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Discover our managed security services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 
@@ -95,7 +95,7 @@ const Services: React.FC = () => {
                 </li>
               </ul>
               <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Explore our identity management solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 
@@ -123,7 +123,7 @@ const Services: React.FC = () => {
                 </li>
               </ul>
               <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Learn about our threat intelligence capabilities <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 
@@ -151,7 +151,7 @@ const Services: React.FC = () => {
                 </li>
               </ul>
               <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Discover our cloud security services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 
@@ -179,7 +179,7 @@ const Services: React.FC = () => {
                 </li>
               </ul>
               <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Explore our security testing services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 
@@ -207,7 +207,7 @@ const Services: React.FC = () => {
                 </li>
               </ul>
               <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                Discover our data protection solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </div>

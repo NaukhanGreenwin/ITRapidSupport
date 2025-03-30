@@ -461,7 +461,7 @@ export default function HighNetWorthSecurity() {
                 </ul>
                 <div className="mt-6">
                   <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
-                    Learn more <span className="ml-2">→</span>
+                    Explore our property security solutions <span className="ml-2">→</span>
                   </Link>
                 </div>
               </div>
@@ -496,7 +496,7 @@ export default function HighNetWorthSecurity() {
                 </ul>
                 <div className="mt-6">
                   <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
-                    Learn more <span className="ml-2">→</span>
+                    Explore our property security solutions <span className="ml-2">→</span>
                   </Link>
                 </div>
               </div>
@@ -531,7 +531,7 @@ export default function HighNetWorthSecurity() {
                 </ul>
                 <div className="mt-6">
                   <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
-                    Learn more <span className="ml-2">→</span>
+                    Explore our property security solutions <span className="ml-2">→</span>
                   </Link>
                 </div>
               </div>

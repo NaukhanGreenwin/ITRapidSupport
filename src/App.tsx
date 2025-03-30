@@ -35,6 +35,13 @@ function ScrollToTop() {
   
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // Signal to react-snap that the page is ready to be pre-rendered
+    setTimeout(() => {
+      if (window.prerenderReady !== undefined) {
+        window.prerenderReady = true;
+      }
+    }, 1000);
   }, [pathname]);
   
   return null;

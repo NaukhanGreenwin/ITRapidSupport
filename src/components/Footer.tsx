@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -15,25 +15,6 @@ export default function Footer() {
               <p className="text-slate-300 text-sm leading-relaxed">
                 Enterprise-grade cybersecurity and IT management solutions for Ontario businesses.
               </p>
-            </div>
-            
-            {/* Social links */}
-            <div className="flex space-x-3 pt-1">
-              <a href="https://linkedin.com/itrapidsupport" target="_blank" rel="noopener noreferrer" 
-                className="text-slate-400 hover:text-white bg-slate-800 p-2 rounded-md hover:bg-slate-700 transition-colors">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="https://twitter.com/itrapidsupport" target="_blank" rel="noopener noreferrer" 
-                className="text-slate-400 hover:text-white bg-slate-800 p-2 rounded-md hover:bg-slate-700 transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="https://facebook.com/itrapidsupport" target="_blank" rel="noopener noreferrer" 
-                className="text-slate-400 hover:text-white bg-slate-800 p-2 rounded-md hover:bg-slate-700 transition-colors">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </a>
             </div>
           </div>
 

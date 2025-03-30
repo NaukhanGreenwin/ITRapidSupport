@@ -89,7 +89,7 @@ const Home: React.FC = () => {
         }
       },
       generateOrganizationSchema(),
-      generateLocalBusinessSchema("toronto"),
+      generateLocalBusinessSchema("vaughan"),
       generateFAQSchema(faqs),
       {
         "@type": "Service",

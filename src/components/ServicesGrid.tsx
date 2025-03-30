@@ -26,7 +26,7 @@ const ServicesGrid: React.FC = () => {
                   24/7 monitoring and response by our Toronto-based expert security team, ensuring your business stays protected around the clock.
                 </p>
                 <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
-                  Learn more <ChevronRight className="ml-1 h-3 w-3" />
+                  Discover our managed security offerings <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -41,7 +41,7 @@ const ServicesGrid: React.FC = () => {
                   Secure your digital assets with advanced identity verification and access control solutions tailored for GTA businesses.
                 </p>
                 <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
-                  Learn more <ChevronRight className="ml-1 h-3 w-3" />
+                  Explore identity and access solutions <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -56,7 +56,7 @@ const ServicesGrid: React.FC = () => {
                   Stay ahead of cyber threats with AI-powered threat detection and proactive security measures for Ontario enterprises.
                 </p>
                 <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
-                  Learn more <ChevronRight className="ml-1 h-3 w-3" />
+                  Discover threat intelligence services <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -71,7 +71,7 @@ const ServicesGrid: React.FC = () => {
                   Protect your cloud infrastructure with comprehensive security controls, monitoring, and compliance solutions for Toronto businesses.
                 </p>
                 <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
-                  Learn more <ChevronRight className="ml-1 h-3 w-3" />
+                  View our cloud security offerings <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -86,7 +86,7 @@ const ServicesGrid: React.FC = () => {
                   Secure your applications from development to deployment with code analysis, penetration testing, and runtime protection for Mississauga organizations.
                 </p>
                 <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
-                  Learn more <ChevronRight className="ml-1 h-3 w-3" />
+                  Explore application security services <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -101,7 +101,7 @@ const ServicesGrid: React.FC = () => {
                   Meet Canadian regulatory requirements with our compliance frameworks, audit support, and policy management services for Ontario enterprises.
                 </p>
                 <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
-                  Learn more <ChevronRight className="ml-1 h-3 w-3" />
+                  View compliance and governance solutions <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -109,7 +109,7 @@ const ServicesGrid: React.FC = () => {
           
           <div className="mt-8 text-center">
             <Link to="/services" className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium text-sm">
-              View All Services <ChevronRight className="ml-1 h-4 w-4" />
+              View all cybersecurity services <ChevronRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
         </div>

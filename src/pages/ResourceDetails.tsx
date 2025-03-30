@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, BookOpen, FileText, Video, ChevronLeft, ArrowRight, User, Share2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 // Resource types
 interface ResourceItem {
@@ -283,8 +284,16 @@ const ResourceDetails: React.FC = () => {
     }
   };
 
+  // Ensure we have a canonical URL for this specific resource
+  const canonicalUrl = `https://itrapidsupport.com/resources/${id}`;
+
   return (
     <>
+      <Helmet>
+        <title>{currentResource.title} | IT Rapid Support Resources</title>
+        <meta name="description" content={`${currentResource.description?.substring(0, 155)}...`} />
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       {/* Hero Section */}
       <div className="pt-20 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">

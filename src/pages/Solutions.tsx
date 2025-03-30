@@ -95,7 +95,7 @@ function Solutions() {
                 </li>
               </ul>
               <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
+                Explore financial security solutions <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
 
@@ -122,7 +122,7 @@ function Solutions() {
                 </li>
               </ul>
               <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
+                Discover healthcare cybersecurity solutions <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
 
@@ -176,7 +176,7 @@ function Solutions() {
                 </li>
               </ul>
               <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Learn more <ChevronRight className="ml-1 h-4 w-4" />
+                Explore government security offerings <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
 
