@@ -477,6 +477,51 @@ export default function Header() {
                 
                 <motion.div variants={mobileMenuItemVariants}>
                   <button
+                    className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                    onClick={() => handleNavigation("/services/managed-security")}
+                  >
+                    Managed Security
+                  </button>
+                </motion.div>
+                
+                <motion.div variants={mobileMenuItemVariants}>
+                  <button
+                    className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                    onClick={() => handleNavigation("/services/threat-detection")}
+                  >
+                    Threat Detection
+                  </button>
+                </motion.div>
+                
+                <motion.div variants={mobileMenuItemVariants}>
+                  <button
+                    className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                    onClick={() => handleNavigation("/services/cloud-security")}
+                  >
+                    Cloud Security
+                  </button>
+                </motion.div>
+                
+                <motion.div variants={mobileMenuItemVariants}>
+                  <button
+                    className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                    onClick={() => handleNavigation("/services/it-support")}
+                  >
+                    24/7 IT Support
+                  </button>
+                </motion.div>
+                
+                <motion.div variants={mobileMenuItemVariants}>
+                  <button
+                    className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                    onClick={() => handleNavigation("/services/high-net-worth")}
+                  >
+                    Elite Security
+                  </button>
+                </motion.div>
+                
+                <motion.div variants={mobileMenuItemVariants}>
+                  <button
                     className="block w-full text-left py-4 px-3 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 text-lg"
                     onClick={() => handleNavigation("/solutions")}
                   >
