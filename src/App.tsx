@@ -28,6 +28,7 @@ import ThreatDetection from './pages/ThreatDetection';
 import CloudSecurity from './pages/CloudSecurity';
 import ITSupport from './pages/ITSupport';
 import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
+import LocationLanding from './pages/LocationLanding';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -79,6 +80,10 @@ function App() {
             <Route path="/services/cloud-security" element={<CloudSecurity />} />
             <Route path="/services/it-support" element={<ITSupport />} />
             <Route path="/services/high-net-worth" element={<HighNetWorthSecurity />} />
+            <Route path="/it-support/toronto" element={<LocationLanding slug="toronto" />} />
+            <Route path="/it-support/vaughan" element={<LocationLanding slug="vaughan" />} />
+            <Route path="/it-support/mississauga" element={<LocationLanding slug="mississauga" />} />
+            <Route path="/it-support/brampton" element={<LocationLanding slug="brampton" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

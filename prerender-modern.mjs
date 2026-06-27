@@ -16,7 +16,9 @@ const routes = [
   '/services/cloud-security', '/services/it-support', '/services/high-net-worth',
   '/about', '/contact', '/support', '/solutions', '/security-assessment',
   '/cyber-incident', '/resources', '/partners', '/faq', '/careers',
-  '/privacy', '/terms', '/cookies', '/accessibility'
+  '/privacy', '/terms', '/cookies', '/accessibility',
+  '/it-support/toronto', '/it-support/vaughan',
+  '/it-support/mississauga', '/it-support/brampton'
 ];
 
 const MIME = {
