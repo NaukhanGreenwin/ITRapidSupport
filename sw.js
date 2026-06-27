@@ -1,6 +1,6 @@
-// Service Worker for Defenda website
-const CACHE_NAME = 'defenda-cache-v1';
-const RUNTIME_CACHE = 'defenda-runtime-cache';
+// Service Worker for IT Rapid Support website
+const CACHE_NAME = 'itrapid-cache-v2';
+const RUNTIME_CACHE = 'itrapid-runtime-cache-v2';
 
 // Resources to cache on install
 const PRECACHE_URLS = [
