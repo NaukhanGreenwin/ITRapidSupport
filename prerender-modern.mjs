@@ -21,7 +21,8 @@ const routes = [
   '/it-support/mississauga', '/it-support/brampton',
   '/it-support/oakville', '/it-support/markham',
   '/it-support/richmond-hill', '/it-support/burlington',
-  '/it-support/north-york', '/it-support/hamilton'
+  '/it-support/north-york', '/it-support/hamilton',
+  '/it-support/milton'
 ];
 
 const MIME = {

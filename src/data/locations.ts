@@ -490,6 +490,50 @@ export const locations: CityData[] = [
       },
     ],
   },
+  {
+    "slug": "milton",
+    "city": "Milton",
+    "title": "IT Support & Managed IT Services in Milton",
+    "description": "IT Rapid Support delivers managed IT services, cybersecurity, and 24/7 helpdesk support for Milton businesses. Call (289) 582-9930.",
+    "keywords": "IT support Milton, managed IT services Milton, cybersecurity Milton, Microsoft 365 Milton, IT company Milton Ontario, managed IT Milton",
+    "intro": "IT Rapid Support provides Milton businesses with reliable managed IT services, proactive monitoring, and advanced cybersecurity solutions. Our certified technicians deliver remote support around the clock and scheduled or emergency on-site service throughout the Halton Region. From cloud migrations to endpoint protection, we keep Milton companies secure and productive.",
+    "nearbyAreas": [
+      "Oakville",
+      "Burlington",
+      "Georgetown",
+      "Campbellville",
+      "Acton",
+      "Halton Hills"
+    ],
+    "highlights": [
+      {
+        "title": "Round-the-Clock IT Helpdesk",
+        "description": "Our 24/7 helpdesk ensures your Milton team always has expert support on hand. We resolve issues remotely and dispatch certified technicians on-site when needed."
+      },
+      {
+        "title": "Layered Cybersecurity for Milton Businesses",
+        "description": "We protect your network with managed firewalls, endpoint protection, email security, MFA, and managed detection and response — keeping threats away from your critical data."
+      },
+      {
+        "title": "Cloud & Microsoft 365 Expertise",
+        "description": "Seamlessly migrate to the cloud or optimize your existing Microsoft 365 environment. We handle setup, management, and ongoing support so your staff can focus on business."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What managed IT services does IT Rapid Support offer in Milton?",
+        "answer": "We provide comprehensive managed IT services including proactive monitoring, 24/7 helpdesk support, data backup and recovery, cloud management, and Microsoft 365 administration. Our certified technicians serve Milton businesses with both remote assistance and scheduled or emergency on-site visits."
+      },
+      {
+        "question": "How does IT Rapid Support handle cybersecurity for Milton companies?",
+        "answer": "We implement a multi-layered cybersecurity strategy that includes managed firewalls, endpoint protection, email security, multi-factor authentication, and managed detection and response. This approach safeguards your Milton business against evolving threats while keeping your operations running smoothly."
+      },
+      {
+        "question": "Can IT Rapid Support provide on-site IT service in Milton?",
+        "answer": "Absolutely. While many issues are resolved rapidly through our remote helpdesk, our certified technicians travel to Milton for scheduled maintenance and emergency on-site support. We serve businesses throughout the Greater Toronto Area, including the Halton Region, so Milton is well within our service coverage."
+      }
+    ]
+  },
 ];
 
 export const getLocation = (slug: string): CityData | undefined =>

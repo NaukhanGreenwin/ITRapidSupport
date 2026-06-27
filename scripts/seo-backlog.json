@@ -1,0 +1,79 @@
+{
+  "_comment": "SEO content engine backlog. The engine builds the next item with built=false. Cities map to /it-support/<slug>. Keep claims consistent with existing site copy.",
+  "targets": [
+    {
+      "type": "city",
+      "city": "Milton",
+      "slug": "milton",
+      "built": true
+    },
+    {
+      "type": "city",
+      "city": "Etobicoke",
+      "slug": "etobicoke",
+      "schemaLocation": "toronto",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Scarborough",
+      "slug": "scarborough",
+      "schemaLocation": "toronto",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Newmarket",
+      "slug": "newmarket",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Aurora",
+      "slug": "aurora",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Pickering",
+      "slug": "pickering",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Ajax",
+      "slug": "ajax",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Whitby",
+      "slug": "whitby",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Oshawa",
+      "slug": "oshawa",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "King City",
+      "slug": "king-city",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Caledon",
+      "slug": "caledon",
+      "built": false
+    },
+    {
+      "type": "city",
+      "city": "Georgetown",
+      "slug": "georgetown",
+      "built": false
+    }
+  ]
+}

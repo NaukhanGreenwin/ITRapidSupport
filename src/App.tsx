@@ -90,6 +90,7 @@ function App() {
             <Route path="/it-support/burlington" element={<LocationLanding slug="burlington" />} />
             <Route path="/it-support/north-york" element={<LocationLanding slug="north-york" />} />
             <Route path="/it-support/hamilton" element={<LocationLanding slug="hamilton" />} />
+            <Route path="/it-support/milton" element={<LocationLanding slug="milton" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
