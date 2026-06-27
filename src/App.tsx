@@ -29,6 +29,7 @@ import CloudSecurity from './pages/CloudSecurity';
 import ITSupport from './pages/ITSupport';
 import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
 import LocationLanding from './pages/LocationLanding';
+import IndustryLanding from './pages/IndustryLanding';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -102,6 +103,14 @@ function App() {
             <Route path="/it-support/king-city" element={<LocationLanding slug="king-city" />} />
             <Route path="/it-support/caledon" element={<LocationLanding slug="caledon" />} />
             <Route path="/it-support/georgetown" element={<LocationLanding slug="georgetown" />} />
+            <Route path="/industries/legal" element={<IndustryLanding slug="legal" />} />
+            <Route path="/industries/accounting" element={<IndustryLanding slug="accounting" />} />
+            <Route path="/industries/healthcare" element={<IndustryLanding slug="healthcare" />} />
+            <Route path="/industries/real-estate" element={<IndustryLanding slug="real-estate" />} />
+            <Route path="/industries/manufacturing" element={<IndustryLanding slug="manufacturing" />} />
+            <Route path="/industries/construction" element={<IndustryLanding slug="construction" />} />
+            <Route path="/industries/professional-services" element={<IndustryLanding slug="professional-services" />} />
+            <Route path="/industries/financial-services" element={<IndustryLanding slug="financial-services" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

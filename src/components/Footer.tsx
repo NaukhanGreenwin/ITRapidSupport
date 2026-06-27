@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { locations } from '../data/locations';
+import { industries } from '../data/industries';
 
 export default function Footer() {
   return (
@@ -79,6 +80,23 @@ export default function Footer() {
                   className="text-slate-300 hover:text-white text-sm"
                 >
                   IT Support {loc.city}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Industries */}
+        <div className="border-t border-gray-800 pt-8 mt-8">
+          <h3 className="text-white font-semibold text-base mb-4">IT Support by Industry</h3>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2.5">
+            {industries.map((ind) => (
+              <li key={ind.slug}>
+                <Link
+                  to={`/industries/${ind.slug}`}
+                  className="text-slate-300 hover:text-white text-sm"
+                >
+                  IT for {ind.industry}
                 </Link>
               </li>
             ))}
