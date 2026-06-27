@@ -12,68 +12,68 @@
       "city": "Etobicoke",
       "slug": "etobicoke",
       "schemaLocation": "toronto",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Scarborough",
       "slug": "scarborough",
       "schemaLocation": "toronto",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Newmarket",
       "slug": "newmarket",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Aurora",
       "slug": "aurora",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Pickering",
       "slug": "pickering",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Ajax",
       "slug": "ajax",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Whitby",
       "slug": "whitby",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Oshawa",
       "slug": "oshawa",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "King City",
       "slug": "king-city",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Caledon",
       "slug": "caledon",
-      "built": false
+      "built": true
     },
     {
       "type": "city",
       "city": "Georgetown",
       "slug": "georgetown",
-      "built": false
+      "built": true
     }
   ]
 }

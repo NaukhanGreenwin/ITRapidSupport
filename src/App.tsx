@@ -91,6 +91,17 @@ function App() {
             <Route path="/it-support/north-york" element={<LocationLanding slug="north-york" />} />
             <Route path="/it-support/hamilton" element={<LocationLanding slug="hamilton" />} />
             <Route path="/it-support/milton" element={<LocationLanding slug="milton" />} />
+            <Route path="/it-support/etobicoke" element={<LocationLanding slug="etobicoke" />} />
+            <Route path="/it-support/scarborough" element={<LocationLanding slug="scarborough" />} />
+            <Route path="/it-support/newmarket" element={<LocationLanding slug="newmarket" />} />
+            <Route path="/it-support/aurora" element={<LocationLanding slug="aurora" />} />
+            <Route path="/it-support/pickering" element={<LocationLanding slug="pickering" />} />
+            <Route path="/it-support/ajax" element={<LocationLanding slug="ajax" />} />
+            <Route path="/it-support/whitby" element={<LocationLanding slug="whitby" />} />
+            <Route path="/it-support/oshawa" element={<LocationLanding slug="oshawa" />} />
+            <Route path="/it-support/king-city" element={<LocationLanding slug="king-city" />} />
+            <Route path="/it-support/caledon" element={<LocationLanding slug="caledon" />} />
+            <Route path="/it-support/georgetown" element={<LocationLanding slug="georgetown" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

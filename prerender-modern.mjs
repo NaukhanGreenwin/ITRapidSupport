@@ -23,12 +23,29 @@ const routes = [
   '/it-support/richmond-hill', '/it-support/burlington',
   '/it-support/north-york', '/it-support/hamilton',
   '/it-support/milton',
+  '/it-support/etobicoke',
+  '/it-support/scarborough',
+  '/it-support/newmarket',
+  '/it-support/aurora',
+  '/it-support/pickering',
+  '/it-support/ajax',
+  '/it-support/whitby',
+  '/it-support/oshawa',
+  '/it-support/king-city',
+  '/it-support/caledon',
+  '/it-support/georgetown',
   '/resources/managed-it-support-cost-toronto',
   '/resources/managed-it-services-vs-in-house',
   '/resources/small-business-cybersecurity-checklist',
   '/resources/microsoft-365-migration-guide',
   '/resources/ransomware-protection-ontario-businesses',
-  '/resources/choosing-managed-it-provider-toronto'
+  '/resources/choosing-managed-it-provider-toronto',
+  '/resources/it-support-small-business-gta',
+  '/resources/why-24-7-it-helpdesk-matters',
+  '/resources/cloud-backup-disaster-recovery-guide',
+  '/resources/stop-phishing-attacks-email-security',
+  '/resources/signs-business-outgrown-break-fix-it',
+  '/resources/multi-factor-authentication-guide-gta'
 ];
 
 const MIME = {
