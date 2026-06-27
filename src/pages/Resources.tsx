@@ -109,14 +109,14 @@ const Resources = () => {
             <span className="text-sm text-green-400 font-medium">Guide</span>
             <span className="mx-2 text-white/40">•</span>
             <Calendar className="h-4 w-4 text-white/60 mr-1.5" />
-            <span className="text-sm text-white/60">June 15, 2023</span>
+            <span className="text-sm text-white/60">June 24, 2026</span>
           </div>
-          <h3 className="text-2xl md:text-3xl font-bold mb-3">The Complete Guide to Zero Trust Security</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-3">How Much Does Managed IT Support Cost in Toronto? (2026 Guide)</h3>
           <p className="text-white/80 mb-6 max-w-2xl">
-            Learn how to implement Zero Trust architecture in your organization with this comprehensive guide covering principles, technologies, and implementation strategies.
+            A clear breakdown of managed IT support pricing models for Toronto and GTA businesses, what drives the cost, and how to compare providers.
           </p>
           <Link 
-            to="/resources/1" 
+            to="/resources/managed-it-support-cost-toronto" 
             className="inline-flex items-center text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition-colors"
           >
             Read more <ArrowRight className="ml-2 h-4 w-4" />

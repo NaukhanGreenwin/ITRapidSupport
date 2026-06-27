@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Shield, Users, Key, Brain, ChevronRight, Globe, Clock, Shield as ShieldIcon, Server, Code, FileCode } from 'lucide-react';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import ClientLogos from '../components/ClientLogos';
-import TestimonialSlider from '../components/TestimonialSlider';
 import PageTransition from '../components/PageTransition';
 import ContactForm from '../components/ContactForm';
 import SEO, { generateOrganizationSchema, generateLocalBusinessSchema, generateFAQSchema } from '../components/SEO';
@@ -15,35 +14,6 @@ import CtaSection from '../components/CtaSection';
 import IndustrySecuritySolutions from '../components/IndustrySecuritySolutions';
 
 const Home: React.FC = () => {
-  const testimonials = [
-    {
-      id: '1',
-      name: 'Michael Chen',
-      role: 'CIO',
-      company: 'Global Financial Services',
-      quote: 'IT Rapid Support transformed our security posture. Their team quickly identified vulnerabilities our previous provider missed and implemented a robust protection strategy that gives us peace of mind.',
-      rating: 5,
-      image: 'https://randomuser.me/api/portraits/men/32.jpg'
-    },
-    {
-      id: '2',
-      name: 'Sarah Johnson',
-      role: 'CISO',
-      company: 'HealthTech Innovations',
-      quote: 'We needed a security partner who understood healthcare compliance requirements. IT Rapid Support delivered a custom solution that not only protects our sensitive data but also ensures we stay fully compliant.',
-      rating: 5,
-      image: 'https://randomuser.me/api/portraits/women/44.jpg'
-    },
-    {
-      id: '3',
-      name: 'David Williams',
-      role: 'IT Director',
-      company: 'Retail Chain Corp',
-      quote: 'After experiencing a significant breach with our previous provider, we switched to IT Rapid Support. Their 24/7 monitoring caught several attempted attacks that could have been devastating to our business.',
-      rating: 5,
-      image: 'https://randomuser.me/api/portraits/men/46.jpg'
-    }
-  ];
 
   // FAQ data for schema
   const faqs = [
