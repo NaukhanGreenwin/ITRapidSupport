@@ -71,6 +71,43 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Blog / Resource Articles -->
+  <url>
+    <loc>https://itrapidsupport.com/resources/managed-it-support-cost-toronto</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/resources/managed-it-services-vs-in-house</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/resources/small-business-cybersecurity-checklist</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/resources/microsoft-365-migration-guide</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/resources/ransomware-protection-ontario-businesses</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/resources/choosing-managed-it-provider-toronto</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://itrapidsupport.com/partners</loc>
     <lastmod>2026-06-26</lastmod>

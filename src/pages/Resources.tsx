@@ -11,94 +11,10 @@ import {
   ChevronDown 
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-interface ResourceItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'guide' | 'whitepaper' | 'webinar' | 'video';
-  date: string;
-  image: string;
-  link: string;
-  featured?: boolean;
-}
+import { allResources, type ResourceItem } from './ResourceDetails';
 
 const Resources = () => {
-  const resources: ResourceItem[] = [
-    {
-      id: "1",
-      title: "The Complete Guide to Zero Trust Security",
-      description: "Learn how to implement Zero Trust architecture in your organization with this comprehensive guide.",
-      type: "guide",
-      date: "June 15, 2023",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80",
-      link: "/resources/1",
-      featured: true
-    },
-    {
-      id: "2",
-      title: "Threat Intelligence in the Modern Enterprise",
-      description: "A detailed whitepaper on leveraging threat intelligence to improve security posture.",
-      type: "whitepaper",
-      date: "May 22, 2023",
-      image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=600&q=80",
-      link: "/resources/2"
-    },
-    {
-      id: "3",
-      title: "Ransomware Protection Strategies",
-      description: "Essential strategies to protect your organization from the growing ransomware threat.",
-      type: "guide",
-      date: "April 10, 2023",
-      image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=600&q=80",
-      link: "/resources/3"
-    },
-    {
-      id: "4",
-      title: "Cloud Security Best Practices",
-      description: "Critical security considerations when migrating to and operating in the cloud.",
-      type: "whitepaper",
-      date: "March 28, 2023",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
-      link: "/resources/4"
-    },
-    {
-      id: "5",
-      title: "The Future of Security Operations Centers",
-      description: "On-demand webinar discussing next-generation SOC capabilities and operations.",
-      type: "webinar",
-      date: "March 15, 2023",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
-      link: "/resources/5"
-    },
-    {
-      id: "6",
-      title: "Securing the Software Supply Chain",
-      description: "Learn how to identify and mitigate risks in your software supply chain.",
-      type: "guide",
-      date: "February 28, 2023",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80",
-      link: "/resources/6"
-    },
-    {
-      id: "7",
-      title: "Advanced Persistent Threats: Detection & Response",
-      description: "Technical deep dive into APT tactics and effective countermeasures.",
-      type: "video",
-      date: "February 12, 2023",
-      image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=600&q=80",
-      link: "/resources/7"
-    },
-    {
-      id: "8",
-      title: "CISO's Guide to Compliance Frameworks",
-      description: "Navigate complex compliance requirements with this executive-level overview.",
-      type: "whitepaper",
-      date: "January 30, 2023",
-      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=600&q=80",
-      link: "/resources/8"
-    }
-  ];
+  const resources = allResources;
 
   const getIcon = (type: string) => {
     switch (type) {
@@ -294,7 +210,7 @@ const ResourceCard = ({ resource }: { resource: ResourceItem }) => {
           {resource.description}
         </p>
         <Link
-          to={resource.link}
+          to={`/resources/${resource.id}`}
           className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
         >
           Read more <ArrowRight className="ml-1 h-4 w-4" />

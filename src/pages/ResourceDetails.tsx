@@ -4,7 +4,7 @@ import { Calendar, BookOpen, FileText, Video, ChevronLeft, ArrowRight, User, Sha
 import { Helmet } from 'react-helmet-async';
 
 // Resource types
-interface ResourceItem {
+export interface ResourceItem {
   id: string;
   title: string;
   description: string;
@@ -21,7 +21,7 @@ interface ResourceItem {
 }
 
 // All resources data - in a real app this would come from an API or database
-const allResources: ResourceItem[] = [
+export const allResources: ResourceItem[] = [
   {
     id: "1",
     title: "The Complete Guide to Zero Trust Security",
@@ -237,6 +237,209 @@ const allResources: ResourceItem[] = [
     image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=600&q=80",
     link: "#",
     readTime: "14 min read"
+  },
+  {
+    id: "managed-it-support-cost-toronto",
+    title: "How Much Does Managed IT Support Cost in Toronto? (2026 Guide)",
+    description: "A clear breakdown of managed IT support pricing models for Toronto and GTA businesses, what drives the cost, and how to compare providers.",
+    content: [
+      "If you run a business in Toronto or the Greater Toronto Area, one of the first questions you ask when shopping for IT support is simple: what is this going to cost? The honest answer is that managed IT pricing varies based on the size of your team, the complexity of your environment, and the level of security and response you need. This guide walks through the common pricing models so you can compare providers with confidence.",
+      "At IT Rapid Support, we believe pricing should be transparent and tied to outcomes, not surprises. Below we explain how managed IT is typically priced across the industry and what to look for when you request a quote.",
+      "## The Main Managed IT Pricing Models",
+      "### 1. Per-User Pricing",
+      "The most common model for small and mid-sized businesses charges a flat monthly fee for each employee who uses technology. It is predictable, scales cleanly as you hire, and covers every device that person uses. This works well for teams where people have a laptop, a phone, and a few cloud apps each.",
+      "### 2. Per-Device Pricing",
+      "Some providers price by the number of devices they manage: workstations, servers, firewalls, and network gear. This suits businesses with shared workstations or a high device-to-user ratio, such as warehouses, clinics, or retail locations.",
+      "### 3. Tiered or Bundled Plans",
+      "Many managed service providers package support into tiers, where higher tiers add proactive monitoring, advanced cybersecurity, and faster response commitments. This lets you start with essential coverage and add security layers like managed detection and response, email security, and multi-factor authentication as you grow.",
+      "## What Actually Drives the Price",
+      "Several factors move managed IT pricing up or down. Understanding them helps you compare quotes fairly:",
+      "### Number of Users and Devices",
+      "More endpoints mean more to monitor, patch, and secure. This is usually the single biggest driver of monthly cost.",
+      "### Security Requirements",
+      "A business handling sensitive client data, payment information, or regulated records needs more layers: managed firewalls, endpoint protection, email filtering, MFA, and managed detection and response. Stronger security costs more up front but is far cheaper than a breach.",
+      "### Response Time and Coverage",
+      "Round-the-clock coverage and rapid response commitments cost more than business-hours-only support. A 24/7 helpdesk that can respond to an incident at 2 a.m. is worth it for businesses that cannot afford downtime.",
+      "### On-Site vs Remote",
+      "Most issues are resolved remotely, which keeps costs low. Scheduled and emergency on-site visits across the GTA add value for hardware problems, new office setups, and hands-on projects.",
+      "## What to Ask Before You Sign",
+      "When comparing providers, ask exactly what is included. Does the plan cover cybersecurity or is that extra? Is the helpdesk available 24/7? Are on-site visits included? What is the response commitment when something breaks? A low headline price often means thin coverage that costs you more in downtime later.",
+      "## Get a Straight Answer for Your Business",
+      "Every business is different, so the most accurate way to understand your cost is a short conversation about your team size, your systems, and your risk. IT Rapid Support provides managed IT and cybersecurity for businesses across Toronto and the GTA, with a 24/7 helpdesk, proactive monitoring, and certified technicians. Call (289) 582-9930 for a no-pressure quote built around your needs."
+    ].join('\n\n'),
+    type: "guide",
+    date: "June 24, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "9 min read"
+  },
+  {
+    id: "managed-it-services-vs-in-house",
+    title: "Managed IT Services vs In-House IT: Which Is Right for Your GTA Business?",
+    description: "Compare managed IT services and an in-house IT team on cost, coverage, security, and scalability to decide what fits your Toronto-area business.",
+    content: [
+      "As your business grows, technology stops being something you can manage on the side. Eventually you face a choice: hire an in-house IT person or team, or partner with a managed IT services provider. Both can work. The right answer depends on your size, your budget, and how much risk you can absorb. This guide compares the two honestly so you can decide.",
+      "## The Case for In-House IT",
+      "An in-house hire sits in your office, knows your people, and is available for hands-on work. For very large organizations with complex, specialized systems, a dedicated internal team makes sense. The tradeoffs are cost and coverage: a single IT employee is one person, with one set of skills, who takes vacations and gets sick.",
+      "## The Case for Managed IT Services",
+      "A managed services provider gives you a whole team for less than the fully loaded cost of one senior hire. You get a 24/7 helpdesk, proactive monitoring, cybersecurity specialists, and on-site support across the GTA, without recruiting, training, or carrying benefits and turnover risk.",
+      "## Comparing the Two Side by Side",
+      "### Cost",
+      "A skilled IT professional in the GTA commands a substantial salary plus benefits, training, and tools. Managed IT replaces that with a predictable monthly fee that scales with your team, often covering more capability for less total spend.",
+      "### Coverage and Availability",
+      "One in-house person covers business hours and is a single point of failure. A managed provider offers round-the-clock coverage so problems get handled nights, weekends, and holidays.",
+      "### Breadth of Expertise",
+      "No single hire is an expert in networking, cloud, Microsoft 365, cybersecurity, and backup all at once. A managed team brings specialists across each area.",
+      "### Security",
+      "Cyber threats do not keep business hours. Managed providers layer in managed firewalls, endpoint protection, email security, MFA, and managed detection and response as a standard practice, not an afterthought.",
+      "### Scalability",
+      "Adding ten employees does not mean hiring more IT staff. A managed plan flexes up and down with your headcount.",
+      "## A Hybrid Approach",
+      "Many growing businesses run a hybrid model: a managed provider handles monitoring, security, and the helpdesk, while a small internal contact coordinates priorities. This gives you hands-on familiarity plus the depth and coverage of a full team.",
+      "## How to Decide",
+      "If you are a small or mid-sized GTA business that wants predictable costs, strong security, and coverage that never sleeps, managed IT is usually the better value. IT Rapid Support delivers exactly that across Toronto and the surrounding region. Call (289) 582-9930 to talk through which model fits your business."
+    ].join('\n\n'),
+    type: "guide",
+    date: "June 22, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "8 min read"
+  },
+  {
+    id: "small-business-cybersecurity-checklist",
+    title: "Cybersecurity for Small Businesses in the GTA: A Practical Checklist",
+    description: "A plain-English cybersecurity checklist for small and mid-sized GTA businesses, covering the essential protections every company should have in place.",
+    content: [
+      "Small and mid-sized businesses are now the most common targets of cyber attacks, precisely because attackers assume their defenses are weak. The good news is that strong protection does not require a massive budget. It requires the right layers, set up correctly and kept current. Here is a practical checklist for businesses across the Greater Toronto Area.",
+      "## 1. Turn On Multi-Factor Authentication Everywhere",
+      "Passwords get stolen and reused. Multi-factor authentication (MFA) adds a second step that blocks the vast majority of account takeovers. Enable it on email, Microsoft 365, banking, remote access, and any system that supports it. This is the single highest-impact step most businesses are still missing.",
+      "## 2. Protect Your Email",
+      "Email is the number one entry point for attacks. Phishing and business email compromise cost companies dearly. Deploy email security that filters malicious links and attachments, and train your team to recognize suspicious messages.",
+      "## 3. Keep Endpoints Protected and Patched",
+      "Every laptop, desktop, and server needs modern endpoint protection plus regular patching. Unpatched software is one of the easiest ways in for attackers. Automated patch management closes those gaps before they are exploited.",
+      "## 4. Use a Managed Firewall",
+      "A properly configured and monitored firewall is your first line of network defense. Managed firewalls are kept up to date and watched for suspicious activity, rather than installed once and forgotten.",
+      "## 5. Back Up Your Data Properly",
+      "Follow the 3-2-1 rule: three copies of your data, on two types of media, with one copy off-site. Test your restores regularly. Reliable backups are what turn a ransomware disaster into an inconvenience.",
+      "## 6. Add Managed Detection and Response",
+      "Prevention is not enough on its own. Managed detection and response watches your environment around the clock, catches threats that slip past other defenses, and responds before they spread.",
+      "## 7. Limit Access to What People Actually Need",
+      "Apply least-privilege access so each person can reach only the systems their role requires. This contains the damage if any one account is compromised.",
+      "## 8. Have a Plan for When Something Goes Wrong",
+      "Know who to call and what to do in the first hour of an incident. A clear response plan, combined with a partner who can act fast, dramatically reduces the cost and downtime of an attack.",
+      "## Putting It Together",
+      "Each of these layers is achievable for a small business when set up by a team that does this every day. IT Rapid Support provides managed cybersecurity for businesses across Toronto and the GTA, including MFA, email security, managed firewalls, endpoint protection, backup and recovery, and 24/7 managed detection and response. Call (289) 582-9930 to find the gaps in your current setup."
+    ].join('\n\n'),
+    type: "guide",
+    date: "June 20, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "9 min read"
+  },
+  {
+    id: "microsoft-365-migration-guide",
+    title: "Microsoft 365 Migration for Toronto Businesses: A Step-by-Step Guide",
+    description: "Planning a move to Microsoft 365? Here is how GTA businesses migrate email, files, and users smoothly with minimal downtime and proper security.",
+    content: [
+      "Microsoft 365 has become the backbone of how modern businesses work: email, file storage, Teams, and the Office apps in one secure cloud platform. But a migration done badly means lost email, frustrated staff, and downtime. Done well, it is invisible to your team and immediately more productive. Here is how GTA businesses move to Microsoft 365 the right way.",
+      "## Why Businesses Move to Microsoft 365",
+      "The pull is simple: work from anywhere, automatic updates, enterprise-grade security, and no aging on-premises mail server to maintain. For most small and mid-sized businesses, the cloud is more reliable and more secure than what they can run themselves.",
+      "## Step 1: Plan and Inventory",
+      "Before touching anything, map what you have: mailboxes, shared mailboxes, distribution lists, files, and the apps people depend on. Decide which Microsoft 365 plan fits your needs and confirm licensing. Good planning is what prevents surprises later.",
+      "## Step 2: Prepare Your Domain and Identities",
+      "Set up your Microsoft 365 tenant, verify your domain, and create user accounts. This is the right moment to design security properly: enforce multi-factor authentication, configure conditional access, and apply least-privilege roles from day one.",
+      "## Step 3: Migrate Email and Data",
+      "Move mailboxes and files in a controlled way, often in batches, so nothing is lost and the team is never cut off. Calendars, contacts, and shared resources come across too. Scheduling cutover outside business hours keeps disruption to a minimum.",
+      "## Step 4: Configure Security and Backup",
+      "Microsoft 365 is secure by design, but it still needs your configuration: email filtering, MFA, and a third-party backup of your cloud data. Many businesses wrongly assume Microsoft backs up everything for them. A dedicated backup protects you from accidental deletion and ransomware.",
+      "## Step 5: Roll Out and Support Your Team",
+      "Help users sign in on their devices, set up Outlook and Teams, and answer the inevitable first-week questions. A responsive helpdesk during the transition makes the difference between a smooth launch and a flood of complaints.",
+      "## Common Pitfalls to Avoid",
+      "The biggest mistakes are migrating without a backup, skipping MFA, underestimating how long data transfer takes, and cutting over during business hours. Each one is avoidable with the right plan and the right partner.",
+      "## Make Your Migration a Non-Event",
+      "IT Rapid Support helps Toronto and GTA businesses migrate to Microsoft 365 with minimal downtime, proper security, and a 24/7 helpdesk standing by during the transition. We handle the planning, the migration, and the support so your team barely notices the switch. Call (289) 582-9930 to scope your move."
+    ].join('\n\n'),
+    type: "guide",
+    date: "June 18, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "10 min read"
+  },
+  {
+    id: "ransomware-protection-ontario-businesses",
+    title: "Ransomware Protection for Ontario Businesses: 2026 Defense Guide",
+    description: "How Ontario businesses defend against ransomware in 2026: layered prevention, reliable backups, and 24/7 detection and response that limit the damage.",
+    content: [
+      "Ransomware remains one of the most damaging threats facing Ontario businesses. A single successful attack can lock up your files, halt operations, and cost far more than the ransom itself in downtime and recovery. The businesses that survive ransomware are not lucky; they are prepared. This guide explains how to build that preparation in layers.",
+      "## How Ransomware Gets In",
+      "Most ransomware starts with something ordinary: a phishing email, a stolen password, or an unpatched system exposed to the internet. Attackers get a foothold, move through the network, and then encrypt everything they can reach. Understanding the path in is the key to blocking it.",
+      "## Layer 1: Stop the Initial Compromise",
+      "Strong email security filters the phishing messages that deliver most attacks. Multi-factor authentication blocks stolen passwords from working. Regular patching closes the vulnerabilities attackers exploit. These three controls stop the majority of ransomware before it ever starts.",
+      "## Layer 2: Contain the Spread",
+      "If an attacker does get in, least-privilege access and network segmentation limit how far they can move. The goal is to ensure that one compromised laptop does not give an attacker the keys to your entire business.",
+      "## Layer 3: Detect and Respond Fast",
+      "Ransomware does damage in minutes to hours. Managed detection and response watches your environment around the clock and steps in the moment suspicious behavior appears, isolating affected systems before encryption spreads. Speed is everything, which is why 24/7 coverage matters.",
+      "## Layer 4: Back Up So You Can Recover",
+      "When prevention fails, reliable backups are what let you restore instead of pay. Follow the 3-2-1 rule, keep at least one copy off-site and isolated, and test your restores regularly. Attackers now try to delete backups, so your backup strategy must be protected and immutable where possible.",
+      "## What to Do If You Are Hit",
+      "Disconnect affected systems immediately, do not pay before getting expert advice, and bring in a response team fast. The first hour shapes the outcome. Having a partner you can call at any time is the difference between a contained incident and a business-stopping crisis.",
+      "## Build Your Defense Before You Need It",
+      "Ransomware defense is not a single product; it is layers working together, maintained by people who watch them every day. IT Rapid Support provides managed cybersecurity, backup and recovery, and 24/7 managed detection and response for businesses across Ontario and the GTA. Call (289) 582-9930 to assess your ransomware readiness before an attacker tests it for you."
+    ].join('\n\n'),
+    type: "guide",
+    date: "June 16, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "9 min read"
+  },
+  {
+    id: "choosing-managed-it-provider-toronto",
+    title: "What to Look for in a Managed IT Services Provider in Toronto",
+    description: "Choosing a managed IT provider in Toronto? Here are the questions to ask and the green flags to look for so you pick a partner that actually delivers.",
+    content: [
+      "Choosing a managed IT services provider is a decision you live with every day. The right partner keeps your business running, secure, and productive. The wrong one leaves you waiting on hold while problems pile up. If you are evaluating providers in Toronto or the GTA, here is what separates a real partner from a vendor that just sends invoices.",
+      "## 1. Round-the-Clock Support That Actually Answers",
+      "Technology does not break only between nine and five. Look for a provider with a genuine 24/7 helpdesk staffed by people who can resolve issues, not just log them. Ask how fast they respond when something is down, and what happens after hours.",
+      "## 2. Proactive Monitoring, Not Just Reactive Fixes",
+      "The best providers prevent problems instead of waiting for you to report them. Proactive monitoring catches failing hardware, security issues, and performance problems early. If a provider only shows up after something breaks, you are paying for the slowest possible service.",
+      "## 3. Security Built In, Not Bolted On",
+      "Cybersecurity should be part of the core offering: managed firewalls, endpoint protection, email security, MFA, and managed detection and response. If security is an expensive afterthought or barely mentioned, keep looking.",
+      "## 4. Local Presence and On-Site Capability",
+      "Most issues are solved remotely, but some need hands on hardware. A provider with on-site capability across the GTA can show up for new office setups, hardware failures, and projects. Local matters when you need someone in the room.",
+      "## 5. Clear, Predictable Pricing",
+      "You should understand exactly what you are paying for and what is included. Watch for thin plans with cheap headline prices that nickel-and-dime you for every real need. Transparent pricing is a sign of a provider that respects you.",
+      "## 6. Certified, Experienced Technicians",
+      "Ask about the team. Certified technicians with real experience across networking, cloud, Microsoft 365, and security will resolve your issues faster and right the first time.",
+      "## 7. Backup, Recovery, and a Real Plan",
+      "Make sure data backup and recovery are part of the package and that the provider can articulate what happens during an outage or attack. A partner who has thought through disaster recovery is one who has done it before.",
+      "## Questions to Ask Before You Commit",
+      "Is your helpdesk truly 24/7? What is your response commitment when we are down? Is cybersecurity included or extra? Do you provide on-site support in our area? Can you walk me through how you would handle a ransomware incident? The answers tell you everything.",
+      "## A Partner, Not Just a Provider",
+      "IT Rapid Support delivers managed IT and cybersecurity to businesses across Toronto and the GTA, with a 24/7 helpdesk, proactive monitoring, certified technicians, and on-site support when you need it. Call (289) 582-9930 to see whether we are the right fit for your business."
+    ].join('\n\n'),
+    type: "guide",
+    date: "June 14, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "9 min read"
   }
 ];
 

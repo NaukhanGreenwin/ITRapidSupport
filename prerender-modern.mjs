@@ -22,7 +22,13 @@ const routes = [
   '/it-support/oakville', '/it-support/markham',
   '/it-support/richmond-hill', '/it-support/burlington',
   '/it-support/north-york', '/it-support/hamilton',
-  '/it-support/milton'
+  '/it-support/milton',
+  '/resources/managed-it-support-cost-toronto',
+  '/resources/managed-it-services-vs-in-house',
+  '/resources/small-business-cybersecurity-checklist',
+  '/resources/microsoft-365-migration-guide',
+  '/resources/ransomware-protection-ontario-businesses',
+  '/resources/choosing-managed-it-provider-toronto'
 ];
 
 const MIME = {
