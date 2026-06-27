@@ -489,6 +489,39 @@ const ResourceDetails: React.FC = () => {
 
   // Ensure we have a canonical URL for this specific resource
   const canonicalUrl = `https://itrapidsupport.com/resources/${id}`;
+  const absoluteImage = currentResource.image.startsWith('http')
+    ? currentResource.image
+    : `https://itrapidsupport.com${currentResource.image}`;
+  const publishedIso = (() => {
+    const d = new Date(currentResource.date);
+    return isNaN(d.getTime()) ? undefined : d.toISOString();
+  })();
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: currentResource.title,
+    description: currentResource.description,
+    image: absoluteImage,
+    ...(publishedIso ? { datePublished: publishedIso, dateModified: publishedIso } : {}),
+    author: { '@type': 'Organization', name: 'IT Rapid Support', url: 'https://itrapidsupport.com' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'IT Rapid Support',
+      logo: { '@type': 'ImageObject', url: 'https://itrapidsupport.com/images/logo.png' }
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl }
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://itrapidsupport.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://itrapidsupport.com/resources' },
+      { '@type': 'ListItem', position: 3, name: currentResource.title, item: canonicalUrl }
+    ]
+  };
 
   return (
     <>
@@ -496,6 +529,19 @@ const ResourceDetails: React.FC = () => {
         <title>{currentResource.title} | IT Rapid Support Resources</title>
         <meta name="description" content={`${currentResource.description?.substring(0, 155)}...`} />
         <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${currentResource.title} | IT Rapid Support`} />
+        <meta property="og:description" content={currentResource.description} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={absoluteImage} />
+        <meta property="og:site_name" content="IT Rapid Support" />
+        {publishedIso && <meta property="article:published_time" content={publishedIso} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={currentResource.title} />
+        <meta name="twitter:description" content={currentResource.description} />
+        <meta name="twitter:image" content={absoluteImage} />
+        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
       {/* Hero Section */}
       <div className="pt-20 bg-slate-900">
@@ -576,6 +622,19 @@ const ResourceDetails: React.FC = () => {
                   <button className="p-2 bg-red-500 text-white rounded-full hover:bg-red-600">
                     <Share2 className="h-5 w-5" />
                   </button>
+                </div>
+              </div>
+
+              {/* Internal links for SEO + navigation */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <p className="text-gray-700 font-medium mb-3">Explore IT Rapid Support</p>
+                <div className="flex flex-wrap gap-2">
+                  <Link to="/services/it-support" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Managed IT Support</Link>
+                  <Link to="/services/managed-security" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Managed Security</Link>
+                  <Link to="/services/cloud-security" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Cloud Security</Link>
+                  <Link to="/it-support/toronto" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">IT Support Toronto</Link>
+                  <Link to="/it-support/vaughan" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">IT Support Vaughan</Link>
+                  <Link to="/contact" className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-600 text-white text-sm hover:bg-red-700 transition-colors">Get a Quote</Link>
                 </div>
               </div>
             </div>
