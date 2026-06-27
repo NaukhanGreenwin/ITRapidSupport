@@ -1,50 +1,32 @@
-# ITRapidSupport - Comprehensive Robots.txt
-# Last updated: 2024-05-17
+# IT Rapid Support - robots.txt
+# Last updated: 2026-06-27
 
-# Allow all well-behaved crawlers
+# Allow all standard crawlers
 User-agent: *
 Allow: /
-
-# Important crawlers
-User-agent: Googlebot
-Allow: /
-User-agent: Googlebot-Image
-Allow: /
-User-agent: Googlebot-Mobile
-Allow: /
-User-agent: Bingbot
-Allow: /
-User-agent: Yahoo! Slurp
-Allow: /
-
-# Block specific folders and URLs
 Disallow: /admin/
 Disallow: /api/
-Disallow: /dev/
 Disallow: /internal/
-Disallow: /temp/
-Disallow: /cdn-cgi/
-Disallow: /404.html
 Disallow: /404
+Disallow: /404.html
 
-# Block duplicate content and parameters
-Disallow: /*/print/
-Disallow: /*?*
-Disallow: /*?q=*
-Disallow: /*&sort=*
-Disallow: /search?
+# AI / answer-engine crawlers welcome
+User-agent: GPTBot
+Allow: /
 
-# URL Parameters to Ignore
-Allow: /$
-Allow: /index.html$
+User-agent: OAI-SearchBot
+Allow: /
 
-# Special rules for specific bots
-User-agent: AhrefsBot
-Crawl-delay: 10
+User-agent: ChatGPT-User
+Allow: /
 
-# Crawl rate controls for main bots
-User-agent: *
-Crawl-delay: 1
+User-agent: PerplexityBot
+Allow: /
 
-# Sitemaps
-Sitemap: https://itrapidsupport.com/sitemap.xml 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://itrapidsupport.com/sitemap.xml
