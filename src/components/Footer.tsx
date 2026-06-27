@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { locations } from '../data/locations';
 
 export default function Footer() {
   return (
@@ -65,6 +66,23 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Service Areas */}
+        <div className="border-t border-gray-800 pt-8">
+          <h3 className="text-white font-semibold text-base mb-4">IT Support by Location</h3>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2.5">
+            {locations.map((loc) => (
+              <li key={loc.slug}>
+                <Link
+                  to={`/it-support/${loc.slug}`}
+                  className="text-slate-300 hover:text-white text-sm"
+                >
+                  IT Support {loc.city}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Footer Links */}

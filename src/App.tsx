@@ -84,6 +84,12 @@ function App() {
             <Route path="/it-support/vaughan" element={<LocationLanding slug="vaughan" />} />
             <Route path="/it-support/mississauga" element={<LocationLanding slug="mississauga" />} />
             <Route path="/it-support/brampton" element={<LocationLanding slug="brampton" />} />
+            <Route path="/it-support/oakville" element={<LocationLanding slug="oakville" />} />
+            <Route path="/it-support/markham" element={<LocationLanding slug="markham" />} />
+            <Route path="/it-support/richmond-hill" element={<LocationLanding slug="richmond-hill" />} />
+            <Route path="/it-support/burlington" element={<LocationLanding slug="burlington" />} />
+            <Route path="/it-support/north-york" element={<LocationLanding slug="north-york" />} />
+            <Route path="/it-support/hamilton" element={<LocationLanding slug="hamilton" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

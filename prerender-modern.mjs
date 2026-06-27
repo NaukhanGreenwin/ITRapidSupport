@@ -18,7 +18,10 @@ const routes = [
   '/cyber-incident', '/resources', '/partners', '/faq', '/careers',
   '/privacy', '/terms', '/cookies', '/accessibility',
   '/it-support/toronto', '/it-support/vaughan',
-  '/it-support/mississauga', '/it-support/brampton'
+  '/it-support/mississauga', '/it-support/brampton',
+  '/it-support/oakville', '/it-support/markham',
+  '/it-support/richmond-hill', '/it-support/burlington',
+  '/it-support/north-york', '/it-support/hamilton'
 ];
 
 const MIME = {
