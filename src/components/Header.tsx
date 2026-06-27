@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ChevronDown, ArrowRight, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeSwitcher from './ThemeSwitcher';
 import NavLink from './NavLink';
@@ -216,45 +216,24 @@ export default function Header() {
 
   return (
     <>
-      {/* Mobile phone banner - fixed at top of screen on mobile */}
-      <motion.div 
-        className={`bg-red-600 text-white pt-2 pb-7 text-center md:hidden fixed w-full z-40 top-0 flex items-center justify-center transition-all duration-300 ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
-        initial={{ opacity: 1 }}
-        animate={{ opacity: scrolled ? 0 : 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <a href="tel:+12895829930" className="inline-flex items-center justify-center">
-          <Phone className="h-5 w-5 mr-3 text-white" strokeWidth={2} />
-          <span className="font-medium text-lg tracking-wide">289-582-9930</span>
-        </a>
-      </motion.div>
-      
-      {/* Fixed spacer for non-scrolled mobile */}
-      <motion.div 
-        className={`h-[57px] md:hidden transition-all duration-300 ${scrolled ? 'h-0' : 'h-[57px]'}`}
-        initial={{ height: '57px' }}
-        animate={{ height: scrolled ? '0px' : '57px' }}
-        transition={{ duration: 0.3 }}
-      ></motion.div>
-      
-      {/* Main header - positioned below phone banner on mobile */}
-      <motion.header 
+      {/* Main header */}
+      <motion.header
         className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white shadow-sm'}`}
         initial="visible"
         animate={isVisible ? "visible" : "hidden"}
         variants={headerVariants}
-        style={{ top: windowWidth < 768 ? "57px" : "0" }}
+        style={{ top: "0" }}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`flex justify-between ${scrolled ? 'h-16' : 'h-20'} transition-all duration-300`}>
+          <div className="flex justify-between h-20">
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
-                <img 
-                  src="/images/logo.png" 
-                  alt="IT Rapid Support Logo" 
-                  className={`w-auto max-w-[280px] sm:max-w-[280px] object-contain transition-all duration-300 ${scrolled ? 'h-12 sm:h-12' : 'h-14 sm:h-14 md:h-16'}`}
+                <img
+                  src="/images/logo.png"
+                  alt="IT Rapid Support Logo"
+                  className="w-auto max-w-[280px] sm:max-w-[280px] object-contain h-14 sm:h-14 md:h-16"
                   width="280"
-                  height={scrolled ? "48" : "56"}
+                  height="56"
                   loading="eager"
                   fetchPriority="high"
                 />
