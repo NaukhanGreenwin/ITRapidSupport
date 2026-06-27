@@ -38,7 +38,7 @@
     <link rel="canonical" href="https://itrapidsupport.com/">
     
     <!-- Pre-rendering marker for proper service page generation -->
-    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX&amp;cx=c&amp;gtm=4e66p0h2"></script><script>window.prerenderReady = false;</script>
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX&amp;cx=c&amp;gtm=4e66o1"></script><script>window.prerenderReady = false;</script>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -152,6 +152,60 @@
       }
     </script>
     
+    <!-- LocalBusiness Schema (always present for local SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://itrapidsupport.com/#localbusiness",
+        "name": "IT Rapid Support",
+        "image": "https://itrapidsupport.com/images/og-image.jpg",
+        "logo": "https://itrapidsupport.com/ITRapid-logo.svg",
+        "url": "https://itrapidsupport.com",
+        "telephone": "+1-289-582-9930",
+        "email": "info@itrapidsupport.com",
+        "priceRange": "$$$",
+        "description": "Managed IT services and cybersecurity for businesses across Toronto and the Greater Toronto Area. 24/7 monitoring, threat detection, incident response and IT support.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7810 Keele St",
+          "addressLocality": "Vaughan",
+          "addressRegion": "ON",
+          "postalCode": "L4K 4G7",
+          "addressCountry": "CA"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 43.7944, "longitude": -79.5279 },
+        "areaServed": [
+          { "@type": "City", "name": "Toronto" },
+          { "@type": "City", "name": "Vaughan" },
+          { "@type": "City", "name": "Mississauga" },
+          { "@type": "City", "name": "Brampton" },
+          { "@type": "City", "name": "Markham" },
+          { "@type": "City", "name": "Richmond Hill" }
+        ],
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/itrapidsupport",
+          "https://twitter.com/itrapidsupport",
+          "https://facebook.com/itrapidsupport"
+        ]
+      }
+    </script>
+
+    <!-- WebSite Schema with Sitelinks Search -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://itrapidsupport.com/#website",
+        "url": "https://itrapidsupport.com",
+        "name": "IT Rapid Support",
+        "publisher": { "@id": "https://itrapidsupport.com/#localbusiness" }
+      }
+    </script>
+
     <!-- Wistia Video Player Script -->
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
   
