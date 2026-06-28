@@ -43,11 +43,6 @@ const Home: React.FC = () => {
         "@type": "WebSite",
         "name": "IT Rapid Support - Toronto's Premier IT Security Services",
         "url": "https://itrapidsupport.com/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://itrapidsupport.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        },
         "description": "IT Rapid Support provides enterprise-grade cybersecurity solutions and managed IT services for businesses across the Greater Toronto Area, including Vaughan, Mississauga, Brampton, Woodbridge, and Concord.",
         "publisher": {
           "@type": "Organization",
