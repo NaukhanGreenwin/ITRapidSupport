@@ -17,6 +17,7 @@ const routes = [
   '/about', '/contact', '/support', '/solutions', '/security-assessment',
   '/cyber-incident', '/resources', '/partners', '/faq', '/careers',
   '/it-risk-calculator',
+  '/managed-it-plans',
   '/privacy', '/terms', '/cookies', '/accessibility',
   '/it-support/toronto', '/it-support/vaughan',
   '/it-support/mississauga', '/it-support/brampton',

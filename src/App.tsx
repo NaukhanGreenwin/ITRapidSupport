@@ -32,6 +32,7 @@ import LocationLanding from './pages/LocationLanding';
 import IndustryLanding from './pages/IndustryLanding';
 import ServiceLanding from './pages/ServiceLanding';
 import RiskCalculator from './pages/RiskCalculator';
+import ManagedITPlans from './pages/ManagedITPlans';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -72,6 +73,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/security-assessment" element={<SecurityAssessment />} />
             <Route path="/it-risk-calculator" element={<RiskCalculator />} />
+            <Route path="/managed-it-plans" element={<ManagedITPlans />} />
             <Route path="/cyber-incident" element={<CyberIncident />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:id" element={<ResourceDetails />} />
