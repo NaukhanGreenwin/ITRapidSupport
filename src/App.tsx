@@ -31,6 +31,7 @@ import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
 import LocationLanding from './pages/LocationLanding';
 import IndustryLanding from './pages/IndustryLanding';
 import ServiceLanding from './pages/ServiceLanding';
+import RiskCalculator from './pages/RiskCalculator';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -70,6 +71,7 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/security-assessment" element={<SecurityAssessment />} />
+            <Route path="/it-risk-calculator" element={<RiskCalculator />} />
             <Route path="/cyber-incident" element={<CyberIncident />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:id" element={<ResourceDetails />} />
