@@ -232,8 +232,8 @@ export default function Header() {
                   src="/images/logo.png"
                   alt="IT Rapid Support Logo"
                   className="w-auto max-w-[280px] sm:max-w-[280px] object-contain h-14 sm:h-14 md:h-16"
-                  width="280"
-                  height="56"
+                  width="1000"
+                  height="320"
                   loading="eager"
                   fetchPriority="high"
                 />
