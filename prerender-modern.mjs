@@ -59,7 +59,12 @@ const routes = [
   '/resources/cloud-backup-disaster-recovery-guide',
   '/resources/stop-phishing-attacks-email-security',
   '/resources/signs-business-outgrown-break-fix-it',
-  '/resources/multi-factor-authentication-guide-gta'
+  '/resources/multi-factor-authentication-guide-gta',
+  '/resources/co-managed-vs-fully-managed-it',
+  '/resources/msp-vs-mssp-managed-it-vs-managed-security',
+  '/resources/break-fix-vs-managed-it-services',
+  '/resources/microsoft-copilot-rollout-security-guide',
+  '/resources/microsoft-365-security-best-practices-2026'
 ];
 
 const MIME = {
