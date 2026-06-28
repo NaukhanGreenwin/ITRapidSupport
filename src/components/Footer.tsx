@@ -78,12 +78,12 @@ export default function Footer() {
         {/* Service Areas */}
         <div className="border-t border-gray-800 pt-8">
           <h3 className="text-white font-semibold text-base mb-4">IT Support by Location</h3>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2.5">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-2.5">
             {locations.map((loc) => (
               <li key={loc.slug}>
                 <Link
                   to={`/it-support/${loc.slug}`}
-                  className="text-slate-300 hover:text-white text-sm"
+                  className="text-slate-400 hover:text-white text-sm block truncate"
                 >
                   IT Support {loc.city}
                 </Link>
@@ -95,12 +95,12 @@ export default function Footer() {
         {/* Industries */}
         <div className="border-t border-gray-800 pt-8 mt-8">
           <h3 className="text-white font-semibold text-base mb-4">IT Support by Industry</h3>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2.5">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-2.5">
             {industries.map((ind) => (
               <li key={ind.slug}>
                 <Link
                   to={`/industries/${ind.slug}`}
-                  className="text-slate-300 hover:text-white text-sm"
+                  className="text-slate-400 hover:text-white text-sm block truncate"
                 >
                   IT for {ind.industry}
                 </Link>
