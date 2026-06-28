@@ -30,6 +30,7 @@ import ITSupport from './pages/ITSupport';
 import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
 import LocationLanding from './pages/LocationLanding';
 import IndustryLanding from './pages/IndustryLanding';
+import ServiceLanding from './pages/ServiceLanding';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -81,6 +82,10 @@ function App() {
             <Route path="/services/cloud-security" element={<CloudSecurity />} />
             <Route path="/services/it-support" element={<ITSupport />} />
             <Route path="/services/high-net-worth" element={<HighNetWorthSecurity />} />
+            <Route path="/services/microsoft-365-azure-migration" element={<ServiceLanding slug="microsoft-365-azure-migration" />} />
+            <Route path="/services/network-management" element={<ServiceLanding slug="network-management" />} />
+            <Route path="/services/it-helpdesk" element={<ServiceLanding slug="it-helpdesk" />} />
+            <Route path="/services/vcio-it-strategy" element={<ServiceLanding slug="vcio-it-strategy" />} />
             <Route path="/it-support/toronto" element={<LocationLanding slug="toronto" />} />
             <Route path="/it-support/vaughan" element={<LocationLanding slug="vaughan" />} />
             <Route path="/it-support/mississauga" element={<LocationLanding slug="mississauga" />} />
