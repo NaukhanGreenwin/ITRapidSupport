@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeSwitcher from './ThemeSwitcher';
@@ -19,12 +19,7 @@ export default function Header() {
   const ticking = useRef(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-  const location = useLocation();
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-
-  // On the homepage hero (which is dark), let the header sit transparent over it
-  // until the user scrolls, so it blends in instead of a hard white slab.
-  const transparentTop = location.pathname === '/' && !scrolled;
 
   // Initialize window width on mount
   useEffect(() => {
@@ -223,7 +218,7 @@ export default function Header() {
     <>
       {/* Main header */}
       <motion.header
-        className={`fixed w-full z-50 transition-all duration-300 ${transparentTop ? 'bg-transparent shadow-none md:bg-white md:shadow-sm' : scrolled ? 'bg-white shadow-md' : 'bg-white shadow-sm'}`}
+        className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white shadow-sm'}`}
         initial="visible"
         animate={isVisible ? "visible" : "hidden"}
         variants={headerVariants}
@@ -233,21 +228,10 @@ export default function Header() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
-                {transparentTop && (
-                  <img
-                    src="/images/logo-white.png"
-                    alt="IT Rapid Support Logo"
-                    className="w-auto max-w-[280px] object-contain h-14 md:hidden"
-                    width="1000"
-                    height="320"
-                    loading="eager"
-                    fetchPriority="high"
-                  />
-                )}
                 <img
                   src="/images/logo.png"
                   alt="IT Rapid Support Logo"
-                  className={`w-auto max-w-[280px] sm:max-w-[280px] object-contain h-14 sm:h-14 md:h-16 ${transparentTop ? 'hidden md:block' : ''}`}
+                  className="w-auto max-w-[280px] sm:max-w-[280px] object-contain h-14 sm:h-14 md:h-16"
                   width="1000"
                   height="320"
                   loading="eager"
@@ -431,7 +415,7 @@ export default function Header() {
               <button 
                 id="mobile-menu-button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={`${transparentTop ? 'text-white hover:text-red-100' : 'text-gray-700 hover:text-red-600'} transition-colors p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500`}
+                className="text-gray-700 hover:text-red-600 transition-colors p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu"
                 aria-label={mobileMenuOpen ? "Close main menu" : "Open main menu"}
