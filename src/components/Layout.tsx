@@ -14,8 +14,16 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
-  // Create canonical URL based on current path
-  const canonicalUrl = `https://itrapidsupport.com${location.pathname === '/' ? '' : location.pathname}`;
+  // Create canonical URL based on current path. GitHub Pages serves every route
+  // as a directory and 301s the bare path to the trailing-slash form, so the
+  // canonical must use the trailing slash (extensionless paths only) or it points
+  // at a redirect. This is the global fallback; page-level SEO canonicals override it.
+  const normalizedPath = location.pathname === '/'
+    ? ''
+    : (/\.[a-zA-Z0-9]+$/.test(location.pathname) || location.pathname.endsWith('/')
+        ? location.pathname
+        : `${location.pathname}/`);
+  const canonicalUrl = `https://itrapidsupport.com${normalizedPath}`;
   
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
