@@ -318,6 +318,18 @@ const Contact: React.FC = () => {
                     
                     <div className="flex items-start group">
                       <div className="bg-white/10 rounded-full p-3 mr-4 group-hover:bg-white/20 transition-colors">
+                        <MapPin className="h-6 w-6 text-red-400" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-slate-400 mb-1">Office</p>
+                        <p className="text-white">IT Rapid Support</p>
+                        <p className="text-white">7810 Keele St, Vaughan, ON L4K 4G7</p>
+                        <p className="text-slate-400 text-sm mt-1">Serving Vaughan, Concord, Toronto and the GTA</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start group">
+                      <div className="bg-white/10 rounded-full p-3 mr-4 group-hover:bg-white/20 transition-colors">
                         <Clock className="h-6 w-6 text-red-400" />
                       </div>
                       <div>
@@ -357,6 +369,51 @@ const Contact: React.FC = () => {
                 </div>
               </motion.div>
             </AnimateOnScroll>
+          </div>
+        </div>
+      </div>
+
+      {/* Location / Map — local SEO signals for Vaughan & the GTA */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Visit Our Vaughan Office
+              </h2>
+              <p className="text-gray-600 mb-6">
+                IT Rapid Support is headquartered at 7810 Keele St in Vaughan (Concord), Ontario —
+                minutes from Highway 407 and Highway 400. From here our technicians deliver managed IT
+                support and cybersecurity services to businesses across Vaughan, Concord, Woodbridge,
+                Toronto, and the entire Greater Toronto Area, with both remote helpdesk and on-site support.
+              </p>
+              <div className="space-y-3 text-gray-700">
+                <p className="flex items-center">
+                  <MapPin className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
+                  7810 Keele St, Vaughan, ON L4K 4G7
+                </p>
+                <p className="flex items-center">
+                  <Phone className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
+                  <a href="tel:+12895829930" className="hover:text-red-600 transition-colors">(289) 582-9930</a>
+                </p>
+                <p className="flex items-center">
+                  <Clock className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
+                  Monday – Friday: 9AM – 6PM EST · 24/7 emergency support
+                </p>
+              </div>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <iframe
+                title="IT Rapid Support office — 7810 Keele St, Vaughan, ON"
+                src="https://www.google.com/maps?q=7810+Keele+St,+Vaughan,+ON+L4K+4G7&output=embed"
+                width="100%"
+                height="380"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>

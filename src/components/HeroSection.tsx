@@ -70,8 +70,15 @@ const HeroSection: React.FC = () => {
               </h2>
               
               <p className="text-lg text-gray-200 mb-7 max-w-xl lg:mx-0">
-                Protect your digital assets with comprehensive managed IT services, 
-                proactive security monitoring, and cyberthreat defense.
+                Protect your digital assets with comprehensive{' '}
+                <Link to="/it-support/gta" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
+                  managed IT services across the GTA
+                </Link>
+                , proactive security monitoring, and{' '}
+                <Link to="/services/threat-detection" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
+                  24/7 managed threat detection and response
+                </Link>
+                .
               </p>
             </div>
             

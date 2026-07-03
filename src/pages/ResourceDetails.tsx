@@ -35,7 +35,7 @@ export const allResources: ResourceItem[] = [
       "### 2. Per-Device Pricing",
       "Some providers price by the number of devices they manage: workstations, servers, firewalls, and network gear. This suits businesses with shared workstations or a high device-to-user ratio, such as warehouses, clinics, or retail locations.",
       "### 3. Tiered or Bundled Plans",
-      "Many managed service providers package support into tiers, where higher tiers add proactive monitoring, advanced cybersecurity, and faster response commitments. This lets you start with essential coverage and add security layers like managed detection and response, email security, and multi-factor authentication as you grow.",
+      "Many managed service providers package support into tiers, where higher tiers add proactive monitoring, advanced cybersecurity, and faster response commitments. This lets you start with essential coverage and add security layers like [managed detection and response](/services/threat-detection), email security, and multi-factor authentication as you grow.",
       "## What Actually Drives the Price",
       "Several factors move managed IT pricing up or down. Understanding them helps you compare quotes fairly:",
       "### Number of Users and Devices",
@@ -49,7 +49,7 @@ export const allResources: ResourceItem[] = [
       "## What to Ask Before You Sign",
       "When comparing providers, ask exactly what is included. Does the plan cover cybersecurity or is that extra? Is the helpdesk available 24/7? Are on-site visits included? What is the response commitment when something breaks? A low headline price often means thin coverage that costs you more in downtime later.",
       "## Get a Straight Answer for Your Business",
-      "Every business is different, so the most accurate way to understand your cost is a short conversation about your team size, your systems, and your risk. IT Rapid Support provides managed IT and cybersecurity for businesses across Toronto and the GTA, with a 24/7 helpdesk, proactive monitoring, and certified technicians. Call (289) 582-9930 for a no-pressure quote built around your needs."
+      "Every business is different, so the most accurate way to understand your cost is a short conversation about your team size, your systems, and your risk. IT Rapid Support provides managed IT and cybersecurity for businesses [across Toronto and the GTA](/it-support/gta), with a 24/7 helpdesk, proactive monitoring, and certified technicians. Call (289) 582-9930 for a no-pressure quote built around your needs."
     ].join('\n\n'),
     type: "guide",
     date: "June 24, 2026",
@@ -118,7 +118,7 @@ export const allResources: ResourceItem[] = [
       "## 8. Have a Plan for When Something Goes Wrong",
       "Know who to call and what to do in the first hour of an incident. A clear response plan, combined with a partner who can act fast, dramatically reduces the cost and downtime of an attack.",
       "## Putting It Together",
-      "Each of these layers is achievable for a small business when set up by a team that does this every day. IT Rapid Support provides managed cybersecurity for businesses across Toronto and the GTA, including MFA, email security, managed firewalls, endpoint protection, backup and recovery, and 24/7 managed detection and response. Call (289) 582-9930 to find the gaps in your current setup."
+      "Each of these layers is achievable for a small business when set up by a team that does this every day. IT Rapid Support provides managed cybersecurity for businesses [across Toronto and the GTA](/it-support/gta), including MFA, email security, managed firewalls, endpoint protection, backup and recovery, and 24/7 [managed detection and response](/services/threat-detection). Call (289) 582-9930 to find the gaps in your current setup."
     ].join('\n\n'),
     type: "guide",
     date: "June 20, 2026",
@@ -180,7 +180,7 @@ export const allResources: ResourceItem[] = [
       "## What to Do If You Are Hit",
       "Disconnect affected systems immediately, do not pay before getting expert advice, and bring in a response team fast. The first hour shapes the outcome. Having a partner you can call at any time is the difference between a contained incident and a business-stopping crisis.",
       "## Build Your Defense Before You Need It",
-      "Ransomware defense is not a single product; it is layers working together, maintained by people who watch them every day. IT Rapid Support provides managed cybersecurity, backup and recovery, and 24/7 managed detection and response for businesses across Ontario and the GTA. Call (289) 582-9930 to assess your ransomware readiness before an attacker tests it for you."
+      "Ransomware defense is not a single product; it is layers working together, maintained by people who watch them every day. IT Rapid Support provides managed cybersecurity, backup and recovery, and 24/7 [managed detection and response](/services/threat-detection) for businesses [across Ontario and the GTA](/it-support/gta). Call (289) 582-9930 to assess your ransomware readiness before an attacker tests it for you."
     ].join('\n\n'),
     type: "guide",
     date: "June 16, 2026",
@@ -202,7 +202,7 @@ export const allResources: ResourceItem[] = [
       "## 2. Proactive Monitoring, Not Just Reactive Fixes",
       "The best providers prevent problems instead of waiting for you to report them. Proactive monitoring catches failing hardware, security issues, and performance problems early. If a provider only shows up after something breaks, you are paying for the slowest possible service.",
       "## 3. Security Built In, Not Bolted On",
-      "Cybersecurity should be part of the core offering: managed firewalls, endpoint protection, email security, MFA, and managed detection and response. If security is an expensive afterthought or barely mentioned, keep looking.",
+      "Cybersecurity should be part of the core offering: managed firewalls, endpoint protection, email security, MFA, and [managed detection and response](/services/threat-detection). If security is an expensive afterthought or barely mentioned, keep looking.",
       "## 4. Local Presence and On-Site Capability",
       "Most issues are solved remotely, but some need hands on hardware. A provider with on-site capability across the GTA can show up for new office setups, hardware failures, and projects. Local matters when you need someone in the room.",
       "## 5. Clear, Predictable Pricing",
@@ -326,7 +326,7 @@ export const allResources: ResourceItem[] = [
       "## Have a Plan for When Someone Clicks",
       "Assume that eventually someone will click. Managed detection and response and a clear incident process mean a single mistake gets caught and contained quickly instead of turning into a breach.",
       "## Protect Your Business From Phishing",
-      "IT Rapid Support combines email security, multi-factor authentication, security awareness training, and managed detection and response to protect GTA businesses against phishing. Call (289) 582-9930 to strengthen your defences."
+      "IT Rapid Support combines email security, multi-factor authentication, security awareness training, and [managed detection and response](/services/threat-detection) to protect [GTA businesses](/it-support/gta) against phishing. Call (289) 582-9930 to strengthen your defences."
     ].join('\n\n'),
     type: "guide",
     date: "June 26, 2026",
@@ -578,7 +578,7 @@ export const allResources: ResourceItem[] = [
       "## Local Coverage Matters",
       "Remote support solves most issues, but when hardware fails or a network needs hands-on work, you want a provider that can actually get to you. Ask where the provider's team is based and how they handle on-site calls in your part of the GTA — a provider centrally located in the region can reach Toronto, York, Peel, Halton, and Durham quickly.",
       "## Talk to a GTA IT Support Provider",
-      "IT Rapid Support provides managed IT support and cybersecurity to businesses across the Greater Toronto Area from our Vaughan headquarters: 24/7 helpdesk, managed detection and response, cloud and Microsoft 365 management, and on-site support GTA-wide. Call (289) 582-9930 for a straightforward conversation about what your business actually needs."
+      "IT Rapid Support provides [managed IT support and cybersecurity to businesses across the Greater Toronto Area](/it-support/gta) from our Vaughan headquarters: 24/7 helpdesk, [managed detection and response](/services/threat-detection), cloud and Microsoft 365 management, and on-site support GTA-wide. Call (289) 582-9930 for a straightforward conversation about what your business actually needs."
     ].join('\n\n'),
     type: "guide",
     date: "July 3, 2026",
@@ -646,8 +646,63 @@ export const allResources: ResourceItem[] = [
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
     link: "#",
     readTime: "8 min read"
+  },
+  {
+    id: "quebec-law-25-it-readiness-ontario-businesses",
+    title: "Quebec's Law 25: What Ontario & GTA Businesses Serving Quebec Customers Need to Know",
+    description: "If your Ontario business collects personal information from Quebec residents, Quebec's Law 25 privacy rules can apply to you. Here is what the law requires and how your IT setup supports compliance.",
+    content: [
+      "Many businesses in Toronto and the GTA sell to, market to, or serve customers in Quebec — and a surprising number do not realize that Quebec's private-sector privacy law, commonly known as Law 25, can apply to them even though they have no office in the province. Law 25 is one of the strictest privacy regimes in North America, and its obligations follow the personal information of Quebec residents, not the address of the business that holds it.",
+      "This guide explains, in plain terms, what Law 25 asks of a business and where your IT environment fits. It is general information, not legal advice — for how the law applies to your specific situation, speak with a privacy lawyer. What we can help with is the technical side: the security controls, data handling, and documentation that a compliance program is built on.",
+      "## What Law 25 Is",
+      "Law 25 (adopted in Quebec in 2021, with obligations phased in between 2022 and 2024) modernized Quebec's private-sector privacy rules. It applies to organizations that collect, hold, or use the personal information of people in Quebec — which can include an Ontario business with Quebec customers, an e-commerce store shipping to Montreal, or a service provider whose client base crosses the provincial border.",
+      "## The Core Obligations",
+      "### A Person Responsible for Personal Information",
+      "Every organization subject to the law must designate someone responsible for the protection of personal information and publish that person's title and contact information. By default this is the highest-ranking officer.",
+      "### Confidentiality Incident Reporting",
+      "When a confidentiality incident — a breach, loss, or unauthorized access — presents a risk of serious injury, the organization must notify Quebec's privacy regulator (the Commission d'accès à l'information) and the affected individuals, and must keep a register of all incidents. That means you need to be able to detect incidents in the first place, which is where monitoring and managed detection and response earn their keep.",
+      "### Privacy Impact Assessments",
+      "Law 25 requires privacy impact assessments in defined situations, including when personal information is communicated outside Quebec. If your systems, backups, or cloud services store Quebec customers' data in other provinces or countries, that transfer is something your compliance program has to account for.",
+      "### Consent, Transparency, and Individual Rights",
+      "The law tightens consent requirements, requires clear privacy policies, and gives individuals rights over their information — including deletion (de-indexing) and, since 2024, data portability. Practically, your business needs to know what personal data it holds, where it lives, and how to retrieve or delete it on request. That is a data-inventory and systems question as much as a legal one.",
+      "### Real Penalties",
+      "Law 25 carries administrative monetary penalties and, for serious offences, fines that can reach the greater of $25 million or 4% of worldwide turnover. Enforcement is real, and 'we didn't know the law applied to us' is not a defence.",
+      "## Where Your IT Environment Fits",
+      "A privacy program is policy plus technology. The technical controls that support Law 25 readiness are largely the same ones that support PIPEDA and good security generally: knowing where personal data is stored (data mapping), encryption at rest and in transit, access controls and multi-factor authentication so only authorized people touch personal information, monitoring and managed detection and response so a confidentiality incident is detected and documented quickly, tested backups with a known storage location, and retention and deletion processes that can actually honour an individual's request.",
+      "## The Bilingual Service Angle",
+      "If you serve Quebec customers, being able to respond to privacy requests and support issues in French is a practical requirement of doing business there, beyond what any statute says. When choosing vendors and support partners, it is worth asking how French-language requests will be handled end to end.",
+      "## A Sensible Path for a GTA Business",
+      "1. Confirm with counsel whether Law 25 applies to your operations. 2. Inventory the personal information you hold and where it is stored, including cloud services and backups. 3. Close the technical gaps: encryption, MFA, access controls, detection, tested backups. 4. Document incidents and be ready to report. 5. Review the same controls against PIPEDA, since both regimes will usually apply to an Ontario business.",
+      "## How IT Rapid Support Helps",
+      "IT Rapid Support provides the technical foundation that privacy compliance programs are built on for businesses [across Toronto and the GTA](/it-support/gta): data protection, access management, encrypted and tested backups, and 24/7 [managed detection and response](/services/threat-detection) that helps you detect and document incidents. We work alongside your legal and privacy advisors — they define the obligations, we implement the controls. Call (289) 582-9930 to review where your systems stand."
+    ].join('\n\n'),
+    type: "guide",
+    date: "July 3, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "9 min read"
   }
 ];
+
+// Render markdown-style [text](url) links inside article paragraphs.
+// Internal paths use react-router Link; anything else falls back to <a>.
+const renderInlineLinks = (text: string): React.ReactNode => {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+    const [, label, href] = match;
+    return href.startsWith('/') ? (
+      <Link key={i} to={href} className="text-red-600 hover:text-red-700 underline">{label}</Link>
+    ) : (
+      <a key={i} href={href} className="text-red-600 hover:text-red-700 underline">{label}</a>
+    );
+  });
+};
 
 const ResourceDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -807,7 +862,7 @@ const ResourceDetails: React.FC = () => {
                   } else if (paragraph.startsWith('### ')) {
                     return <h3 key={index} className="text-xl font-bold mt-6 mb-3">{paragraph.replace('### ', '')}</h3>;
                   } else {
-                    return <p key={index} className="mb-4 text-gray-700">{paragraph}</p>;
+                    return <p key={index} className="mb-4 text-gray-700">{renderInlineLinks(paragraph)}</p>;
                   }
                 })}
               </div>

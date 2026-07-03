@@ -442,6 +442,52 @@ export const industries: IndustryData[] = [
       },
     ],
   },
+  {
+    slug: 'nonprofit',
+    industry: 'Nonprofits & Charities',
+    title: 'Managed IT Services for Nonprofits & Charities in the GTA',
+    description:
+      'Affordable managed IT and cybersecurity for nonprofits and charities. Donor data protection, Microsoft 365 management, and 24/7 helpdesk across the GTA. Call (289) 582-9930.',
+    keywords:
+      'IT support for nonprofits, nonprofit IT services Toronto, charity IT support GTA, managed IT for nonprofits, nonprofit cybersecurity, donor data protection',
+    intro:
+      'Nonprofits and charities run lean — every dollar spent on technology has to count, and donor trust depends on keeping sensitive data safe. IT Rapid Support gives nonprofit organizations across the GTA enterprise-grade managed IT and cybersecurity at a scale that fits their budget: protected donor and member data, reliable Microsoft 365 collaboration for staff and volunteers, encrypted backups, and a 24/7 helpdesk so small teams are never stuck without support.',
+    tags: ['Donor data protection', 'PIPEDA', 'Microsoft 365', 'Volunteer & remote access', 'Encrypted backups', 'Budget-conscious plans'],
+    highlights: [
+      {
+        title: 'Donor & Member Data Protection',
+        description:
+          'Encryption, access controls, MFA, and email security protect the donor, member, and client information your organization is trusted with, and help you work toward your PIPEDA obligations.',
+      },
+      {
+        title: 'More Mission, Less IT Overhead',
+        description:
+          'Predictable monthly plans replace surprise repair bills, and proactive monitoring catches issues before they interrupt programs — so limited budgets and small teams go further.',
+      },
+      {
+        title: 'Support for Staff and Volunteers',
+        description:
+          'Microsoft 365 management, secure remote access, and a 24/7 helpdesk keep staff, volunteers, and board members productive wherever they work, with on-site support across the GTA when needed.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do you keep IT affordable for nonprofits and charities?',
+        answer:
+          'We build plans around what your organization actually uses — users, devices, and the security level your data requires — with predictable monthly pricing instead of surprise break-fix bills. Proactive monitoring and maintenance also reduce the downtime and emergency costs that strain nonprofit budgets.',
+      },
+      {
+        question: 'How do you protect donor and member data?',
+        answer:
+          'We layer encryption at rest and in transit, access controls, multi-factor authentication, email security with anti-phishing, and tested encrypted backups so donor, member, and client information stays protected and recoverable, supporting your PIPEDA compliance efforts.',
+      },
+      {
+        question: 'Can you support volunteers and remote or hybrid teams?',
+        answer:
+          'Yes. We manage Microsoft 365, secure remote access, and shared devices so staff, volunteers, and board members can collaborate safely from the office, home, or the field, and our 24/7 helpdesk supports everyone your organization authorizes.',
+      },
+    ],
+  },
 ];
 
 export const getIndustry = (slug: string): IndustryData | undefined =>

@@ -20,7 +20,15 @@ const CtaSection: React.FC = () => {
                 Ready to secure your business with industry-leading IT support?
               </h2>
               <p className="text-slate-300 text-base mb-4 leading-relaxed">
-                Contact our team today to schedule a free IT security assessment and discover how our solutions can protect your Toronto business.
+                Contact our team today to schedule a free IT security assessment and discover how our{' '}
+                <Link to="/it-support/gta" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
+                  IT support services across the GTA
+                </Link>{' '}
+                and{' '}
+                <Link to="/services/threat-detection" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
+                  managed detection and response
+                </Link>{' '}
+                can protect your Toronto business.
               </p>
               <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
                 <Link to="/contact" className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium text-sm">

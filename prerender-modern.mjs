@@ -46,6 +46,7 @@ const routes = [
   '/industries/professional-services',
   '/industries/financial-services',
   '/industries/dental',
+  '/industries/nonprofit',
   '/services/microsoft-365-azure-migration',
   '/services/network-management',
   '/services/it-helpdesk',
@@ -69,7 +70,8 @@ const routes = [
   '/resources/microsoft-365-security-best-practices-2026',
   '/resources/it-support-services-gta-buyers-guide',
   '/resources/pipeda-compliance-it-checklist-ontario',
-  '/resources/cyber-insurance-readiness-checklist'
+  '/resources/cyber-insurance-readiness-checklist',
+  '/resources/quebec-law-25-it-readiness-ontario-businesses'
 ];
 
 const MIME = {
