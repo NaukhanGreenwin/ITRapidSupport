@@ -748,8 +748,8 @@ const ResourceDetails: React.FC = () => {
     }
   };
 
-  // Ensure we have a canonical URL for this specific resource
-  const canonicalUrl = `https://itrapidsupport.com/resources/${id}`;
+  // Ensure we have a canonical URL for this specific resource (trailing slash to match GitHub Pages directory URLs + sitemap; avoids self-canonical pointing at a 301)
+  const canonicalUrl = `https://itrapidsupport.com/resources/${id}/`;
   const absoluteImage = currentResource.image.startsWith('http')
     ? currentResource.image
     : `https://itrapidsupport.com${currentResource.image}`;
@@ -779,7 +779,7 @@ const ResourceDetails: React.FC = () => {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://itrapidsupport.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://itrapidsupport.com/resources' },
+      { '@type': 'ListItem', position: 2, name: 'Resources', item: 'https://itrapidsupport.com/resources/' },
       { '@type': 'ListItem', position: 3, name: currentResource.title, item: canonicalUrl }
     ]
   };
