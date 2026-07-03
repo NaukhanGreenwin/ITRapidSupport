@@ -321,7 +321,11 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   // Base domain for absolute URLs
   const baseUrl = 'https://itrapidsupport.com';
-  const fullCanonicalUrl = canonicalUrl.startsWith('http') ? canonicalUrl : `${baseUrl}${canonicalUrl}`;
+  // GitHub Pages serves each prerendered route as a directory and 301-redirects
+  // the bare path to the trailing-slash URL; the canonical must be the final
+  // 200 URL, so normalize every extensionless path to end with "/".
+  const rawCanonicalUrl = canonicalUrl.startsWith('http') ? canonicalUrl : `${baseUrl}${canonicalUrl}`;
+  const fullCanonicalUrl = /\.[a-z0-9]+$/i.test(rawCanonicalUrl) ? rawCanonicalUrl : rawCanonicalUrl.replace(/\/*$/, '/');
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
   
   // Generate breadcrumb schema if breadcrumbs are provided

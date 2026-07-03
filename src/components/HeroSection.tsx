@@ -61,12 +61,12 @@ const HeroSection: React.FC = () => {
           <div className="fade-on-scroll w-full lg:w-1/2 px-5 sm:px-6 lg:px-8 py-10 lg:py-24 order-2 lg:order-1 transition-opacity duration-300 flex flex-col justify-center items-start" style={{opacity: 1}}>
             <div className="text-left">
               <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 leading-tight">
-                Professional
+                Managed IT Services
                 <br />
-                <span className="text-red-500">IT Management</span>
+                <span className="text-red-500">Toronto &amp; the GTA</span>
               </h1>
               <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white/80 mb-5 sm:mb-6">
-                Advanced Cybersecurity
+                24/7 IT Support &amp; Cybersecurity
               </h2>
               
               <p className="text-lg text-gray-200 mb-7 max-w-xl lg:mx-0">
