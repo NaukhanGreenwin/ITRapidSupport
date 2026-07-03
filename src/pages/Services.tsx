@@ -1,10 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Users, Key, Brain, Lock, Cloud, Database, FileCode, Server, CheckCircle, ChevronRight, ArrowRight } from 'lucide-react';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
 
 const Services: React.FC = () => {
   return (
     <>
+      <SEO
+        title="IT Support & Security Services Toronto | Managed IT & Cybersecurity for the GTA"
+        description="IT support and security services for Toronto and GTA businesses: managed IT, 24/7 helpdesk, managed detection and response, cloud security, and Microsoft 365. Call (289) 582-9930."
+        keywords="IT support and security services Toronto, IT security services Toronto, managed IT services GTA, cybersecurity services GTA, managed security services Toronto"
+        canonicalUrl="/services"
+        schema={[
+          generateLocalBusinessSchema(),
+          generateServiceSchema({
+            name: 'IT Support & Security Services',
+            description:
+              'Managed IT support and cybersecurity services for businesses across Toronto and the Greater Toronto Area.',
+            url: '/services',
+            areaServed: 'Greater Toronto Area, Ontario',
+            serviceType: 'Managed IT & Security Services',
+          }),
+        ]}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services' },
+        ]}
+      />
       {/* Hero Section */}
       <div className="pt-20 bg-gradient-to-r from-slate-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

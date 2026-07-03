@@ -1,10 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, ArrowRight, Check, CheckCircle, Server, Users, Clock, ChevronRight } from 'lucide-react';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
+import ServiceDifferentiators from '../components/ServiceDifferentiators';
 
 const ManagedSecurity = () => {
   return (
     <div className="min-h-screen bg-slate-50">
+      <SEO
+        title="Cybersecurity Services GTA | Managed Security Services Toronto"
+        description="Managed cybersecurity services for Toronto and GTA businesses: 24/7 security monitoring, managed firewalls, endpoint protection, email security, and incident response. Call (289) 582-9930."
+        keywords="cybersecurity services GTA, managed security services Toronto, cybersecurity company Toronto, managed cybersecurity GTA, security operations Toronto"
+        canonicalUrl="/services/managed-security"
+        schema={[
+          generateLocalBusinessSchema(),
+          generateServiceSchema({
+            name: 'Managed Security Services',
+            description:
+              '24/7 managed cybersecurity services for businesses across Toronto and the Greater Toronto Area, including monitoring, managed firewalls, endpoint protection, and incident response.',
+            url: '/services/managed-security',
+            areaServed: 'Greater Toronto Area, Ontario',
+            serviceType: 'Managed Security Services',
+          }),
+        ]}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services' },
+          { name: 'Managed Security', url: '/services/managed-security' },
+        ]}
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -312,6 +336,8 @@ const ManagedSecurity = () => {
           </div>
         </div>
       </div>
+
+      <ServiceDifferentiators />
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">

@@ -29,6 +29,7 @@ import CloudSecurity from './pages/CloudSecurity';
 import ITSupport from './pages/ITSupport';
 import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
 import LocationLanding from './pages/LocationLanding';
+import GTALanding from './pages/GTALanding';
 import IndustryLanding from './pages/IndustryLanding';
 import ServiceLanding from './pages/ServiceLanding';
 import RiskCalculator from './pages/RiskCalculator';
@@ -90,6 +91,7 @@ function App() {
             <Route path="/services/network-management" element={<ServiceLanding slug="network-management" />} />
             <Route path="/services/it-helpdesk" element={<ServiceLanding slug="it-helpdesk" />} />
             <Route path="/services/vcio-it-strategy" element={<ServiceLanding slug="vcio-it-strategy" />} />
+            <Route path="/it-support/gta" element={<GTALanding />} />
             <Route path="/it-support/toronto" element={<LocationLanding slug="toronto" />} />
             <Route path="/it-support/vaughan" element={<LocationLanding slug="vaughan" />} />
             <Route path="/it-support/mississauga" element={<LocationLanding slug="mississauga" />} />
@@ -120,6 +122,7 @@ function App() {
             <Route path="/industries/construction" element={<IndustryLanding slug="construction" />} />
             <Route path="/industries/professional-services" element={<IndustryLanding slug="professional-services" />} />
             <Route path="/industries/financial-services" element={<IndustryLanding slug="financial-services" />} />
+            <Route path="/industries/dental" element={<IndustryLanding slug="dental" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

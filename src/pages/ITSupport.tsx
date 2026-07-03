@@ -1,10 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, ArrowRight, Check, CheckCircle, HeadphonesIcon, Laptop, Server, ChevronRight } from 'lucide-react';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
+import ServiceDifferentiators from '../components/ServiceDifferentiators';
 
 const ITSupport = () => {
   return (
     <div className="min-h-screen bg-slate-50">
+      <SEO
+        title="24/7 IT Support Services Toronto | Managed IT Support & Helpdesk"
+        description="24/7 IT support services for Toronto businesses: managed helpdesk, proactive monitoring, on-site support, and rapid response across the GTA. Call (289) 582-9930."
+        keywords="IT support Toronto, 24/7 IT support Toronto, IT helpdesk Toronto, managed IT support GTA, on-site IT support Toronto"
+        canonicalUrl="/services/it-support"
+        schema={[
+          generateLocalBusinessSchema(),
+          generateServiceSchema({
+            name: '24/7 IT Support Services',
+            description:
+              '24/7 IT support for businesses across Toronto and the Greater Toronto Area, including managed helpdesk, proactive monitoring, and on-site support.',
+            url: '/services/it-support',
+            areaServed: 'Greater Toronto Area, Ontario',
+            serviceType: 'IT Support Services',
+          }),
+        ]}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services' },
+          { name: 'IT Support', url: '/services/it-support' },
+        ]}
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -322,6 +346,8 @@ const ITSupport = () => {
         </div>
       </div>
 
+
+      <ServiceDifferentiators />
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">

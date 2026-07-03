@@ -79,6 +79,11 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <h3 className="text-white font-semibold text-base mb-4">IT Support by Location</h3>
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-2.5">
+            <li>
+              <Link to="/it-support/gta" className="text-slate-400 hover:text-white text-sm block truncate">
+                IT Support GTA
+              </Link>
+            </li>
             {locations.map((loc) => (
               <li key={loc.slug}>
                 <Link

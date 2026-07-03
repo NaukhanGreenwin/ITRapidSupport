@@ -396,6 +396,52 @@ export const industries: IndustryData[] = [
       },
     ],
   },
+  {
+    slug: 'dental',
+    industry: 'Dental Practices',
+    title: 'Managed IT Services for Dental Practices in the GTA',
+    description:
+      'IT support and cybersecurity for dental offices. PHIPA-aware patient data protection, practice software support, and 24/7 helpdesk across the GTA. Call (289) 582-9930.',
+    keywords:
+      'IT support for dental offices, dental practice IT services Toronto, dental cybersecurity, managed IT for dentists GTA, PHIPA IT support dental',
+    intro:
+      'Your dental practice depends on its systems — scheduling, imaging, billing, and patient records all have to work every time a patient sits down. IT Rapid Support keeps dental offices across the GTA secure and running: protected patient data, reliable networks for your practice management and imaging software, encrypted backups, and a responsive helpdesk for your front desk and clinical staff.',
+    tags: ['Patient data protection', 'PHIPA', 'Practice software uptime', 'Imaging systems', 'Encrypted backups', 'Microsoft 365'],
+    highlights: [
+      {
+        title: 'Protected Patient Records',
+        description:
+          'Encryption, access controls, MFA, and managed backups safeguard patient health information and help your practice work toward its PHIPA obligations.',
+      },
+      {
+        title: 'Practice Software & Imaging Uptime',
+        description:
+          'We manage the network, workstations, and servers around your practice management and digital imaging systems so appointments never stall on a technical failure.',
+      },
+      {
+        title: 'Helpdesk for the Whole Office',
+        description:
+          'Fast remote support for front-desk and clinical staff, proactive monitoring that catches issues early, and on-site service across the GTA when hands-on help is needed.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do you protect patient data for dental practices?',
+        answer:
+          'We layer encryption at rest and in transit, access controls, multi-factor authentication, email security, and tested encrypted backups so patient health information stays protected and recoverable, supporting your PHIPA compliance efforts.',
+      },
+      {
+        question: 'Can you support our dental practice management and imaging software?',
+        answer:
+          'Yes. We manage the infrastructure around your practice management and digital imaging systems — networks, servers, workstations, and backups — and provide helpdesk support so the tools your team already uses stay fast and reliable.',
+      },
+      {
+        question: 'Do you provide on-site IT support for dental offices in the GTA?',
+        answer:
+          'Yes. Alongside immediate remote support, our certified technicians provide scheduled and emergency on-site service to dental offices across Toronto and the GTA.',
+      },
+    ],
+  },
 ];
 
 export const getIndustry = (slug: string): IndustryData | undefined =>

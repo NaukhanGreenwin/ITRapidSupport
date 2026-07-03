@@ -1,9 +1,21 @@
 import React from 'react';
 import { Users, Award, Rocket, CheckCircle, Clock, Shield } from 'lucide-react';
+import SEO, { generateLocalBusinessSchema } from '../components/SEO';
 
 const About: React.FC = () => {
   return (
     <>
+      <SEO
+        title="About IT Rapid Support | Managed IT & Cybersecurity Experts in Toronto & the GTA"
+        description="IT Rapid Support is a Vaughan-based managed IT and cybersecurity provider serving businesses across Toronto and the GTA with 24/7 support, managed security, and cloud services."
+        keywords="about IT Rapid Support, managed IT company Toronto, cybersecurity company Vaughan, IT services provider GTA, MSP Toronto"
+        canonicalUrl="/about"
+        schema={generateLocalBusinessSchema('vaughan')}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'About', url: '/about' },
+        ]}
+      />
       {/* Hero Section */}
       <div className="pt-20 bg-gradient-to-r from-slate-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">

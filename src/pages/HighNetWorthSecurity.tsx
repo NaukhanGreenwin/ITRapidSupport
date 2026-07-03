@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Shield, Home, Plane, Smartphone, Sailboat, Clock, Lock, Eye, Building, Users, FileText, BarChart3, CheckCircle2 } from 'lucide-react';
 import Button from '../components/Button';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
 
 export default function HighNetWorthSecurity() {
   const [activeTab, setActiveTab] = useState('family');
@@ -25,6 +26,28 @@ export default function HighNetWorthSecurity() {
 
   return (
     <div className="bg-white">
+      <SEO
+        title="High-Net-Worth Cybersecurity & Private IT Support | Toronto & GTA"
+        description="Discreet cybersecurity and private IT support for high-net-worth individuals, executives, and family offices across Toronto and the GTA. Call (289) 582-9930."
+        keywords="high net worth cybersecurity Toronto, family office IT support, executive cybersecurity GTA, private IT support Toronto, personal cybersecurity services"
+        canonicalUrl="/services/high-net-worth"
+        schema={[
+          generateLocalBusinessSchema(),
+          generateServiceSchema({
+            name: 'High-Net-Worth Cybersecurity & Private IT Support',
+            description:
+              'Discreet cybersecurity and private IT support for high-net-worth individuals, executives, and family offices across Toronto and the Greater Toronto Area.',
+            url: '/services/high-net-worth',
+            areaServed: 'Greater Toronto Area, Ontario',
+            serviceType: 'Cybersecurity Services',
+          }),
+        ]}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services' },
+          { name: 'High-Net-Worth Security', url: '/services/high-net-worth' },
+        ]}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white pt-8 pb-16">
         <div className="container mx-auto px-4">

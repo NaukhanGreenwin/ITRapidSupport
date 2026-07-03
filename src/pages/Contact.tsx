@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, Clock, MapPin, Shield, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import AnimateOnScroll from '../components/AnimateOnScroll';
+import SEO, { generateLocalBusinessSchema } from '../components/SEO';
 
 interface FormData {
   firstName: string;
@@ -84,6 +85,17 @@ const Contact: React.FC = () => {
 
   return (
     <>
+      <SEO
+        title="Contact IT Rapid Support | 24/7 IT Support Toronto & GTA"
+        description="Contact IT Rapid Support for 24/7 managed IT support and cybersecurity across Toronto, Vaughan and the GTA. Call (289) 582-9930 or visit us at 7810 Keele St, Vaughan, ON."
+        keywords="contact IT Rapid Support, IT support Toronto contact, IT support Vaughan, managed IT services GTA contact, cybersecurity company Toronto phone"
+        canonicalUrl="/contact"
+        schema={generateLocalBusinessSchema('vaughan')}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Contact', url: '/contact' },
+        ]}
+      />
       {/* Hero Section */}
       <div className="relative pt-20 bg-gradient-to-r from-slate-900 to-red-900 overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:60px_60px]" />

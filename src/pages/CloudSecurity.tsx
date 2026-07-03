@@ -1,10 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, ArrowRight, Check, CheckCircle, Lock, Shield, Database, ChevronRight } from 'lucide-react';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
+import ServiceDifferentiators from '../components/ServiceDifferentiators';
 
 const CloudSecurity = () => {
   return (
     <div className="min-h-screen bg-slate-50">
+      <SEO
+        title="Cloud Security Services Toronto | Microsoft 365 & Azure Security GTA"
+        description="Cloud security services for Toronto and GTA businesses: Microsoft 365 and Azure security, cloud posture management, identity protection, and data security. Call (289) 582-9930."
+        keywords="cloud security Toronto, Microsoft 365 security GTA, Azure security Toronto, cloud security services GTA, cloud data protection Toronto"
+        canonicalUrl="/services/cloud-security"
+        schema={[
+          generateLocalBusinessSchema(),
+          generateServiceSchema({
+            name: 'Cloud Security Services',
+            description:
+              'Cloud security services for businesses across Toronto and the Greater Toronto Area, covering Microsoft 365, Azure, identity protection, and cloud data security.',
+            url: '/services/cloud-security',
+            areaServed: 'Greater Toronto Area, Ontario',
+            serviceType: 'Cloud Security Services',
+          }),
+        ]}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services' },
+          { name: 'Cloud Security', url: '/services/cloud-security' },
+        ]}
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -344,6 +368,8 @@ const CloudSecurity = () => {
           </div>
         </div>
       </div>
+
+      <ServiceDifferentiators />
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">

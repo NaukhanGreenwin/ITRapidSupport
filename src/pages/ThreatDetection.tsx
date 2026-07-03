@@ -1,10 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, Check, CheckCircle, Eye, Target, AlertTriangle, ChevronRight } from 'lucide-react';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
+import ServiceDifferentiators from '../components/ServiceDifferentiators';
 
 const ThreatDetection = () => {
   return (
     <div className="min-h-screen bg-slate-50">
+      <SEO
+        title="Managed Detection & Response (MDR) Services | Toronto & GTA"
+        description="Managed Detection and Response (MDR) for Toronto and GTA businesses: 24/7 threat monitoring, AI-assisted detection, expert investigation, and rapid containment. Call (289) 582-9930."
+        keywords="managed detection and response Toronto, MDR services Toronto, MDR GTA, threat detection services, 24/7 threat monitoring, threat detection and response Toronto"
+        canonicalUrl="/services/threat-detection"
+        schema={[
+          generateLocalBusinessSchema(),
+          generateServiceSchema({
+            name: 'Managed Detection & Response (MDR)',
+            description:
+              'Managed Detection and Response services for businesses across Toronto and the Greater Toronto Area: 24/7 threat monitoring, detection, investigation, and rapid response.',
+            url: '/services/threat-detection',
+            areaServed: 'Greater Toronto Area, Ontario',
+            serviceType: 'Managed Detection and Response (MDR)',
+          }),
+        ]}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services' },
+          { name: 'Managed Detection & Response', url: '/services/threat-detection' },
+        ]}
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -14,10 +38,10 @@ const ThreatDetection = () => {
                 <span className="text-red-200 text-sm font-medium">Security Services</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Threat Detection & Intelligence
+                Managed Detection &amp; Response (MDR)
               </h1>
               <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                Advanced threat detection powered by AI and human expertise to identify and neutralize security threats before they impact your business.
+                24/7 managed detection and response for Toronto and GTA businesses. AI-assisted threat detection combined with expert investigation and rapid containment — so threats are found and stopped before they impact your business.
               </p>
               <Link 
                 to="/contact" 
@@ -42,9 +66,9 @@ const ThreatDetection = () => {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Advanced Threat Detection</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">24/7 Managed Detection &amp; Response</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Our threat detection and intelligence services combine advanced technology with expert analysis to identify and neutralize threats.
+              Our MDR service combines advanced detection technology with expert human analysis, aligned with the NIST Cybersecurity Framework's Detect and Respond functions, to identify and neutralize threats around the clock.
             </p>
           </div>
 
@@ -79,9 +103,9 @@ const ThreatDetection = () => {
               <div className="bg-red-600/10 rounded-xl p-3 w-fit mb-6">
                 <Eye className="h-8 w-8 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Continuous Monitoring</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">24/7 Security Monitoring</h3>
               <p className="text-gray-600 mb-6">
-                24/7 monitoring of your network, endpoints, and cloud environments to detect suspicious activities in real-time.
+                Round-the-clock monitoring of your network, endpoints, and cloud environments by our security operations team to detect suspicious activity in real time.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
@@ -176,7 +200,7 @@ const ThreatDetection = () => {
                 className="rounded-2xl shadow-xl"
               />
               <div className="absolute -bottom-4 -right-4 bg-red-600 text-white py-3 px-6 rounded-lg shadow-lg">
-                <span className="font-medium">99.8% Threat Detection Rate</span>
+                <span className="font-medium">24/7 Monitoring &amp; Response</span>
               </div>
             </div>
           </div>
@@ -252,9 +276,9 @@ const ThreatDetection = () => {
       <div className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Our Threat Detection Works</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Our MDR Service Works</h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              A comprehensive approach to identifying, analyzing, and responding to security threats.
+              A comprehensive detect-and-respond approach to identifying, analyzing, and containing security threats.
             </p>
           </div>
 
@@ -376,12 +400,14 @@ const ThreatDetection = () => {
         </div>
       </div>
 
+      <ServiceDifferentiators />
+
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to strengthen your threat detection?</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">Ready for 24/7 managed detection and response?</h2>
           <p className="text-white/80 text-lg mb-8 max-w-3xl mx-auto">
-            Contact our team today to learn how our advanced threat detection services can protect your organization.
+            Contact our team today to learn how MDR can protect your Toronto or GTA organization around the clock.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 

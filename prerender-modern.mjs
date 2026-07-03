@@ -19,6 +19,7 @@ const routes = [
   '/it-risk-calculator',
   '/managed-it-plans',
   '/privacy', '/terms', '/cookies', '/accessibility',
+  '/it-support/gta',
   '/it-support/toronto', '/it-support/vaughan',
   '/it-support/mississauga', '/it-support/brampton',
   '/it-support/oakville', '/it-support/markham',
@@ -44,6 +45,7 @@ const routes = [
   '/industries/construction',
   '/industries/professional-services',
   '/industries/financial-services',
+  '/industries/dental',
   '/services/microsoft-365-azure-migration',
   '/services/network-management',
   '/services/it-helpdesk',
@@ -64,7 +66,10 @@ const routes = [
   '/resources/msp-vs-mssp-managed-it-vs-managed-security',
   '/resources/break-fix-vs-managed-it-services',
   '/resources/microsoft-copilot-rollout-security-guide',
-  '/resources/microsoft-365-security-best-practices-2026'
+  '/resources/microsoft-365-security-best-practices-2026',
+  '/resources/it-support-services-gta-buyers-guide',
+  '/resources/pipeda-compliance-it-checklist-ontario',
+  '/resources/cyber-insurance-readiness-checklist'
 ];
 
 const MIME = {

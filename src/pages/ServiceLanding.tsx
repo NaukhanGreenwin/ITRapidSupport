@@ -8,6 +8,7 @@ import SEO, {
   generateServiceSchema,
 } from '../components/SEO';
 import { getServiceDetail } from '../data/servicesDetail';
+import ServiceDifferentiators from '../components/ServiceDifferentiators';
 import NotFound from './NotFound';
 
 interface ServiceLandingProps {
@@ -150,6 +151,8 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
           </div>
         </div>
       </div>
+
+      <ServiceDifferentiators />
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">
