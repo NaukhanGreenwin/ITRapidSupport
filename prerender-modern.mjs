@@ -97,13 +97,14 @@ const CHROME = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Conte
 
 async function main() {
   await new Promise((r) => server.listen(PORT, r));
-  const browser = await puppeteer.launch({
+  const launch = () => puppeteer.launch({
     executablePath: CHROME,
     headless: 'new',
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
+  let browser = await launch();
   let ok = 0;
-  for (const route of routes) {
+  const renderRoute = async (route) => {
     const page = await browser.newPage();
     // Identify as ReactSnap so the app renders (not hydrates) during capture.
     await page.setUserAgent('Mozilla/5.0 (compatible; ReactSnap)');
@@ -115,6 +116,26 @@ async function main() {
     ).catch(() => {});
     // Small settle delay for async content/images to attach.
     await new Promise((r) => setTimeout(r, 1200));
+    // Remove static head tags from the SPA shell when react-helmet (data-rh)
+    // rendered a page-specific equivalent — prevents duplicate/conflicting
+    // canonicals, descriptions and og tags in the prerendered HTML.
+    await page.evaluate(() => {
+      const head = document.head;
+      const dedupe = (sel) => {
+        if (head.querySelector(`${sel}[data-rh]`)) {
+          head.querySelectorAll(`${sel}:not([data-rh])`).forEach((el) => el.remove());
+        }
+      };
+      dedupe('link[rel="canonical"]');
+      ['description', 'title', 'keywords', 'robots'].forEach((n) => dedupe(`meta[name="${n}"]`));
+      ['og:', 'twitter:'].forEach((prefix) => {
+        if (head.querySelector(`meta[property^="${prefix}"][data-rh], meta[name^="${prefix}"][data-rh]`)) {
+          head
+            .querySelectorAll(`meta[property^="${prefix}"]:not([data-rh]), meta[name^="${prefix}"]:not([data-rh])`)
+            .forEach((el) => el.remove());
+        }
+      });
+    });
     let html = await page.content();
     html = '<!DOCTYPE html>\n' + html.replace(/^<!DOCTYPE html>/i, '').trim();
     const outDir = route === '/' ? distDir : path.join(distDir, route);
@@ -122,8 +143,19 @@ async function main() {
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
     const kb = (Buffer.byteLength(html) / 1024).toFixed(1);
     console.log(`prerendered ${route} -> ${kb} KB`);
-    ok++;
     await page.close();
+  };
+  for (const route of routes) {
+    // Chrome occasionally dies mid-run; relaunch the browser and retry once.
+    try {
+      await renderRoute(route);
+    } catch (e) {
+      console.warn(`retrying ${route} after error: ${e.message}`);
+      try { await browser.close(); } catch {}
+      browser = await launch();
+      await renderRoute(route);
+    }
+    ok++;
   }
   await browser.close();
   server.close();

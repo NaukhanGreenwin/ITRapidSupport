@@ -9,7 +9,7 @@ const Support: React.FC = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Technical Support | IT Rapid Support" 
+        title="Technical Support & Client Help Desk" 
         description="Get remote technical support from IT Rapid Support. Download our remote assistance tools to allow our technicians to help you quickly and securely."
         keywords="remote support, technical support, TeamViewer, AnyDesk, IT help desk, remote assistance"
         breadcrumbs={[

@@ -16,10 +16,16 @@ import {
   Network,
   Briefcase
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 function Solutions() {
   return (
     <div className="min-h-screen bg-slate-50">
+      <SEO
+        title="IT & Cybersecurity Solutions for Toronto & GTA Businesses"
+        description="Explore IT Rapid Support's managed IT and cybersecurity solutions for Toronto and GTA businesses — 24/7 support, threat detection, cloud security, and compliance-ready IT."
+        canonicalUrl="/solutions"
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-slate-900 via-red-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

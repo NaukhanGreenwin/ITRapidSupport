@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { allResources, type ResourceItem } from './ResourceDetails';
+import SEO from '../components/SEO';
 
 const Resources = () => {
   const resources = allResources;
@@ -33,6 +34,11 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <SEO
+        title="IT Support & Cybersecurity Resources for Toronto & GTA Businesses"
+        description="Guides, checklists and buyer's guides on managed IT support, cybersecurity, Microsoft 365 and compliance for Toronto and GTA businesses, from the IT Rapid Support team."
+        canonicalUrl="/resources"
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-slate-900 via-red-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

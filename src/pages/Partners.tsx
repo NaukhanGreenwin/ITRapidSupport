@@ -177,7 +177,7 @@ const Partners: React.FC = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Strategic Technology Partners | IT Rapid Support" 
+        title="Strategic Technology Partners"
         description="Our strategic partnerships with leading technology providers enable us to deliver comprehensive security and IT management solutions for businesses of all sizes." 
         keywords="IT security partners, technology partnerships, cybersecurity solutions, Microsoft partner, Cisco partner, IBM security partner"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Partners', url: '/partners' }]}

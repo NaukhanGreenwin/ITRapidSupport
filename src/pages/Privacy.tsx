@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ChevronRight, Shield, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-slate-50">
+      <SEO
+        title="Privacy Policy"
+        description="IT Rapid Support's privacy policy: how we collect, use and protect personal information in line with Canadian privacy law."
+        canonicalUrl="/privacy"
+      />
       {/* Header */}
       <div className="bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

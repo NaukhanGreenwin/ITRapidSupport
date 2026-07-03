@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import { Briefcase, MapPin, Users, Coffee, Clock, Workflow, Zap, 
   ChevronRight, CheckCircle2, Heart, Award, ArrowRight, X, Mail, User, FileText } from 'lucide-react';
 
@@ -198,6 +199,11 @@ function Careers() {
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <SEO
+        title="IT Careers in Vaughan & the GTA"
+        description="Join the IT Rapid Support team. Explore IT support, cybersecurity and engineering careers at our Vaughan office serving businesses across the GTA."
+        canonicalUrl="/careers"
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-slate-900 via-red-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

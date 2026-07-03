@@ -306,7 +306,7 @@ const SEO: React.FC<SEOProps> = ({
   title,
   description,
   keywords,
-  canonicalUrl = window.location.href,
+  canonicalUrl = window.location.pathname,
   ogType = 'website',
   ogImage = '/images/og-image.jpg',
   schema,

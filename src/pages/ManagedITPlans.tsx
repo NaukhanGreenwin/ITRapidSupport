@@ -113,7 +113,7 @@ const FAQS = [
 
 const ManagedITPlans: React.FC = () => {
   const url = '/managed-it-plans';
-  const title = 'Managed IT Service Plans & Pricing | IT Rapid Support Toronto';
+  const title = 'Managed IT Service Plans & Pricing Toronto';
   const description =
     'Compare managed IT service plans for Ontario businesses — co-managed, fully managed, and managed IT with security. Start with a free IT assessment and get a clear monthly quote from IT Rapid Support in the GTA.';
 
