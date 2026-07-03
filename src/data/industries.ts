@@ -488,6 +488,52 @@ export const industries: IndustryData[] = [
       },
     ],
   },
+  {
+    slug: 'education',
+    industry: 'Schools & Education',
+    title: 'Managed IT Services for Schools & Educational Institutions',
+    description:
+      'IT support and cybersecurity for private schools, school boards, and educational institutions. Student data protection, classroom uptime, and 24/7 helpdesk across Toronto & the GTA. Call (289) 582-9930.',
+    keywords:
+      'IT support for schools, education IT services Toronto, school IT support GTA, managed IT for private schools, school board IT services, student data protection, campus network security',
+    intro:
+      'Schools and educational institutions manage some of the most sensitive data there is — student records, family information, and staff files — on networks used by hundreds of people every day. IT Rapid Support provides managed IT and cybersecurity for private schools, independent schools, tutoring centres, and educational organizations across Toronto and the GTA: protected student data, reliable classroom and administrative technology, secure Wi-Fi, encrypted backups, and a 24/7 helpdesk so teaching never stops for an IT problem.',
+    tags: ['Student data protection', 'PIPEDA', 'Campus & classroom Wi-Fi', 'Microsoft 365', 'Content filtering', 'Encrypted backups'],
+    highlights: [
+      {
+        title: 'Student & Family Data Protection',
+        description:
+          'Encryption, access controls, MFA, and email security protect student records, family information, and staff data, and help your institution work toward its PIPEDA and privacy obligations.',
+      },
+      {
+        title: 'Reliable Classrooms & Campus Networks',
+        description:
+          'Proactive monitoring, managed Wi-Fi, and fast helpdesk response keep classroom technology, administrative systems, and campus networks running through the school day.',
+      },
+      {
+        title: 'Safe, Managed Devices & Cloud',
+        description:
+          'Microsoft 365 management, endpoint protection, content filtering, and encrypted backups for the shared devices, labs, and cloud tools your students and staff rely on.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do you protect student data at schools?',
+        answer:
+          'We layer encryption at rest and in transit, role-based access controls, multi-factor authentication, email security with anti-phishing, and tested encrypted backups so student records and family information stay protected and recoverable, supporting your privacy and PIPEDA compliance efforts.',
+      },
+      {
+        question: 'Can you support classroom technology and shared student devices?',
+        answer:
+          'Yes. We manage shared laptops, lab computers, and staff devices with endpoint protection and content filtering, keep classroom and administrative systems monitored proactively, and provide helpdesk support so teachers and administrators get fast help during the school day.',
+      },
+      {
+        question: 'Do you work with private schools and smaller educational organizations?',
+        answer:
+          'Yes. We support private and independent schools, tutoring centres, childcare organizations, and other educational institutions across Toronto and the GTA, with predictable monthly plans sized to your staff, devices, and campus — plus on-site service from our certified technicians when an issue is best handled in person.',
+      },
+    ],
+  },
 ];
 
 export const getIndustry = (slug: string): IndustryData | undefined =>

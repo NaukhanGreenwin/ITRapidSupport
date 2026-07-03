@@ -47,6 +47,7 @@ const routes = [
   '/industries/financial-services',
   '/industries/dental',
   '/industries/nonprofit',
+  '/industries/education',
   '/services/microsoft-365-azure-migration',
   '/services/network-management',
   '/services/it-helpdesk',

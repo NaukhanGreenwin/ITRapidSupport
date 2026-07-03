@@ -124,6 +124,7 @@ function App() {
             <Route path="/industries/financial-services" element={<IndustryLanding slug="financial-services" />} />
             <Route path="/industries/dental" element={<IndustryLanding slug="dental" />} />
             <Route path="/industries/nonprofit" element={<IndustryLanding slug="nonprofit" />} />
+            <Route path="/industries/education" element={<IndustryLanding slug="education" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
