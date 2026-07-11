@@ -233,6 +233,57 @@ export const servicesDetail: ServiceDetailData[] = [
       },
     ],
   },
+  {
+    slug: 'emergency-it-services',
+    service: 'Emergency IT Services',
+    title: '24/7 Emergency IT Services in Toronto & the GTA',
+    description:
+      'Emergency IT services for Toronto & GTA businesses. 24/7 response for server outages, network failures, email down, and cyber incidents — remote help plus on-site dispatch from Vaughan. Call (289) 582-9930.',
+    keywords:
+      'emergency IT services, emergency IT support Toronto, 24/7 IT support GTA, after-hours IT support, server down help, network outage support, urgent IT help Toronto, emergency computer support',
+    intro:
+      'When your server goes down, email stops flowing, or ransomware hits, every minute is money. IT Rapid Support provides emergency IT services to businesses across Toronto and the GTA around the clock: a 24/7 helpdesk that answers when you call, remote diagnosis that starts immediately, and certified technicians dispatched on-site from our Vaughan office when hands-on help is the fastest fix. You do not need to be an existing client to call us in an emergency.',
+    tags: ['24/7 emergency response', 'Server & network down', 'Email outages', 'Ransomware & cyber incidents', 'On-site dispatch', 'After-hours support'],
+    highlights: [
+      {
+        title: 'True 24/7 Response',
+        description:
+          'Our helpdesk operates around the clock, including nights, weekends, and holidays. Emergencies are triaged immediately — remote troubleshooting begins on the first call, not the next business day.',
+      },
+      {
+        title: 'On-Site Dispatch Across the GTA',
+        description:
+          'Some failures need hands on hardware. Our certified technicians are based in Vaughan and dispatch on-site across Toronto and the GTA when remote resolution is not enough.',
+      },
+      {
+        title: 'Cyber Incident Response',
+        description:
+          'For ransomware, compromised email, or suspected breaches, we isolate affected systems, contain the incident, and work to restore operations from backups — then harden your environment so it does not happen again.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you provide emergency IT support to businesses that are not existing clients?',
+        answer:
+          'Yes. Call (289) 582-9930 and we will triage the issue right away. We help new businesses through emergencies — server outages, network failures, email down, or cyber incidents — and many stay on afterwards as managed IT clients so problems are prevented rather than repaired.',
+      },
+      {
+        question: 'How fast can you respond to an IT emergency in Toronto or the GTA?',
+        answer:
+          'Remote support starts on the first call — our 24/7 helpdesk begins diagnosing the moment you reach us. If on-site help is required, we dispatch certified technicians from our Vaughan office across Toronto and the GTA, prioritized by severity.',
+      },
+      {
+        question: 'What counts as an IT emergency?',
+        answer:
+          'Anything stopping your business from operating: servers or networks down, email outages, phones offline, critical applications failing, suspected ransomware or account compromise, or data loss. If revenue or safety is affected, treat it as an emergency and call — we will tell you honestly what it needs.',
+      },
+      {
+        question: 'What should we do first if we suspect ransomware or a breach?',
+        answer:
+          'Disconnect affected machines from the network — do not power them off or pay anything — and call us at (289) 582-9930. We isolate the incident, assess the spread, and work to restore from clean backups while preserving evidence.',
+      },
+    ],
+  },
 ];
 
 export const getServiceDetail = (slug: string): ServiceDetailData | undefined =>

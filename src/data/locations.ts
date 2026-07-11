@@ -18,6 +18,8 @@ export interface CityData {
   // 'toronto' | 'vaughan' map to LocalBusiness schema variants; others use default.
   schemaLocation?: 'toronto' | 'vaughan';
   title: string;
+  // Optional page H1 override; defaults to "IT Support & Managed IT Services in {city}".
+  h1?: string;
   description: string;
   keywords: string;
   intro: string;
@@ -78,11 +80,12 @@ export const locations: CityData[] = [
     slug: 'vaughan',
     city: 'Vaughan',
     schemaLocation: 'vaughan',
-    title: 'IT Support & Managed IT Services in Vaughan',
+    title: 'Managed IT Services Vaughan | IT Support & IT Services',
+    h1: 'Managed IT Services & IT Support in Vaughan',
     description:
-      'Local Vaughan IT support and cybersecurity. On-site certified technicians, 24/7 helpdesk, managed IT and cloud services. Based on Keele St, Vaughan. Call (289) 582-9930.',
+      'Managed IT services and IT support in Vaughan. On-site certified technicians, 24/7 helpdesk, cybersecurity and cloud IT services. Based on Keele St, Vaughan. Call (289) 582-9930.',
     keywords:
-      'IT support Vaughan, managed IT services Vaughan, cybersecurity Vaughan, Vaughan IT company, IT helpdesk Vaughan, Concord IT support',
+      'managed IT services Vaughan, IT services Vaughan, IT support Vaughan, cybersecurity Vaughan, Vaughan IT company, IT helpdesk Vaughan, Concord IT support',
     intro:
       'Headquartered on Keele Street in Vaughan, IT Rapid Support is your local IT partner for managed IT services, cybersecurity, and 24/7 support. Our Vaughan-based certified technicians provide both rapid remote help and hands-on on-site assistance for businesses across Vaughan, Concord, and Woodbridge.',
     nearbyAreas: ['Concord', 'Woodbridge', 'Maple', 'Thornhill', 'Kleinburg'],
@@ -124,9 +127,9 @@ export const locations: CityData[] = [
   {
     slug: 'mississauga',
     city: 'Mississauga',
-    title: 'IT Support & Managed IT Services in Mississauga',
+    title: 'IT Support Mississauga | Managed IT Services & Cybersecurity',
     description:
-      'Managed IT support and cybersecurity for Mississauga businesses. 24/7 helpdesk, proactive monitoring, cloud, and project management. Call (289) 582-9930.',
+      'IT support Mississauga businesses rely on: 24/7 helpdesk, managed IT services, cybersecurity, proactive monitoring, cloud, and project management. Call (289) 582-9930.',
     keywords:
       'IT support Mississauga, managed IT services Mississauga, cybersecurity Mississauga, Mississauga IT company, IT helpdesk Mississauga',
     intro:
@@ -170,9 +173,10 @@ export const locations: CityData[] = [
   {
     slug: 'brampton',
     city: 'Brampton',
-    title: 'IT Support & Managed IT Services in Brampton',
+    title: 'Managed IT Services Brampton | IT Support & Cybersecurity',
+    h1: 'Managed IT Services & IT Support in Brampton',
     description:
-      'Fast IT support and cybersecurity for Brampton businesses. Under 1-hour critical response, 24/7 helpdesk, managed IT, and on-site service. Call (289) 582-9930.',
+      'Managed IT services Brampton businesses trust. Fast IT support, cybersecurity, under 1-hour critical response, 24/7 helpdesk, and on-site service. Call (289) 582-9930.',
     keywords:
       'IT support Brampton, managed IT services Brampton, cybersecurity Brampton, Brampton IT company, emergency IT support Brampton',
     intro:
@@ -354,11 +358,12 @@ export const locations: CityData[] = [
   {
     slug: 'burlington',
     city: 'Burlington',
-    title: 'IT Support & Managed IT Services in Burlington',
+    title: 'Burlington IT Services | Managed IT Support & Cybersecurity',
+    h1: 'Burlington IT Services & Managed IT Support',
     description:
-      'Managed IT and cybersecurity for Burlington businesses. 24/7 helpdesk, proactive monitoring, cloud, and on-site support across Halton. Call (289) 582-9930.',
+      'Burlington IT services from a local team: managed IT, cybersecurity, 24/7 helpdesk, proactive monitoring, cloud, and on-site support across Halton. Call (289) 582-9930.',
     keywords:
-      'IT support Burlington, managed IT services Burlington, cybersecurity Burlington, Burlington IT company, IT helpdesk Burlington, Halton IT support',
+      'Burlington IT services, IT support Burlington, managed IT services Burlington, cybersecurity Burlington, Burlington IT company, IT helpdesk Burlington, Halton IT support',
     intro:
       'IT Rapid Support delivers reliable managed IT and cybersecurity to Burlington businesses. With a 24/7 helpdesk, proactive monitoring, cloud services, and on-site support across Halton, we act as your complete IT department so you can focus on running the business.',
     nearbyAreas: ['Aldershot', 'Brant', 'Alton Village', 'Millcroft', 'Roseland', 'Tyandaga'],

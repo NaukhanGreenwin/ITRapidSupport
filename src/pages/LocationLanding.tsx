@@ -59,7 +59,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
               <span className="text-red-200 text-sm font-medium">Serving {data.city} & the GTA</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              IT Support &amp; Managed IT Services in {data.city}
+              {data.h1 ?? `IT Support & Managed IT Services in ${data.city}`}
             </h1>
             <p className="text-slate-300 text-lg mb-8 leading-relaxed">{data.intro}</p>
             <div className="flex flex-col sm:flex-row gap-4">

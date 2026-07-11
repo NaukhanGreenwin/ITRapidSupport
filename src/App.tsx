@@ -91,6 +91,7 @@ function App() {
             <Route path="/services/network-management" element={<ServiceLanding slug="network-management" />} />
             <Route path="/services/it-helpdesk" element={<ServiceLanding slug="it-helpdesk" />} />
             <Route path="/services/vcio-it-strategy" element={<ServiceLanding slug="vcio-it-strategy" />} />
+            <Route path="/services/emergency-it-services" element={<ServiceLanding slug="emergency-it-services" />} />
             <Route path="/it-support/gta" element={<GTALanding />} />
             <Route path="/it-support/toronto" element={<LocationLanding slug="toronto" />} />
             <Route path="/it-support/vaughan" element={<LocationLanding slug="vaughan" />} />
@@ -125,6 +126,7 @@ function App() {
             <Route path="/industries/dental" element={<IndustryLanding slug="dental" />} />
             <Route path="/industries/nonprofit" element={<IndustryLanding slug="nonprofit" />} />
             <Route path="/industries/education" element={<IndustryLanding slug="education" />} />
+            <Route path="/industries/property-management" element={<IndustryLanding slug="property-management" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

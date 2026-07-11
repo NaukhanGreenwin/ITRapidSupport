@@ -534,6 +534,62 @@ export const industries: IndustryData[] = [
       },
     ],
   },
+  {
+    slug: 'property-management',
+    industry: 'Property Management',
+    title: 'IT Support for Property Management Companies',
+    description:
+      'Managed IT for property management companies in Toronto & the GTA. Yardi and property-software support, building access control and camera systems, multi-site connectivity, and after-hours response. Call (289) 582-9930.',
+    keywords:
+      'IT support property management, property management IT services, Yardi support, property management software support, building access control IT, multi-site IT support GTA, condo property management IT, after-hours IT support',
+    intro:
+      'Property management runs on systems that cannot go down: Yardi and other property-management software for rent, AP, and work orders; intercom and access-control systems residents depend on; camera systems; and staff spread across buildings and site offices. IT Rapid Support provides managed IT for property management companies across Toronto and the GTA — we keep your property software running, connect every building and site office back to head office securely, support the network side of intercom, access-control, and camera systems, and answer after hours, because building emergencies do not keep business hours.',
+    tags: ['Yardi & property software', 'Access control & intercoms', 'Camera systems', 'Multi-site connectivity', 'After-hours response', 'Resident data protection'],
+    highlights: [
+      {
+        title: 'Yardi & Property Software Support',
+        description:
+          'We support the desktops, servers, remote access, and networks your Yardi or other property-management platform runs on — keeping rent processing, accounts payable, and work-order systems available to your team, and coordinating with your software vendor when an issue sits on their side.',
+      },
+      {
+        title: 'Building Systems on a Reliable Network',
+        description:
+          'Intercoms, access control, and camera systems are network devices — when the network fails, doors and cameras go with it. We design, monitor, and support the connectivity these building systems depend on, across every property you manage.',
+      },
+      {
+        title: 'Every Site Connected & Supported',
+        description:
+          'Secure site-to-site connectivity ties building offices, superintendent workstations, and head office into one managed network, with a 24/7 helpdesk and on-site dispatch across the GTA — including after-hours response when a building system fails at night.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you support Yardi and other property-management software?',
+        answer:
+          'Yes. We manage the IT environment your property software depends on — workstations, servers or hosted access, networking, printing, and secure remote access for site staff — and we work directly with your software vendor when a problem needs to be resolved on their end, so your team is not stuck in the middle.',
+      },
+      {
+        question: 'Can you support intercom, access-control, and camera systems in our buildings?',
+        answer:
+          'We support the network infrastructure these systems run on — switches, cabling paths, VLANs, remote connectivity, and monitoring — and coordinate with your security or intercom vendor on the hardware itself. Many "the intercom is down" calls turn out to be network issues, and those we resolve directly.',
+      },
+      {
+        question: 'How do you handle IT for companies managing multiple buildings or sites?',
+        answer:
+          'We connect each property back to head office with secure site-to-site links, standardize equipment across locations, and monitor everything centrally. Site staff get the same helpdesk and support as head office, and our technicians dispatch on-site across Toronto and the GTA when hands-on work is needed.',
+      },
+      {
+        question: 'Do you provide after-hours support for building emergencies?',
+        answer:
+          'Yes. Our helpdesk operates 24/7, and property-management clients can reach us nights, weekends, and holidays. If an access-control system, building network, or critical property system fails outside business hours, we begin remote diagnosis immediately and dispatch on-site when required.',
+      },
+      {
+        question: 'How do you protect resident and tenant data?',
+        answer:
+          'Resident files, leases, and payment details are sensitive personal information. We layer endpoint protection, multi-factor authentication, email security, encrypted backups, and access controls so tenant data stays protected and recoverable, and help your firm work toward its PIPEDA privacy obligations.',
+      },
+    ],
+  },
 ];
 
 export const getIndustry = (slug: string): IndustryData | undefined =>
