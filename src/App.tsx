@@ -115,6 +115,11 @@ function App() {
             <Route path="/it-support/king-city" element={<LocationLanding slug="king-city" />} />
             <Route path="/it-support/caledon" element={<LocationLanding slug="caledon" />} />
             <Route path="/it-support/georgetown" element={<LocationLanding slug="georgetown" />} />
+            <Route path="/it-support/woodbridge" element={<LocationLanding slug="woodbridge" />} />
+            <Route path="/it-support/concord" element={<LocationLanding slug="concord" />} />
+            <Route path="/it-support/maple" element={<LocationLanding slug="maple" />} />
+            <Route path="/it-support/stouffville" element={<LocationLanding slug="stouffville" />} />
+            <Route path="/it-support/bradford" element={<LocationLanding slug="bradford" />} />
             <Route path="/industries/legal" element={<IndustryLanding slug="legal" />} />
             <Route path="/industries/accounting" element={<IndustryLanding slug="accounting" />} />
             <Route path="/industries/healthcare" element={<IndustryLanding slug="healthcare" />} />
@@ -127,6 +132,9 @@ function App() {
             <Route path="/industries/nonprofit" element={<IndustryLanding slug="nonprofit" />} />
             <Route path="/industries/education" element={<IndustryLanding slug="education" />} />
             <Route path="/industries/property-management" element={<IndustryLanding slug="property-management" />} />
+            <Route path="/industries/retail" element={<IndustryLanding slug="retail" />} />
+            <Route path="/industries/hospitality" element={<IndustryLanding slug="hospitality" />} />
+            <Route path="/industries/logistics-warehousing" element={<IndustryLanding slug="logistics-warehousing" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

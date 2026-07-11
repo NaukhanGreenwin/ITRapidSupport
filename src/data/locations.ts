@@ -1023,6 +1023,239 @@ export const locations: CityData[] = [
       }
     ]
   },
+  {
+    slug: 'woodbridge',
+    city: 'Woodbridge',
+    schemaLocation: 'vaughan',
+    title: 'IT Support & Managed IT Services in Woodbridge (Vaughan)',
+    description:
+      'Managed IT services and cybersecurity for Woodbridge businesses. Local Vaughan-based technicians minutes away, 24/7 helpdesk, managed security, and cloud. Call (289) 582-9930.',
+    keywords:
+      'IT support Woodbridge, managed IT services Woodbridge, cybersecurity Woodbridge, Woodbridge IT company, IT helpdesk Woodbridge, Vaughan IT support',
+    intro:
+      'Woodbridge businesses have a truly local IT partner: IT Rapid Support is headquartered on Keele Street in Vaughan, minutes from Woodbridge. That means fast on-site response when hands-on help is needed, backed by a 24/7 helpdesk, proactive monitoring, and managed cybersecurity that acts as your complete IT department.',
+    nearbyAreas: ['Pine Grove', 'East Woodbridge', 'Sonoma Heights', 'Kleinburg', 'Concord', 'Maple'],
+    highlights: [
+      {
+        title: 'Minutes-Away On-Site Support',
+        description:
+          'Our certified technicians are based at our Vaughan head office just up the road from Woodbridge, so scheduled visits and emergency on-site response arrive fast.',
+      },
+      {
+        title: 'Managed IT & 24/7 Helpdesk',
+        description:
+          'Round-the-clock helpdesk for your Woodbridge team, with proactive monitoring and patch management that stop problems before they become downtime.',
+      },
+      {
+        title: 'Cybersecurity for Woodbridge Business',
+        description:
+          'Managed firewalls, endpoint protection, email security, MFA, and managed detection and response protect Woodbridge companies against modern threats.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you provide on-site IT support in Woodbridge?',
+        answer:
+          'Yes. Our head office is on Keele Street in Vaughan, minutes from Woodbridge, so our certified technicians can provide both scheduled visits and rapid emergency on-site support across Woodbridge, Pine Grove, and Kleinburg — alongside immediate remote help.',
+      },
+      {
+        question: 'What managed IT services do you offer Woodbridge businesses?',
+        answer:
+          'We provide a 24/7 helpdesk, proactive monitoring and patching, managed cybersecurity, cloud and Microsoft 365 management, data backup and recovery, and IT strategy — a complete outsourced IT department for Woodbridge small and mid-sized businesses.',
+      },
+      {
+        question: 'How quickly can you respond to an IT emergency in Woodbridge?',
+        answer:
+          'Remote response starts immediately through our 24/7 helpdesk, and because our technicians are based in Vaughan just minutes from Woodbridge, emergency on-site dispatch is fast when an issue needs hands-on attention.',
+      },
+    ],
+  },
+  {
+    slug: 'concord',
+    city: 'Concord',
+    schemaLocation: 'vaughan',
+    title: 'IT Support & Managed IT Services in Concord, Vaughan',
+    description:
+      'Managed IT services and cybersecurity in Concord, Vaughan — where our Keele St head office is located. 24/7 helpdesk, managed security, cloud. Call (289) 582-9930.',
+    keywords:
+      'IT support Concord, managed IT services Concord, cybersecurity Concord Vaughan, Concord IT company, IT helpdesk Concord, Keele Street IT support',
+    intro:
+      'Concord is home turf for IT Rapid Support — our head office sits at 7810 Keele Street, right in the Concord business district. For the offices, warehouses, and shops around Keele, Highway 7, and Jane Street, that means an IT partner that is literally around the corner: 24/7 helpdesk, managed cybersecurity, cloud services, and on-site help that arrives in minutes, not hours.',
+    nearbyAreas: ['Vaughan Metropolitan Centre', 'Maple', 'Woodbridge', 'Thornhill', 'North York'],
+    highlights: [
+      {
+        title: 'Headquartered in Concord',
+        description:
+          'Our office is at 7810 Keele Street in Concord — when you need hands-on help, our certified technicians are closer than anyone.',
+      },
+      {
+        title: 'Managed IT & 24/7 Helpdesk',
+        description:
+          'Proactive monitoring, patch management, and a round-the-clock helpdesk keep Concord businesses running without interruption.',
+      },
+      {
+        title: 'Cybersecurity & Cloud',
+        description:
+          'Managed firewalls, endpoint protection, email security, MFA, managed detection and response, plus Microsoft 365 and cloud management for Concord teams.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Where is your office in Concord?',
+        answer:
+          'Our head office is at 7810 Keele Street in Concord, Vaughan. Businesses in the surrounding Keele, Highway 7, and Jane Street corridors can get scheduled or emergency on-site support faster from us than from providers based across the GTA.',
+      },
+      {
+        question: 'What IT services do you provide to Concord businesses?',
+        answer:
+          'We provide managed IT with a 24/7 helpdesk, proactive monitoring and patching, managed cybersecurity, cloud and Microsoft 365 management, data backup and recovery, and IT strategy for Concord businesses of all sizes.',
+      },
+      {
+        question: 'Do you support the industrial and warehouse businesses around Concord?',
+        answer:
+          'Yes. The Concord area is full of light-industrial, logistics, and office businesses, and we support them with reliable networking, Wi-Fi coverage, secure remote access, and fast on-site service from our Keele Street office nearby.',
+      },
+    ],
+  },
+  {
+    slug: 'maple',
+    city: 'Maple',
+    schemaLocation: 'vaughan',
+    title: 'IT Support & Managed IT Services in Maple, Vaughan',
+    description:
+      'Managed IT services and cybersecurity for Maple businesses. Vaughan-based technicians nearby, 24/7 helpdesk, managed security, and cloud IT. Call (289) 582-9930.',
+    keywords:
+      'IT support Maple, managed IT services Maple Vaughan, cybersecurity Maple, Maple IT company, IT helpdesk Maple, Vaughan IT services',
+    intro:
+      'Businesses in Maple get big-company IT with a neighbourhood response time. IT Rapid Support is headquartered on Keele Street in Vaughan, a short drive from Maple, and delivers managed IT services, cybersecurity, and a 24/7 helpdesk to offices, clinics, and shops across the community.',
+    nearbyAreas: ['Concord', 'Kleinburg', 'Woodbridge', 'Richmond Hill', 'Teston'],
+    highlights: [
+      {
+        title: 'Local Vaughan Technicians',
+        description:
+          'Our certified technicians work out of our Keele Street head office a short drive from Maple, ready for scheduled visits or fast emergency response.',
+      },
+      {
+        title: 'Managed IT & 24/7 Helpdesk',
+        description:
+          'A round-the-clock helpdesk plus proactive monitoring and patching keep Maple businesses productive and protected from downtime.',
+      },
+      {
+        title: 'Cybersecurity for Maple Business',
+        description:
+          'Managed firewalls, endpoint protection, email security, MFA, and managed detection and response defend Maple organizations against evolving threats.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you provide on-site IT support in Maple?',
+        answer:
+          'Yes. Our technicians are based at our Vaughan head office on Keele Street, a short drive from Maple, so we provide both scheduled on-site visits and rapid emergency response, in addition to immediate 24/7 remote support.',
+      },
+      {
+        question: 'What managed IT services do you offer in Maple?',
+        answer:
+          'Maple businesses get a complete outsourced IT department: 24/7 helpdesk, proactive monitoring and patching, managed cybersecurity, cloud and Microsoft 365 management, data backup and recovery, and ongoing IT strategy.',
+      },
+      {
+        question: 'Can you help a small Maple business improve its cybersecurity?',
+        answer:
+          'Yes. We build layered protection sized for small business: managed firewalls, endpoint protection, email security with anti-phishing, multi-factor authentication, security awareness training, and managed detection and response.',
+      },
+    ],
+  },
+  {
+    slug: 'stouffville',
+    city: 'Stouffville',
+    title: 'IT Support & Managed IT Services in Stouffville',
+    description:
+      'Managed IT services and cybersecurity for Stouffville businesses. 24/7 helpdesk, managed security, cloud, and on-site support across Whitchurch-Stouffville. Call (289) 582-9930.',
+    keywords:
+      'IT support Stouffville, managed IT services Stouffville, cybersecurity Stouffville, Stouffville IT company, IT helpdesk Whitchurch-Stouffville',
+    intro:
+      'IT Rapid Support delivers managed IT services and cybersecurity to businesses across Whitchurch-Stouffville. From Main Street storefronts to offices and growing companies throughout the town, we provide a 24/7 helpdesk, proactive monitoring, managed security, and on-site support that acts as your complete IT department.',
+    nearbyAreas: ['Ballantrae', 'Gormley', 'Musselman Lake', 'Markham', 'Uxbridge', 'Aurora'],
+    highlights: [
+      {
+        title: 'Managed IT & 24/7 Helpdesk',
+        description:
+          'Round-the-clock helpdesk for your Stouffville team, with proactive monitoring and patching that catch issues before they cause downtime.',
+      },
+      {
+        title: 'Cybersecurity for Stouffville Business',
+        description:
+          'Managed firewalls, endpoint protection, email security, MFA, and managed detection and response protect Stouffville organizations of every size.',
+      },
+      {
+        title: 'Cloud & Microsoft 365',
+        description:
+          'Cloud migration and Microsoft 365 management keep your Stouffville team secure, mobile, and productive wherever they work.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you provide on-site IT support in Stouffville?',
+        answer:
+          'Yes. Alongside immediate 24/7 remote support, our certified technicians provide scheduled and emergency on-site service across Whitchurch-Stouffville, including Ballantrae and Gormley.',
+      },
+      {
+        question: 'What managed IT services do you provide in Stouffville?',
+        answer:
+          'We provide a 24/7 helpdesk, proactive monitoring and patching, managed cybersecurity, cloud and Microsoft 365 management, data backup and recovery, and IT strategy — a complete outsourced IT department for Stouffville businesses.',
+      },
+      {
+        question: 'Can you support a small business in Stouffville that has no IT staff?',
+        answer:
+          'Absolutely — that is exactly who managed IT is for. We become your IT department: your team calls one number for help, and we handle the monitoring, security, backups, and planning behind the scenes for a fixed monthly cost.',
+      },
+    ],
+  },
+  {
+    slug: 'bradford',
+    city: 'Bradford',
+    title: 'IT Support & Managed IT Services in Bradford',
+    description:
+      'Managed IT services and cybersecurity for Bradford businesses. 24/7 helpdesk, managed security, cloud, and on-site support across Bradford West Gwillimbury. Call (289) 582-9930.',
+    keywords:
+      'IT support Bradford, managed IT services Bradford, cybersecurity Bradford Ontario, Bradford IT company, IT helpdesk Bradford West Gwillimbury',
+    intro:
+      'IT Rapid Support brings enterprise-grade managed IT and cybersecurity to businesses across Bradford West Gwillimbury. Whether you run an office on Holland Street, a farm operation, or a growing company anywhere in town, our 24/7 helpdesk, proactive monitoring, and managed security keep your technology working so you can focus on the business.',
+    nearbyAreas: ['Bond Head', 'Holland Landing', 'East Gwillimbury', 'Newmarket', 'Innisfil'],
+    highlights: [
+      {
+        title: 'Managed IT & 24/7 Helpdesk',
+        description:
+          'A round-the-clock helpdesk for your Bradford team plus proactive monitoring and patch management that prevent downtime before it starts.',
+      },
+      {
+        title: 'Cybersecurity for Bradford Business',
+        description:
+          'Managed firewalls, endpoint protection, email security, MFA, and managed detection and response defend Bradford businesses against ransomware and phishing.',
+      },
+      {
+        title: 'Cloud & Microsoft 365',
+        description:
+          'We migrate and manage Microsoft 365 and cloud services so your Bradford team can work securely from the office, home, or the field.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you provide on-site IT support in Bradford?',
+        answer:
+          'Yes. Our certified technicians provide scheduled and emergency on-site support throughout Bradford West Gwillimbury, including Bond Head and Holland Landing, alongside immediate 24/7 remote help.',
+      },
+      {
+        question: 'What managed IT services do you offer Bradford businesses?',
+        answer:
+          'We provide a 24/7 helpdesk, proactive monitoring and patching, managed cybersecurity, cloud and Microsoft 365 management, data backup and recovery, and IT strategy so Bradford businesses get a complete IT department without the overhead.',
+      },
+      {
+        question: 'How do you protect Bradford businesses from ransomware?',
+        answer:
+          'We combine managed firewalls, endpoint protection, email security, multi-factor authentication, security awareness training, managed detection and response, and tested backups so Bradford businesses can resist an attack and recover quickly if one gets through.',
+      },
+    ],
+  },
 ];
 
 export const getLocation = (slug: string): CityData | undefined =>

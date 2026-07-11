@@ -37,6 +37,11 @@ const routes = [
   '/it-support/king-city',
   '/it-support/caledon',
   '/it-support/georgetown',
+  '/it-support/woodbridge',
+  '/it-support/concord',
+  '/it-support/maple',
+  '/it-support/stouffville',
+  '/it-support/bradford',
   '/industries/legal',
   '/industries/accounting',
   '/industries/healthcare',
@@ -49,6 +54,9 @@ const routes = [
   '/industries/nonprofit',
   '/industries/education',
   '/industries/property-management',
+  '/industries/retail',
+  '/industries/hospitality',
+  '/industries/logistics-warehousing',
   '/services/microsoft-365-azure-migration',
   '/services/network-management',
   '/services/it-helpdesk',
@@ -74,7 +82,11 @@ const routes = [
   '/resources/it-support-services-gta-buyers-guide',
   '/resources/pipeda-compliance-it-checklist-ontario',
   '/resources/cyber-insurance-readiness-checklist',
-  '/resources/quebec-law-25-it-readiness-ontario-businesses'
+  '/resources/quebec-law-25-it-readiness-ontario-businesses',
+  '/resources/email-spoofing-spf-dkim-dmarc-explained',
+  '/resources/windows-10-end-of-support-gta-businesses',
+  '/resources/business-voip-phone-systems-buyers-guide',
+  '/resources/disaster-recovery-plan-small-business-ontario'
 ];
 
 const MIME = {

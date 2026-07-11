@@ -590,6 +590,159 @@ export const industries: IndustryData[] = [
       },
     ],
   },
+  {
+    slug: 'retail',
+    industry: 'Retail',
+    title: 'Managed IT Services for Retail Stores in the GTA',
+    description:
+      'IT support and cybersecurity for retail businesses. Reliable store networks, point-of-sale environment support, PCI-DSS-aware security, and 24/7 helpdesk across the GTA. Call (289) 582-9930.',
+    keywords:
+      'IT support for retail, retail IT services Toronto, retail cybersecurity, managed IT for retail stores GTA, POS network support, multi-location retail IT',
+    intro:
+      'When the network drops or a terminal freezes, a retail store stops selling. IT Rapid Support keeps retail businesses across the GTA transacting: dependable in-store networks and Wi-Fi, support for the systems around your point of sale, security that helps protect payment and customer data, and a 24/7 helpdesk that answers when your store is open — not just during office hours.',
+    tags: ['Store network uptime', 'POS environment support', 'PCI-DSS', 'Guest Wi-Fi', 'Multi-location', 'Email security'],
+    highlights: [
+      {
+        title: 'Networks Built for Selling',
+        description:
+          'Reliable wired and wireless networks for tills, terminals, inventory scanners, and back office — with segmented guest Wi-Fi that keeps shoppers connected without touching your payment systems.',
+      },
+      {
+        title: 'Payment & Customer Data Security',
+        description:
+          'Firewalls, network segmentation, endpoint protection, MFA, and monitoring that help protect cardholder and customer data and support your work toward PCI-DSS requirements.',
+      },
+      {
+        title: 'Every Location, One IT Department',
+        description:
+          'Standardized setups, secure connectivity between stores, centralized monitoring, and a single 24/7 helpdesk whether you run one shop or a chain across the GTA.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can you support our point-of-sale systems?',
+        answer:
+          'We manage the environment your point of sale depends on — the network, internet connectivity, workstations, servers, and security around it — and coordinate with your POS vendor when the application itself needs attention, so there is one number to call when a lane goes down.',
+      },
+      {
+        question: 'How do you help retail stores with PCI-DSS compliance?',
+        answer:
+          'We implement the technical controls that PCI-DSS expects — network segmentation between payment systems and everything else, firewalls, endpoint protection, access controls, MFA, and logging — helping your business work toward its compliance obligations alongside your payment processor.',
+      },
+      {
+        question: 'Do you support retailers with multiple locations?',
+        answer:
+          'Yes. We standardize hardware and configurations across stores, connect locations securely, monitor everything centrally, and provide a 24/7 helpdesk so staff at any location get the same fast support.',
+      },
+      {
+        question: 'Can you provide IT support outside business hours for our stores?',
+        answer:
+          'Yes. Retail does not run 9 to 5 and neither do we — our helpdesk is 24/7, and emergency on-site support is available across Toronto and the GTA when an issue cannot be fixed remotely.',
+      },
+    ],
+  },
+  {
+    slug: 'hospitality',
+    industry: 'Restaurants & Hospitality',
+    title: 'IT Support for Restaurants & Hospitality in the GTA',
+    description:
+      'Managed IT and cybersecurity for restaurants, cafes, and hospitality businesses. POS environment support, guest Wi-Fi, payment security, and 24/7 help across the GTA. Call (289) 582-9930.',
+    keywords:
+      'IT support for restaurants, restaurant IT services Toronto, hospitality IT support GTA, restaurant POS network, guest Wi-Fi setup, hospitality cybersecurity',
+    intro:
+      'A restaurant with a down POS on a Friday night is losing money by the minute. IT Rapid Support keeps restaurants, cafes, bars, and hospitality businesses across the GTA serving: solid networks behind your point of sale and online ordering, fast guest Wi-Fi that stays separate from payment systems, protection for payment data, and a 24/7 helpdesk that picks up during dinner service.',
+    tags: ['POS network uptime', 'Guest Wi-Fi', 'Payment security', 'PCI-DSS', 'Online ordering uptime', '24/7 support'],
+    highlights: [
+      {
+        title: 'Uptime When It Counts',
+        description:
+          'Reliable networking for the systems your service depends on — point of sale, online ordering, kitchen displays, and reservations — plus 24/7 support that matches your operating hours.',
+      },
+      {
+        title: 'Guest Wi-Fi Done Right',
+        description:
+          'Fast, segmented guest Wi-Fi that gives customers a great experience while keeping your payment and business systems on a separate, protected network.',
+      },
+      {
+        title: 'Payment Data Protection',
+        description:
+          'Firewalls, network segmentation, endpoint protection, and monitoring that help protect cardholder data and support your work toward PCI-DSS requirements.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Our POS went down during service — can you actually help fast?',
+        answer:
+          'Yes. Our helpdesk is 24/7, so you reach a real technician during evening and weekend service, not a voicemail. We support the network, internet, and hardware environment around your POS and coordinate with your POS vendor, and we dispatch on-site across the GTA when remote fixes are not enough.',
+      },
+      {
+        question: 'Can you set up guest Wi-Fi for our restaurant?',
+        answer:
+          'Yes. We design guest Wi-Fi that is fast for customers and fully segmented from your point-of-sale and business systems, so offering free Wi-Fi never puts payment data at risk.',
+      },
+      {
+        question: 'Do you support multi-location restaurant groups?',
+        answer:
+          'Yes. We standardize the technology stack across locations, connect them securely, monitor centrally, and give every location the same 24/7 helpdesk — so growth does not multiply your IT headaches.',
+      },
+      {
+        question: 'How do you help hospitality businesses with payment security?',
+        answer:
+          'We implement the technical layers that protect payment environments: segmentation between payment systems and guest or office networks, managed firewalls, endpoint protection, access controls, and monitoring — supporting your PCI-DSS obligations alongside your payment provider.',
+      },
+    ],
+  },
+  {
+    slug: 'logistics-warehousing',
+    industry: 'Logistics & Warehousing',
+    title: 'Managed IT Services for Logistics & Warehousing in the GTA',
+    description:
+      'IT support and cybersecurity for logistics, distribution, and warehouse operations. Warehouse Wi-Fi, scanner and WMS environment support, multi-site connectivity, 24/7 help. Call (289) 582-9930.',
+    keywords:
+      'IT support for logistics, warehouse IT services Toronto, logistics IT support GTA, warehouse Wi-Fi, WMS support, distribution centre IT, 3PL IT services',
+    intro:
+      'In a warehouse, IT problems become shipping problems within the hour. IT Rapid Support keeps logistics and distribution operations across the GTA moving: wall-to-wall warehouse Wi-Fi for scanners and mobile devices, a dependable environment for your WMS and shipping systems, secure connections between sites and partners, and 24/7 support that matches shift schedules — not office hours.',
+    tags: ['Warehouse Wi-Fi', 'WMS environment uptime', 'Barcode scanners & mobile devices', 'Multi-site connectivity', '24/7 shift support', 'Ransomware defense'],
+    highlights: [
+      {
+        title: 'Coverage Across the Floor',
+        description:
+          'Wireless networks engineered for warehouse conditions — racking, distance, and interference — so scanners, tablets, and mobile devices stay connected from dock to back wall.',
+      },
+      {
+        title: 'Systems That Keep Freight Moving',
+        description:
+          'We manage the servers, network, and endpoints around your WMS, shipping, and EDI systems, with proactive monitoring and backup so an IT failure never strands a truck at the dock.',
+      },
+      {
+        title: 'Connected Sites & Partners',
+        description:
+          'Secure site-to-site connectivity, remote access for drivers and off-site staff, and cybersecurity — firewalls, MFA, managed detection and response — that protects operations and customer data.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can you fix dead zones in our warehouse Wi-Fi?',
+        answer:
+          'Yes. We assess coverage in the actual conditions of your facility — racking, inventory density, and interference — then design and manage a wireless network that keeps scanners and mobile devices connected across the entire floor.',
+      },
+      {
+        question: 'Do you support warehouse management and shipping systems?',
+        answer:
+          'We manage the infrastructure your WMS, shipping, and EDI systems run on — servers, networks, workstations, scanners, and backups — and coordinate with your software vendors when the application itself needs attention, so operations get one point of contact.',
+      },
+      {
+        question: 'Our operation runs nights and weekends. Does your support?',
+        answer:
+          'Yes. Our helpdesk is 24/7, so your overnight and weekend shifts get real support when something breaks, and emergency on-site service is available across Toronto and the GTA.',
+      },
+      {
+        question: 'How do you protect logistics businesses from ransomware?',
+        answer:
+          'Logistics is a frequent ransomware target because downtime is so costly. We layer managed firewalls, endpoint protection, email security, MFA, security awareness training, managed detection and response, and isolated, tested backups so your operation can resist an attack and recover fast.',
+      },
+    ],
+  },
 ];
 
 export const getIndustry = (slug: string): IndustryData | undefined =>
