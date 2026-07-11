@@ -7,6 +7,8 @@ import { Helmet } from 'react-helmet-async';
 export interface ResourceItem {
   id: string;
   title: string;
+  // Optional CTR-tuned <title> override; the visible H1 keeps using `title`.
+  seoTitle?: string;
   description: string;
   content: string;
   type: 'guide' | 'whitepaper' | 'webinar' | 'video';
@@ -400,7 +402,8 @@ export const allResources: ResourceItem[] = [
   {
     id: "co-managed-vs-fully-managed-it",
     title: "Co-Managed vs Fully Managed IT: Which Model Fits Your Business?",
-    description: "Co-managed IT supports your internal staff, while fully managed IT runs everything. Compare the two models on cost, control, and coverage for your GTA business.",
+    seoTitle: "Fully Managed IT vs Co-Managed IT: Which Fits Your Business?",
+    description: "What fully managed IT includes, how it compares to co-managed IT on cost, control, and coverage — and how to pick the right model for your GTA business.",
     content: [
       "Not every business needs the same kind of IT partner. Some have an internal IT person or small team and just need backup, security, and bench depth. Others have no internal IT at all and want someone to run the whole thing. Those are two different models: co-managed IT and fully managed IT. Choosing the right one comes down to what you already have in-house and where you need help. This guide compares them.",
       "## What Fully Managed IT Means",
@@ -909,18 +912,18 @@ const ResourceDetails: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{currentResource.title} | IT Rapid Support Resources</title>
+        <title>{`${currentResource.seoTitle ?? currentResource.title} | IT Rapid Support Resources`}</title>
         <meta name="description" content={`${currentResource.description?.substring(0, 155)}...`} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${currentResource.title} | IT Rapid Support`} />
+        <meta property="og:title" content={`${currentResource.seoTitle ?? currentResource.title} | IT Rapid Support`} />
         <meta property="og:description" content={currentResource.description} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={absoluteImage} />
         <meta property="og:site_name" content="IT Rapid Support" />
         {publishedIso && <meta property="article:published_time" content={publishedIso} />}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={currentResource.title} />
+        <meta name="twitter:title" content={currentResource.seoTitle ?? currentResource.title} />
         <meta name="twitter:description" content={currentResource.description} />
         <meta name="twitter:image" content={absoluteImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>

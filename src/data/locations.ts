@@ -33,9 +33,9 @@ export const locations: CityData[] = [
     slug: 'toronto',
     city: 'Toronto',
     schemaLocation: 'toronto',
-    title: 'IT Support & Managed IT Services in Toronto',
+    title: 'Toronto IT Support | 24/7 Helpdesk & On-Site Managed IT',
     description:
-      'Managed IT services and cybersecurity for Toronto businesses. 24/7 helpdesk, network security, cloud, and rapid on-site support across the GTA. Call (289) 582-9930.',
+      'Toronto IT support with a 24/7 helpdesk, managed IT services, cybersecurity, and fast on-site response across the city. Call (289) 582-9930 for help today.',
     keywords:
       'IT support Toronto, managed IT services Toronto, cybersecurity Toronto, Toronto IT company, managed security Toronto, IT helpdesk Toronto',
     intro:
@@ -80,10 +80,10 @@ export const locations: CityData[] = [
     slug: 'vaughan',
     city: 'Vaughan',
     schemaLocation: 'vaughan',
-    title: 'Managed IT Services Vaughan | IT Support & IT Services',
+    title: 'Managed IT Services Vaughan | 24/7 Support, Local Vaughan HQ',
     h1: 'Managed IT Services & IT Support in Vaughan',
     description:
-      'Managed IT services and IT support in Vaughan. On-site certified technicians, 24/7 helpdesk, cybersecurity and cloud IT services. Based on Keele St, Vaughan. Call (289) 582-9930.',
+      'Managed IT services from our Vaughan HQ on Keele St: 24/7 helpdesk, cybersecurity, cloud, and on-site technicians. Call (289) 582-9930 for a quick response.',
     keywords:
       'managed IT services Vaughan, IT services Vaughan, IT support Vaughan, cybersecurity Vaughan, Vaughan IT company, IT helpdesk Vaughan, Concord IT support',
     intro:
@@ -498,8 +498,8 @@ export const locations: CityData[] = [
   {
     "slug": "milton",
     "city": "Milton",
-    "title": "IT Support & Managed IT Services in Milton",
-    "description": "IT Rapid Support delivers managed IT services, cybersecurity, and 24/7 helpdesk support for Milton businesses. Call (289) 582-9930.",
+    "title": "IT Support Milton | 24/7 Helpdesk & On-Site Service",
+    "description": "IT support for Milton businesses: 24/7 helpdesk, managed IT, cybersecurity, and on-site service across Halton Region. Call (289) 582-9930 to get help today.",
     "keywords": "IT support Milton, managed IT services Milton, cybersecurity Milton, Microsoft 365 Milton, IT company Milton Ontario, managed IT Milton",
     "intro": "IT Rapid Support provides Milton businesses with reliable managed IT services, proactive monitoring, and advanced cybersecurity solutions. Our certified technicians deliver remote support around the clock and scheduled or emergency on-site service throughout the Halton Region. From cloud migrations to endpoint protection, we keep Milton companies secure and productive.",
     "nearbyAreas": [
@@ -632,8 +632,8 @@ export const locations: CityData[] = [
   {
     "slug": "newmarket",
     "city": "Newmarket",
-    "title": "IT Support & Managed IT Services in Newmarket",
-    "description": "Local Newmarket IT support and cybersecurity. 24/7 helpdesk, managed IT, cloud, and on-site certified technicians across York Region. Call (289) 582-9930.",
+    "title": "IT Services Newmarket | 24/7 IT Support, York Region",
+    "description": "IT services for Newmarket businesses: 24/7 IT support, managed IT, cybersecurity, and on-site help across York Region. Call (289) 582-9930 to get started.",
     "keywords": "IT support Newmarket, managed IT services Newmarket, cybersecurity Newmarket, Newmarket IT company, IT helpdesk Newmarket, York Region IT support",
     "intro": "IT Rapid Support is the IT partner Newmarket businesses rely on for managed IT services, cybersecurity, and 24/7 support. Serving York Region from nearby Vaughan, our certified technicians combine rapid remote help with hands-on on-site service for organizations across Newmarket.",
     "nearbyAreas": [
@@ -719,8 +719,8 @@ export const locations: CityData[] = [
   {
     "slug": "pickering",
     "city": "Pickering",
-    "title": "IT Support & Managed IT Services in Pickering",
-    "description": "Managed IT and cybersecurity for Pickering businesses. 24/7 helpdesk, managed security, cloud, and on-site support across Durham Region. Call (289) 582-9930.",
+    "title": "IT Services Pickering | 24/7 IT Support & On-Site Service",
+    "description": "IT services for Pickering businesses: 24/7 IT support, managed security, cloud, and on-site help across Durham Region. Call (289) 582-9930 to get started.",
     "keywords": "IT support Pickering, managed IT services Pickering, cybersecurity Pickering, Pickering IT company, IT helpdesk Pickering, Durham Region IT support",
     "intro": "IT Rapid Support delivers managed IT services and cybersecurity to Pickering businesses across Durham Region. With a 24/7 helpdesk, proactive monitoring, and managed security, we keep your systems protected and productive while your team focuses on growth.",
     "nearbyAreas": [

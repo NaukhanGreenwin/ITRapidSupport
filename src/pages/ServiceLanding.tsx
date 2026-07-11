@@ -60,7 +60,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
               <span className="text-red-200 text-sm font-medium">Managed IT Services</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              {data.title}
+              {data.h1 ?? data.title}
             </h1>
             <p className="text-slate-300 text-lg mb-8 leading-relaxed">{data.intro}</p>
             <div className="flex flex-col sm:flex-row gap-4">

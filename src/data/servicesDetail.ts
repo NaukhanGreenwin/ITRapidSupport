@@ -19,6 +19,8 @@ export interface ServiceDetailData {
   slug: string;
   service: string;
   title: string;
+  // Optional visible H1 override; when set, the <title> can be tuned for CTR without changing the on-page heading.
+  h1?: string;
   description: string;
   keywords: string;
   intro: string;
@@ -236,9 +238,10 @@ export const servicesDetail: ServiceDetailData[] = [
   {
     slug: 'emergency-it-services',
     service: 'Emergency IT Services',
-    title: '24/7 Emergency IT Services in Toronto & the GTA',
+    title: 'Emergency IT Services | 24/7 Toronto & GTA, New Clients Welcome',
+    h1: '24/7 Emergency IT Services in Toronto & the GTA',
     description:
-      'Emergency IT services for Toronto & GTA businesses. 24/7 response for server outages, network failures, email down, and cyber incidents — remote help plus on-site dispatch from Vaughan. Call (289) 582-9930.',
+      'Server down? Email out? Ransomware? 24/7 emergency IT help for Toronto & GTA businesses — remote plus on-site dispatch. New clients welcome. Call (289) 582-9930.',
     keywords:
       'emergency IT services, emergency IT support Toronto, 24/7 IT support GTA, after-hours IT support, server down help, network outage support, urgent IT help Toronto, emergency computer support',
     intro:
