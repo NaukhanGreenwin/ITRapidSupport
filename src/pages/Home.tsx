@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           "name": "IT Rapid Support",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://itrapidsupport.com/ITRapid-logo.svg"
+            "url": "https://itrapidsupport.com/images/logo.png"
           }
         }
       },

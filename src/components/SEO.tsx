@@ -41,7 +41,7 @@ export const generateOrganizationSchema = () => {
     "@id": "https://itrapidsupport.com/#organization",
     "name": "IT Rapid Support",
     "url": "https://itrapidsupport.com",
-    "logo": "https://itrapidsupport.com/ITRapid-logo.svg",
+    "logo": "https://itrapidsupport.com/images/logo.png",
     "email": "info@itrapidsupport.com",
     "telephone": "+1-289-582-9930",
     "description": "Enterprise-grade cybersecurity and IT management solutions for businesses across the Greater Toronto Area.",
@@ -185,7 +185,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
     "@id": "https://itrapidsupport.com/#LocalBusiness",
     "name": loc.name,
     "image": "https://itrapidsupport.com/images/ITRapid-headquarters.jpg",
-    "logo": "https://itrapidsupport.com/ITRapid-logo.svg",
+    "logo": "https://itrapidsupport.com/images/logo.png",
     "description": "Enterprise-grade cybersecurity and IT management solutions for businesses across the Greater Toronto Area with 24/7 local support.",
     "slogan": "Securing Your Business. Simplifying Technology.",
     "address": {
@@ -359,7 +359,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={fullOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="IT Rapid Support" />
+      <meta property="og:site_name" content="IT Rapid Support Inc." />
       <meta property="og:locale" content={locale} />
       
       {/* Article Specific Meta Tags */}

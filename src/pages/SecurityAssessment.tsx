@@ -389,7 +389,7 @@ const SecurityAssessment: React.FC = () => {
     
     // Create a new image element for the logo
     const logo = new Image();
-    logo.src = '/ITRapid-logo.svg'; // Use the existing logo from the public directory
+    logo.src = '/images/logo.png'; // Use the existing logo from the public directory
     
     setTimeout(() => {
       try {
