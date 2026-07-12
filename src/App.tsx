@@ -58,7 +58,7 @@ function App() {
     <HelmetProvider>
       <Router>
         <ScrollToTop />
-        <AnalyticsTracker googleAnalyticsId="G-EMK5C2CT0W" />
+        <AnalyticsTracker googleAnalyticsId="G-KNT7SJ3LYP" />
         <ThemeSwitcher />
         <PreloadManager />
         <Layout>
