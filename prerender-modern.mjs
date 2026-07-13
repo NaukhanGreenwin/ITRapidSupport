@@ -88,7 +88,8 @@ const routes = [
   '/resources/business-voip-phone-systems-buyers-guide',
   '/resources/disaster-recovery-plan-small-business-ontario',
   '/resources/managed-threat-detection-monitoring-mdr-guide',
-  '/resources/gta-email-spoofing-study-2026'
+  '/resources/gta-email-spoofing-study-2026',
+  '/tools/email-spoof-check'
 ];
 
 const MIME = {

@@ -30,6 +30,7 @@ import ITSupport from './pages/ITSupport';
 import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
 import LocationLanding from './pages/LocationLanding';
 import GTALanding from './pages/GTALanding';
+import EmailSpoofCheck from './pages/EmailSpoofCheck';
 import IndustryLanding from './pages/IndustryLanding';
 import ServiceLanding from './pages/ServiceLanding';
 import RiskCalculator from './pages/RiskCalculator';
@@ -93,6 +94,7 @@ function App() {
             <Route path="/services/vcio-it-strategy" element={<ServiceLanding slug="vcio-it-strategy" />} />
             <Route path="/services/emergency-it-services" element={<ServiceLanding slug="emergency-it-services" />} />
             <Route path="/it-support/gta" element={<GTALanding />} />
+            <Route path="/tools/email-spoof-check" element={<EmailSpoofCheck />} />
             <Route path="/it-support/toronto" element={<LocationLanding slug="toronto" />} />
             <Route path="/it-support/vaughan" element={<LocationLanding slug="vaughan" />} />
             <Route path="/it-support/mississauga" element={<LocationLanding slug="mississauga" />} />

@@ -34,6 +34,7 @@ export default function Footer() {
               <li><Link to="/services/microsoft-365-azure-migration" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 &amp; Azure Migration</Link></li>
               <li><Link to="/services/vcio-it-strategy" className="text-slate-300 hover:text-white text-sm block">vCIO &amp; IT Strategy</Link></li>
               <li><Link to="/services/emergency-it-services" className="text-slate-300 hover:text-white text-sm block">Emergency IT Services</Link></li>
+              <li><Link to="/tools/email-spoof-check" className="text-slate-300 hover:text-white text-sm block">Free Email Spoofing Check</Link></li>
             </ul>
           </div>
 
