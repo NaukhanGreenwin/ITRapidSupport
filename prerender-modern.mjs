@@ -86,7 +86,8 @@ const routes = [
   '/resources/email-spoofing-spf-dkim-dmarc-explained',
   '/resources/windows-10-end-of-support-gta-businesses',
   '/resources/business-voip-phone-systems-buyers-guide',
-  '/resources/disaster-recovery-plan-small-business-ontario'
+  '/resources/disaster-recovery-plan-small-business-ontario',
+  '/resources/managed-threat-detection-monitoring-mdr-guide'
 ];
 
 const MIME = {

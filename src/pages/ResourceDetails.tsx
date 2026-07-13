@@ -809,6 +809,35 @@ export const allResources: ResourceItem[] = [
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
     link: "#",
     readTime: "10 min read"
+  },
+  {
+    id: "managed-threat-detection-monitoring-mdr-guide",
+    title: "Threat Detection & 24/7 Threat Monitoring: An MDR Guide for GTA Businesses",
+    seoTitle: "Threat Detection Services & 24/7 Threat Monitoring: MDR Explained",
+    description: "What managed threat detection and 24/7 threat monitoring actually do, how MDR differs from antivirus, and what to look for when choosing a provider — for Toronto & GTA businesses.",
+    content: [
+      "Most breaches are not stopped at the front door — they are caught, or missed, in the hours and days after an attacker is already inside. That gap between compromise and discovery is where managed threat detection lives. This guide explains what threat detection services and 24/7 threat monitoring actually do, how they differ from the antivirus you already run, and what a GTA business should look for when choosing a provider.",
+      "## Antivirus Stops the Known; Detection Catches the Rest",
+      "Traditional antivirus and firewalls are preventive: they block what they already recognize. That is necessary, but it is not enough. Modern attacks use stolen-but-valid credentials, legitimate admin tools, and techniques that no signature flags — so they walk straight past prevention and look, to the network, like normal activity. Threat detection is the layer that assumes something will eventually get through and watches for the evidence: an account logging in from two countries an hour apart, a workstation suddenly scanning the network, backups being deleted, data moving where it never moved before.",
+      "## What 24/7 Threat Monitoring Actually Means",
+      "Attackers do not keep business hours — a large share of intrusions land overnight and on weekends precisely because that is when nobody is watching. '24/7 threat monitoring' means signals from your endpoints, servers, Microsoft 365, and network are collected and analyzed around the clock, so a suspicious pattern at 3 a.m. Sunday is seen at 3 a.m. Sunday, not Monday morning. The value is entirely in the response time: the difference between catching an intrusion in minutes and discovering it weeks later — after the damage is done — is almost always the difference between an incident and a headline.",
+      "## Where MDR Fits In",
+      "Managed Detection and Response (MDR) packages this into a service: continuous monitoring, human analysts who investigate the alerts that matter, and a defined response when something is real — isolating an affected device, disabling a compromised account, and containing the spread. It maps to the middle of the NIST Cybersecurity Framework — Detect and Respond — the stages prevention-only tools leave uncovered. For most small and mid-sized GTA businesses, standing up an equivalent in-house capability (a 24/7 security operations team, the tooling, the expertise) is neither practical nor affordable, which is why detection is typically delivered as a managed service. IT Rapid Support provides [managed threat detection and response](/services/threat-detection) for businesses across Toronto and the GTA.",
+      "## What to Look For in a Threat Detection Provider",
+      "Not all 'monitoring' is equal. Ask the questions that separate a real service from a dashboard nobody watches: Is monitoring genuinely 24/7 with people, or just alerts that queue until morning? When something is detected, does the provider actually respond and contain it, or only email you a notification? What sources are watched — endpoints only, or also identity/Microsoft 365 sign-ins, servers, and network traffic (identity is where most modern attacks pivot)? How fast do they commit to acknowledging and acting on a confirmed threat? And how does detection connect to recovery if an incident does escalate — a good provider ties monitoring to [incident response](/services/emergency-it-services) and tested backups, so detection is the start of a plan, not the end of a report.",
+      "## Detection Is One Layer — Not the Whole Strategy",
+      "Threat detection is most effective as part of a layered program, not a bolt-on. It assumes prevention (patching, MFA, email security, endpoint protection) is already in place and does its job of shrinking what gets through; detection then covers what prevention misses. Businesses that lean on monitoring alone — while skipping the basics — end up detecting the same avoidable intrusions over and over. The stronger posture pairs detection with [managed cybersecurity](/services/managed-security) fundamentals and a disciplined [ransomware defence](/resources/ransomware-protection-ontario-businesses), so each layer carries less weight.",
+      "## The Bottom Line",
+      "Prevention keeps out what it recognizes; threat detection and 24/7 monitoring catch what it doesn't — and the speed of that catch decides how much a compromise actually costs you. For most GTA businesses, an MDR service delivers around-the-clock eyes and a real response without building a security team from scratch. IT Rapid Support runs managed threat detection and response for businesses across Toronto and the Greater Toronto Area from our Vaughan head office. Call (289) 582-9930 to review how your environment is monitored today — and where the gaps are."
+    ].join('\n\n'),
+    type: "guide",
+    date: "July 13, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "9 min read"
   }
 ];
 
