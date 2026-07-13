@@ -87,7 +87,8 @@ const routes = [
   '/resources/windows-10-end-of-support-gta-businesses',
   '/resources/business-voip-phone-systems-buyers-guide',
   '/resources/disaster-recovery-plan-small-business-ontario',
-  '/resources/managed-threat-detection-monitoring-mdr-guide'
+  '/resources/managed-threat-detection-monitoring-mdr-guide',
+  '/resources/gta-email-spoofing-study-2026'
 ];
 
 const MIME = {

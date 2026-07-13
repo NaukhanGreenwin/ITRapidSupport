@@ -25,6 +25,40 @@ export interface ResourceItem {
 // All resources data - in a real app this would come from an API or database
 export const allResources: ResourceItem[] = [
   {
+    id: "gta-email-spoofing-study-2026",
+    title: "We Checked 118 GTA Business Domains — Only 40% Are Protected Against Email Spoofing",
+    description: "IT Rapid Support ran a non-intrusive DNS review of 118 Greater Toronto Area business domains. The results on SPF, DKIM and DMARC reveal how exposed most GTA businesses still are to email impersonation and invoice fraud.",
+    content: [
+      "Email impersonation is the mechanism behind most business email compromise (BEC) and invoice-redirection fraud — a criminal sends a message that looks like it came from your domain, and a client or staff member pays a fake invoice or hands over credentials. Three DNS records exist specifically to stop this: SPF, DKIM and DMARC. So we asked a simple question about our own backyard: how many Greater Toronto Area businesses actually have them in place?",
+      "To find out, IT Rapid Support ran a non-intrusive review of the public DNS records for 118 GTA business domains across a mix of industries. We checked only what is publicly published — the same records any mail server on the internet can read — and we are reporting aggregate results only. No individual business is named.",
+      "## What We Found",
+      "The headline is stark: only 40% of the businesses we checked were fully protected across all three email-authentication standards. The rest had at least one critical gap, and many had several.",
+      "### SPF — 94% published, and that is the good news",
+      "Sender Policy Framework (SPF) tells the world which mail servers are allowed to send on your behalf. It was the most widely adopted record we found: 94% of domains had one published. SPF alone, however, does not stop a spoofed display name or protect against every impersonation technique — it is the floor, not the ceiling.",
+      "### DMARC — 42% have nothing at all",
+      "DMARC is the record that ties SPF and DKIM together and tells receiving mail servers what to do with messages that fail authentication. It is the single most important anti-spoofing control, and it is where most GTA businesses fall down: only 58% had a DMARC record at all, meaning 42% have no domain-level protection against impersonation whatsoever.",
+      "Worse, of the businesses that did publish DMARC, most were not actually enforcing it. The majority sat at a policy of \"p=none\" — monitor-only — which reports spoofing but does nothing to block it. Only a small fraction had moved to \"quarantine\" or \"reject,\" the policies that actually stop a forged email from reaching the inbox.",
+      "### DKIM — roughly half",
+      "DKIM cryptographically signs your outgoing mail so recipients can verify it genuinely came from you and was not tampered with in transit. Just over half of the domains we checked had a detectable DKIM signature on common selectors. (This is a conservative figure — DKIM can use custom selectors we would not see externally — but it still points to a wide gap.)",
+      "## Why This Matters for Your Business",
+      "If your domain has no DMARC policy at enforcement, there is nothing today that stops an outsider from sending email that appears to come from your company. For any business that emails clients about payments, invoices, contracts or banking details — property managers, accountants, law firms, medical practices, trades — that is the single most valuable gap to close. Domain spoofing is cheap for attackers and expensive for victims.",
+      "The reassuring part: the fix is fast, standard, and does not disrupt your mail flow when it is staged correctly. Publishing SPF, enabling DKIM, and rolling DMARC from monitoring to enforcement is typically a short, well-understood project — not a rip-and-replace.",
+      "## How to Check Your Own Domain",
+      "You can see part of this yourself. A DMARC record lives at a TXT record on the subdomain \"_dmarc.yourdomain.com\" and begins with \"v=DMARC1\". If it is missing, or if it says \"p=none\", your domain is not yet protected at enforcement. SPF lives on a TXT record at your root domain and begins with \"v=spf1\".",
+      "If you would rather have it checked and fixed properly, IT Rapid Support offers a non-intrusive [email security and phishing protection](/services/managed-security) review for GTA businesses. We assess your SPF, DKIM and DMARC posture, explain the gaps in plain language, and stage the fixes so nothing breaks. Learn more about our approach to [managed cybersecurity across the GTA](/it-support/gta) or call (289) 582-9930.",
+      "## Methodology",
+      "We reviewed the publicly published DNS records (SPF and DMARC TXT records, DKIM on common selectors, and MX routing) for 118 Greater Toronto Area business domains that operate email. All checks were passive DNS lookups of publicly available records — no systems were accessed, probed, or contacted. Results are reported in aggregate only; no individual organization is identified. DKIM figures are conservative because organizations may use custom selectors not visible in an external review."
+    ].join('\n\n'),
+    type: "guide",
+    date: "July 13, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "7 min read"
+  },
+  {
     id: "managed-it-support-cost-toronto",
     title: "How Much Does Managed IT Support Cost in Toronto? (2026 Guide)",
     description: "A clear breakdown of managed IT support pricing models for Toronto and GTA businesses, what drives the cost, and how to compare providers.",
