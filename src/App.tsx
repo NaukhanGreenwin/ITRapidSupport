@@ -31,6 +31,7 @@ import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
 import LocationLanding from './pages/LocationLanding';
 import GTALanding from './pages/GTALanding';
 import EmailSpoofCheck from './pages/EmailSpoofCheck';
+import LegacyBookOnline from './pages/LegacyBookOnline';
 import IndustryLanding from './pages/IndustryLanding';
 import ServiceLanding from './pages/ServiceLanding';
 import RiskCalculator from './pages/RiskCalculator';
@@ -71,6 +72,7 @@ function App() {
             <Route path="/partners" element={<Partners />} />
             <Route path="/support" element={<Support />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/book-online" element={<LegacyBookOnline />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/security-assessment" element={<SecurityAssessment />} />

@@ -14,7 +14,7 @@ const PORT = 45999;
 const routes = [
   '/', '/services', '/services/managed-security', '/services/threat-detection',
   '/services/cloud-security', '/services/it-support', '/services/high-net-worth',
-  '/about', '/contact', '/support', '/solutions', '/security-assessment',
+  '/about', '/contact', '/book-online', '/support', '/solutions', '/security-assessment',
   '/cyber-incident', '/resources', '/partners', '/faq', '/careers',
   '/it-risk-calculator',
   '/managed-it-plans',
@@ -89,6 +89,7 @@ const routes = [
   '/resources/disaster-recovery-plan-small-business-ontario',
   '/resources/managed-threat-detection-monitoring-mdr-guide',
   '/resources/gta-email-spoofing-study-2026',
+  '/resources/managed-it-services-vaughan-guide',
   '/tools/email-spoof-check'
 ];
 

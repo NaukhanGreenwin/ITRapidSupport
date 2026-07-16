@@ -335,7 +335,7 @@ const Support: React.FC = () => {
                 Contact Our Team
               </Link>
               <Link 
-                to="/book-online" 
+                to="/contact" 
                 className="inline-flex items-center justify-center bg-transparent text-white border border-white/20 px-6 py-3 rounded-lg hover:bg-white/5 transition-colors text-base font-medium"
               >
                 Book an Appointment
