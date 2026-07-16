@@ -41,16 +41,13 @@ const Home: React.FC = () => {
     "@graph": [
       {
         "@type": "WebSite",
-        "name": "IT Rapid Support - Toronto's Premier IT Security Services",
+        "@id": "https://itrapidsupport.com/#website",
+        "name": "IT Rapid Support",
+        "alternateName": "IT Rapid Support Inc.",
         "url": "https://itrapidsupport.com/",
         "description": "IT Rapid Support provides enterprise-grade cybersecurity solutions and managed IT services for businesses across the Greater Toronto Area, including Vaughan, Mississauga, Brampton, Woodbridge, and Concord.",
         "publisher": {
-          "@type": "Organization",
-          "name": "IT Rapid Support",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://itrapidsupport.com/images/logo.png"
-          }
+          "@id": "https://itrapidsupport.com/#organization"
         }
       },
       generateOrganizationSchema(),
@@ -92,7 +89,7 @@ const Home: React.FC = () => {
         },
         "provider": {
           "@type": "Organization",
-          "name": "IT Rapid Support"
+          "name": "IT Rapid Support Inc."
         },
         "description": "Enterprise-grade cybersecurity solutions for businesses across Ontario, including threat detection, incident response, and security assessments.",
         "offers": {

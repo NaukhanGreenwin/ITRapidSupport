@@ -39,7 +39,8 @@ export const generateOrganizationSchema = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://itrapidsupport.com/#organization",
-    "name": "IT Rapid Support",
+    "name": "IT Rapid Support Inc.",
+    "alternateName": "IT Rapid Support",
     "url": "https://itrapidsupport.com",
     "logo": "https://itrapidsupport.com/images/logo.png",
     "email": "info@itrapidsupport.com",
@@ -81,7 +82,7 @@ export const generateOrganizationSchema = () => {
 export const generateLocalBusinessSchema = (location?: string) => {
   const locations = {
     vaughan: {
-      name: "IT Rapid Support",
+      name: "IT Rapid Support Inc.",
       streetAddress: "7810 Keele St",
       addressLocality: "Vaughan",
       addressRegion: "ON",
@@ -91,7 +92,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
       areaServed: "Greater Toronto Area, Vaughan, Mississauga, Brampton, Woodbridge, Concord"
     },
     toronto: {
-      name: "IT Rapid Support",
+      name: "IT Rapid Support Inc.",
       streetAddress: "7810 Keele St",
       addressLocality: "Vaughan",
       addressRegion: "ON",
@@ -101,7 +102,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
       areaServed: "Greater Toronto Area, Toronto, Vaughan, Mississauga, Brampton, Woodbridge, Concord"
     },
     default: {
-      name: "IT Rapid Support",
+      name: "IT Rapid Support Inc.",
       streetAddress: "7810 Keele St",
       addressLocality: "Vaughan",
       addressRegion: "ON",
@@ -294,7 +295,7 @@ export const generateServiceSchema = (service: {
     "description": service.description,
     "provider": {
       "@type": "Organization",
-      "name": service.provider || "IT Rapid Support"
+      "name": service.provider || "IT Rapid Support Inc."
     },
     "serviceType": service.serviceType || "IT Services",
     "areaServed": service.areaServed || "Greater Toronto Area, Ontario",
@@ -340,6 +341,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="google-site-verification" content="ff538a12ef81de89" />
+      <meta name="application-name" content="IT Rapid Support" />
 
       {/* Robots Control */}
       {noIndex ? (
@@ -359,7 +361,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={fullOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="IT Rapid Support Inc." />
+      <meta property="og:site_name" content="IT Rapid Support" />
       <meta property="og:locale" content={locale} />
       
       {/* Article Specific Meta Tags */}
