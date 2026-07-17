@@ -25,7 +25,10 @@ const ServicesGrid: React.FC = () => {
               <Link to="/services/co-managed-it-services" className="text-red-600 hover:text-red-700 font-medium">
                 co-managed IT services
               </Link>{' '}
-              add 24/7 coverage and specialist depth.
+              add 24/7 coverage and specialist depth. Protect critical operations with our{' '}
+              <Link to="/services/business-continuity-disaster-recovery" className="text-red-600 hover:text-red-700 font-medium">
+                business continuity and disaster recovery services
+              </Link>.
             </p>
           </div>
           

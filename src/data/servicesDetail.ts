@@ -188,6 +188,58 @@ export const servicesDetail: ServiceDetailData[] = [
     ],
   },
   {
+    slug: 'business-continuity-disaster-recovery',
+    service: 'Business Continuity & Disaster Recovery',
+    title: 'Business Continuity & Disaster Recovery Toronto',
+    h1: 'Business Continuity & Disaster Recovery Services for Toronto & GTA',
+    description:
+      'Business continuity and disaster recovery for Toronto and GTA businesses: monitored backups, restore testing, recovery planning, and 24/7 response.',
+    keywords:
+      'business continuity Toronto, disaster recovery services Toronto, business continuity services GTA, disaster recovery planning GTA, managed backup Toronto, IT disaster recovery services',
+    intro:
+      'A backup only helps if it restores the systems your business needs, in the right order, within an acceptable window. IT Rapid Support helps Toronto and GTA businesses prepare for outages, ransomware, hardware failure, and human error with monitored backups, restore testing, recovery objectives, documented runbooks, and 24/7 support when disruption occurs.',
+    tags: ['Business continuity planning', 'Monitored backups', 'Restore testing', 'Recovery objectives', 'Recovery runbooks', '24/7 response'],
+    highlights: [
+      {
+        title: 'Recovery Built Around the Business',
+        description:
+          'We identify critical systems, dependencies, recovery time objectives, and recovery point objectives so protection reflects what must return first and how much downtime the business can tolerate.',
+      },
+      {
+        title: 'Backups You Can Actually Restore',
+        description:
+          'Automated local and cloud backups, monitoring, retention planning, and scheduled restore tests help turn stored copies into a practical recovery capability instead of an untested assumption.',
+      },
+      {
+        title: 'A Plan People Can Follow',
+        description:
+          'A documented recovery runbook establishes responsibilities, communications, restore order, and key recovery steps, backed by a 24/7 team when an outage or incident is already underway.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is the difference between business continuity and disaster recovery?',
+        answer:
+          'Business continuity is the broader plan for keeping essential operations moving during a disruption. Disaster recovery focuses on restoring data, systems, applications, and technology services. A resilient business needs both the operating plan and the technical recovery capability.',
+      },
+      {
+        question: 'Is having cloud backup enough for disaster recovery?',
+        answer:
+          'No. Backup provides copies of data, while disaster recovery defines what gets restored, in what order, by whom, and within which recovery targets. The backups also need monitoring and restore testing so the business knows they can be used when needed.',
+      },
+      {
+        question: 'What do RTO and RPO mean?',
+        answer:
+          'Recovery Time Objective (RTO) is the maximum acceptable downtime for a system. Recovery Point Objective (RPO) is the amount of recent data the business can tolerate losing. We use these targets to shape backup frequency, recovery priorities, and the recovery plan.',
+      },
+      {
+        question: 'Can IT Rapid Support help test an existing recovery plan?',
+        answer:
+          'Yes. We can review the systems and dependencies covered by the plan, verify backup and recovery procedures, run restore tests, and help update the runbook so responsibilities, contacts, and recovery steps reflect the current environment.',
+      },
+    ],
+  },
+  {
     slug: 'microsoft-365-azure-migration',
     service: 'Microsoft 365 & Azure Migration',
     title: 'Microsoft 365 & Azure Migration Services in the GTA',
