@@ -66,7 +66,11 @@ const Services: React.FC = () => {
               For end-to-end technology management, see our{' '}
               <Link to="/services/it-outsourcing-services" className="text-red-600 hover:text-red-700 font-medium">
                 IT outsourcing services for Toronto and the GTA
-              </Link>.
+              </Link>, or choose{' '}
+              <Link to="/services/microsoft-365-managed-services" className="text-red-600 hover:text-red-700 font-medium">
+                managed Microsoft 365 support
+              </Link>{' '}
+              for ongoing administration, security, and user help.
             </p>
           </div>
 

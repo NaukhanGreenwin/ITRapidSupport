@@ -217,7 +217,7 @@ export const allResources: ResourceItem[] = [
       "## Common Pitfalls to Avoid",
       "The biggest mistakes are migrating without a backup, skipping MFA, underestimating how long data transfer takes, and cutting over during business hours. Each one is avoidable with the right plan and the right partner.",
       "## Make Your Migration a Non-Event",
-      "IT Rapid Support helps Toronto and GTA businesses migrate to Microsoft 365 with minimal downtime, proper security, and a 24/7 helpdesk standing by during the transition. We handle the planning, the migration, and the support so your team barely notices the switch. Call (289) 582-9930 to scope your move."
+      "IT Rapid Support helps Toronto and GTA businesses migrate to Microsoft 365 with minimal downtime, proper security, and a 24/7 helpdesk standing by during the transition. We handle the planning and migration, then provide [Microsoft 365 managed services](/services/microsoft-365-managed-services) for ongoing administration, security, and user support after cutover. Call (289) 582-9930 to scope your move."
     ].join('\n\n'),
     type: "guide",
     date: "June 18, 2026",

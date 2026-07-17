@@ -58,6 +58,7 @@ const routes = [
   '/industries/hospitality',
   '/industries/logistics-warehousing',
   '/services/it-outsourcing-services',
+  '/services/microsoft-365-managed-services',
   '/services/microsoft-365-azure-migration',
   '/services/network-management',
   '/services/it-helpdesk',

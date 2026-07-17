@@ -17,7 +17,11 @@ const ServicesGrid: React.FC = () => {
               Need a complete IT department? Explore our{' '}
               <Link to="/services/it-outsourcing-services" className="text-red-600 hover:text-red-700 font-medium">
                 IT outsourcing services for Toronto and the GTA
-              </Link>.
+              </Link>, or see how our{' '}
+              <Link to="/services/microsoft-365-managed-services" className="text-red-600 hover:text-red-700 font-medium">
+                Microsoft 365 managed services
+              </Link>{' '}
+              keep cloud users, security, and collaboration supported.
             </p>
           </div>
           

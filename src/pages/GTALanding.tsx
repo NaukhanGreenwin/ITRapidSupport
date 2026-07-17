@@ -99,7 +99,11 @@ const GTALanding: React.FC = () => {
               <Link to="/services/it-outsourcing-services" className="text-red-200 hover:text-white underline underline-offset-4">
                 IT outsourcing services
               </Link>{' '}
-              give you a complete IT department — from our Vaughan headquarters to every corner of the GTA.
+              give you a complete IT department, while our{' '}
+              <Link to="/services/microsoft-365-managed-services" className="text-red-200 hover:text-white underline underline-offset-4">
+                Microsoft 365 managed services
+              </Link>{' '}
+              keep cloud users, access, security, and collaboration supported — from our Vaughan headquarters to every corner of the GTA.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

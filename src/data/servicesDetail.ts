@@ -1,7 +1,7 @@
 // Standalone service landing page content for transactional-intent SEO.
 // Targets the high-intent service keywords ranking competitors have dedicated
-// pages for (Microsoft 365/Azure migration, network management, IT help desk,
-// vCIO/IT strategy). Claims mirror existing site copy: managed IT, 24/7
+// pages for (IT outsourcing, Microsoft 365 managed services and migration,
+// network management, IT help desk, vCIO/IT strategy). Claims mirror existing site copy: managed IT, 24/7
 // helpdesk, cybersecurity, cloud/Microsoft 365, proactive monitoring, on-site
 // service across the GTA. No client names or fabricated case studies.
 
@@ -80,6 +80,58 @@ export const servicesDetail: ServiceDetailData[] = [
         question: 'Do you provide on-site support across Toronto and the GTA?',
         answer:
           'Yes. Most requests can be resolved quickly through the 24/7 remote helpdesk, and our team provides scheduled and emergency on-site support across Toronto and the Greater Toronto Area when hands-on work is the best solution.',
+      },
+    ],
+  },
+  {
+    slug: 'microsoft-365-managed-services',
+    service: 'Microsoft 365 Managed Services',
+    title: 'Microsoft 365 Managed Services Toronto & GTA',
+    h1: 'Managed Microsoft 365 Services for Toronto & GTA Businesses',
+    description:
+      'Managed Microsoft 365 support for Toronto and GTA businesses: user administration, security, Teams, SharePoint, OneDrive, backup, and 24/7 helpdesk.',
+    keywords:
+      'Microsoft 365 managed services Toronto, managed Microsoft 365 GTA, Microsoft 365 support Toronto, Office 365 managed services, Microsoft 365 administration, Microsoft 365 security services',
+    intro:
+      'Microsoft 365 needs active management after setup or migration. IT Rapid Support manages the day-to-day environment for Toronto and GTA businesses: users and access, Exchange Online, Teams, SharePoint and OneDrive, security settings, backup and recovery, and responsive 24/7 support when your team needs help.',
+    tags: ['User & access administration', 'Exchange Online', 'Teams support', 'SharePoint & OneDrive', 'Security configuration', 'Backup & recovery'],
+    highlights: [
+      {
+        title: 'Day-to-Day Microsoft 365 Management',
+        description:
+          'We handle user onboarding and offboarding, access changes, mailbox and collaboration administration, and everyday Microsoft 365 support so your team has one place to get help.',
+      },
+      {
+        title: 'Security Built into Operations',
+        description:
+          'Multi-factor authentication, conditional access, least-privilege administration, email protection, and activity monitoring are managed as part of the environment instead of left as one-time settings.',
+      },
+      {
+        title: 'Productivity with Ongoing Support',
+        description:
+          'We support Exchange Online, Teams, SharePoint, and OneDrive, help keep permissions organized, and back the environment with a 24/7 helpdesk for users across the GTA.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is included in Microsoft 365 managed services?',
+        answer:
+          'Managed services can include user onboarding and offboarding, mailbox and access administration, Teams, SharePoint and OneDrive support, security configuration, email protection, backup and recovery, monitoring, and 24/7 user support.',
+      },
+      {
+        question: 'How is managed Microsoft 365 different from a migration?',
+        answer:
+          'A migration is the project that moves email, files, users, or applications into Microsoft 365 or Azure. Managed Microsoft 365 is the ongoing administration, security, maintenance, and user support that keeps the environment reliable after the move.',
+      },
+      {
+        question: 'Can you secure an existing Microsoft 365 tenant?',
+        answer:
+          'Yes. We can review an existing environment and manage practical controls such as multi-factor authentication, conditional access, administrative permissions, email security, sharing settings, logging, and backup based on the business and its risks.',
+      },
+      {
+        question: 'Do you support Microsoft 365 users around the clock?',
+        answer:
+          'Yes. IT Rapid Support provides a 24/7 helpdesk for Microsoft 365 and broader IT issues, with remote support and on-site service available across Toronto and the Greater Toronto Area when hands-on help is needed.',
       },
     ],
   },
