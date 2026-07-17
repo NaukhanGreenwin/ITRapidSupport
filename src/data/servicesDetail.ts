@@ -136,6 +136,58 @@ export const servicesDetail: ServiceDetailData[] = [
     ],
   },
   {
+    slug: 'co-managed-it-services',
+    service: 'Co-Managed IT Services',
+    title: 'Co-Managed IT Services Toronto & GTA | 24/7 Backup',
+    h1: 'Co-Managed IT Services for Toronto & GTA Teams',
+    description:
+      'Extend your internal IT team with 24/7 coverage, monitoring, cybersecurity, cloud expertise, project capacity, and GTA on-site support. Call (289) 582-9930.',
+    keywords:
+      'co-managed IT services Toronto, co-managed IT GTA, IT support for internal IT teams, supplemental IT support Toronto, co-managed MSP, IT team augmentation GTA',
+    intro:
+      'Keep the internal IT people who know your business and give them the coverage, tools, and specialist depth of a larger team. IT Rapid Support works alongside Toronto and GTA IT departments with 24/7 helpdesk backup, monitoring and patching, cybersecurity, Microsoft 365 and cloud support, project capacity, and local on-site service.',
+    tags: ['24/7 overflow helpdesk', 'Monitoring & patching', 'Cybersecurity support', 'Cloud expertise', 'Project capacity', 'GTA on-site service'],
+    highlights: [
+      {
+        title: 'Your Team Stays in Control',
+        description:
+          'We fit around your internal IT roles and priorities, filling agreed gaps without replacing the people who already understand your users, systems, and business.',
+      },
+      {
+        title: 'Coverage Beyond Office Hours',
+        description:
+          'A 24/7 helpdesk, proactive monitoring, and escalation support give your internal team backup during busy periods, after hours, and when specialist help is needed.',
+      },
+      {
+        title: 'Specialists and Project Capacity',
+        description:
+          'Add cybersecurity, Microsoft 365, cloud, network, backup, and on-site expertise for projects or operational needs without hiring every specialty in-house.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What are co-managed IT services?',
+        answer:
+          'Co-managed IT is a partnership between your internal IT staff and an outside managed services provider. Your team keeps its role and control while IT Rapid Support supplies agreed services such as 24/7 helpdesk coverage, monitoring, cybersecurity, cloud support, projects, or on-site assistance.',
+      },
+      {
+        question: 'Will co-managed IT replace our internal IT team?',
+        answer:
+          'No. The model is designed to strengthen the team you already have. Responsibilities are divided clearly so internal staff can keep the work they know best while we handle coverage gaps, specialist needs, overflow, or projects.',
+      },
+      {
+        question: 'Which responsibilities can we share with IT Rapid Support?',
+        answer:
+          'Common areas include after-hours and overflow helpdesk, device and network monitoring, patching, managed cybersecurity, Microsoft 365 and cloud administration, backup and recovery, escalations, projects, and GTA on-site support. The split is built around your team and priorities.',
+      },
+      {
+        question: 'Is co-managed IT only for large businesses?',
+        answer:
+          'No. It can fit any organization with an internal IT employee or team that needs more coverage, specialist expertise, tools, or capacity. We scope the partnership around the responsibilities your staff wants to keep and the gaps they want us to cover.',
+      },
+    ],
+  },
+  {
     slug: 'microsoft-365-azure-migration',
     service: 'Microsoft 365 & Azure Migration',
     title: 'Microsoft 365 & Azure Migration Services in the GTA',

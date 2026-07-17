@@ -21,7 +21,11 @@ const ServicesGrid: React.FC = () => {
               <Link to="/services/microsoft-365-managed-services" className="text-red-600 hover:text-red-700 font-medium">
                 Microsoft 365 managed services
               </Link>{' '}
-              keep cloud users, security, and collaboration supported.
+              keep cloud users supported. Already have an internal team? Our{' '}
+              <Link to="/services/co-managed-it-services" className="text-red-600 hover:text-red-700 font-medium">
+                co-managed IT services
+              </Link>{' '}
+              add 24/7 coverage and specialist depth.
             </p>
           </div>
           

@@ -70,7 +70,11 @@ const Services: React.FC = () => {
               <Link to="/services/microsoft-365-managed-services" className="text-red-600 hover:text-red-700 font-medium">
                 managed Microsoft 365 support
               </Link>{' '}
-              for ongoing administration, security, and user help.
+              for ongoing cloud administration. If you have internal IT staff, our{' '}
+              <Link to="/services/co-managed-it-services" className="text-red-600 hover:text-red-700 font-medium">
+                co-managed IT services
+              </Link>{' '}
+              add coverage, tools, and specialist capacity without replacing your team.
             </p>
           </div>
 
