@@ -151,7 +151,7 @@ export const allResources: ResourceItem[] = [
       "## A Hybrid Approach",
       "Many growing businesses run a hybrid model: a managed provider handles monitoring, security, and the helpdesk, while a small internal contact coordinates priorities. This gives you hands-on familiarity plus the depth and coverage of a full team.",
       "## How to Decide",
-      "If you are a small or mid-sized GTA business that wants predictable costs, strong security, and coverage that never sleeps, managed IT is usually the better value. IT Rapid Support delivers exactly that across Toronto and the surrounding region. Call (289) 582-9930 to talk through which model fits your business."
+      "If you are a small or mid-sized GTA business that wants predictable costs, strong security, and coverage that never sleeps, managed IT is usually the better value. IT Rapid Support delivers [IT outsourcing services for Toronto and the GTA](/services/it-outsourcing-services) with a 24/7 helpdesk, proactive monitoring, cybersecurity, cloud management, and on-site support. Call (289) 582-9930 to talk through which model fits your business."
     ].join('\n\n'),
     type: "guide",
     date: "June 22, 2026",

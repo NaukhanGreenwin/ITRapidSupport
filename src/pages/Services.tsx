@@ -62,6 +62,12 @@ const Services: React.FC = () => {
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               IT Rapid Support offers a comprehensive suite of IT security services tailored to your organization's needs.
             </p>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+              For end-to-end technology management, see our{' '}
+              <Link to="/services/it-outsourcing-services" className="text-red-600 hover:text-red-700 font-medium">
+                IT outsourcing services for Toronto and the GTA
+              </Link>.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">
@@ -362,4 +368,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services; 
+export default Services;

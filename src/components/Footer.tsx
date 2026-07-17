@@ -29,6 +29,7 @@ export default function Footer() {
               <li><Link to="/services/cloud-security" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
               <li><Link to="/services/it-support" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
               <li><Link to="/services/high-net-worth" className="text-slate-300 hover:text-white text-sm block">Elite Security</Link></li>
+              <li><Link to="/services/it-outsourcing-services" className="text-slate-300 hover:text-white text-sm block">IT Outsourcing Services</Link></li>
               <li><Link to="/services/it-helpdesk" className="text-slate-300 hover:text-white text-sm block">24/7 IT Help Desk</Link></li>
               <li><Link to="/services/network-management" className="text-slate-300 hover:text-white text-sm block">Network Management</Link></li>
               <li><Link to="/services/microsoft-365-azure-migration" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 &amp; Azure Migration</Link></li>
@@ -132,4 +133,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-} 
+}

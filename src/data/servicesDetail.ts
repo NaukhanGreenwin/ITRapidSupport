@@ -32,6 +32,58 @@ export interface ServiceDetailData {
 
 export const servicesDetail: ServiceDetailData[] = [
   {
+    slug: 'it-outsourcing-services',
+    service: 'IT Outsourcing Services',
+    title: 'IT Outsourcing Toronto & GTA | 24/7 Support',
+    h1: 'IT Outsourcing Services for Toronto & GTA Businesses',
+    description:
+      'Outsource your business IT to a local GTA team: 24/7 helpdesk, proactive monitoring, cybersecurity, cloud, backup, and on-site support. Call (289) 582-9930.',
+    keywords:
+      'IT outsourcing Toronto, IT outsourcing services GTA, outsourced IT support Toronto, outsourced IT department, managed IT outsourcing, IT outsourcing company Toronto',
+    intro:
+      'Get the coverage of a complete IT department without building one in-house. IT Rapid Support provides outsourced IT services for Toronto and GTA businesses: a 24/7 helpdesk, proactive monitoring and maintenance, managed cybersecurity, Microsoft 365 and cloud management, backup and recovery, and local on-site support when hands-on help is needed.',
+    tags: ['24/7 helpdesk', 'Proactive IT management', 'Managed cybersecurity', 'Microsoft 365 & cloud', 'Backup & recovery', 'GTA on-site support'],
+    highlights: [
+      {
+        title: 'A Complete IT Function',
+        description:
+          'One local partner handles day-to-day support, monitoring, maintenance, cloud, cybersecurity, backups, and IT planning so your team has one place to turn for technology.',
+      },
+      {
+        title: 'Proactive Support, Not Break-Fix',
+        description:
+          'Continuous monitoring, maintenance, patching, and managed security help catch issues early instead of waiting for downtime or a security incident to disrupt the business.',
+      },
+      {
+        title: 'Remote Speed, Local On-Site Help',
+        description:
+          'The 24/7 helpdesk resolves issues remotely whenever possible, with on-site support available across Toronto and the GTA when equipment, networks, or office projects need hands-on work.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What are IT outsourcing services?',
+        answer:
+          'IT outsourcing means a specialist provider takes responsibility for some or all of your business technology. IT Rapid Support can act as your complete IT department, covering user support, monitoring, maintenance, cybersecurity, cloud, backups, and IT planning.',
+      },
+      {
+        question: 'What IT work can we outsource?',
+        answer:
+          'You can outsource the day-to-day helpdesk, device and network monitoring, patching, cybersecurity, Microsoft 365 and cloud administration, backup and recovery, user onboarding and offboarding, on-site support, and ongoing technology planning.',
+      },
+      {
+        question: 'Can outsourced IT work alongside an internal IT employee or team?',
+        answer:
+          'Yes. We can provide the complete IT function or work alongside internal staff by adding 24/7 coverage, specialist security and cloud support, monitoring, tools, and extra capacity when the internal team needs it.',
+      },
+      {
+        question: 'Do you provide on-site support across Toronto and the GTA?',
+        answer:
+          'Yes. Most requests can be resolved quickly through the 24/7 remote helpdesk, and our team provides scheduled and emergency on-site support across Toronto and the Greater Toronto Area when hands-on work is the best solution.',
+      },
+    ],
+  },
+  {
     slug: 'microsoft-365-azure-migration',
     service: 'Microsoft 365 & Azure Migration',
     title: 'Microsoft 365 & Azure Migration Services in the GTA',

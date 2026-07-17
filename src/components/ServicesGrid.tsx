@@ -13,6 +13,12 @@ const ServicesGrid: React.FC = () => {
             <p className="text-gray-600 max-w-3xl mx-auto">
               Protect your organization with our full suite of IT security services designed for modern enterprises.
             </p>
+            <p className="text-gray-600 max-w-3xl mx-auto mt-3 text-sm">
+              Need a complete IT department? Explore our{' '}
+              <Link to="/services/it-outsourcing-services" className="text-red-600 hover:text-red-700 font-medium">
+                IT outsourcing services for Toronto and the GTA
+              </Link>.
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -118,4 +124,4 @@ const ServicesGrid: React.FC = () => {
   );
 };
 
-export default ServicesGrid; 
+export default ServicesGrid;

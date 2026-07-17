@@ -95,8 +95,11 @@ const GTALanding: React.FC = () => {
             <p className="text-slate-300 text-lg mb-8 leading-relaxed">
               IT Rapid Support delivers enterprise-grade managed IT services and cybersecurity to businesses across the
               Greater Toronto Area. From 24/7 helpdesk and proactive monitoring to managed detection and response,
-              cloud, and on-site support, we act as your complete IT department — from our Vaughan headquarters to
-              every corner of the GTA.
+              cloud, and on-site support, our{' '}
+              <Link to="/services/it-outsourcing-services" className="text-red-200 hover:text-white underline underline-offset-4">
+                IT outsourcing services
+              </Link>{' '}
+              give you a complete IT department — from our Vaughan headquarters to every corner of the GTA.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
