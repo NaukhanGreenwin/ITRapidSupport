@@ -1074,7 +1074,7 @@ export const locations: CityData[] = [
     slug: 'concord',
     city: 'Concord',
     schemaLocation: 'vaughan',
-    title: 'IT Support & Managed IT Services in Concord, Vaughan',
+    title: 'IT Support Concord | Local Keele St HQ',
     description:
       'Managed IT services and cybersecurity in Concord, Vaughan — where our Keele St head office is located. 24/7 helpdesk, managed security, cloud. Call (289) 582-9930.',
     keywords:
