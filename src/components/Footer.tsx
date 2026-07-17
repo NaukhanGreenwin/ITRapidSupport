@@ -33,6 +33,7 @@ export default function Footer() {
               <li><Link to="/services/microsoft-365-managed-services" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 Managed Services</Link></li>
               <li><Link to="/services/co-managed-it-services" className="text-slate-300 hover:text-white text-sm block">Co-Managed IT Services</Link></li>
               <li><Link to="/services/business-continuity-disaster-recovery" className="text-slate-300 hover:text-white text-sm block">Business Continuity &amp; Disaster Recovery</Link></li>
+              <li><Link to="/services/network-security-services" className="text-slate-300 hover:text-white text-sm block">Network Security Services</Link></li>
               <li><Link to="/services/it-helpdesk" className="text-slate-300 hover:text-white text-sm block">24/7 IT Help Desk</Link></li>
               <li><Link to="/services/network-management" className="text-slate-300 hover:text-white text-sm block">Network Management</Link></li>
               <li><Link to="/services/microsoft-365-azure-migration" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 &amp; Azure Migration</Link></li>

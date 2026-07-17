@@ -61,6 +61,7 @@ const routes = [
   '/services/microsoft-365-managed-services',
   '/services/co-managed-it-services',
   '/services/business-continuity-disaster-recovery',
+  '/services/network-security-services',
   '/services/microsoft-365-azure-migration',
   '/services/network-management',
   '/services/it-helpdesk',

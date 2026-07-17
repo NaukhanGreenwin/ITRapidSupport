@@ -78,7 +78,11 @@ const Services: React.FC = () => {
               <Link to="/services/business-continuity-disaster-recovery" className="text-red-600 hover:text-red-700 font-medium">
                 business continuity and disaster recovery services
               </Link>{' '}
-              help prepare critical systems for outages, ransomware, and data loss.
+              help prepare critical systems for outages, ransomware, and data loss, while our{' '}
+              <Link to="/services/network-security-services" className="text-red-600 hover:text-red-700 font-medium">
+                network security services
+              </Link>{' '}
+              protect business firewalls, wired networks, Wi-Fi, and access points.
             </p>
           </div>
 

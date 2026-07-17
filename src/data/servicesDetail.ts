@@ -240,6 +240,58 @@ export const servicesDetail: ServiceDetailData[] = [
     ],
   },
   {
+    slug: 'network-security-services',
+    service: 'Network Security Services',
+    title: 'Network Security Services Toronto & GTA',
+    h1: 'Managed Network Security for Toronto & GTA Businesses',
+    description:
+      'Network security services for Toronto and GTA businesses: managed firewalls, segmentation, secure Wi-Fi, 24/7 monitoring, and rapid response.',
+    keywords:
+      'network security services Toronto, managed network security GTA, business network security Toronto, firewall management GTA, network monitoring Toronto, network security company Toronto',
+    intro:
+      'Protect the network that connects your people, devices, applications, and cloud services. IT Rapid Support provides managed network security for Toronto and GTA businesses, including firewall management, network segmentation, secure wired and wireless configurations, access controls, 24/7 monitoring, and rapid remote or on-site response when suspicious activity appears.',
+    tags: ['Managed firewalls', 'Network segmentation', 'Secure Wi-Fi', 'Access controls', '24/7 monitoring', 'Incident response'],
+    highlights: [
+      {
+        title: 'Secure the Perimeter and the Inside',
+        description:
+          'Managed firewalls, secure configurations, and network segmentation help reduce unauthorized access and limit how far a compromised account or device can move through the business.',
+      },
+      {
+        title: 'Monitor for Suspicious Activity',
+        description:
+          'Continuous monitoring helps surface unusual traffic, failing devices, and security events early, with a 24/7 team available to investigate and respond when an alert needs action.',
+      },
+      {
+        title: 'Remote Speed with Local Support',
+        description:
+          'Most network security issues can be handled remotely, while local technicians provide scheduled and emergency on-site support across Toronto and the GTA when equipment or cabling needs hands-on work.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is included in managed network security services?',
+        answer:
+          'Managed network security can include firewall configuration and maintenance, network segmentation, secure wired and wireless settings, access controls, patching, continuous monitoring, alert investigation, and remote or on-site response across Toronto and the GTA.',
+      },
+      {
+        question: 'How is network security different from network management?',
+        answer:
+          'Network management focuses on reliable connectivity, performance, capacity, and device health. Network security focuses on controlling access, reducing exposure, monitoring suspicious activity, and containing threats. IT Rapid Support can manage both together so security does not come at the expense of reliability.',
+      },
+      {
+        question: 'Can you secure an existing business network?',
+        answer:
+          'Yes. We can review the current firewall, switching, Wi-Fi, remote access, segmentation, and monitoring setup, identify practical gaps, and then manage the agreed controls without requiring a complete rebuild when the existing equipment can support them.',
+      },
+      {
+        question: 'Do you provide 24/7 network security monitoring?',
+        answer:
+          'Yes. IT Rapid Support provides 24/7 monitoring and response as part of its managed cybersecurity services, backed by remote support and on-site service across the Greater Toronto Area when hands-on work is needed.',
+      },
+    ],
+  },
+  {
     slug: 'microsoft-365-azure-migration',
     service: 'Microsoft 365 & Azure Migration',
     title: 'Microsoft 365 & Azure Migration Services in the GTA',

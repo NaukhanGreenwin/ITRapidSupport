@@ -28,6 +28,9 @@ const ServicesGrid: React.FC = () => {
               add 24/7 coverage and specialist depth. Protect critical operations with our{' '}
               <Link to="/services/business-continuity-disaster-recovery" className="text-red-600 hover:text-red-700 font-medium">
                 business continuity and disaster recovery services
+              </Link>. Strengthen the environment with managed{' '}
+              <Link to="/services/network-security-services" className="text-red-600 hover:text-red-700 font-medium">
+                network security services
               </Link>.
             </p>
           </div>

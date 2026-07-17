@@ -111,7 +111,11 @@ const GTALanding: React.FC = () => {
               <Link to="/services/business-continuity-disaster-recovery" className="text-red-200 hover:text-white underline underline-offset-4">
                 business continuity and disaster recovery services
               </Link>{' '}
-              help protect critical operations — from our Vaughan headquarters to every corner of the GTA.
+              help protect critical operations, and our{' '}
+              <Link to="/services/network-security-services" className="text-red-200 hover:text-white underline underline-offset-4">
+                network security services
+              </Link>{' '}
+              secure firewalls, connectivity, and access — from our Vaughan headquarters to every corner of the GTA.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

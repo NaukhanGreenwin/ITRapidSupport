@@ -94,6 +94,7 @@ function App() {
             <Route path="/services/microsoft-365-managed-services" element={<ServiceLanding slug="microsoft-365-managed-services" />} />
             <Route path="/services/co-managed-it-services" element={<ServiceLanding slug="co-managed-it-services" />} />
             <Route path="/services/business-continuity-disaster-recovery" element={<ServiceLanding slug="business-continuity-disaster-recovery" />} />
+            <Route path="/services/network-security-services" element={<ServiceLanding slug="network-security-services" />} />
             <Route path="/services/microsoft-365-azure-migration" element={<ServiceLanding slug="microsoft-365-azure-migration" />} />
             <Route path="/services/network-management" element={<ServiceLanding slug="network-management" />} />
             <Route path="/services/it-helpdesk" element={<ServiceLanding slug="it-helpdesk" />} />

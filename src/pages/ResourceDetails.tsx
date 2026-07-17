@@ -185,7 +185,7 @@ export const allResources: ResourceItem[] = [
       "## 8. Have a Plan for When Something Goes Wrong",
       "Know who to call and what to do in the first hour of an incident. A clear response plan, combined with a partner who can act fast, dramatically reduces the cost and downtime of an attack.",
       "## Putting It Together",
-      "Each of these layers is achievable for a small business when set up by a team that does this every day. IT Rapid Support provides managed cybersecurity for businesses [across Toronto and the GTA](/it-support/gta), including MFA, email security, managed firewalls, endpoint protection, backup and recovery, and 24/7 [managed detection and response](/services/threat-detection). Call (289) 582-9930 to find the gaps in your current setup."
+      "Each of these layers is achievable for a small business when set up by a team that does this every day. IT Rapid Support provides managed cybersecurity for businesses [across Toronto and the GTA](/it-support/gta), including MFA, email security, endpoint protection, backup and recovery, 24/7 [managed detection and response](/services/threat-detection), and [network security services](/services/network-security-services) covering managed firewalls, segmentation, secure Wi-Fi, and monitoring. Call (289) 582-9930 to find the gaps in your current setup."
     ].join('\n\n'),
     type: "guide",
     date: "June 20, 2026",
