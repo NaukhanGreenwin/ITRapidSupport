@@ -38,7 +38,7 @@ const IndustryLanding: React.FC<IndustryLandingProps> = ({ slug }) => {
   return (
     <PageTransition>
       <SEO
-        title={data.title}
+        title={data.seoTitle ?? data.title}
         description={data.description}
         keywords={data.keywords}
         canonicalUrl={url}

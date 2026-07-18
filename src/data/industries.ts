@@ -18,6 +18,7 @@ export interface IndustryData {
   slug: string;
   industry: string;
   title: string;
+  seoTitle?: string;
   description: string;
   keywords: string;
   intro: string;
@@ -308,6 +309,7 @@ export const industries: IndustryData[] = [
     slug: 'professional-services',
     industry: 'Professional Services',
     title: 'Managed IT Services for Professional Services Firms',
+    seoTitle: 'IT Support for Professional Services | 24/7 Helpdesk',
     description:
       'IT support and cybersecurity for consulting, engineering, and professional services firms. Secure collaboration, Microsoft 365, 24/7 helpdesk in the GTA. Call (289) 582-9930.',
     keywords:
