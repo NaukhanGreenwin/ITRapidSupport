@@ -135,13 +135,25 @@ async function main() {
     // Identify as ReactSnap so the app renders (not hydrates) during capture.
     await page.setUserAgent('Mozilla/5.0 (compatible; ReactSnap)');
     await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: 'domcontentloaded', timeout: 45000 });
-    // Wait for the app to signal readiness, or for #root to have content.
+    // Wait for the app to mount (shell/header present).
     await page.waitForFunction(
-      'window.prerenderReady === true || (document.getElementById("root") && document.getElementById("root").children.length > 0)',
+      'document.getElementById("root") && document.getElementById("root").children.length > 0',
       { timeout: 25000 }
     ).catch(() => {});
-    // Small settle delay for async content/images to attach.
-    await new Promise((r) => setTimeout(r, 1200));
+    // Routes are now React.lazy() code-split: after mount the Suspense fallback
+    // (data-prerender-fallback) shows until the route chunk loads and renders the
+    // real page. Wait for that fallback to disappear so we never capture a shell.
+    await page.waitForFunction(
+      '!document.querySelector("[data-prerender-fallback]")',
+      { timeout: 20000 }
+    ).catch(() => {});
+    // Then wait for the app's own readiness signal (helmet/meta settled).
+    await page.waitForFunction(
+      'window.prerenderReady === true',
+      { timeout: 15000 }
+    ).catch(() => {});
+    // Settle delay for async content/images to attach (bumped for lazy chunks).
+    await new Promise((r) => setTimeout(r, 1800));
     // Remove static head tags from the SPA shell when react-helmet (data-rh)
     // rendered a page-specific equivalent — prevents duplicate/conflicting
     // canonicals, descriptions and og tags in the prerendered HTML.

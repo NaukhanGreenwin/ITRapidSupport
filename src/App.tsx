@@ -1,41 +1,52 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 import AnalyticsTracker from './components/AnalyticsTracker';
 import ThemeSwitcher from './components/ThemeSwitcher';
 import PreloadManager from './components/PreloadManager';
+// Homepage stays eager (it is the entry route and must render immediately).
 import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Solutions from './pages/Solutions';
-import Contact from './pages/Contact';
-import FAQ from './pages/FAQ';
-import Careers from './pages/Careers';
-import SecurityAssessment from './pages/SecurityAssessment';
-import Resources from './pages/Resources';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Cookies from './pages/Cookies';
+// NotFound stays eager (catch-all route, tiny, avoids a fallback flash on 404).
 import NotFound from './pages/NotFound';
-import Accessibility from './pages/Accessibility';
-import ResourceDetails from './pages/ResourceDetails';
-import Partners from './pages/Partners';
-import Support from './pages/Support';
-import CyberIncident from './pages/CyberIncident';
-import ManagedSecurity from './pages/ManagedSecurity';
-import ThreatDetection from './pages/ThreatDetection';
-import CloudSecurity from './pages/CloudSecurity';
-import ITSupport from './pages/ITSupport';
-import HighNetWorthSecurity from './pages/HighNetWorthSecurity';
-import LocationLanding from './pages/LocationLanding';
-import GTALanding from './pages/GTALanding';
-import EmailSpoofCheck from './pages/EmailSpoofCheck';
-import LegacyBookOnline from './pages/LegacyBookOnline';
-import IndustryLanding from './pages/IndustryLanding';
-import ServiceLanding from './pages/ServiceLanding';
-import RiskCalculator from './pages/RiskCalculator';
-import ManagedITPlans from './pages/ManagedITPlans';
+
+// Route-level code splitting: every non-home page loads as its own async chunk
+// so the initial JS payload is just the shell + homepage instead of one big bundle.
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Solutions = lazy(() => import('./pages/Solutions'));
+const Contact = lazy(() => import('./pages/Contact'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Careers = lazy(() => import('./pages/Careers'));
+const SecurityAssessment = lazy(() => import('./pages/SecurityAssessment'));
+const Resources = lazy(() => import('./pages/Resources'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Cookies = lazy(() => import('./pages/Cookies'));
+const Accessibility = lazy(() => import('./pages/Accessibility'));
+const ResourceDetails = lazy(() => import('./pages/ResourceDetails'));
+const Partners = lazy(() => import('./pages/Partners'));
+const Support = lazy(() => import('./pages/Support'));
+const CyberIncident = lazy(() => import('./pages/CyberIncident'));
+const ManagedSecurity = lazy(() => import('./pages/ManagedSecurity'));
+const ThreatDetection = lazy(() => import('./pages/ThreatDetection'));
+const CloudSecurity = lazy(() => import('./pages/CloudSecurity'));
+const ITSupport = lazy(() => import('./pages/ITSupport'));
+const HighNetWorthSecurity = lazy(() => import('./pages/HighNetWorthSecurity'));
+const LocationLanding = lazy(() => import('./pages/LocationLanding'));
+const GTALanding = lazy(() => import('./pages/GTALanding'));
+const EmailSpoofCheck = lazy(() => import('./pages/EmailSpoofCheck'));
+const LegacyBookOnline = lazy(() => import('./pages/LegacyBookOnline'));
+const IndustryLanding = lazy(() => import('./pages/IndustryLanding'));
+const ServiceLanding = lazy(() => import('./pages/ServiceLanding'));
+const RiskCalculator = lazy(() => import('./pages/RiskCalculator'));
+const ManagedITPlans = lazy(() => import('./pages/ManagedITPlans'));
+
+// Neutral, unbranded fallback while a route chunk loads. The data attribute lets
+// the prerenderer wait until the real route content has replaced it.
+const RouteFallback = () => (
+  <div data-prerender-fallback aria-hidden="true" style={{ minHeight: '60vh' }} />
+);
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -64,6 +75,7 @@ function App() {
         <ThemeSwitcher />
         <PreloadManager />
         <Layout>
+          <Suspense fallback={<RouteFallback />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -146,6 +158,7 @@ function App() {
             <Route path="/industries/logistics-warehousing" element={<IndustryLanding slug="logistics-warehousing" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
         </Layout>
       </Router>
     </HelmetProvider>
