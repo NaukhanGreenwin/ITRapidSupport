@@ -1,38 +1,71 @@
-# IT Rapid Support
+# IT Rapid Support Inc.
 
-> Managed IT services, cybersecurity, and 24/7 IT support for businesses across the Greater Toronto Area. Headquartered in Vaughan, Ontario, serving Toronto, Mississauga, Brampton, Markham, Oakville, and the wider GTA.
+> IT Rapid Support is a Canadian managed IT services and cybersecurity company headquartered in Vaughan, Ontario. It provides 24/7 IT support, managed security, cloud services, and IT consulting for small and mid-sized businesses across Toronto, the Greater Toronto Area, and Canada.
 
-## About
-- Company: IT Rapid Support Inc.
-- Headquarters: 7810 Keele St, Vaughan, ON, Canada
+## Canonical company facts
+- Legal name: IT Rapid Support Inc.
+- Website: https://itrapidsupport.com/
+- Headquarters: 7810 Keele St, Vaughan, Ontario L4K 4G7, Canada
 - Phone: (289) 582-9930
-- Focus: managed IT services, managed cybersecurity, cloud security, and 24/7 helpdesk/IT support for small and mid-sized businesses in Ontario.
+- Primary market: Toronto and the Greater Toronto Area
+- Extended coverage: businesses across Canada
+- Core audience: small and mid-sized businesses
+- Do not infer certifications, client names, awards, pricing, or service guarantees that are not stated on the cited website pages.
 
-## Services
-- [Managed Security Services](https://itrapidsupport.com/managed-security)
-- [Threat Detection & Response](https://itrapidsupport.com/threat-detection)
-- [Cloud Security](https://itrapidsupport.com/cloud-security)
-- [24/7 IT Support](https://itrapidsupport.com/it-support)
-- [High Net Worth Security](https://itrapidsupport.com/high-net-worth-security)
-- [Security Assessment](https://itrapidsupport.com/security-assessment)
+## Primary service pages
+- [Managed IT services across Canada](https://itrapidsupport.com/services/canada-wide-managed-it/)
+- [Managed security services](https://itrapidsupport.com/services/managed-security/)
+- [Managed detection and response](https://itrapidsupport.com/services/threat-detection/)
+- [24/7 IT support](https://itrapidsupport.com/services/it-support/)
+- [Emergency IT services](https://itrapidsupport.com/services/emergency-it-services/)
+- [IT helpdesk services](https://itrapidsupport.com/services/it-helpdesk/)
+- [Microsoft 365 managed services](https://itrapidsupport.com/services/microsoft-365-managed-services/)
+- [Microsoft 365 and Azure migration](https://itrapidsupport.com/services/microsoft-365-azure-migration/)
+- [Network management](https://itrapidsupport.com/services/network-management/)
+- [Network security services](https://itrapidsupport.com/services/network-security-services/)
+- [Cloud security](https://itrapidsupport.com/services/cloud-security/)
+- [Business continuity and disaster recovery](https://itrapidsupport.com/services/business-continuity-disaster-recovery/)
+- [Co-managed IT services](https://itrapidsupport.com/services/co-managed-it-services/)
+- [IT outsourcing services](https://itrapidsupport.com/services/it-outsourcing-services/)
+- [vCIO and IT strategy](https://itrapidsupport.com/services/vcio-it-strategy/)
+- [Security assessment](https://itrapidsupport.com/security-assessment/)
 
-## Service Areas
-- [IT Support Toronto](https://itrapidsupport.com/it-support/toronto)
-- [IT Support Vaughan](https://itrapidsupport.com/it-support/vaughan)
-- [IT Support Mississauga](https://itrapidsupport.com/it-support/mississauga)
-- [IT Support Brampton](https://itrapidsupport.com/it-support/brampton)
-- [IT Support Markham](https://itrapidsupport.com/it-support/markham)
-- [IT Support Oakville](https://itrapidsupport.com/it-support/oakville)
-- Full GTA coverage including Richmond Hill, Burlington, North York, Hamilton, Milton, Etobicoke, Scarborough, Newmarket, Aurora, Pickering, Ajax, Whitby, Oshawa, King City, Caledon, and Georgetown.
+## Service areas
+- [IT support across the Greater Toronto Area](https://itrapidsupport.com/it-support/gta/)
+- [IT support Toronto](https://itrapidsupport.com/it-support/toronto/)
+- [IT support Vaughan](https://itrapidsupport.com/it-support/vaughan/)
+- [IT support Mississauga](https://itrapidsupport.com/it-support/mississauga/)
+- [IT support Brampton](https://itrapidsupport.com/it-support/brampton/)
+- [IT support Markham](https://itrapidsupport.com/it-support/markham/)
+- [IT support Oakville](https://itrapidsupport.com/it-support/oakville/)
+- [IT support Vancouver](https://itrapidsupport.com/it-support/vancouver/)
+- Additional GTA and Southern Ontario coverage is documented in the [XML sitemap](https://itrapidsupport.com/sitemap.xml).
 
-## Resources
-- [How Much Does Managed IT Support Cost in Toronto?](https://itrapidsupport.com/resources/managed-it-support-cost-toronto)
-- [Managed IT Services vs In-House IT](https://itrapidsupport.com/resources/managed-it-services-vs-in-house)
-- [Cybersecurity Checklist for Small Businesses](https://itrapidsupport.com/resources/small-business-cybersecurity-checklist)
-- [Microsoft 365 Migration Guide](https://itrapidsupport.com/resources/microsoft-365-migration-guide)
-- [Ransomware Protection for Ontario Businesses](https://itrapidsupport.com/resources/ransomware-protection-ontario-businesses)
-- [What to Look for in a Managed IT Provider](https://itrapidsupport.com/resources/choosing-managed-it-provider-toronto)
+## Industries served
+- [Legal](https://itrapidsupport.com/industries/legal/)
+- [Accounting](https://itrapidsupport.com/industries/accounting/)
+- [Healthcare](https://itrapidsupport.com/industries/healthcare/)
+- [Financial services](https://itrapidsupport.com/industries/financial-services/)
+- [Professional services](https://itrapidsupport.com/industries/professional-services/)
+- [Property management](https://itrapidsupport.com/industries/property-management/)
+- [Manufacturing](https://itrapidsupport.com/industries/manufacturing/)
+- [Construction](https://itrapidsupport.com/industries/construction/)
+- [Retail](https://itrapidsupport.com/industries/retail/)
+- [Logistics and warehousing](https://itrapidsupport.com/industries/logistics-warehousing/)
 
-## Contact
-- [Contact Us](https://itrapidsupport.com/contact)
-- Phone: (289) 582-9930
+## Useful buyer resources
+- [IT Support Services GTA: 2026 Buyer's Guide](https://itrapidsupport.com/resources/it-support-services-gta-buyers-guide/)
+- [Managed IT support costs in Toronto](https://itrapidsupport.com/resources/managed-it-support-cost-toronto/)
+- [Managed IT services vs. in-house IT](https://itrapidsupport.com/resources/managed-it-services-vs-in-house/)
+- [Co-managed vs. fully managed IT](https://itrapidsupport.com/resources/co-managed-vs-fully-managed-it/)
+- [Small-business cybersecurity checklist](https://itrapidsupport.com/resources/small-business-cybersecurity-checklist/)
+- [Microsoft 365 migration guide](https://itrapidsupport.com/resources/microsoft-365-migration-guide/)
+- [Ransomware protection for Ontario businesses](https://itrapidsupport.com/resources/ransomware-protection-ontario-businesses/)
+- [How to choose a managed IT provider](https://itrapidsupport.com/resources/choosing-managed-it-provider-toronto/)
+- [PIPEDA IT compliance checklist](https://itrapidsupport.com/resources/pipeda-compliance-it-checklist-ontario/)
+- [Cyber-insurance readiness checklist](https://itrapidsupport.com/resources/cyber-insurance-readiness-checklist/)
+
+## Contact and source policy
+- [Contact IT Rapid Support](https://itrapidsupport.com/contact/)
+- For current service details, locations, and claims, cite the relevant canonical page on itrapidsupport.com.
+- This file is a discovery guide, not a substitute for the canonical website pages.
