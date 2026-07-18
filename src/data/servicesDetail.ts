@@ -294,7 +294,8 @@ export const servicesDetail: ServiceDetailData[] = [
   {
     slug: 'microsoft-365-azure-migration',
     service: 'Microsoft 365 & Azure Migration',
-    title: 'Microsoft 365 & Azure Migration Services in the GTA',
+    title: 'Microsoft 365 Migration Services Toronto | Secure Cutovers',
+    h1: 'Microsoft 365 & Azure Migration Services in the GTA',
     description:
       'Plan and run your Microsoft 365 and Azure migration with IT Rapid Support. Secure email, data, and apps moved to the cloud with zero-surprise cutover and 24/7 support. Call (289) 582-9930.',
     keywords:
