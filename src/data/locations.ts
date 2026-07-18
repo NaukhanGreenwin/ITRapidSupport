@@ -312,7 +312,7 @@ export const locations: CityData[] = [
   {
     slug: 'richmond-hill',
     city: 'Richmond Hill',
-    title: 'IT Support & Managed IT Services in Richmond Hill',
+    title: 'IT Support Richmond Hill | 24/7 Helpdesk',
     description:
       'Managed IT and cybersecurity for Richmond Hill businesses. 24/7 helpdesk, proactive monitoring, cloud, and on-site support across York Region. Call (289) 582-9930.',
     keywords:
