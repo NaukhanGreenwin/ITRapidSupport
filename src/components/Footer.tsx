@@ -15,7 +15,7 @@ export default function Footer() {
             <div>
               <h3 className="text-white font-semibold text-base mb-3">IT Rapid Support</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Enterprise-grade cybersecurity and IT management solutions for Ontario businesses.
+                Enterprise-grade cybersecurity and IT management solutions for Canadian businesses.
               </p>
             </div>
           </div>

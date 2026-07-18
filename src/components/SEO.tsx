@@ -263,6 +263,42 @@ export const generateLocalBusinessSchema = (location?: string) => {
   };
 };
 
+// Separate branch schema for the verified Vancouver office. Keep this distinct
+// from the Vaughan LocalBusiness so the two phone numbers and addresses never
+// get mixed in Google's local entity signals.
+export const generateVancouverLocalBusinessSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://itrapidsupport.com/it-support/vancouver/#localbusiness",
+    "name": "IT Rapid Support",
+    "url": "https://itrapidsupport.com/it-support/vancouver/",
+    "logo": "https://itrapidsupport.com/images/logo.png",
+    "email": "info@itrapidsupport.com",
+    "telephone": "+1-778-803-7215",
+    "description": "Remote-first managed IT services, cybersecurity, Microsoft 365 support, and a 24/7 helpdesk for Vancouver businesses.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1066 West Hastings Street, Suite 2000",
+      "addressLocality": "Vancouver",
+      "addressRegion": "BC",
+      "postalCode": "V6E 3X2",
+      "addressCountry": "CA"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Vancouver" },
+      { "@type": "AdministrativeArea", "name": "Metro Vancouver" },
+      { "@type": "State", "name": "British Columbia" }
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "@id": "https://itrapidsupport.com/#organization",
+      "name": "IT Rapid Support Inc."
+    },
+    "additionalType": "https://schema.org/ITService"
+  };
+};
+
 // Helper function to generate FAQ schema
 export const generateFAQSchema = (faqs: {question: string; answer: string}[]) => {
   return {

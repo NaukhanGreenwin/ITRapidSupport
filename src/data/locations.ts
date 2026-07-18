@@ -15,14 +15,23 @@ export interface CityHighlight {
 export interface CityData {
   slug: string;
   city: string;
-  // 'toronto' | 'vaughan' map to LocalBusiness schema variants; others use default.
-  schemaLocation?: 'toronto' | 'vaughan';
+  // Vancouver has a distinct branch schema so its NAP never mixes with Vaughan.
+  schemaLocation?: 'toronto' | 'vaughan' | 'vancouver';
   title: string;
   // Optional page H1 override; defaults to "IT Support & Managed IT Services in {city}".
   h1?: string;
   description: string;
   keywords: string;
   intro: string;
+  province?: string;
+  heroEyebrow?: string;
+  sectionIntro?: string;
+  areaHeading?: string;
+  areasIntro?: string;
+  phoneDisplay?: string;
+  phoneHref?: string;
+  officeAddress?: string;
+  ctaIntro?: string;
   nearbyAreas: string[];
   highlights: CityHighlight[];
   faqs: CityFAQ[];
@@ -1253,6 +1262,71 @@ export const locations: CityData[] = [
         question: 'How do you protect Bradford businesses from ransomware?',
         answer:
           'We combine managed firewalls, endpoint protection, email security, multi-factor authentication, security awareness training, managed detection and response, and tested backups so Bradford businesses can resist an attack and recover quickly if one gets through.',
+      },
+    ],
+  },
+  {
+    slug: 'vancouver',
+    city: 'Vancouver',
+    schemaLocation: 'vancouver',
+    title: 'IT Support Vancouver | 24/7 Remote-First Managed IT',
+    h1: 'IT Support & Managed IT Services in Vancouver',
+    description:
+      'IT support for Vancouver businesses: 24/7 remote helpdesk, proactive monitoring, Microsoft 365 management, cybersecurity, and backup oversight. Call (778) 803-7215.',
+    keywords:
+      'IT support Vancouver, managed IT services Vancouver, remote IT support Vancouver, cybersecurity Vancouver, Vancouver IT company, 24/7 IT helpdesk Vancouver',
+    intro:
+      'IT Rapid Support provides remote-first managed IT and cybersecurity support for Vancouver businesses from our West Hastings Street office. Our 24/7 helpdesk, proactive monitoring and maintenance, Microsoft 365 administration, managed cybersecurity, and backup oversight give local and distributed teams one dependable place to get help. Discuss any Vancouver-area hands-on requirements during scoping.',
+    province: 'British Columbia',
+    heroEyebrow: 'Vancouver, British Columbia',
+    sectionIntro:
+      'Remote-first managed IT, cybersecurity, Microsoft 365 administration, and 24/7 support for Vancouver organizations.',
+    areaHeading: 'Remote-First IT Support Across Metro Vancouver',
+    areasIntro:
+      'The 24/7 helpdesk and managed services support Vancouver-area users remotely. Discuss any location-specific hands-on requirements during scoping.',
+    phoneDisplay: '(778) 803-7215',
+    phoneHref: 'tel:+17788037215',
+    officeAddress: '1066 West Hastings Street, Suite 2000, Vancouver, BC V6E 3X2',
+    ctaIntro:
+      'Talk to our team about remote-first managed IT, cybersecurity, Microsoft 365, and 24/7 support for your Vancouver business.',
+    nearbyAreas: ['Downtown Vancouver', 'Burnaby', 'Richmond', 'Surrey', 'North Vancouver', 'West Vancouver'],
+    highlights: [
+      {
+        title: '24/7 Remote Helpdesk',
+        description:
+          'Vancouver users can reach one support team around the clock for day-to-day technology issues, account help, and escalations.',
+      },
+      {
+        title: 'Proactive IT & Microsoft 365',
+        description:
+          'Monitoring, maintenance, patching, and Microsoft 365 administration help keep systems reliable and distributed teams productive.',
+      },
+      {
+        title: 'Managed Cybersecurity & Backup',
+        description:
+          'Managed cybersecurity and backup oversight help reduce risk, protect business data, and strengthen recovery readiness.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Does IT Rapid Support provide IT support in Vancouver?',
+        answer:
+          'Yes. IT Rapid Support serves Vancouver businesses through a remote-first managed IT model from our West Hastings Street office. Services include a 24/7 helpdesk, proactive monitoring and maintenance, Microsoft 365 administration, managed cybersecurity, and backup oversight.',
+      },
+      {
+        question: 'Is on-site IT support available in Vancouver?',
+        answer:
+          'Our Vancouver service is remote-first. Discuss any location-specific hands-on requirements during scoping so the team can confirm what is available for your office and project.',
+      },
+      {
+        question: 'Can you support Vancouver employees who work from home or in other provinces?',
+        answer:
+          'Yes. The remote-first service is designed for office, hybrid, remote, and multi-location teams. Employees use one helpdesk and a consistent support process wherever they work in Canada.',
+      },
+      {
+        question: 'Where is the IT Rapid Support Vancouver office?',
+        answer:
+          'The Vancouver office is at 1066 West Hastings Street, Suite 2000, Vancouver, British Columbia V6E 3X2. The local phone number is (778) 803-7215.',
       },
     ],
   },

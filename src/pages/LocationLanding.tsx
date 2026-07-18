@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, ChevronRight, MapPin, Phone, Clock } from 'luc
 import PageTransition from '../components/PageTransition';
 import SEO, {
   generateLocalBusinessSchema,
+  generateVancouverLocalBusinessSchema,
   generateFAQSchema,
   generateServiceSchema,
 } from '../components/SEO';
@@ -22,14 +23,17 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
   }
 
   const url = `/it-support/${data.slug}`;
+  const isVancouver = data.schemaLocation === 'vancouver';
+  const phoneDisplay = data.phoneDisplay ?? '(289) 582-9930';
+  const phoneHref = data.phoneHref ?? 'tel:+12895829930';
 
   const schema = [
-    generateLocalBusinessSchema(data.schemaLocation),
+    isVancouver ? generateVancouverLocalBusinessSchema() : generateLocalBusinessSchema(data.schemaLocation),
     generateServiceSchema({
       name: `Managed IT Services & IT Support in ${data.city}`,
       description: data.description,
       url,
-      areaServed: `${data.city}, Ontario`,
+      areaServed: `${data.city}, ${data.province ?? 'Ontario'}`,
       serviceType: 'Managed IT Services',
     }),
     generateFAQSchema(data.faqs),
@@ -56,7 +60,9 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center px-4 py-2 bg-red-600/10 rounded-full mb-6">
               <MapPin className="h-4 w-4 text-red-200 mr-2" />
-              <span className="text-red-200 text-sm font-medium">Serving {data.city} & the GTA</span>
+              <span className="text-red-200 text-sm font-medium">
+                {data.heroEyebrow ?? `Serving ${data.city} & the GTA`}
+              </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               {data.h1 ?? `IT Support & Managed IT Services in ${data.city}`}
@@ -70,10 +76,10 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
                 Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+12895829930"
+                href={phoneHref}
                 className="inline-flex items-center justify-center bg-transparent text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors font-medium border border-white/30"
               >
-                <Phone className="mr-2 h-5 w-5" /> (289) 582-9930
+                <Phone className="mr-2 h-5 w-5" /> {phoneDisplay}
               </a>
             </div>
           </div>
@@ -88,7 +94,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
               IT Services for {data.city} Businesses
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Managed IT, cybersecurity, and 24/7 support built around the needs of {data.city} organizations.
+              {data.sectionIntro ?? `Managed IT, cybersecurity, and 24/7 support built around the needs of ${data.city} organizations.`}
             </p>
           </div>
 
@@ -111,11 +117,13 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center px-4 py-2 bg-red-600/10 text-red-600 rounded-full mb-6">
             <Clock className="h-4 w-4 mr-2" />
-            <span className="text-sm font-medium">Local, On-Demand Support</span>
+            <span className="text-sm font-medium">{isVancouver ? 'Remote-First Support' : 'Local, On-Demand Support'}</span>
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Areas We Serve Around {data.city}</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            {data.areaHeading ?? `Areas We Serve Around ${data.city}`}
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            Fast remote support and scheduled on-site service across {data.city} and nearby communities.
+            {data.areasIntro ?? `Fast remote support and scheduled on-site service across ${data.city} and nearby communities.`}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {data.nearbyAreas.map((area) => (
@@ -127,6 +135,15 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
               </span>
             ))}
           </div>
+          {data.officeAddress && (
+            <div className="inline-flex items-start mt-8 px-5 py-4 bg-white rounded-xl shadow-sm text-left">
+              <MapPin className="h-5 w-5 text-red-600 mr-3 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-gray-900">Vancouver office</p>
+                <p className="text-sm text-gray-600">{data.officeAddress}</p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
@@ -156,7 +173,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
             Need reliable IT support in {data.city}?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-3xl mx-auto">
-            Talk to our team about managed IT, cybersecurity, and 24/7 support for your {data.city} business.
+            {data.ctaIntro ?? `Talk to our team about managed IT, cybersecurity, and 24/7 support for your ${data.city} business.`}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

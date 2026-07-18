@@ -42,6 +42,7 @@ const routes = [
   '/it-support/maple',
   '/it-support/stouffville',
   '/it-support/bradford',
+  '/it-support/vancouver',
   '/industries/legal',
   '/industries/accounting',
   '/industries/healthcare',
