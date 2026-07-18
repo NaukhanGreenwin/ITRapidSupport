@@ -24,6 +24,10 @@ export interface ServiceDetailData {
   description: string;
   keywords: string;
   intro: string;
+  // Optional service-area and reusable section copy for pages beyond the GTA.
+  areaServed?: string;
+  sectionIntro?: string;
+  ctaIntro?: string;
   // Short chips shown in the "what we cover" band.
   tags: string[];
   highlights: ServiceHighlight[];
@@ -31,6 +35,63 @@ export interface ServiceDetailData {
 }
 
 export const servicesDetail: ServiceDetailData[] = [
+  {
+    slug: 'canada-wide-managed-it',
+    service: 'Canada-Wide Managed IT Services',
+    title: 'Managed IT Services Canada | 24/7 Remote Support',
+    h1: 'Canada-Wide Managed IT Services for Growing Businesses',
+    description:
+      'Canada-wide managed IT with a 24/7 remote helpdesk, proactive monitoring, Microsoft 365 support, cybersecurity, and backup management.',
+    keywords:
+      'managed IT services Canada, Canada-wide IT support, remote IT support Canada, managed service provider Canada, 24/7 IT helpdesk Canada, Microsoft 365 support Canada, cybersecurity services Canada',
+    intro:
+      'Give every employee one dependable place to get IT help, wherever they work in Canada. IT Rapid Support delivers remote-first managed IT nationwide, including a 24/7 helpdesk, proactive monitoring and maintenance, Microsoft 365 administration, managed cybersecurity, and backup oversight. On-site service remains available across Toronto and the Greater Toronto Area when hands-on support is required.',
+    areaServed: 'Canada',
+    sectionIntro:
+      'Managed remotely across Canada by a GTA-based team, with on-site service available in Toronto and the Greater Toronto Area.',
+    ctaIntro:
+      'Talk to our team about remote-first managed IT, cybersecurity, Microsoft 365, and 24/7 support for your Canadian workforce.',
+    tags: ['24/7 remote helpdesk', 'Proactive monitoring', 'Microsoft 365 management', 'Managed cybersecurity', 'Backup oversight', 'Multi-location support'],
+    highlights: [
+      {
+        title: 'One Helpdesk Across Canada',
+        description:
+          'Employees in different cities and time zones can reach the same 24/7 support team for day-to-day technology issues, account help, and escalations.',
+      },
+      {
+        title: 'Remote-First IT Management',
+        description:
+          'Proactive monitoring, patching, Microsoft 365 administration, cybersecurity, and backup oversight are delivered remotely so distributed teams receive consistent support.',
+      },
+      {
+        title: 'Consistent Support for Every Location',
+        description:
+          'Centralized processes for users, devices, security, and cloud services help multi-location and remote businesses reduce gaps between offices and home-based staff.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Does IT Rapid Support provide managed IT services across Canada?',
+        answer:
+          'Yes. Our remote-first managed IT services are available to businesses and distributed teams across Canada. The 24/7 helpdesk, monitoring, Microsoft 365 administration, cybersecurity, and backup oversight can all be delivered remotely.',
+      },
+      {
+        question: 'What is included in Canada-wide managed IT support?',
+        answer:
+          'Services can include 24/7 remote helpdesk support, device and network monitoring, patching, Microsoft 365 administration, managed cybersecurity, backup oversight, user onboarding and offboarding, and ongoing IT planning.',
+      },
+      {
+        question: 'Can you support employees working from home or in multiple provinces?',
+        answer:
+          'Yes. The service is designed for remote, hybrid, and multi-location teams. Employees use one helpdesk and consistent support process regardless of where they work in Canada.',
+      },
+      {
+        question: 'Is on-site support available everywhere in Canada?',
+        answer:
+          'Our Canada-wide service is remote-first. On-site service is available across Toronto and the Greater Toronto Area; businesses elsewhere in Canada receive remote support and should discuss any location-specific hands-on requirements during scoping.',
+      },
+    ],
+  },
   {
     slug: 'it-outsourcing-services',
     service: 'IT Outsourcing Services',

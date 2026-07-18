@@ -63,7 +63,10 @@ const Services: React.FC = () => {
               IT Rapid Support offers a comprehensive suite of IT security services tailored to your organization's needs.
             </p>
             <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-              For end-to-end technology management, see our{' '}
+              For teams working across the country, see our{' '}
+              <Link to="/services/canada-wide-managed-it" className="text-red-600 hover:text-red-700 font-medium">
+                Canada-wide managed IT services
+              </Link>. For end-to-end technology management in the GTA, see our{' '}
               <Link to="/services/it-outsourcing-services" className="text-red-600 hover:text-red-700 font-medium">
                 IT outsourcing services for Toronto and the GTA
               </Link>, or choose{' '}

@@ -30,7 +30,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
       name: data.service,
       description: data.description,
       url,
-      areaServed: 'Greater Toronto Area, Ontario',
+      areaServed: data.areaServed ?? 'Greater Toronto Area, Ontario',
       serviceType: 'Managed IT Services',
     }),
     generateFAQSchema(data.faqs),
@@ -89,7 +89,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
               {data.service} Done Right
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Managed, secured, and supported by a GTA team that keeps your business running.
+              {data.sectionIntro ?? 'Managed, secured, and supported by a GTA team that keeps your business running.'}
             </p>
           </div>
 
@@ -161,7 +161,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
             Ready to talk about {data.service.toLowerCase()}?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-3xl mx-auto">
-            Talk to our GTA team about managed IT, cybersecurity, and 24/7 support built around your business.
+            {data.ctaIntro ?? 'Talk to our GTA team about managed IT, cybersecurity, and 24/7 support built around your business.'}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

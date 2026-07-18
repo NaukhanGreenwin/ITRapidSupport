@@ -29,6 +29,7 @@ export default function Footer() {
               <li><Link to="/services/cloud-security" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
               <li><Link to="/services/it-support" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
               <li><Link to="/services/high-net-worth" className="text-slate-300 hover:text-white text-sm block">Elite Security</Link></li>
+              <li><Link to="/services/canada-wide-managed-it" className="text-slate-300 hover:text-white text-sm block">Canada-Wide Managed IT</Link></li>
               <li><Link to="/services/it-outsourcing-services" className="text-slate-300 hover:text-white text-sm block">IT Outsourcing Services</Link></li>
               <li><Link to="/services/microsoft-365-managed-services" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 Managed Services</Link></li>
               <li><Link to="/services/co-managed-it-services" className="text-slate-300 hover:text-white text-sm block">Co-Managed IT Services</Link></li>

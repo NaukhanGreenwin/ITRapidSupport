@@ -57,6 +57,7 @@ const routes = [
   '/industries/retail',
   '/industries/hospitality',
   '/industries/logistics-warehousing',
+  '/services/canada-wide-managed-it',
   '/services/it-outsourcing-services',
   '/services/microsoft-365-managed-services',
   '/services/co-managed-it-services',

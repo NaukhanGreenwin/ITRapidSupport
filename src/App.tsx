@@ -102,6 +102,7 @@ function App() {
             <Route path="/services/cloud-security" element={<CloudSecurity />} />
             <Route path="/services/it-support" element={<ITSupport />} />
             <Route path="/services/high-net-worth" element={<HighNetWorthSecurity />} />
+            <Route path="/services/canada-wide-managed-it" element={<ServiceLanding slug="canada-wide-managed-it" />} />
             <Route path="/services/it-outsourcing-services" element={<ServiceLanding slug="it-outsourcing-services" />} />
             <Route path="/services/microsoft-365-managed-services" element={<ServiceLanding slug="microsoft-365-managed-services" />} />
             <Route path="/services/co-managed-it-services" element={<ServiceLanding slug="co-managed-it-services" />} />
