@@ -52,6 +52,9 @@ export default function Footer() {
               <li><Link to="/it-risk-calculator" className="text-slate-300 hover:text-white text-sm block">Free IT Risk Calculator</Link></li>
               <li><Link to="/managed-it-plans" className="text-slate-300 hover:text-white text-sm block">Managed IT Plans</Link></li>
               <li><Link to="/cyber-incident" className="text-slate-300 hover:text-white text-sm block">Breach Services</Link></li>
+              <li><Link to="/solutions" className="text-slate-300 hover:text-white text-sm block">Industry Solutions</Link></li>
+              <li><Link to="/faq" className="text-slate-300 hover:text-white text-sm block">IT Support FAQ</Link></li>
+              <li><Link to="/resources" className="text-slate-300 hover:text-white text-sm block">Guides &amp; Resources</Link></li>
               <li><Link to="/partners" className="text-slate-300 hover:text-white text-sm block">Technology Partners</Link></li>
               <li><Link to="/support" className="text-slate-300 hover:text-white text-sm block">Technical Support</Link></li>
             </ul>

@@ -8,6 +8,8 @@ import SEO, {
   generateServiceSchema,
 } from '../components/SEO';
 import { getServiceDetail } from '../data/servicesDetail';
+import { getGuides, serviceGuideMap } from '../data/guideLinks';
+import RelatedGuides from '../components/RelatedGuides';
 import ServiceDifferentiators from '../components/ServiceDifferentiators';
 import NotFound from './NotFound';
 
@@ -151,6 +153,16 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
           </div>
         </div>
       </div>
+
+      <RelatedGuides
+        heading={`${data.service} Guides`}
+        intro="Practical guides from our team on the decisions behind this service."
+        guides={getGuides(serviceGuideMap[data.slug] ?? [
+          'it-support-services-gta-buyers-guide',
+          'managed-it-support-cost-toronto',
+          'choosing-managed-it-provider-toronto',
+        ])}
+      />
 
       <ServiceDifferentiators />
 

@@ -48,13 +48,20 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Google Analytics Tag (GA4) -->
+    <!-- Google Analytics Tag (GA4) — single loader; AnalyticsTracker sends
+         page_view events on route change, so auto page_view stays off here
+         to avoid double-counting the first pageview. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNT7SJ3LYP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
       gtag('js', new Date());
-      gtag('config', 'G-KNT7SJ3LYP');
+      gtag('config', 'G-KNT7SJ3LYP', {
+        send_page_view: false,
+        cookie_flags: 'samesite=none;secure',
+        anonymize_ip: true
+      });
     </script>
 
     <!-- Web App Manifest -->

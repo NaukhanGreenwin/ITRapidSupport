@@ -35,6 +35,8 @@ export interface CityData {
   nearbyAreas: string[];
   highlights: CityHighlight[];
   faqs: CityFAQ[];
+  // Optional in-depth local content sections rendered after the highlights.
+  sections?: { heading: string; paragraphs: string[] }[];
 }
 
 export const locations: CityData[] = [
@@ -130,6 +132,22 @@ export const locations: CityData[] = [
         question: 'Do you offer cloud services for Concord businesses?',
         answer:
           'Yes. We provide cloud migration, Microsoft 365 implementation and management, Azure and AWS setup, cloud security, cloud backup, hybrid cloud, and ongoing optimization to help Concord and Vaughan businesses improve flexibility and collaboration.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'What Managed IT Services in Vaughan Include',
+        paragraphs: [
+          'Managed IT services in Vaughan from IT Rapid Support cover the full technology stack your business relies on: a 24/7 helpdesk your team can call any time, proactive monitoring and patch management that catch problems before they cause downtime, Microsoft 365 administration, backup monitoring, and layered cybersecurity with firewalls, endpoint protection, and multi-factor authentication.',
+          'Because our headquarters is at 7810 Keele Street in Vaughan, on-site support is not an occasional add-on — it is part of the service model. When an issue cannot be fixed remotely, a local certified technician can be dispatched to offices, clinics, warehouses, and multi-site teams across Vaughan, Concord, Woodbridge, Maple, and Thornhill.',
+        ],
+      },
+      {
+        heading: 'Why Vaughan Businesses Choose a Local Managed IT Partner',
+        paragraphs: [
+          'A managed IT provider headquartered in Vaughan means shorter on-site response, technicians who know the local business environment, and one accountable team for support, security, and cloud instead of separate vendors. Fixed monthly pricing keeps IT costs predictable while 24/7 coverage protects shift work, customer-facing operations, and time-sensitive service commitments.',
+          'If your business is comparing providers, start with our Managed IT Services Vaughan guide below, or call (289) 582-9930 to review your current setup with our team.',
+        ],
       },
     ],
   },

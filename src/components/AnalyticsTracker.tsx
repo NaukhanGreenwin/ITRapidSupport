@@ -21,42 +21,9 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 }) => {
   const location = useLocation();
   
-  // Initialize GA4
-  useEffect(() => {
-    // Skip in development environment to avoid polluting analytics
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics tracking disabled in development mode');
-      return;
-    }
-    
-    if (!window.dataLayer) {
-      window.dataLayer = [];
-    }
-    
-    // Load GA4 script
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
-    document.head.appendChild(script);
-    
-    // Initialize gtag
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
-    };
-    
-    window.gtag('js', new Date());
-    window.gtag('config', googleAnalyticsId, {
-      send_page_view: false, // We'll track page views manually on route change
-      cookie_flags: 'samesite=none;secure',
-      anonymize_ip: true
-    });
-    
-    return () => {
-      // Clean up
-      document.head.removeChild(script);
-    };
-  }, [googleAnalyticsId]);
-  
+  // GA4 loading and config live in index.html (single loader, auto page_view
+  // off). This component only sends events through the shared window.gtag.
+
   // Track page views
   useEffect(() => {
     if (typeof window.gtag !== 'undefined' && process.env.NODE_ENV !== 'development') {

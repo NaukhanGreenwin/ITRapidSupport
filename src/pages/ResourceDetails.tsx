@@ -947,10 +947,14 @@ const ResourceDetails: React.FC = () => {
     );
   }
 
-  // Get recent resources excluding the current one
-  const relatedResources = allResources
-    .filter(resource => resource.id !== id && resource.type === currentResource.type)
-    .slice(0, 3);
+  // Rotate through the article list starting after the current one so every
+  // article receives inbound links from three siblings (a static "first 3"
+  // pick left most articles with no inbound article links at all).
+  const currentIndex = allResources.findIndex(resource => resource.id === id);
+  const relatedResources = (currentIndex === -1
+    ? allResources.filter(resource => resource.id !== id)
+    : [...allResources.slice(currentIndex + 1), ...allResources.slice(0, currentIndex)]
+  ).slice(0, 3);
 
   const getIcon = (type: string) => {
     switch (type) {
@@ -1166,7 +1170,7 @@ const ResourceDetails: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {relatedResources.map(resource => (
               <div key={resource.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <Link to={`/resources/${resource.id}`} className="block">
+                <Link to={`/resources/${resource.id}/`} className="block">
                   <img 
                     src={resource.image} 
                     alt={resource.title} 
@@ -1185,7 +1189,7 @@ const ResourceDetails: React.FC = () => {
                       {resource.date}
                     </div>
                   </div>
-                  <Link to={`/resources/${resource.id}`} className="block">
+                  <Link to={`/resources/${resource.id}/`} className="block">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors">
                       {resource.title}
                     </h3>
@@ -1194,7 +1198,7 @@ const ResourceDetails: React.FC = () => {
                     {resource.description}
                   </p>
                   <Link 
-                    to={`/resources/${resource.id}`}
+                    to={`/resources/${resource.id}/`}
                     className="inline-flex items-center text-red-600 hover:text-red-700 font-medium text-sm"
                   >
                     Read more <ArrowRight className="ml-1 h-3 w-3" />

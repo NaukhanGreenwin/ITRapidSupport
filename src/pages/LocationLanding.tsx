@@ -8,7 +8,9 @@ import SEO, {
   generateFAQSchema,
   generateServiceSchema,
 } from '../components/SEO';
-import { getLocation } from '../data/locations';
+import { getLocation, locations } from '../data/locations';
+import { getCityGuides } from '../data/guideLinks';
+import RelatedGuides from '../components/RelatedGuides';
 import NotFound from './NotFound';
 
 interface LocationLandingProps {
@@ -26,6 +28,16 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
   const isVancouver = data.schemaLocation === 'vancouver';
   const phoneDisplay = data.phoneDisplay ?? '(289) 582-9930';
   const phoneHref = data.phoneHref ?? 'tel:+12895829930';
+
+  // Rotate through the GTA city list so every city page receives keyword
+  // anchors from six sibling pages (striking-distance "managed it services
+  // {city}" queries). Vancouver stays out of the GTA link wheel.
+  const gtaCities = locations.filter((l) => l.slug !== 'vancouver');
+  const selfIndex = gtaCities.findIndex((l) => l.slug === data.slug);
+  const nearbyCityLinks =
+    isVancouver || selfIndex === -1
+      ? []
+      : [...gtaCities.slice(selfIndex + 1), ...gtaCities.slice(0, selfIndex)].slice(0, 6);
 
   const schema = [
     isVancouver ? generateVancouverLocalBusinessSchema() : generateLocalBusinessSchema(data.schemaLocation),
@@ -112,6 +124,26 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
         </div>
       </div>
 
+      {/* Optional in-depth local content */}
+      {data.sections && data.sections.length > 0 && (
+        <div className="py-16 bg-slate-50">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            {data.sections.map((section) => (
+              <div key={section.heading}>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  {section.heading}
+                </h2>
+                {section.paragraphs.map((p) => (
+                  <p key={p.slice(0, 40)} className="text-gray-600 leading-relaxed mb-4">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Areas served */}
       <div className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -165,6 +197,34 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
           </div>
         </div>
       </div>
+
+      <RelatedGuides
+        heading={`IT Guides for ${data.city} Businesses`}
+        intro="Plain-language guides from our team on choosing and running managed IT."
+        guides={getCityGuides(data.slug)}
+      />
+
+      {/* Managed IT in nearby cities */}
+      {nearbyCityLinks.length > 0 && (
+        <div className="py-12 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Managed IT Services Near {data.city}
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              {nearbyCityLinks.map((loc) => (
+                <Link
+                  key={loc.slug}
+                  to={`/it-support/${loc.slug}`}
+                  className="px-4 py-2 bg-white rounded-full text-gray-700 text-sm font-medium shadow-sm hover:text-red-600 transition-colors"
+                >
+                  Managed IT Services {loc.city}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">
