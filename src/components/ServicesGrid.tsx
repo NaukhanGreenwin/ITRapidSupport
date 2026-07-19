@@ -31,7 +31,14 @@ const ServicesGrid: React.FC = () => {
               </Link>. Strengthen the environment with managed{' '}
               <Link to="/services/network-security-services" className="text-red-600 hover:text-red-700 font-medium">
                 network security services
-              </Link>.
+              </Link>, backed by our{' '}
+              <Link to="/services/managed-security/" className="text-red-600 hover:text-red-700 font-medium">
+                cybersecurity services for Toronto and the GTA
+              </Link>. And when something breaks after hours, our{' '}
+              <Link to="/services/emergency-it-services/" className="text-red-600 hover:text-red-700 font-medium">
+                24/7 emergency IT services
+              </Link>{' '}
+              respond immediately.
             </p>
           </div>
           
@@ -45,8 +52,8 @@ const ServicesGrid: React.FC = () => {
                 <p className="text-gray-600 mb-4 text-sm">
                   24/7 monitoring and response by our Toronto-based expert security team, ensuring your business stays protected around the clock.
                 </p>
-                <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
-                  Discover our managed security offerings <ChevronRight className="ml-1 h-3 w-3" />
+                <Link to="/services/managed-security/" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
+                  Explore our cybersecurity services for the GTA <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
             </AnimateOnScroll>

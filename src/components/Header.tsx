@@ -268,7 +268,7 @@ export default function Header() {
                       exit="exit"
                       variants={dropdownVariants}
                     >
-                      <Link to="/services/managed-security" 
+                      <Link to="/services/managed-security/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
@@ -457,7 +457,7 @@ export default function Header() {
                 <motion.div variants={mobileMenuItemVariants}>
                   <button
                     className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
-                    onClick={() => handleNavigation("/services/managed-security")}
+                    onClick={() => handleNavigation("/services/managed-security/")}
                   >
                     Managed Security
                   </button>

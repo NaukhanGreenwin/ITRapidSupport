@@ -24,7 +24,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-base mb-4">Services</h3>
             <ul className="space-y-2.5">
-              <li><Link to="/services/managed-security" className="text-slate-300 hover:text-white text-sm block">Managed Security</Link></li>
+              <li><Link to="/services/managed-security/" className="text-slate-300 hover:text-white text-sm block">Managed Security</Link></li>
               <li><Link to="/services/threat-detection" className="text-slate-300 hover:text-white text-sm block">Threat Detection</Link></li>
               <li><Link to="/services/cloud-security" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
               <li><Link to="/services/it-support" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
@@ -39,7 +39,7 @@ export default function Footer() {
               <li><Link to="/services/network-management" className="text-slate-300 hover:text-white text-sm block">Network Management</Link></li>
               <li><Link to="/services/microsoft-365-azure-migration" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 &amp; Azure Migration</Link></li>
               <li><Link to="/services/vcio-it-strategy" className="text-slate-300 hover:text-white text-sm block">vCIO &amp; IT Strategy</Link></li>
-              <li><Link to="/services/emergency-it-services" className="text-slate-300 hover:text-white text-sm block">Emergency IT Services</Link></li>
+              <li><Link to="/services/emergency-it-services/" className="text-slate-300 hover:text-white text-sm block">Emergency IT Services</Link></li>
               <li><Link to="/tools/email-spoof-check" className="text-slate-300 hover:text-white text-sm block">Free Email Spoofing Check</Link></li>
             </ul>
           </div>

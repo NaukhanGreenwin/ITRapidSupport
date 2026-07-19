@@ -85,7 +85,14 @@ const Services: React.FC = () => {
               <Link to="/services/network-security-services" className="text-red-600 hover:text-red-700 font-medium">
                 network security services
               </Link>{' '}
-              protect business firewalls, wired networks, Wi-Fi, and access points.
+              protect business firewalls, wired networks, Wi-Fi, and access points. For 24/7 threat monitoring and response, see our{' '}
+              <Link to="/services/managed-security/" className="text-red-600 hover:text-red-700 font-medium">
+                cybersecurity services for the GTA
+              </Link>, and when an outage or incident is already underway, our{' '}
+              <Link to="/services/emergency-it-services/" className="text-red-600 hover:text-red-700 font-medium">
+                emergency IT services
+              </Link>{' '}
+              respond around the clock.
             </p>
           </div>
 
@@ -113,8 +120,8 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Threat hunting</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
-                Discover our managed security services <ArrowRight className="ml-2 h-4 w-4" />
+              <Link to="/services/managed-security/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+                Explore our cybersecurity services for the GTA <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 

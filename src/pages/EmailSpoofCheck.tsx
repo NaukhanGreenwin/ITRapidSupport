@@ -322,7 +322,7 @@ const EmailSpoofCheck: React.FC = () => {
             SPF, DKIM and DMARC explained
           </Link>
           , or explore our{' '}
-          <Link to="/services/managed-security" className="text-red-600 hover:text-red-700 font-medium">
+          <Link to="/services/managed-security/" className="text-red-600 hover:text-red-700 font-medium">
             managed email security services
           </Link>{' '}
           for Toronto and GTA businesses.
