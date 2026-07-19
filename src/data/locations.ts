@@ -86,6 +86,22 @@ export const locations: CityData[] = [
           'Yes. Alongside immediate remote support, our certified technicians provide scheduled and emergency on-site support across Toronto and the wider GTA when an issue is best resolved in person.',
       },
     ],
+    sections: [
+      {
+        heading: 'What Managed IT Services in Toronto Include',
+        paragraphs: [
+          'Managed IT services in Toronto from IT Rapid Support cover everything a growing business needs from an IT department: a 24/7 helpdesk your staff can reach by phone, email, or chat, proactive monitoring and patch management that catch failures before they become outages, Microsoft 365 administration, backup monitoring, and layered cybersecurity with managed firewalls, endpoint protection, multi-factor authentication, and managed detection and response.',
+          'Our headquarters at 7810 Keele Street in Vaughan puts certified technicians a short drive from every corner of the city, so on-site dispatch is part of the service — not an add-on. We support offices, clinics, and multi-site teams across Downtown Toronto, North York, Scarborough, Etobicoke, and East York, with remote resolution first and a technician on the road when hands-on work is needed.',
+        ],
+      },
+      {
+        heading: 'Choosing a Managed IT Company in Toronto',
+        paragraphs: [
+          'Toronto has no shortage of IT companies, so the comparison comes down to coverage and accountability: true 24/7 support rather than business-hours-only, security operations built into the core service rather than sold as an afterthought, and one accountable partner for helpdesk, cybersecurity, cloud, and on-site work instead of separate vendors. Fixed monthly pricing keeps IT spend predictable as you grow.',
+          'If you are evaluating providers, our guides on managed IT support costs in Toronto and what to look for in a Toronto managed IT provider below are a practical starting point — or call (289) 582-9930 to review your current setup with our team.',
+        ],
+      },
+    ],
   },
   {
     slug: 'vaughan',
