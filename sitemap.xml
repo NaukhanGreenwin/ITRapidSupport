@@ -83,6 +83,31 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Case Studies -->
+  <url>
+    <loc>https://itrapidsupport.com/case-studies/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/case-studies/finex-development-email-security/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/case-studies/capital-fire-security-microsoft-365-cleanup/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/case-studies/artistic-smart-homes-email-authentication/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- Blog / Resource Articles -->
   <url>
     <loc>https://itrapidsupport.com/resources/managed-it-support-cost-toronto/</loc>
