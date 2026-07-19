@@ -357,7 +357,7 @@ export const industries: IndustryData[] = [
     industry: 'Financial Services',
     title: 'Managed IT Services for Financial Services Firms',
     description:
-      'IT support and cybersecurity for financial services firms. Data protection, regulatory-aware security, reliable systems, 24/7 helpdesk in the GTA. Call (289) 582-9930.',
+      'IT support and cybersecurity for financial services firms. Data protection, regulatory-aware security, 24/7 GTA helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for financial services, financial firm cybersecurity, managed IT for finance Toronto, PCI-DSS IT support, wealth management IT services',
     intro:
@@ -403,7 +403,7 @@ export const industries: IndustryData[] = [
     industry: 'Dental Practices',
     title: 'Managed IT Services for Dental Practices in the GTA',
     description:
-      'IT support and cybersecurity for dental offices. PHIPA-aware patient data protection, practice software support, and 24/7 helpdesk across the GTA. Call (289) 582-9930.',
+      'IT support and cybersecurity for dental offices. PHIPA-aware patient data protection, practice software support, 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for dental offices, dental practice IT services Toronto, dental cybersecurity, managed IT for dentists GTA, PHIPA IT support dental',
     intro:
@@ -449,7 +449,7 @@ export const industries: IndustryData[] = [
     industry: 'Nonprofits & Charities',
     title: 'Managed IT Services for Nonprofits & Charities in the GTA',
     description:
-      'Affordable managed IT and cybersecurity for nonprofits and charities. Donor data protection, Microsoft 365 management, and 24/7 helpdesk across the GTA. Call (289) 582-9930.',
+      'Affordable managed IT and cybersecurity for nonprofits. Donor data protection, Microsoft 365 management, 24/7 GTA helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for nonprofits, nonprofit IT services Toronto, charity IT support GTA, managed IT for nonprofits, nonprofit cybersecurity, donor data protection',
     intro:
@@ -495,7 +495,7 @@ export const industries: IndustryData[] = [
     industry: 'Schools & Education',
     title: 'Managed IT Services for Schools & Educational Institutions',
     description:
-      'IT support and cybersecurity for private schools, school boards, and educational institutions. Student data protection, classroom uptime, and 24/7 helpdesk across Toronto & the GTA. Call (289) 582-9930.',
+      'IT support and cybersecurity for schools and education. Student data protection, classroom uptime, 24/7 helpdesk across the GTA. Call (289) 582-9930.',
     keywords:
       'IT support for schools, education IT services Toronto, school IT support GTA, managed IT for private schools, school board IT services, student data protection, campus network security',
     intro:
@@ -541,7 +541,7 @@ export const industries: IndustryData[] = [
     industry: 'Property Management',
     title: 'IT Support for Property Management Companies',
     description:
-      'Managed IT for property management companies in Toronto & the GTA. Yardi and property-software support, building access control and camera systems, multi-site connectivity, and after-hours response. Call (289) 582-9930.',
+      'Managed IT for property management companies. Yardi and property-software support, multi-site connectivity, after-hours response. Call (289) 582-9930.',
     keywords:
       'IT support property management, property management IT services, Yardi support, property management software support, building access control IT, multi-site IT support GTA, condo property management IT, after-hours IT support',
     intro:
@@ -597,7 +597,7 @@ export const industries: IndustryData[] = [
     industry: 'Retail',
     title: 'Managed IT Services for Retail Stores in the GTA',
     description:
-      'IT support and cybersecurity for retail businesses. Reliable store networks, point-of-sale environment support, PCI-DSS-aware security, and 24/7 helpdesk across the GTA. Call (289) 582-9930.',
+      'IT support and cybersecurity for retail. Reliable store networks, POS environment support, PCI-DSS-aware security, 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for retail, retail IT services Toronto, retail cybersecurity, managed IT for retail stores GTA, POS network support, multi-location retail IT',
     intro:
@@ -648,7 +648,7 @@ export const industries: IndustryData[] = [
     industry: 'Restaurants & Hospitality',
     title: 'IT Support for Restaurants & Hospitality in the GTA',
     description:
-      'Managed IT and cybersecurity for restaurants, cafes, and hospitality businesses. POS environment support, guest Wi-Fi, payment security, and 24/7 help across the GTA. Call (289) 582-9930.',
+      'Managed IT and cybersecurity for restaurants and hospitality. POS environment support, guest Wi-Fi, payment security, 24/7 help. Call (289) 582-9930.',
     keywords:
       'IT support for restaurants, restaurant IT services Toronto, hospitality IT support GTA, restaurant POS network, guest Wi-Fi setup, hospitality cybersecurity',
     intro:
@@ -699,7 +699,7 @@ export const industries: IndustryData[] = [
     industry: 'Logistics & Warehousing',
     title: 'Managed IT Services for Logistics & Warehousing in the GTA',
     description:
-      'IT support and cybersecurity for logistics, distribution, and warehouse operations. Warehouse Wi-Fi, scanner and WMS environment support, multi-site connectivity, 24/7 help. Call (289) 582-9930.',
+      'IT support for logistics and warehouse operations. Warehouse Wi-Fi, scanner and WMS environment support, multi-site connectivity. Call (289) 582-9930.',
     keywords:
       'IT support for logistics, warehouse IT services Toronto, logistics IT support GTA, warehouse Wi-Fi, WMS support, distribution centre IT, 3PL IT services',
     intro:

@@ -156,7 +156,7 @@ export const locations: CityData[] = [
     city: 'Mississauga',
     title: 'IT Support Mississauga | Managed IT Services & Cybersecurity',
     description:
-      'IT support Mississauga businesses rely on: 24/7 helpdesk, managed IT services, cybersecurity, proactive monitoring, cloud, and project management. Call (289) 582-9930.',
+      'IT support Mississauga businesses rely on: 24/7 helpdesk, managed IT services, cybersecurity, monitoring, and cloud. Call (289) 582-9930.',
     keywords:
       'IT support Mississauga, managed IT services Mississauga, cybersecurity Mississauga, Mississauga IT company, IT helpdesk Mississauga',
     intro:
@@ -203,7 +203,7 @@ export const locations: CityData[] = [
     title: 'Managed IT Services Brampton | IT Support & Cybersecurity',
     h1: 'Managed IT Services & IT Support in Brampton',
     description:
-      'Managed IT services Brampton businesses trust. Fast IT support, cybersecurity, under 1-hour critical response, 24/7 helpdesk, and on-site service. Call (289) 582-9930.',
+      'Managed IT services Brampton businesses trust. Fast IT support, cybersecurity, 24/7 helpdesk, and on-site service. Call (289) 582-9930.',
     keywords:
       'IT support Brampton, managed IT services Brampton, cybersecurity Brampton, Brampton IT company, emergency IT support Brampton',
     intro:
@@ -388,7 +388,7 @@ export const locations: CityData[] = [
     title: 'Burlington IT Services | Managed IT Support & Cybersecurity',
     h1: 'Burlington IT Services & Managed IT Support',
     description:
-      'Burlington IT services from a local team: managed IT, cybersecurity, 24/7 helpdesk, proactive monitoring, cloud, and on-site support across Halton. Call (289) 582-9930.',
+      'Burlington IT services from a local team: managed IT, cybersecurity, 24/7 helpdesk, cloud, and on-site support across Halton. Call (289) 582-9930.',
     keywords:
       'Burlington IT services, IT support Burlington, managed IT services Burlington, cybersecurity Burlington, Burlington IT company, IT helpdesk Burlington, Halton IT support',
     intro:
@@ -564,6 +564,22 @@ export const locations: CityData[] = [
         "question": "Can IT Rapid Support provide on-site IT service in Milton?",
         "answer": "Absolutely. While many issues are resolved rapidly through our remote helpdesk, our certified technicians travel to Milton for scheduled maintenance and emergency on-site support. We serve businesses throughout the Greater Toronto Area, including the Halton Region, so Milton is well within our service coverage."
       }
+    ],
+    "sections": [
+      {
+        "heading": "What IT Support in Milton Includes",
+        "paragraphs": [
+          "IT support in Milton from IT Rapid Support covers the full stack your business depends on: a 24/7 helpdesk your team can reach any time, proactive monitoring and patch management that catch problems before they become downtime, Microsoft 365 administration, backup monitoring, and layered cybersecurity with managed firewalls, endpoint protection, and multi-factor authentication.",
+          "When an issue cannot be resolved remotely, a certified technician is dispatched on-site. We support offices, manufacturers, warehouses, and multi-site teams across Milton and the wider Halton Region, including Oakville, Burlington, and Georgetown."
+        ]
+      },
+      {
+        "heading": "Why Milton Businesses Choose IT Rapid Support",
+        "paragraphs": [
+          "Growing Milton businesses usually outgrow break-fix IT before they can justify a full internal IT department. A managed IT partner fills that gap with one accountable team for support, security, and cloud, at a fixed monthly cost that keeps IT spending predictable while 24/7 coverage protects shift work and customer-facing operations.",
+          "If you are comparing IT support options in Milton, start with the guides below, or call (289) 582-9930 to review your current setup with our team."
+        ]
+      }
     ]
   },
   {
@@ -571,7 +587,7 @@ export const locations: CityData[] = [
     "city": "Etobicoke",
     "schemaLocation": "toronto",
     "title": "IT Support & Managed IT Services in Etobicoke",
-    "description": "Managed IT services and cybersecurity for Etobicoke businesses. 24/7 helpdesk, network security, cloud, and rapid on-site support across the GTA. Call (289) 582-9930.",
+    "description": "Managed IT services and cybersecurity for Etobicoke businesses. 24/7 helpdesk, network security, cloud, and on-site support. Call (289) 582-9930.",
     "keywords": "IT support Etobicoke, managed IT services Etobicoke, cybersecurity Etobicoke, Etobicoke IT company, IT helpdesk Etobicoke, managed security Etobicoke",
     "intro": "IT Rapid Support keeps Etobicoke businesses running with managed IT services, cybersecurity, and a 24/7 helpdesk. From the office parks along the Queensway to the industrial corridors near Pearson, we act as your full IT department so your team can stay focused on the work that matters.",
     "nearbyAreas": [
@@ -697,6 +713,22 @@ export const locations: CityData[] = [
       {
         "question": "Can you help secure our Newmarket business against cyber threats?",
         "answer": "Yes. We deploy managed firewalls, endpoint protection, email security, multi-factor authentication, security awareness training, and managed detection and response to protect Newmarket organizations against ransomware, phishing, and other modern threats."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Managed IT Services for Newmarket and York Region",
+        "paragraphs": [
+          "Managed IT services for Newmarket businesses from IT Rapid Support include a 24/7 helpdesk, proactive monitoring and patch management, Microsoft 365 administration, backup monitoring, and layered cybersecurity with managed firewalls, endpoint protection, and multi-factor authentication — everything an internal IT department would handle, delivered as one service.",
+          "From our head office in Vaughan we support organizations across York Region, so Newmarket businesses get both rapid remote help and hands-on on-site support, alongside neighbouring Aurora, East Gwillimbury, and Whitchurch-Stouffville."
+        ]
+      },
+      {
+        "heading": "Why Newmarket Businesses Partner with IT Rapid Support",
+        "paragraphs": [
+          "A single accountable IT partner replaces the patchwork of break-fix vendors many Newmarket businesses rely on: support, security, cloud, and IT planning from one local team, at a fixed monthly cost that keeps budgeting predictable while 24/7 coverage protects your operations outside business hours.",
+          "If you are evaluating IT services in Newmarket, start with the guides below, or call (289) 582-9930 to talk through your current setup with our team."
+        ]
       }
     ]
   },
@@ -1056,7 +1088,7 @@ export const locations: CityData[] = [
     schemaLocation: 'vaughan',
     title: 'IT Support & Managed IT Services in Woodbridge (Vaughan)',
     description:
-      'Managed IT services and cybersecurity for Woodbridge businesses. Local Vaughan-based technicians minutes away, 24/7 helpdesk, managed security, and cloud. Call (289) 582-9930.',
+      'Managed IT services and cybersecurity for Woodbridge businesses. Vaughan-based technicians minutes away, 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support Woodbridge, managed IT services Woodbridge, cybersecurity Woodbridge, Woodbridge IT company, IT helpdesk Woodbridge, Vaughan IT support',
     intro:
@@ -1196,7 +1228,7 @@ export const locations: CityData[] = [
     city: 'Stouffville',
     title: 'IT Support & Managed IT Services in Stouffville',
     description:
-      'Managed IT services and cybersecurity for Stouffville businesses. 24/7 helpdesk, managed security, cloud, and on-site support across Whitchurch-Stouffville. Call (289) 582-9930.',
+      'Managed IT and cybersecurity for Stouffville businesses. 24/7 helpdesk, managed security, and on-site support across Whitchurch-Stouffville. Call (289) 582-9930.',
     keywords:
       'IT support Stouffville, managed IT services Stouffville, cybersecurity Stouffville, Stouffville IT company, IT helpdesk Whitchurch-Stouffville',
     intro:
@@ -1242,7 +1274,7 @@ export const locations: CityData[] = [
     city: 'Bradford',
     title: 'IT Support & Managed IT Services in Bradford',
     description:
-      'Managed IT services and cybersecurity for Bradford businesses. 24/7 helpdesk, managed security, cloud, and on-site support across Bradford West Gwillimbury. Call (289) 582-9930.',
+      'Managed IT services and cybersecurity for Bradford businesses. 24/7 helpdesk, cloud, and on-site support across Bradford West Gwillimbury. Call (289) 582-9930.',
     keywords:
       'IT support Bradford, managed IT services Bradford, cybersecurity Bradford Ontario, Bradford IT company, IT helpdesk Bradford West Gwillimbury',
     intro:

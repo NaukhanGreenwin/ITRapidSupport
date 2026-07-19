@@ -9,7 +9,7 @@ const CloudSecurity = () => {
     <div className="min-h-screen bg-slate-50">
       <SEO
         title="Cloud Security Services Toronto | Microsoft 365 & Azure Security GTA"
-        description="Cloud security services for Toronto and GTA businesses: Microsoft 365 and Azure security, cloud posture management, identity protection, and data security. Call (289) 582-9930."
+        description="Cloud security for Toronto and GTA businesses: Microsoft 365 and Azure security, identity protection, and data security. Call (289) 582-9930."
         keywords="cloud security Toronto, Microsoft 365 security GTA, Azure security Toronto, cloud security services GTA, cloud data protection Toronto"
         canonicalUrl="/services/cloud-security"
         schema={[

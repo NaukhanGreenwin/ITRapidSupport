@@ -256,7 +256,7 @@ const RiskCalculator: React.FC = () => {
   const url = '/it-risk-calculator';
   const title = 'Free IT Security Risk Calculator for Ontario Businesses';
   const description =
-    'Take our free 2-minute IT security risk assessment. Answer 10 questions and get an instant cybersecurity risk score, your biggest gaps, and a prioritized plan from IT Rapid Support in the Greater Toronto Area.';
+    'Free 2-minute IT security risk assessment: answer 10 questions and get an instant risk score, your biggest gaps, and a prioritized plan.';
 
   const schema = [
     generateLocalBusinessSchema(),

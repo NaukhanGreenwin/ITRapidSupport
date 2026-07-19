@@ -9,7 +9,7 @@ const ThreatDetection = () => {
     <div className="min-h-screen bg-slate-50">
       <SEO
         title="Managed Detection & Response (MDR) Services | Toronto & GTA"
-        description="Managed Detection and Response (MDR) for Toronto and GTA businesses: 24/7 threat monitoring, AI-assisted detection, expert investigation, and rapid containment. Call (289) 582-9930."
+        description="Managed Detection and Response (MDR) for Toronto and GTA businesses: 24/7 threat monitoring, expert investigation, rapid containment. Call (289) 582-9930."
         keywords="managed detection and response Toronto, MDR services Toronto, MDR GTA, threat detection services, 24/7 threat monitoring, threat detection and response Toronto"
         canonicalUrl="/services/threat-detection"
         schema={[

@@ -409,7 +409,7 @@ export const servicesDetail: ServiceDetailData[] = [
     service: 'Network Management & Monitoring',
     title: 'Managed Network Management & Monitoring in the GTA',
     description:
-      'Proactive network management and 24/7 monitoring from IT Rapid Support. Reliable, secure wired and wireless networks for GTA businesses, with fast response and on-site service. Call (289) 582-9930.',
+      'Proactive network management and 24/7 monitoring. Reliable, secure wired and wireless networks for GTA businesses. Call (289) 582-9930.',
     keywords:
       'network management Toronto, network monitoring services GTA, managed network support, business network setup Toronto, firewall management, Wi-Fi management for business',
     intro:
@@ -460,7 +460,7 @@ export const servicesDetail: ServiceDetailData[] = [
     service: '24/7 IT Help Desk Support',
     title: '24/7 IT Help Desk Support for GTA Businesses',
     description:
-      'Fast, friendly 24/7 IT help desk support from IT Rapid Support. Remote and on-site help for GTA businesses, with rapid response that keeps your team productive. Call (289) 582-9930.',
+      'Fast, friendly 24/7 IT help desk support. Remote and on-site help for GTA businesses with rapid response. Call (289) 582-9930.',
     keywords:
       'IT help desk Toronto, 24/7 IT support GTA, managed help desk services, business IT support Toronto, remote IT support, outsourced help desk',
     intro:
@@ -511,7 +511,7 @@ export const servicesDetail: ServiceDetailData[] = [
     service: 'vCIO & IT Strategy',
     title: 'vCIO & IT Strategy Services for GTA Businesses',
     description:
-      'Get executive-level IT leadership without the full-time cost. IT Rapid Support provides vCIO services, IT planning, budgeting, and technology roadmaps for GTA businesses. Call (289) 582-9930.',
+      'Executive-level IT leadership without the full-time cost: vCIO services, IT planning, budgeting, and roadmaps for GTA businesses. Call (289) 582-9930.',
     keywords:
       'vCIO services Toronto, IT strategy consulting GTA, virtual CIO, IT planning and budgeting, technology roadmap, IT consulting for small business Toronto',
     intro:

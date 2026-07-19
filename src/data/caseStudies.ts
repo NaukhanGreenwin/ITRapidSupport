@@ -38,7 +38,7 @@ export const caseStudies: CaseStudyData[] = [
     ],
     title: 'Email Security Case Study: Finex Development',
     description:
-      'How IT Rapid Support moved a Mississauga development company from monitor-only DMARC to full enforcement, added external email banners in Microsoft 365, and installed reliable office Wi-Fi.',
+      'How IT Rapid Support moved a Mississauga development company from monitor-only DMARC to full enforcement and installed reliable office Wi-Fi.',
     keywords:
       'email security case study, DMARC enforcement Toronto, email spoofing protection GTA, Microsoft 365 security Mississauga, managed IT case study',
     h1: 'Locking Down Email for a Mississauga Development Company',
@@ -76,7 +76,7 @@ export const caseStudies: CaseStudyData[] = [
     ],
     title: 'Case Study: Capital Fire & Security M365 Cleanup',
     description:
-      'How IT Rapid Support audited every Microsoft 365 group for a GTA fire protection company, removed former employees from mail flows, fixed routing, and cut an 82,456-item mailbox by 62%.',
+      'How IT Rapid Support audited every Microsoft 365 group for a GTA fire protection company, fixed mail routing, and cut an 82,456-item mailbox by 62%.',
     keywords:
       'Microsoft 365 tenant cleanup case study, distribution list audit, mailbox cleanup Toronto, M365 administration GTA, managed IT case study',
     h1: 'Cleaning Up a Microsoft 365 Tenant for a Fire Protection & Security Company',
@@ -112,7 +112,7 @@ export const caseStudies: CaseStudyData[] = [
     ],
     title: 'DKIM & DMARC Case Study: Artistic Smart Homes',
     description:
-      'How IT Rapid Support audited the email authentication of a Vaughan smart-home integrator and implemented DKIM and DMARC on Wix-hosted DNS to shut down domain spoofing.',
+      'How IT Rapid Support audited a Vaughan smart-home integrator\'s email authentication and implemented DKIM and DMARC to shut down domain spoofing.',
     keywords:
       'DKIM DMARC case study, email authentication Vaughan, domain spoofing protection, DNS email security audit GTA, managed IT case study',
     h1: 'Email Authentication for a Vaughan Smart-Home Integrator',

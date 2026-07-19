@@ -34,7 +34,7 @@ const CaseStudies: React.FC = () => {
     <PageTransition>
       <SEO
         title="Client Case Studies: Real GTA Results"
-        description="Real, documented case studies from IT Rapid Support: email security and DMARC enforcement, Microsoft 365 tenant cleanup, and email authentication for businesses across the GTA."
+        description="Real, documented case studies from IT Rapid Support: email security and DMARC enforcement, Microsoft 365 tenant cleanup, and email authentication."
         keywords="managed IT case studies Toronto, cybersecurity case study GTA, Microsoft 365 case study, DMARC case study, IT support results Vaughan"
         canonicalUrl={url}
         schema={schema}

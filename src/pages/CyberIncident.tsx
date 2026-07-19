@@ -10,7 +10,7 @@ const CyberIncident: React.FC = () => {
     <>
       <Helmet>
         <title>Cyber Incident Response | IT Rapid Support</title>
-        <meta name="description" content="24/7 Expert cyber incident response services. Immediate assistance for data breaches, ransomware, and other cyber emergencies. Work with breach coaches and cyber insurance." />
+        <meta name="description" content="24/7 cyber incident response services. Immediate help for data breaches, ransomware, and cyber emergencies across Toronto and the GTA." />
         <link rel="canonical" href="https://itrapidsupport.com/cyber-incident/" />
         <meta property="og:url" content="https://itrapidsupport.com/cyber-incident/" />
         <meta property="og:title" content="Cyber Incident Response | IT Rapid Support" />

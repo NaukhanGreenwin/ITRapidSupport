@@ -169,7 +169,7 @@ const EmailSpoofCheck: React.FC = () => {
     <PageTransition>
       <SEO
         title="Free Email Spoofing Check | Can Your Business Email Be Faked?"
-        description="Instantly check whether your domain can be spoofed. Free SPF, DKIM and DMARC lookup with a plain-language grade — from IT Rapid Support, Toronto & GTA email security experts."
+        description="Free SPF, DKIM and DMARC lookup with a plain-language grade. Check whether your domain can be spoofed — from IT Rapid Support, Toronto & GTA."
         keywords="email spoofing check, DMARC check, SPF check, DKIM check, email security test, can my email be spoofed, email authentication checker"
         canonicalUrl={url}
         schema={schema}

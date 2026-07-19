@@ -23,7 +23,7 @@ function Solutions() {
     <div className="min-h-screen bg-slate-50">
       <SEO
         title="IT & Cybersecurity Solutions for Toronto & GTA Businesses"
-        description="Explore IT Rapid Support's managed IT and cybersecurity solutions for Toronto and GTA businesses — 24/7 support, threat detection, cloud security, and compliance-ready IT."
+        description="Managed IT and cybersecurity solutions for Toronto and GTA businesses — 24/7 support, threat detection, cloud security, and compliance-ready IT."
         canonicalUrl="/solutions"
       />
       {/* Hero Section */}

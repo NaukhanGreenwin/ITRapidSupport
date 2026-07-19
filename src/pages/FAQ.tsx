@@ -120,7 +120,7 @@ const FAQ: React.FC = () => {
     <PageTransition>
       <SEO 
         title="IT Support FAQs for Toronto & GTA Businesses" 
-        description="Find answers to common questions about our IT support, cybersecurity, and managed services for businesses in Toronto, Vaughan, Mississauga, Brampton, Woodbridge, and Concord."
+        description="Answers to common questions about IT support, cybersecurity, and managed services for businesses in Toronto, Vaughan, and across the GTA."
         keywords="IT support FAQ Toronto, cybersecurity questions GTA, managed services FAQ, Toronto IT help, Mississauga IT support questions, Vaughan IT services FAQ"
         schema={faqSchema}
         breadcrumbs={[
