@@ -773,6 +773,22 @@ export const locations: CityData[] = [
         "question": "How do you protect Aurora businesses from cyber attacks?",
         "answer": "We use a layered defence of managed firewalls, endpoint protection, email security, multi-factor authentication, security awareness training, and managed detection and response to keep Aurora organizations protected against ransomware and phishing."
       }
+    ],
+    "sections": [
+      {
+        "heading": "Managed IT Services for Aurora and York Region",
+        "paragraphs": [
+          "Managed IT services in Aurora from IT Rapid Support give your business one accountable team for everything IT: a 24/7 helpdesk your staff can reach any time, proactive monitoring and patch management that catch problems before they become downtime, Microsoft 365 administration, backup monitoring, and layered cybersecurity with managed firewalls, endpoint protection, and multi-factor authentication.",
+          "We serve Aurora from our Vaughan head office, which keeps York Region communities like Newmarket, Richmond Hill, and King City within easy reach for scheduled maintenance visits and emergency on-site support when an issue cannot be resolved remotely."
+        ]
+      },
+      {
+        "heading": "Why Aurora Businesses Partner with IT Rapid Support",
+        "paragraphs": [
+          "Most Aurora businesses are past the point where break-fix IT makes sense, but not yet at the size that justifies a full internal IT department. A managed IT partner closes that gap: support, security, and cloud under one roof, at a fixed monthly cost that keeps IT spending predictable while 24/7 coverage protects your team outside office hours.",
+          "If you are comparing managed IT services in Aurora, start with the guides below, or call (289) 582-9930 to walk through your current setup with our team."
+        ]
+      }
     ]
   },
   {
@@ -817,6 +833,22 @@ export const locations: CityData[] = [
         "question": "Can you manage our cloud and Microsoft 365 environment?",
         "answer": "Yes. We handle Microsoft 365 and Azure or AWS migration, cloud security, and cloud backup, then provide ongoing management so your Pickering business gets the benefits of the cloud without the security headaches."
       }
+    ],
+    "sections": [
+      {
+        "heading": "IT Services Pickering Businesses Rely On",
+        "paragraphs": [
+          "IT services in Pickering from IT Rapid Support cover the full stack your business runs on: a 24/7 helpdesk your team can reach any time, proactive monitoring and patch management that stop problems before they become downtime, Microsoft 365 administration, backup monitoring, and layered cybersecurity with managed firewalls, endpoint protection, and multi-factor authentication.",
+          "When hands-on help is needed, a certified technician is dispatched on-site. We support offices, clinics, warehouses, and multi-site teams across Pickering and the wider Durham Region, including Ajax, Whitby, and Oshawa."
+        ]
+      },
+      {
+        "heading": "Choosing an IT Company in Pickering",
+        "paragraphs": [
+          "When you compare IT companies in Pickering, look at three things: whether support is genuinely 24/7 or only business hours, whether security is built into the service or sold as an afterthought, and whether the provider will actually come on-site when remote support is not enough. IT Rapid Support delivers all three under one predictable monthly cost, with managed detection and response included rather than bolted on.",
+          "Start with the guides below, or call (289) 582-9930 to review your current IT setup with our team."
+        ]
+      }
     ]
   },
   {
@@ -860,6 +892,22 @@ export const locations: CityData[] = [
       {
         "question": "How do you keep Ajax businesses safe from ransomware?",
         "answer": "We combine managed firewalls, endpoint protection, email security, multi-factor authentication, security awareness training, managed detection and response, and tested data backup and recovery so Ajax businesses can resist and recover from ransomware."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Managed IT Services for Ajax Businesses",
+        "paragraphs": [
+          "Managed IT services in Ajax from IT Rapid Support replace reactive break-fix support with one accountable team: a 24/7 helpdesk your staff can reach any time, proactive monitoring and patch management that catch issues before they become downtime, Microsoft 365 administration, backup monitoring, and ongoing IT strategy, all at a fixed monthly cost.",
+          "We support Ajax offices, shops, and multi-site teams across Durham Region, with certified technicians dispatched on-site for scheduled maintenance or emergencies whenever an issue cannot be resolved remotely."
+        ]
+      },
+      {
+        "heading": "Cybersecurity Services in Ajax",
+        "paragraphs": [
+          "Cybersecurity services for Ajax organizations are built into every IT Rapid Support plan rather than sold as an add-on: managed firewalls, endpoint protection, email security with anti-phishing, multi-factor authentication, security awareness training, and managed detection and response that watches for threats around the clock.",
+          "If you are weighing managed IT or cybersecurity options in Ajax, start with the guides below, or call (289) 582-9930 to walk through your current environment with our team."
+        ]
       }
     ]
   },
