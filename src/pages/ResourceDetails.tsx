@@ -27,7 +27,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "managed-it-services-vaughan-guide",
     title: "Managed IT Services Vaughan: A Local Guide for Growing Businesses",
-    seoTitle: "Managed IT Services Vaughan | Local Business IT Support Guide",
+    seoTitle: "Managed IT Services Vaughan: Local IT Support Guide",
     description: "What Vaughan businesses should expect from managed IT services: 24/7 helpdesk coverage, local on-site support, cybersecurity, backups, and practical questions to ask before choosing a provider.",
     content: [
       "Vaughan businesses have a different IT reality than a fully remote startup or a downtown enterprise office. Many run from offices, clinics, warehouses, showrooms, industrial units, professional practices, and multi-site teams where internet, phones, Microsoft 365, Wi-Fi, security cameras, point-of-sale systems, and line-of-business software all have to work together. When one layer fails, productivity stops quickly.",
@@ -58,6 +58,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "gta-email-spoofing-study-2026",
     title: "We Checked 118 GTA Business Domains — Only 40% Are Protected Against Email Spoofing",
+    seoTitle: "GTA Email Spoofing Study 2026: Only 40% Protected",
     description: "IT Rapid Support ran a non-intrusive DNS review of 118 Greater Toronto Area business domains. The results on SPF, DKIM and DMARC reveal how exposed most GTA businesses still are to email impersonation and invoice fraud.",
     content: [
       "Email impersonation is the mechanism behind most business email compromise (BEC) and invoice-redirection fraud — a criminal sends a message that looks like it came from your domain, and a client or staff member pays a fake invoice or hands over credentials. Three DNS records exist specifically to stop this: SPF, DKIM and DMARC. So we asked a simple question about our own backyard: how many Greater Toronto Area businesses actually have them in place?",
@@ -92,6 +93,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "managed-it-support-cost-toronto",
     title: "How Much Does Managed IT Support Cost in Toronto? (2026 Guide)",
+    seoTitle: "How Much Does Managed IT Support Cost in Toronto?",
     description: "A clear breakdown of managed IT support pricing models for Toronto and GTA businesses, what drives the cost, and how to compare providers.",
     content: [
       "If you run a business in Toronto or the Greater Toronto Area, one of the first questions you ask when shopping for IT support is simple: what is this going to cost? The honest answer is that managed IT pricing varies based on the size of your team, the complexity of your environment, and the level of security and response you need. This guide walks through the common pricing models so you can compare providers with confidence.",
@@ -130,6 +132,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "managed-it-services-vs-in-house",
     title: "Managed IT Services vs In-House IT: Which Is Right for Your GTA Business?",
+    seoTitle: "Managed IT vs In-House IT for GTA Businesses",
     description: "Compare managed IT services and an in-house IT team on cost, coverage, security, and scalability to decide what fits your Toronto-area business.",
     content: [
       "As your business grows, technology stops being something you can manage on the side. Eventually you face a choice: hire an in-house IT person or team, or partner with a managed IT services provider. Both can work. The right answer depends on your size, your budget, and how much risk you can absorb. This guide compares the two honestly so you can decide.",
@@ -165,6 +168,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "small-business-cybersecurity-checklist",
     title: "Cybersecurity for Small Businesses in the GTA: A Practical Checklist",
+    seoTitle: "Small Business Cybersecurity Checklist for the GTA",
     description: "A plain-English cybersecurity checklist for small and mid-sized GTA businesses, covering the essential protections every company should have in place.",
     content: [
       "Small and mid-sized businesses are now the most common targets of cyber attacks, precisely because attackers assume their defenses are weak. The good news is that strong protection does not require a massive budget. It requires the right layers, set up correctly and kept current. Here is a practical checklist for businesses across the Greater Toronto Area.",
@@ -231,6 +235,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "ransomware-protection-ontario-businesses",
     title: "Ransomware Protection for Ontario Businesses: 2026 Defense Guide",
+    seoTitle: "Ransomware Protection for Ontario Businesses (2026)",
     description: "How Ontario businesses defend against ransomware in 2026: layered prevention, reliable backups, and 24/7 detection and response that limit the damage.",
     content: [
       "Ransomware remains one of the most damaging threats facing Ontario businesses. A single successful attack can lock up your files, halt operations, and cost far more than the ransom itself in downtime and recovery. The businesses that survive ransomware are not lucky; they are prepared. This guide explains how to build that preparation in layers.",
@@ -261,6 +266,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "choosing-managed-it-provider-toronto",
     title: "What to Look for in a Managed IT Services Provider in Toronto",
+    seoTitle: "How to Choose a Managed IT Provider in Toronto",
     description: "Choosing a managed IT provider in Toronto? Here are the questions to ask and the green flags to look for so you pick a partner that actually delivers.",
     content: [
       "Choosing a managed IT services provider is a decision you live with every day. The right partner keeps your business running, secure, and productive. The wrong one leaves you waiting on hold while problems pile up. If you are evaluating providers in Toronto or the GTA, here is what separates a real partner from a vendor that just sends invoices.",
@@ -295,6 +301,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "it-support-small-business-gta",
     title: "IT Support for Small Business in the GTA: What to Expect",
+    seoTitle: "IT Support for Small Business in the GTA",
     description: "A practical look at what managed IT support includes for small businesses across the GTA, from the helpdesk to cybersecurity and on-site help.",
     content: [
       "Small businesses across the Greater Toronto Area depend on technology as much as any enterprise, but rarely have the budget for a full in-house IT department. Managed IT support fills that gap, giving you the systems, security, and responsiveness of a large company at a predictable monthly cost. If you have never worked with a managed IT provider, here is what to expect.",
@@ -351,6 +358,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "cloud-backup-disaster-recovery-guide",
     title: "Cloud Backup and Disaster Recovery: A Practical Guide for GTA Businesses",
+    seoTitle: "Cloud Backup & Disaster Recovery for GTA Businesses",
     description: "How GTA businesses can protect against data loss with cloud backup and a tested disaster recovery plan. What to back up, how often, and why it matters.",
     content: [
       "Data loss rarely announces itself. A failed drive, an accidental deletion, a ransomware attack, or a flooded server room can wipe out years of work in moments. For GTA businesses, a reliable cloud backup and a tested disaster recovery plan are the difference between a bad afternoon and a business-ending event. This guide covers the essentials.",
@@ -379,6 +387,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "stop-phishing-attacks-email-security",
     title: "How to Stop Phishing Attacks: Email Security and Employee Training",
+    seoTitle: "How to Stop Phishing Attacks: Email Security Guide",
     description: "Phishing is the top way attackers get in. Learn the email security controls and employee habits that keep GTA businesses protected.",
     content: [
       "Most cyber attacks do not start with a sophisticated hack. They start with an email. Phishing remains the number one way attackers get into business systems, because it targets people rather than technology. Stopping it takes a combination of the right email security controls and a workforce that knows what to watch for.",
@@ -439,6 +448,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "multi-factor-authentication-guide-gta",
     title: "Multi-Factor Authentication: Why Every GTA Business Needs It",
+    seoTitle: "Multi-Factor Authentication for GTA Businesses",
     description: "MFA is one of the simplest, most effective security controls available. Here is how it works and why every GTA business should turn it on.",
     content: [
       "If you could make one change today that dramatically reduces the chance of a business email or account being hacked, multi-factor authentication would be it. MFA is one of the simplest and most effective security controls available, yet many GTA businesses still have not turned it on everywhere. Here is why it matters and how it works.",
@@ -503,6 +513,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "msp-vs-mssp-managed-it-vs-managed-security",
     title: "MSP vs MSSP: Do You Need Managed IT or Managed Security?",
+    seoTitle: "MSP vs MSSP: Managed IT or Managed Security?",
     description: "An MSP keeps your technology running; an MSSP focuses on protecting it. Learn the difference and why most GTA businesses need both under one roof.",
     content: [
       "When you start shopping for outside IT help, you run into two acronyms that sound almost identical: MSP and MSSP. They are not the same thing, and the difference matters. One keeps your technology running. The other keeps it protected. Many businesses pay for one and assume they are covered for the other, which is exactly how gaps appear. Here is what each does and how to know what you need.",
@@ -531,6 +542,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "break-fix-vs-managed-it-services",
     title: "Break-Fix vs Managed IT: Why GTA Businesses Are Making the Switch",
+    seoTitle: "Break-Fix vs Managed IT: Why Businesses Switch",
     description: "Break-fix IT charges you when things break; managed IT prevents the breakage. Compare the two models on cost, downtime, and security for your business.",
     content: [
       "For years the default way to handle business IT was simple: something breaks, you call someone, they fix it, you pay by the hour. That is the break-fix model. It still exists, and for the smallest setups it can feel cheaper. But more and more GTA businesses are moving to managed IT, and the reasons go beyond cost. Here is an honest comparison.",
@@ -566,6 +578,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "microsoft-copilot-rollout-security-guide",
     title: "Rolling Out Microsoft Copilot Safely: A Guide for GTA Businesses",
+    seoTitle: "Rolling Out Microsoft Copilot Safely: A GTA Guide",
     description: "Microsoft Copilot can boost productivity, but only if your data and permissions are in order first. Here is how to roll it out securely in Microsoft 365.",
     content: [
       "Microsoft Copilot is quickly becoming part of how businesses work inside Microsoft 365, drafting documents, summarizing meetings, and answering questions across your company's data. Used well, it is a real productivity gain. But Copilot surfaces whatever a user already has access to, which means a messy permission structure becomes a data-exposure problem the moment you turn it on. This guide explains how to roll out Copilot without creating new risk.",
@@ -660,6 +673,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "pipeda-compliance-it-checklist-ontario",
     title: "PIPEDA Compliance and Your IT: A Practical Checklist for Ontario Businesses",
+    seoTitle: "PIPEDA IT Compliance Checklist for Ontario",
     description: "What PIPEDA means for your business technology: safeguards, breach reporting, and a practical IT checklist for Ontario organizations.",
     content: [
       "If your Ontario business collects customer information — names, emails, payment details, purchase history — Canada's federal privacy law almost certainly applies to you. PIPEDA, the Personal Information Protection and Electronic Documents Act, sets rules for how private-sector organizations collect, use, and protect personal information. Much of complying with it comes down to how your IT is run. This guide covers the technology side in practical terms.",
@@ -688,6 +702,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "cyber-insurance-readiness-checklist",
     title: "Cyber Insurance Readiness: What Insurers Now Require from Your IT",
+    seoTitle: "Cyber Insurance Readiness: What Insurers Require",
     description: "Cyber insurers now demand specific security controls before they will write or renew a policy. Here is what they ask for and how to get ready.",
     content: [
       "A few years ago, getting cyber insurance was mostly paperwork. Today, insurers have paid out enough ransomware claims that they demand proof of specific security controls before they will write a policy — and renewal questionnaires get tougher every year. Answer inaccurately and you risk a denied claim when you need it most. Here is what insurers typically require and how to get your business ready.",
@@ -718,6 +733,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "quebec-law-25-it-readiness-ontario-businesses",
     title: "Quebec's Law 25: What Ontario & GTA Businesses Serving Quebec Customers Need to Know",
+    seoTitle: "Quebec Law 25 Compliance for Ontario Businesses",
     description: "If your Ontario business collects personal information from Quebec residents, Quebec's Law 25 privacy rules can apply to you. Here is what the law requires and how your IT setup supports compliance.",
     content: [
       "Many businesses in Toronto and the GTA sell to, market to, or serve customers in Quebec — and a surprising number do not realize that Quebec's private-sector privacy law, commonly known as Law 25, can apply to them even though they have no office in the province. Law 25 is one of the strictest privacy regimes in North America, and its obligations follow the personal information of Quebec residents, not the address of the business that holds it.",
@@ -756,6 +772,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "email-spoofing-spf-dkim-dmarc-explained",
     title: "Is Your Company Email Easy to Spoof? SPF, DKIM & DMARC Explained",
+    seoTitle: "SPF, DKIM & DMARC Explained: Stop Email Spoofing",
     description: "Most small businesses have never checked whether criminals can send email as their domain. A plain-English guide to SPF, DKIM, and DMARC — and how to close the gap.",
     content: [
       "Here is an uncomfortable experiment: could someone send an email that appears to come from your company's own domain — to your customers, your suppliers, or your own accounting team? For a surprising number of small and mid-sized businesses in Toronto and the GTA, the answer is yes, because three DNS records that prevent it were never set up properly. Those records are called SPF, DKIM, and DMARC, and this guide explains them in plain English.",
@@ -788,6 +805,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "windows-10-end-of-support-gta-businesses",
     title: "Windows 10 End of Support: What GTA Businesses Must Do Now",
+    seoTitle: "Windows 10 End of Support: GTA Business Action Plan",
     description: "Windows 10 reached end of support on October 14, 2025. What that actually means, the real options — upgrade, replace, or Extended Security Updates — and how to plan the transition.",
     content: [
       "Windows 10 reached its end of support on October 14, 2025. If your business still has Windows 10 machines in daily use, they are no longer receiving free security updates from Microsoft — every month that passes, newly discovered vulnerabilities on those PCs stay unpatched. For businesses in Toronto and the GTA still running a fleet of Windows 10 desktops and laptops, this is now an active risk, not a future deadline.",
@@ -820,6 +838,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "business-voip-phone-systems-buyers-guide",
     title: "Business VoIP Phone Systems: A Buyer's Guide for Small Business",
+    seoTitle: "Business VoIP Phone Systems: A Buyer's Guide",
     description: "Moving your business phones to VoIP? What VoIP actually is, the features that matter, the questions to ask providers, and the network requirements nobody mentions until call quality suffers.",
     content: [
       "Sooner or later every small business confronts its phone system: the old lines are expensive, the hardware is aging, the team is hybrid, and someone asks 'why aren't we just using the internet for this?' That is VoIP — Voice over IP — and for most small businesses in Toronto and the GTA it is the right destination. But the difference between a VoIP rollout your team loves and one they curse daily comes down to choices made before you sign anything. This guide covers what to know.",
@@ -849,6 +868,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "disaster-recovery-plan-small-business-ontario",
     title: "How to Build a Disaster Recovery Plan: A Guide for Ontario Small Businesses",
+    seoTitle: "Disaster Recovery Plan Guide for Ontario Businesses",
     description: "A backup is not a plan. Step-by-step: set recovery objectives, map critical systems, write a runbook people can follow at 2 a.m., and test it — sized for Ontario small businesses.",
     content: [
       "Most Ontario small businesses have some form of backup. Very few have a disaster recovery plan — the documented, tested answer to 'the server is dead / the office is inaccessible / everything is encrypted: now what, in what order, run by whom?' The difference shows up at the worst possible moment. A backup without a plan routinely turns a one-day disruption into a multi-week crisis, because nobody knows what to restore first, where credentials live, or how long anything takes. This guide walks through building the plan itself.",
@@ -878,7 +898,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "managed-threat-detection-monitoring-mdr-guide",
     title: "Threat Detection & 24/7 Threat Monitoring: An MDR Guide for GTA Businesses",
-    seoTitle: "Threat Detection Services & 24/7 Threat Monitoring: MDR Explained",
+    seoTitle: "Threat Detection & 24/7 Monitoring: MDR Explained",
     description: "What managed threat detection and 24/7 threat monitoring actually do, how MDR differs from antivirus, and what to look for when choosing a provider — for Toronto & GTA businesses.",
     content: [
       "Most breaches are not stopped at the front door — they are caught, or missed, in the hours and days after an attacker is already inside. That gap between compromise and discovery is where managed threat detection lives. This guide explains what threat detection services and 24/7 threat monitoring actually do, how they differ from the antivirus you already run, and what a GTA business should look for when choosing a provider.",
@@ -1010,7 +1030,7 @@ const ResourceDetails: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{`${currentResource.seoTitle ?? currentResource.title} | IT Rapid Support Resources`}</title>
+        <title>{`${currentResource.seoTitle ?? currentResource.title} | IT Rapid Support`}</title>
         <meta name="description" content={`${currentResource.description?.substring(0, 155)}...`} />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:type" content="article" />

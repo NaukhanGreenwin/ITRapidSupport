@@ -6,7 +6,7 @@ const About: React.FC = () => {
   return (
     <>
       <SEO
-        title="About IT Rapid Support | Managed IT & Cybersecurity Experts in Toronto & the GTA"
+        title="About Us — Managed IT & Cybersecurity in the GTA"
         description="IT Rapid Support is a Vaughan-based managed IT and cybersecurity provider serving businesses across Toronto and the GTA with 24/7 support, managed security, and cloud services."
         keywords="about IT Rapid Support, managed IT company Toronto, cybersecurity company Vaughan, IT services provider GTA, MSP Toronto"
         canonicalUrl="/about"

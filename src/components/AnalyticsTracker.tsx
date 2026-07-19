@@ -26,6 +26,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
   // Track page views
   useEffect(() => {
+    if (navigator.webdriver) return; // headless prerender/bot — never send hits
     if (typeof window.gtag !== 'undefined' && process.env.NODE_ENV !== 'development') {
       // Get page metadata for enhanced reporting
       const pageTitle = document.title || 'IT Rapid Support';
