@@ -25,6 +25,8 @@ const Terms = lazy(() => import('./pages/Terms'));
 const Cookies = lazy(() => import('./pages/Cookies'));
 const Accessibility = lazy(() => import('./pages/Accessibility'));
 const ResourceDetails = lazy(() => import('./pages/ResourceDetails'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Support = lazy(() => import('./pages/Support'));
 const CyberIncident = lazy(() => import('./pages/CyberIncident'));
@@ -93,6 +95,10 @@ function App() {
             <Route path="/cyber-incident" element={<CyberIncident />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:id" element={<ResourceDetails />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/finex-development-email-security" element={<CaseStudyDetail slug="finex-development-email-security" />} />
+            <Route path="/case-studies/capital-fire-security-microsoft-365-cleanup" element={<CaseStudyDetail slug="capital-fire-security-microsoft-365-cleanup" />} />
+            <Route path="/case-studies/artistic-smart-homes-email-authentication" element={<CaseStudyDetail slug="artistic-smart-homes-email-authentication" />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />

@@ -1,6 +1,33 @@
 import React from 'react';
 import { Users, Award, Rocket, CheckCircle, Clock, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO, { generateLocalBusinessSchema } from '../components/SEO';
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://itrapidsupport.com/about/#nauman-khan',
+  name: 'Nauman Khan',
+  jobTitle: 'President & CEO',
+  worksFor: { '@id': 'https://itrapidsupport.com/#organization' },
+  url: 'https://itrapidsupport.com/about/',
+  workLocation: {
+    '@type': 'Place',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Vaughan',
+      addressRegion: 'ON',
+      addressCountry: 'CA',
+    },
+  },
+  knowsAbout: [
+    'Managed IT Services',
+    'Cybersecurity',
+    'Microsoft 365',
+    'Cloud Infrastructure',
+    'IT Strategy',
+  ],
+};
 
 const About: React.FC = () => {
   return (
@@ -10,7 +37,7 @@ const About: React.FC = () => {
         description="IT Rapid Support is a Vaughan-based managed IT and cybersecurity provider serving businesses across Toronto and the GTA with 24/7 support, managed security, and cloud services."
         keywords="about IT Rapid Support, managed IT company Toronto, cybersecurity company Vaughan, IT services provider GTA, MSP Toronto"
         canonicalUrl="/about"
-        schema={generateLocalBusinessSchema('vaughan')}
+        schema={[generateLocalBusinessSchema('vaughan'), personSchema]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
           { name: 'About', url: '/about' },
@@ -127,6 +154,34 @@ const About: React.FC = () => {
                 We prioritize quick and effective responses to security incidents and client needs.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Leadership */}
+      <div className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center px-4 py-2 bg-red-600/10 text-red-600 rounded-full mb-6">
+                <span className="text-sm font-medium">Leadership</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nauman Khan</h2>
+              <p className="text-red-600 font-medium">President & CEO, IT Rapid Support</p>
+            </div>
+            <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+              IT Rapid Support is led by Nauman Khan, a technology executive with about two decades
+              of hands-on experience across IT operations and cybersecurity. Based in Vaughan,
+              Ontario, he has spent his career running the technology that businesses depend on
+              every day — infrastructure, Microsoft 365 and cloud environments, security programs,
+              and the support operations behind them.
+            </p>
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+              That operator background shapes how IT Rapid Support works: practical fixes over
+              jargon, documented changes over guesswork, and security decisions explained in plain
+              language so business owners can actually act on them. You can see that approach in
+              our published <Link to="/case-studies/" className="text-red-600 hover:text-red-700 font-medium">client case studies</Link>.
+            </p>
           </div>
         </div>
       </div>
