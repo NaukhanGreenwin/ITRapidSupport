@@ -95,6 +95,13 @@ export const locations: CityData[] = [
         ],
       },
       {
+        heading: 'IT Support and Security Services in Toronto',
+        paragraphs: [
+          'Many Toronto businesses buy IT support and security services separately — one vendor for the day-to-day helpdesk, another for protection — and end up with gaps neither vendor owns. IT Rapid Support combines both in a single service: the same team that runs your 24/7 IT support, monitoring, and Microsoft 365 administration also manages your firewalls, endpoint protection, email security, multi-factor authentication, and managed detection and response. When a security alert fires overnight, the people responding already know your network.',
+          'That combined model matters most during an incident. Because support and security sit under one roof, there is no hand-off between vendors when a phishing compromise, ransomware event, or outage hits — one accountable team contains the threat, restores systems, and gets your staff working again. Toronto organizations get enterprise-grade IT security services and responsive day-to-day support at one fixed monthly cost, with on-site help dispatched from our Vaughan headquarters just up Highway 400.',
+        ],
+      },
+      {
         heading: 'Choosing a Managed IT Company in Toronto',
         paragraphs: [
           'Toronto has no shortage of IT companies, so the comparison comes down to coverage and accountability: true 24/7 support rather than business-hours-only, security operations built into the core service rather than sold as an afterthought, and one accountable partner for helpdesk, cybersecurity, cloud, and on-site work instead of separate vendors. Fixed monthly pricing keeps IT spend predictable as you grow.',
