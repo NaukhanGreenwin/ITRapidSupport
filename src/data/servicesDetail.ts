@@ -634,6 +634,29 @@ export const servicesDetail: ServiceDetailData[] = [
           'Disconnect affected machines from the network — do not power them off or pay anything — and call us at (289) 582-9930. We isolate the incident, assess the spread, and work to restore from clean backups while preserving evidence.',
       },
     ],
+    sections: [
+      {
+        heading: 'Emergency IT Services for Toronto and GTA Businesses',
+        paragraphs: [
+          'Emergency IT services are what you reach for when technology failure is actively costing you money: a server that will not boot, a network outage taking your whole office offline, email that has stopped flowing, or a suspected ransomware infection spreading between machines. IT Rapid Support runs a 24/7 helpdesk from our Vaughan headquarters, so an emergency call is answered by a technician who starts remote diagnosis immediately — nights, weekends, and holidays included.',
+          'When the problem needs hands on hardware, we dispatch certified technicians on-site across Toronto and the Greater Toronto Area, prioritized by severity. And unlike providers who only serve their own contract clients, we take emergency calls from businesses we have never worked with before. If your current IT provider is not answering, call (289) 582-9930.',
+        ],
+      },
+      {
+        heading: 'Emergency IT Support Services: What Happens When You Call',
+        paragraphs: [
+          'Every emergency follows the same discipline. First, triage: we establish what is down, what it is costing you, and whether there are signs of a security incident. Second, remote stabilization: most outages — stalled servers, broken email flow, misbehaving firewalls, locked-out accounts — can be diagnosed and often resolved remotely, and that work begins on the first call. Third, on-site response: if the fastest fix is physical, a technician is dispatched from Vaughan with the goal of getting you operating again before worrying about anything cosmetic.',
+          'Once you are back up, we do not just close the ticket. You get a plain-language explanation of what failed and why, and what would prevent it from happening again — whether that is fixing a failed backup job, replacing hardware running past its supported life, or closing the security gap that let an attacker in.',
+        ],
+      },
+      {
+        heading: 'After the Emergency: Stop Paying for Downtime',
+        paragraphs: [
+          'Most emergencies we respond to were preventable: monitoring would have caught the failing disk, patching would have closed the exploited vulnerability, tested backups would have turned a ransomware crisis into an inconvenience. That is why many businesses that first call us in an emergency move onto a managed IT plan afterwards — 24/7 monitoring, patching, security, and helpdesk for a fixed monthly fee, so the next 2am phone call never needs to happen.',
+          'If you are mid-emergency right now, call (289) 582-9930. If you are reading this after one, the best time to fix the root cause is while the memory is fresh — we will review what happened and give you an honest assessment of what your environment needs.',
+        ],
+      },
+    ],
   },
 ];
 
