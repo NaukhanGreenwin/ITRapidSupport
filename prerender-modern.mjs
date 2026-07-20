@@ -102,6 +102,7 @@ const routes = [
   '/resources/gta-email-spoofing-study-2026',
   '/resources/managed-it-services-vaughan-guide',
   '/resources/cybersecurity-services-toronto-guide',
+  '/resources/it-companies-toronto-guide',
   '/tools/email-spoof-check'
 ];
 

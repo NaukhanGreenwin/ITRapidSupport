@@ -25,6 +25,37 @@ export interface ResourceItem {
 // All resources data - in a real app this would come from an API or database
 export const allResources: ResourceItem[] = [
   {
+    id: "it-companies-toronto-guide",
+    title: "IT Companies in Toronto: Which Type Does Your Business Actually Need?",
+    seoTitle: "IT Companies in Toronto: Which Type Do You Need?",
+    description: "Toronto IT companies range from break-fix shops to full MSPs and security-focused MSSPs. What each type actually does, what it costs, and how to pick the right fit.",
+    content: [
+      "Search for an IT company in Toronto and you will get hundreds of results that all sound alike — managed services, IT solutions, technology partners, cybersecurity experts. Behind the interchangeable marketing, these firms operate on genuinely different models, and choosing the wrong type is more expensive than choosing the wrong vendor within the right type. This guide breaks down the kinds of IT companies serving Toronto businesses, what each one is actually built to do, and how to work out which model fits your situation.",
+      "## Break-Fix Shops and Hourly IT Providers",
+      "The oldest model: something breaks, you call, they fix it, you get an invoice. Break-fix works for very small offices with simple needs and no real dependence on uptime — a few workstations, no server, nothing regulated. The structural problem is the incentive: a break-fix provider earns nothing from preventing problems, so nobody is patching systems, watching backups, or hardening your Microsoft 365 tenant between calls. If your business has grown past a handful of staff or has started losing real money to downtime, you have probably [outgrown the break-fix model](/resources/signs-business-outgrown-break-fix-it/). The full trade-off is covered in our [break-fix vs managed IT comparison](/resources/break-fix-vs-managed-it-services/).",
+      "## Managed Service Providers (MSPs)",
+      "A managed service provider takes ongoing responsibility for your environment for a fixed monthly fee: helpdesk support, monitoring and patching, Microsoft 365 administration, backup management, and baseline security. The economics invert — the provider makes money when things do not break, so prevention is the product. This is the model most Toronto businesses between roughly five and a few hundred staff end up on, because it turns IT from unpredictable emergencies into a flat operating cost. Pricing in the GTA is typically per user per month; our [managed IT support cost guide for Toronto](/resources/managed-it-support-cost-toronto/) breaks down the real numbers and what should be included before a price is comparable.",
+      "## Security-Focused Providers (MSSPs and MDR)",
+      "A managed security service provider concentrates on the security layer: threat monitoring, detection and response, often delivered through a security operations centre. Pure MSSPs rarely handle your day-to-day IT — they sit alongside whoever does. For most small and mid-sized businesses, a separate MSSP is more separation than the org chart can support, and the practical alternative is an MSP that delivers genuine [managed detection and response](/services/threat-detection/) as part of the service, so the team that runs your systems is the same team watching them around the clock. The distinction matters when comparing quotes, and we unpack it fully in [MSP vs MSSP: managed IT vs managed security](/resources/msp-vs-mssp-managed-it-vs-managed-security/).",
+      "## Consultants, Project Firms and Resellers",
+      "Toronto also has a deep bench of IT consultancies, project-based integrators, and value-added resellers. These firms design networks, run migrations, implement specific platforms, or sell licensed hardware and software — and then the engagement ends. They are the right call for defined, one-time work: an office move, an ERP rollout, a cloud migration designed by a specialist. They are the wrong call for ongoing operations, because when the project closes, nobody is answering the phone at 2 a.m. Many businesses pair a project firm for a specific build with a managed provider for everything after go-live.",
+      "## Internal IT, Outsourced IT, or Both",
+      "Hiring internal IT staff buys you dedicated attention but concentrates risk in one or two people who cannot be awake around the clock and cannot span every specialty from networking to email security to compliance. Fully [outsourcing IT versus keeping it in-house](/resources/managed-it-services-vs-in-house/) is one decision; the middle path is co-managed IT, where your internal person or team keeps strategic and day-to-day ownership while an outside provider supplies the helpdesk depth, after-hours coverage, and security tooling that are uneconomical to build internally. We cover when that hybrid makes sense in our [co-managed IT service](/services/co-managed-it-services/) overview.",
+      "## How to Actually Compare Toronto IT Companies",
+      "Once you know which type you need, comparison gets concrete. Ask every candidate the same questions: Is support genuinely 24/7, with a person responding rather than a queue? Is on-site service available where your offices are, and how fast? Is security — MFA, patching, email authentication, monitored backups — included in the base fee or billed as extras? What does their first hour of incident response look like? Will you get plain-language reporting you can act on? A provider that answers those directly is worth shortlisting; our [guide to choosing a managed IT provider in Toronto](/resources/choosing-managed-it-provider-toronto/) turns this into a full evaluation checklist.",
+      "## Where IT Rapid Support Fits",
+      "IT Rapid Support is a managed IT and cybersecurity company serving [Toronto](/it-support/toronto/) and the Greater Toronto Area from our head office at 7810 Keele St in Vaughan. We combine the MSP and security models in one team: 24/7 helpdesk, monitoring and patching, Microsoft 365 management, [managed cybersecurity with around-the-clock detection and response](/services/managed-security/), backup monitoring, and local on-site dispatch across the GTA. If you are working out which type of IT company your business needs, call (289) 582-9930 — we will tell you honestly, including when what you need is a project firm or an internal hire rather than us."
+    ].join('\n\n'),
+    type: "guide",
+    date: "July 19, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "8 min read"
+  },
+  {
     id: "cybersecurity-services-toronto-guide",
     title: "Cybersecurity Services in Toronto: What Your Business Actually Needs in 2026",
     seoTitle: "Cybersecurity Services Toronto: 2026 Guide",
