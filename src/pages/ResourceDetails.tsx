@@ -25,6 +25,38 @@ export interface ResourceItem {
 // All resources data - in a real app this would come from an API or database
 export const allResources: ResourceItem[] = [
   {
+    id: "cybersecurity-services-toronto-guide",
+    title: "Cybersecurity Services in Toronto: What Your Business Actually Needs in 2026",
+    seoTitle: "Cybersecurity Services Toronto: 2026 Guide",
+    description: "What cybersecurity services Toronto businesses need in 2026: 24/7 monitoring and MDR, email security, MFA, backups, and how to choose the right provider.",
+    content: [
+      "Search for cybersecurity services in Toronto and you will find everything from one-person consultancies to global firms selling enterprise platforms. Most Toronto businesses need neither extreme. They need the fundamentals implemented properly, someone watching around the clock, and a clear plan for the day something gets through. This guide explains what a cybersecurity service should actually include, what the common gaps look like, and how to compare providers without getting lost in vendor jargon.",
+      "## Start With What You Are Protecting",
+      "Before comparing services, be clear about what an attacker would actually target in your business. For most Toronto companies the honest answer is email, money movement, and data: the inbox that approves invoices, the Microsoft 365 tenant that holds your files and identities, the banking and payroll workflows, and any client or patient records you are obligated to protect. Cybersecurity services should map directly onto those targets — not onto whatever product a vendor happens to resell.",
+      "## The Non-Negotiable Fundamentals",
+      "Whatever provider you choose, the foundation looks the same: consistent patching of operating systems and applications, endpoint protection on every workstation and server, multi-factor authentication on email and remote access, secure configuration of Microsoft 365, and monitored backups with an offsite copy. None of this is exotic, but in practice it is where most incidents start — an unpatched machine, an account without MFA, a backup nobody tested. A provider that cannot show you the state of these basics across your environment is not managing your security, whatever the contract says.",
+      "## Email Is Still the Front Door",
+      "Business email compromise and invoice fraud remain among the most expensive problems a small business can face, and the defences are specific: SPF, DKIM and DMARC at enforcement on your domain, hardened login policies, and staff who know what a payment-redirection attempt looks like. The gap is real — when IT Rapid Support [reviewed the public DNS records of 118 GTA business domains](/resources/gta-email-spoofing-study-2026/), only 40% were fully protected against email spoofing. If your domain is not at DMARC enforcement, that is usually the highest-value fix on the list, and it is a fast one.",
+      "## Detection: Someone Has to Be Watching",
+      "Prevention reduces incidents; it does not eliminate them. The question that separates cybersecurity services is what happens when something suspicious fires at 2 a.m. on a Saturday. [Managed detection and response (MDR)](/services/threat-detection/) puts around-the-clock monitoring behind your endpoints and Microsoft 365 sign-ins, so unusual behaviour — an impossible-travel login, mass file encryption, a new forwarding rule on an executive mailbox — is investigated and contained instead of waiting in a queue until Monday. For businesses without an internal security team, MDR is typically the most cost-effective way to get genuine 24/7 coverage.",
+      "## Incident Response: Know the Path Before You Need It",
+      "Ask any prospective provider to walk you through their incident path: who you call, what happens in the first hour, how affected systems are isolated, how backups are restored, and what gets documented for insurers and, where required, privacy regulators. If the answer is vague, the service is monitoring in name only. A real [cyber incident response](/cyber-incident/) process exists in writing before the bad day, not improvised during it.",
+      "## Questions to Ask a Toronto Cybersecurity Provider",
+      "Before signing, ask: 1. Is monitoring genuinely 24/7, and who responds — a person or an alert queue? 2. What exactly is included versus billed as a separate project? 3. How will you get our domain to DMARC enforcement? 4. How are backups monitored and restore-tested? 5. What does your first hour of incident response look like? 6. Can you secure Microsoft 365 itself, or only the network? 7. Will we get plain-language reporting we can act on?",
+      "## Security and IT Support Work Better Together",
+      "Cybersecurity is not a separate universe from day-to-day IT. Patching, identity management, email configuration and backups are all operational work — when one team runs both, security controls actually stay in place instead of drifting. That is why many Toronto businesses consolidate with a provider that delivers [managed cybersecurity services across Toronto and the GTA](/services/managed-security/) alongside daily support, rather than juggling separate vendors who each assume the other closed the gap.",
+      "IT Rapid Support provides cybersecurity services for businesses across [Toronto](/it-support/toronto/) and the Greater Toronto Area — 24/7 monitoring, managed detection and response, email authentication, Microsoft 365 security and backup protection — with local on-site response from our Vaughan head office at 7810 Keele St. Call (289) 582-9930 for a plain-language review of where your current defences stand."
+    ].join('\n\n'),
+    type: "guide",
+    date: "July 19, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "8 min read"
+  },
+  {
     id: "managed-it-services-vaughan-guide",
     title: "Managed IT Services Vaughan: A Local Guide for Growing Businesses",
     seoTitle: "Managed IT Services Vaughan: Local IT Support Guide",

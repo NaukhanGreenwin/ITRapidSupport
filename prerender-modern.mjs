@@ -101,6 +101,7 @@ const routes = [
   '/resources/managed-threat-detection-monitoring-mdr-guide',
   '/resources/gta-email-spoofing-study-2026',
   '/resources/managed-it-services-vaughan-guide',
+  '/resources/cybersecurity-services-toronto-guide',
   '/tools/email-spoof-check'
 ];
 
