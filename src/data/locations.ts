@@ -800,6 +800,13 @@ export const locations: CityData[] = [
           "A single accountable IT partner replaces the patchwork of break-fix vendors many Newmarket businesses rely on: support, security, cloud, and IT planning from one local team, at a fixed monthly cost that keeps budgeting predictable while 24/7 coverage protects your operations outside business hours.",
           "If you are evaluating IT services in Newmarket, start with the guides below, or call (289) 582-9930 to talk through your current setup with our team."
         ]
+      },
+      {
+        "heading": "IT, Network, and Data Security Services for York Region",
+        "paragraphs": [
+          "IT Rapid Support delivers managed cybersecurity across York Region: managed firewalls and network security, endpoint protection, multi-factor authentication, 24/7 threat detection and response, and email authentication hardening (SPF, DKIM, and DMARC) to stop domain spoofing. Data security is built into the same service — monitored backups, access controls, and Microsoft 365 security configuration — so protection is not a separate project bolted on later.",
+          "Whether you are in Newmarket, Aurora, Richmond Hill, Vaughan, or anywhere else in York Region, the same team that runs your day-to-day IT support also owns your security posture — one accountable partner instead of a separate security vendor pointing fingers at your IT provider. Call (289) 582-9930 for a straightforward review of where your network and data security stand today."
+        ]
       }
     ]
   },
