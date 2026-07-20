@@ -132,6 +132,26 @@ const IndustryLanding: React.FC<IndustryLandingProps> = ({ slug }) => {
         </div>
       </div>
 
+      {/* Optional in-depth industry content */}
+      {data.sections && data.sections.length > 0 && (
+        <div className="py-16 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            {data.sections.map((section) => (
+              <div key={section.heading}>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  {section.heading}
+                </h2>
+                {section.paragraphs.map((p) => (
+                  <p key={p.slice(0, 40)} className="text-gray-600 leading-relaxed mb-4">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Industry FAQ */}
       <div className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

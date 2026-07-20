@@ -26,6 +26,8 @@ export interface IndustryData {
   tags: string[];
   highlights: IndustryHighlight[];
   faqs: IndustryFAQ[];
+  // Optional in-depth industry content sections rendered before the FAQ.
+  sections?: { heading: string; paragraphs: string[] }[];
 }
 
 export const industries: IndustryData[] = [
@@ -441,6 +443,22 @@ export const industries: IndustryData[] = [
         question: 'Do you provide on-site IT support for dental offices in the GTA?',
         answer:
           'Yes. Alongside immediate remote support, our certified technicians provide scheduled and emergency on-site service to dental offices across Toronto and the GTA.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Managed IT Services for Dental Practices in Toronto',
+        paragraphs: [
+          'Dental offices across Toronto and the GTA run on a tight stack: practice management software, digital imaging, scheduling, billing, and email all have to work every hour patients are in the chair. Our managed IT services for dental practices cover that whole stack — 24/7 helpdesk for your front desk and clinical staff, proactive monitoring and patching of workstations and servers, Microsoft 365 administration, and encrypted, tested backups that protect patient records against ransomware and hardware failure.',
+          'Security is built in rather than bolted on. Every dental practice we support gets multi-factor authentication, endpoint protection, email security against phishing and spoofing, and managed detection and response — the controls that protect patient health information and support your PHIPA obligations. Because we are headquartered in Vaughan, on-site technicians can reach dental offices across Toronto, North York, Scarborough, Etobicoke, and the surrounding GTA when hands-on help is needed.',
+        ],
+      },
+      {
+        heading: 'Choosing an IT Provider for Your Dental Office',
+        paragraphs: [
+          'When you compare IT companies for a dental practice, three things matter most. First, patient data protection: your provider should treat PHIPA-aware security — encryption, access controls, MFA, and recoverable backups — as the default, not an upgrade. Second, uptime for the systems dentistry actually runs on: the network, servers, and workstations behind your practice management and imaging software, kept fast and reliable so appointments never stall on a technical failure. Third, real support coverage: a helpdesk your reception team can call the moment something breaks, not a ticket queue that responds tomorrow.',
+          'IT Rapid Support delivers all three under one fixed monthly price, with a single accountable partner instead of separate vendors for support, security, and backup. That is what managed IT should look like for a dental office: predictable cost, protected patient data, and technology your team never has to think about. Call (289) 582-9930 for a free assessment of your practice.',
+        ],
       },
     ],
   },
