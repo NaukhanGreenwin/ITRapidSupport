@@ -32,6 +32,8 @@ export interface ServiceDetailData {
   tags: string[];
   highlights: ServiceHighlight[];
   faqs: ServiceFAQ[];
+  // Optional in-depth service content sections rendered before the FAQ.
+  sections?: { heading: string; paragraphs: string[] }[];
 }
 
 export const servicesDetail: ServiceDetailData[] = [
@@ -509,11 +511,12 @@ export const servicesDetail: ServiceDetailData[] = [
   {
     slug: 'vcio-it-strategy',
     service: 'vCIO & IT Strategy',
-    title: 'vCIO & IT Strategy Services for GTA Businesses',
+    title: 'vCIO Services Toronto | Virtual CIO & IT Strategy',
+    h1: 'vCIO & IT Strategy Services for Toronto and GTA Businesses',
     description:
-      'Executive-level IT leadership without the full-time cost: vCIO services, IT planning, budgeting, and roadmaps for GTA businesses. Call (289) 582-9930.',
+      'Executive-level IT leadership without the full-time cost: vCIO services, IT planning, budgeting, and roadmaps for Toronto and GTA businesses. Call (289) 582-9930.',
     keywords:
-      'vCIO services Toronto, IT strategy consulting GTA, virtual CIO, IT planning and budgeting, technology roadmap, IT consulting for small business Toronto',
+      'vCIO services Toronto, vCIO Toronto, virtual CIO services, vCIO services Canada, vCIO Ontario, virtual CIO strategic planning, vCIO cost, virtual CIO for small business, IT strategy consulting GTA, IT planning and budgeting, technology roadmap',
     intro:
       'Technology decisions are business decisions, and most growing companies do not have a CIO to make them. IT Rapid Support gives GTA businesses virtual CIO leadership: a strategic partner who aligns your technology with your goals, builds a budget and roadmap, manages risk, and makes sure every dollar you spend on IT moves the business forward.',
     tags: ['IT strategy', 'Technology roadmap', 'IT budgeting', 'Risk management', 'Vendor management', 'Business alignment'],
@@ -554,6 +557,29 @@ export const servicesDetail: ServiceDetailData[] = [
         question: 'Is vCIO service a good fit for small and mid-sized businesses?',
         answer:
           'Yes. It is designed for growing GTA businesses that need executive-level IT leadership and planning but are not ready for a full-time CIO, giving you strategic guidance at a fraction of the cost.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'vCIO Services in Toronto, the GTA, and Across Canada',
+        paragraphs: [
+          'IT Rapid Support delivers vCIO services in Toronto and across the GTA from our Vaughan headquarters. Your virtual CIO gets to know your business, then runs a regular cadence of business reviews covering your technology roadmap, IT budget, security posture, and open projects — so technology decisions are made deliberately instead of one emergency at a time. Because the same team also delivers our managed IT and cybersecurity services, your strategy and your day-to-day support never drift apart.',
+          'vCIO engagements are also available Canada-wide. Strategic planning, budgeting, and business reviews are delivered remotely to businesses anywhere in Canada, with on-site meetings available across Toronto and the Greater Toronto Area when a face-to-face session is the better fit.',
+        ],
+      },
+      {
+        heading: 'Virtual CIO Strategic Planning for Small and Mid-Sized Businesses',
+        paragraphs: [
+          'Virtual CIO strategic planning turns IT from a series of reactive purchases into a plan. A typical engagement builds an annual technology roadmap, a realistic IT budget, a hardware and software lifecycle plan so nothing critical runs past its supported life, a review of your security and compliance posture, and a clear direction for Microsoft 365 and cloud services. Vendor contracts and licensing get reviewed along the way, which is often where the first savings show up.',
+          'Most small and mid-sized businesses cannot justify a full-time CIO, but they still face CIO-level decisions: when to replace infrastructure, how much to spend on security, whether to move workloads to the cloud. A virtual CIO gives you that planning discipline at a fraction of the cost of an executive hire, and works alongside your existing internal IT or as part of our fully managed service.',
+        ],
+      },
+      {
+        heading: 'What Does a vCIO Cost?',
+        paragraphs: [
+          'A full-time CIO is a six-figure salary commitment before benefits. vCIO services deliver the same category of leadership for a fixed monthly fee at a fraction of that cost, and for many of our clients vCIO guidance is built into their managed IT agreement rather than billed as a separate line item.',
+          'The right fee depends on the size and complexity of your environment: how many users and locations you have, your compliance obligations, and how often you want formal business reviews. Call (289) 582-9930 and we will scope a vCIO engagement around your business and give you a clear, fixed price.',
+        ],
       },
     ],
   },
