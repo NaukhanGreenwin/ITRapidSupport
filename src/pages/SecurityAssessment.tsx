@@ -946,7 +946,7 @@ const SecurityAssessment: React.FC = () => {
         description="Evaluate your organization's security posture with our free comprehensive security assessment tool. Get instant results and actionable recommendations."
         keywords="security assessment, cybersecurity evaluation, security posture, vulnerability assessment, free security tool, IT security assessment"
         ogType="website"
-        ogImage="/images/security-assessment-og.jpg"
+        ogImage="/images/og-image.jpg"
         schema={securityAssessmentSchema}
       />
       

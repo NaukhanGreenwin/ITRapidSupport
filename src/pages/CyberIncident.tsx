@@ -21,7 +21,7 @@ const CyberIncident: React.FC = () => {
         title="Cyber Incident Response"
         subtitle="Immediate Expert Assistance When Every Minute Counts"
         description="Our 24/7 incident response team provides rapid containment, thorough investigation, and complete recovery services for organizations experiencing cyber attacks."
-        image="/images/cyber-incident-hero.jpg"
+        image="/images/solutions/enterprise-security.jpg"
       />
 
       {/* Introduction Section */}

@@ -185,7 +185,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
     "@type": "LocalBusiness",
     "@id": "https://itrapidsupport.com/#LocalBusiness",
     "name": loc.name,
-    "image": "https://itrapidsupport.com/images/ITRapid-headquarters.jpg",
+    "image": "https://itrapidsupport.com/images/og-image.jpg",
     "logo": "https://itrapidsupport.com/images/logo.png",
     "description": "Enterprise-grade cybersecurity and IT management solutions for businesses across the Greater Toronto Area with 24/7 local support.",
     "slogan": "Securing Your Business. Simplifying Technology.",

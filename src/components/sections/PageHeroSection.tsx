@@ -11,7 +11,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({
   title, 
   subtitle, 
   description,
-  image = '/images/default-hero-bg.jpg' 
+  image = '/images/solutions/enterprise-security.jpg' 
 }) => {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
