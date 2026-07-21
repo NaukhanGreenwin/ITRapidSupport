@@ -12,6 +12,7 @@ import Microsoft365CopilotSection from '../components/Microsoft365CopilotSection
 import ServicesGrid from '../components/ServicesGrid';
 import CtaSection from '../components/CtaSection';
 import IndustrySecuritySolutions from '../components/IndustrySecuritySolutions';
+import GTACybersecuritySection from '../components/GTACybersecuritySection';
 
 const Home: React.FC = () => {
 
@@ -130,6 +131,7 @@ const Home: React.FC = () => {
 
         {/* Below-fold components */}
         <IndustrySecuritySolutions />
+        <GTACybersecuritySection />
         <Microsoft365CopilotSection />
         <CtaSection />
       </div>
