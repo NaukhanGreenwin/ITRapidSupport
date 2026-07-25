@@ -228,15 +228,20 @@ export default function Header() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
-                <img
-                  src="/images/logo.png"
-                  alt="IT Rapid Support Logo"
-                  className="w-auto max-w-[280px] sm:max-w-[280px] object-contain h-14 sm:h-14 md:h-16"
-                  width="1000"
-                  height="320"
-                  loading="eager"
-                  fetchPriority="high"
-                />
+                <picture>
+                  {/* 560x179 WebP (2x the 280px render width) — 16KB, vs the 77KB
+                      1000x320 PNG the browser was downscaling on every load. */}
+                  <source srcSet="/images/logo.webp" type="image/webp" />
+                  <img
+                    src="/images/logo.png"
+                    alt="IT Rapid Support Logo"
+                    className="w-auto max-w-[280px] sm:max-w-[280px] object-contain h-14 sm:h-14 md:h-16"
+                    width="1000"
+                    height="320"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </picture>
                 <span className="sr-only">IT Rapid Support</span>
               </Link>
             </div>

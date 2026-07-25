@@ -7,7 +7,7 @@ const PreloadManager: React.FC = () => {
     const preloadSections = () => {
       // Prefetch critical images
       const criticalImages = [
-        '/images/logo.png', 
+        '/images/logo.webp',
         // Add other critical images here
       ];
       

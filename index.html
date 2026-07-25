@@ -45,7 +45,11 @@
     <!-- Pre-rendering marker for proper service page generation -->
     <script>window.prerenderReady = false;</script>
     
-    <!-- Fonts -->
+    <!-- Fonts — preconnect first so the DNS+TLS handshakes to both Google font
+         hosts overlap with HTML parsing instead of serialising in front of FCP.
+         crossorigin on gstatic is required: the woff2 fetch is CORS. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Google Analytics Tag (GA4) — single loader; AnalyticsTracker sends
@@ -58,16 +62,34 @@
       function gtag(){dataLayer.push(arguments);}
       window.gtag = gtag;
       if (!navigator.webdriver) {
-        var gaScript = document.createElement('script');
-        gaScript.async = true;
-        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KNT7SJ3LYP';
-        document.head.appendChild(gaScript);
+        // gtag.js is ~148KB and competes with the critical render path for
+        // bandwidth and main-thread time. Nothing above the fold needs it, so
+        // defer the loader until after load (or first interaction, whichever
+        // comes first). gtag() calls made before then still queue on dataLayer
+        // and replay once the script arrives, so no hits are lost.
+        var gaLoaded = false;
+        var loadGA = function () {
+          if (gaLoaded) return;
+          gaLoaded = true;
+          var gaScript = document.createElement('script');
+          gaScript.async = true;
+          gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-KNT7SJ3LYP';
+          document.head.appendChild(gaScript);
+        };
         gtag('js', new Date());
         gtag('config', 'G-KNT7SJ3LYP', {
           send_page_view: false,
           cookie_flags: 'samesite=none;secure',
           anonymize_ip: true
         });
+        ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (evt) {
+          window.addEventListener(evt, loadGA, { once: true, passive: true });
+        });
+        if (document.readyState === 'complete') {
+          setTimeout(loadGA, 1500);
+        } else {
+          window.addEventListener('load', function () { setTimeout(loadGA, 1500); }, { once: true });
+        }
       }
     </script>
 
