@@ -1,6 +1,57 @@
-import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronRight, Play } from 'lucide-react';
 import AnimateOnScroll from './AnimateOnScroll';
+
+// Wistia's embed pulls ~5.6MB (video + full-size poster + player JS) on page load,
+// which was the homepage's LCP bottleneck. This facade shows a 24KB poster instead
+// and only mounts the real iframe once the visitor asks to play.
+const WISTIA_ID = 'mom73ol274';
+const WISTIA_POSTER =
+  'https://embed-ssl.wistia.com/deliveries/6c1009aacb98b4d1b4cfdd70712a695a7b10e232.jpg?image_crop_resized=640x360';
+
+const CopilotVideo: React.FC = () => {
+  const [playing, setPlaying] = useState(false);
+
+  if (playing) {
+    return (
+      <iframe
+        allowTransparency="true"
+        title="Copilot for Microsoft 365: Work On"
+        allowFullScreen
+        allow="autoplay; fullscreen"
+        frameBorder="0"
+        scrolling="no"
+        className="wistia_embed w-full aspect-video rounded-lg"
+        name="wistia_embed"
+        src={`https://fast.wistia.net/embed/iframe/${WISTIA_ID}?autoPlay=true`}
+      ></iframe>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={() => setPlaying(true)}
+      aria-label="Play video: Copilot for Microsoft 365: Work On"
+      className="group relative block w-full aspect-video rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-red-500"
+    >
+      <img
+        src={WISTIA_POSTER}
+        alt="Copilot for Microsoft 365: Work On"
+        width={640}
+        height={360}
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover"
+      />
+      <span className="absolute inset-0 flex items-center justify-center bg-slate-900/30 transition-colors group-hover:bg-slate-900/20">
+        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-red-600 shadow-lg transition-transform group-hover:scale-110">
+          <Play className="h-6 w-6 text-white translate-x-0.5" fill="currentColor" />
+        </span>
+      </span>
+    </button>
+  );
+};
 
 const Microsoft365CopilotSection: React.FC = () => {
   return (
@@ -39,16 +90,7 @@ const Microsoft365CopilotSection: React.FC = () => {
               
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm p-2 rounded-xl shadow-xl border border-white/10">
-                  <iframe 
-                    allowTransparency="true" 
-                    title="Wistia video player" 
-                    allowFullScreen 
-                    frameBorder="0" 
-                    scrolling="no" 
-                    className="wistia_embed w-full aspect-video rounded-lg" 
-                    name="wistia_embed" 
-                    src="https://fast.wistia.net/embed/iframe/mom73ol274"
-                  ></iframe>
+                  <CopilotVideo />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-red-600/30 rounded-full blur-2xl -z-10"></div>
               </div>
