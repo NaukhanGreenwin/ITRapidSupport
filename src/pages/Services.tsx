@@ -17,14 +17,14 @@ const Services: React.FC = () => {
             name: 'IT Support & Security Services',
             description:
               'Managed IT support and cybersecurity services for businesses across Toronto and the Greater Toronto Area.',
-            url: '/services',
+            url: '/services/',
             areaServed: 'Greater Toronto Area, Ontario',
             serviceType: 'Managed IT & Security Services',
           }),
         ]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Services', url: '/services' },
+          { name: 'Services', url: '/services/' },
         ]}
       />
       {/* Hero Section */}
@@ -64,25 +64,25 @@ const Services: React.FC = () => {
             </p>
             <p className="text-gray-600 max-w-2xl mx-auto mt-4">
               For teams working across the country, see our{' '}
-              <Link to="/services/canada-wide-managed-it" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/canada-wide-managed-it/" className="text-red-600 hover:text-red-700 font-medium">
                 Canada-wide managed IT services
               </Link>. For end-to-end technology management in the GTA, see our{' '}
-              <Link to="/services/it-outsourcing-services" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/it-outsourcing-services/" className="text-red-600 hover:text-red-700 font-medium">
                 IT outsourcing services for Toronto and the GTA
               </Link>, or choose{' '}
-              <Link to="/services/microsoft-365-managed-services" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/microsoft-365-managed-services/" className="text-red-600 hover:text-red-700 font-medium">
                 managed Microsoft 365 support
               </Link>{' '}
               for ongoing cloud administration. If you have internal IT staff, our{' '}
-              <Link to="/services/co-managed-it-services" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/co-managed-it-services/" className="text-red-600 hover:text-red-700 font-medium">
                 co-managed IT services
               </Link>{' '}
               add coverage, tools, and specialist capacity without replacing your team. Our{' '}
-              <Link to="/services/business-continuity-disaster-recovery" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/business-continuity-disaster-recovery/" className="text-red-600 hover:text-red-700 font-medium">
                 business continuity and disaster recovery services
               </Link>{' '}
               help prepare critical systems for outages, ransomware, and data loss, while our{' '}
-              <Link to="/services/network-security-services" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/network-security-services/" className="text-red-600 hover:text-red-700 font-medium">
                 network security services
               </Link>{' '}
               protect business firewalls, wired networks, Wi-Fi, and access points. For 24/7 threat monitoring and response, see our{' '}
@@ -148,7 +148,7 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Single sign-on solutions</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/contact/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Explore our identity management solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -176,7 +176,7 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Proactive threat hunting</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/contact/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn about our threat intelligence capabilities <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -204,7 +204,7 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Data loss prevention</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/contact/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Discover our cloud security services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -232,7 +232,7 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Red team exercises</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/contact/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Explore our security testing services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -260,7 +260,7 @@ const Services: React.FC = () => {
                   <span className="text-gray-600">Data access governance</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/contact/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Discover our data protection solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -300,7 +300,7 @@ const Services: React.FC = () => {
                   </div>
                 </div>
                 <Link 
-                  to="/contact" 
+                  to="/contact/" 
                   className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-slate-100 transition-colors font-medium"
                 >
                   Get a demo
@@ -383,7 +383,7 @@ const Services: React.FC = () => {
             Contact our security experts today for a personalized consultation and discover how IT Rapid Support can protect your organization.
           </p>
           <Link 
-            to="/contact" 
+            to="/contact/" 
             className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-slate-100 transition-colors font-medium"
           >
             Schedule a consultation

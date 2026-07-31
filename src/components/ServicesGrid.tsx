@@ -15,21 +15,21 @@ const ServicesGrid: React.FC = () => {
             </p>
             <p className="text-gray-600 max-w-3xl mx-auto mt-3 text-sm">
               Need a complete IT department? Explore our{' '}
-              <Link to="/services/it-outsourcing-services" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/it-outsourcing-services/" className="text-red-600 hover:text-red-700 font-medium">
                 IT outsourcing services for Toronto and the GTA
               </Link>, or see how our{' '}
-              <Link to="/services/microsoft-365-managed-services" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/microsoft-365-managed-services/" className="text-red-600 hover:text-red-700 font-medium">
                 Microsoft 365 managed services
               </Link>{' '}
               keep cloud users supported. Already have an internal team? Our{' '}
-              <Link to="/services/co-managed-it-services" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/co-managed-it-services/" className="text-red-600 hover:text-red-700 font-medium">
                 co-managed IT services
               </Link>{' '}
               add 24/7 coverage and specialist depth. Protect critical operations with our{' '}
-              <Link to="/services/business-continuity-disaster-recovery" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/business-continuity-disaster-recovery/" className="text-red-600 hover:text-red-700 font-medium">
                 business continuity and disaster recovery services
               </Link>. Strengthen the environment with managed{' '}
-              <Link to="/services/network-security-services" className="text-red-600 hover:text-red-700 font-medium">
+              <Link to="/services/network-security-services/" className="text-red-600 hover:text-red-700 font-medium">
                 network security services
               </Link>, backed by our{' '}
               <Link to="/services/managed-security/" className="text-red-600 hover:text-red-700 font-medium">
@@ -67,7 +67,7 @@ const ServicesGrid: React.FC = () => {
                 <p className="text-gray-600 mb-4 text-sm">
                   Secure your digital assets with advanced identity verification and access control solutions tailored for GTA businesses.
                 </p>
-                <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
+                <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
                   Explore identity and access solutions <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
@@ -82,7 +82,7 @@ const ServicesGrid: React.FC = () => {
                 <p className="text-gray-600 mb-4 text-sm">
                   Stay ahead of cyber threats with AI-powered threat detection and proactive security measures for Ontario enterprises.
                 </p>
-                <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
+                <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
                   Discover threat intelligence services <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
@@ -97,7 +97,7 @@ const ServicesGrid: React.FC = () => {
                 <p className="text-gray-600 mb-4 text-sm">
                   Protect your cloud infrastructure with comprehensive security controls, monitoring, and compliance solutions for Toronto businesses.
                 </p>
-                <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
+                <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
                   View our cloud security offerings <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
@@ -112,7 +112,7 @@ const ServicesGrid: React.FC = () => {
                 <p className="text-gray-600 mb-4 text-sm">
                   Secure your applications from development to deployment with code analysis, penetration testing, and runtime protection for Mississauga organizations.
                 </p>
-                <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
+                <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
                   Explore application security services <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
@@ -127,7 +127,7 @@ const ServicesGrid: React.FC = () => {
                 <p className="text-gray-600 mb-4 text-sm">
                   Meet Canadian regulatory requirements with our compliance frameworks, audit support, and policy management services for Ontario enterprises.
                 </p>
-                <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
+                <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium mt-auto text-sm">
                   View compliance and governance solutions <ChevronRight className="ml-1 h-3 w-3" />
                 </Link>
               </div>
@@ -135,7 +135,7 @@ const ServicesGrid: React.FC = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <Link to="/services" className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium text-sm">
+            <Link to="/services/" className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium text-sm">
               View all cybersecurity services <ChevronRight className="ml-1 h-4 w-4" />
             </Link>
           </div>

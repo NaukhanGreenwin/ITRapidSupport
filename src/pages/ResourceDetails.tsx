@@ -100,14 +100,14 @@ export const allResources: ResourceItem[] = [
       "## Local On-Site Support Still Matters",
       "Remote tools solve most tickets, but not everything. Network cabling, firewall swaps, Wi-Fi dead zones, failed workstations, new office setups, and warehouse coverage problems often need a technician on site. IT Rapid Support operates from 7810 Keele St in Vaughan, which keeps local dispatch practical for businesses in Vaughan, Concord, Woodbridge, Maple, and the surrounding GTA. If a provider cannot explain when and how they send someone on site, you do not yet know the real service model.",
       "## Managed IT Should Include Security Basics",
-      "Modern IT support and cybersecurity are no longer separate conversations. A managed IT plan should include patching, endpoint protection, multi-factor authentication, secure Microsoft 365 configuration, email security, backup monitoring, and a clear response path if something suspicious happens. For higher-risk environments, add [managed detection and response](/services/threat-detection) so alerts are monitored around the clock instead of waiting for someone to notice them during business hours.",
+      "Modern IT support and cybersecurity are no longer separate conversations. A managed IT plan should include patching, endpoint protection, multi-factor authentication, secure Microsoft 365 configuration, email security, backup monitoring, and a clear response path if something suspicious happens. For higher-risk environments, add [managed detection and response](/services/threat-detection/) so alerts are monitored around the clock instead of waiting for someone to notice them during business hours.",
       "## Backups Need Restore Tests",
-      "Many businesses have backups. Fewer know whether those backups restore quickly enough to keep the company running. Ask how often backups are checked, whether there is an offsite or immutable copy, who runs a restore during an emergency, and what the recovery target is for email, files, servers, and key applications. A managed provider should be able to connect backup monitoring to an actual [disaster recovery plan](/resources/disaster-recovery-plan-small-business-ontario).",
+      "Many businesses have backups. Fewer know whether those backups restore quickly enough to keep the company running. Ask how often backups are checked, whether there is an offsite or immutable copy, who runs a restore during an emergency, and what the recovery target is for email, files, servers, and key applications. A managed provider should be able to connect backup monitoring to an actual [disaster recovery plan](/resources/disaster-recovery-plan-small-business-ontario/).",
       "## Questions to Ask a Vaughan Managed IT Provider",
       "Before choosing a provider, ask: 1. Is support available 24/7? 2. Do you provide local on-site service in Vaughan? 3. What is included in cybersecurity versus billed separately? 4. How are backups tested? 5. Who handles Microsoft 365, email security, and user onboarding? 6. What happens during a ransomware or business email compromise incident? 7. Will we get plain-language reporting on tickets, risk, and recurring issues?",
       "## When to Switch From Break-Fix to Managed IT",
       "Break-fix support waits for something to fail. Managed IT is designed to reduce the failures in the first place. If your team is losing time to recurring Wi-Fi issues, slow computers, Microsoft 365 problems, unclear vendor handoffs, or security questions nobody owns, it is usually time to move to a managed model. The goal is predictable support, fewer surprises, and a team that understands your environment before the next urgent issue lands.",
-      "IT Rapid Support provides [managed IT services in Vaughan](/it-support/vaughan) and across the [Greater Toronto Area](/it-support/gta), with 24/7 helpdesk coverage, cybersecurity, backup monitoring, Microsoft 365 support, and local on-site response from our Vaughan office. Call (289) 582-9930 to review your current IT setup and where the risk or downtime is hiding."
+      "IT Rapid Support provides [managed IT services in Vaughan](/it-support/vaughan/) and across the [Greater Toronto Area](/it-support/gta/), with 24/7 helpdesk coverage, cybersecurity, backup monitoring, Microsoft 365 support, and local on-site response from our Vaughan office. Call (289) 582-9930 to review your current IT setup and where the risk or downtime is hiding."
     ].join('\n\n'),
     type: "guide",
     date: "July 16, 2026",
@@ -140,7 +140,7 @@ export const allResources: ResourceItem[] = [
       "The reassuring part: the fix is fast, standard, and does not disrupt your mail flow when it is staged correctly. Publishing SPF, enabling DKIM, and rolling DMARC from monitoring to enforcement is typically a short, well-understood project — not a rip-and-replace.",
       "## How to Check Your Own Domain",
       "You can see part of this yourself. A DMARC record lives at a TXT record on the subdomain \"_dmarc.yourdomain.com\" and begins with \"v=DMARC1\". If it is missing, or if it says \"p=none\", your domain is not yet protected at enforcement. SPF lives on a TXT record at your root domain and begins with \"v=spf1\".",
-      "If you would rather have it checked and fixed properly, IT Rapid Support offers a non-intrusive [email security and phishing protection](/services/managed-security/) review for GTA businesses. We assess your SPF, DKIM and DMARC posture, explain the gaps in plain language, and stage the fixes so nothing breaks. Learn more about our approach to [managed cybersecurity across the GTA](/it-support/gta) or call (289) 582-9930.",
+      "If you would rather have it checked and fixed properly, IT Rapid Support offers a non-intrusive [email security and phishing protection](/services/managed-security/) review for GTA businesses. We assess your SPF, DKIM and DMARC posture, explain the gaps in plain language, and stage the fixes so nothing breaks. Learn more about our approach to [managed cybersecurity across the GTA](/it-support/gta/) or call (289) 582-9930.",
       "## Methodology",
       "We reviewed the publicly published DNS records (SPF and DMARC TXT records, DKIM on common selectors, and MX routing) for 118 Greater Toronto Area business domains that operate email. All checks were passive DNS lookups of publicly available records — no systems were accessed, probed, or contacted. Results are reported in aggregate only; no individual organization is identified. DKIM figures are conservative because organizations may use custom selectors not visible in an external review."
     ].join('\n\n'),
@@ -167,7 +167,7 @@ export const allResources: ResourceItem[] = [
       "### 2. Per-Device Pricing",
       "Some providers price by the number of devices they manage: workstations, servers, firewalls, and network gear. This suits businesses with shared workstations or a high device-to-user ratio, such as warehouses, clinics, or retail locations.",
       "### 3. Tiered or Bundled Plans",
-      "Many managed service providers package support into tiers, where higher tiers add proactive monitoring, advanced cybersecurity, and faster response commitments. This lets you start with essential coverage and add security layers like [managed detection and response](/services/threat-detection), email security, and multi-factor authentication as you grow.",
+      "Many managed service providers package support into tiers, where higher tiers add proactive monitoring, advanced cybersecurity, and faster response commitments. This lets you start with essential coverage and add security layers like [managed detection and response](/services/threat-detection/), email security, and multi-factor authentication as you grow.",
       "## What Actually Drives the Price",
       "Several factors move managed IT pricing up or down. Understanding them helps you compare quotes fairly:",
       "### Number of Users and Devices",
@@ -181,7 +181,7 @@ export const allResources: ResourceItem[] = [
       "## What to Ask Before You Sign",
       "When comparing providers, ask exactly what is included. Does the plan cover cybersecurity or is that extra? Is the helpdesk available 24/7? Are on-site visits included? What is the response commitment when something breaks? A low headline price often means thin coverage that costs you more in downtime later.",
       "## Get a Straight Answer for Your Business",
-      "Every business is different, so the most accurate way to understand your cost is a short conversation about your team size, your systems, and your risk. IT Rapid Support provides managed IT and cybersecurity for businesses [across Toronto and the GTA](/it-support/gta), with a 24/7 helpdesk, proactive monitoring, and certified technicians. Call (289) 582-9930 for a no-pressure quote built around your needs."
+      "Every business is different, so the most accurate way to understand your cost is a short conversation about your team size, your systems, and your risk. IT Rapid Support provides managed IT and cybersecurity for businesses [across Toronto and the GTA](/it-support/gta/), with a 24/7 helpdesk, proactive monitoring, and certified technicians. Call (289) 582-9930 for a no-pressure quote built around your needs."
     ].join('\n\n'),
     type: "guide",
     date: "June 24, 2026",
@@ -217,7 +217,7 @@ export const allResources: ResourceItem[] = [
       "## A Hybrid Approach",
       "Many growing businesses run a hybrid model: a managed provider handles monitoring, security, and the helpdesk, while a small internal contact coordinates priorities. This gives you hands-on familiarity plus the depth and coverage of a full team.",
       "## How to Decide",
-      "If you are a small or mid-sized GTA business that wants predictable costs, strong security, and coverage that never sleeps, managed IT is usually the better value. IT Rapid Support delivers [IT outsourcing services for Toronto and the GTA](/services/it-outsourcing-services) with a 24/7 helpdesk, proactive monitoring, cybersecurity, cloud management, and on-site support. Call (289) 582-9930 to talk through which model fits your business."
+      "If you are a small or mid-sized GTA business that wants predictable costs, strong security, and coverage that never sleeps, managed IT is usually the better value. IT Rapid Support delivers [IT outsourcing services for Toronto and the GTA](/services/it-outsourcing-services/) with a 24/7 helpdesk, proactive monitoring, cybersecurity, cloud management, and on-site support. Call (289) 582-9930 to talk through which model fits your business."
     ].join('\n\n'),
     type: "guide",
     date: "June 22, 2026",
@@ -252,7 +252,7 @@ export const allResources: ResourceItem[] = [
       "## 8. Have a Plan for When Something Goes Wrong",
       "Know who to call and what to do in the first hour of an incident. A clear response plan, combined with a partner who can act fast, dramatically reduces the cost and downtime of an attack.",
       "## Putting It Together",
-      "Each of these layers is achievable for a small business when set up by a team that does this every day. IT Rapid Support provides managed cybersecurity for businesses [across Toronto and the GTA](/it-support/gta), including MFA, email security, endpoint protection, backup and recovery, 24/7 [managed detection and response](/services/threat-detection), and [network security services](/services/network-security-services) covering managed firewalls, segmentation, secure Wi-Fi, and monitoring. Call (289) 582-9930 to find the gaps in your current setup."
+      "Each of these layers is achievable for a small business when set up by a team that does this every day. IT Rapid Support provides managed cybersecurity for businesses [across Toronto and the GTA](/it-support/gta/), including MFA, email security, endpoint protection, backup and recovery, 24/7 [managed detection and response](/services/threat-detection/), and [network security services](/services/network-security-services/) covering managed firewalls, segmentation, secure Wi-Fi, and monitoring. Call (289) 582-9930 to find the gaps in your current setup."
     ].join('\n\n'),
     type: "guide",
     date: "June 20, 2026",
@@ -284,7 +284,7 @@ export const allResources: ResourceItem[] = [
       "## Common Pitfalls to Avoid",
       "The biggest mistakes are migrating without a backup, skipping MFA, underestimating how long data transfer takes, and cutting over during business hours. Each one is avoidable with the right plan and the right partner.",
       "## Make Your Migration a Non-Event",
-      "IT Rapid Support helps Toronto and GTA businesses migrate to Microsoft 365 with minimal downtime, proper security, and a 24/7 helpdesk standing by during the transition. We handle the planning and migration, then provide [Microsoft 365 managed services](/services/microsoft-365-managed-services) for ongoing administration, security, and user support after cutover. Call (289) 582-9930 to scope your move."
+      "IT Rapid Support helps Toronto and GTA businesses migrate to Microsoft 365 with minimal downtime, proper security, and a 24/7 helpdesk standing by during the transition. We handle the planning and migration, then provide [Microsoft 365 managed services](/services/microsoft-365-managed-services/) for ongoing administration, security, and user support after cutover. Call (289) 582-9930 to scope your move."
     ].join('\n\n'),
     type: "guide",
     date: "June 18, 2026",
@@ -315,7 +315,7 @@ export const allResources: ResourceItem[] = [
       "## What to Do If You Are Hit",
       "Disconnect affected systems immediately, do not pay before getting expert advice, and bring in a response team fast. The first hour shapes the outcome. Having a partner you can call at any time is the difference between a contained incident and a business-stopping crisis.",
       "## Build Your Defense Before You Need It",
-      "Ransomware defense is not a single product; it is layers working together, maintained by people who watch them every day. IT Rapid Support provides managed cybersecurity, backup and recovery, and 24/7 [managed detection and response](/services/threat-detection) for businesses [across Ontario and the GTA](/it-support/gta). Call (289) 582-9930 to assess your ransomware readiness before an attacker tests it for you."
+      "Ransomware defense is not a single product; it is layers working together, maintained by people who watch them every day. IT Rapid Support provides managed cybersecurity, backup and recovery, and 24/7 [managed detection and response](/services/threat-detection/) for businesses [across Ontario and the GTA](/it-support/gta/). Call (289) 582-9930 to assess your ransomware readiness before an attacker tests it for you."
     ].join('\n\n'),
     type: "guide",
     date: "June 16, 2026",
@@ -338,7 +338,7 @@ export const allResources: ResourceItem[] = [
       "## 2. Proactive Monitoring, Not Just Reactive Fixes",
       "The best providers prevent problems instead of waiting for you to report them. Proactive monitoring catches failing hardware, security issues, and performance problems early. If a provider only shows up after something breaks, you are paying for the slowest possible service.",
       "## 3. Security Built In, Not Bolted On",
-      "Cybersecurity should be part of the core offering: managed firewalls, endpoint protection, email security, MFA, and [managed detection and response](/services/threat-detection). If security is an expensive afterthought or barely mentioned, keep looking.",
+      "Cybersecurity should be part of the core offering: managed firewalls, endpoint protection, email security, MFA, and [managed detection and response](/services/threat-detection/). If security is an expensive afterthought or barely mentioned, keep looking.",
       "## 4. Local Presence and On-Site Capability",
       "Most issues are solved remotely, but some need hands on hardware. A provider with on-site capability across the GTA can show up for new office setups, hardware failures, and projects. Local matters when you need someone in the room.",
       "## 5. Clear, Predictable Pricing",
@@ -465,7 +465,7 @@ export const allResources: ResourceItem[] = [
       "## Have a Plan for When Someone Clicks",
       "Assume that eventually someone will click. Managed detection and response and a clear incident process mean a single mistake gets caught and contained quickly instead of turning into a breach.",
       "## Protect Your Business From Phishing",
-      "IT Rapid Support combines email security, multi-factor authentication, security awareness training, and [managed detection and response](/services/threat-detection) to protect [GTA businesses](/it-support/gta) against phishing. Call (289) 582-9930 to strengthen your defences."
+      "IT Rapid Support combines email security, multi-factor authentication, security awareness training, and [managed detection and response](/services/threat-detection/) to protect [GTA businesses](/it-support/gta/) against phishing. Call (289) 582-9930 to strengthen your defences."
     ].join('\n\n'),
     type: "guide",
     date: "June 26, 2026",
@@ -547,7 +547,7 @@ export const allResources: ResourceItem[] = [
       "## What Fully Managed IT Means",
       "With fully managed IT, your provider becomes your complete IT department. They run the helpdesk, monitor and patch your systems, manage your network and cloud, handle cybersecurity, and plan your technology roadmap. You have no internal IT staff to manage because the provider covers all of it. This is the most common choice for small and mid-sized businesses that want predictable costs and a single team accountable for everything.",
       "## What Co-Managed IT Means",
-      "[Co-managed IT services](/services/co-managed-it-services) are a partnership with your existing internal IT person or team. Instead of replacing them, the provider fills specific gaps: after-hours and weekend coverage, advanced cybersecurity, project capacity, specialized expertise, and the monitoring and patching tools that are expensive to license alone. Your internal staff keep day-to-day familiarity and control while gaining the depth and coverage of a full team behind them.",
+      "[Co-managed IT services](/services/co-managed-it-services/) are a partnership with your existing internal IT person or team. Instead of replacing them, the provider fills specific gaps: after-hours and weekend coverage, advanced cybersecurity, project capacity, specialized expertise, and the monitoring and patching tools that are expensive to license alone. Your internal staff keep day-to-day familiarity and control while gaining the depth and coverage of a full team behind them.",
       "## Comparing the Two Side by Side",
       "### Who Handles Day-to-Day Support",
       "Fully managed: the provider runs the helpdesk and owns every ticket. Co-managed: your internal team handles front-line requests, and the provider takes overflow, escalations, and after-hours.",
@@ -722,7 +722,7 @@ export const allResources: ResourceItem[] = [
       "## Local Coverage Matters",
       "Remote support solves most issues, but when hardware fails or a network needs hands-on work, you want a provider that can actually get to you. Ask where the provider's team is based and how they handle on-site calls in your part of the GTA — a provider centrally located in the region can reach Toronto, York, Peel, Halton, and Durham quickly.",
       "## Talk to a GTA IT Support Provider",
-      "IT Rapid Support provides [managed IT support and cybersecurity to businesses across the Greater Toronto Area](/it-support/gta) from our Vaughan headquarters: 24/7 helpdesk, [managed detection and response](/services/threat-detection), cloud and Microsoft 365 management, and on-site support GTA-wide. Call (289) 582-9930 for a straightforward conversation about what your business actually needs."
+      "IT Rapid Support provides [managed IT support and cybersecurity to businesses across the Greater Toronto Area](/it-support/gta/) from our Vaughan headquarters: 24/7 helpdesk, [managed detection and response](/services/threat-detection/), cloud and Microsoft 365 management, and on-site support GTA-wide. Call (289) 582-9930 for a straightforward conversation about what your business actually needs."
     ].join('\n\n'),
     type: "guide",
     date: "July 3, 2026",
@@ -821,7 +821,7 @@ export const allResources: ResourceItem[] = [
       "## A Sensible Path for a GTA Business",
       "1. Confirm with counsel whether Law 25 applies to your operations. 2. Inventory the personal information you hold and where it is stored, including cloud services and backups. 3. Close the technical gaps: encryption, MFA, access controls, detection, tested backups. 4. Document incidents and be ready to report. 5. Review the same controls against PIPEDA, since both regimes will usually apply to an Ontario business.",
       "## How IT Rapid Support Helps",
-      "IT Rapid Support provides the technical foundation that privacy compliance programs are built on for businesses [across Toronto and the GTA](/it-support/gta): data protection, access management, encrypted and tested backups, and 24/7 [managed detection and response](/services/threat-detection) that helps you detect and document incidents. We work alongside your legal and privacy advisors — they define the obligations, we implement the controls. Call (289) 582-9930 to review where your systems stand."
+      "IT Rapid Support provides the technical foundation that privacy compliance programs are built on for businesses [across Toronto and the GTA](/it-support/gta/): data protection, access management, encrypted and tested backups, and 24/7 [managed detection and response](/services/threat-detection/) that helps you detect and document incidents. We work alongside your legal and privacy advisors — they define the obligations, we implement the controls. Call (289) 582-9930 to review where your systems stand."
     ].join('\n\n'),
     type: "guide",
     date: "July 3, 2026",
@@ -854,7 +854,7 @@ export const allResources: ResourceItem[] = [
       "You can look up your domain's SPF, DKIM, and DMARC records with free online DNS lookup tools. The pattern we most often find at new clients: an SPF record that no longer matches the services actually in use, DKIM enabled for the main platform but not for third-party senders like CRMs and invoicing tools, and either no DMARC record or one stuck at p=none with nobody reading the reports.",
       "## Getting It Fixed Without Breaking Your Email",
       "The order of operations matters: inventory every service that legitimately sends as your domain, correct SPF, enable DKIM everywhere, publish DMARC in monitoring mode, review the reports, then tighten the policy step by step. Rushing straight to p=reject without the inventory step is how companies accidentally block their own invoices.",
-      "As part of our [managed security services](/services/managed-security/), IT Rapid Support configures and monitors email authentication for businesses across Toronto and the GTA — alongside the anti-phishing filtering, MFA, and [user awareness training](/resources/stop-phishing-attacks-email-security) that address the attacks authentication alone cannot stop. Call (289) 582-9930 and we can tell you quickly whether your domain is protected or exposed."
+      "As part of our [managed security services](/services/managed-security/), IT Rapid Support configures and monitors email authentication for businesses across Toronto and the GTA — alongside the anti-phishing filtering, MFA, and [user awareness training](/resources/stop-phishing-attacks-email-security/) that address the attacks authentication alone cannot stop. Call (289) 582-9930 and we can tell you quickly whether your domain is protected or exposed."
     ].join('\n\n'),
     type: "guide",
     date: "July 10, 2026",
@@ -887,7 +887,7 @@ export const allResources: ResourceItem[] = [
       "## A Sensible Plan for a Small Business",
       "1. Inventory: list every Windows machine and whether it is Windows 11-eligible. 2. Triage: eligible machines get scheduled upgrades; ineligible ones get replacement dates or a justified ESU exception. 3. Back up everything before touching anything. 4. Migrate in waves, testing your critical applications with the first wave. 5. Securely wipe and dispose of retired machines — old hard drives full of business data should never just go in a bin.",
       "## Don't Run This Project Alone",
-      "This is a routine project for a managed IT provider and a disruptive one for a business trying to do it off the side of a desk. IT Rapid Support handles Windows 10 transitions for businesses [across Toronto and the GTA](/it-support/gta) — eligibility audit, upgrade scheduling, hardware recommendations and procurement guidance, [Microsoft 365 and cloud moves](/services/microsoft-365-azure-migration) where they make sense, data migration, and secure disposal. Call (289) 582-9930 for a straight answer on what your fleet needs."
+      "This is a routine project for a managed IT provider and a disruptive one for a business trying to do it off the side of a desk. IT Rapid Support handles Windows 10 transitions for businesses [across Toronto and the GTA](/it-support/gta/) — eligibility audit, upgrade scheduling, hardware recommendations and procurement guidance, [Microsoft 365 and cloud moves](/services/microsoft-365-azure-migration/) where they make sense, data migration, and secure disposal. Call (289) 582-9930 for a straight answer on what your fleet needs."
     ].join('\n\n'),
     type: "guide",
     date: "July 10, 2026",
@@ -917,7 +917,7 @@ export const allResources: ResourceItem[] = [
       "Before you migrate, someone should verify: your internet bandwidth and its upload capacity (uploads are what calls consume), whether your router/firewall can prioritize voice traffic, how phones will be powered and cabled, and whether your switch and Wi-Fi gear are up to the job. Fixing this after go-live means your phones were unreliable exactly when first impressions were being formed.",
       "## Getting the Migration Right",
       "A clean cutover looks like: audit the network first, fix what voice needs, port numbers with overlap so nothing goes dark, configure call flows before day one, roll out apps and quick training to the team, and keep the old service until the new one is proven. It is not complicated — it just has to actually be done.",
-      "IT Rapid Support prepares businesses across the GTA for VoIP as part of [managed network services](/services/network-management): bandwidth and QoS assessment, firewall and switching upgrades where needed, cabling and Wi-Fi, and coordination with your chosen VoIP provider so the rollout lands smoothly — and one number to call afterward if quality ever dips. For [Toronto businesses](/it-support/toronto) weighing the switch, call (289) 582-9930 and we will give you a straight read on whether your network is VoIP-ready."
+      "IT Rapid Support prepares businesses across the GTA for VoIP as part of [managed network services](/services/network-management/): bandwidth and QoS assessment, firewall and switching upgrades where needed, cabling and Wi-Fi, and coordination with your chosen VoIP provider so the rollout lands smoothly — and one number to call afterward if quality ever dips. For [Toronto businesses](/it-support/toronto/) weighing the switch, call (289) 582-9930 and we will give you a straight read on whether your network is VoIP-ready."
     ].join('\n\n'),
     type: "guide",
     date: "July 10, 2026",
@@ -940,14 +940,14 @@ export const allResources: ResourceItem[] = [
       "## Step 2: Map What Actually Keeps the Business Running",
       "List the systems the business stops without: email, accounting, your line-of-business application, shared files, phones, payment processing, and the credentials and licenses behind them. For each, record where it lives (on-premises server, Microsoft 365, a vendor's cloud), who administers it, and what it depends on. Most businesses discover at least one single point of failure they had never written down — often a critical application on one aging PC under someone's desk.",
       "## Step 3: Match Protection to the Map",
-      "With RTO/RPO and the system map in hand, the protection choices become straightforward: which systems need near-continuous replication versus nightly backup, what needs an offsite and immutable copy (ransomware deliberately hunts and encrypts backups it can reach), and which cloud services need their own backup — Microsoft 365 data is your responsibility to protect, a point covered in depth in our [cloud backup and disaster recovery guide](/resources/cloud-backup-disaster-recovery-guide).",
+      "With RTO/RPO and the system map in hand, the protection choices become straightforward: which systems need near-continuous replication versus nightly backup, what needs an offsite and immutable copy (ransomware deliberately hunts and encrypts backups it can reach), and which cloud services need their own backup — Microsoft 365 data is your responsibility to protect, a point covered in depth in our [cloud backup and disaster recovery guide](/resources/cloud-backup-disaster-recovery-guide/).",
       "## Step 4: Write the Runbook",
       "This is the piece almost everyone skips, and it is the plan. A disaster recovery runbook is a short document that answers, in order: who declares an incident and who is in charge; how the team communicates if email and phones are down; what gets restored first, second, third (from your RTO list); the actual step-by-step restore procedure for each critical system; where credentials, license keys, vendor support numbers, and cyber-insurance contacts are kept (accessible even if your systems are down); and who contacts customers, staff, and — if personal information was breached — reviews privacy obligations under PIPEDA with your advisors.",
       "Keep a copy outside your own infrastructure. A runbook stored only on the server that just died is a paperweight.",
       "## Step 5: Test It Before Reality Does",
       "An untested plan is a guess. Twice a year: restore real files from backup and time it; walk the team through a tabletop scenario ('it is Monday 7 a.m., the office has no power and the server room flooded — go'); and verify the contact lists and credentials in the runbook are still current. Every test finds something — a backup job that silently stopped, a step that assumes a person who left the company. Finding it in a test costs an hour; finding it in a disaster costs days.",
       "## What This Looks Like with a Managed Provider",
-      "Done in-house, the hard part is discipline: the plan gets written once and goes stale. A managed IT provider bakes the discipline in — monitored backups, scheduled restore tests, a maintained runbook, and a team on call when the bad day comes. IT Rapid Support provides [business continuity and disaster recovery services](/services/business-continuity-disaster-recovery) for small businesses across Ontario and the GTA, including monitored backups, restore testing, recovery planning, and [24/7 emergency response](/services/emergency-it-services/) when an incident is already underway. Call (289) 582-9930 to pressure-test the plan you have — or build the one you don't."
+      "Done in-house, the hard part is discipline: the plan gets written once and goes stale. A managed IT provider bakes the discipline in — monitored backups, scheduled restore tests, a maintained runbook, and a team on call when the bad day comes. IT Rapid Support provides [business continuity and disaster recovery services](/services/business-continuity-disaster-recovery/) for small businesses across Ontario and the GTA, including monitored backups, restore testing, recovery planning, and [24/7 emergency response](/services/emergency-it-services/) when an incident is already underway. Call (289) 582-9930 to pressure-test the plan you have — or build the one you don't."
     ].join('\n\n'),
     type: "guide",
     date: "July 10, 2026",
@@ -970,11 +970,11 @@ export const allResources: ResourceItem[] = [
       "## What 24/7 Threat Monitoring Actually Means",
       "Attackers do not keep business hours — a large share of intrusions land overnight and on weekends precisely because that is when nobody is watching. '24/7 threat monitoring' means signals from your endpoints, servers, Microsoft 365, and network are collected and analyzed around the clock, so a suspicious pattern at 3 a.m. Sunday is seen at 3 a.m. Sunday, not Monday morning. The value is entirely in the response time: the difference between catching an intrusion in minutes and discovering it weeks later — after the damage is done — is almost always the difference between an incident and a headline.",
       "## Where MDR Fits In",
-      "Managed Detection and Response (MDR) packages this into a service: continuous monitoring, human analysts who investigate the alerts that matter, and a defined response when something is real — isolating an affected device, disabling a compromised account, and containing the spread. It maps to the middle of the NIST Cybersecurity Framework — Detect and Respond — the stages prevention-only tools leave uncovered. For most small and mid-sized GTA businesses, standing up an equivalent in-house capability (a 24/7 security operations team, the tooling, the expertise) is neither practical nor affordable, which is why detection is typically delivered as a managed service. IT Rapid Support provides [managed threat detection and response](/services/threat-detection) for businesses across Toronto and the GTA.",
+      "Managed Detection and Response (MDR) packages this into a service: continuous monitoring, human analysts who investigate the alerts that matter, and a defined response when something is real — isolating an affected device, disabling a compromised account, and containing the spread. It maps to the middle of the NIST Cybersecurity Framework — Detect and Respond — the stages prevention-only tools leave uncovered. For most small and mid-sized GTA businesses, standing up an equivalent in-house capability (a 24/7 security operations team, the tooling, the expertise) is neither practical nor affordable, which is why detection is typically delivered as a managed service. IT Rapid Support provides [managed threat detection and response](/services/threat-detection/) for businesses across Toronto and the GTA.",
       "## What to Look For in a Threat Detection Provider",
       "Not all 'monitoring' is equal. Ask the questions that separate a real service from a dashboard nobody watches: Is monitoring genuinely 24/7 with people, or just alerts that queue until morning? When something is detected, does the provider actually respond and contain it, or only email you a notification? What sources are watched — endpoints only, or also identity/Microsoft 365 sign-ins, servers, and network traffic (identity is where most modern attacks pivot)? How fast do they commit to acknowledging and acting on a confirmed threat? And how does detection connect to recovery if an incident does escalate — a good provider ties monitoring to [incident response](/services/emergency-it-services/) and tested backups, so detection is the start of a plan, not the end of a report.",
       "## Detection Is One Layer — Not the Whole Strategy",
-      "Threat detection is most effective as part of a layered program, not a bolt-on. It assumes prevention (patching, MFA, email security, endpoint protection) is already in place and does its job of shrinking what gets through; detection then covers what prevention misses. Businesses that lean on monitoring alone — while skipping the basics — end up detecting the same avoidable intrusions over and over. The stronger posture pairs detection with [managed cybersecurity](/services/managed-security/) fundamentals and a disciplined [ransomware defence](/resources/ransomware-protection-ontario-businesses), so each layer carries less weight.",
+      "Threat detection is most effective as part of a layered program, not a bolt-on. It assumes prevention (patching, MFA, email security, endpoint protection) is already in place and does its job of shrinking what gets through; detection then covers what prevention misses. Businesses that lean on monitoring alone — while skipping the basics — end up detecting the same avoidable intrusions over and over. The stronger posture pairs detection with [managed cybersecurity](/services/managed-security/) fundamentals and a disciplined [ransomware defence](/resources/ransomware-protection-ontario-businesses/), so each layer carries less weight.",
       "## The Bottom Line",
       "Prevention keeps out what it recognizes; threat detection and 24/7 monitoring catch what it doesn't — and the speed of that catch decides how much a compromise actually costs you. For most GTA businesses, an MDR service delivers around-the-clock eyes and a real response without building a security team from scratch. IT Rapid Support runs managed threat detection and response for businesses across Toronto and the Greater Toronto Area from our Vaughan head office. Call (289) 582-9930 to review how your environment is monitored today — and where the gaps are."
     ].join('\n\n'),
@@ -1113,7 +1113,7 @@ const ResourceDetails: React.FC = () => {
       {/* Hero Section */}
       <div className="pt-20 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <Link to="/resources" className="inline-flex items-center text-white/80 hover:text-white mb-6">
+          <Link to="/resources/" className="inline-flex items-center text-white/80 hover:text-white mb-6">
             <ChevronLeft className="h-4 w-4 mr-1" /> Back to all resources
           </Link>
           <div className="mb-6">
@@ -1196,12 +1196,12 @@ const ResourceDetails: React.FC = () => {
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <p className="text-gray-700 font-medium mb-3">Explore IT Rapid Support</p>
                 <div className="flex flex-wrap gap-2">
-                  <Link to="/services/it-support" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Managed IT Support</Link>
+                  <Link to="/services/it-support/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Managed IT Support</Link>
                   <Link to="/services/managed-security/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Managed Security</Link>
-                  <Link to="/services/cloud-security" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Cloud Security</Link>
-                  <Link to="/it-support/toronto" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">IT Support Toronto</Link>
-                  <Link to="/it-support/vaughan" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">IT Support Vaughan</Link>
-                  <Link to="/contact" className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-600 text-white text-sm hover:bg-red-700 transition-colors">Get a Quote</Link>
+                  <Link to="/services/cloud-security/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Cloud Security</Link>
+                  <Link to="/it-support/toronto/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">IT Support Toronto</Link>
+                  <Link to="/it-support/vaughan/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">IT Support Vaughan</Link>
+                  <Link to="/contact/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-600 text-white text-sm hover:bg-red-700 transition-colors">Get a Quote</Link>
                 </div>
               </div>
             </div>
@@ -1224,7 +1224,7 @@ const ResourceDetails: React.FC = () => {
                     'security education and training'}.
                 </p>
                 <Link 
-                  to="/resources" 
+                  to="/resources/" 
                   className="block w-full py-2 px-4 bg-red-600 text-white text-center rounded-lg hover:bg-red-700 transition-colors"
                 >
                   More from this author
@@ -1241,7 +1241,7 @@ const ResourceDetails: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-0">Related Resources</h2>
             <div className="flex space-x-4">
-              <Link to="/resources" className="px-4 py-2 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700 transition-colors">
+              <Link to="/resources/" className="px-4 py-2 rounded-lg bg-red-600 text-white font-medium hover:bg-red-700 transition-colors">
                 All Resources
               </Link>
               <button className="px-4 py-2 rounded-lg bg-white text-gray-700 font-medium hover:bg-gray-100 transition-colors">
@@ -1303,7 +1303,7 @@ const ResourceDetails: React.FC = () => {
               Schedule a free consultation today.
             </p>
             <Link 
-              to="/contact" 
+              to="/contact/" 
               className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-slate-100 transition-colors font-medium"
             >
               Get in Touch

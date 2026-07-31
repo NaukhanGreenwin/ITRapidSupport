@@ -89,7 +89,7 @@ const IndustrySecuritySolutions: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                    <Link to={`/industries/${industry.name.toLowerCase().replace(/\s+/g, '-')}`} 
+                    <Link to={`/industries/${industry.name.toLowerCase().replace(/\s+/g, '-')}/`} 
                           className="mt-4 inline-flex items-center text-red-600 text-xs sm:text-sm font-medium hover:text-red-700 touch-manipulation">
                       Explore {industry.name} security solutions <ChevronRight className="ml-1 h-3 w-3" />
                     </Link>

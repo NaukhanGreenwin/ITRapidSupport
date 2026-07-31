@@ -121,10 +121,10 @@ const Terms = () => {
               </section>
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 mt-8">
-                <Link to="/privacy" className="text-red-600 hover:text-red-700 font-medium flex items-center">
+                <Link to="/privacy/" className="text-red-600 hover:text-red-700 font-medium flex items-center">
                   Privacy Policy <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link to="/cookies" className="text-red-600 hover:text-red-700 font-medium flex items-center">
+                <Link to="/cookies/" className="text-red-600 hover:text-red-700 font-medium flex items-center">
                   Cookie Policy <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
@@ -150,7 +150,7 @@ const Terms = () => {
                 </div>
               </div>
               <a 
-                href="/contact" 
+                href="/contact/" 
                 className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors inline-flex items-center justify-center font-medium"
               >
                 Contact Legal Team

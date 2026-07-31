@@ -21,20 +21,20 @@ const CtaSection: React.FC = () => {
               </h2>
               <p className="text-slate-300 text-base mb-4 leading-relaxed">
                 Contact our team today to schedule a free IT security assessment and discover how our{' '}
-                <Link to="/it-support/gta" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
+                <Link to="/it-support/gta/" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
                   IT support services across the GTA
                 </Link>{' '}
                 and{' '}
-                <Link to="/services/threat-detection" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
+                <Link to="/services/threat-detection/" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
                   managed detection and response
                 </Link>{' '}
                 can protect your Toronto business.
               </p>
               <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
-                <Link to="/contact" className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium text-sm">
+                <Link to="/contact/" className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium text-sm">
                   Get Started <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link to="/contact" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded-lg hover:bg-white/15 transition-colors flex items-center justify-center font-medium text-sm">
+                <Link to="/contact/" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded-lg hover:bg-white/15 transition-colors flex items-center justify-center font-medium text-sm">
                   Request a Demo
                 </Link>
               </div>

@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
         schema={generateLocalBusinessSchema('vaughan')}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Contact', url: '/contact' },
+          { name: 'Contact', url: '/contact/' },
         ]}
       />
       {/* Hero Section */}

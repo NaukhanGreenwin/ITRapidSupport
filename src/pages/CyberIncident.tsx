@@ -36,7 +36,7 @@ const CyberIncident: React.FC = () => {
                 incident response services to help organizations navigate through the crisis.
               </p>
               <div className="flex justify-center">
-                <Link to="/contact" className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors text-base font-medium shadow-lg group">
+                <Link to="/contact/" className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors text-base font-medium shadow-lg group">
                   Get Emergency Assistance 
                   <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -295,7 +295,7 @@ const CyberIncident: React.FC = () => {
                 Don't wait - every minute counts during a cyber incident.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/contact" className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors text-base font-medium shadow-lg">
+                <Link to="/contact/" className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors text-base font-medium shadow-lg">
                   Contact Emergency Response Team
                 </Link>
                 <a href="tel:+12895829930" className="inline-flex items-center justify-center bg-transparent border border-white text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors text-base font-medium">

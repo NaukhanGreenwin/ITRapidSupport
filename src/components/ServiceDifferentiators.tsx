@@ -89,7 +89,7 @@ const ServiceDifferentiators: React.FC = () => (
           is priced across the industry and what to look for in a quote.
         </p>
         <Link
-          to="/resources/managed-it-support-cost-toronto"
+          to="/resources/managed-it-support-cost-toronto/"
           className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
         >
           Read Our Pricing Guide <ArrowRight className="ml-2 h-5 w-5" />

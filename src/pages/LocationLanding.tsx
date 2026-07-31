@@ -61,7 +61,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
         schema={schema}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'IT Support', url: '/services/it-support' },
+          { name: 'IT Support', url: '/services/it-support/' },
           { name: data.city, url },
         ]}
       />
@@ -82,7 +82,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
             <p className="text-slate-300 text-lg mb-8 leading-relaxed">{data.intro}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/contact"
+                to="/contact/"
                 className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
               >
                 Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
@@ -215,7 +215,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
               {nearbyCityLinks.map((loc) => (
                 <Link
                   key={loc.slug}
-                  to={`/it-support/${loc.slug}`}
+                  to={`/it-support/${loc.slug}/`}
                   className="px-4 py-2 bg-white rounded-full text-gray-700 text-sm font-medium shadow-sm hover:text-red-600 transition-colors"
                 >
                   Managed IT Services {loc.city}
@@ -237,13 +237,13 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
             >
               Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              to="/services"
+              to="/services/"
               className="inline-flex items-center justify-center bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-medium border border-white/30"
             >
               Explore All Services <ChevronRight className="ml-2 h-5 w-5" />

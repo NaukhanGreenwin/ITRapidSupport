@@ -46,7 +46,7 @@ const NotFound = () => {
           
           <div className="mt-12 text-gray-500">
             <p>
-              Need help? <Link to="/contact" className="text-red-600 hover:text-red-700 font-medium">Contact our support team</Link>
+              Need help? <Link to="/contact/" className="text-red-600 hover:text-red-700 font-medium">Contact our support team</Link>
             </p>
           </div>
         </div>

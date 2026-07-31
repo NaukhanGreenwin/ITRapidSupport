@@ -13,7 +13,7 @@ const About: React.FC = () => {
         schema={[generateLocalBusinessSchema('vaughan')]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'About', url: '/about' },
+          { name: 'About', url: '/about/' },
         ]}
       />
       {/* Hero Section */}
@@ -272,7 +272,7 @@ const About: React.FC = () => {
             We're always looking for talented individuals passionate about IT security to join our growing team.
           </p>
           <a 
-            href="/careers" 
+            href="/careers/" 
             className="inline-flex items-center bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-slate-100 transition-colors font-medium"
           >
             View open positions

@@ -69,7 +69,7 @@ export default function CookieConsent() {
             <div>
               <h3 className="font-bold text-gray-900 mb-1">We value your privacy</h3>
               <p className="text-gray-600 text-sm max-w-3xl">
-                This website uses cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <Link to="/cookies" className="text-red-600 hover:underline">Cookie Policy</Link> and <Link to="/privacy" className="text-red-600 hover:underline">Privacy Policy</Link>.
+                This website uses cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <Link to="/cookies/" className="text-red-600 hover:underline">Cookie Policy</Link> and <Link to="/privacy/" className="text-red-600 hover:underline">Privacy Policy</Link>.
               </p>
               
               <button 

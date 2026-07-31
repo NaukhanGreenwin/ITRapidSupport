@@ -125,7 +125,7 @@ const FAQ: React.FC = () => {
         schema={faqSchema}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'FAQ', url: '/faq' }
+          { name: 'FAQ', url: '/faq/' }
         ]}
       />
       
@@ -218,7 +218,7 @@ const FAQ: React.FC = () => {
               Our team is ready to help you with any specific questions about our IT services in the Greater Toronto Area
             </p>
             <a 
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
             >
               Contact Us

@@ -37,15 +37,15 @@ export default function HighNetWorthSecurity() {
             name: 'High-Net-Worth Cybersecurity & Private IT Support',
             description:
               'Discreet cybersecurity and private IT support for high-net-worth individuals, executives, and family offices across Toronto and the Greater Toronto Area.',
-            url: '/services/high-net-worth',
+            url: '/services/high-net-worth/',
             areaServed: 'Greater Toronto Area, Ontario',
             serviceType: 'Cybersecurity Services',
           }),
         ]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Services', url: '/services' },
-          { name: 'High-Net-Worth Security', url: '/services/high-net-worth' },
+          { name: 'Services', url: '/services/' },
+          { name: 'High-Net-Worth Security', url: '/services/high-net-worth/' },
         ]}
       />
       {/* Hero Section */}
@@ -68,7 +68,7 @@ export default function HighNetWorthSecurity() {
               Our discreet security services safeguard what matters most.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button to="/contact" variant="primary" size="lg">Schedule a Consultation</Button>
+              <Button to="/contact/" variant="primary" size="lg">Schedule a Consultation</Button>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-6 border-t border-slate-700">
@@ -182,7 +182,7 @@ export default function HighNetWorthSecurity() {
                         and regulatory aspects of family office protection.
                       </p>
                     </div>
-                    <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
+                    <Link to="/contact/" className="text-red-600 font-medium hover:underline inline-flex items-center">
                       Schedule a family office security consultation <span className="ml-2">→</span>
                     </Link>
                   </div>
@@ -228,7 +228,7 @@ export default function HighNetWorthSecurity() {
                       We work closely with your flight operations team to implement security measures 
                       that safeguard critical systems without impacting your travel experience.
                     </p>
-                    <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
+                    <Link to="/contact/" className="text-red-600 font-medium hover:underline inline-flex items-center">
                       Schedule an aircraft assessment <span className="ml-2">→</span>
                     </Link>
                   </div>
@@ -274,7 +274,7 @@ export default function HighNetWorthSecurity() {
                       We implement security measures that ensure your vessel remains protected 
                       whether docked in a marina or navigating remote waters.
                     </p>
-                    <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
+                    <Link to="/contact/" className="text-red-600 font-medium hover:underline inline-flex items-center">
                       Request a vessel assessment <span className="ml-2">→</span>
                     </Link>
                   </div>
@@ -320,7 +320,7 @@ export default function HighNetWorthSecurity() {
                       Our team implements advanced authentication measures, encrypted communications, 
                       and proactive monitoring to ensure your digital assets remain secure.
                     </p>
-                    <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
+                    <Link to="/contact/" className="text-red-600 font-medium hover:underline inline-flex items-center">
                       Schedule a digital security review <span className="ml-2">→</span>
                     </Link>
                   </div>
@@ -395,7 +395,7 @@ export default function HighNetWorthSecurity() {
                 </div>
                 
                 <div className="mt-8">
-                  <Button to="/contact" variant="primary" size="lg">Schedule Family Office Assessment</Button>
+                  <Button to="/contact/" variant="primary" size="lg">Schedule Family Office Assessment</Button>
                 </div>
               </div>
               
@@ -483,7 +483,7 @@ export default function HighNetWorthSecurity() {
                   </li>
                 </ul>
                 <div className="mt-6">
-                  <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
+                  <Link to="/contact/" className="text-red-600 font-medium hover:underline inline-flex items-center">
                     Explore our property security solutions <span className="ml-2">→</span>
                   </Link>
                 </div>
@@ -518,7 +518,7 @@ export default function HighNetWorthSecurity() {
                   </li>
                 </ul>
                 <div className="mt-6">
-                  <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
+                  <Link to="/contact/" className="text-red-600 font-medium hover:underline inline-flex items-center">
                     Explore our property security solutions <span className="ml-2">→</span>
                   </Link>
                 </div>
@@ -553,7 +553,7 @@ export default function HighNetWorthSecurity() {
                   </li>
                 </ul>
                 <div className="mt-6">
-                  <Link to="/contact" className="text-red-600 font-medium hover:underline inline-flex items-center">
+                  <Link to="/contact/" className="text-red-600 font-medium hover:underline inline-flex items-center">
                     Explore our property security solutions <span className="ml-2">→</span>
                   </Link>
                 </div>
@@ -615,7 +615,7 @@ export default function HighNetWorthSecurity() {
                   <p className="text-gray-700 mb-4">
                     We develop integrated security solutions across all property types, providing consistent protection regardless of location or property characteristics.
                   </p>
-                  <Button to="/contact" variant="primary" size="sm">Request Property Assessment</Button>
+                  <Button to="/contact/" variant="primary" size="sm">Request Property Assessment</Button>
                 </div>
               </div>
             </div>
@@ -726,7 +726,7 @@ export default function HighNetWorthSecurity() {
             <p className="text-xl mb-8">
               Schedule a confidential consultation with our elite security team to discuss your unique requirements.
             </p>
-            <Button to="/contact" variant="primary" size="lg">Request Consultation</Button>
+            <Button to="/contact/" variant="primary" size="lg">Request Consultation</Button>
           </div>
         </div>
       </section>
@@ -864,7 +864,7 @@ export default function HighNetWorthSecurity() {
                       <span>Incident response readiness</span>
                     </li>
                   </ul>
-                  <Button to="/contact" variant="primary">Schedule a Risk Assessment</Button>
+                  <Button to="/contact/" variant="primary">Schedule a Risk Assessment</Button>
                 </div>
                 <div className="md:w-1/3 bg-white p-5 rounded-lg shadow-sm border border-slate-200">
                   <h4 className="font-bold text-lg mb-3 text-red-600">Why Elite Cybersecurity?</h4>

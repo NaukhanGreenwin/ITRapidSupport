@@ -25,22 +25,22 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-base mb-4">Services</h3>
             <ul className="space-y-2.5">
               <li><Link to="/services/managed-security/" className="text-slate-300 hover:text-white text-sm block">Managed Security</Link></li>
-              <li><Link to="/services/threat-detection" className="text-slate-300 hover:text-white text-sm block">Threat Detection</Link></li>
-              <li><Link to="/services/cloud-security" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
-              <li><Link to="/services/it-support" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
-              <li><Link to="/services/high-net-worth" className="text-slate-300 hover:text-white text-sm block">Elite Security</Link></li>
-              <li><Link to="/services/canada-wide-managed-it" className="text-slate-300 hover:text-white text-sm block">Canada-Wide Managed IT</Link></li>
-              <li><Link to="/services/it-outsourcing-services" className="text-slate-300 hover:text-white text-sm block">IT Outsourcing Services</Link></li>
-              <li><Link to="/services/microsoft-365-managed-services" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 Managed Services</Link></li>
-              <li><Link to="/services/co-managed-it-services" className="text-slate-300 hover:text-white text-sm block">Co-Managed IT Services</Link></li>
-              <li><Link to="/services/business-continuity-disaster-recovery" className="text-slate-300 hover:text-white text-sm block">Business Continuity &amp; Disaster Recovery</Link></li>
-              <li><Link to="/services/network-security-services" className="text-slate-300 hover:text-white text-sm block">Network Security Services</Link></li>
-              <li><Link to="/services/it-helpdesk" className="text-slate-300 hover:text-white text-sm block">24/7 IT Help Desk</Link></li>
-              <li><Link to="/services/network-management" className="text-slate-300 hover:text-white text-sm block">Network Management</Link></li>
-              <li><Link to="/services/microsoft-365-azure-migration" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 &amp; Azure Migration</Link></li>
-              <li><Link to="/services/vcio-it-strategy" className="text-slate-300 hover:text-white text-sm block">vCIO &amp; IT Strategy</Link></li>
+              <li><Link to="/services/threat-detection/" className="text-slate-300 hover:text-white text-sm block">Threat Detection</Link></li>
+              <li><Link to="/services/cloud-security/" className="text-slate-300 hover:text-white text-sm block">Cloud Security</Link></li>
+              <li><Link to="/services/it-support/" className="text-slate-300 hover:text-white text-sm block">24/7 IT Support</Link></li>
+              <li><Link to="/services/high-net-worth/" className="text-slate-300 hover:text-white text-sm block">Elite Security</Link></li>
+              <li><Link to="/services/canada-wide-managed-it/" className="text-slate-300 hover:text-white text-sm block">Canada-Wide Managed IT</Link></li>
+              <li><Link to="/services/it-outsourcing-services/" className="text-slate-300 hover:text-white text-sm block">IT Outsourcing Services</Link></li>
+              <li><Link to="/services/microsoft-365-managed-services/" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 Managed Services</Link></li>
+              <li><Link to="/services/co-managed-it-services/" className="text-slate-300 hover:text-white text-sm block">Co-Managed IT Services</Link></li>
+              <li><Link to="/services/business-continuity-disaster-recovery/" className="text-slate-300 hover:text-white text-sm block">Business Continuity &amp; Disaster Recovery</Link></li>
+              <li><Link to="/services/network-security-services/" className="text-slate-300 hover:text-white text-sm block">Network Security Services</Link></li>
+              <li><Link to="/services/it-helpdesk/" className="text-slate-300 hover:text-white text-sm block">24/7 IT Help Desk</Link></li>
+              <li><Link to="/services/network-management/" className="text-slate-300 hover:text-white text-sm block">Network Management</Link></li>
+              <li><Link to="/services/microsoft-365-azure-migration/" className="text-slate-300 hover:text-white text-sm block">Microsoft 365 &amp; Azure Migration</Link></li>
+              <li><Link to="/services/vcio-it-strategy/" className="text-slate-300 hover:text-white text-sm block">vCIO &amp; IT Strategy</Link></li>
               <li><Link to="/services/emergency-it-services/" className="text-slate-300 hover:text-white text-sm block">Emergency IT Services</Link></li>
-              <li><Link to="/tools/email-spoof-check" className="text-slate-300 hover:text-white text-sm block">Free Email Spoofing Check</Link></li>
+              <li><Link to="/tools/email-spoof-check/" className="text-slate-300 hover:text-white text-sm block">Free Email Spoofing Check</Link></li>
             </ul>
           </div>
 
@@ -48,16 +48,16 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-base mb-4">Solutions</h3>
             <ul className="space-y-2.5">
-              <li><Link to="/security-assessment" className="text-slate-300 hover:text-white text-sm block">Security Evaluation</Link></li>
-              <li><Link to="/it-risk-calculator" className="text-slate-300 hover:text-white text-sm block">Free IT Risk Calculator</Link></li>
-              <li><Link to="/managed-it-plans" className="text-slate-300 hover:text-white text-sm block">Managed IT Plans</Link></li>
-              <li><Link to="/cyber-incident" className="text-slate-300 hover:text-white text-sm block">Breach Services</Link></li>
-              <li><Link to="/solutions" className="text-slate-300 hover:text-white text-sm block">Industry Solutions</Link></li>
-              <li><Link to="/faq" className="text-slate-300 hover:text-white text-sm block">IT Support FAQ</Link></li>
-              <li><Link to="/resources" className="text-slate-300 hover:text-white text-sm block">Guides &amp; Resources</Link></li>
+              <li><Link to="/security-assessment/" className="text-slate-300 hover:text-white text-sm block">Security Evaluation</Link></li>
+              <li><Link to="/it-risk-calculator/" className="text-slate-300 hover:text-white text-sm block">Free IT Risk Calculator</Link></li>
+              <li><Link to="/managed-it-plans/" className="text-slate-300 hover:text-white text-sm block">Managed IT Plans</Link></li>
+              <li><Link to="/cyber-incident/" className="text-slate-300 hover:text-white text-sm block">Breach Services</Link></li>
+              <li><Link to="/solutions/" className="text-slate-300 hover:text-white text-sm block">Industry Solutions</Link></li>
+              <li><Link to="/faq/" className="text-slate-300 hover:text-white text-sm block">IT Support FAQ</Link></li>
+              <li><Link to="/resources/" className="text-slate-300 hover:text-white text-sm block">Guides &amp; Resources</Link></li>
               <li><Link to="/case-studies/" className="text-slate-300 hover:text-white text-sm block">Client Case Studies</Link></li>
-              <li><Link to="/partners" className="text-slate-300 hover:text-white text-sm block">Technology Partners</Link></li>
-              <li><Link to="/support" className="text-slate-300 hover:text-white text-sm block">Technical Support</Link></li>
+              <li><Link to="/partners/" className="text-slate-300 hover:text-white text-sm block">Technology Partners</Link></li>
+              <li><Link to="/support/" className="text-slate-300 hover:text-white text-sm block">Technical Support</Link></li>
             </ul>
           </div>
 
@@ -92,14 +92,14 @@ export default function Footer() {
           <h3 className="text-white font-semibold text-base mb-4">IT Support by Location</h3>
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-2.5">
             <li>
-              <Link to="/it-support/gta" className="text-slate-400 hover:text-white text-sm block truncate">
+              <Link to="/it-support/gta/" className="text-slate-400 hover:text-white text-sm block truncate">
                 IT Support GTA
               </Link>
             </li>
             {locations.map((loc) => (
               <li key={loc.slug}>
                 <Link
-                  to={`/it-support/${loc.slug}`}
+                  to={`/it-support/${loc.slug}/`}
                   className="text-slate-400 hover:text-white text-sm block truncate"
                 >
                   IT Support {loc.city}
@@ -116,7 +116,7 @@ export default function Footer() {
             {industries.map((ind) => (
               <li key={ind.slug}>
                 <Link
-                  to={`/industries/${ind.slug}`}
+                  to={`/industries/${ind.slug}/`}
                   className="text-slate-400 hover:text-white text-sm block truncate"
                 >
                   IT for {ind.industry}
@@ -130,9 +130,9 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-400">
-              <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-              <Link to="/accessibility" className="hover:text-white transition-colors">Accessibility</Link>
+              <Link to="/privacy/" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms/" className="hover:text-white transition-colors">Terms of Service</Link>
+              <Link to="/accessibility/" className="hover:text-white transition-colors">Accessibility</Link>
             </div>
             <p className="text-sm text-gray-400 text-center md:text-right">
               © {new Date().getFullYear()} IT Rapid Support. All rights reserved.

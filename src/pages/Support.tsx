@@ -14,7 +14,7 @@ const Support: React.FC = () => {
         keywords="remote support, technical support, TeamViewer, AnyDesk, IT help desk, remote assistance"
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Support', url: '/support' }
+          { name: 'Support', url: '/support/' }
         ]}
       />
       
@@ -172,13 +172,13 @@ const Support: React.FC = () => {
                   </a>
                   <div className="flex justify-between mt-3">
                     <a 
-                      href="/contact" 
+                      href="/contact/" 
                       className="text-sm text-green-600 hover:text-green-800"
                     >
                       Need Access?
                     </a>
                     <a 
-                      href="/faq" 
+                      href="/faq/" 
                       className="text-sm text-green-600 hover:text-green-800"
                     >
                       Help & FAQ
@@ -329,13 +329,13 @@ const Support: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link 
-                to="/contact" 
+                to="/contact/" 
                 className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors text-base font-medium"
               >
                 Contact Our Team
               </Link>
               <Link 
-                to="/contact" 
+                to="/contact/" 
                 className="inline-flex items-center justify-center bg-transparent text-white border border-white/20 px-6 py-3 rounded-lg hover:bg-white/5 transition-colors text-base font-medium"
               >
                 Book an Appointment

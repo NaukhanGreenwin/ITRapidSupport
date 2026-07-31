@@ -180,7 +180,7 @@ const Partners: React.FC = () => {
         title="Strategic Technology Partners"
         description="Our strategic partnerships with leading technology providers enable us to deliver comprehensive security and IT management solutions for businesses of all sizes." 
         keywords="IT security partners, technology partnerships, cybersecurity solutions, Microsoft partner, Cisco partner, IBM security partner"
-        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Partners', url: '/partners' }]}
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Partners', url: '/partners/' }]}
       />
       
       {/* Hero Section */}
@@ -200,10 +200,10 @@ const Partners: React.FC = () => {
                 IT Rapid Support maintains strategic partnerships with leading technology providers to deliver comprehensive security and IT management solutions for businesses of all sizes.
               </p>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-                <Link to="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 transition-colors">
+                <Link to="/contact/" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 transition-colors">
                   Partner With Us
                 </Link>
-                <Link to="/services" className="inline-flex items-center justify-center px-6 py-3 border border-white/10 text-base font-medium rounded-lg text-white bg-white/5 hover:bg-white/10 transition-colors">
+                <Link to="/services/" className="inline-flex items-center justify-center px-6 py-3 border border-white/10 text-base font-medium rounded-lg text-white bg-white/5 hover:bg-white/10 transition-colors">
                   Explore Solutions
                 </Link>
               </div>
@@ -373,7 +373,7 @@ const Partners: React.FC = () => {
               Contact us today to learn how our strategic partnerships can help secure your business with enterprise-grade solutions.
             </p>
             <Link 
-              to="/contact" 
+              to="/contact/" 
               className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-red-900 bg-white hover:bg-gray-100 transition-colors shadow-lg"
             >
               Contact Us Today

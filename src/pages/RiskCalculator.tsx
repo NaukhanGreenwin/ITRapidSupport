@@ -521,7 +521,7 @@ const RiskCalculator: React.FC = () => {
               {/* CTA + reset */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="flex-1 inline-flex items-center justify-center bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-800 transition-colors font-medium"
                 >
                   Book a free consultation <ArrowRight className="ml-2 h-5 w-5" />
@@ -609,7 +609,7 @@ const RiskCalculator: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
             >
               Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
@@ -623,7 +623,7 @@ const RiskCalculator: React.FC = () => {
           </div>
           <div className="mt-6">
             <Link
-              to="/services"
+              to="/services/"
               className="inline-flex items-center justify-center text-white/80 hover:text-white text-sm font-medium"
             >
               Explore all services <ChevronRight className="ml-1 h-4 w-4" />

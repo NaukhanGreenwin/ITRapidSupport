@@ -161,7 +161,7 @@ const ManagedITPlans: React.FC = () => {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
-                to="/contact"
+                to="/contact/"
                 className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
               >
                 Book a free IT assessment <ArrowRight className="ml-2 h-5 w-5" />
@@ -215,7 +215,7 @@ const ManagedITPlans: React.FC = () => {
                 <div className="mt-8">
                   <div className="text-sm text-gray-500 mb-3">Custom monthly pricing</div>
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-colors ${
                       plan.highlighted
                         ? 'bg-red-600 text-white hover:bg-red-700'
@@ -258,7 +258,7 @@ const ManagedITPlans: React.FC = () => {
           </div>
           <div className="text-center mt-12">
             <Link
-              to="/it-risk-calculator"
+              to="/it-risk-calculator/"
               className="inline-flex items-center justify-center text-red-600 hover:text-red-700 font-medium"
             >
               Not ready to talk? Try the free IT risk calculator first{' '}
@@ -295,7 +295,7 @@ const ManagedITPlans: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
             >
               Book a free assessment <ArrowRight className="ml-2 h-5 w-5" />

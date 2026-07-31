@@ -18,15 +18,15 @@ const ManagedSecurity = () => {
             name: 'Managed Security Services',
             description:
               '24/7 managed cybersecurity services for businesses across Toronto and the Greater Toronto Area, including monitoring, managed firewalls, endpoint protection, and incident response.',
-            url: '/services/managed-security',
+            url: '/services/managed-security/',
             areaServed: 'Greater Toronto Area, Ontario',
             serviceType: 'Managed Security Services',
           }),
         ]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Services', url: '/services' },
-          { name: 'Managed Security', url: '/services/managed-security' },
+          { name: 'Services', url: '/services/' },
+          { name: 'Managed Security', url: '/services/managed-security/' },
         ]}
       />
       {/* Hero Section */}
@@ -44,7 +44,7 @@ const ManagedSecurity = () => {
                 24/7 monitoring, threat detection, and incident response from our team of security experts to keep your organization protected around the clock.
               </p>
               <Link 
-                to="/contact" 
+                to="/contact/" 
                 className="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
               >
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -348,13 +348,13 @@ const ManagedSecurity = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
-              to="/contact" 
+              to="/contact/" 
               className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
             >
               Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
-              to="/services" 
+              to="/services/" 
               className="inline-flex items-center justify-center bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-medium border border-white/30"
             >
               Explore All Services <ChevronRight className="ml-2 h-5 w-5" />

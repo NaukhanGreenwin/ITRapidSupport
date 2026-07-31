@@ -18,15 +18,15 @@ const ThreatDetection = () => {
             name: 'Managed Detection & Response (MDR)',
             description:
               'Managed Detection and Response services for businesses across Toronto and the Greater Toronto Area: 24/7 threat monitoring, detection, investigation, and rapid response.',
-            url: '/services/threat-detection',
+            url: '/services/threat-detection/',
             areaServed: 'Greater Toronto Area, Ontario',
             serviceType: 'Managed Detection and Response (MDR)',
           }),
         ]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Services', url: '/services' },
-          { name: 'Managed Detection & Response', url: '/services/threat-detection' },
+          { name: 'Services', url: '/services/' },
+          { name: 'Managed Detection & Response', url: '/services/threat-detection/' },
         ]}
       />
       {/* Hero Section */}
@@ -44,7 +44,7 @@ const ThreatDetection = () => {
                 24/7 managed detection and response for Toronto and GTA businesses. AI-assisted threat detection combined with expert investigation and rapid containment — so threats are found and stopped before they impact your business.
               </p>
               <Link 
-                to="/contact" 
+                to="/contact/" 
                 className="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
               >
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -411,13 +411,13 @@ const ThreatDetection = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
-              to="/contact" 
+              to="/contact/" 
               className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
             >
               Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
-              to="/services" 
+              to="/services/" 
               className="inline-flex items-center justify-center bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-medium border border-white/30"
             >
               Explore All Services <ChevronRight className="ml-2 h-5 w-5" />

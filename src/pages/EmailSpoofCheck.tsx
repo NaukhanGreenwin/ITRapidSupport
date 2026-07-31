@@ -285,7 +285,7 @@ const EmailSpoofCheck: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
                 >
                   Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
@@ -314,11 +314,11 @@ const EmailSpoofCheck: React.FC = () => {
         </p>
         <p className="text-slate-600 mb-4">
           We ran this exact review across 118 GTA businesses —{' '}
-          <Link to="/resources/gta-email-spoofing-study-2026" className="text-red-600 hover:text-red-700 font-medium">
+          <Link to="/resources/gta-email-spoofing-study-2026/" className="text-red-600 hover:text-red-700 font-medium">
             read the full study
           </Link>
           . For a deeper primer, see our guide to{' '}
-          <Link to="/resources/email-spoofing-spf-dkim-dmarc-explained" className="text-red-600 hover:text-red-700 font-medium">
+          <Link to="/resources/email-spoofing-spf-dkim-dmarc-explained/" className="text-red-600 hover:text-red-700 font-medium">
             SPF, DKIM and DMARC explained
           </Link>
           , or explore our{' '}

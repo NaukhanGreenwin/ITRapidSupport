@@ -14,7 +14,7 @@ const LegacyBookOnline: React.FC = () => (
       schema={generateLocalBusinessSchema('vaughan')}
       breadcrumbs={[
         { name: 'Home', url: '/' },
-        { name: 'Contact', url: '/contact' },
+        { name: 'Contact', url: '/contact/' },
       ]}
     />
 
@@ -40,7 +40,7 @@ const LegacyBookOnline: React.FC = () => (
           Call (289) 582-9930
         </a>
         <Link
-          to="/contact"
+          to="/contact/"
           className="flex items-center justify-center gap-3 rounded-lg border border-slate-300 px-6 py-4 text-slate-900 font-semibold hover:bg-slate-50 transition-colors"
         >
           <Mail className="h-5 w-5" />

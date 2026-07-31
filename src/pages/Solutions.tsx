@@ -48,7 +48,7 @@ function Solutions() {
                   Request a Demo <ChevronRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link 
-                  to="/services" 
+                  to="/services/" 
                   className="border border-white/20 bg-white/5 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center font-medium"
                 >
                   View All Services
@@ -100,7 +100,7 @@ function Solutions() {
                   <span className="text-gray-600">Regulatory compliance</span>
                 </li>
               </ul>
-              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Explore financial security solutions <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -127,7 +127,7 @@ function Solutions() {
                   <span className="text-gray-600">Telehealth protection</span>
                 </li>
               </ul>
-              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Discover healthcare cybersecurity solutions <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -154,7 +154,7 @@ function Solutions() {
                   <span className="text-gray-600">Supply chain security</span>
                 </li>
               </ul>
-              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -181,7 +181,7 @@ function Solutions() {
                   <span className="text-gray-600">Classified data security</span>
                 </li>
               </ul>
-              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Explore government security offerings <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -208,7 +208,7 @@ function Solutions() {
                   <span className="text-gray-600">E-commerce protection</span>
                 </li>
               </ul>
-              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -235,7 +235,7 @@ function Solutions() {
                   <span className="text-gray-600">Application security</span>
                 </li>
               </ul>
-              <Link to="/services" className="text-red-600 flex items-center hover:text-red-700 font-medium">
+              <Link to="/services/" className="text-red-600 flex items-center hover:text-red-700 font-medium">
                 Learn more <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -394,7 +394,7 @@ function Solutions() {
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Link 
-                  to="/contact" 
+                  to="/contact/" 
                   className="bg-white text-red-700 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center font-medium"
                 >
                   Contact Us <ChevronRight className="ml-2 h-5 w-5" />

@@ -76,7 +76,7 @@ const GTALanding: React.FC = () => {
         schema={schema}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'IT Support', url: '/services/it-support' },
+          { name: 'IT Support', url: '/services/it-support/' },
           { name: 'GTA', url },
         ]}
       />
@@ -96,30 +96,30 @@ const GTALanding: React.FC = () => {
               IT Rapid Support delivers enterprise-grade managed IT services and cybersecurity to businesses across the
               Greater Toronto Area. From 24/7 helpdesk and proactive monitoring to managed detection and response,
               cloud, and on-site support, our{' '}
-              <Link to="/services/it-outsourcing-services" className="text-red-200 hover:text-white underline underline-offset-4">
+              <Link to="/services/it-outsourcing-services/" className="text-red-200 hover:text-white underline underline-offset-4">
                 IT outsourcing services
               </Link>{' '}
               give you a complete IT department, while our{' '}
-              <Link to="/services/microsoft-365-managed-services" className="text-red-200 hover:text-white underline underline-offset-4">
+              <Link to="/services/microsoft-365-managed-services/" className="text-red-200 hover:text-white underline underline-offset-4">
                 Microsoft 365 managed services
               </Link>{' '}
               keep cloud users supported. For organizations with internal IT, our{' '}
-              <Link to="/services/co-managed-it-services" className="text-red-200 hover:text-white underline underline-offset-4">
+              <Link to="/services/co-managed-it-services/" className="text-red-200 hover:text-white underline underline-offset-4">
                 co-managed IT services
               </Link>{' '}
               add 24/7 coverage and specialist capacity. Our{' '}
-              <Link to="/services/business-continuity-disaster-recovery" className="text-red-200 hover:text-white underline underline-offset-4">
+              <Link to="/services/business-continuity-disaster-recovery/" className="text-red-200 hover:text-white underline underline-offset-4">
                 business continuity and disaster recovery services
               </Link>{' '}
               help protect critical operations, and our{' '}
-              <Link to="/services/network-security-services" className="text-red-200 hover:text-white underline underline-offset-4">
+              <Link to="/services/network-security-services/" className="text-red-200 hover:text-white underline underline-offset-4">
                 network security services
               </Link>{' '}
               secure firewalls, connectivity, and access — from our Vaughan headquarters to every corner of the GTA.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/contact"
+                to="/contact/"
                 className="inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
               >
                 Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5" />
@@ -177,7 +177,7 @@ const GTALanding: React.FC = () => {
             {locations.map((loc) => (
               <Link
                 key={loc.slug}
-                to={`/it-support/${loc.slug}`}
+                to={`/it-support/${loc.slug}/`}
                 className="px-4 py-2 bg-white rounded-full text-gray-700 text-sm font-medium shadow-sm hover:text-red-600 hover:shadow transition-all"
               >
                 {loc.city}
@@ -213,13 +213,13 @@ const GTALanding: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
             >
               Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              to="/services"
+              to="/services/"
               className="inline-flex items-center justify-center bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-medium border border-white/30"
             >
               Explore All Services <ChevronRight className="ml-2 h-5 w-5" />

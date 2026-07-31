@@ -122,7 +122,7 @@ const Resources = () => {
             A clear breakdown of managed IT support pricing models for Toronto and GTA businesses, what drives the cost, and how to compare providers.
           </p>
           <Link 
-            to="/resources/managed-it-support-cost-toronto" 
+            to="/resources/managed-it-support-cost-toronto/" 
             className="inline-flex items-center text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition-colors"
           >
             Read more <ArrowRight className="ml-2 h-4 w-4" />
@@ -216,7 +216,7 @@ const ResourceCard = ({ resource }: { resource: ResourceItem }) => {
           {resource.description}
         </p>
         <Link
-          to={`/resources/${resource.id}`}
+          to={`/resources/${resource.id}/`}
           className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
         >
           Read more <ArrowRight className="ml-1 h-4 w-4" />

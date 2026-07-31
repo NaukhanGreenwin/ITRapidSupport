@@ -18,15 +18,15 @@ const CloudSecurity = () => {
             name: 'Cloud Security Services',
             description:
               'Cloud security services for businesses across Toronto and the Greater Toronto Area, covering Microsoft 365, Azure, identity protection, and cloud data security.',
-            url: '/services/cloud-security',
+            url: '/services/cloud-security/',
             areaServed: 'Greater Toronto Area, Ontario',
             serviceType: 'Cloud Security Services',
           }),
         ]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
-          { name: 'Services', url: '/services' },
-          { name: 'Cloud Security', url: '/services/cloud-security' },
+          { name: 'Services', url: '/services/' },
+          { name: 'Cloud Security', url: '/services/cloud-security/' },
         ]}
       />
       {/* Hero Section */}
@@ -44,7 +44,7 @@ const CloudSecurity = () => {
                 Comprehensive protection for your cloud infrastructure, applications, and data across AWS, Azure, Google Cloud, and multi-cloud environments.
               </p>
               <Link 
-                to="/contact" 
+                to="/contact/" 
                 className="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
               >
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
@@ -380,13 +380,13 @@ const CloudSecurity = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
-              to="/contact" 
+              to="/contact/" 
               className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
             >
               Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
-              to="/services" 
+              to="/services/" 
               className="inline-flex items-center justify-center bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-medium border border-white/30"
             >
               Explore All Services <ChevronRight className="ml-2 h-5 w-5" />

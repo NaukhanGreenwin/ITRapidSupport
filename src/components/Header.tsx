@@ -279,25 +279,25 @@ export default function Header() {
                       >
                         Managed Security
                       </Link>
-                      <Link to="/services/threat-detection" 
+                      <Link to="/services/threat-detection/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
                         Threat Detection
                       </Link>
-                      <Link to="/services/cloud-security" 
+                      <Link to="/services/cloud-security/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
                         Cloud Security
                       </Link>
-                      <Link to="/services/it-support" 
+                      <Link to="/services/it-support/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
                         24/7 IT Support
                       </Link>
-                      <Link to="/services/high-net-worth" 
+                      <Link to="/services/high-net-worth/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
@@ -331,25 +331,25 @@ export default function Header() {
                       exit="exit"
                       variants={dropdownVariants}
                     >
-                      <Link to="/solutions" 
+                      <Link to="/solutions/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
                         Enterprise Solutions
                       </Link>
-                      <Link to="/security-assessment" 
+                      <Link to="/security-assessment/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
                         Security Evaluation
                       </Link>
-                      <Link to="/cyber-incident" 
+                      <Link to="/cyber-incident/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
                         Breach Services
                       </Link>
-                      <Link to="/partners" 
+                      <Link to="/partners/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setSolutionsDropdownOpen(false)}
                       >
@@ -360,7 +360,7 @@ export default function Header() {
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/support">Support</NavLink>
+              <NavLink to="/support/">Support</NavLink>
               
               <div className="relative">
                 <motion.button 
@@ -384,13 +384,13 @@ export default function Header() {
                       exit="exit"
                       variants={dropdownVariants}
                     >
-                      <Link to="/resources" 
+                      <Link to="/resources/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setResourcesDropdownOpen(false)}
                       >
                         Resource Center
                       </Link>
-                      <Link to="/faq" 
+                      <Link to="/faq/" 
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setResourcesDropdownOpen(false)}
                       >
@@ -401,11 +401,11 @@ export default function Header() {
                 </AnimatePresence>
               </div>
               
-              <NavLink to="/about">About</NavLink>
-              <NavLink to="/careers">Careers</NavLink>
+              <NavLink to="/about/">About</NavLink>
+              <NavLink to="/careers/">Careers</NavLink>
               
               <Button 
-                to="/contact" 
+                to="/contact/" 
                 variant="primary" 
                 size="md"
                 icon={<ArrowRight className="h-4 w-4" />}

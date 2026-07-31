@@ -431,7 +431,7 @@ function Careers() {
             We're always looking for talented security professionals to join our team. Send us your resume and let us know how you can contribute to our mission.
           </p>
           <a 
-            href="/contact" 
+            href="/contact/" 
             className="bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center font-medium"
           >
             Submit Your Resume <ChevronRight className="ml-2 h-5 w-5" />
