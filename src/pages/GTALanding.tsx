@@ -69,7 +69,7 @@ const GTALanding: React.FC = () => {
   return (
     <PageTransition>
       <SEO
-        title="IT Support Services GTA | 24/7 Helpdesk & On-Site Support"
+        title="IT Support Services GTA | 24/7 Helpdesk"
         description="24/7 helpdesk, managed IT, and cybersecurity with on-site support across the entire Greater Toronto Area. Talk to a GTA IT team now — call (289) 582-9930."
         keywords="IT support services GTA, IT support GTA, managed IT services GTA, GTA IT company, IT services Greater Toronto Area, cybersecurity services GTA"
         canonicalUrl={url}

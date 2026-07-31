@@ -27,7 +27,7 @@ export default function HighNetWorthSecurity() {
   return (
     <div className="bg-white">
       <SEO
-        title="High-Net-Worth Cybersecurity & Private IT Support | Toronto & GTA"
+        title="High-Net-Worth Cybersecurity & Private IT"
         description="Discreet cybersecurity and private IT support for high-net-worth individuals, executives, and family offices across Toronto and the GTA. Call (289) 582-9930."
         keywords="high net worth cybersecurity Toronto, family office IT support, executive cybersecurity GTA, private IT support Toronto, personal cybersecurity services"
         canonicalUrl="/services/high-net-worth"

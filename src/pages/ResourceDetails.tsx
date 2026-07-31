@@ -266,6 +266,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "microsoft-365-migration-guide",
     title: "Microsoft 365 Migration for Toronto Businesses: A Step-by-Step Guide",
+    seoTitle: "Microsoft 365 Migration Guide for Toronto",
     description: "Planning a move to Microsoft 365? Here is how GTA businesses migrate email, files, and users smoothly with minimal downtime and proper security.",
     content: [
       "Microsoft 365 has become the backbone of how modern businesses work: email, file storage, Teams, and the Office apps in one secure cloud platform. But a migration done badly means lost email, frustrated staff, and downtime. Done well, it is invisible to your team and immediately more productive. Here is how GTA businesses move to Microsoft 365 the right way.",
@@ -393,6 +394,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "why-24-7-it-helpdesk-matters",
     title: "Why a 24/7 IT Helpdesk Matters for Ontario Businesses",
+    seoTitle: "Why a 24/7 IT Helpdesk Matters",
     description: "Downtime does not keep business hours. Here is why round-the-clock IT support protects revenue, reputation, and security for Ontario businesses.",
     content: [
       "When your systems go down at 9 a.m. on a Tuesday, it is stressful but manageable. When they go down at 11 p.m. before a major deadline, or over a long weekend, the cost climbs fast. That is why a 24/7 IT helpdesk has become a baseline expectation for Ontario businesses that cannot afford to wait until morning.",
@@ -540,7 +542,7 @@ export const allResources: ResourceItem[] = [
   {
     id: "co-managed-vs-fully-managed-it",
     title: "Co-Managed vs Fully Managed IT: Which Model Fits Your Business?",
-    seoTitle: "Fully Managed IT vs Co-Managed IT: Which Fits Your Business?",
+    seoTitle: "Co-Managed vs Fully Managed IT Services",
     description: "What fully managed IT includes, how it compares to co-managed IT on cost, control, and coverage — and how to pick the right model for your GTA business.",
     content: [
       "Not every business needs the same kind of IT partner. Some have an internal IT person or small team and just need backup, security, and bench depth. Others have no internal IT at all and want someone to run the whole thing. Those are two different models: co-managed IT and fully managed IT. Choosing the right one comes down to what you already have in-house and where you need help. This guide compares them.",

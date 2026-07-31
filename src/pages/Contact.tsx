@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <SEO
-        title="Contact IT Rapid Support | 24/7 IT Support Toronto & GTA"
+        title="Contact Us | 24/7 IT Support Toronto & GTA"
         description="Contact IT Rapid Support for 24/7 managed IT support and cybersecurity across Toronto, Vaughan and the GTA. Call (289) 582-9930."
         keywords="contact IT Rapid Support, IT support Toronto contact, IT support Vaughan, managed IT services GTA contact, cybersecurity company Toronto phone"
         canonicalUrl="/contact"

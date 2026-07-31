@@ -8,7 +8,7 @@ const ManagedSecurity = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       <SEO
-        title="Cybersecurity Services GTA | Managed Security Services Toronto"
+        title="Cybersecurity Services GTA | 24/7 Monitoring"
         description="Managed cybersecurity services for Toronto and the GTA: 24/7 monitoring, managed firewalls, endpoint and email security. Call (289) 582-9930."
         keywords="cybersecurity services GTA, managed security services Toronto, cybersecurity company Toronto, managed cybersecurity GTA, security operations Toronto"
         canonicalUrl="/services/managed-security"

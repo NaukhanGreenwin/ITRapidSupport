@@ -173,6 +173,7 @@ export const industries: IndustryData[] = [
     slug: 'real-estate',
     industry: 'Real Estate & Property Management',
     title: 'Managed IT Services for Real Estate & Property Management',
+    seoTitle: 'Managed IT Services for Real Estate Firms',
     description:
       'IT support and cybersecurity for real estate brokerages and property managers. Secure transactions, mobile teams, Microsoft 365, 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
@@ -313,7 +314,7 @@ export const industries: IndustryData[] = [
     title: 'Managed IT Services for Professional Services Firms',
     seoTitle: 'IT Support for Professional Services | 24/7 Helpdesk',
     description:
-      'IT support and cybersecurity for consulting, engineering, and professional services firms. Secure collaboration, Microsoft 365, 24/7 helpdesk in the GTA. Call (289) 582-9930.',
+      'IT support and cybersecurity for consulting, engineering, and professional services firms. Secure Microsoft 365 collaboration and 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for professional services, consulting firm IT services, engineering firm cybersecurity, managed IT Toronto, professional services helpdesk',
     intro:
@@ -466,6 +467,7 @@ export const industries: IndustryData[] = [
     slug: 'nonprofit',
     industry: 'Nonprofits & Charities',
     title: 'Managed IT Services for Nonprofits & Charities in the GTA',
+    seoTitle: 'Managed IT Services for Nonprofits | GTA',
     description:
       'Affordable managed IT and cybersecurity for nonprofits. Donor data protection, Microsoft 365 management, 24/7 GTA helpdesk. Call (289) 582-9930.',
     keywords:
@@ -512,6 +514,7 @@ export const industries: IndustryData[] = [
     slug: 'education',
     industry: 'Schools & Education',
     title: 'Managed IT Services for Schools & Educational Institutions',
+    seoTitle: 'Managed IT Services for Schools in the GTA',
     description:
       'IT support and cybersecurity for schools and education. Student data protection, classroom uptime, 24/7 helpdesk across the GTA. Call (289) 582-9930.',
     keywords:
@@ -716,6 +719,7 @@ export const industries: IndustryData[] = [
     slug: 'logistics-warehousing',
     industry: 'Logistics & Warehousing',
     title: 'Managed IT Services for Logistics & Warehousing in the GTA',
+    seoTitle: 'Managed IT for Logistics & Warehousing',
     description:
       'IT support for logistics and warehouse operations. Warehouse Wi-Fi, scanner and WMS environment support, multi-site connectivity. Call (289) 582-9930.',
     keywords:

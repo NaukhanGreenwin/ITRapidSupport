@@ -35,7 +35,7 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       <SEO
-        title="IT Support & Cybersecurity Resources for Toronto & GTA Businesses"
+        title="IT Support & Cybersecurity Resources"
         description="Guides, checklists and buyer's guides on managed IT support, cybersecurity, Microsoft 365 and compliance for Toronto and GTA businesses."
         canonicalUrl="/resources"
       />

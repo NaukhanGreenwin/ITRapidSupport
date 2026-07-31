@@ -360,7 +360,7 @@ export const servicesDetail: ServiceDetailData[] = [
     title: 'Microsoft 365 Migration Services Toronto | Secure Cutovers',
     h1: 'Microsoft 365 & Azure Migration Services in the GTA',
     description:
-      'Plan and run your Microsoft 365 and Azure migration with IT Rapid Support. Secure email, data, and apps moved to the cloud with zero-surprise cutover and 24/7 support. Call (289) 582-9930.',
+      'Microsoft 365 and Azure migration in Toronto and the GTA: secure email, data, and app cutovers with 24/7 support after go-live. Call (289) 582-9930.',
     keywords:
       'Microsoft 365 migration Toronto, Azure migration services GTA, Office 365 migration, cloud migration Toronto, email migration to Microsoft 365, managed Microsoft 365 support',
     intro:
@@ -586,7 +586,7 @@ export const servicesDetail: ServiceDetailData[] = [
   {
     slug: 'emergency-it-services',
     service: 'Emergency IT Services',
-    title: 'Emergency IT Services | 24/7 Toronto & GTA, New Clients Welcome',
+    title: 'Emergency IT Services | 24/7 Toronto & GTA',
     h1: '24/7 Emergency IT Services in Toronto & the GTA',
     description:
       'Server down? Email out? Ransomware? 24/7 emergency IT help for Toronto & GTA businesses — remote plus on-site dispatch. New clients welcome. Call (289) 582-9930.',

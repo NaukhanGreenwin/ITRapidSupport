@@ -29,6 +29,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="min-h-screen bg-slate-50 flex flex-col">
       <Helmet>
         <link rel="canonical" href={canonicalUrl} />
+        {/* Global indexability fallback. Helmet takes ownership of head meta on mount and
+            drops the static index.html robots tag, so pages that use a raw Helmet instead
+            of the SEO component shipped no robots meta at all. SEO.tsx renders deeper and
+            overrides this by name (including its noindex case). */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       </Helmet>
       <Header />
       

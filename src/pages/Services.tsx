@@ -7,7 +7,7 @@ const Services: React.FC = () => {
   return (
     <>
       <SEO
-        title="IT Support & Security Services Toronto | 24/7 Helpdesk & On-Site"
+        title="IT Support & Security Services Toronto"
         description="Managed IT, 24/7 helpdesk, cybersecurity, and cloud for Toronto & GTA businesses — with on-site dispatch from our Vaughan HQ. Call (289) 582-9930 today."
         keywords="IT support and security services Toronto, IT security services Toronto, managed IT services GTA, cybersecurity services GTA, managed security services Toronto"
         canonicalUrl="/services"
