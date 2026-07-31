@@ -16,12 +16,8 @@ document.currentScript?.setAttribute('fetchpriority', 'high');
 // Create the root before we do anything else
 const rootElement = document.getElementById('root')!;
 
-// Add a preconnect hint for any third-party resources
-const preconnect = document.createElement('link');
-preconnect.rel = 'preconnect';
-preconnect.href = 'https://fonts.gstatic.com';
-preconnect.crossOrigin = 'anonymous';
-document.head.appendChild(preconnect);
+// (Removed a runtime preconnect to fonts.gstatic.com — Inter is self-hosted now,
+// so that hint only cost a speculative DNS+TLS handshake to a host we never hit.)
 
 // Check if the app is being pre-rendered by react-snap
 const isPrerendering = 
