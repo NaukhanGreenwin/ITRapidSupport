@@ -6,6 +6,7 @@ import {
   CheckCircle,
   ChevronRight,
   Lock,
+  Mail,
   Phone,
   Printer,
   RefreshCw,
@@ -329,7 +330,7 @@ const FAQS = [
   {
     question: 'Is anything I enter sent to IT Rapid Support?',
     answer:
-      'No. The calculator runs entirely in your browser. There is no form to submit, no account, no analytics event carrying your answers, and no server receiving them. Nothing is stored — closing or refreshing the page clears it. If you want us to look at your results you have to contact us and tell us yourself.',
+      'No. The calculator runs entirely in your browser. There is no form to submit, no account, no analytics event carrying your answers, and no server receiving them. Nothing is stored — closing or refreshing the page clears it. If you want us to look at your results you have to contact us and tell us yourself — the "email me these results" button simply opens your own mail app with a prefilled message, and nothing is sent unless you press send.',
   },
   {
     question: 'Is this a security audit?',
@@ -385,6 +386,29 @@ const RiskCalculator: React.FC = () => {
         }),
     [answers]
   );
+
+  // Optional, user-initiated only. Opens the visitor's own mail client with a
+  // prefilled summary; nothing is transmitted unless they choose to hit send.
+  // Keeps the "nothing leaves your browser" claim literally true.
+  const mailtoHref = useMemo(() => {
+    const lines = [
+      `My IT risk score: ${score}/100 (${tier.label})`,
+      '',
+      gaps.length
+        ? 'Flagged controls, worst first:'
+        : 'No controls were flagged.',
+      ...gaps.map((g, i) => `${i + 1}. [${g.severity}] ${g.q.title} - ${g.chosenLabel}`),
+      '',
+      'Please get in touch about the items above.',
+      '',
+      'Name:',
+      'Company:',
+      'Best number:',
+    ];
+    return `mailto:info@itrapidsupport.com?subject=${encodeURIComponent(
+      `IT risk assessment - score ${score}/100 (${tier.label})`
+    )}&body=${encodeURIComponent(lines.join('\n'))}`;
+  }, [score, tier, gaps]);
 
   const url = '/it-risk-calculator/';
   const title = 'Free IT Security Risk Calculator | Ontario';
@@ -684,7 +708,18 @@ const RiskCalculator: React.FC = () => {
                   >
                     <Phone className="mr-2 h-5 w-5" /> (289) 582-9930
                   </a>
+                  <a
+                    href={mailtoHref}
+                    className="inline-flex items-center justify-center bg-transparent text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors font-medium border border-white/30"
+                  >
+                    <Mail className="mr-2 h-5 w-5" /> Email me these results
+                  </a>
                 </div>
+                <p className="text-slate-400 text-xs mt-4">
+                  The email button opens your own mail app with your score and flagged items
+                  already written out. Nothing is sent until you press send, and we only see it
+                  if you do.
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
