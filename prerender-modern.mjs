@@ -102,6 +102,7 @@ const routes = [
   '/resources/managed-threat-detection-monitoring-mdr-guide',
   '/resources/vcio-virtual-cio-services-guide',
   '/resources/network-security-services-guide-toronto',
+  '/resources/it-outsourcing-services-guide-toronto',
   '/resources/gta-email-spoofing-study-2026',
   '/resources/managed-it-services-vaughan-guide',
   '/resources/cybersecurity-services-toronto-guide',
