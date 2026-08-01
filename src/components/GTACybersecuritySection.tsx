@@ -23,6 +23,14 @@ const GTACybersecuritySection: React.FC = () => {
               is available 24/7 — new clients welcome. Not sure what your business needs? Start with our plain-language guide
               to <Link to="/resources/cybersecurity-services-toronto-guide/" className="text-red-600 hover:text-red-700 font-medium">cybersecurity services in Toronto</Link>.
             </p>
+            <p className="text-gray-700 mb-6">
+              Want to know where you stand before you talk to anyone? Our
+              free <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">IT risk calculator</Link> scores
+              fourteen security control areas — backups, multi-factor authentication, endpoint protection, admin accounts,
+              patching, email authentication and more — then ranks your weakest points and tells you what to fix first.
+              There is no sign-up and no gate: it runs entirely in your browser and nothing you enter is sent to us or
+              stored anywhere.
+            </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="bg-white rounded-lg p-4 border border-gray-200">

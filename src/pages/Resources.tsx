@@ -130,6 +130,55 @@ const Resources = () => {
         </div>
       </div>
 
+      {/* Free Tools */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Free Tools</h2>
+          <p className="text-gray-600 max-w-3xl mb-8">
+            Two free self-service tools from our team. Both are open — no sign-up, no email gate, no report to wait for.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-slate-50 rounded-xl p-6 border border-gray-200">
+              <div className="flex items-center mb-3">
+                <BookOpen className="h-5 w-5 text-red-600 mr-2" />
+                <span className="text-sm text-gray-600">Self-assessment</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">IT Risk Calculator</h3>
+              <p className="text-gray-600 mb-4">
+                Scores fourteen weighted security control areas — backups, multi-factor authentication, endpoint
+                protection, admin accounts, patching, offboarding, email authentication, Microsoft 365 settings and
+                more — then ranks your gaps in priority order with plain-English remediation for each. It runs entirely
+                in your browser and nothing you enter is sent to us or stored anywhere.
+              </p>
+              <Link
+                to="/it-risk-calculator/"
+                className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
+              >
+                Take the free IT risk assessment <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-6 border border-gray-200">
+              <div className="flex items-center mb-3">
+                <FileText className="h-5 w-5 text-red-600 mr-2" />
+                <span className="text-sm text-gray-600">Domain check</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Email Spoof Check</h3>
+              <p className="text-gray-600 mb-4">
+                Checks whether your domain publishes SPF, DKIM and DMARC records, and whether your DMARC policy is
+                actually enforcing. In our own scan of 481 GTA business domains, 52.4% published DMARC but only 20.6%
+                had it set to enforce.
+              </p>
+              <Link
+                to="/tools/email-spoof-check/"
+                className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
+              >
+                Check your domain <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Resources Grid */}
       <div className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

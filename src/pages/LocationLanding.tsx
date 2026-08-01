@@ -144,6 +144,35 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
         </div>
       )}
 
+      {/* Free self-assessment */}
+      <div className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Check your IT risk before you call anyone
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Most {data.city} businesses we speak to already suspect something is weak — they just cannot say which
+            thing to fix first. Our free{' '}
+            <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
+              IT risk calculator
+            </Link>{' '}
+            answers that in a few minutes. It scores fourteen weighted security control areas — backups, multi-factor
+            authentication, endpoint protection, admin accounts, patching, staff offboarding, email authentication,
+            Microsoft 365 settings, encryption and more — then ranks your gaps by how much each one is costing your
+            score and gives plain-English remediation for each.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            There is no sign-up, no email gate and no report to wait for: it runs entirely in your browser and nothing
+            you enter is sent to us or stored anywhere. If you want a person to look at the results with you
+            afterwards, call {phoneDisplay} or{' '}
+            <Link to="/contact/" className="text-red-600 hover:text-red-700 font-medium">
+              get in touch
+            </Link>
+            .
+          </p>
+        </div>
+      </div>
+
       {/* Areas served */}
       <div className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

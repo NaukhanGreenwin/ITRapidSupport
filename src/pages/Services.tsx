@@ -94,6 +94,15 @@ const Services: React.FC = () => {
               </Link>{' '}
               respond around the clock.
             </p>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+              Not sure which of these you actually need first? Run our free{' '}
+              <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
+                IT risk calculator
+              </Link>{' '}
+              — it scores fourteen weighted security control areas, from backups and multi-factor authentication to
+              email authentication and offboarding, and ranks your gaps in the order they should be fixed. No sign-up,
+              no gate: it runs entirely in your browser and nothing you enter is sent to us or stored anywhere.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">

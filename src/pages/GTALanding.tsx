@@ -145,6 +145,15 @@ const GTALanding: React.FC = () => {
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Managed IT, cybersecurity, and 24/7 support built around the needs of Greater Toronto Area organizations.
             </p>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+              If you are still working out what your business needs, start with our free{' '}
+              <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
+                IT risk calculator for GTA businesses
+              </Link>
+              . It scores fourteen weighted security control areas — backups, multi-factor authentication, endpoint
+              protection, patching, email authentication and more — and ranks your gaps in priority order. No sign-up
+              and no gate: it runs entirely in your browser and nothing you enter is sent to us or stored anywhere.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">
