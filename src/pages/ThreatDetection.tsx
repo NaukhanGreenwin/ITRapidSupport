@@ -402,6 +402,27 @@ const ThreatDetection = () => {
 
       <ServiceDifferentiators />
 
+      {/* Free self-assessment */}
+      <div className="bg-slate-50 py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            How exposed are you right now?
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Monitoring is one of fourteen control areas in our free IT risk calculator. It scores
+            your posture across backups, MFA, endpoint protection, patching, admin accounts and
+            more, then ranks what to fix first. No sign-up, and it runs entirely in your browser —
+            nothing you enter is sent to us or stored.
+          </p>
+          <Link
+            to="/it-risk-calculator/"
+            className="inline-flex items-center justify-center bg-slate-900 text-white px-8 py-4 rounded-lg hover:bg-slate-800 transition-colors font-medium"
+          >
+            Take the free IT risk assessment <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

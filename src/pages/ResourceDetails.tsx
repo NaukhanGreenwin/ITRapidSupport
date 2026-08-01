@@ -262,6 +262,7 @@ export const allResources: ResourceItem[] = [
       "## 8. Have a Plan for When Something Goes Wrong",
       "Know who to call and what to do in the first hour of an incident. A clear response plan, combined with a partner who can act fast, dramatically reduces the cost and downtime of an attack.",
       "## Putting It Together",
+      "If you want to know which of these eight to start with, our [free IT risk calculator](/it-risk-calculator/) scores fourteen control areas and ranks your gaps in order of how much each one is costing you. It runs entirely in your browser and nothing you enter is sent anywhere.",
       "Each of these layers is achievable for a small business when set up by a team that does this every day. IT Rapid Support provides managed cybersecurity for businesses [across Toronto and the GTA](/it-support/gta/), including MFA, email security, endpoint protection, backup and recovery, 24/7 [managed detection and response](/services/threat-detection/), and [network security services](/services/network-security-services/) covering managed firewalls, segmentation, secure Wi-Fi, and monitoring. Call (289) 582-9930 to find the gaps in your current setup."
     ].join('\n\n'),
     type: "guide",
@@ -1233,6 +1234,7 @@ export const allResources: ResourceItem[] = [
       "The figures, tables and findings in this report may be reused freely, including by journalists, researchers and other businesses, with attribution to IT Rapid Support and a link to this page. The original email authentication measurement is ours; the public statistics belong to the organizations that published them and should be cited to those organizations directly, using the links in the table above.",
       "## About This Report",
       "IT Rapid Support is a managed IT and cybersecurity provider based at 7810 Keele Street in Vaughan, Ontario, serving businesses across [Toronto](/it-support/toronto/), [Vaughan](/it-support/vaughan/), [York Region](/it-support/york-region/) and the wider Greater Toronto Area. We compiled this report because our clients kept being shown American vendor statistics about a Canadian problem, and because the local cut of the federal data had not been published by anyone.",
+      "If you want to see where your own organization sits against the controls behind these numbers, our [free IT risk calculator](/it-risk-calculator/) scores fourteen of them and tells you which to fix first. It runs entirely in your browser — nothing you enter is sent to us or stored anywhere.",
       "If you want to know where your own organization sits against the numbers in this report — starting with whether your domain can be spoofed today — call (289) 582-9930 or [get in touch](/contact/). Related reading: our [GTA email spoofing study](/resources/gta-email-spoofing-study-2026/), our [small business cybersecurity checklist](/resources/small-business-cybersecurity-checklist/), and our guide to [ransomware protection for Ontario businesses](/resources/ransomware-protection-ontario-businesses/)."
     ].join('\n\n'),
     type: "whitepaper",
