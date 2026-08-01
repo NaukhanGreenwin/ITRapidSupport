@@ -20,6 +20,16 @@ export interface ResourceItem {
   link: string;
   featured?: boolean;
   readTime?: string;
+  // Present only on original-research articles. Emits Dataset JSON-LD so the
+  // measurement is machine-readable for search engines and AI answer engines.
+  dataset?: {
+    name: string;
+    description: string;
+    measurementTechnique: string;
+    temporalCoverage: string;
+    spatialCoverage: string;
+    variables: string[];
+  };
 }
 
 // All resources data - in a real app this would come from an API or database
@@ -1114,6 +1124,126 @@ export const allResources: ResourceItem[] = [
     link: "#",
     readTime: "10 min read"
   },
+  {
+    id: "gta-smb-cybersecurity-report-2026",
+    title: "The State of GTA Small-Business Cybersecurity 2026",
+    seoTitle: "GTA Small-Business Cybersecurity Report 2026",
+    description: "Original 2026 research: police-reported cybercrime fell across Canada but rose 11.2% in Toronto, and only 20.6% of 481 GTA business domains enforce DMARC.",
+    dataset: {
+      name: "GTA business email authentication measurement, August 2026",
+      description: "DNS measurement of SPF, DMARC and common-selector DKIM records across a random sample of 500 Greater Toronto Area business domains, of which 481 were mail-enabled. Aggregate results only; no individual business or domain is published.",
+      measurementTechnique: "Public DNS lookups (TXT records for SPF and _dmarc, MX records for mail-enabled status, TXT and CNAME lookups at ten common DKIM selectors)",
+      temporalCoverage: "2026-08-01",
+      spatialCoverage: "Greater Toronto Area, Ontario, Canada",
+      variables: ["SPF adoption", "DMARC adoption", "DMARC policy strength", "DKIM at common selectors", "Combined SPF, DMARC and DKIM coverage"]
+    },
+    content: [
+      "Every managed IT provider in the Greater Toronto Area publishes the same cybersecurity statistics, and almost all of them come from American vendors selling American products. This report does something different. It uses Canadian primary sources, cuts the national numbers down to the Toronto and Hamilton census metropolitan areas, and adds one original measurement that IT Rapid Support ran ourselves: a DNS scan of 500 real GTA business domains, checking whether they have actually deployed the email authentication that stops criminals sending mail in their name.",
+      "The result is a finding nobody in the GTA IT market has published. Police-reported cybercrime fell across Canada in 2025. In the Toronto area it rose. And the federal survey everyone quotes when they talk about business cybercrime does not count companies with fewer than ten employees at all.",
+      "Every figure below is either a public statistic with a named publisher and a link, or our own measurement published with its method and its limits. Nothing is estimated, modelled, or borrowed from a vendor marketing report. Where a number needs a caveat, the caveat is in the body of this report rather than a footnote, because the caveats are the part that determines whether a number means anything.",
+      "## The Six Numbers",
+      "Toronto CMA police-reported cybercrime rate, 2025: 162.4 incidents per 100,000 population, up 11.2% from 146.1 in 2024 ([Statistics Canada Table 35-10-0002-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3510000201)).",
+      "Canada-wide police-reported cybercrime rate, 2025: 218.6 per 100,000, down 6.5% from 233.9 in 2024 (same source). Toronto moved against the national direction.",
+      "Hamilton CMA, 2025: 242.3 per 100,000, up 70.5% from 142.1 — the largest single-year increase of any census metropolitan area in Canada (same source).",
+      "Canadian businesses impacted by a cyber security incident, 2023: 16%, down from 18% in 2021 and 21% in 2019 ([Statistics Canada, The Daily, 21 October 2024](https://www150.statcan.gc.ca/n1/daily-quotidien/241021/dq241021a-eng.htm)). The survey covers enterprises with 10 or more employees only.",
+      "Canadian organizations that paid a ransom after a ransomware attack: 74% of the 24% hit in the previous twelve months ([2025 CIRA Cybersecurity Survey](https://www.cira.ca/en/resources/documents/cybersecurity/2025-cybersecurity-survey/)).",
+      "GTA business domains that actually enforce DMARC: 20.6% of 481 mail-enabled domains we measured on 1 August 2026. Half publish a DMARC record; most of those set it to take no action. This is IT Rapid Support original research and the method is published in full below.",
+      "## What the National Numbers Say",
+      "Statistics Canada runs the Canadian Survey of Cyber Security and Cybercrime, and its most recent published results cover the 2023 reference year. In 2023, about 1 in 6 Canadian businesses (16%) were impacted by a cyber security incident, continuing a decline from 21% in 2019 and 18% in 2021. Large businesses were the most likely to be hit, at 30%, and also recorded the largest drop.",
+      "The composition of those incidents shifted even as the headline rate fell. Identity theft rose to 31% of impacted businesses, an eleven percentage point jump from 2021, and scams and fraud reached 50%, up six points. Just over 1 in 8 impacted businesses (13%) experienced a ransomware attack, up from 11% in 2021. Most ransomware victims did not pay: 88% refused. Among the minority who did pay, 84% paid less than $10,000 and 4% paid more than $500,000.",
+      "Spending tells the more interesting story. Total Canadian business spending on preventing and detecting incidents rose from $9.7 billion in 2021 to $11.0 billion in 2023, but the proportion of businesses spending anything at all on prevention fell from 61% to 56%. Meanwhile spending on recovering from incidents doubled, from roughly $600 million in 2021 to $1.2 billion in 2023, with small businesses accounting for approximately $300 million of that. Fewer businesses were hit, and the ones that were hit paid more.",
+      "Two further figures from that survey are worth holding onto. Half of Canadian businesses (50%) reported having cyber security employees in 2023, down from 61% in 2021, and the most common reason given for not having any was that the business uses consultants or contractors to monitor cyber security (47%). Only 26% had written cyber security policies, unchanged since 2021, and 22% carried cyber risk insurance, up six points from 16%.",
+      "Set against that, the [2025 CIRA Cybersecurity Survey](https://www.cira.ca/en/resources/documents/cybersecurity/2025-cybersecurity-survey/) reports the opposite direction of travel. More than four in ten Canadian organizations (43%) say they were targeted by a cyber attack in the previous twelve months, and 42% experienced a breach of customer or employee data, up sharply from 29% in 2022. Just under a quarter (24%) were hit by ransomware, and of those, 74% paid.",
+      "So Statistics Canada says incidents are down and CIRA says breaches are up. Both are correct, and the difference is method rather than contradiction. The federal survey is a large probability sample of enterprises with ten or more employees, asking about a defined list of incident types across a full calendar year. The CIRA survey was conducted by The Strategic Counsel in August 2025 and collected 500 online responses from Canadian cybersecurity decision-makers — a self-selected professional audience, in organizations that employ someone whose job is cybersecurity, asked what they experienced in the last twelve months. Different populations, different question wording, different years. Anyone quoting one of these numbers without naming which survey it came from is not giving you information.",
+      "## The GTA Cut",
+      "Statistics Canada publishes police-reported cybercrime by census metropolitan area in Table 35-10-0002-01. Almost nobody looks at it. We downloaded the full table on 1 August 2026 and computed the local picture directly.",
+      "| Geography | 2023 rate | 2024 rate | 2025 rate | 2024 to 2025 |",
+      "| --- | --- | --- | --- | --- |",
+      "| Canada, total police-reported | 246.4 | 233.9 | 218.6 | −6.5% |",
+      "| All census metropolitan areas | 259.8 | 247.5 | 230.2 | −7.0% |",
+      "| Ontario | 221.5 | 199.0 | 196.4 | −1.3% |",
+      "| Toronto CMA | 193.1 | 146.1 | 162.4 | +11.2% |",
+      "| Hamilton CMA | 179.4 | 142.1 | 242.3 | +70.5% |",
+      "Rates are incidents per 100,000 population. Counts behind the 2024 to 2025 change: Canada 96,143 to 90,643; Toronto CMA 9,271 to 10,280; Hamilton CMA 900 to 1,552.",
+      "Across the 41 census metropolitan areas with data for both years, 14 saw the rate rise and 27 saw it fall. Hamilton recorded the largest increase in the country. Toronto was the only one of Canada's five largest metropolitan areas where the rate went up at all: Montréal fell 9.2%, Vancouver 12.8%, Calgary 13.5% and Edmonton 25.0% over the same period.",
+      "Three honest qualifications belong with that finding, and they matter more than the finding itself.",
+      "First, Toronto is not the worst place in Canada for cybercrime and this report does not claim it is. At 162.4 per 100,000 the Toronto CMA sits well below the national rate of 218.6 and far below Abbotsford-Mission (893.6), Chilliwack (720.4) or Kitchener-Cambridge-Waterloo (622.4). The story is direction, not level.",
+      "Second, 2025 is a reversal of a decline, not a record. The Toronto CMA rate ran 150.7 in 2019, 208.8 in 2020, 196.9 in 2021, 241.2 in 2022, 193.1 in 2023 and 146.1 in 2024 before rising to 162.4 in 2025. The 2025 figure is higher than the year before it and lower than four of the six years before that.",
+      "Third, and most importantly, Statistics Canada attaches a specific warning to the Toronto series. Annual counts of cybercrime offences for Toronto Police Service increase when revised data are published a year after the initial release, because lengthy investigations are needed to confirm whether an incident was in fact a cybercrime. Statistics Canada states plainly that changes between the most recent year of data and the previous year should be interpreted with caution. That cuts in a specific direction here: 2024 is a revised figure and 2025 is not, so the 11.2% increase is a comparison of a revised number against an unrevised one, and the 2025 count is more likely to be adjusted upward than downward. The table also excludes the portions of Halton Regional Police Service and Durham Regional Police Service that police the Toronto CMA, and the 2025 data cycle covers 99.6% of the Canadian population.",
+      "## Why the Official Numbers Are a Floor",
+      "Police-reported cybercrime counts crimes that somebody reported to police. That is a much smaller category than crimes that happened, and the gap is measurable from the official sources themselves.",
+      "Statistics Canada found that only about 1 in 8 impacted businesses (13%) reported cyber security incidents to police in 2023 — and that was an increase, up three points from 10% in 2021. Small businesses were the least likely to report, at 12%. When asked why they had not reported everything, businesses said the incidents were resolved internally (55%), too minor (35%), or resolved through IT consultants or contractors (31%).",
+      "The Canadian Anti-Fraud Centre puts the same point more bluntly. Announcing that Canadians lost over $704 million to fraud in 2025, with reported losses since 2022 now surpassing $2.4 billion, the [Competition Bureau stated](https://www.canada.ca/en/competition-bureau/news/2026/03/fraud-prevention-month-to-bring-hidden-crime-into-the-spotlight.html) that these losses represent only a fraction of the harm, because only 5% to 10% of frauds are reported.",
+      "Then there is the population gap, which is the one that matters most to the businesses reading this. The target population of the 2023 Canadian Survey of Cyber Security and Cybercrime was enterprises with Canadian operations and ten or more employees, across most economic sectors except public administration, with a final sample of 12,462 enterprises and a response rate of 71%. In that survey, a small business means one with 10 to 49 employees. A GTA firm with six staff, or three, is not a small business in the national statistics. It is not in the statistics.",
+      "The Canadian Federation of Independent Business has made the same criticism in print. Its report [Cyberfraud in Small Business](https://www.cfib-fcei.ca/hubfs/research/Cyber-Fraud-in-Small-Business.pdf) noted that federal data covers only firms with ten or more employees, found that 1 in 20 small businesses had been the victim of cyberfraud within a six-month window, and estimated that small firms had invested roughly $6,700 extra in securing their IT. That measurement covers March to October 2020, during the pandemic shift to remote work, and it is the most recent CFIB cyberfraud measurement we could verify. It should be read as a dated snapshot, not as a current figure.",
+      "Put together: a national count that captures roughly one incident in eight that businesses experience, a fraud loss figure the government itself says represents 5% to 10% of the real total, and a business survey that structurally excludes the majority of GTA employers by headcount. The official numbers are not wrong. They are a floor.",
+      "## Original Research: GTA Email Authentication, August 2026",
+      "Because the public data has that hole in it, we measured something ourselves — something that is directly observable, verifiable by anyone, and specific to businesses in this region.",
+      "Email authentication is the set of DNS records that let receiving mail servers verify that a message claiming to come from your domain actually did. SPF lists which servers may send on your behalf. DKIM signs messages cryptographically. DMARC ties the two together and tells receiving servers what to do when a message fails — nothing (p=none), quarantine it, or reject it outright. Without DMARC at an enforcing policy, a criminal can send invoices, payroll change requests and wire instructions that appear to come from your domain, and receiving servers have no instruction to stop them. This is the mechanism behind most business email compromise.",
+      "On 1 August 2026 we ran public DNS lookups against a random sample of 500 business domains drawn from a pool of 3,160 GTA business domains in our own regional records. Of those 500, 481 were mail-enabled (they published MX records) and form the denominator for every figure below. The sample is concentrated in Vaughan, Toronto, Burlington, Richmond Hill, Hamilton, Woodbridge, Markham, Oakville, Concord and Aurora, with the rest spread across the wider GTA.",
+      "| Measure | Result | Domains |",
+      "| --- | --- | --- |",
+      "| Publishes SPF | 91.7% | 441 of 481 |",
+      "| Publishes DMARC | 52.4% | 252 of 481 |",
+      "| DKIM found at a common selector | 52.8% | 254 of 481 |",
+      "| DMARC at an enforcing policy (quarantine or reject) | 20.6% | 99 of 481 |",
+      "| DMARC set to p=none (monitor only) | 31.8% | 153 of 481 |",
+      "| SPF, DMARC and DKIM all present | 35.6% | 171 of 481 |",
+      "| Neither SPF nor DMARC | 7.3% | 35 of 481 |",
+      "The headline is the gap between adoption and enforcement. Just over half of GTA business domains publish a DMARC record, which looks like progress until you read the policies: of the 252 domains with DMARC, 153 are set to p=none, 59 to quarantine and 40 to reject. That means 60.7% of the businesses that have adopted DMARC have configured it to take no action on messages that fail. A p=none record generates reports. It does not stop a single spoofed email.",
+      "Across all mail-enabled domains in the sample, only about one in five (20.6%) has DMARC actually enforcing. SPF adoption at 91.7% is high, but SPF alone does not protect the visible From address that a recipient reads, which is precisely the field a business email compromise attack forges.",
+      "Two limits on this measurement, stated plainly. The DKIM figure is an undercount: we probed ten common selectors (selector1, selector2, google, default, k1, s1, s2, dkim, mail and zoho) and organizations using custom selectors will be recorded as not found, so real DKIM deployment is higher than 52.8%. And the sample is drawn from our own regional business records rather than from a registry of all GTA businesses, so it is a sample of GTA businesses, not a census of them. We publish aggregate results only. No domain, business name or address from the scan appears in this report or anywhere else.",
+      "For context, we ran a smaller version of this scan on 13 July 2026 across 118 mail-enabled GTA domains and found DMARC at 57.6% and full SPF-plus-DMARC-plus-DKIM coverage at 39.8%. The larger August sample comes in slightly lower on both. We are reporting the larger sample.",
+      "## What the Threat Side Looks Like",
+      "The Canadian Centre for Cyber Security, the federal agency, assesses in its [National Cyber Threat Assessment 2025-2026](https://www.cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026) that ransomware is the top cybercrime threat facing Canada's critical infrastructure. The assessment cites an estimate that the average ransom paid in Canada in 2023 was approximately $1.130 million, up almost 150% in two years. That is the Cyber Centre quoting a third-party estimate rather than measuring it directly, and we repeat it with their hedging intact.",
+      "Two things about that figure matter for a small GTA business. It is an average of payments made, drawn heavily from organizations large enough to be able to pay. And Statistics Canada's own data says 88% of impacted Canadian businesses did not pay at all, while CIRA's decision-maker sample says 74% of ransomware victims did. Both cannot describe the same population, which is the point: the organizations that end up paying are not a random draw. They are the ones without a tested, isolated backup.",
+      "## What a GTA Business Can Actually Do",
+      "The Canadian Centre for Cyber Security publishes [Baseline Cyber Security Controls for Small and Medium Organizations](https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations), a government control set built explicitly around the 80/20 rule: achieve most of the benefit from a fraction of the effort. It is free, Canadian, and vendor-neutral, which is why we recommend it instead of a framework of our own invention. There are thirteen baseline controls.",
+      "- Develop an incident response plan",
+      "- Automatically patch operating systems and applications",
+      "- Enable security software",
+      "- Securely configure devices",
+      "- Use strong user authentication",
+      "- Provide employee awareness training",
+      "- Backup and encrypt data",
+      "- Secure mobility",
+      "- Establish basic perimeter defences",
+      "- Secure cloud and outsourced IT services",
+      "- Secure websites",
+      "- Implement access control and authorization",
+      "- Secure portable media",
+      "Reading that list against the data in this report, four of the thirteen carry disproportionate weight for a GTA small business right now.",
+      "Strong user authentication is first, because identity theft was the fastest-growing incident method in the federal data and because multi-factor authentication on Microsoft 365 blocks the single most common route into a small business. Automatic patching is second, because it is the control most often skipped when nobody owns IT and the one that closes the widest window. Backup and encryption is third, and specifically backups that are monitored and tested rather than assumed — this is the control that determines whether ransomware is an outage or a payment. Securing cloud and outsourced IT services is fourth, and for most GTA businesses that means the Microsoft 365 tenant: who has administrative rights, whether legacy authentication is disabled, and whether the organization rather than a vendor owns the tenant.",
+      "Email authentication sits inside the perimeter defences and secure configuration controls, and on our own measurement it is where the region is weakest. If you take one action after reading this report, publish a DMARC record and move it past p=none. It costs nothing but attention, and roughly four in five GTA businesses have not done it.",
+      "IT Rapid Support delivers these controls as ongoing managed work rather than a one-time project: [managed cybersecurity](/services/managed-security/) with around-the-clock detection and response, [managed IT support](/services/it-support/) with monitoring and patching, Microsoft 365 and Azure administration, multi-factor authentication and endpoint protection, SPF, DKIM and DMARC configuration, and monitored backups. Compliance frameworks such as PHIPA and PIPEDA are supported by this work rather than satisfied by it — no provider can make you compliant, and any that says otherwise is selling something.",
+      "## Method and Limitations",
+      "Every source used in this report, with what we took from it and when we accessed it.",
+      "| Source | Used for | Accessed |",
+      "| --- | --- | --- |",
+      "| [Statistics Canada, Table 35-10-0002-01](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3510000201) — police-reported cybercrime, incidents and rate per 100,000, Canada, provinces, territories and CMAs | Toronto CMA, Hamilton CMA, Ontario, Canada and all-CMA figures, 2019 to 2025 | Full CSV downloaded and computed 1 August 2026 |",
+      "| [Statistics Canada, The Daily — Impact of cybercrime on Canadian businesses, 2023](https://www150.statcan.gc.ca/n1/daily-quotidien/241021/dq241021a-eng.htm), released 21 October 2024 | Business impact rate, incident methods, ransomware payment behaviour, spending, policies, insurance, police reporting, survey scope | 1 August 2026 |",
+      "| [CIRA, 2025 Cybersecurity Survey](https://www.cira.ca/en/resources/documents/cybersecurity/2025-cybersecurity-survey/) | Organizations targeted, data breaches, ransomware and payment rate, AI concern | 1 August 2026 |",
+      "| [Canadian Centre for Cyber Security, National Cyber Threat Assessment 2025-2026](https://www.cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026) | Ransomware as top cybercrime threat, average Canadian ransom estimate | 1 August 2026 |",
+      "| [CFIB, Cyberfraud in Small Business](https://www.cfib-fcei.ca/hubfs/research/Cyber-Fraud-in-Small-Business.pdf) | Small-business victimisation rate and security spend, March to October 2020 | 1 August 2026 |",
+      "| [Competition Bureau Canada and the Canadian Anti-Fraud Centre](https://www.canada.ca/en/competition-bureau/news/2026/03/fraud-prevention-month-to-bring-hidden-crime-into-the-spotlight.html), 6 March 2026 | 2025 fraud losses, cumulative losses since 2022, reporting rate | 1 August 2026 |",
+      "| [Canadian Centre for Cyber Security, Baseline Cyber Security Controls for Small and Medium Organizations](https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations) | The thirteen baseline controls | 1 August 2026 |",
+      "| IT Rapid Support GTA email authentication measurement | SPF, DMARC, DKIM results | Measured 1 August 2026 |",
+      "The limitations, collected in one place. Police-reported data counts reported incidents only and reporting behaviour varies by police service and by year, so a rising rate is partly a rising-reporting signal. Toronto CMA counts are revised upward a year after initial release, so the most recent year should be treated as provisional and probably low. Policing-based CMA boundaries do not align exactly with census CMA boundaries. The federal business survey excludes enterprises with fewer than ten employees and excludes public administration, and its most recent published reference year is 2023. The CIRA survey is a 500-response online sample of cybersecurity decision-makers, not a probability sample of businesses. The CFIB cyberfraud figures are from 2020. The Cyber Centre ransom figure is a third-party estimate the Cyber Centre repeats rather than a measurement. Our own DNS measurement undercounts DKIM because it probes common selectors only, is drawn from our regional business records rather than a full registry, and captures configuration at a single point in time.",
+      "## Reuse",
+      "The figures, tables and findings in this report may be reused freely, including by journalists, researchers and other businesses, with attribution to IT Rapid Support and a link to this page. The original email authentication measurement is ours; the public statistics belong to the organizations that published them and should be cited to those organizations directly, using the links in the table above.",
+      "## About This Report",
+      "IT Rapid Support is a managed IT and cybersecurity provider based at 7810 Keele Street in Vaughan, Ontario, serving businesses across [Toronto](/it-support/toronto/), [Vaughan](/it-support/vaughan/), [York Region](/it-support/york-region/) and the wider Greater Toronto Area. We compiled this report because our clients kept being shown American vendor statistics about a Canadian problem, and because the local cut of the federal data had not been published by anyone.",
+      "If you want to know where your own organization sits against the numbers in this report — starting with whether your domain can be spoofed today — call (289) 582-9930 or [get in touch](/contact/). Related reading: our [GTA email spoofing study](/resources/gta-email-spoofing-study-2026/), our [small business cybersecurity checklist](/resources/small-business-cybersecurity-checklist/), and our guide to [ransomware protection for Ontario businesses](/resources/ransomware-protection-ontario-businesses/)."
+    ].join('\n\n'),
+    type: "whitepaper",
+    date: "August 1, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "14 min read"
+  },
 ];
 
 // Render markdown-style [text](url) links inside article paragraphs.
@@ -1131,6 +1261,83 @@ const renderInlineLinks = (text: string): React.ReactNode => {
       <a key={i} href={href} className="text-red-600 hover:text-red-700 underline">{label}</a>
     );
   });
+};
+
+const splitTableRow = (row: string): string[] =>
+  row.replace(/^\||\|$/g, '').split('|').map(cell => cell.trim());
+
+const isDividerRow = (row: string): boolean => /^\|[\s|:-]+\|$/.test(row.trim());
+
+// Renders the article body: headings, markdown pipe tables, dash bullet lists,
+// and paragraphs. Tables and lists arrive as consecutive blocks (content is
+// joined on \n\n), so they are grouped back together here.
+const renderArticleBlocks = (content: string): React.ReactNode => {
+  const blocks = content.split('\n\n');
+  const out: React.ReactNode[] = [];
+  let i = 0;
+
+  while (i < blocks.length) {
+    const block = blocks[i];
+
+    if (block.startsWith('## ')) {
+      out.push(<h2 key={i} className="text-2xl font-bold mt-8 mb-4">{block.replace('## ', '')}</h2>);
+      i += 1;
+    } else if (block.startsWith('### ')) {
+      out.push(<h3 key={i} className="text-xl font-bold mt-6 mb-3">{block.replace('### ', '')}</h3>);
+      i += 1;
+    } else if (block.startsWith('|')) {
+      const start = i;
+      const rows: string[] = [];
+      while (i < blocks.length && blocks[i].startsWith('|')) {
+        if (!isDividerRow(blocks[i])) rows.push(blocks[i]);
+        i += 1;
+      }
+      const [head, ...body] = rows;
+      out.push(
+        <div key={start} className="my-6 overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-slate-100">
+                {splitTableRow(head).map((cell, c) => (
+                  <th key={c} className="border border-slate-200 px-3 py-2 text-left font-semibold text-slate-900">
+                    {renderInlineLinks(cell)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {body.map((row, r) => (
+                <tr key={r} className={r % 2 ? 'bg-slate-50' : undefined}>
+                  {splitTableRow(row).map((cell, c) => (
+                    <td key={c} className="border border-slate-200 px-3 py-2 align-top text-gray-700">
+                      {renderInlineLinks(cell)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    } else if (block.startsWith('- ')) {
+      const start = i;
+      const items: string[] = [];
+      while (i < blocks.length && blocks[i].startsWith('- ')) {
+        items.push(blocks[i].slice(2));
+        i += 1;
+      }
+      out.push(
+        <ul key={start} className="mb-4 list-disc pl-6 space-y-1 text-gray-700">
+          {items.map((item, n) => <li key={n}>{renderInlineLinks(item)}</li>)}
+        </ul>
+      );
+    } else {
+      out.push(<p key={i} className="mb-4 text-gray-700">{renderInlineLinks(block)}</p>);
+      i += 1;
+    }
+  }
+
+  return out;
 };
 
 const ResourceDetails: React.FC = () => {
@@ -1207,6 +1414,23 @@ const ResourceDetails: React.FC = () => {
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl }
   };
 
+  const datasetSchema = currentResource.dataset && {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: currentResource.dataset.name,
+    description: currentResource.dataset.description,
+    url: canonicalUrl,
+    ...(publishedIso ? { datePublished: publishedIso } : {}),
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    isAccessibleForFree: true,
+    measurementTechnique: currentResource.dataset.measurementTechnique,
+    temporalCoverage: currentResource.dataset.temporalCoverage,
+    spatialCoverage: currentResource.dataset.spatialCoverage,
+    variableMeasured: currentResource.dataset.variables,
+    creator: { '@type': 'Organization', name: 'IT Rapid Support', url: 'https://itrapidsupport.com' },
+    includedInDataCatalog: { '@type': 'DataCatalog', name: 'IT Rapid Support Research', url: 'https://itrapidsupport.com/resources/' }
+  };
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -1236,6 +1460,7 @@ const ResourceDetails: React.FC = () => {
         <meta name="twitter:image" content={absoluteImage} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        {datasetSchema && <script type="application/ld+json">{JSON.stringify(datasetSchema)}</script>}
       </Helmet>
       {/* Hero Section */}
       <div className="pt-20 bg-slate-900">
@@ -1289,15 +1514,7 @@ const ResourceDetails: React.FC = () => {
             {/* Main Content */}
             <div className="col-span-12 lg:col-span-8">
               <div className="prose prose-lg max-w-none prose-red">
-                {currentResource.content.split('\n\n').map((paragraph: string, index: number) => {
-                  if (paragraph.startsWith('## ')) {
-                    return <h2 key={index} className="text-2xl font-bold mt-8 mb-4">{paragraph.replace('## ', '')}</h2>;
-                  } else if (paragraph.startsWith('### ')) {
-                    return <h3 key={index} className="text-xl font-bold mt-6 mb-3">{paragraph.replace('### ', '')}</h3>;
-                  } else {
-                    return <p key={index} className="mb-4 text-gray-700">{renderInlineLinks(paragraph)}</p>;
-                  }
-                })}
+                {renderArticleBlocks(currentResource.content)}
               </div>
 
               {/* Share */}
