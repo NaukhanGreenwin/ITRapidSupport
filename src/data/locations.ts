@@ -1058,7 +1058,7 @@ export const locations: CityData[] = [
   {
     "slug": "aurora",
     "city": "Aurora",
-    "title": "IT Support & Managed IT Services in Aurora",
+    "title": "Managed IT Services Aurora | 24/7 IT Support",
     "description": "Local Aurora IT support and cybersecurity. 24/7 helpdesk, managed IT, cloud, and on-site certified technicians across York Region. Call (289) 582-9930.",
     "keywords": "IT support Aurora, managed IT services Aurora, cybersecurity Aurora, Aurora IT company, IT helpdesk Aurora, York Region IT support",
     "intro": "IT Rapid Support gives Aurora businesses a complete IT department: managed IT services, cybersecurity, and a 24/7 helpdesk. Serving York Region from nearby Vaughan, we pair fast remote support with on-site certified technicians for organizations throughout Aurora.",
@@ -1095,6 +1095,30 @@ export const locations: CityData[] = [
       {
         "question": "How do you protect Aurora businesses from cyber attacks?",
         "answer": "We use a layered defence of managed firewalls, endpoint protection, email security, multi-factor authentication, security awareness training, and managed detection and response to keep Aurora organizations protected against ransomware and phishing."
+      },
+      {
+        "question": "How much do managed IT services cost in Aurora?",
+        "answer": "Managed IT is billed as a fixed monthly fee with no hidden fees, scoped to the number of users and devices we support and the services included. Your Aurora business knows its IT cost before the month starts instead of watching it swing every time something breaks. Call (289) 582-9930 for a scoped quote based on your actual environment."
+      },
+      {
+        "question": "Do you provide helpdesk support for Aurora businesses?",
+        "answer": "Yes. The helpdesk is staffed 24/7, so Aurora staff reach a real support team by phone, email, or chat at any hour, including evenings, weekends, and holidays. Monitoring runs continuously alongside it, so many failures are detected and worked on before anyone opens a ticket."
+      },
+      {
+        "question": "What does 24/7 monitoring actually cover for an Aurora business?",
+        "answer": "Continuous monitoring of servers, workstations, network hardware, and backup jobs, plus managed detection and response watching for suspicious security activity. Alerts go to our team rather than to your inbox, so a failing disk, a stalled backup, or an unusual login is investigated when it happens rather than discovered later."
+      },
+      {
+        "question": "Can you be our outsourced IT department in Aurora?",
+        "answer": "Yes. For Aurora businesses with no internal IT we act as the whole department: 24/7 helpdesk, monitoring and patching, Microsoft 365 and cloud administration, backup oversight, managed cybersecurity, vendor coordination, and IT planning. Where there is already internal staff we work co-managed, taking on after-hours coverage, monitoring, and security so your own people can focus on projects."
+      },
+      {
+        "question": "Do you support Microsoft 365 for Aurora businesses?",
+        "answer": "Yes. We handle Microsoft 365 migration and ongoing administration for Aurora organizations: mailbox and tenant setup, licence management, SharePoint and OneDrive, multi-factor authentication, security configuration, and email authentication with SPF, DKIM, and DMARC so your domain is harder to spoof."
+      },
+      {
+        "question": "What industries do you support in Aurora?",
+        "answer": "Professional services, legal and accounting firms, healthcare and dental practices, real estate and property management, construction and trades, manufacturing, and nonprofits across Aurora and York Region, with configurations that help toward PHIPA and PIPEDA obligations."
       }
     ],
     "sections": [
@@ -1110,6 +1134,38 @@ export const locations: CityData[] = [
         "paragraphs": [
           "Most Aurora businesses are past the point where break-fix IT makes sense, but not yet at the size that justifies a full internal IT department. A managed IT partner closes that gap: support, security, and cloud under one roof, at a fixed monthly cost that keeps IT spending predictable while 24/7 coverage protects your team outside office hours.",
           "If you are comparing managed IT services in Aurora, start with the guides below, or call (289) 582-9930 to walk through your current setup with our team."
+        ]
+      },
+      {
+        "heading": "What IT Support in Aurora Actually Includes",
+        "paragraphs": [
+          "IT support in Aurora from IT Rapid Support is a complete service rather than a list of billable jobs. Your staff get a 24/7 helpdesk reachable by phone, email, or chat. Behind that sits proactive monitoring of servers, workstations, and network hardware; patch management for operating systems and business applications; Microsoft 365 and cloud administration; user onboarding and offboarding; and backup monitoring with restores that are actually tested. Everything is documented as we go, so knowledge about your environment lives in a system rather than in one person's head.",
+          "Security is part of the same fee, not a separate contract. Aurora clients get managed firewalls, endpoint protection on every managed device, email security with anti-phishing filtering, multi-factor authentication on business accounts, security awareness training, and managed detection and response watching around the clock. Email authentication with SPF, DKIM, and DMARC is configured so attackers have a harder time spoofing your domain in an invoice-fraud attempt.",
+          "Above the day-to-day work sits IT strategy. A vCIO reviews the environment, keeps a hardware and software lifecycle plan, forecasts budget, and runs periodic business reviews so technology decisions get made in advance rather than in the middle of an outage."
+        ]
+      },
+      {
+        "heading": "Cybersecurity for Aurora Businesses",
+        "paragraphs": [
+          "The incidents that actually reach Aurora businesses are ordinary: a phishing email that harvests a Microsoft 365 password, invoice fraud sent from a lookalike domain, ransomware arriving through an unpatched laptop, or account takeover on a mailbox without multi-factor authentication. Each has a well-understood control, and each of those controls is included in the managed service.",
+          "That means managed firewalls at the edge, endpoint protection on managed devices, email filtering that stops phishing before it lands, MFA enforced on business accounts, SPF, DKIM, and DMARC on your domain, staff awareness training, and managed detection and response for whatever gets through anyway. Because the team running your helpdesk also runs your security, a late-night alert is handled by people who already know your network.",
+          "Recovery matters as much as prevention. Backups are monitored rather than assumed, with local and cloud copies and tested restores, so a ransomware event becomes a recovery exercise instead of a business-ending one. If nobody has tested a restore on your Aurora systems in the past year, start there — call (289) 582-9930."
+        ]
+      },
+      {
+        "heading": "24/7 Monitoring and Helpdesk Coverage in Aurora",
+        "paragraphs": [
+          "Monitoring is the part of managed IT that Aurora business owners see least and benefit from most. We watch servers, workstations, network devices, and backup jobs continuously, and managed detection and response watches for security activity in parallel. Alerts route to our team, not to your inbox, so a disk approaching failure, a backup that silently stopped running, or a sign-in from somewhere unexpected gets investigated when it happens.",
+          "The helpdesk sits alongside it and is genuinely staffed 24/7 — nights, weekends, and holidays included. That matters for businesses whose work does not stop at five, and it matters for everyone else on the Monday morning when something broke over the weekend and monitoring has already flagged it.",
+          "Between the two, most of what would have been an outage becomes a ticket nobody outside our team ever hears about. That is the actual product: fewer interruptions, not faster apologies."
+        ]
+      },
+      {
+        "heading": "Local On-Site Support for Aurora",
+        "paragraphs": [
+          "Some problems need someone standing in front of the hardware — a failed switch, a server that will not post, a new office fit-out, a network cabinet nobody has documented. Our head office is at 7810 Keele Street in Vaughan, inside York Region, so an on-site visit to Aurora is a local drive rather than a cross-GTA trip.",
+          "We schedule routine on-site work in advance for maintenance, hardware refreshes, and projects, and we dispatch for emergencies by severity. Aurora Village, Bayview Wellington, Aurora Heights, Aurora Highlands, and Hills of St Andrew are all within that service area, as are neighbouring Newmarket, Richmond Hill, and King City.",
+          "If you are comparing providers, ask each one where their technicians actually come from and how quickly they can be in your building. Then call (289) 582-9930 and ask us the same question."
         ]
       }
     ]
@@ -1155,6 +1211,30 @@ export const locations: CityData[] = [
       {
         "question": "Can you manage our cloud and Microsoft 365 environment?",
         "answer": "Yes. We handle Microsoft 365 and Azure or AWS migration, cloud security, and cloud backup, then provide ongoing management so your Pickering business gets the benefits of the cloud without the security headaches."
+      },
+      {
+        "question": "What do managed IT services include for a Pickering business?",
+        "answer": "A 24/7 helpdesk, proactive monitoring and patch management, network and endpoint management, Microsoft 365 and cloud administration, monitored backup and disaster recovery, managed cybersecurity, vCIO and IT strategy, and on-site support across Pickering and Durham Region — all for a fixed monthly fee."
+      },
+      {
+        "question": "How much do managed IT services cost in Pickering?",
+        "answer": "Managed IT is billed as a fixed monthly fee with no hidden fees, scoped to the number of users and devices supported and the services included. Your Pickering business knows its IT cost before the month starts. Call (289) 582-9930 for a quote based on your actual environment."
+      },
+      {
+        "question": "Do you offer IT consulting for Pickering businesses?",
+        "answer": "Yes. Our vCIO and IT strategy service gives Pickering organizations a documented technology roadmap: a review of the current environment and its risks, a hardware and software lifecycle plan, budget forecasting, and regular business reviews so decisions get made ahead of time rather than during an outage."
+      },
+      {
+        "question": "What does 24/7 monitoring cover for a Pickering business?",
+        "answer": "Continuous monitoring of servers, workstations, network hardware, and backup jobs, plus managed detection and response watching for suspicious security activity. Alerts route to our team rather than your inbox, so a failing disk, a stalled backup job, or an unusual sign-in is investigated as it happens."
+      },
+      {
+        "question": "Can you be our outsourced IT department in Pickering?",
+        "answer": "Yes. For Pickering businesses without internal IT we act as the entire department: helpdesk, monitoring, patching, Microsoft 365 and cloud administration, backups, managed cybersecurity, vendor coordination, and planning. Where internal staff already exist we work co-managed, covering after-hours, monitoring, and security so your people can focus on projects."
+      },
+      {
+        "question": "What industries do you support in Pickering and Durham Region?",
+        "answer": "Professional services, legal and accounting firms, healthcare and dental practices, real estate and property management, construction and trades, manufacturing and warehousing, and nonprofits, with configurations that help toward PHIPA and PIPEDA obligations."
       }
     ],
     "sections": [
@@ -1170,6 +1250,38 @@ export const locations: CityData[] = [
         "paragraphs": [
           "When you compare IT companies in Pickering, look at three things: whether support is genuinely 24/7 or only business hours, whether security is built into the service or sold as an afterthought, and whether the provider will actually come on-site when remote support is not enough. IT Rapid Support delivers all three under one predictable monthly cost, with managed detection and response included rather than bolted on.",
           "Start with the guides below, or call (289) 582-9930 to review your current IT setup with our team."
+        ]
+      },
+      {
+        "heading": "Managed IT Services in Pickering: What Is Included",
+        "paragraphs": [
+          "Managed IT services in Pickering are a single ongoing service rather than a menu of one-off jobs. Day to day that means a 24/7 helpdesk your staff reach by phone, email, or chat; proactive monitoring of servers, workstations, and network gear; patch management for operating systems and business applications; Microsoft 365 and cloud administration; user onboarding and offboarding; and backup monitoring with restores that are tested rather than assumed. The environment is documented as we work, so what we know about your systems lives in a system rather than in one technician's memory.",
+          "Security is included in the same fee. Pickering clients get managed firewalls and network security, endpoint protection on every managed device, email security with anti-phishing filtering, multi-factor authentication on business accounts, security awareness training, and managed detection and response monitoring around the clock. Email authentication with SPF, DKIM, and DMARC is configured so your domain is harder to spoof in an invoice-fraud attempt.",
+          "Above that sits strategy. A vCIO reviews the environment, maintains a hardware and software lifecycle plan, forecasts budget, and runs periodic business reviews. All of it is delivered for a fixed monthly fee with no hidden fees — predictable cost, predictable coverage."
+        ]
+      },
+      {
+        "heading": "Cybersecurity for Pickering Companies",
+        "paragraphs": [
+          "The attacks that actually reach Pickering businesses are the ordinary ones: phishing that harvests a Microsoft 365 password, invoice fraud from a spoofed lookalike domain, ransomware arriving through an unpatched endpoint, and account takeover on a mailbox without multi-factor authentication. Every one has a known control, and each of those controls is part of the managed service rather than an upsell.",
+          "In practice that means managed firewalls at the network edge, endpoint protection on managed devices, email security filtering phishing before it reaches an inbox, MFA on business accounts, SPF, DKIM, and DMARC configured on your domain, staff awareness training, and managed detection and response for the activity that gets through anyway. The team that runs your helpdesk runs your security too, so a night-time alert is handled by people who already know your network.",
+          "Recovery is treated as seriously as prevention: monitored local and cloud backups with tested restores, so a ransomware event becomes a recovery exercise rather than an existential one. If no one has verified a restore on your Pickering systems in the past year, that is where to start."
+        ]
+      },
+      {
+        "heading": "IT Consulting and Strategy for Pickering Organizations",
+        "paragraphs": [
+          "IT consulting for Pickering businesses covers the decisions that sit above the helpdesk: when to replace aging hardware, whether a workload belongs in Microsoft 365 or Azure, how to structure access and permissions as headcount grows, what to do about a server that has fallen out of support, and how much to budget for technology over the next one to three years. Our vCIO service handles that as part of the managed relationship rather than as billable consulting hours.",
+          "The output is a roadmap and a budget. We document the current state, rank the risks, propose a lifecycle plan for hardware and software, and revisit it in scheduled business reviews. That gives owners and finance a predictable technology spend and avoids the familiar pattern where a critical system fails and its replacement becomes an emergency purchase at the worst possible moment.",
+          "For Pickering organizations in regulated or client-sensitive work, strategy also means configuration that helps toward PHIPA and PIPEDA obligations — access controls, encrypted and monitored backups, MFA, logging, and documented process. Call (289) 582-9930 to talk through where your environment stands."
+        ]
+      },
+      {
+        "heading": "On-Site IT Support Across Pickering and Durham Region",
+        "paragraphs": [
+          "Most issues are resolved remotely and immediately, but some need hands on hardware: a failed switch, a server that will not post, an office move, or a network cabinet nobody ever documented. We dispatch certified technicians on-site across Pickering — Bay Ridges, Amberlea, Rougemount, Liverpool, Dunbarton, and Rosebank — and through the wider Durham Region into Ajax, Whitby, and Oshawa.",
+          "Routine on-site work is scheduled in advance for maintenance, hardware refreshes, and projects; emergencies are dispatched by severity. Warehousing and light industrial sites in Pickering often need the most physical attention because network and wireless reliability on the floor is what keeps operations moving.",
+          "If you are comparing IT companies in Pickering, ask each one directly how on-site response works and what it costs. Then call (289) 582-9930 and ask us."
         ]
       }
     ]
@@ -1800,6 +1912,155 @@ export const locations: CityData[] = [
         question: 'Where is the IT Rapid Support Vancouver office?',
         answer:
           'The Vancouver office is at 1066 West Hastings Street, Suite 2000, Vancouver, British Columbia V6E 3X2. The local phone number is (778) 803-7215.',
+      },
+    ],
+  },
+  {
+    slug: 'york-region',
+    city: 'York Region',
+    schemaLocation: 'vaughan',
+    title: 'Managed IT & IT Security Services York Region',
+    h1: 'Managed IT & IT Security Services in York Region',
+    description:
+      'Managed IT and IT security services across York Region: 24/7 helpdesk, managed cybersecurity, network security, cloud, and on-site support. Call (289) 582-9930.',
+    keywords:
+      'IT support York Region, managed IT services York Region, IT security services York Region, managed cybersecurity York Region, network security services York Region, data security services York Region, firewall management York Region, York Region IT company',
+    intro:
+      'IT Rapid Support is headquartered in York Region, at 7810 Keele Street in Vaughan, and delivers managed IT and IT security services to businesses across the region. That means a 24/7 helpdesk, continuous monitoring and patching, managed cybersecurity, Microsoft 365 and cloud administration, and certified technicians who can be on site the same day when a problem needs hands on hardware.',
+    areaHeading: 'Municipalities We Serve Across York Region',
+    areasIntro:
+      'Our head office sits inside York Region, so every municipality below is a short drive rather than a cross-GTA trip.',
+    nearbyAreas: [
+      'Vaughan',
+      'Markham',
+      'Richmond Hill',
+      'Newmarket',
+      'Aurora',
+      'King City',
+      'Whitchurch-Stouffville',
+      'East Gwillimbury',
+      'Georgina',
+    ],
+    highlights: [
+      {
+        title: 'Managed IT & 24/7 Helpdesk',
+        description:
+          'One accountable team for York Region businesses: a round-the-clock helpdesk reachable by phone, email, or chat, plus proactive monitoring and patching that resolve failures before your staff notice them.',
+      },
+      {
+        title: 'IT Security & Managed Cybersecurity',
+        description:
+          'Managed firewalls, endpoint protection, email security, multi-factor authentication, SPF/DKIM/DMARC, and managed detection and response watching York Region environments around the clock.',
+      },
+      {
+        title: 'Local On-Site Response',
+        description:
+          'Our headquarters is at 7810 Keele Street in Vaughan, inside York Region, so certified technicians reach Markham, Richmond Hill, Newmarket, Aurora, and King City quickly when remote support is not enough.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What IT services do you provide across York Region?',
+        answer:
+          'We provide managed IT services, a 24/7 helpdesk, proactive monitoring and patch management, network and endpoint management, managed cybersecurity, Microsoft 365 and Azure migration and administration, monitored backup and disaster recovery, vCIO and IT strategy, and on-site support across York Region.',
+      },
+      {
+        question: 'What do IT security services in York Region include?',
+        answer:
+          'Managed firewalls at the network edge, endpoint protection on every managed device, email security that filters phishing and spoofing, multi-factor authentication on business accounts, SPF, DKIM, and DMARC configured on your domain, security awareness training for staff, and managed detection and response that monitors for suspicious activity 24/7. Monitored and tested backups sit underneath all of it so a bad day stays recoverable.',
+      },
+      {
+        question: 'Do you offer network security services in York Region?',
+        answer:
+          'Yes. We design, manage, and monitor the network security layer for York Region businesses: managed firewalls and firewall rule management, network segmentation, secure remote access and VPN, wireless security, and continuous monitoring of network devices. Network security is delivered as part of the managed service rather than as a separate vendor relationship.',
+      },
+      {
+        question: 'How do you handle data security for York Region organizations?',
+        answer:
+          'Data security starts with knowing where your data lives — Microsoft 365, file servers, line-of-business applications, and endpoints — and then applying access controls, encryption in transit and at rest where the platform supports it, multi-factor authentication, and monitored backups with tested restores. For regulated and client-sensitive work we configure environments to help toward PHIPA and PIPEDA obligations, with logging and documented processes.',
+      },
+      {
+        question: 'Are you actually located in York Region?',
+        answer:
+          'Yes. Our head office is at 7810 Keele Street in Vaughan, which is in York Region. That matters for response time: on-site dispatch to Markham, Richmond Hill, Newmarket, Aurora, King City, Whitchurch-Stouffville, and the northern municipalities is a local drive, not a cross-GTA one.',
+      },
+      {
+        question: 'Do you manage firewalls for York Region businesses?',
+        answer:
+          'Yes. Firewall management is part of the managed security service: configuration, rule review, firmware and security updates, logging, and continuous monitoring. Leaving a firewall unmanaged after installation is one of the most common gaps we find when taking over a York Region environment.',
+      },
+      {
+        question: 'Can you handle a Microsoft 365 migration for a York Region business?',
+        answer:
+          'Yes. We plan and run Microsoft 365 and Azure migrations for York Region organizations — mailbox and tenant setup, data migration, licence rationalization, SharePoint and OneDrive, then security configuration including multi-factor authentication and email authentication with SPF, DKIM, and DMARC. Ongoing Microsoft 365 administration continues as part of the managed service afterwards.',
+      },
+      {
+        question: 'How much do managed IT services cost in York Region?',
+        answer:
+          'Managed IT is billed as a fixed monthly fee with no hidden fees, scoped to the number of users and devices we support and the services included. That keeps the cost predictable and removes any incentive for a provider to profit from your problems. Call (289) 582-9930 and we will scope your environment and give you a firm number.',
+      },
+      {
+        question: 'Do you support businesses with multiple York Region locations?',
+        answer:
+          'Yes. Multi-site organizations get one helpdesk, one monitoring platform, and one security standard across every location, with site-to-site and remote access managed centrally. Staff use the same support process whether they are at head office, a second site, or working from home.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Managed IT Services Across York Region',
+        paragraphs: [
+          'York Region covers nine municipalities and a business base that runs from Vaughan warehousing and manufacturing through Markham technology and professional services to the smaller commercial centres in Newmarket, Aurora, King City, and Georgina. What those businesses have in common is that they are large enough to lose real money to downtime and rarely large enough to justify a full internal IT department. Managed IT services close that gap: one team responsible for the helpdesk, the infrastructure, the security layer, and the strategy behind all three, for a fixed monthly fee.',
+          'Day to day that means a 24/7 helpdesk your staff reach by phone, email, or chat; proactive monitoring of servers, workstations, and network hardware; patch management for operating systems and business applications; Microsoft 365 and cloud administration; user onboarding and offboarding; and backup monitoring with tested recovery. The work is documented as it happens, so what we know about your environment lives in a system instead of in one technician\'s memory.',
+          'IT Rapid Support runs all of this from 7810 Keele Street in Vaughan — inside York Region rather than downtown Toronto. When a failure genuinely needs someone standing in front of the hardware, that is a local drive. Call (289) 582-9930 to talk through what your environment currently runs on.',
+        ],
+      },
+      {
+        heading: 'IT Security Services in York Region',
+        paragraphs: [
+          'The attacks that actually reach York Region businesses are not exotic. They are phishing emails that harvest a Microsoft 365 password, invoice fraud sent from a spoofed lookalike domain, ransomware that arrives through an unpatched endpoint, and account takeover on a mailbox that never had multi-factor authentication enabled. Every one of those has a known control, and every one of those controls is part of our managed IT security service rather than an upsell.',
+          'That layer includes managed firewalls at the network edge, endpoint protection on managed devices, email security that filters phishing before it reaches an inbox, MFA enforced on business accounts, SPF, DKIM, and DMARC configured so your domain is harder to impersonate, security awareness training so staff recognize the attempt, and managed detection and response watching for the activity that gets through anyway. Because the team that runs your helpdesk also runs your security stack, an alert at 2am is handled by people who already know your network.',
+          'Recovery is treated as seriously as prevention. Backups are monitored rather than assumed, with local and cloud copies and restores that are actually tested, so a ransomware event becomes a recovery exercise instead of an existential one. If nobody has verified a restore on your systems in the last year, that is the first thing worth checking.',
+        ],
+      },
+      {
+        heading: 'Network Security and Data Security Services for York Region Businesses',
+        paragraphs: [
+          'Network security services cover the perimeter and everything moving inside it: managed firewalls with rules that are reviewed rather than set once and forgotten, firmware and security updates applied on schedule, segmentation so a compromised device cannot reach everything, secure remote access for hybrid staff, wireless that is locked down properly, and continuous monitoring of the network hardware itself. Most environments we take over in York Region have decent hardware and no ongoing management of it — the firewall was installed, configured once, and left alone.',
+          'Data security starts with a plain answer to where your data actually lives. For most York Region businesses that is a Microsoft 365 tenant, one or two file servers, a line-of-business application, and a long tail of laptops. We apply access controls so people can only reach what their role requires, multi-factor authentication on every business account, encryption where the platform supports it, and monitored backups with tested restores. Logging is turned on so there is evidence available if a question is ever asked.',
+          'For legal, accounting, healthcare and dental, real estate, and financial services organizations across the region, the same controls are the practical foundation of working toward PHIPA and PIPEDA obligations — access control, encryption, recoverable backups, MFA, logging, and documented process. We configure toward those frameworks; we do not sell certification.',
+        ],
+      },
+      {
+        heading: 'Microsoft 365, Cloud, and Firewall Management in York Region',
+        paragraphs: [
+          'Microsoft 365 is where most York Region businesses now keep their email, files, and collaboration, and it is also the single most attacked surface they own. We handle migration onto it — mailbox and tenant setup, data migration, SharePoint and OneDrive, licence rationalization so you stop paying for seats and features nobody uses — and then we keep administering it: conditional access, multi-factor authentication, sharing and retention settings, and email authentication with SPF, DKIM, and DMARC so your domain is harder to spoof in an invoice-fraud attempt.',
+          'Azure work follows the same pattern for organizations moving servers or workloads off aging on-premises hardware. The decision of what to move, what to retire, and what to leave where it is comes out of the strategy work rather than a sales conversation, because moving everything to the cloud is not automatically cheaper or safer.',
+          'Firewall management deserves naming separately because it is so often unowned. As part of the managed service we take responsibility for firewall configuration, rule review, updates, logging, and monitoring across your York Region sites — including confirming that what the rules allow today still matches what the business actually needs.',
+        ],
+      },
+      {
+        heading: 'How to Choose an IT Company in York Region',
+        paragraphs: [
+          'Every IT company in York Region says roughly the same things on its website, so the comparison has to be made on coverage, ownership, and cost structure. Start with hours: is support genuinely staffed 24/7, or is "24/7" an emergency voicemail that pages someone the next morning? Ask what happens at 11pm on a Saturday and ask who answers.',
+          'Then ask whether monitoring is real. A provider that only reacts to tickets is a break-fix vendor with a monthly invoice attached; a managed provider is watching your systems continuously and clearing failures you never had to notice. Ask whether security is included in the base fee or sold separately — the common pattern of one vendor for support and another for security leaves gaps that nobody owns and produces finger-pointing during an incident.',
+          'Finally, look at where they are and how they charge. Fixed monthly pricing keeps IT spend predictable. And a provider headquartered inside York Region, as we are at 7810 Keele Street in Vaughan, can put a technician in your building the same day. If you are shortlisting providers, put those questions to us directly at (289) 582-9930.',
+        ],
+      },
+      {
+        heading: 'How Onboarding a New York Region Client Works',
+        paragraphs: [
+          'Switching IT providers is the part most businesses dread, so we run it as a structured process in four stages rather than an open-ended project. Stage one is Assess: a full review of the current environment — servers, workstations, network, Microsoft 365 tenant, backups, security posture, licensing — plus the problems your staff actually complain about, and an honest list of the risks that need attention first.',
+          'Stage two is Plan. You get a written onboarding plan and roadmap stating what changes, when, and why, with anything urgent flagged for action before full cutover. Stage three is Onboard: we document the environment properly, deploy monitoring and security tooling, configure backups and multi-factor authentication, and introduce your team to the helpdesk so everyone knows how to get help from day one.',
+          'Stage four is Operate — 24/7 support and proactive management with scheduled reviews, so IT keeps pace with the business instead of drifting behind it. If you are inheriting an undocumented setup from a previous provider or a staff member who has left, the documentation step alone is usually the largest immediate improvement.',
+        ],
+      },
+      {
+        heading: 'IT Support in Every York Region Municipality',
+        paragraphs: [
+          'We support businesses across the whole region and maintain dedicated local pages for the larger centres: managed IT and cybersecurity in Vaughan, Markham, Richmond Hill, Newmarket, Aurora, King City, Whitchurch-Stouffville, Woodbridge, Concord, and Maple. Coverage extends north through East Gwillimbury and Georgina, and west and south into Peel, Toronto, and Durham.',
+          'Whichever municipality you are in, the service is identical — 24/7 helpdesk, monitoring and patching, managed cybersecurity, Microsoft 365 and cloud, monitored backups, and vCIO strategy for a fixed monthly fee. What changes is drive time, and from Vaughan that is measured in minutes across most of the region.',
+          'Call (289) 582-9930 or reach the team from the contact page and we will scope your environment, tell you what we would fix first, and give you a firm monthly number.',
+        ],
       },
     ],
   },

@@ -405,10 +405,11 @@ export const industries: IndustryData[] = [
     slug: 'dental',
     industry: 'Dental Practices',
     title: 'Managed IT Services for Dental Practices in the GTA',
+    seoTitle: 'Managed IT Services for Dental Practices Toronto',
     description:
-      'IT support and cybersecurity for dental offices. PHIPA-aware patient data protection, practice software support, 24/7 helpdesk. Call (289) 582-9930.',
+      'Managed IT services for dental practices in Toronto and the GTA. PHIPA-aware patient data protection, practice software support, 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
-      'IT support for dental offices, dental practice IT services Toronto, dental cybersecurity, managed IT for dentists GTA, PHIPA IT support dental',
+      'managed IT services for dental practices Toronto, IT support for dental offices, dental office IT services Toronto, IT support for dental clinics Toronto, dental cybersecurity, managed IT for dentists GTA, PHIPA IT support dental',
     intro:
       'Your dental practice depends on its systems — scheduling, imaging, billing, and patient records all have to work every time a patient sits down. IT Rapid Support keeps dental offices across the GTA secure and running: protected patient data, reliable networks for your practice management and imaging software, encrypted backups, and a responsive helpdesk for your front desk and clinical staff.',
     tags: ['Patient data protection', 'PHIPA', 'Practice software uptime', 'Imaging systems', 'Encrypted backups', 'Microsoft 365'],
@@ -445,6 +446,41 @@ export const industries: IndustryData[] = [
         answer:
           'Yes. Alongside immediate remote support, our certified technicians provide scheduled and emergency on-site service to dental offices across Toronto and the GTA.',
       },
+      {
+        question: 'What do managed IT services for a dental practice actually include?',
+        answer:
+          'A 24/7 helpdesk for front-desk and clinical staff, proactive monitoring and patching of workstations and servers, management of the network behind your practice management and imaging systems, Microsoft 365 administration, encrypted and monitored backups with tested restores, and layered cybersecurity including MFA, endpoint protection, email security, and managed detection and response — all for a fixed monthly fee.',
+      },
+      {
+        question: 'Which areas do you cover for dental IT support?',
+        answer:
+          'We support dental offices across Toronto and the GTA from our head office at 7810 Keele Street in Vaughan, including North York, Scarborough, Etobicoke, Vaughan, Markham, Richmond Hill, Mississauga, and Brampton. Remote support is immediate; on-site visits are scheduled or dispatched by severity.',
+      },
+      {
+        question: 'How do you keep practice management and imaging software running?',
+        answer:
+          'We manage the infrastructure those applications depend on rather than the clinical software itself: the server or workstation they run on, the network and wireless in the operatories, storage capacity for imaging files, workstation performance, and backups of the underlying data. We coordinate with your software vendor when an issue belongs on their side, so nobody is left arguing about whose problem it is while patients wait.',
+      },
+      {
+        question: 'What happens to our patient records if we are hit by ransomware?',
+        answer:
+          'That depends entirely on whether your backups work, which is why we monitor them rather than assume them and test restores rather than trust a green checkmark. With monitored local and cloud copies in place, a ransomware event becomes a recovery exercise. We also work to reduce the odds of getting there: MFA on every account, endpoint protection, email filtering, patching, and managed detection and response.',
+      },
+      {
+        question: 'Do you help dental practices with PHIPA obligations?',
+        answer:
+          'We configure the technical controls that support PHIPA compliance — access controls so staff only reach what their role requires, encryption where the platform supports it, multi-factor authentication, monitored and encrypted backups, logging, and documented processes. PHIPA compliance is ultimately the practice\'s responsibility and includes policy and training beyond IT; we handle the technology side and are clear about where that boundary sits.',
+      },
+      {
+        question: 'How much does IT support for a dental office cost?',
+        answer:
+          'Managed IT is billed as a fixed monthly fee with no hidden fees, scoped to the number of users and devices we support and the services included. For a single-location practice that is a predictable line item rather than a series of emergency invoices. Call (289) 582-9930 and we will scope your practice and give you a firm number.',
+      },
+      {
+        question: 'Can you support a multi-location dental group?',
+        answer:
+          'Yes. Multi-site practices get one helpdesk, one monitoring platform, and one security standard across every location, with connectivity between sites and central management of accounts, devices, and backups. Staff use the same support process wherever they are working that day.',
+      },
     ],
     sections: [
       {
@@ -459,6 +495,30 @@ export const industries: IndustryData[] = [
         paragraphs: [
           'When you compare IT companies for a dental practice, three things matter most. First, patient data protection: your provider should treat PHIPA-aware security — encryption, access controls, MFA, and recoverable backups — as the default, not an upgrade. Second, uptime for the systems dentistry actually runs on: the network, servers, and workstations behind your practice management and imaging software, kept fast and reliable so appointments never stall on a technical failure. Third, real support coverage: a helpdesk your reception team can call the moment something breaks, not a ticket queue that responds tomorrow.',
           'IT Rapid Support delivers all three under one fixed monthly price, with a single accountable partner instead of separate vendors for support, security, and backup. That is what managed IT should look like for a dental office: predictable cost, protected patient data, and technology your team never has to think about. Call (289) 582-9930 for a free assessment of your practice.',
+        ],
+      },
+      {
+        heading: 'IT Support for Dental Offices Across the GTA',
+        paragraphs: [
+          'We support dental offices throughout Toronto and the Greater Toronto Area from our head office at 7810 Keele Street in Vaughan. That includes practices in North York, Scarborough, and Etobicoke, and across York, Peel, and Durham — Vaughan, Markham, Richmond Hill, Newmarket, Mississauga, Brampton, and Pickering among them. Remote support starts the moment you call; on-site visits are scheduled for planned work or dispatched by severity when something is actively stopping the schedule.',
+          'A dental office has a specific operational shape that general IT support often misses. The front desk cannot be down during morning check-in. The operatories need reliable wired and wireless connectivity for imaging. Storage grows steadily because imaging files are large and retained for years. Staff turnover means accounts need creating and disabling promptly, which is also a security control. And the day genuinely ends when the last patient leaves, so maintenance windows are narrow and have to be respected.',
+          'We plan around that. Patching and maintenance are scheduled outside clinical hours where possible, monitoring runs continuously so problems surface before the first appointment rather than during it, and the 24/7 helpdesk means a Saturday emergency clinic is not on its own.',
+        ],
+      },
+      {
+        heading: 'Practice Management and Imaging Systems: What We Manage',
+        paragraphs: [
+          'Dental practices run on a small number of applications that absolutely have to work: practice management and scheduling, digital imaging and intraoral sensors, billing and insurance submission, and email. We manage the infrastructure underneath all of it — the server or workstation the application runs on, the network and wireless connecting operatories to it, storage capacity for imaging data, workstation performance at the chair and the front desk, and backups of the underlying databases and image stores.',
+          'We do not replace your software vendor, and we are clear about that boundary. What we do is make sure the environment they need is healthy, and coordinate directly with them when an issue genuinely sits on their side, so your office manager is not left relaying messages between two companies while patients wait.',
+          'The practical work is unglamorous and it is what prevents most outages: keeping operating systems and drivers patched, watching disk space before imaging storage fills, replacing hardware before it fails rather than after, keeping wireless clean in a building full of equipment, and making sure the backup of the practice management database actually restored the last time someone checked.',
+        ],
+      },
+      {
+        heading: 'Patient Data Security and PHIPA-Aware Configuration',
+        paragraphs: [
+          'Dental practices hold exactly the kind of data attackers want: personal health information, identity details, and payment records, in an office that rarely has dedicated IT staff. The attacks that reach them are ordinary ones — a phishing email that harvests a Microsoft 365 password, ransomware arriving through an unpatched workstation, or a mailbox compromised because multi-factor authentication was never enabled.',
+          'The controls we put in place are correspondingly practical: multi-factor authentication on every business account, endpoint protection on managed devices, email security that filters phishing before it reaches reception, SPF, DKIM, and DMARC configured so your domain is harder to spoof, access controls so staff reach only what their role requires, security awareness training, managed detection and response watching around the clock, and encrypted backups with tested restores.',
+          'Those same controls are the technical foundation of working toward PHIPA obligations: access control, encryption, recoverable backups, MFA, logging, and documented process. Compliance itself is broader than technology and remains the practice\'s responsibility — it includes policy, consent handling, and staff training. We handle the technology layer properly and tell you plainly where that layer stops.',
         ],
       },
     ],
