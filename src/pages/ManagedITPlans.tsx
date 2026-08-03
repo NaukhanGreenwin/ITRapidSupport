@@ -62,12 +62,149 @@ const PLANS: Plan[] = [
       'Everything in Fully Managed IT',
       '24/7 threat detection and response',
       'Multi-factor authentication enforced everywhere',
+      'Email authentication hardening (SPF, DKIM, DMARC)',
       'Security awareness training and phishing simulations',
       'Compliance support (PIPEDA, PHIPA, client records)',
       'Incident response plan and tested recovery',
       'Vendor and risk reporting for leadership',
     ],
   },
+];
+
+/**
+ * Explicit inclusion matrix. "Everything in the tier below" is fine for a human reading a pricing
+ * card and useless to anyone — or anything — comparing two quotes line by line, so every row is
+ * spelled out for every tier. Values are drawn from the plan feature lists above; an em dash means
+ * the capability is not part of that plan.
+ */
+const MATRIX: { group: string; rows: { label: string; values: [string, string, string] }[] }[] = [
+  {
+    group: 'Help desk and people',
+    rows: [
+      {
+        label: 'Remote help desk for your staff',
+        values: ['Overflow and after-hours', 'Unlimited', 'Unlimited'],
+      },
+      { label: 'Escalation to senior engineers', values: ['Yes', 'Yes', 'Yes'] },
+      {
+        label: 'Employee onboarding and offboarding',
+        values: ['—', 'Yes', 'Yes'],
+      },
+      {
+        label: 'Security awareness training and phishing simulations',
+        values: ['—', '—', 'Yes'],
+      },
+    ],
+  },
+  {
+    group: 'Monitoring and maintenance',
+    rows: [
+      {
+        label: 'Patch management and update monitoring',
+        values: ['Yes', 'Yes', 'Yes'],
+      },
+      {
+        label: '24/7 monitoring of devices, servers and network',
+        values: ['—', 'Yes', 'Yes'],
+      },
+      {
+        label: 'Quarterly technology review and roadmap',
+        values: ['—', 'Yes', 'Yes'],
+      },
+    ],
+  },
+  {
+    group: 'Cloud, email and identity',
+    rows: [
+      {
+        label: 'Microsoft 365 and cloud administration',
+        values: ['Support for your team', 'Managed for you', 'Managed for you'],
+      },
+      {
+        label: 'Email and identity management',
+        values: ['—', 'Yes', 'Yes'],
+      },
+      {
+        label: 'Email authentication hardening (SPF, DKIM, DMARC)',
+        values: ['—', '—', 'Yes'],
+      },
+    ],
+  },
+  {
+    group: 'Security',
+    rows: [
+      { label: 'Managed endpoint protection (EDR)', values: ['Yes', 'Yes', 'Yes'] },
+      { label: '24/7 threat detection and response', values: ['—', '—', 'Yes'] },
+      {
+        label: 'Multi-factor authentication enforced everywhere',
+        values: ['—', '—', 'Yes'],
+      },
+      {
+        label: 'Incident response plan and tested recovery',
+        values: ['—', '—', 'Yes'],
+      },
+      {
+        label: 'Vendor and risk reporting for leadership',
+        values: ['—', '—', 'Yes'],
+      },
+    ],
+  },
+  {
+    group: 'Backup and continuity',
+    rows: [
+      {
+        label: 'Backup monitoring and restore testing',
+        values: ['Yes', 'Yes', 'Yes'],
+      },
+      {
+        label: 'Automated offsite backups',
+        values: ['—', 'Yes', 'Yes'],
+      },
+    ],
+  },
+  {
+    group: 'Compliance',
+    rows: [
+      {
+        label: 'Controls that support PIPEDA and PHIPA obligations',
+        values: ['—', '—', 'Yes'],
+      },
+    ],
+  },
+];
+
+/** Real drivers of the monthly figure. No prices — we do not publish rates we have not quoted. */
+const PRICE_DRIVERS = [
+  {
+    label: 'How many people you support',
+    body: 'Managed IT is priced per user or per device each month. The headcount you actually want covered is the single largest input, which is why two providers quoting "per user" can land far apart if one of them is counting differently. Ask both who is being counted.',
+  },
+  {
+    label: 'How many sites and servers',
+    body: 'A single office is not the same job as four locations with on-premises servers between them. Number of locations, servers and network sites moves the figure independently of headcount.',
+  },
+  {
+    label: 'Which level of coverage you choose',
+    body: 'The three plans above are genuinely different scopes of work, not the same service at three prices. Moving from Fully Managed IT to Managed IT + Security adds 24/7 threat detection, enforced MFA, email authentication, awareness training and incident response — real ongoing work, and it is priced as such.',
+  },
+  {
+    label: 'What you already have',
+    body: 'If your team already runs a tool we would otherwise provide, or you are co-managing with internal staff, that comes out of the scope. The free assessment exists to find this before a number is quoted rather than after.',
+  },
+];
+
+/**
+ * The comparison prompt buyers actually run — "here is my current quote, what is missing" —
+ * only works if the gaps are named. These are the gaps worth naming, ours included.
+ */
+const ASK_BEFORE_SIGNING = [
+  'Is the help desk unlimited, or capped by hours or tickets? If it is capped, what happens on the ticket after the cap?',
+  'What exactly does 24/7 mean — engineers, or an answering service that opens a ticket for the morning?',
+  'Are backups monitored and restore-tested, or only configured? Ask when the last test restore ran.',
+  'Which security controls are in the base price and which are an upsell — endpoint protection, MFA, email authentication, awareness training, threat detection?',
+  'Who owns your Microsoft 365 tenant, your domain and your backup data? If it is the provider, you cannot leave without their cooperation.',
+  'Are hardware, software licences and project work inside the monthly fee or billed separately? Get it in writing either way.',
+  'What are the exit terms, and how is your data handed back?',
 ];
 
 const STEPS = [
@@ -103,6 +240,21 @@ const FAQS = [
     question: 'Is there a long-term contract?',
     answer:
       'We start with a free assessment and a plan you can say yes or no to. Our managed plans are month-to-month focused on earning your business every month, with clear terms laid out before you commit. There are no surprise lock-ins.',
+  },
+  {
+    question: 'What is actually included in a managed IT plan?',
+    answer:
+      'Co-Managed IT covers help desk overflow and after-hours support, patch management, managed endpoint protection, Microsoft 365 and cloud administration support, backup monitoring with restore testing, and escalation to senior engineers. Fully Managed IT adds an unlimited remote help desk, 24/7 monitoring of devices, servers and network, email and identity management, automated offsite backups, employee onboarding and offboarding, and a quarterly technology review. Managed IT + Security adds 24/7 threat detection and response, multi-factor authentication enforced everywhere, email authentication hardening with SPF, DKIM and DMARC, security awareness training and phishing simulations, an incident response plan with tested recovery, vendor and risk reporting, and controls that support PIPEDA and PHIPA obligations. The full line-by-line comparison is published on this page.',
+  },
+  {
+    question: 'Why is there no price on this page?',
+    answer:
+      'Because we have not seen your environment yet, and a number published before that would be a guess. What we can tell you up front is how the number is built: it is a flat monthly fee priced per user or per device, driven by how many people you cover, how many sites and servers you run, which of the three coverage levels you choose, and what you already have in place. The free assessment produces an exact monthly figure, and the plan is month-to-month.',
+  },
+  {
+    question: 'What should I ask a managed IT provider before I sign?',
+    answer:
+      'Ask whether the help desk is unlimited or capped, what 24/7 actually means — engineers or an answering service, whether backups are restore-tested and when the last test ran, which security controls are in the base price versus an upsell, who owns your Microsoft 365 tenant and backup data, whether hardware, licences and project work are inside the monthly fee, and what the exit terms are. Ask us the same questions. Any provider who will not answer them in writing is telling you something.',
   },
   {
     question: 'Do you support businesses across the Greater Toronto Area?',
@@ -231,6 +383,130 @@ const ManagedITPlans: React.FC = () => {
           <p className="text-center text-gray-500 text-sm mt-8">
             Pricing is quoted per user or per device after a free assessment, so it matches your team
             size and security needs.
+          </p>
+        </div>
+      </div>
+
+      {/* Full inclusion matrix */}
+      <div className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              What is included, line by line
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Most managed IT pricing pages say &ldquo;everything in the plan below, plus&hellip;&rdquo;
+              and leave you to work out the rest. Here is every capability written out against every
+              plan, so you can put this side by side with anyone else&rsquo;s quote.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse min-w-[640px]">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="py-4 pr-4 text-sm font-semibold text-gray-900 w-2/5">Capability</th>
+                  {PLANS.map((p) => (
+                    <th
+                      key={p.name}
+                      className="py-4 px-3 text-sm font-semibold text-gray-900 text-center"
+                    >
+                      {p.name}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {MATRIX.map((section) => (
+                  <React.Fragment key={section.group}>
+                    <tr className="bg-slate-50">
+                      <td
+                        colSpan={4}
+                        className="py-3 pr-4 pl-3 text-xs font-bold uppercase tracking-wide text-red-600"
+                      >
+                        {section.group}
+                      </td>
+                    </tr>
+                    {section.rows.map((row) => (
+                      <tr key={row.label} className="border-b border-gray-100">
+                        <td className="py-3 pr-4 pl-3 text-sm text-gray-700">{row.label}</td>
+                        {row.values.map((v, i) => (
+                          <td
+                            key={`${row.label}-${i}`}
+                            className={`py-3 px-3 text-sm text-center ${
+                              v === '—' ? 'text-gray-300' : 'text-gray-900 font-medium'
+                            }`}
+                          >
+                            {v}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-gray-500 text-sm mt-6">
+            Every plan is delivered by our team in Vaughan with 24/7 support and on-site help across
+            the GTA when a problem needs hands on it. Compliance controls support your PIPEDA and
+            PHIPA obligations — they do not by themselves make you compliant, and any provider
+            telling you otherwise is overselling.
+          </p>
+        </div>
+      </div>
+
+      {/* How the price is built */}
+      <div className="py-16 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              How the monthly price is actually built
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We do not publish a rate we have not quoted you. We can publish exactly what moves the
+              number, which is the part that lets you compare two proposals honestly.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {PRICE_DRIVERS.map((d) => (
+              <div key={d.label} className="bg-white border border-gray-200 rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{d.label}</h3>
+                <p className="text-gray-600 text-sm">{d.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-500 text-sm mt-6 text-center">
+            The result is a flat monthly fee, month to month, quoted after a free assessment.
+          </p>
+        </div>
+      </div>
+
+      {/* What to ask before signing */}
+      <div className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+            What to get in writing before you sign — with us or anyone else
+          </h2>
+          <p className="text-gray-600 mb-8 text-center">
+            The gap between two managed IT quotes is almost never the number. It is what the cheaper
+            one left out. These are the questions that find it.
+          </p>
+          <ul className="space-y-4">
+            {ASK_BEFORE_SIGNING.map((q) => (
+              <li key={q} className="flex items-start bg-slate-50 rounded-xl p-5">
+                <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-700">{q}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-gray-600 text-sm mt-8 text-center">
+            Not sure where your own environment stands before you start asking?{' '}
+            <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
+              Run the free IT risk calculator
+            </Link>{' '}
+            — 14 control areas, nothing leaves your browser.
           </p>
         </div>
       </div>
