@@ -19,6 +19,18 @@ interface SEOProps {
   breadcrumbs?: {name: string; url: string}[];
 }
 
+// Verified entity profiles for schema.org sameAs. These consolidate the ITRS
+// entity for search and answer engines, so every URL here must be a profile we
+// have actually loaded and confirmed belongs to IT Rapid Support Inc.
+// Do not add a profile on assumption — an unresolvable sameAs is a worse signal
+// than a short list. Last verified 2026-08-04.
+export const ITRS_SAME_AS = [
+  "https://ca.linkedin.com/company/itrapidsupportinc",
+  "https://www.instagram.com/itrapidsupport/",
+  "https://www.youtube.com/channel/UC6lKN4mHAm0tEtOJTtCh5_w",
+  "https://clutch.co/profile/it-rapid-support"
+];
+
 // Helper function to generate breadcrumb schema
 export const generateBreadcrumbSchema = (breadcrumbs: {name: string; url: string}[]) => {
   return {
@@ -62,18 +74,13 @@ export const generateOrganizationSchema = () => {
         "longitude": -79.5279
       }
     },
-    "sameAs": [],
+    "sameAs": ITRS_SAME_AS,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-289-582-9930",
       "contactType": "customer service",
       "email": "info@itrapidsupport.com",
       "availableLanguage": ["English", "French"]
-    },
-    "foundingDate": "2010",
-    "founder": {
-      "@type": "Person",
-      "name": "IT Rapid Support Founder"
     }
   };
 };
@@ -256,7 +263,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
     },
     "keywords": "IT security Toronto, managed IT services GTA, cybersecurity Ontario, Toronto IT support, Vaughan IT services, Mississauga cybersecurity, Brampton IT support, enterprise security",
     "hasMap": "https://goo.gl/maps/k8R5vD9Xvf9K4NE77",
-    "sameAs": [],
+    "sameAs": ITRS_SAME_AS,
     "additionalType": ["https://schema.org/ITService", "https://schema.org/ProfessionalService"],
     "knowsLanguage": ["en", "fr"],
     "availableLanguage": ["en", "fr"]
