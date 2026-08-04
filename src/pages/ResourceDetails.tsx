@@ -1246,14 +1246,82 @@ export const allResources: ResourceItem[] = [
     link: "#",
     readTime: "14 min read"
   },
+  {
+    id: "it-consulting-services-toronto-guide",
+    title: "IT Consulting Services: What a Technology Consultant Actually Does",
+    seoTitle: "IT Consulting Services | Vaughan, Toronto & the GTA",
+    description: "What IT consulting services cover, how consulting differs from managed IT and a vCIO, how engagements are scoped and priced, and how to choose a consultant in the GTA.",
+    content: [
+      "\"IT consulting\" is one of the vaguest phrases in the technology market. It is used by one-person advisory shops, by hardware resellers who call a product recommendation a consultation, and by national firms selling six-figure transformation programmes. All three are technically IT consulting, and none of them solve the same problem. This guide sets out what IT consulting services actually cover, how a consulting engagement differs from managed IT support and from a vCIO relationship, what you should receive at the end of one, how the work is priced, and the questions worth asking before you engage anyone — written for businesses in Vaughan, Richmond Hill, Concord, Burlington, Pickering, Mississauga and across the Greater Toronto Area.",
+      "## What IT Consulting Actually Is",
+      "IT consulting is advice and design work with a defined scope and an end point. You are buying judgement about what to do, and usually a plan for doing it, rather than ongoing responsibility for keeping systems running. A consultant looks at what you have, works out what it should be, and hands you something you can act on: an assessment, a design, a roadmap, a migration plan, a remediation list ranked by risk.",
+      "That end point is the defining feature, and it is where most disappointment comes from. A consulting engagement finishes. If nobody is contracted to operate what was recommended, the recommendations sit in a document while the environment drifts back. The most useful way to think about consulting is that it answers the question \"what should we do?\", while managed IT answers \"who keeps it working?\" Businesses often need both, and the mistake is buying one while believing you bought the other.",
+      "## Consulting, Managed IT and a vCIO Are Three Different Purchases",
+      "These three get sold under overlapping names and are genuinely distinct in what you receive, how long it lasts and what it is priced against.",
+      "| | IT consulting | Managed IT | vCIO |",
+      "| --- | --- | --- | --- |",
+      "| What you buy | Assessment, design, a plan | Ongoing operational responsibility | Ongoing strategic direction |",
+      "| Duration | Fixed, with an end date | Continuous | Continuous, usually alongside managed IT |",
+      "| Typical output | Report, architecture, roadmap, migration plan | Working systems, resolved tickets, monitored backups | Roadmap, budget, risk review, vendor decisions |",
+      "| Priced as | Project fee or advisory time | Fixed monthly fee, usually per user | Included in, or added to, a managed agreement |",
+      "| Best for | A decision, a build, or a one-time change | Day-to-day operations | Planning and accountability over years |",
+      "If what you actually need is someone senior thinking about your technology continuously rather than once, that is a virtual CIO rather than a consultant. Our guide to [what a vCIO is and when you need one](/resources/vcio-virtual-cio-services-guide/) covers that role in full, and the [vCIO and IT strategy service](/services/vcio-it-strategy/) is how we deliver it. If what you need is the phone answered and the environment kept healthy, that is [managed IT support](/services/it-support/), not consulting.",
+      "## The Engagements Businesses Actually Buy",
+      "Strip away the language and most IT consulting work in the GTA falls into a short list of recognisable engagements.",
+      "- **IT assessment or audit.** A full inventory of devices, servers, network equipment, cloud tenancy, licensing, backups and security posture, with findings ranked by risk and cost. This is the most common starting point because almost every environment contains something nobody documented.",
+      "- **Security assessment and remediation planning.** Where your controls actually stand against a recognised baseline, what the gaps expose, and the order to close them in.",
+      "- **Microsoft 365 and Azure consulting.** Tenant design, licensing rationalisation, security configuration, and migration planning — covered in its own section below.",
+      "- **Network design, office moves and build-outs.** Cabling, switching, wireless coverage, firewall and segmentation design for a new or reconfigured space.",
+      "- **Backup and disaster recovery planning.** Deciding what must survive, how quickly it must come back, and designing to those two numbers rather than to a product.",
+      "- **Compliance readiness.** Mapping technical controls, documentation and process against PIPEDA or PHIPA obligations before a client questionnaire or an audit forces the exercise.",
+      "- **Technology roadmap and budgeting.** A costed, dated plan for refreshes, licence changes, end-of-support deadlines and security investment.",
+      "- **Vendor and product selection.** Independent comparison of options against your actual requirements, which is only worth buying from someone who does not earn a margin on the answer.",
+      "## Microsoft 365 and Cloud Consulting",
+      "Cloud consulting is the engagement we are asked for most, and it is rarely the question people think they are asking. Businesses ask how to move to Microsoft 365 or Azure; the harder questions are which workloads belong in the cloud at all, what the licensing actually costs once it is right-sized, how identity and access will work afterwards, and what the tenant's security configuration will look like on day one rather than eventually.",
+      "A serious cloud engagement covers tenant and identity design, licence rationalisation against real usage, a data migration plan with a tested rollback, the security baseline that goes on before users arrive — multi-factor authentication, administrative account separation, disabling legacy authentication, email authentication through SPF, DKIM and DMARC — and a clear statement of who holds administrative ownership afterwards. That last point is not a detail: you should own your own tenant and domain, not your provider. We deliver this work as [Microsoft 365 and Azure migration](/services/microsoft-365-azure-migration/) projects and then, where the client wants it, as ongoing [Microsoft 365 managed services](/services/microsoft-365-managed-services/).",
+      "Email authentication deserves a specific mention because it is the control most often left for later and rarely returned to. When we measured 481 mail-enabled Greater Toronto Area business domains in August 2026, 91.7% had published an SPF record but only 20.6% had DMARC set to actually enforce anything — the rest were either absent or set to take no action. The full method and results are in our [GTA small-business cybersecurity report](/resources/gta-smb-cybersecurity-report-2026/). If a cloud consultant does not raise it, raise it yourself.",
+      "## What a Consulting Engagement Should Deliver",
+      "The deliverable is the product, so agree on it before the work starts. A good engagement leaves you with documentation of your environment that belongs to you and remains readable after the consultant leaves. Findings should be ranked by risk and effort, not listed alphabetically, and each one should say what happens if it is ignored. Recommendations need an owner, a rough cost and a date, otherwise they are observations. Where a design is involved, you should get the design itself — network diagram, tenant configuration, backup schema — not a summary of it.",
+      "Ask explicitly whether the report will be written so that another provider could execute it. A plan that only its author can implement is a sales document with a title page. Good consulting survives the consultant.",
+      "## How IT Consulting Is Priced",
+      "Consulting is usually sold one of three ways. Fixed-scope project fees are the cleanest for defined work like an assessment or a migration plan, because the deliverable and the price are agreed together. Hourly or daily advisory rates suit open-ended questions where scope cannot be pinned down in advance. Retainer-style advisory time is really a vCIO arrangement, and it is worth calling it that so the expectations match.",
+      "What moves the number is the size and complexity of the environment, the number of locations and servers, how much of it is documented already, whether the engagement includes implementation or stops at the plan, and any compliance obligation that adds evidence-gathering. IT Rapid Support does not publish a consulting rate card, because a price quoted before anyone has looked at the environment is a guess that gets corrected upward later. What we do commit to is scoping in writing before work starts, so you know the deliverable and the fee at the same time. Our ongoing managed services are a fixed monthly fee agreed after an assessment, and our [managed IT support cost guide](/resources/managed-it-support-cost-toronto/) explains how that figure is built.",
+      "One honest warning about free assessments, including ours: any provider offering one is partly doing sales. That is not disqualifying — the assessment can still be genuinely useful — but treat it as a conversation starter and ask whether you will keep the findings if you do not proceed.",
+      "## IT Consulting for Nonprofits and Charities",
+      "Nonprofits and registered charities buy consulting for a distinct reason: they usually have a small or volunteer-supported technology footprint, real obligations around donor and client data, and a budget cycle that makes unplanned spending painful. The highest-value engagement is normally an assessment plus a costed multi-year roadmap, because it converts technology from an emergency line item into something a board can approve in advance.",
+      "There is also money on the table that many organizations miss. Microsoft offers substantial nonprofit licensing discounts and grants to eligible registered charities, and a licensing review is often the fastest way to fund the rest of the work. We cover the sector's requirements in more depth on our [IT services for nonprofits](/industries/nonprofit/) page.",
+      "## Red Flags Worth Catching Early",
+      "A consultant who only recommends products they resell is not giving you independent advice, and the fee they charge you is not the whole fee they earn. Ask directly whether they take margin or commission on anything in the recommendation, and treat a vague answer as a yes.",
+      "A report with no dates, no costs and no owners is a document, not a plan. An assessment that arrives as a slide deck of generic risks with your logo on the cover was not written about your business. A recommendation to replace everything is worth a second opinion — sometimes it is correct, and sometimes it is the easiest thing to sell. And a consultant who will not put the scope and the deliverable in writing before starting has told you how the invoice conversation will go.",
+      "Finally, watch for the gap after go-live. If the engagement ends the day a system is switched on, ask who monitors it, who patches it, and who answers the phone at 2 a.m. If the answer is nobody, you have bought half of what you needed.",
+      "## How to Choose an IT Consultant in the GTA",
+      "Put the same questions to everyone you shortlist. What exactly is the deliverable, and can I see a redacted example? Who is doing the work, and are they the person in this meeting? Do you earn anything from the products you recommend? Will the documentation be mine, in a format another provider could use? Does the engagement include implementation, or does it stop at the plan? If we proceed with the recommendations, who operates the result afterwards?",
+      "Then ask the local question, because it decides more than people expect. Someone has to be able to stand in your server room, walk the new office before the cabling goes in, or be there on cutover morning. A consultant an hour away in traffic is a different service from one across town. Our guide to [choosing a managed IT provider in Toronto](/resources/choosing-managed-it-provider-toronto/) works through the wider evaluation, and much of it applies directly to consulting engagements.",
+      "If you want a starting point before you talk to anyone, our free [IT risk calculator](/it-risk-calculator/) scores fourteen controls and tells you which to fix first. It runs entirely in your browser — nothing you enter is sent to us or stored anywhere — and the output is a reasonable agenda for a first consulting conversation.",
+      "## Where IT Rapid Support Fits",
+      "IT Rapid Support provides IT consulting alongside managed IT and cybersecurity from our head office at 7810 Keele Street in Vaughan. The consulting work we are asked for most is environment and security assessment, Microsoft 365 and Azure design and migration planning, network and office-move design, backup and disaster recovery planning, PIPEDA and PHIPA readiness, and costed technology roadmaps. Compliance frameworks are supported by that work rather than satisfied by it — no provider can make you compliant, and any that claims otherwise is selling something.",
+      "What separates us from a pure consultancy is that we can operate what we recommend. If you want the plan and nothing else, that is a valid engagement and we will scope it that way. If you want the plan implemented and then run, the same team continues with a 24/7 helpdesk, proactive monitoring and patching, Microsoft 365 and Azure administration, [managed cybersecurity](/services/managed-security/) with multi-factor authentication, endpoint protection and around-the-clock detection and response, monitored and tested backups, and local on-site support. Where you already have internal IT, [co-managed IT](/services/co-managed-it-services/) puts our depth around your team instead of replacing it.",
+      "Being in [Vaughan](/it-support/vaughan/) puts us within reach of [Concord](/it-support/concord/), [Richmond Hill](/it-support/richmond-hill/), [York Region](/it-support/york-region/), [Toronto](/it-support/toronto/), [Mississauga](/it-support/mississauga/), [Burlington](/it-support/burlington/) and [Pickering](/it-support/pickering/) without a half-day of travel attached to every site visit. If you are weighing an IT consulting engagement and want a straight answer about whether you need one, call (289) 582-9930 or [get in touch](/contact/) — including when the honest answer is that a plan is not what your business is short of."
+    ].join('\n\n'),
+    type: "guide",
+    date: "August 4, 2026",
+    author: "IT Rapid Support Team",
+    authorTitle: "Managed IT & Cybersecurity, GTA",
+    authorImage: "/images/logo.png",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+    link: "#",
+    readTime: "10 min read"
+  },
 ];
 
-// Render markdown-style [text](url) links inside article paragraphs.
+// Render markdown-style [text](url) links and **bold** inside article paragraphs.
 // Internal paths use react-router Link; anything else falls back to <a>.
 const renderInlineLinks = (text: string): React.ReactNode => {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
   if (parts.length === 1) return text;
   return parts.map((part, i) => {
+    const bold = part.match(/^\*\*([^*]+)\*\*$/);
+    if (bold) return <strong key={i} className="font-semibold text-slate-900">{bold[1]}</strong>;
     const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
     if (!match) return part;
     const [, label, href] = match;

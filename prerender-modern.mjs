@@ -103,6 +103,7 @@ const routes = [
   '/resources/vcio-virtual-cio-services-guide',
   '/resources/network-security-services-guide-toronto',
   '/resources/it-outsourcing-services-guide-toronto',
+  '/resources/it-consulting-services-toronto-guide',
   '/resources/gta-smb-cybersecurity-report-2026',
   '/resources/gta-email-spoofing-study-2026',
   '/resources/managed-it-services-vaughan-guide',
