@@ -1,5 +1,5 @@
 # IT Rapid Support - robots.txt
-# Last updated: 2026-06-27
+# Last updated: 2026-08-04
 
 # Allow all standard crawlers
 User-agent: *
@@ -30,3 +30,6 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://itrapidsupport.com/sitemap.xml
+
+# Structured discovery guide for LLMs and answer engines
+# https://itrapidsupport.com/llms.txt
