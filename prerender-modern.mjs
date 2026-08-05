@@ -104,6 +104,7 @@ const routes = [
   '/resources/network-security-services-guide-toronto',
   '/resources/it-outsourcing-services-guide-toronto',
   '/resources/it-consulting-services-toronto-guide',
+  '/resources/gta-business-email-platforms-2026',
   '/resources/gta-smb-cybersecurity-report-2026',
   '/resources/gta-email-spoofing-study-2026',
   '/resources/managed-it-services-vaughan-guide',
