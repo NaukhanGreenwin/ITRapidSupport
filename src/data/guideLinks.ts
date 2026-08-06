@@ -13,9 +13,12 @@ const guide = (id: string, title: string): GuideLink => ({
 });
 
 export const guideLinks: Record<string, GuideLink> = {
+  // Anchor text deliberately avoids the "managed IT services Vaughan" head term:
+  // every York Region city page renders this link, and pointing that phrase at the
+  // article was competing with the /it-support/vaughan/ city page for it.
   'managed-it-services-vaughan-guide': guide(
     'managed-it-services-vaughan-guide',
-    'Managed IT Services Vaughan: A Local Guide for Growing Businesses'
+    '7 Questions to Ask a Vaughan IT Provider Before You Sign'
   ),
   'managed-it-support-cost-toronto': guide(
     'managed-it-support-cost-toronto',
