@@ -397,7 +397,7 @@ const RiskCalculator: React.FC = () => {
       gaps.length
         ? 'Flagged controls, worst first:'
         : 'No controls were flagged.',
-      ...gaps.map((g, i) => `${i + 1}. [${g.severity}] ${g.q.title} - ${g.chosenLabel}`),
+      ...gaps.map((g, i) => `${i + 1}. [${g.severity}] ${g.q.category} - ${g.chosenLabel}`),
       '',
       'Please get in touch about the items above.',
       '',
@@ -830,6 +830,11 @@ const RiskCalculator: React.FC = () => {
                 title: 'Small business cybersecurity checklist',
                 body: 'The practical version of this calculator — what to put in place, in what order, without a security team.',
                 to: '/resources/small-business-cybersecurity-checklist/',
+              },
+              {
+                title: 'Managed IT quote checker',
+                body: 'Holding a proposal from an IT provider? Score it against 22 checks and get the questions to ask before you sign.',
+                to: '/tools/it-quote-checker/',
               },
             ].map((c) => (
               <Link

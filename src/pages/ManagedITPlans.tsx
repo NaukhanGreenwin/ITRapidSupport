@@ -501,7 +501,16 @@ const ManagedITPlans: React.FC = () => {
               </li>
             ))}
           </ul>
-          <p className="text-gray-600 text-sm mt-8 text-center">
+          <p className="text-gray-600 mt-8">
+            Already holding a proposal from somebody else? Put it through our{' '}
+            <Link to="/tools/it-quote-checker/" className="text-red-600 hover:text-red-700 font-medium">
+              free managed IT quote checker
+            </Link>{' '}
+            — 22 checks covering the questions above plus backup scope, restore testing, out-of-hours monitoring,
+            Microsoft 365 tenant ownership and exit terms. It gives you a clarity score and the exact wording to send
+            back to the provider, and it works just as well on a quote from us.
+          </p>
+          <p className="text-gray-600 text-sm mt-4 text-center">
             Not sure where your own environment stands before you start asking?{' '}
             <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
               Run the free IT risk calculator

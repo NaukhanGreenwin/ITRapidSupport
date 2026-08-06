@@ -135,9 +135,10 @@ const Resources = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Free Tools</h2>
           <p className="text-gray-600 max-w-3xl mb-8">
-            Two free self-service tools from our team. Both are open — no sign-up, no email gate, no report to wait for.
+            Three free self-service tools from our team. All of them are open — no sign-up, no email gate, no report to
+            wait for.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-50 rounded-xl p-6 border border-gray-200">
               <div className="flex items-center mb-3">
                 <BookOpen className="h-5 w-5 text-red-600 mr-2" />
@@ -173,6 +174,24 @@ const Resources = () => {
                 className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
               >
                 Check your domain <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="bg-slate-50 rounded-xl p-6 border border-gray-200">
+              <div className="flex items-center mb-3">
+                <FileText className="h-5 w-5 text-red-600 mr-2" />
+                <span className="text-sm text-gray-600">Buying check</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Managed IT Quote Checker</h3>
+              <p className="text-gray-600 mb-4">
+                Holding a managed IT proposal? Work through 22 checks — help desk caps, what 24/7 really means, backup
+                scope and restore testing, who owns your Microsoft 365 tenant, exit terms — for a clarity score and the
+                questions to send back before you sign. No upload, and it scores our quotes as readily as anyone else's.
+              </p>
+              <Link
+                to="/tools/it-quote-checker/"
+                className="inline-flex items-center text-red-600 hover:text-red-700 font-medium"
+              >
+                Check a quote before you sign <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
           </div>

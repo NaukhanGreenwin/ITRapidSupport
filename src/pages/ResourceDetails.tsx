@@ -190,6 +190,7 @@ export const allResources: ResourceItem[] = [
       "Most issues are resolved remotely, which keeps costs low. Scheduled and emergency on-site visits across the GTA add value for hardware problems, new office setups, and hands-on projects.",
       "## What to Ask Before You Sign",
       "When comparing providers, ask exactly what is included. Does the plan cover cybersecurity or is that extra? Is the helpdesk available 24/7? Are on-site visits included? What is the response commitment when something breaks? A low headline price often means thin coverage that costs you more in downtime later.",
+      "The fastest way to work through this is to open the proposal beside our free [managed IT quote checker](/tools/it-quote-checker/). It scores a quote on 22 items — help desk caps, what 24/7 actually means, backup scope and restore testing, Microsoft 365 tenant ownership, what counts as project work, term and exit terms — and hands you the questions to send back on whatever the document leaves unsaid. No upload, no sign-up, and it is written to be used on our own quotes too.",
       "## Get a Straight Answer for Your Business",
       "Every business is different, so the most accurate way to understand your cost is a short conversation about your team size, your systems, and your risk. IT Rapid Support provides managed IT and cybersecurity for businesses [across Toronto and the GTA](/it-support/gta/), with a 24/7 helpdesk, proactive monitoring, and certified technicians. Call (289) 582-9930 for a no-pressure quote built around your needs."
     ].join('\n\n'),
@@ -355,6 +356,7 @@ export const allResources: ResourceItem[] = [
       "Most issues are solved remotely, but some need hands on hardware. A provider with on-site capability across the GTA can show up for new office setups, hardware failures, and projects. Local matters when you need someone in the room.",
       "## 5. Clear, Predictable Pricing",
       "You should understand exactly what you are paying for and what is included. Watch for thin plans with cheap headline prices that nickel-and-dime you for every real need. Transparent pricing is a sign of a provider that respects you.",
+      "Once you have a proposal in hand, read it against a checklist rather than against the price. Our free [managed IT quote checker](/tools/it-quote-checker/) runs a quote through 22 checks — help desk caps, what 24/7 covers, backup scope and restore testing, who owns your Microsoft 365 tenant, term and exit clauses — and gives you the wording to send back on anything left vague. Nothing is uploaded, and it applies to a quote from us as much as anyone.",
       "## 6. Certified, Experienced Technicians",
       "Ask about the team. Certified technicians with real experience across networking, cloud, Microsoft 365, and security will resolve your issues faster and right the first time.",
       "## 7. Backup, Recovery, and a Real Plan",

@@ -187,8 +187,9 @@ const EmailSpoofCheck: React.FC = () => {
               Can Your Business Email Be Spoofed?
             </h1>
             <p className="text-slate-300 text-lg mb-8">
-              In our study of 118 GTA business domains, only 40% were fully protected against email impersonation.
-              Enter your domain for a free, instant check of the three records that stop it: SPF, DKIM and DMARC.
+              In our own scan of 481 GTA business domains, only 35.6% had all three of SPF, DKIM and DMARC in place —
+              and just 20.6% had DMARC set to actually block forged mail. Enter your domain for a free, instant check
+              of the three records that stop impersonation.
             </p>
             <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
               <input
@@ -329,7 +330,13 @@ const EmailSpoofCheck: React.FC = () => {
           <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
             free IT risk calculator
           </Link>
-          , which scores your wider posture and ranks what to fix first — also entirely in your browser.
+          , which scores your wider posture and ranks what to fix first — also entirely in your browser. And if an IT
+          provider has quoted you for fixing any of this, our{' '}
+          <Link to="/tools/it-quote-checker/" className="text-red-600 hover:text-red-700 font-medium">
+            managed IT quote checker
+          </Link>{' '}
+          scores the proposal itself against 22 things it should say — including whether email authentication is left
+          at monitor-only.
         </p>
         <p className="text-slate-500 text-sm">
           This tool performs read-only lookups of public DNS records via DNS-over-HTTPS. It does not access, scan, or

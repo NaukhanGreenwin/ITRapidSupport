@@ -42,6 +42,7 @@ const LegacyBookOnline = lazy(() => import('./pages/LegacyBookOnline'));
 const IndustryLanding = lazy(() => import('./pages/IndustryLanding'));
 const ServiceLanding = lazy(() => import('./pages/ServiceLanding'));
 const RiskCalculator = lazy(() => import('./pages/RiskCalculator'));
+const QuoteChecker = lazy(() => import('./pages/QuoteChecker'));
 const ManagedITPlans = lazy(() => import('./pages/ManagedITPlans'));
 
 // Neutral, unbranded fallback while a route chunk loads. The data attribute lets
@@ -122,6 +123,7 @@ function App() {
             <Route path="/it-support/gta" element={<GTALanding />} />
             <Route path="/it-support/york-region" element={<LocationLanding slug="york-region" />} />
             <Route path="/tools/email-spoof-check" element={<EmailSpoofCheck />} />
+            <Route path="/tools/it-quote-checker" element={<QuoteChecker />} />
             <Route path="/it-support/toronto" element={<LocationLanding slug="toronto" />} />
             <Route path="/it-support/vaughan" element={<LocationLanding slug="vaughan" />} />
             <Route path="/it-support/mississauga" element={<LocationLanding slug="mississauga" />} />
