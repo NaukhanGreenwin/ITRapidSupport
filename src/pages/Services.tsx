@@ -103,6 +103,22 @@ const Services: React.FC = () => {
               email authentication and offboarding, and ranks your gaps in the order they should be fixed. No sign-up,
               no gate: it runs entirely in your browser and nothing you enter is sent to us or stored anywhere.
             </p>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+              Every service on this page is delivered from our office at 7810 Keele St, so businesses in our own city get
+              local dispatch rather than a cross-GTA drive. If that is you, our{' '}
+              <Link to="/it-support/vaughan/" className="text-red-600 hover:text-red-700 font-medium">
+                managed IT services and IT support in Vaughan
+              </Link>{' '}
+              page covers what the day-to-day looks like, which neighbourhoods and business districts we cover, and how
+              taking over from an existing provider works. Elsewhere in the region, start with{' '}
+              <Link to="/it-support/toronto/" className="text-red-600 hover:text-red-700 font-medium">
+                IT support in Toronto
+              </Link>{' '}
+              or the wider{' '}
+              <Link to="/it-support/gta/" className="text-red-600 hover:text-red-700 font-medium">
+                Greater Toronto Area
+              </Link>.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">

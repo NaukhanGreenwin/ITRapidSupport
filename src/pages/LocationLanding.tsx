@@ -124,6 +124,27 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
         </div>
       </div>
 
+      {/* Community pages point up at their parent city page rather than competing with it */}
+      {data.parentCity && (
+        <div className="py-10 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-gray-600 leading-relaxed">
+              {data.city} is part of {data.parentCity.city}, and the same team covers both from our office at 7810 Keele
+              St. For the full picture — what the day-to-day support looks like, which neighbourhoods and business
+              districts we cover, cybersecurity, IT consulting, and how taking over from an existing provider works —
+              see{' '}
+              <Link
+                to={`/it-support/${data.parentCity.slug}/`}
+                className="text-red-600 hover:text-red-700 font-medium"
+              >
+                {data.parentCity.anchor}
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Optional in-depth local content */}
       {data.sections && data.sections.length > 0 && (
         <div className="py-16 bg-slate-50">

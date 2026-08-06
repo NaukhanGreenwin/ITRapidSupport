@@ -33,6 +33,11 @@ export interface CityData {
   officeAddress?: string;
   ctaIntro?: string;
   nearbyAreas: string[];
+  // Set on pages for communities that sit inside a larger city we also have a page
+  // for (Concord/Woodbridge/Maple are all within Vaughan). Renders a contextual
+  // in-copy link up to the parent city page so the community pages reinforce it
+  // rather than competing with it for the city's head terms.
+  parentCity?: { slug: string; city: string; anchor: string };
   highlights: CityHighlight[];
   faqs: CityFAQ[];
   // Optional in-depth local content sections rendered after the highlights.
@@ -1899,6 +1904,7 @@ export const locations: CityData[] = [
     intro:
       'Woodbridge businesses have a truly local IT partner: IT Rapid Support is headquartered on Keele Street in Vaughan, minutes from Woodbridge. That means fast on-site response when hands-on help is needed, backed by a 24/7 helpdesk, proactive monitoring, and managed cybersecurity that acts as your complete IT department.',
     nearbyAreas: ['Pine Grove', 'East Woodbridge', 'Sonoma Heights', 'Kleinburg', 'Concord', 'Maple'],
+    parentCity: { slug: 'vaughan', city: 'Vaughan', anchor: 'IT support Vaughan' },
     highlights: [
       {
         title: 'Minutes-Away On-Site Support',
@@ -1946,6 +1952,7 @@ export const locations: CityData[] = [
     intro:
       'Concord is home turf for IT Rapid Support — our head office sits at 7810 Keele Street, right in the Concord business district. For the offices, warehouses, and shops around Keele, Highway 7, and Jane Street, that means an IT partner that is literally around the corner: 24/7 helpdesk, managed cybersecurity, cloud services, and on-site help that arrives in minutes, not hours.',
     nearbyAreas: ['Vaughan Metropolitan Centre', 'Maple', 'Woodbridge', 'Thornhill', 'North York'],
+    parentCity: { slug: 'vaughan', city: 'Vaughan', anchor: 'managed IT services in Vaughan' },
     highlights: [
       {
         title: 'Headquartered in Concord',
@@ -1993,6 +2000,7 @@ export const locations: CityData[] = [
     intro:
       'Businesses in Maple get big-company IT with a neighbourhood response time. IT Rapid Support is headquartered on Keele Street in Vaughan, a short drive from Maple, and delivers managed IT services, cybersecurity, and a 24/7 helpdesk to offices, clinics, and shops across the community.',
     nearbyAreas: ['Concord', 'Kleinburg', 'Woodbridge', 'Richmond Hill', 'Teston'],
+    parentCity: { slug: 'vaughan', city: 'Vaughan', anchor: 'IT support across Vaughan' },
     highlights: [
       {
         title: 'Local Vaughan Technicians',

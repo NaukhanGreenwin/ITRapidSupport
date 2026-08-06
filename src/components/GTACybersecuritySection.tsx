@@ -24,6 +24,12 @@ const GTACybersecuritySection: React.FC = () => {
               to <Link to="/resources/cybersecurity-services-toronto-guide/" className="text-red-600 hover:text-red-700 font-medium">cybersecurity services in Toronto</Link>.
             </p>
             <p className="text-gray-700 mb-6">
+              We work from an office at 7810 Keele St, which means the same team that monitors your systems can be on site
+              rather than dispatched across the region. Businesses in our own city can read what that covers day to day on
+              our <Link to="/it-support/vaughan/" className="text-red-600 hover:text-red-700 font-medium">IT support Vaughan</Link> page,
+              and the surrounding coverage across Concord, Woodbridge, Maple, Thornhill, and Kleinburg is set out there too.
+            </p>
+            <p className="text-gray-700 mb-6">
               Want to know where you stand before you talk to anyone? Our
               free <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">IT risk calculator</Link> scores
               fourteen security control areas — backups, multi-factor authentication, endpoint protection, admin accounts,

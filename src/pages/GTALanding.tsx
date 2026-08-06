@@ -154,6 +154,14 @@ const GTALanding: React.FC = () => {
               protection, patching, email authentication and more — and ranks your gaps in priority order. No sign-up
               and no gate: it runs entirely in your browser and nothing you enter is sent to us or stored anywhere.
             </p>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+              Our own office is at 7810 Keele St, so the northwest of the region is home ground rather than an outer
+              service area. Businesses there should start with{' '}
+              <Link to="/it-support/vaughan/" className="text-red-600 hover:text-red-700 font-medium">
+                IT support in Vaughan
+              </Link>
+              , which also covers Concord, Woodbridge, Maple, Thornhill, and Kleinburg.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">
