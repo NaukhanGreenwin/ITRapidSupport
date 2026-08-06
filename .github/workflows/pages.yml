@@ -68,13 +68,19 @@ jobs:
       - name: Add .nojekyll
         run: touch dist/.nojekyll
 
+      # The custom domain must survive every build no matter what public/CNAME
+      # contains — run #1 failed on a trailing space in the source file.
+      - name: Write CNAME
+        run: printf 'itrapidsupport.com\n' > dist/CNAME
+
       - name: Verify artifact contents
         run: |
           set -e
           for f in index.html CNAME .nojekyll 404.html _redirects; do
             test -e "dist/$f" || { echo "::error::dist/$f is missing"; exit 1; }
           done
-          grep -qx 'itrapidsupport.com' dist/CNAME || { echo "::error::dist/CNAME is not itrapidsupport.com"; exit 1; }
+          CNAME_VALUE="$(tr -d '[:space:]' < dist/CNAME)"
+          [ "$CNAME_VALUE" = "itrapidsupport.com" ] || { echo "::error::dist/CNAME is '$CNAME_VALUE', expected itrapidsupport.com"; exit 1; }
           PAGES=$(find dist -name index.html | wc -l)
           echo "prerendered pages: $PAGES"
           test "$PAGES" -ge 100 || { echo "::error::only $PAGES pages prerendered — refusing to publish a partial site"; exit 1; }
