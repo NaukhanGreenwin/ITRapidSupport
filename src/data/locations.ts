@@ -181,6 +181,36 @@ export const locations: CityData[] = [
         answer:
           'Yes. Co-managed IT is common for Vaughan businesses that already have internal staff. We take on 24/7 coverage, monitoring, patching, security operations, and after-hours escalation so your own people can focus on projects and business-specific systems instead of firefighting.',
       },
+      {
+        question: 'Is your IT support in Vaughan available after hours and on weekends?',
+        answer:
+          'Yes. The helpdesk is staffed around the clock, including evenings, weekends, and holidays, and it is the same service rather than a separate emergency arrangement. That matters for Vaughan businesses running shift work, warehouse and distribution operations, or customer-facing hours that do not stop at five. When you compare providers, ask specifically what happens at 11pm on a Saturday and who picks up, because "24/7" is used by some providers to describe voicemail and a callback the next business day.',
+      },
+      {
+        question: 'Which Vaughan neighbourhoods and business districts do you cover?',
+        answer:
+          'All of them. Our office is at 7810 Keele Street, so Concord, Woodbridge, Maple, Thornhill, Kleinburg, Vellore Village, Patterson, and the Vaughan Metropolitan Centre are all same-city work for us, as are the industrial and distribution corridors along Highway 400 and Highway 7. Neighbouring York Region municipalities including Richmond Hill, Markham, and Newmarket are a short drive. If you operate from more than one address, multi-site connectivity and consistent security across every location are part of the standard scope rather than a separate project.',
+      },
+      {
+        question: 'Do you support warehouses and industrial sites in Concord and along Highway 400?',
+        answer:
+          'Yes, and it is a large part of what we do from this office. Industrial sites have requirements a desk-based office does not: wireless coverage that reaches racking, loading bays, and yard areas rather than just workstations, shared and ruggedised terminals, networked scanners and label printers, uptime for inventory and ERP systems during production hours, secure controlled access for carriers and vendors, and support hours that match shift schedules instead of office hours. We scope the network and the support model around how the site actually operates.',
+      },
+      {
+        question: 'Can you take over from our current IT provider without downtime?',
+        answer:
+          'Yes, and the transition is deliberately overlapping rather than a hard cutover. We document your environment, deploy monitoring and security tooling, configure backups and multi-factor authentication, and introduce your team to the helpdesk while your existing arrangement is still in place, then cut over once everything is under management. Before you give notice, get written confirmation of who holds your Microsoft 365 tenant administrator credentials, who owns the domain and DNS, whose account the licences sit under, and where the backups live. A business that owns those things can change providers as a commercial decision.',
+      },
+      {
+        question: 'Do you offer IT consulting or a vCIO for Vaughan businesses?',
+        answer:
+          'Yes. IT consulting is the scoped version with a defined end point — an assessment of what you run now, a prioritised risk list in plain English, and a written plan with rough costs, typically prompted by growth, an office move or fit-out, a cloud migration, a security review an insurer or client has asked for, or an inherited environment nobody documented. For businesses that want the strategic layer continuously, a vCIO engagement runs scheduled reviews of budget, risk, hardware lifecycle, and roadmap so replacements and licensing changes are planned rather than discovered. We do not publish a consulting rate card without having seen your environment.',
+      },
+      {
+        question: 'How do you protect Vaughan businesses from email fraud and ransomware?',
+        answer:
+          'The two routes that actually get used are stolen credentials and spoofed email, so those get closed first: multi-factor authentication on every business account, and SPF, DKIM, and DMARC configured to enforcement on your domain so a third party cannot easily send mail that appears to come from you. That second one is the mechanism behind most invoice-redirect fraud, and it is widely neglected — our August 2026 scan of 479 mail-enabled GTA business domains found only 20.7% had DMARC actually enforcing. Around that sit managed firewalls, endpoint protection, consistent patching, hardened Microsoft 365 configuration, managed detection and response monitored around the clock, and monitored backups with an offsite copy and tested restores.',
+      },
     ],
     sections: [
       {
@@ -194,7 +224,7 @@ export const locations: CityData[] = [
         heading: 'Why Vaughan Businesses Choose a Local Managed IT Partner',
         paragraphs: [
           'A managed IT provider headquartered in Vaughan means shorter on-site response, technicians who know the local business environment, and one accountable team for support, security, and cloud instead of separate vendors. Fixed monthly pricing keeps IT costs predictable while 24/7 coverage protects shift work, customer-facing operations, and time-sensitive service commitments.',
-          'If your business is comparing providers, start with our Managed IT Services Vaughan guide below, or call (289) 582-9930 to review your current setup with our team.',
+          'If your business is comparing providers, the seven-question checklist in our guide below is a good place to start, or call (289) 582-9930 to review your current setup with our team.',
         ],
       },
       {
@@ -227,6 +257,51 @@ export const locations: CityData[] = [
           'Vaughan mixes head offices, professional firms, and a large industrial and distribution base along the Keele Street and Highway 400 corridors, and each has a different IT profile. Manufacturers, warehouses, and distributors need reliable wired and wireless coverage across production and storage space, uptime for inventory and ERP systems, secure vendor access, and after-hours support that matches shift schedules rather than office hours.',
           'Professional firms — legal, accounting, engineering, consulting — need document security, confidentiality controls, secure remote work, and dependable Microsoft 365. Healthcare and dental practices in Vaughan, Concord, and Woodbridge need PHIPA-aware handling of patient data, EMR uptime, and encrypted backups. Construction and trades businesses need connectivity between job sites and head office plus mobile access to plans and project systems. Real estate and property management firms need secure document exchange and protection against wire-fraud attempts on closing funds.',
           'The service underneath is the same in every case — 24/7 helpdesk, proactive monitoring and patching, Microsoft 365 and cloud administration, monitored backups, and layered security — with the configuration, compliance framing, and priorities set by what the business actually runs. Call (289) 582-9930 and we will scope against your environment rather than a template.',
+        ],
+      },
+      {
+        heading: 'IT Support in Vaughan: What the Day-to-Day Actually Looks Like',
+        paragraphs: [
+          'Most descriptions of IT support in Vaughan stop at "24/7 helpdesk", which tells you the hours and nothing about the experience. In practice the day-to-day runs on three channels: your staff can phone, email, or message the helpdesk, a ticket is raised either way, and the work is tracked against your environment rather than against whoever happened to answer. That last part matters more than it sounds — support that is not documented against your systems means every technician starts from scratch, and your team ends up re-explaining the same context every time something breaks.',
+          'Tickets are triaged by impact rather than by arrival order. A single user who cannot print is a different problem from a server that has stopped responding or a mailbox that is sending mail nobody wrote, and the second and third jump the queue. Routine requests — a new starter needing accounts and a laptop, a password reset, a licence added, a printer mapped, a phone set up — are the bulk of the volume and are handled remotely within the monthly fee rather than billed by the hour.',
+          'Behind the tickets, work happens that never generates one. Monitoring watches servers, workstations, and network devices continuously, so a disk approaching failure, a backup that did not complete, an expiring certificate, or a workstation that has fallen behind on security updates surfaces as a scheduled work item instead of as next month\'s outage. This is the part that separates a managed service from a fast break-fix shop, and it is also the part you cannot see on a quote — which is why it is worth asking any Vaughan provider what they monitor and what they do with the alerts.',
+          'When something genuinely needs hands on hardware, dispatch is local. Our office is at 7810 Keele Street, so a technician heading to a site in Concord, Woodbridge, Maple, Thornhill, or Kleinburg is travelling within the same city. We deliberately do not publish a guaranteed response time as a marketing number, because a number without the conditions attached is not a commitment — what we will do is tell you plainly, before you sign, what our dispatch process is and what it depends on.',
+        ],
+      },
+      {
+        heading: 'Vaughan Neighbourhoods and Business Districts We Cover',
+        paragraphs: [
+          'Vaughan is not one business district, and the IT profile changes noticeably across it. Concord, where our own office sits, is dominated by industrial, warehouse, and distribution operations along the Keele Street and Highway 400 corridors. The recurring problems there are physical as much as digital: wireless coverage that has to reach racking and loading bays rather than desks, ruggedised or shared-terminal workstations, scanners and label printers on the network, ERP and inventory systems that cannot be down during a shift, and vendor or carrier systems that need controlled access into your network.',
+          'The Vaughan Metropolitan Centre is a different environment entirely. Since the subway extension reached it, the VMC has drawn head offices and professional tenants into modern multi-tenant towers, and the questions there are about hybrid work rather than warehouse coverage: secure remote access, Microsoft 365 and Teams working properly for people who split their week, conference-room technology that does not need a champion to operate, and building-provided internet that you do not control and cannot escalate through.',
+          'Woodbridge and Kleinburg carry a large base of construction, trades, professional practices, and family-run businesses, many operating from a head office with crews or staff working elsewhere — which puts the weight on mobile access, connectivity between sites, and document security. Maple, Vellore Village, and Patterson mix professional services, healthcare, and dental practices serving a fast-growing residential population, where the priorities are practice-management and EMR uptime, PHIPA-aware handling of patient records, and encrypted, monitored backups. Thornhill, sitting on the Vaughan and Markham boundary, is heavily professional-services weighted — legal, accounting, financial, and consulting firms where confidentiality controls and dependable Microsoft 365 do most of the work.',
+          'All of it is local for us. Vaughan, Concord, Woodbridge, Maple, Thornhill, Kleinburg, Vellore Village, and Patterson are a same-city drive from Keele Street, and the surrounding York Region municipalities — Richmond Hill, Markham, and Newmarket among them — are a short one. If you operate from more than one Vaughan address, or from Vaughan plus a site elsewhere in the GTA, multi-site connectivity and consistent security across all of them is part of the standard scope rather than a project.',
+        ],
+      },
+      {
+        heading: 'Cybersecurity for Vaughan Businesses',
+        paragraphs: [
+          'The attacks that actually reach Vaughan businesses are unglamorous and consistent. Someone in accounts receives an email that appears to come from a supplier or a director, asking for banking details to be updated or an urgent payment released. Someone else enters their Microsoft 365 password into a convincing login page reached from a shared document link. A workstation that missed a few months of updates picks up something that then moves sideways across a flat network. None of these need a sophisticated attacker, and all of them are cheaper to prevent than to recover from.',
+          'The defences map directly onto those routes. Multi-factor authentication on every business account closes the stolen-password path, which is why we treat it as a baseline rather than an upgrade. Email authentication — SPF, DKIM, and DMARC configured to enforcement on your domain — makes it substantially harder for a third party to send mail that appears to come from you, which is the mechanism behind most invoice-redirect fraud. When we scanned the public DNS records of 479 mail-enabled GTA business domains in August 2026, 52.6% had published a DMARC record but only 20.7% had it actually enforcing — most of the rest sit in monitor-only mode, where the record blocks nothing at all. It is one of the fastest and highest-value fixes available to a Vaughan business, and most have not done it.',
+          'Underneath that sits the rest of the stack: managed firewalls, endpoint protection on every workstation and server, consistent patching, hardened Microsoft 365 configuration, and managed detection and response so alerts are watched around the clock instead of discovered on Monday morning. Backups are monitored rather than assumed, with an offsite copy and tested restores, because a backup nobody has restored from is a plan nobody has tested.',
+          'Two things we will not do. We will not tell you a product makes you breach-proof, and we will not sell the security layer as a separate relationship from the people who run your systems. Splitting the helpdesk and the security stack across two vendors reliably produces gaps that neither owns, and an incident becomes a hand-off argument while the clock runs. If you would rather see where you stand before speaking to anyone, our free IT risk calculator scores fourteen control areas in your browser and sends nothing to us.',
+        ],
+      },
+      {
+        heading: 'IT Consulting and IT Strategy for Vaughan Businesses',
+        paragraphs: [
+          'Not every Vaughan business needs a full-time IT director, but nearly every one past a certain size needs the decisions a director would make. IT consulting covers the scoped, finite version of that work: an assessment of what you are running now, an opinion on what is genuinely at risk, and a written plan with priorities and rough costs attached. It has a defined end point, which is what separates it from ongoing managed IT.',
+          'The engagements Vaughan businesses ask for most are recognisable. A company that has grown from a dozen staff to sixty on infrastructure sized for a dozen. An office move, a second location, or a warehouse fit-out where the network has to be designed rather than improvised. A migration off ageing on-premises servers into Microsoft 365 and Azure, where the real question is which workloads should move and which should not. A security review after an insurer, a client, or a near miss made it unavoidable. A due-diligence review before or after an acquisition. And the recurring one: a business that inherited an environment nobody documented and wants to know what it actually owns.',
+          'For businesses that want the strategic layer continuously rather than as a project, that runs as a vCIO engagement — scheduled reviews of budget, risk, lifecycle, and roadmap, so hardware replacement and licensing changes are planned rather than discovered. The value is mostly in avoided surprises: knowing which servers reach end of support next year, what a headcount increase does to licensing, and where the single points of failure are before one of them fails.',
+          'We do not publish a consulting rate card, because we have not seen your environment and a number without scope attached is not useful to you. What we will say is what a deliverable should contain before you pay for one: a written inventory of what you run, a prioritised risk list in plain English, specific recommendations with reasons, and rough costs. If a proposal does not commit to producing those, it is worth asking what you are buying. Call (289) 582-9930 to talk through the scope.',
+        ],
+      },
+      {
+        heading: 'Changing IT Providers in Vaughan Without Downtime',
+        paragraphs: [
+          'Most Vaughan businesses that call us are not starting from nothing — they already have a provider and have decided something has to change. The usual triggers are consistent: response times that have quietly stretched, the same issues recurring without anyone addressing the cause, security questions that get deflected, an invoice that grows every month with items nobody can explain, or the discovery during an incident that the backups were not being checked.',
+          'The reason people put the switch off is a fear of being stranded mid-transition, and it is a reasonable fear when handled badly. We run it as the documented four-stage process described above, and the transition itself is deliberately overlapping rather than a cliff edge: we document and take over monitoring, security tooling, and the helpdesk while the existing arrangement is still in place, then cut over once your environment is under management and your staff know how to reach us.',
+          'The part worth getting right before you give notice is ownership. Ask, in writing, who holds the tenant administrator credentials for your Microsoft 365 environment, who owns the domain registration and the DNS, whose account the licences are purchased under, where the backups physically live and who can access them, and whether documentation of your environment exists and will be handed over. A business that owns its own tenant, domain, and licensing can change providers as a commercial decision. A business that does not is negotiating from a weak position, and that is worth discovering now rather than during the notice period. We take the same position on our own clients: your tenant, your domain, your data.',
+          'None of this obliges you to move. If you would like a second opinion on the setup you already have — what is fine, what is genuinely urgent, and what a provider has been overselling — call (289) 582-9930 and we will tell you honestly, including when the answer is that your current arrangement is working.',
         ],
       }
     ],
