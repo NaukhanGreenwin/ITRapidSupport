@@ -109,7 +109,7 @@ const Home: React.FC = () => {
     <PageTransition>
       <SEO 
         title="Managed IT & Cybersecurity | Toronto & GTA" 
-        description="Enterprise-grade cybersecurity and managed IT services for businesses in Toronto, Vaughan, Mississauga and across the GTA. 24/7 local support." 
+        description="Your IT and your security handled by one team, not two vendors. 24/7 helpdesk, on-site from our Vaughan office, fixed monthly fee. Call (289) 582-9930."
         keywords="IT security Toronto, managed IT services GTA, cybersecurity Ontario, Toronto IT support, Vaughan IT services, Mississauga cybersecurity, Brampton IT support, enterprise security"
         schema={combinedSchema}
         breadcrumbs={[{ name: 'Home', url: '/' }]}

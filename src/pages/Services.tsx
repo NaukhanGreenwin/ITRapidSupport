@@ -8,7 +8,7 @@ const Services: React.FC = () => {
     <>
       <SEO
         title="IT Support & Security Services Toronto"
-        description="Managed IT, 24/7 helpdesk, cybersecurity, and cloud for Toronto & GTA businesses — with on-site dispatch from our Vaughan HQ. Call (289) 582-9930 today."
+        description="Managed IT, 24/7 helpdesk, cybersecurity and cloud on one fixed monthly fee, with on-site dispatch from our Vaughan office. Call (289) 582-9930."
         keywords="IT support and security services Toronto, IT security services Toronto, managed IT services GTA, cybersecurity services GTA, managed security services Toronto"
         canonicalUrl="/services"
         schema={[

@@ -51,7 +51,7 @@ export const locations: CityData[] = [
     schemaLocation: 'toronto',
     title: 'IT Support Toronto | 24/7 Helpdesk',
     description:
-      'Toronto IT support with a 24/7 helpdesk, managed IT services, cybersecurity, and fast on-site response across the city. Call (289) 582-9930 for help today.',
+      'One team for Toronto IT support and security instead of two vendors arguing during an incident. 24/7 helpdesk, on-site when needed. Call (289) 582-9930.',
     keywords:
       'IT support Toronto, managed IT services Toronto, cybersecurity Toronto, Toronto IT company, managed security Toronto, IT helpdesk Toronto',
     intro:
@@ -119,10 +119,10 @@ export const locations: CityData[] = [
     slug: 'vaughan',
     city: 'Vaughan',
     schemaLocation: 'vaughan',
-    title: 'Managed IT Services Vaughan | 24/7 Support, Local Vaughan HQ',
+    title: 'Managed IT Services Vaughan | 24/7 IT Support, Keele St',
     h1: 'Managed IT Services & IT Support in Vaughan',
     description:
-      'Managed IT services from our Vaughan HQ on Keele St: 24/7 helpdesk, cybersecurity, cloud, and on-site technicians. Call (289) 582-9930 for a quick response.',
+      'IT support run from an office on Keele St in Vaughan, not a call centre. 24/7 helpdesk, security included, one fixed monthly fee. Call (289) 582-9930.',
     keywords:
       'managed IT services Vaughan, IT services Vaughan, IT support Vaughan, cybersecurity Vaughan, Vaughan IT company, IT helpdesk Vaughan, Concord IT support',
     intro:
@@ -316,7 +316,7 @@ export const locations: CityData[] = [
     city: 'Mississauga',
     title: 'IT Support Mississauga | 24/7 Helpdesk',
     description:
-      'IT support Mississauga businesses rely on: 24/7 helpdesk, managed IT services, cybersecurity, monitoring, and cloud. Call (289) 582-9930.',
+      'Mississauga IT support where 24/7 means a person answers, not voicemail until Monday. Security and patching included in the monthly fee. (289) 582-9930.',
     keywords:
       'IT support Mississauga, managed IT services Mississauga, cybersecurity Mississauga, Mississauga IT company, IT helpdesk Mississauga',
     intro:
@@ -480,7 +480,7 @@ export const locations: CityData[] = [
     title: 'Managed IT Services Brampton | IT Support',
     h1: 'Managed IT Services & IT Support in Brampton',
     description:
-      'Managed IT services Brampton businesses trust. Fast IT support, cybersecurity, 24/7 helpdesk, and on-site service. Call (289) 582-9930.',
+      'Managed IT for Brampton businesses on one fixed monthly fee, with security built into the service rather than quoted separately. Call (289) 582-9930.',
     keywords:
       'IT support Brampton, managed IT services Brampton, cybersecurity Brampton, Brampton IT company, emergency IT support Brampton',
     intro:
@@ -634,9 +634,9 @@ export const locations: CityData[] = [
   {
     slug: 'oakville',
     city: 'Oakville',
-    title: 'IT Support & Managed IT Services in Oakville',
+    title: 'IT Support Oakville | 24/7 Managed IT',
     description:
-      'Managed IT and cybersecurity for Oakville businesses. 24/7 helpdesk, proactive monitoring, cloud, and on-site support across Halton. Call (289) 582-9930.',
+      'Oakville IT support with security inside the monthly fee, not sold as an upgrade later. 24/7 helpdesk and on-site across Halton. Call (289) 582-9930.',
     keywords:
       'IT support Oakville, managed IT services Oakville, cybersecurity Oakville, Oakville IT company, IT helpdesk Oakville, Halton IT support',
     intro:
@@ -680,9 +680,9 @@ export const locations: CityData[] = [
   {
     slug: 'markham',
     city: 'Markham',
-    title: 'IT Support & Managed IT Services in Markham',
+    title: 'IT Support Markham | 24/7 Managed IT',
     description:
-      'Managed IT and cybersecurity for Markham businesses. 24/7 helpdesk, proactive monitoring, cloud, and rapid on-site support. Call (289) 582-9930.',
+      'Markham IT support with one accountable team for helpdesk, cloud and security, 24/7, plus on-site across York Region. Call (289) 582-9930.',
     keywords:
       'IT support Markham, managed IT services Markham, cybersecurity Markham, Markham IT company, IT helpdesk Markham, York Region IT support',
     intro:
@@ -728,7 +728,7 @@ export const locations: CityData[] = [
     city: 'Richmond Hill',
     title: 'IT Support Richmond Hill | 24/7 Helpdesk',
     description:
-      'Managed IT and cybersecurity for Richmond Hill businesses. 24/7 helpdesk, proactive monitoring, cloud, and on-site support across York Region. Call (289) 582-9930.',
+      'Richmond Hill IT support with a 24/7 helpdesk, monitoring that catches faults before you do, and on-site across York Region. Call (289) 582-9930.',
     keywords:
       'IT support Richmond Hill, managed IT services Richmond Hill, cybersecurity Richmond Hill, Richmond Hill IT company, IT helpdesk Richmond Hill',
     intro:
@@ -855,7 +855,7 @@ export const locations: CityData[] = [
     title: 'Burlington IT Services | 24/7 Managed IT',
     h1: 'Burlington IT Services & Managed IT Support',
     description:
-      'Burlington IT services from a local team: managed IT, cybersecurity, 24/7 helpdesk, cloud, and on-site support across Halton. Call (289) 582-9930.',
+      'Burlington IT services on a fixed monthly fee, with patching, monitoring and security handled by the same team that answers the phone. (289) 582-9930.',
     keywords:
       'Burlington IT services, IT support Burlington, managed IT services Burlington, cybersecurity Burlington, Burlington IT company, IT helpdesk Burlington, Halton IT support',
     intro:
@@ -916,9 +916,9 @@ export const locations: CityData[] = [
     slug: 'north-york',
     city: 'North York',
     schemaLocation: 'toronto',
-    title: 'IT Support & Managed IT Services in North York',
+    title: 'IT Support North York | 24/7 Managed IT',
     description:
-      'Managed IT and cybersecurity for North York businesses. 24/7 helpdesk, proactive monitoring, cloud, and rapid on-site support. Call (289) 582-9930.',
+      'North York IT support from an office just up Keele St, so on-site help is a short drive. 24/7 helpdesk, fixed monthly fee. Call (289) 582-9930.',
     keywords:
       'IT support North York, managed IT services North York, cybersecurity North York, North York IT company, IT helpdesk North York',
     intro:
@@ -962,9 +962,9 @@ export const locations: CityData[] = [
   {
     slug: 'hamilton',
     city: 'Hamilton',
-    title: 'IT Support & Managed IT Services in Hamilton',
+    title: 'IT Support Hamilton | 24/7 Managed IT',
     description:
-      'Managed IT and cybersecurity for Hamilton businesses. 24/7 helpdesk, proactive monitoring, cloud, and on-site support. Call (289) 582-9930.',
+      'Hamilton IT support with a genuinely 24/7 helpdesk, monitored backups you can restore from, and a fixed monthly fee. Call (289) 582-9930.',
     keywords:
       'IT support Hamilton, managed IT services Hamilton, cybersecurity Hamilton, Hamilton IT company, IT helpdesk Hamilton',
     intro:
@@ -1898,7 +1898,7 @@ export const locations: CityData[] = [
     schemaLocation: 'vaughan',
     title: 'Managed IT Services Woodbridge | Vaughan HQ',
     description:
-      'Managed IT services and cybersecurity for Woodbridge businesses. Vaughan-based technicians minutes away, 24/7 helpdesk. Call (289) 582-9930.',
+      'Woodbridge IT support from our Vaughan office minutes away, so on-site work is a local drive rather than a cross-GTA trip. Call (289) 582-9930.',
     keywords:
       'IT support Woodbridge, managed IT services Woodbridge, cybersecurity Woodbridge, Woodbridge IT company, IT helpdesk Woodbridge, Vaughan IT support',
     intro:
@@ -1946,7 +1946,7 @@ export const locations: CityData[] = [
     schemaLocation: 'vaughan',
     title: 'IT Support Concord | Local Keele St HQ',
     description:
-      'Managed IT services and cybersecurity in Concord, Vaughan — where our Keele St head office is located. 24/7 helpdesk, managed security, cloud. Call (289) 582-9930.',
+      'Our own office is at 7810 Keele St in Concord, so we support the industrial and 400-corridor businesses around us. 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support Concord, managed IT services Concord, cybersecurity Concord Vaughan, Concord IT company, IT helpdesk Concord, Keele Street IT support',
     intro:
@@ -1992,9 +1992,9 @@ export const locations: CityData[] = [
     slug: 'maple',
     city: 'Maple',
     schemaLocation: 'vaughan',
-    title: 'IT Support & Managed IT Services in Maple, Vaughan',
+    title: 'IT Support Maple, Vaughan | 24/7 Managed IT',
     description:
-      'Managed IT services and cybersecurity for Maple businesses. Vaughan-based technicians nearby, 24/7 helpdesk, managed security, and cloud IT. Call (289) 582-9930.',
+      'Maple IT support from our Keele St office in Vaughan, a short drive away. 24/7 helpdesk, managed security, monitored backups. Call (289) 582-9930.',
     keywords:
       'IT support Maple, managed IT services Maple Vaughan, cybersecurity Maple, Maple IT company, IT helpdesk Maple, Vaughan IT services',
     intro:
@@ -2039,9 +2039,9 @@ export const locations: CityData[] = [
   {
     slug: 'stouffville',
     city: 'Stouffville',
-    title: 'IT Support & Managed IT Services in Stouffville',
+    title: 'IT Support Stouffville | 24/7 Managed IT',
     description:
-      'Managed IT and cybersecurity for Stouffville businesses. 24/7 helpdesk, managed security, and on-site support across Whitchurch-Stouffville. Call (289) 582-9930.',
+      'Stouffville IT support with a 24/7 helpdesk and one team for support and security across Whitchurch-Stouffville. Call (289) 582-9930.',
     keywords:
       'IT support Stouffville, managed IT services Stouffville, cybersecurity Stouffville, Stouffville IT company, IT helpdesk Whitchurch-Stouffville',
     intro:
@@ -2085,9 +2085,9 @@ export const locations: CityData[] = [
   {
     slug: 'bradford',
     city: 'Bradford',
-    title: 'IT Support & Managed IT Services in Bradford',
+    title: 'IT Support Bradford | 24/7 Managed IT',
     description:
-      'Managed IT services and cybersecurity for Bradford businesses. 24/7 helpdesk, cloud, and on-site support across Bradford West Gwillimbury. Call (289) 582-9930.',
+      'Bradford IT support on a fixed monthly fee, covering Bradford West Gwillimbury with a 24/7 helpdesk and monitored backups. Call (289) 582-9930.',
     keywords:
       'IT support Bradford, managed IT services Bradford, cybersecurity Bradford Ontario, Bradford IT company, IT helpdesk Bradford West Gwillimbury',
     intro:
@@ -2200,7 +2200,7 @@ export const locations: CityData[] = [
     title: 'Managed IT & IT Security Services York Region',
     h1: 'Managed IT & IT Security Services in York Region',
     description:
-      'Managed IT and IT security services across York Region: 24/7 helpdesk, managed cybersecurity, network security, cloud, and on-site support. Call (289) 582-9930.',
+      'Managed IT and IT security across York Region from an office inside it, on Keele St in Vaughan. 24/7 helpdesk, on-site locally. Call (289) 582-9930.',
     keywords:
       'IT support York Region, managed IT services York Region, IT security services York Region, managed cybersecurity York Region, network security services York Region, data security services York Region, firewall management York Region, York Region IT company',
     intro:
