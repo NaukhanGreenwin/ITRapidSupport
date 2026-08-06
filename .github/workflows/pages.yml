@@ -1,0 +1,98 @@
+name: Deploy to GitHub Pages
+
+# Replaces the legacy branch-based (gh-pages) Pages build. Builds the Vite app
+# and runs the same prerender pass (prerender-modern.mjs) that produced the
+# gh-pages content, then publishes dist/ as the Pages artifact.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never cancel an in-flight Pages deploy — a half-published site is what broke
+# this repo before.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # prerender-modern.mjs uses puppeteer-core + system Chrome, so the old
+      # bundled-Chromium download (react-snap -> puppeteer 1.x) is dead weight
+      # and an install-time failure risk.
+      PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
+      PUPPETEER_SKIP_DOWNLOAD: "true"
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Locate Chrome
+        id: findchrome
+        run: |
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)"
+          echo "path=$CHROME" >> "$GITHUB_OUTPUT"
+          echo "Preinstalled Chrome: ${CHROME:-none}"
+
+      - name: Install Chrome (fallback)
+        id: setupchrome
+        if: steps.findchrome.outputs.path == ''
+        uses: browser-actions/setup-chrome@v2
+
+      - name: Export CHROME_PATH
+        run: |
+          CHROME="${{ steps.findchrome.outputs.path || steps.setupchrome.outputs.chrome-path }}"
+          test -n "$CHROME" || { echo "::error::No Chrome binary available for prerender"; exit 1; }
+          echo "CHROME_PATH=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+
+      - run: npm ci
+
+      # vite build && node prerender-modern.mjs — the exact sequence behind the
+      # current gh-pages content.
+      - name: Build and prerender
+        run: npm run prerender
+
+      # gh-pages carried a .nojekyll marker; keep it so nothing about the
+      # published tree changes. (Not in public/, so create it here.)
+      - name: Add .nojekyll
+        run: touch dist/.nojekyll
+
+      - name: Verify artifact contents
+        run: |
+          set -e
+          for f in index.html CNAME .nojekyll 404.html _redirects; do
+            test -e "dist/$f" || { echo "::error::dist/$f is missing"; exit 1; }
+          done
+          grep -qx 'itrapidsupport.com' dist/CNAME || { echo "::error::dist/CNAME is not itrapidsupport.com"; exit 1; }
+          PAGES=$(find dist -name index.html | wc -l)
+          echo "prerendered pages: $PAGES"
+          test "$PAGES" -ge 100 || { echo "::error::only $PAGES pages prerendered — refusing to publish a partial site"; exit 1; }
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+          # dist ships .nojekyll; the default excludes dotfiles.
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
