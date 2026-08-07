@@ -50,12 +50,67 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
   // Rotate through the GTA city list so every city page receives keyword
   // anchors from six sibling pages (striking-distance "managed it services
   // {city}" queries). Vancouver stays out of the GTA link wheel.
+  //
+  // The blind rotation alone gave every city the same ~6 inbound links, which is
+  // why Mississauga and Brampton sat level with tier-3 pages. GEO_NEIGHBOURS
+  // pins the genuinely adjacent cities to the front of each list, so the Peel
+  // corridor links to itself the way a reader would expect. It is real
+  // geography, not a boost — Mississauga and Brampton border or sit one city
+  // away from every page listed here.
+  // Canonical entity URLs for areaServed. Verified against the Wikidata API on
+  // 2026-08-07: Q50816 "Mississauga, city in Ontario, Canada", Q44198
+  // "Brampton, city in Ontario, Canada". Do not add an entry here without
+  // checking the QID actually resolves to the Ontario municipality.
+  const CITY_ENTITIES: Record<string, string[]> = {
+    mississauga: [
+      'https://en.wikipedia.org/wiki/Mississauga',
+      'https://www.wikidata.org/wiki/Q50816',
+    ],
+    brampton: [
+      'https://en.wikipedia.org/wiki/Brampton',
+      'https://www.wikidata.org/wiki/Q44198',
+    ],
+  };
+
+  const GEO_NEIGHBOURS: Record<string, string[]> = {
+    mississauga: ['brampton', 'oakville', 'etobicoke', 'milton', 'toronto'],
+    brampton: ['mississauga', 'caledon', 'georgetown', 'vaughan', 'milton'],
+    toronto: ['etobicoke', 'north-york', 'scarborough', 'mississauga', 'vaughan'],
+    etobicoke: ['mississauga', 'toronto', 'brampton', 'north-york'],
+    oakville: ['mississauga', 'burlington', 'milton', 'brampton'],
+    milton: ['mississauga', 'oakville', 'brampton', 'georgetown'],
+    burlington: ['oakville', 'hamilton', 'mississauga', 'milton'],
+    georgetown: ['brampton', 'milton', 'caledon', 'mississauga'],
+    caledon: ['brampton', 'georgetown', 'vaughan', 'mississauga'],
+    vaughan: ['woodbridge', 'concord', 'maple', 'brampton', 'north-york'],
+    woodbridge: ['vaughan', 'brampton', 'concord', 'etobicoke'],
+    'north-york': ['toronto', 'vaughan', 'etobicoke', 'markham'],
+    hamilton: ['burlington', 'oakville', 'mississauga'],
+  };
+
   const gtaCities = locations.filter((l) => l.slug !== 'vancouver');
   const selfIndex = gtaCities.findIndex((l) => l.slug === data.slug);
-  const nearbyCityLinks =
-    isVancouver || selfIndex === -1
+  const rotation =
+    selfIndex === -1
       ? []
-      : [...gtaCities.slice(selfIndex + 1), ...gtaCities.slice(0, selfIndex)].slice(0, 6);
+      : [...gtaCities.slice(selfIndex + 1), ...gtaCities.slice(0, selfIndex)];
+  const neighbourSlugs = GEO_NEIGHBOURS[data.slug] ?? [];
+  const bySlug = new Map(gtaCities.map((l) => [l.slug, l]));
+  const pinned = neighbourSlugs
+    .map((slug) => bySlug.get(slug))
+    .filter((l): l is (typeof gtaCities)[number] => Boolean(l));
+  const nearbyCityLinks = isVancouver || selfIndex === -1
+    ? []
+    : [...pinned, ...rotation.filter((l) => !neighbourSlugs.includes(l.slug))].slice(0, 6);
+
+  // Vary the anchor by position instead of publishing six identical
+  // "Managed IT Services {city}" exact-match phrases on all 30 city pages.
+  const nearbyAnchorForms = [
+    (city: string) => `Managed IT Services ${city}`,
+    (city: string) => `IT Support ${city}`,
+    (city: string) => `Managed IT in ${city}`,
+    (city: string) => `IT Services in ${city}`,
+  ];
 
   const schema = [
     isVancouver ? generateVancouverLocalBusinessSchema() : generateLocalBusinessSchema(data.schemaLocation),
@@ -64,6 +119,14 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
       description: data.description,
       url,
       areaServed: `${data.city}, ${data.province ?? 'Ontario'}`,
+      areaServedPlace: {
+        name: data.city,
+        province: `${data.province ?? 'Ontario'}, Canada`,
+        // sameAs only where the entity has been verified against Wikidata.
+        // Everything else gets the structured City node without it rather than
+        // a guessed identifier.
+        sameAs: CITY_ENTITIES[data.slug],
+      },
       serviceType: 'Managed IT Services',
     }),
     generateFAQSchema(data.faqs),
@@ -280,13 +343,13 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
               Managed IT Services Near {data.city}
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
-              {nearbyCityLinks.map((loc) => (
+              {nearbyCityLinks.map((loc, i) => (
                 <Link
                   key={loc.slug}
                   to={`/it-support/${loc.slug}/`}
                   className="px-4 py-2 bg-white rounded-full text-gray-700 text-sm font-medium shadow-sm hover:text-red-600 transition-colors"
                 >
-                  Managed IT Services {loc.city}
+                  {nearbyAnchorForms[i % nearbyAnchorForms.length](loc.city)}
                 </Link>
               ))}
             </div>

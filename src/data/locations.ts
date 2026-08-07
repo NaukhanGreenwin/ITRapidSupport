@@ -522,7 +522,7 @@ export const locations: CityData[] = [
       {
         title: 'Rapid Emergency Response',
         description:
-          'Guaranteed SLA-based response with critical issues handled in under an hour remotely and on-site support within 2 to 4 hours when needed in Brampton.',
+          'Critical issues go to the front of the 24/7 queue for immediate remote triage, and a technician is dispatched from our Keele Street office when the work has to be hands-on in Brampton. We do not publish a guaranteed response time.',
       },
       {
         title: 'Managed IT & Helpdesk',
@@ -539,7 +539,7 @@ export const locations: CityData[] = [
       {
         question: 'How quickly can you respond to IT emergencies in Brampton?',
         answer:
-          'For Brampton clients we offer rapid emergency response with SLA-based guarantees. Standard response for critical issues is under 1 hour, with immediate remote support and on-site support within 2 to 4 hours when needed.',
+          'Critical issues are triaged immediately by the 24/7 helpdesk and most are worked remotely as soon as the call lands. When an issue needs hands-on work we dispatch from our office at 7810 Keele Street in Vaughan. We deliberately do not publish a guaranteed response time as a marketing number, because a number without the conditions attached is not a commitment. Before you sign we will tell you plainly how the helpdesk is staffed, who picks up outside business hours, and what on-site dispatch to Brampton depends on.',
       },
       {
         question: 'What managed IT services do you provide in Brampton?',

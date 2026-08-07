@@ -329,8 +329,14 @@ export const generateServiceSchema = (service: {
   url: string;
   provider?: string;
   areaServed?: string;
+  // Structured place for areaServed. A bare string is valid but weak; a City
+  // node with a sameAs pointing at the canonical entity is what lets Google and
+  // the AI crawlers resolve "Mississauga" to the actual municipality rather
+  // than to a token on the page.
+  areaServedPlace?: { name: string; province?: string; sameAs?: string[] };
   serviceType?: string;
 }) => {
+  const place = service.areaServedPlace;
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -341,7 +347,17 @@ export const generateServiceSchema = (service: {
       "name": service.provider || "IT Rapid Support Inc."
     },
     "serviceType": service.serviceType || "IT Services",
-    "areaServed": service.areaServed || "Greater Toronto Area, Ontario",
+    "areaServed": place
+      ? {
+          "@type": "City",
+          "name": place.name,
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": place.province || "Ontario, Canada"
+          },
+          ...(place.sameAs && place.sameAs.length ? { "sameAs": place.sameAs } : {})
+        }
+      : service.areaServed || "Greater Toronto Area, Ontario",
     "url": service.url.startsWith("http") ? service.url : `https://itrapidsupport.com${service.url}`
   };
 };

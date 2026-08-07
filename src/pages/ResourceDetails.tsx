@@ -1247,7 +1247,7 @@ export const allResources: ResourceItem[] = [
       "## Reuse",
       "The figures, tables and findings in this report may be reused freely, including by journalists, researchers and other businesses, with attribution to IT Rapid Support and a link to this page. The original email authentication measurement is ours; the public statistics belong to the organizations that published them and should be cited to those organizations directly, using the links in the table above.",
       "## About This Report",
-      "IT Rapid Support is a managed IT and cybersecurity provider based at 7810 Keele Street in Vaughan, Ontario, serving businesses across [Toronto](/it-support/toronto/), [Vaughan](/it-support/vaughan/), [York Region](/it-support/york-region/) and the wider Greater Toronto Area. We compiled this report because our clients kept being shown American vendor statistics about a Canadian problem, and because the local cut of the federal data had not been published by anyone.",
+      "IT Rapid Support is a managed IT and cybersecurity provider based at 7810 Keele Street in Vaughan, Ontario, serving businesses across [Toronto](/it-support/toronto/), [Vaughan](/it-support/vaughan/), [York Region](/it-support/york-region/), [Mississauga](/it-support/mississauga/), [Brampton](/it-support/brampton/) and the wider Greater Toronto Area. We compiled this report because our clients kept being shown American vendor statistics about a Canadian problem, and because the local cut of the federal data had not been published by anyone.",
       "If you want to see where your own organization sits against the controls behind these numbers, our [free IT risk calculator](/it-risk-calculator/) scores fourteen of them and tells you which to fix first. It runs entirely in your browser — nothing you enter is sent to us or stored anywhere.",
       "If you want to know where your own organization sits against the numbers in this report — starting with whether your domain can be spoofed today — call (289) 582-9930 or [get in touch](/contact/). Related reading: our [GTA email spoofing study](/resources/gta-email-spoofing-study-2026/), our [small business cybersecurity checklist](/resources/small-business-cybersecurity-checklist/), and our guide to [ransomware protection for Ontario businesses](/resources/ransomware-protection-ontario-businesses/)."
     ].join('\n\n'),
@@ -1386,6 +1386,7 @@ export const allResources: ResourceItem[] = [
       "This is the second measurement in a series. The first, our [GTA small-business cybersecurity report](/resources/gta-smb-cybersecurity-report-2026/), established the authentication baseline; an [earlier scan of 118 domains](/resources/gta-email-spoofing-study-2026/) established the method. The third took the same sample above the DNS layer and measured [what 470 GTA business websites disclose about their own security](/resources/gta-business-website-security-2026/) — where the sharp platform split found here turns out not to carry over at all. We intend to re-run the platform scan on the same sample so that the market share and the enforcement rates become a time series rather than a snapshot. Journalists, researchers and other providers are welcome to cite these figures with attribution to IT Rapid Support.",
       "## Where IT Rapid Support Fits",
       "We run this measurement because it is our market. IT Rapid Support is a managed IT and cybersecurity provider working from 7810 Keele Street in [Vaughan](/it-support/vaughan/), and email authentication is one of the first things we fix in a new client environment — usually because it has never been done. We manage [Microsoft 365 tenants](/services/microsoft-365-managed-services/), configure SPF, DKIM and DMARC to enforcement, and run [managed cybersecurity](/services/managed-security/) with multi-factor authentication, endpoint protection, monitored backups and around-the-clock detection and response.",
+      "The sample is regional, so the findings apply as much to Peel as to York Region. We support businesses on both sides of that line — [managed IT services in Mississauga](/it-support/mississauga/) and [IT support in Brampton](/it-support/brampton/) run off the same helpdesk and the same security stack as the rest of the GTA.",
       "If you want to know where your own domain sits against these numbers, run the [spoof check](/tools/email-spoof-check/) yourself, or call (289) 582-9930 and we will read your records with you. If it turns out your email authentication is already finished, we will tell you that and you will have spent ten minutes finding out."
     ].join('\n\n'),
     type: "whitepaper",
@@ -1463,6 +1464,7 @@ export const allResources: ResourceItem[] = [
       "## Where IT Rapid Support Fits",
       "We run these measurements because this is our market. IT Rapid Support is a managed IT and cybersecurity provider working from 7810 Keele Street in [Vaughan](/it-support/vaughan/). We are not a web agency and we do not build websites — which is part of why this gap interests us, because in most of the environments we take over, nobody owns the website's security posture at all.",
       "What we do own is the rest of it: [managed cybersecurity](/services/managed-security/) with multi-factor authentication, endpoint protection, monitored backups and around-the-clock detection and response, and [Microsoft 365 managed services](/services/microsoft-365-managed-services/) including the SPF, DKIM and DMARC work the first two studies in this series measured.",
+      "The 500-domain sample is drawn from across the region, Peel included, and the pattern does not change at the city line. The same baseline work is what we do for clients in [Mississauga](/it-support/mississauga/) and [Brampton](/it-support/brampton/) as for clients around the office in Vaughan.",
       "If you want to know where your own organisation sits against these numbers, start with the [IT risk calculator](/it-risk-calculator/) or call (289) 582-9930. If it turns out your baseline is already in good shape, we will tell you that."
     ].join('\n\n'),
     type: "whitepaper",
@@ -1658,6 +1660,37 @@ const ResourceDetails: React.FC = () => {
     : [...allResources.slice(currentIndex + 1), ...allResources.slice(0, currentIndex)]
   ).slice(0, 3);
 
+  // City chips in the "Explore IT Rapid Support" row. Toronto and Vaughan were
+  // hardcoded here, which is why they carried ~39 identical exact-match anchors
+  // apiece across the article library while Mississauga and Brampton — the two
+  // priority cities — received almost none. Peel is now represented on every
+  // article, and the anchor wording rotates off the resource id so 39 pages do
+  // not all publish the same exact-match phrase.
+  const cityChipAnchors: Record<string, string[]> = {
+    toronto: ['IT Support Toronto', 'Managed IT Services Toronto', 'Toronto IT Support'],
+    vaughan: ['IT Support Vaughan', 'Managed IT Services Vaughan', 'Vaughan IT Support'],
+    mississauga: [
+      'Managed IT Services in Mississauga',
+      'IT Support Mississauga',
+      'Mississauga IT Helpdesk',
+      'IT Services in Mississauga',
+    ],
+    brampton: [
+      'IT Support Brampton',
+      'Managed IT Services in Brampton',
+      'Brampton IT Helpdesk',
+      'IT Services in Brampton',
+    ],
+  };
+  // Stable per-article offset — same input always yields the same anchor, so the
+  // link graph does not churn between builds.
+  const anchorSeed = (id ?? '').split('').reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
+  const cityChip = (slug: string) => {
+    const options = cityChipAnchors[slug];
+    return { slug, label: options[anchorSeed % options.length] };
+  };
+  const cityChips = ['toronto', 'vaughan', 'mississauga', 'brampton'].map(cityChip);
+
   const getIcon = (type: string) => {
     switch (type) {
       case 'guide':
@@ -1828,8 +1861,15 @@ const ResourceDetails: React.FC = () => {
                   <Link to="/services/it-support/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Managed IT Support</Link>
                   <Link to="/services/managed-security/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Managed Security</Link>
                   <Link to="/services/cloud-security/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">Cloud Security</Link>
-                  <Link to="/it-support/toronto/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">IT Support Toronto</Link>
-                  <Link to="/it-support/vaughan/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors">IT Support Vaughan</Link>
+                  {cityChips.map((chip) => (
+                    <Link
+                      key={chip.slug}
+                      to={`/it-support/${chip.slug}/`}
+                      className="inline-flex items-center px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 text-sm hover:bg-slate-200 transition-colors"
+                    >
+                      {chip.label}
+                    </Link>
+                  ))}
                   <Link to="/contact/" className="inline-flex items-center px-3 py-1.5 rounded-full bg-red-600 text-white text-sm hover:bg-red-700 transition-colors">Get a Quote</Link>
                 </div>
               </div>

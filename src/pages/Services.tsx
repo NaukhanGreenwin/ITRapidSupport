@@ -117,7 +117,15 @@ const Services: React.FC = () => {
               or the wider{' '}
               <Link to="/it-support/gta/" className="text-red-600 hover:text-red-700 font-medium">
                 Greater Toronto Area
-              </Link>.
+              </Link>. West of the city the same services cover Peel Region —{' '}
+              <Link to="/it-support/mississauga/" className="text-red-600 hover:text-red-700 font-medium">
+                managed IT services in Mississauga
+              </Link>{' '}
+              and{' '}
+              <Link to="/it-support/brampton/" className="text-red-600 hover:text-red-700 font-medium">
+                IT support in Brampton
+              </Link>{' '}
+              each set out what the local coverage actually includes.
             </p>
           </div>
 

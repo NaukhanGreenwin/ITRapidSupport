@@ -454,7 +454,15 @@ const ManagedITPlans: React.FC = () => {
               managed IT services in Vaughan
             </Link>{' '}
             get local dispatch rather than a cross-GTA drive, with 24/7 support and on-site help
-            across the wider region when a problem needs hands on it. Compliance controls support
+            across the wider region when a problem needs hands on it. The same plans and the same
+            fixed monthly pricing apply to{' '}
+            <Link to="/it-support/mississauga/" className="text-red-600 hover:text-red-700 font-medium">
+              Mississauga IT support
+            </Link>{' '}
+            and{' '}
+            <Link to="/it-support/brampton/" className="text-red-600 hover:text-red-700 font-medium">
+              managed IT in Brampton
+            </Link>. Compliance controls support
             your PIPEDA and PHIPA obligations — they do not by themselves make you compliant, and any
             provider telling you otherwise is overselling.
           </p>

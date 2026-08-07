@@ -30,6 +30,13 @@ const GTACybersecuritySection: React.FC = () => {
               and the surrounding coverage across Concord, Woodbridge, Maple, Thornhill, and Kleinburg is set out there too.
             </p>
             <p className="text-gray-700 mb-6">
+              West of the city the same team covers Peel Region from the same office. What that looks like day to day for a
+              Mississauga office, clinic or warehouse — from the Airport Corporate Centre through Meadowvale and Heartland — is
+              on our <Link to="/it-support/mississauga/" className="text-red-600 hover:text-red-700 font-medium">managed IT services in Mississauga</Link> page,
+              and the equivalent for Bramalea, Steeles Industrial and Gore Meadows is on
+              our <Link to="/it-support/brampton/" className="text-red-600 hover:text-red-700 font-medium">IT support in Brampton</Link> page.
+            </p>
+            <p className="text-gray-700 mb-6">
               Want to know where you stand before you talk to anyone? Our
               free <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">IT risk calculator</Link> scores
               fourteen security control areas — backups, multi-factor authentication, endpoint protection, admin accounts,

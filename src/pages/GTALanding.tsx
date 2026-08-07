@@ -160,7 +160,16 @@ const GTALanding: React.FC = () => {
               <Link to="/it-support/vaughan/" className="text-red-600 hover:text-red-700 font-medium">
                 IT support in Vaughan
               </Link>
-              , which also covers Concord, Woodbridge, Maple, Thornhill, and Kleinburg.
+              , which also covers Concord, Woodbridge, Maple, Thornhill, and Kleinburg. Peel Region is a short run west
+              along the 407 and 401, and it is covered by the same helpdesk and the same dispatch —{' '}
+              <Link to="/it-support/mississauga/" className="text-red-600 hover:text-red-700 font-medium">
+                IT services in Mississauga
+              </Link>{' '}
+              and{' '}
+              <Link to="/it-support/brampton/" className="text-red-600 hover:text-red-700 font-medium">
+                IT support in Brampton
+              </Link>{' '}
+              set out the local detail for each.
             </p>
           </div>
 
