@@ -51,10 +51,33 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     }
   }, [location, googleAnalyticsId]);
 
+  // Track phone-call clicks sitewide. Delegated at the document so every
+  // `tel:` link (18 across footer, city, service and tool pages) is covered
+  // without touching each component.
+  useEffect(() => {
+    if (navigator.webdriver) return; // headless prerender/bot — never send hits
+    if (process.env.NODE_ENV === 'development') return;
+
+    const handlePhoneClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      const link = target?.closest?.('a[href^="tel:"]') as HTMLAnchorElement | null;
+      if (!link) return;
+
+      trackEvent('phone_call_click', {
+        phone_number: link.getAttribute('href')?.replace('tel:', '') || '',
+        link_text: (link.textContent || '').trim().slice(0, 100),
+        page_path: window.location.pathname
+      });
+    };
+
+    document.addEventListener('click', handlePhoneClick, true);
+    return () => document.removeEventListener('click', handlePhoneClick, true);
+  }, []);
+
   // Track user behavior
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') return;
-    
+
     // Track scroll depth
     const trackScrollDepth = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;

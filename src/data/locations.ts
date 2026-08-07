@@ -122,7 +122,7 @@ export const locations: CityData[] = [
     title: 'Managed IT Services Vaughan | 24/7 IT Support, Keele St',
     h1: 'Managed IT Services & IT Support in Vaughan',
     description:
-      'IT support run from an office on Keele St in Vaughan, not a call centre. 24/7 helpdesk, security included, one fixed monthly fee. Call (289) 582-9930.',
+      'Managed IT services in Vaughan run from our own office on Keele St, not a call centre. 24/7 helpdesk, security included, one fixed monthly fee. (289) 582-9930.',
     keywords:
       'managed IT services Vaughan, IT services Vaughan, IT support Vaughan, cybersecurity Vaughan, Vaughan IT company, IT helpdesk Vaughan, Concord IT support',
     intro:
@@ -210,6 +210,21 @@ export const locations: CityData[] = [
         question: 'Do you offer IT consulting or a vCIO for Vaughan businesses?',
         answer:
           'Yes. IT consulting is the scoped version with a defined end point — an assessment of what you run now, a prioritised risk list in plain English, and a written plan with rough costs, typically prompted by growth, an office move or fit-out, a cloud migration, a security review an insurer or client has asked for, or an inherited environment nobody documented. For businesses that want the strategic layer continuously, a vCIO engagement runs scheduled reviews of budget, risk, hardware lifecycle, and roadmap so replacements and licensing changes are planned rather than discovered. We do not publish a consulting rate card without having seen your environment.',
+      },
+      {
+        question: 'What is the difference between managed IT services and break-fix IT support?',
+        answer:
+          'Break-fix is billed hourly after something goes wrong. Managed IT services are a fixed monthly fee covering an agreed scope, which means the provider absorbs the cost of instability and has a reason to prevent tickets rather than bill for them. Break-fix can be the cheaper answer for a very small Vaughan business with no regulated data and no cost attached to a day of downtime. Once downtime has a price, or a client or insurer starts asking what controls you have, managed is usually the better economics.',
+      },
+      {
+        question: 'Do you require a long-term contract for managed IT services in Vaughan?',
+        answer:
+          'We scope the agreement to what you are running rather than pushing a standard term, and we would rather you asked the term and exit questions of every provider you are considering. Before signing anything, get in writing what is inside the monthly fee and what is billed on top, whether security tooling and licensing are included, what happens when headcount changes mid-term, who owns your Microsoft 365 tenant and domain, and what you receive on the way out. Our position on the last one is simple: your tenant, your domain, your data.',
+      },
+      {
+        question: 'Do you support businesses in Vaughan that already have an IT provider?',
+        answer:
+          'Yes, and a second opinion does not oblige you to move. Most Vaughan businesses that call us already have a provider and want to know which of their concerns are real. We will tell you what is fine, what is genuinely urgent, and what has been oversold, including when the honest answer is that your current arrangement is working. If you do decide to switch, the transition is run as an overlapping four-stage handover rather than a cliff edge.',
       },
       {
         question: 'How do you protect Vaughan businesses from email fraud and ransomware?',
@@ -307,6 +322,23 @@ export const locations: CityData[] = [
           'The reason people put the switch off is a fear of being stranded mid-transition, and it is a reasonable fear when handled badly. We run it as the documented four-stage process described above, and the transition itself is deliberately overlapping rather than a cliff edge: we document and take over monitoring, security tooling, and the helpdesk while the existing arrangement is still in place, then cut over once your environment is under management and your staff know how to reach us.',
           'The part worth getting right before you give notice is ownership. Ask, in writing, who holds the tenant administrator credentials for your Microsoft 365 environment, who owns the domain registration and the DNS, whose account the licences are purchased under, where the backups physically live and who can access them, and whether documentation of your environment exists and will be handed over. A business that owns its own tenant, domain, and licensing can change providers as a commercial decision. A business that does not is negotiating from a weak position, and that is worth discovering now rather than during the notice period. We take the same position on our own clients: your tenant, your domain, your data.',
           'None of this obliges you to move. If you would like a second opinion on the setup you already have — what is fine, what is genuinely urgent, and what a provider has been overselling — call (289) 582-9930 and we will tell you honestly, including when the answer is that your current arrangement is working.',
+        ],
+      },
+      {
+        heading: 'Managed IT Services vs Break-Fix: Which One a Vaughan Business Needs',
+        paragraphs: [
+          'The two ways to buy IT support are genuinely different products, and the word "managed" is what separates them. Break-fix is hourly: something stops working, you call, someone bills you for the time it takes to restart it. Managed IT is a fixed monthly fee covering an agreed scope, where the provider carries the cost of things going wrong — which is the only arrangement that makes prevention worth anyone\'s while.',
+          'The distinction matters commercially, not philosophically. Under break-fix, a provider earns more when your environment is unstable, and every hour spent patching, monitoring, or hardening is an hour they are not billing. Under a managed agreement the incentive inverts: a quiet month is a profitable month, so the work that stops tickets happening — patching, monitoring, backup verification, endpoint protection, removing the accounts of staff who left — actually gets done. Neither model is dishonest. They simply reward different behaviour, and you should know which one you are buying.',
+          'Break-fix still suits some businesses. If you run under roughly ten people, hold no regulated data, have nothing that costs you money when it is offline for a day, and have someone internally who is comfortable with technology, paying by the hour can be the cheaper answer and we will say so. The threshold usually gets crossed when downtime starts having a price attached — a warehouse that cannot ship, a project team that cannot reach files, a clinic that cannot open charts — or when a client, an insurer, or a contract starts asking what controls you have.',
+          'What managed IT services in Vaughan cover at our end is the whole environment rather than the incidents: a 24/7 helpdesk your staff can call directly, proactive monitoring and patching, cybersecurity built into the monthly fee instead of quoted separately, Microsoft 365 and cloud administration, monitored backups that are checked rather than assumed, and on-site dispatch from Keele Street when something needs hands on it. The full line-by-line breakdown of what sits in each tier is set out on our [managed IT plans](/managed-it-plans/) page, and our free [IT quote checker](/tools/it-quote-checker/) will tell you what an existing proposal is missing before you sign it.',
+        ],
+      },
+      {
+        heading: 'How a Vaughan Managed IT Quote Is Built, and What to Get in Writing',
+        paragraphs: [
+          'We do not publish a per-user price, because a number quoted before anyone has looked at your environment is a guess you would end up paying for. What we will publish is how the figure is actually built, so you can read our proposal and anyone else\'s with the same eyes: the number of people who need support, the number and age of servers, workstations and network devices under management, which cloud and security tooling is included versus billed separately, and how much on-site time the arrangement anticipates. Two Vaughan businesses with identical headcounts can land at very different numbers for entirely legitimate reasons, and a provider should be able to tell you which of those drivers is moving yours.',
+          'The questions worth asking before you sign anything, with us or with anyone: what exactly is inside the monthly fee and what is billed on top, whether security tooling and licensing are included or extra, what happens when you add or remove staff mid-term, who owns your Microsoft 365 tenant and domain, where the backups live and who can reach them, what the notice period is, and what you receive on the way out. Providers who answer those in writing are usually the ones who have thought about the answers.',
+          'One thing we will not do is quote you a guaranteed response time, because we do not publish one. What we will do is tell you how the helpdesk is staffed, who picks up outside business hours, and how on-site dispatch works from our Keele Street office, which is the substance behind the number other providers print. Call (289) 582-9930 and we will scope it against what you are actually running.',
         ],
       }
     ],

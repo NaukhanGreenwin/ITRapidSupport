@@ -17,6 +17,24 @@ interface LocationLandingProps {
   slug: string;
 }
 
+// Section paragraphs in locations.ts may carry `[text](/path)` links so city
+// pages can link in copy without every sentence being hardcoded in JSX. Plain
+// paragraphs are returned untouched.
+const renderInlineLinks = (text: string): React.ReactNode => {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+    const [, label, href] = match;
+    return href.startsWith('/') ? (
+      <Link key={i} to={href} className="text-red-600 hover:text-red-700 font-medium">{label}</Link>
+    ) : (
+      <a key={i} href={href} className="text-red-600 hover:text-red-700 font-medium">{label}</a>
+    );
+  });
+};
+
 const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
   const data = getLocation(slug);
 
@@ -156,7 +174,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
                 </h2>
                 {section.paragraphs.map((p) => (
                   <p key={p.slice(0, 40)} className="text-gray-600 leading-relaxed mb-4">
-                    {p}
+                    {renderInlineLinks(p)}
                   </p>
                 ))}
               </div>

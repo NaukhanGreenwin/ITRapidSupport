@@ -3,6 +3,7 @@ import { Mail, Phone, Clock, MapPin, Shield, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import SEO, { generateLocalBusinessSchema } from '../components/SEO';
+import { trackFormSubmission } from '../components/AnalyticsTracker';
 
 interface FormData {
   firstName: string;
@@ -54,11 +55,19 @@ const Contact: React.FC = () => {
       const result = await response.json();
       
       if (response.ok) {
-        setSubmitStatus({ 
-          type: 'success', 
-          message: 'Your message has been sent! We will get back to you soon.' 
+        setSubmitStatus({
+          type: 'success',
+          message: 'Your message has been sent! We will get back to you soon.'
         });
-        
+
+        // Only fires on a confirmed 2xx from the form endpoint, so the GA4
+        // key event counts real submissions and not attempts.
+        trackFormSubmission('contact_page_form', {
+          subject: formData.get('subject') || '',
+          company_provided: !!formData.get('company'),
+          page_location: window.location.pathname
+        });
+
         setFormData({
           firstName: '',
           lastName: '',

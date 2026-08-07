@@ -26,7 +26,7 @@ const GTACybersecuritySection: React.FC = () => {
             <p className="text-gray-700 mb-6">
               We work from an office at 7810 Keele St, which means the same team that monitors your systems can be on site
               rather than dispatched across the region. Businesses in our own city can read what that covers day to day on
-              our <Link to="/it-support/vaughan/" className="text-red-600 hover:text-red-700 font-medium">IT support Vaughan</Link> page,
+              our <Link to="/it-support/vaughan/" className="text-red-600 hover:text-red-700 font-medium">managed IT services in Vaughan</Link> page,
               and the surrounding coverage across Concord, Woodbridge, Maple, Thornhill, and Kleinburg is set out there too.
             </p>
             <p className="text-gray-700 mb-6">
