@@ -71,7 +71,7 @@
       }
     </style>
     
-    <!-- Google Analytics Tag (GA4) — single loader; AnalyticsTracker sends
+    <!-- Google Analytics (GA4) + Google Ads tags — single loader; AnalyticsTracker sends
          page_view events on route change, so auto page_view stays off here
          to avoid double-counting the first pageview. The loader is skipped
          entirely for automated browsers (navigator.webdriver) so the prerender
@@ -101,6 +101,9 @@
           cookie_flags: 'samesite=none;secure',
           anonymize_ip: true
         });
+        // Google Ads tag (account 602-431-1245). One gtag.js loader serves both
+        // destinations, so this needs no second script tag.
+        gtag('config', 'AW-18376615029');
         ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (evt) {
           window.addEventListener(evt, loadGA, { once: true, passive: true });
         });
