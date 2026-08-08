@@ -1788,7 +1788,7 @@ const ResourceDetails: React.FC = () => {
     isAccessibleForFree: true,
     measurementTechnique: currentResource.dataset.measurementTechnique,
     temporalCoverage: currentResource.dataset.temporalCoverage,
-    spatialCoverage: currentResource.dataset.spatialCoverage,
+    spatialCoverage: { '@type': 'Place', name: currentResource.dataset.spatialCoverage },
     variableMeasured: currentResource.dataset.variables,
     creator: { '@type': 'Organization', name: 'IT Rapid Support', url: 'https://itrapidsupport.com' },
     includedInDataCatalog: { '@type': 'DataCatalog', name: 'IT Rapid Support Research', url: 'https://itrapidsupport.com/resources/' }
