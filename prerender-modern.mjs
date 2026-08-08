@@ -82,6 +82,7 @@ const routes = [
   '/resources/choosing-managed-it-provider-toronto',
   '/resources/it-support-small-business-gta',
   '/resources/why-24-7-it-helpdesk-matters',
+  '/resources/it-helpdesk-mississauga-guide',
   '/resources/cloud-backup-disaster-recovery-guide',
   '/resources/stop-phishing-attacks-email-security',
   '/resources/signs-business-outgrown-break-fix-it',

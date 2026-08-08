@@ -52,6 +52,10 @@ export const guideLinks: Record<string, GuideLink> = {
     'why-24-7-it-helpdesk-matters',
     'Why a 24/7 IT Helpdesk Matters'
   ),
+  'it-helpdesk-mississauga-guide': guide(
+    'it-helpdesk-mississauga-guide',
+    'IT Helpdesk Mississauga: What 24/7 Support Should Include'
+  ),
   'cloud-backup-disaster-recovery-guide': guide(
     'cloud-backup-disaster-recovery-guide',
     'Cloud Backup & Disaster Recovery Guide'
@@ -186,6 +190,14 @@ const yorkRegionSlugs = new Set([
 ]);
 
 export const getCityGuides = (slug: string): GuideLink[] => {
+  // Mississauga leads with its own local helpdesk guide.
+  if (slug === 'mississauga') {
+    return getGuides([
+      'it-helpdesk-mississauga-guide',
+      'it-support-services-gta-buyers-guide',
+      'choosing-managed-it-provider-toronto',
+    ]);
+  }
   if (slug === 'vancouver') {
     return getGuides([
       'managed-it-services-vs-in-house',
