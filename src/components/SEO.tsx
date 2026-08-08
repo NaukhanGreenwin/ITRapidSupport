@@ -124,38 +124,16 @@ export const generateLocalBusinessSchema = (location?: string) => {
     ? locations[location as keyof typeof locations] 
     : locations.default;
 
-  // Define service areas with postal codes
+  // Service-area cities. schema.org City does not accept a postalCode property
+  // (only PostalAddress and GeoShape do) — listing codes here fails schema.org
+  // validation on every page that embeds this block, so cities are named only.
   const serviceAreas = [
-    {
-      "@type": "City",
-      "name": "Vaughan",
-      "postalCode": ["L4K", "L4L", "L4H", "L4J", "L6A"]
-    },
-    {
-      "@type": "City",
-      "name": "Toronto",
-      "postalCode": ["M5V", "M5T", "M5S", "M5R", "M5P", "M5N", "M5M", "M5L", "M5K", "M5J", "M5H", "M5G", "M5E", "M5C", "M5B", "M5A"]
-    },
-    {
-      "@type": "City",
-      "name": "Mississauga",
-      "postalCode": ["L5A", "L5B", "L5C", "L5E", "L5G", "L5H", "L5J", "L5K", "L5L", "L5M", "L5N", "L5P", "L5R", "L5S", "L5T", "L5V", "L5W"]
-    },
-    {
-      "@type": "City",
-      "name": "Brampton",
-      "postalCode": ["L6P", "L6R", "L6S", "L6T", "L6V", "L6W", "L6X", "L6Y", "L6Z", "L7A"]
-    },
-    {
-      "@type": "City",
-      "name": "Woodbridge",
-      "postalCode": ["L4L", "L4H"]
-    },
-    {
-      "@type": "City",
-      "name": "Concord",
-      "postalCode": ["L4K"]
-    }
+    { "@type": "City", "name": "Vaughan" },
+    { "@type": "City", "name": "Toronto" },
+    { "@type": "City", "name": "Mississauga" },
+    { "@type": "City", "name": "Brampton" },
+    { "@type": "City", "name": "Woodbridge" },
+    { "@type": "City", "name": "Concord" }
   ];
 
   // Define services offered
@@ -229,15 +207,6 @@ export const generateLocalBusinessSchema = (location?: string) => {
         "closes": "17:00"
       }
     ],
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": loc.latitude,
-        "longitude": loc.longitude
-      },
-      "geoRadius": "50000"
-    },
     "areaServed": {
       "@type": "State",
       "name": "Ontario",
@@ -265,8 +234,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
     "hasMap": "https://goo.gl/maps/k8R5vD9Xvf9K4NE77",
     "sameAs": ITRS_SAME_AS,
     "additionalType": ["https://schema.org/ITService", "https://schema.org/ProfessionalService"],
-    "knowsLanguage": ["en", "fr"],
-    "availableLanguage": ["en", "fr"]
+    "knowsLanguage": ["en", "fr"]
   };
 };
 
@@ -442,16 +410,20 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={fullOgImage} />
       <meta name="twitter:creator" content="@ITRapidSupport" />
       
-      {/* Alternate Languages for International SEO */}
+      {/* Hreflang: single-language site (English, Canada). Every page must carry
+          a self-referencing en-ca annotation, and x-default must point at the
+          page's own canonical URL — not the homepage, which makes every hreflang
+          group invalid for lacking a self-reference. */}
+      <link rel="alternate" hrefLang="en-ca" href={fullCanonicalUrl} />
       {alternateLanguages.map((altLang) => (
-        <link 
-          key={altLang.locale} 
-          rel="alternate" 
-          hrefLang={altLang.locale} 
-          href={altLang.url.startsWith('http') ? altLang.url : `${baseUrl}${altLang.url}`} 
+        <link
+          key={altLang.locale}
+          rel="alternate"
+          hrefLang={altLang.locale}
+          href={altLang.url.startsWith('http') ? altLang.url : `${baseUrl}${altLang.url}`}
         />
       ))}
-      <link rel="alternate" hrefLang="x-default" href={baseUrl} />
+      <link rel="alternate" hrefLang="x-default" href={fullCanonicalUrl} />
       
       {/* Structured Data Schema */}
       {schema && (

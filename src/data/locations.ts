@@ -119,7 +119,7 @@ export const locations: CityData[] = [
     slug: 'vaughan',
     city: 'Vaughan',
     schemaLocation: 'vaughan',
-    title: 'Managed IT Services Vaughan | 24/7 IT Support, Keele St',
+    title: 'Managed IT Services Vaughan | Keele St',
     h1: 'Managed IT Services & IT Support in Vaughan',
     description:
       'Managed IT services in Vaughan run from our own office on Keele St, not a call centre. 24/7 helpdesk, security included, one fixed monthly fee. (289) 582-9930.',

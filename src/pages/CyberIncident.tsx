@@ -12,9 +12,18 @@ const CyberIncident: React.FC = () => {
         <title>Cyber Incident Response | IT Rapid Support</title>
         <meta name="description" content="24/7 cyber incident response services. Immediate help for data breaches, ransomware, and cyber emergencies across Toronto and the GTA." />
         <link rel="canonical" href="https://itrapidsupport.com/cyber-incident/" />
+        <link rel="alternate" hrefLang="en-ca" href="https://itrapidsupport.com/cyber-incident/" />
+        <link rel="alternate" hrefLang="x-default" href="https://itrapidsupport.com/cyber-incident/" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://itrapidsupport.com/cyber-incident/" />
         <meta property="og:title" content="Cyber Incident Response | IT Rapid Support" />
         <meta property="og:description" content="24/7 expert cyber incident response. Immediate assistance for data breaches, ransomware, and other cyber emergencies across the GTA." />
+        <meta property="og:image" content="https://itrapidsupport.com/images/og-image.jpg" />
+        <meta property="og:site_name" content="IT Rapid Support" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cyber Incident Response | IT Rapid Support" />
+        <meta name="twitter:description" content="24/7 cyber incident response for data breaches, ransomware, and cyber emergencies across Toronto and the GTA." />
+        <meta name="twitter:image" content="https://itrapidsupport.com/images/og-image.jpg" />
       </Helmet>
 
       <HeroSection

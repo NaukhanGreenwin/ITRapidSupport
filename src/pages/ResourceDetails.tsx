@@ -1810,6 +1810,8 @@ const ResourceDetails: React.FC = () => {
         <title>{`${currentResource.seoTitle ?? currentResource.title} | IT Rapid Support`}</title>
         <meta name="description" content={`${currentResource.description?.substring(0, 155)}...`} />
         <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="en-ca" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`${currentResource.seoTitle ?? currentResource.title} | IT Rapid Support`} />
         <meta property="og:description" content={currentResource.description} />

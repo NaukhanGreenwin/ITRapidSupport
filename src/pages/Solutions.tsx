@@ -42,7 +42,7 @@ function Solutions() {
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Link 
-                  to="/contact?subject=Demo%20Request" 
+                  to="/contact/?subject=Demo%20Request" 
                   className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium"
                 >
                   Request a Demo <ChevronRight className="ml-2 h-5 w-5" />
@@ -303,7 +303,7 @@ function Solutions() {
               </div>
               
               <Link 
-                to="/contact?subject=Schedule%20a%20Demo" 
+                to="/contact/?subject=Schedule%20a%20Demo" 
                 className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium inline-flex items-center"
               >
                 Schedule a Demo <ChevronRight className="ml-2 h-5 w-5" />
@@ -400,7 +400,7 @@ function Solutions() {
                   Contact Us <ChevronRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link 
-                  to="/contact?subject=Pricing%20Information" 
+                  to="/contact/?subject=Pricing%20Information" 
                   className="border border-white/40 bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center font-medium"
                 >
                   View Pricing
