@@ -8,7 +8,7 @@ const Cookies = () => {
     <div className="min-h-screen bg-slate-50">
       <SEO
         title="Cookie Policy"
-        description="How IT Rapid Support uses cookies and similar technologies on itrapidsupport.com."
+        description="How IT Rapid Support uses cookies and similar technologies on itrapidsupport.com, what they do, and how you can manage cookies on your device."
         canonicalUrl="/cookies"
       />
       {/* Header */}

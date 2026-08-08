@@ -9,7 +9,7 @@ const ITSupport = () => {
     <div className="min-h-screen bg-slate-50">
       <SEO
         title="IT Support Services Toronto | 24/7 Helpdesk"
-        description="24/7 IT support services for Toronto businesses: managed helpdesk, proactive monitoring, on-site support, and rapid response across the GTA. Call (289) 582-9930."
+        description="24/7 IT support for Toronto businesses: managed helpdesk, proactive monitoring, on-site support, and rapid response across the GTA. Call (289) 582-9930."
         keywords="IT support Toronto, 24/7 IT support Toronto, IT helpdesk Toronto, managed IT support GTA, on-site IT support Toronto"
         canonicalUrl="/services/it-support"
         schema={[

@@ -514,7 +514,7 @@ export const servicesDetail: ServiceDetailData[] = [
     title: 'vCIO Services Toronto | Virtual CIO & IT Strategy',
     h1: 'vCIO & IT Strategy Services for Toronto and GTA Businesses',
     description:
-      'Executive-level IT leadership without the full-time cost: vCIO services, IT planning, budgeting, and roadmaps for Toronto and GTA businesses. Call (289) 582-9930.',
+      'Executive-level IT leadership without the full-time cost: vCIO, IT planning, budgeting, and roadmaps for Toronto and GTA businesses. Call (289) 582-9930.',
     keywords:
       'vCIO services Toronto, vCIO Toronto, virtual CIO services, vCIO services Canada, vCIO Ontario, virtual CIO strategic planning, vCIO cost, virtual CIO for small business, IT strategy consulting GTA, IT planning and budgeting, technology roadmap',
     intro:
@@ -589,7 +589,7 @@ export const servicesDetail: ServiceDetailData[] = [
     title: 'Emergency IT Services | 24/7 Toronto & GTA',
     h1: '24/7 Emergency IT Services in Toronto & the GTA',
     description:
-      'Server down? Email out? Ransomware? 24/7 emergency IT help for Toronto & GTA businesses — remote plus on-site dispatch. New clients welcome. Call (289) 582-9930.',
+      'Server down? Email out? Ransomware? 24/7 emergency IT help for Toronto & GTA businesses — remote or on-site dispatch. New clients welcome. Call (289) 582-9930.',
     keywords:
       'emergency IT services, emergency IT support Toronto, 24/7 IT support GTA, after-hours IT support, server down help, network outage support, urgent IT help Toronto, emergency computer support',
     intro:

@@ -36,7 +36,7 @@ export const industries: IndustryData[] = [
     industry: 'Law Firms',
     title: 'Managed IT Services for Law Firms in the GTA',
     description:
-      'IT support and cybersecurity built for law firms. Document security, confidentiality, Microsoft 365, and 24/7 helpdesk for GTA legal practices. Call (289) 582-9930.',
+      'IT support and cybersecurity for law firms. Document security, confidentiality, Microsoft 365, and 24/7 helpdesk for GTA legal practices. Call (289) 582-9930.',
     keywords:
       'IT support for law firms, legal IT services Toronto, law firm cybersecurity, managed IT for lawyers GTA, legal document security',
     intro:
@@ -82,7 +82,7 @@ export const industries: IndustryData[] = [
     industry: 'Accounting Firms',
     title: 'Managed IT Services for Accounting & CPA Firms',
     description:
-      'IT support and cybersecurity for accounting and CPA firms. Tax-season uptime, data protection, Microsoft 365, and 24/7 helpdesk across the GTA. Call (289) 582-9930.',
+      'IT support and cybersecurity for accounting and CPA firms. Tax-season uptime, data protection, Microsoft 365, and 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for accountants, accounting firm IT services, CPA cybersecurity, managed IT for accounting firms Toronto, tax season IT support',
     intro:
@@ -175,7 +175,7 @@ export const industries: IndustryData[] = [
     title: 'Managed IT Services for Real Estate & Property Management',
     seoTitle: 'Managed IT Services for Real Estate Firms',
     description:
-      'IT support and cybersecurity for real estate brokerages and property managers. Secure transactions, mobile teams, Microsoft 365, 24/7 helpdesk. Call (289) 582-9930.',
+      'IT support and cybersecurity for real estate brokerages and property managers. Secure transactions, Microsoft 365, 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for real estate, property management IT services, real estate cybersecurity, managed IT for brokerages Toronto, real estate wire fraud protection',
     intro:
@@ -267,7 +267,7 @@ export const industries: IndustryData[] = [
     industry: 'Construction & Trades',
     title: 'Managed IT Services for Construction & Trades',
     description:
-      'IT support and cybersecurity for construction and trades. Connect job sites and head office, secure mobile crews, reliable cloud, 24/7 helpdesk. Call (289) 582-9930.',
+      'IT support and cybersecurity for construction and trades. Connect job sites and head office, secure mobile crews, cloud, 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for construction, construction IT services Toronto, trades cybersecurity, managed IT for contractors GTA, job site connectivity',
     intro:
@@ -314,7 +314,7 @@ export const industries: IndustryData[] = [
     title: 'Managed IT Services for Professional Services Firms',
     seoTitle: 'IT Support for Professional Services',
     description:
-      'IT support and cybersecurity for consulting, engineering, and professional services firms. Secure Microsoft 365 collaboration and 24/7 helpdesk. Call (289) 582-9930.',
+      'IT support and cybersecurity for consulting, engineering, and professional services firms. Microsoft 365 collaboration and 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'IT support for professional services, consulting firm IT services, engineering firm cybersecurity, managed IT Toronto, professional services helpdesk',
     intro:
@@ -407,7 +407,7 @@ export const industries: IndustryData[] = [
     title: 'Managed IT Services for Dental Practices in the GTA',
     seoTitle: 'Managed IT Services for Dental Practices Toronto',
     description:
-      'Managed IT services for dental practices in Toronto and the GTA. PHIPA-aware patient data protection, practice software support, 24/7 helpdesk. Call (289) 582-9930.',
+      'Managed IT services for dental practices in Toronto. PHIPA-aware patient data protection, practice software support, 24/7 helpdesk. Call (289) 582-9930.',
     keywords:
       'managed IT services for dental practices Toronto, IT support for dental offices, dental office IT services Toronto, IT support for dental clinics Toronto, dental cybersecurity, managed IT for dentists GTA, PHIPA IT support dental',
     intro:

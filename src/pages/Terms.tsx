@@ -8,7 +8,7 @@ const Terms = () => {
     <div className="min-h-screen bg-slate-50">
       <SEO
         title="Terms of Service"
-        description="Terms of service for IT Rapid Support's website and managed IT and cybersecurity services."
+        description="The terms of service that govern use of the IT Rapid Support website and our managed IT and cybersecurity services, including your responsibilities and ours."
         canonicalUrl="/terms"
       />
       {/* Header */}

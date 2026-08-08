@@ -2167,7 +2167,7 @@ export const locations: CityData[] = [
     title: 'IT Support Vancouver | 24/7 Remote-First Managed IT',
     h1: 'IT Support & Managed IT Services in Vancouver',
     description:
-      'IT support for Vancouver businesses: 24/7 remote helpdesk, proactive monitoring, Microsoft 365 management, cybersecurity, and backup oversight. Call (778) 803-7215.',
+      'IT support for Vancouver businesses: 24/7 remote helpdesk, proactive monitoring, Microsoft 365, cybersecurity, and backup oversight. Call (778) 803-7215.',
     keywords:
       'IT support Vancouver, managed IT services Vancouver, remote IT support Vancouver, cybersecurity Vancouver, Vancouver IT company, 24/7 IT helpdesk Vancouver',
     intro:
