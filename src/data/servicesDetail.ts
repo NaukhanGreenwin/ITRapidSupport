@@ -589,7 +589,7 @@ export const servicesDetail: ServiceDetailData[] = [
     title: 'Emergency IT Services | 24/7 Toronto & GTA',
     h1: '24/7 Emergency IT Services in Toronto & the GTA',
     description:
-      'Server down? Email out? Ransomware? 24/7 emergency IT help for Toronto & GTA businesses — remote or on-site dispatch. New clients welcome. Call (289) 582-9930.',
+      'Server down? Email out? Ransomware? 24/7 emergency IT help for Toronto & GTA businesses — remote or on-site. New clients welcome. Call (289) 582-9930.',
     keywords:
       'emergency IT services, emergency IT support Toronto, 24/7 IT support GTA, after-hours IT support, server down help, network outage support, urgent IT help Toronto, emergency computer support',
     intro:
