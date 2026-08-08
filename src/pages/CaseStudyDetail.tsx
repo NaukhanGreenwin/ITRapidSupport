@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase, CheckCircle, ChevronRight, MapPin, ShieldCheck } from 'lucide-react';
 import PageTransition from '../components/PageTransition';
 import SEO, { generateLocalBusinessSchema } from '../components/SEO';
-import { getCaseStudy } from '../data/caseStudies';
+import { getCaseStudy, caseStudies } from '../data/caseStudies';
 import NotFound from './NotFound';
 
 interface CaseStudyDetailProps {
@@ -152,6 +152,26 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
                   <ArrowRight className="h-4 w-4 text-red-600 mt-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               ))}
+            </div>
+          </div>
+
+          <div className="border-t border-gray-200 pt-10 mt-10">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">More Client Work</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {caseStudies
+                .filter((other) => other.slug !== cs.slug)
+                .map((other) => (
+                  <Link
+                    key={other.slug}
+                    to={`/case-studies/${other.slug}/`}
+                    className="group bg-slate-50 rounded-lg p-5 hover:bg-slate-100 transition-colors"
+                  >
+                    <span className="text-gray-900 font-medium group-hover:text-red-600 transition-colors">
+                      {other.title}
+                    </span>
+                    <ArrowRight className="h-4 w-4 text-red-600 mt-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                ))}
             </div>
           </div>
         </div>

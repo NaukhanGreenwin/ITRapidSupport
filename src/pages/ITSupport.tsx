@@ -192,7 +192,7 @@ const ITSupport = () => {
                 </li>
               </ul>
               <Link 
-                to="/contact/?plan=standard" 
+                to="/contact/" 
                 className="block w-full text-center bg-slate-100 text-slate-800 px-6 py-3 rounded-lg hover:bg-slate-200 transition-colors font-medium"
               >
                 Get Started
@@ -233,7 +233,7 @@ const ITSupport = () => {
                 </li>
               </ul>
               <Link 
-                to="/contact/?plan=premium" 
+                to="/contact/" 
                 className="block w-full text-center bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-medium"
               >
                 Get Started
@@ -275,7 +275,7 @@ const ITSupport = () => {
                 </li>
               </ul>
               <Link 
-                to="/contact/?plan=enterprise" 
+                to="/contact/" 
                 className="block w-full text-center bg-slate-800 text-white px-6 py-3 rounded-lg hover:bg-slate-900 transition-colors font-medium"
               >
                 Contact Sales
