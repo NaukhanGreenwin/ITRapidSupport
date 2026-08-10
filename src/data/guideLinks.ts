@@ -112,6 +112,10 @@ export const guideLinks: Record<string, GuideLink> = {
     'managed-threat-detection-monitoring-mdr-guide',
     'Managed Threat Detection & MDR Guide'
   ),
+  'windows-server-2016-end-of-support-ontario': guide(
+    'windows-server-2016-end-of-support-ontario',
+    'Windows Server 2016 End of Support: Your Options Before January 2027'
+  ),
 };
 
 export const getGuides = (ids: string[]): GuideLink[] =>
@@ -151,7 +155,7 @@ export const serviceGuideMap: Record<string, string[]> = {
   ],
   'microsoft-365-azure-migration': [
     'microsoft-365-migration-guide',
-    'microsoft-365-security-best-practices-2026',
+    'windows-server-2016-end-of-support-ontario',
     'windows-10-end-of-support-gta-businesses',
   ],
   'network-management': [
