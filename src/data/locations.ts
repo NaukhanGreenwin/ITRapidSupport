@@ -78,39 +78,202 @@ export const locations: CityData[] = [
       {
         question: 'What IT security services do you offer in Toronto?',
         answer:
-          'We offer comprehensive IT security services in Toronto including managed security operations, network security monitoring, cloud security, identity and access management, threat detection and response, vulnerability assessments, security awareness training, and 24/7 incident response, tailored to Toronto businesses across industries.',
+          'We provide managed security operations for Toronto businesses: managed firewalls, endpoint protection, email security and anti-phishing, multi-factor authentication, identity and access management, patch and vulnerability management, security awareness training, managed detection and response, and incident response. The same team runs your day-to-day helpdesk, so the people who respond to an alert already know your network.',
       },
       {
         question: 'What cybersecurity do you recommend for small businesses in Toronto?',
         answer:
-          'For Toronto small businesses we recommend a multi-layered approach: enterprise-grade firewalls, endpoint protection, email security with anti-phishing, security awareness training, multi-factor authentication, data encryption, managed detection and response, and regular vulnerability scanning, packaged to make enterprise-level protection affordable.',
+          'Start with the controls that stop the attacks that actually happen: multi-factor authentication on email and remote access, endpoint protection that is monitored rather than merely installed, email filtering with anti-phishing, current patching, and backups that have been test-restored. Our own scan of 481 GTA business domains found 91.7 per cent publishing SPF records but only 20.6 per cent running an enforcing DMARC policy, which is a good illustration of how often the last configuration step is the one skipped.',
       },
       {
         question: 'Do you provide on-site IT support in Toronto?',
         answer:
-          'Yes. Alongside immediate remote support, our certified technicians provide scheduled and emergency on-site support across Toronto and the wider GTA when an issue is best resolved in person.',
+          'Yes. Remote resolution comes first because it is faster for most issues, but scheduled and emergency on-site visits across Toronto are part of the service rather than an add-on. Technicians are dispatched from our office at 7810 Keele St in Vaughan, which sits on the same north-south road that runs down through North York and the Junction to Bloor Street.',
+      },
+      {
+        question: 'Where is IT Rapid Support located, and how far is that from Toronto?',
+        answer:
+          'IT Rapid Support is at 7810 Keele St, Vaughan, ON L4K 4G7, and the phone number is (289) 582-9930. Vaughan borders Toronto directly, and Keele Street is a continuous route from our door south into North York, York and the Junction. For the east end and the waterfront the practical routes are Highway 401 and the Don Valley Parkway rather than Keele itself.',
+      },
+      {
+        question: 'What areas of Toronto do you cover?',
+        answer:
+          'All of it. Toronto amalgamated on January 1, 1998 from Old Toronto, East York, Etobicoke, North York, Scarborough and York, and we support businesses across all six of those former municipalities, including Downtown and the Financial District, North York City Centre, Scarborough City Centre and the Golden Mile, Etobicoke, the Junction and East York.',
+      },
+      {
+        question: 'Do you publish a guaranteed response time for Toronto clients?',
+        answer:
+          'No, and that is deliberate. A guaranteed response time published as a marketing number tells you nothing about who picks up or what they are able to do. What we will tell you is how our process works: tickets are triaged when they arrive, urgent issues that stop work are escalated ahead of routine requests, and on-site dispatch from Keele Street is available when an issue cannot be resolved remotely. Ask any provider what happens after the clock starts, not just what the clock says.',
+      },
+      {
+        question: 'How much does IT support cost in Toronto?',
+        answer:
+          'We do not publish a per-user price, because a figure quoted before anyone has looked at your environment is a guess you would end up paying for. The number is built from the count of people needing support, the number and age of servers, workstations and network devices under management, which cloud and security tooling is included rather than billed separately, and how much on-site time the arrangement anticipates. Two Toronto businesses with the same headcount can land at very different numbers for legitimate reasons, and a provider should be able to tell you which driver is moving yours.',
+      },
+      {
+        question: 'What is the difference between managed IT and break-fix support?',
+        answer:
+          'Break-fix is hourly: something stops working, you call, and you are billed for the time it takes to restart it. Managed IT is a fixed monthly fee covering an agreed scope, where the provider carries the cost of things going wrong. That is the arrangement that makes prevention worth doing, because under break-fix every hour spent stopping an outage is an hour nobody bills for.',
+      },
+      {
+        question: 'Can you work alongside our existing in-house IT team?',
+        answer:
+          'Yes. Co-managed IT is common in Toronto, where a business has one or two internal people who handle the things only an insider can and need coverage for the rest: nights and weekends, security monitoring, patching, project work, and the depth that a small internal team cannot carry alone. The split is agreed in writing at the start so nobody is guessing who owns what during an incident.',
+      },
+      {
+        question: 'How do you handle switching from our current IT provider?',
+        answer:
+          'The work that matters happens before anything changes hands: documenting what exists, confirming who holds each administrative account, verifying that backups run and can actually be restored, and checking that domain, DNS and Microsoft 365 tenancy are registered to your business rather than to the outgoing provider. That last point is the one that causes real trouble in a handover, and it is worth confirming today whether or not you are changing providers.',
+      },
+      {
+        question: 'Do you support Microsoft 365 for Toronto businesses?',
+        answer:
+          'Yes. Our scan of GTA business domains found Microsoft 365 in use at 46.8 per cent and Google Workspace at 25.1 per cent, so most Toronto offices we look at are Microsoft tenancies. We handle administration, licensing review, mailbox and file migration, Entra ID and conditional access, MFA enforcement, and the mail authentication records that determine whether your email reaches its destination.',
+      },
+      {
+        question: 'What happens if we are hit by ransomware?',
+        answer:
+          'Containment comes first: isolate affected systems, identify the entry point, and stop the spread before anything is rebuilt. Recovery depends entirely on whether backups are intact, offline or otherwise out of reach of the attacker, and recently test-restored. That is why the restore test matters more than the backup job. We run incident response for existing clients, and businesses without a provider can reach us on (289) 582-9930.',
+      },
+      {
+        question: 'Do you work with law firms, clinics and accounting practices in Toronto?',
+        answer:
+          'Yes. Regulated and professional practices are a large part of the work, and the requirements differ: access control and retention for legal, PHIPA-aligned handling of patient information for clinics, and the security expectations of CRA and audit workflows for accounting. We build controls that help you meet those obligations. The obligation itself remains yours, and any provider who describes their service as delivering compliance is overstating what a service can do.',
+      },
+      {
+        question: 'Is our website security part of IT support?',
+        answer:
+          'It is usually somebody else\'s job and often nobody\'s. When we scanned 470 GTA business websites, 45.5 per cent sent none of the five common security headers and 18.3 per cent were not enforcing HTTPS. We will tell you what your site is publishing and what it discloses about the software behind it, whether or not we host it, because a business site is part of the same attack surface as the office.',
+      },
+      {
+        question: 'Do you provide 24/7 support, or business hours only?',
+        answer:
+          'The helpdesk is available 24/7 by phone, email and chat, and monitoring runs continuously whether or not anyone has raised a ticket. That matters most for the businesses that do not stop at five: clinics with evening hours, logistics and manufacturing operations running shifts, and any Toronto office where a Sunday night failure means Monday morning is lost.',
+      },
+      {
+        question: 'How do we get started?',
+        answer:
+          'Call (289) 582-9930 or send a note through the contact page and we will arrange a review of the current environment. That review produces a written picture of what you are running, what is out of support, where the security gaps are and what the backups would actually restore. It is useful on its own, and you are free to act on it with us or without us.',
       },
     ],
     sections: [
       {
         heading: 'What Managed IT Services in Toronto Include',
         paragraphs: [
-          'Managed IT services in Toronto from IT Rapid Support cover everything a growing business needs from an IT department: a 24/7 helpdesk your staff can reach by phone, email, or chat, proactive monitoring and patch management that catch failures before they become outages, Microsoft 365 administration, backup monitoring, and layered cybersecurity with managed firewalls, endpoint protection, multi-factor authentication, and managed detection and response.',
-          'Our headquarters at 7810 Keele Street in Vaughan puts certified technicians a short drive from every corner of the city, so on-site dispatch is part of the service — not an add-on. We support offices, clinics, and multi-site teams across Downtown Toronto, North York, Scarborough, Etobicoke, and East York, with remote resolution first and a technician on the road when hands-on work is needed.',
+          'Managed IT services in Toronto from IT Rapid Support cover everything a growing business needs from an IT department: a 24/7 helpdesk your staff can reach by phone, email or chat, proactive monitoring and patch management that catch failures before they become outages, Microsoft 365 administration, backup monitoring, and layered cybersecurity with managed firewalls, endpoint protection, multi-factor authentication and managed detection and response.',
+          'The service is bought as one fixed monthly fee covering an agreed scope, not as a menu of hourly call-outs. That structure is the point rather than a billing detail: when the provider carries the cost of things going wrong, the incentive finally lines up with keeping them from going wrong. On-site dispatch across the city is part of the arrangement, and it runs from our own office at 7810 Keele St in Vaughan rather than from a subcontractor pool.',
+        ],
+      },
+      {
+        heading: 'Why It Matters Where Your IT Provider Actually Sits',
+        paragraphs: [
+          'Plenty of companies sell IT support in Toronto from an address that is a mailbox, a shared desk, or a call centre in another time zone. It rarely shows up in the sales conversation and always shows up on the day something physical has to be touched: a switch that will not come back, a server room that needs eyes on it, a failed workstation on the desk of the person who cannot work without it.',
+          'Our office is at 7810 Keele St in Vaughan, and Keele Street is a useful thing to know about here. It is a continuous north-south route that begins at Bloor Street in Toronto, runs north past the Junction and Downsview Park through North York, and carries on through Vaughan into King Township. We are on that road. For the west end and the Yonge corridor that is a straightforward drive; for Scarborough, East York and the waterfront the practical routes are Highway 401 and the Don Valley Parkway. Either way, a technician leaving our building is driving to you, not booking a flight.',
+        ],
+      },
+      {
+        heading: 'Six Former Cities, One Service Area',
+        paragraphs: [
+          'Toronto became a single city on January 1, 1998, when Old Toronto, East York, Etobicoke, North York, Scarborough and York were amalgamated into one municipality of 631 square kilometres. The city recorded a population of 2,794,356 in the 2021 census, within a metropolitan area of 6,202,225. Those six former municipalities are still how the city works in practice, and they are why a phrase like IT support Toronto covers half a dozen genuinely different jobs.',
+          'A twelve-person practice on a Financial District floor, a distributor in the Golden Mile with a warehouse attached, a professional firm in a North York City Centre tower and a family manufacturer in Etobicoke share a municipal government and very little else. The building matters, the internet options matter, the parking matters, and the failure modes differ. The sections below set out what each part of the city tends to need, because a provider who treats Toronto as one uniform territory will get the details wrong in whichever part of it you happen to be.',
+        ],
+      },
+      {
+        heading: 'Downtown Toronto and the Financial District',
+        paragraphs: [
+          'The Financial District is the central business district of downtown Toronto, laid out as New Town in 1796 and now the densest concentration of professional firms in the country. The businesses we support there are mostly tenants in managed office towers: law firms, accounting practices, investment and advisory shops, consultancies, and the small professional partnerships that occupy a floor or part of one.',
+          'The constraints downtown are physical and contractual as much as technical. Building risers and telecom rooms are shared, base-building providers control what can be installed, and access for after-hours work runs through property management rather than through you. Downtown clients also tend to be the ones whose staff work everywhere, which moves the security problem from the office network to identity: multi-factor authentication, conditional access, managed devices, and a clear answer to what happens when a laptop goes missing on the subway.',
+        ],
+      },
+      {
+        heading: 'North York City Centre and the Yonge Corridor',
+        paragraphs: [
+          'North York City Centre runs along Yonge Street from just south of Sheppard Avenue north to Finch, centred on Mel Lastman Square and spreading east and west to about Doris Avenue and Beecroft Road. It grew into a downtown of its own after the Yonge subway was extended to Finch and again after the Sheppard line opened, and it is the largest of the city\'s four central business districts outside Downtown Toronto.',
+          'It is an office-tower district with a professional-services tenant mix, close enough to our Keele Street office that on-site work is straightforward. The recurring issue here is not exotic: a firm signs a tower lease, inherits whatever cabling and equipment the previous tenant left, and runs it for years without anyone establishing what is actually in the comms room. A documented inventory of what is installed, what is still supported by its manufacturer and what is quietly out of warranty is usually the first useful thing we produce for a client in this corridor.',
+        ],
+      },
+      {
+        heading: 'Scarborough City Centre, the Golden Mile and the East End',
+        paragraphs: [
+          'Scarborough City Centre is the commercial core of the east end, anchored by Scarborough Town Centre and the Scarborough Civic Centre, with offices, health services and public-sector tenants around it. South and west of it, the Golden Mile runs along Eglinton Avenue East on ground that was laid out as an industrial mile in 1954 and drew a visit from Queen Elizabeth II in 1959. It is largely retail today, though industrial uses remain on the side streets off Eglinton.',
+          'That mix produces a specific kind of client: a business with an office and a working floor attached, where the IT problem is not only desks and email but the network that reaches a warehouse, a shop floor, a loading area or a fleet of scanners. Wireless coverage in a metal building, wiring that has been extended by whoever was available, and equipment that has to survive dust and temperature are ordinary conditions here. So is a single internet connection with no failover, in a business that cannot ship without it.',
+        ],
+      },
+      {
+        heading: 'Etobicoke, the Junction and the West End',
+        paragraphs: [
+          'The west end holds a large share of the city\'s established owner-operated businesses: manufacturers, distributors, trades and construction firms, and the professional practices that serve them. Etobicoke and the Junction sit on the same side of the city as our Keele Street office, and the Junction in particular is directly down Keele from us.',
+          'What we see most often in the west end is a business that has outgrown its original setup without ever deciding to. A server bought when the company was half its current size, a backup running to a drive in the same room as the thing it is backing up, and a network built by adding to whatever was there before. None of it is negligence and all of it is normal. The work is to establish what is genuinely at risk, fix that first, and replace the rest on a schedule you choose rather than on the day it fails.',
         ],
       },
       {
         heading: 'IT Support and Security Services in Toronto',
         paragraphs: [
-          'Many Toronto businesses buy IT support and security services separately — one vendor for the day-to-day helpdesk, another for protection — and end up with gaps neither vendor owns. IT Rapid Support combines both in a single service: the same team that runs your 24/7 IT support, monitoring, and Microsoft 365 administration also manages your firewalls, endpoint protection, email security, multi-factor authentication, and managed detection and response. When a security alert fires overnight, the people responding already know your network.',
-          'That combined model matters most during an incident. Because support and security sit under one roof, there is no hand-off between vendors when a phishing compromise, ransomware event, or outage hits — one accountable team contains the threat, restores systems, and gets your staff working again. Toronto organizations get enterprise-grade IT security services and responsive day-to-day support at one fixed monthly cost, with on-site help dispatched from our Vaughan headquarters just up Highway 400.',
+          'Many Toronto businesses buy IT support and security separately, one vendor for the day-to-day helpdesk and another for protection, and end up with gaps that neither vendor owns. IT Rapid Support combines both: the same team that runs your 24/7 helpdesk, monitoring and Microsoft 365 administration also manages your firewalls, endpoint protection, email security, multi-factor authentication and managed detection and response.',
+          'The combined model matters most during an incident. Because support and security sit under one roof there is no hand-off between vendors when a phishing compromise, a ransomware event or an outage hits, and no argument about whose problem it is while the clock runs. One team contains the threat, restores the systems and gets staff working again, and that team already knows what your network looked like the day before.',
+        ],
+      },
+      {
+        heading: 'Networks, Cloud and Managed Email',
+        paragraphs: [
+          'Most Toronto offices we take on run Microsoft 365, and the work there is rarely a migration. It is administration nobody owns: licences paid for and unassigned, mailboxes belonging to people who left, sharing permissions granted years ago and never reviewed, and conditional access that was configured once and never revisited. Sorting that out usually reduces the monthly bill as well as the risk.',
+          'Email authentication is the piece most often left unfinished. Our scan of 481 GTA business domains found 91.7 per cent publishing an SPF record but only 20.6 per cent running an enforcing DMARC policy, which means the large majority have started the work and stopped before the part that stops anyone impersonating their domain. On the network side the recurring Toronto issues are a single internet connection with no failover, a firewall running firmware years behind, and wireless that was sized for a smaller office than the one now using it.',
+        ],
+      },
+      {
+        heading: 'What Day-to-Day Support Actually Looks Like',
+        paragraphs: [
+          'Most of it is unremarkable, which is the point. Staff raise tickets by phone, email or chat and get a person rather than a queue position. Common requests are password and account lockouts, a workstation that has slowed to a stop, a printer or scanner that has dropped off the network, a mailbox or file permission that needs changing, a new starter who needs an account and a device, and a leaver whose access has to be removed the same day.',
+          'Behind the tickets is work that never generates one. Monitoring watches servers, workstations and network devices continuously, so a disk approaching failure, a backup that did not complete, an expiring certificate or a machine that has fallen behind on security updates surfaces as a scheduled task instead of as next month\'s outage. That is the part that separates a managed service from a fast break-fix shop, and it is also the part you cannot see on a quote, which is why it is worth asking any Toronto provider what they monitor and what they do with the alerts.',
+        ],
+      },
+      {
+        heading: 'Managed IT or Break-Fix: Which One Fits',
+        paragraphs: [
+          'The two ways to buy IT support are genuinely different products. Break-fix is hourly: something stops working, you call, and someone bills for the time it takes to restart it. Managed IT is a fixed monthly fee covering an agreed scope, where the provider carries the cost of failures. Under break-fix, every hour spent preventing an outage is an hour that cannot be billed, so prevention is the first thing to go.',
+          'Break-fix can still be the right answer for a very small Toronto office with no server, no regulatory exposure and a tolerance for a day of downtime. Once a business has staff who cannot work without systems, data it is obliged to protect, or a customer who will ask about its security posture, the arithmetic changes and the fixed fee is usually the cheaper of the two. We will say plainly which side of that line we think you are on.',
+        ],
+      },
+      {
+        heading: 'Changing IT Providers Without Downtime',
+        paragraphs: [
+          'Businesses stay with a provider they have outgrown mainly because changing sounds risky. Done properly it is not dramatic. The work happens before anything moves: documenting what exists, confirming who holds each administrative account, verifying that backups run and can be restored, and checking that the domain, DNS and Microsoft 365 tenancy are registered to your business rather than to the outgoing provider.',
+          'That last item is the one that causes genuine trouble. A domain registered to a former provider, or a Microsoft tenancy where nobody at your company holds global administrator, turns a routine handover into a negotiation. It is worth confirming today regardless of whether you are planning to change anything, and it takes an afternoon. Once ownership is established, a transition can be sequenced so that support coverage never lapses.',
+        ],
+      },
+      {
+        heading: 'How a Toronto IT Support Quote Is Built',
+        paragraphs: [
+          'We do not publish a per-user price. A number quoted before anyone has looked at your environment is a guess, and it is a guess you would end up paying for later through scope arguments. What we will publish is how the figure is built, so you can read our proposal and anyone else\'s with the same eyes.',
+          'The drivers are the number of people who need support, the number and age of servers, workstations and network devices under management, which cloud and security tooling is included in the fee rather than billed separately, how much on-site time the arrangement anticipates, and what happens outside business hours. Ask for those in writing from every provider you are considering. Two Toronto businesses with identical headcounts can land at very different monthly numbers for entirely legitimate reasons, and a provider should be able to name which driver is moving yours.',
+        ],
+      },
+      {
+        heading: 'Backup and Recovery That Has Been Tested',
+        paragraphs: [
+          'A backup nobody has restored from is a belief, not a control. The failures we find most often in Toronto are not missing backups but backups that cannot do the job asked of them: a job that has been reporting errors for months with nobody reading the report, a copy sitting on a drive in the same room as the server it protects, or a set that covers file shares while missing the line-of-business database the company actually runs on.',
+          'What we look for is a set of copies that survives the realistic disasters: one that is off-site, one that an attacker who has taken over your network cannot reach or delete, and a documented restore that somebody has performed recently enough to trust. The question worth asking is not whether backups run. It is how long the business would be down while they were restored, and whether anyone has measured that rather than estimated it.',
+        ],
+      },
+      {
+        heading: 'Compliance, Insurance and Client Security Questionnaires',
+        paragraphs: [
+          'A growing share of the requests we get in Toronto start somewhere other than IT. A cyber insurance renewal asks whether multi-factor authentication is enforced everywhere. An enterprise customer sends a security questionnaire before renewing a contract. A regulator or professional body updates its expectations. Suddenly a business needs documented answers about controls nobody had written down.',
+          'We build and document the controls that help you meet those obligations: access control and multi-factor authentication, patching and vulnerability management, logging and monitoring, encryption, tested backups, and security awareness training. For clinics that means handling patient information in a way aligned with PHIPA; for most other businesses PIPEDA is the baseline. The obligation itself stays with you, and any provider who tells you their service delivers compliance is describing something a service cannot do on its own. What it can do is make the honest answers to those questionnaires good ones.',
+        ],
+      },
+      {
+        heading: 'Multi-Site and Hybrid Toronto Businesses',
+        paragraphs: [
+          'A large number of Toronto businesses do not operate from one address. A head office downtown or in North York with a warehouse in Scarborough or Etobicoke is an ordinary shape here, as is a firm with offices spread across the GTA, or a company whose staff split their week between an office and home. Each pattern breaks a different assumption in a network that was designed for one building.',
+          'The practical work is making the sites behave like one organisation without pretending they are one building: consistent identity and access so a person has the same account and the same protections wherever they log in, connectivity sized for what each site actually does rather than for headcount, and a support arrangement that covers the site with three people in it as seriously as the one with forty. Because we dispatch from Keele Street in Vaughan and the GTA is a single drive, covering several of your locations does not mean adding several providers.',
         ],
       },
       {
         heading: 'Choosing a Managed IT Company in Toronto',
         paragraphs: [
-          'Toronto has no shortage of IT companies, so the comparison comes down to coverage and accountability: true 24/7 support rather than business-hours-only, security operations built into the core service rather than sold as an afterthought, and one accountable partner for helpdesk, cybersecurity, cloud, and on-site work instead of separate vendors. Fixed monthly pricing keeps IT spend predictable as you grow.',
-          'If you are evaluating providers, our guides on managed IT support costs in Toronto and what to look for in a Toronto managed IT provider below are a practical starting point — or call (289) 582-9930 to review your current setup with our team.',
+          'Toronto has no shortage of IT companies, so the comparison comes down to coverage and accountability: genuinely 24/7 support rather than business hours with an answering service, security operations built into the core service rather than sold as an afterthought, and one accountable partner for helpdesk, cybersecurity, cloud and on-site work instead of separate vendors pointing at each other.',
+          'Three questions separate providers quickly. Where do your technicians physically work from, and how do they get to me. What do you monitor when I have not raised a ticket, and what do you do with those alerts. And who owns my domain, my tenancy and my backups if I leave. A provider who answers all three plainly is worth talking to. Ours are 7810 Keele St in Vaughan, everything listed above, and you do. Call (289) 582-9930 to review your current setup.',
         ],
       },
     ],
