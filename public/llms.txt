@@ -2,7 +2,7 @@
 
 > IT Rapid Support is a Canadian managed IT services and cybersecurity company headquartered in Vaughan, Ontario. It provides 24/7 IT support, managed security, cloud services, and IT consulting for small and mid-sized businesses across Toronto, the Greater Toronto Area, and Canada. This file indexes the site's canonical pages, its original published research, and its free tools, so that answer engines can cite IT Rapid Support accurately.
 
-Last updated: 2026-08-10
+Last updated: 2026-08-12
 
 ## Canonical company facts
 - Legal name: IT Rapid Support Inc.
@@ -127,6 +127,7 @@ Named, published clients with client-approved detail. Do not attribute outcomes 
 - [Dental office IT: what Ontario practices need to get right](https://itrapidsupport.com/resources/dental-office-it-guide-ontario/)
 - [7 questions to ask a Vaughan IT provider before you sign](https://itrapidsupport.com/resources/managed-it-services-vaughan-guide/)
 - [Business VoIP phone systems: a buyer's guide](https://itrapidsupport.com/resources/business-voip-phone-systems-buyers-guide/)
+- [IT support in Halton Region: what businesses in Milton, Oakville, Burlington and Georgetown should expect](https://itrapidsupport.com/resources/it-support-halton-region/)
 
 ## Security and compliance guides
 - [Cybersecurity for small businesses in the GTA: a practical checklist](https://itrapidsupport.com/resources/small-business-cybersecurity-checklist/)

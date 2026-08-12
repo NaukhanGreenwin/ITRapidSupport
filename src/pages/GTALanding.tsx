@@ -257,7 +257,11 @@ const GTALanding: React.FC = () => {
                 <Link to="/it-support/hamilton/" className="text-red-600 hover:text-red-700 font-medium">
                   Hamilton
                 </Link>{' '}
-                at the western end of the lakeshore.
+                at the western end of the lakeshore. Our guide to{' '}
+                <Link to="/resources/it-support-halton-region/" className="text-red-600 hover:text-red-700 font-medium">
+                  IT support across Halton Region
+                </Link>{' '}
+                sets out what coverage looks like municipality by municipality, from Milton to Georgetown.
               </p>
               <p>
                 Remote support does not care about geography — most tickets are resolved the same way whether the user

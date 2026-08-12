@@ -116,6 +116,13 @@ export const guideLinks: Record<string, GuideLink> = {
     'windows-server-2016-end-of-support-ontario',
     'Windows Server 2016 End of Support: Your Options Before January 2027'
   ),
+  // Anchor text deliberately says "Halton Region", never "IT support Milton":
+  // the four Halton city pages render this link and /it-support/milton/ owns
+  // that head term. This guide feeds the city pages rather than competing.
+  'it-support-halton-region': guide(
+    'it-support-halton-region',
+    'IT Support Across Halton Region: What to Expect'
+  ),
 };
 
 export const getGuides = (ids: string[]): GuideLink[] =>
@@ -193,7 +200,23 @@ const yorkRegionSlugs = new Set([
   'stouffville',
 ]);
 
+// Halton cities lead with the regional Halton guide. RelatedGuides is
+// md:grid-cols-3, so this replaces a slot rather than adding a fourth card.
+const haltonSlugs = new Set([
+  'milton',
+  'oakville',
+  'burlington',
+  'georgetown',
+]);
+
 export const getCityGuides = (slug: string): GuideLink[] => {
+  if (haltonSlugs.has(slug)) {
+    return getGuides([
+      'it-support-halton-region',
+      'it-support-services-gta-buyers-guide',
+      'choosing-managed-it-provider-toronto',
+    ]);
+  }
   // Mississauga leads with its own local helpdesk guide.
   if (slug === 'mississauga') {
     return getGuides([
