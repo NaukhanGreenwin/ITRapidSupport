@@ -24,10 +24,15 @@ interface Option {
   risk: number; // 0 = control in place, up to the question's weight = control absent
 }
 
+type DomainId = 'identity' | 'threat' | 'maintenance' | 'email' | 'data';
+
 interface Question {
   id: string;
   category: string;
   question: string;
+  /** Which sub-score this control rolls up into. Required, so a new question
+   *  cannot be added without deciding where it counts. */
+  domain: DomainId;
   /** Points this control contributes at worst. Higher = more consequential if missing. */
   weight: number;
   options: Option[];
@@ -45,6 +50,7 @@ interface Question {
 const QUESTIONS: Question[] = [
   {
     id: 'backups',
+    domain: 'data',
     category: 'Backup & Recovery',
     weight: 12,
     question: 'How are your business data and systems backed up — and have you tested a restore?',
@@ -60,6 +66,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'mfa',
+    domain: 'identity',
     category: 'Multi-Factor Authentication',
     weight: 12,
     question: 'Is multi-factor authentication enforced on email and your other key applications?',
@@ -75,6 +82,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'endpoint',
+    domain: 'threat',
     category: 'Endpoint Protection',
     weight: 12,
     question: 'What protects your computers and servers from malware and ransomware?',
@@ -90,6 +98,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'admin',
+    domain: 'identity',
     category: 'Admin Account Hygiene',
     weight: 10,
     question: 'How are administrator accounts handled?',
@@ -105,6 +114,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'monitoring',
+    domain: 'threat',
     category: 'Monitoring & Alerting',
     weight: 10,
     question: 'Is your network and email monitored for threats outside office hours?',
@@ -120,6 +130,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'patching',
+    domain: 'maintenance',
     category: 'Patching & Updates',
     weight: 10,
     question: 'How do operating systems and third-party software get updated?',
@@ -135,6 +146,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'emailauth',
+    domain: 'email',
     category: 'Email Authentication (SPF, DKIM, DMARC)',
     weight: 10,
     question: 'Is your domain protected against someone spoofing your email address?',
@@ -149,7 +161,28 @@ const QUESTIONS: Question[] = [
     link: { label: 'Check your domain free', to: '/tools/email-spoof-check/' },
   },
   {
+    id: 'eol',
+    domain: 'maintenance',
+    category: 'Unsupported Systems',
+    weight: 10,
+    question:
+      'Are you still running any operating systems that have passed, or are about to pass, their end-of-support date?',
+    options: [
+      { label: 'All systems are on supported versions and we track the dates', risk: 0 },
+      { label: 'We know of one or two and they are already scheduled for replacement', risk: 5 },
+      { label: 'We have some and no plan yet', risk: 8 },
+      { label: 'We are not sure what versions we are running', risk: 10 },
+    ],
+    why: 'An unsupported system stops receiving security patches while staying fully connected to everything else. Windows 10 reached end of support in October 2025, and Microsoft’s lifecycle table puts Windows Server 2016 at 13 January 2027 — so this is a moving deadline rather than a one-off.',
+    fix: 'Inventory every operating system version in use, including virtual machines and vendor-supplied appliances. Put a replacement date against anything sitting inside eighteen months of its end-of-support date, and treat the ones you cannot identify as unsupported until proven otherwise.',
+    link: {
+      label: 'Windows 10 end of support: what it means',
+      to: '/resources/windows-10-end-of-support-gta-businesses/',
+    },
+  },
+  {
     id: 'm365',
+    domain: 'email',
     category: 'Microsoft 365 Security Settings',
     weight: 9,
     question: 'If you use Microsoft 365, how are its security settings configured?',
@@ -165,6 +198,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'offboarding',
+    domain: 'identity',
     category: 'Staff Offboarding',
     weight: 9,
     question: 'When someone leaves, how quickly do their accounts and access actually get removed?',
@@ -180,6 +214,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'vendor',
+    domain: 'identity',
     category: 'Vendor & Remote Access',
     weight: 9,
     question: 'Who else can get into your systems remotely — vendors, contractors, remote support tools?',
@@ -195,6 +230,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'training',
+    domain: 'email',
     category: 'Phishing & Staff Training',
     weight: 8,
     question: 'Do employees get security awareness and phishing training?',
@@ -210,6 +246,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'incident',
+    domain: 'threat',
     category: 'Incident Response Plan',
     weight: 8,
     question: 'Do you have a plan for a cyber attack or a major outage — and has it been tested?',
@@ -225,6 +262,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'encryption',
+    domain: 'data',
     category: 'Data at Rest & Devices',
     weight: 8,
     question: 'Are laptops, desktops and phones encrypted, and can you wipe a lost device?',
@@ -240,6 +278,7 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 'support',
+    domain: 'maintenance',
     category: 'IT Support Model',
     weight: 8,
     question: 'How is day-to-day IT handled today?',
@@ -257,8 +296,49 @@ const QUESTIONS: Question[] = [
 
 const MAX_RISK = QUESTIONS.reduce((sum, q) => sum + q.weight, 0);
 
-interface Tier {
+// Sub-scores. Each domain's maximum is derived from the question weights rather
+// than written down, so it cannot go stale when a question is added or reweighted.
+const DOMAINS: { id: DomainId; name: string; blurb: string }[] = [
+  {
+    id: 'identity',
+    name: 'Identity & Access',
+    blurb: 'Who can get in, with what rights, and whether that list is ever reviewed.',
+  },
+  {
+    id: 'threat',
+    name: 'Threat Defence',
+    blurb: 'Whether something notices an attack in progress, and what happens next.',
+  },
+  {
+    id: 'maintenance',
+    name: 'Maintenance & Support',
+    blurb: 'The recurring work that keeps everything else from quietly drifting.',
+  },
+  {
+    id: 'email',
+    name: 'Email & Microsoft 365',
+    blurb: 'The route most incidents actually arrive through.',
+  },
+  {
+    id: 'data',
+    name: 'Data & Recovery',
+    blurb: 'What survives when prevention has already failed.',
+  },
+];
+
+const DOMAIN_MAX: Record<DomainId, number> = QUESTIONS.reduce(
+  (acc, q) => ({ ...acc, [q.domain]: (acc[q.domain] ?? 0) + q.weight }),
+  {} as Record<DomainId, number>
+);
+
+// Single source of truth for the bands. The letter grade, the descriptive label
+// and the printed range all come from this one array, so the code, the on-page
+// copy and the FAQ cannot disagree about where a boundary sits.
+interface Band {
+  grade: string;
   label: string;
+  /** Inclusive upper bound of the band. */
+  max: number;
   range: string;
   color: string;
   bg: string;
@@ -268,64 +348,114 @@ interface Tier {
   icon: React.ReactNode;
 }
 
-function getTier(score: number): Tier {
-  if (score <= 19) {
-    return {
-      label: 'Low Risk',
-      range: '0–19',
-      color: 'text-green-700',
-      bg: 'bg-green-50',
-      ring: 'ring-green-200',
-      bar: 'bg-green-500',
-      summary:
-        'Based on your answers the fundamentals are in place. The work now is keeping them that way — controls drift quietly, so the value is in the recurring checks: test restores, access reviews, and patch reporting.',
-      icon: <ShieldCheck className="h-10 w-10 text-green-600" />,
-    };
-  }
-  if (score <= 44) {
-    return {
-      label: 'Moderate Risk',
-      range: '20–44',
-      color: 'text-yellow-700',
-      bg: 'bg-yellow-50',
-      ring: 'ring-yellow-200',
-      bar: 'bg-yellow-500',
-      summary:
-        'Real protections are in place, with specific gaps between them. Nothing here suggests a crisis, but the items flagged below are the ones an attacker would reach for first, and most of them are fixable in weeks rather than months.',
-      icon: <ShieldAlert className="h-10 w-10 text-yellow-600" />,
-    };
-  }
-  if (score <= 69) {
-    return {
-      label: 'Elevated Risk',
-      range: '45–69',
-      color: 'text-orange-700',
-      bg: 'bg-orange-50',
-      ring: 'ring-orange-200',
-      bar: 'bg-orange-500',
-      summary:
-        'Several controls that limit the damage of a common incident are missing or unverified. The realistic exposure here is ransomware or business email compromise turning into extended downtime rather than a contained problem. Work down the list below in order.',
-      icon: <AlertTriangle className="h-10 w-10 text-orange-600" />,
-    };
-  }
-  return {
+const BANDS: Band[] = [
+  {
+    grade: 'A',
+    label: 'Low Risk',
+    max: 14,
+    range: '0–14',
+    color: 'text-green-700',
+    bg: 'bg-green-50',
+    ring: 'ring-green-200',
+    bar: 'bg-green-500',
+    summary:
+      'Based on your answers the fundamentals are in place. The work now is keeping them there — controls drift quietly, so the value is in the recurring checks: test restores, access reviews, and patch reporting.',
+    icon: <ShieldCheck className="h-10 w-10 text-green-600" />,
+  },
+  {
+    grade: 'B',
+    label: 'Low Risk',
+    max: 29,
+    range: '15–29',
+    color: 'text-emerald-700',
+    bg: 'bg-emerald-50',
+    ring: 'ring-emerald-200',
+    bar: 'bg-emerald-500',
+    summary:
+      'A solid posture with specific gaps worth closing this quarter. Nothing flagged below is structural — these are individual controls to finish rather than a programme to build.',
+    icon: <ShieldCheck className="h-10 w-10 text-emerald-600" />,
+  },
+  {
+    grade: 'C',
+    label: 'Moderate Risk',
+    max: 49,
+    range: '30–49',
+    color: 'text-yellow-700',
+    bg: 'bg-yellow-50',
+    ring: 'ring-yellow-200',
+    bar: 'bg-yellow-500',
+    summary:
+      'Real protections with real holes between them. Nothing here suggests a crisis, but the items flagged below are the ones an attacker would reach for first, and most of them are fixable in weeks rather than months.',
+    icon: <ShieldAlert className="h-10 w-10 text-yellow-600" />,
+  },
+  {
+    grade: 'D',
+    label: 'Elevated Risk',
+    max: 69,
+    range: '50–69',
+    color: 'text-orange-700',
+    bg: 'bg-orange-50',
+    ring: 'ring-orange-200',
+    bar: 'bg-orange-500',
+    summary:
+      'Several controls that contain an incident are missing or unverified. The realistic exposure here is ransomware or business email compromise turning into extended downtime rather than a contained problem. Work down the list below in order.',
+    icon: <AlertTriangle className="h-10 w-10 text-orange-600" />,
+  },
+  {
+    grade: 'F',
     label: 'High Risk',
+    max: 100,
     range: '70–100',
     color: 'text-red-700',
     bg: 'bg-red-50',
     ring: 'ring-red-200',
     bar: 'bg-red-600',
     summary:
-      'Most of the controls that contain an incident are absent or unknown. In this state a single successful phishing email can reach data, backups and email at the same time. Start at the top of the list below — the first two or three items remove most of the exposure.',
+      'Most of what limits the damage of a common incident is absent or unknown. In this state a single successful phishing email can reach data, backups and email at the same time. Start at the top of the list below — the first two or three items remove most of the exposure.',
     icon: <AlertTriangle className="h-10 w-10 text-red-600" />,
-  };
+  },
+];
+
+function getBand(score: number): Band {
+  return BANDS.find((b) => score <= b.max) ?? BANDS[BANDS.length - 1];
 }
+
+// The 90-day plan is a re-presentation of the severity label already computed
+// per gap. No new judgement, no invented timelines.
+const PHASES: { severity: string; title: string; note: string }[] = [
+  {
+    severity: 'Fix first',
+    title: 'First 30 days',
+    note: 'These scored at or near the full weight of their control. They remove the most exposure per hour spent.',
+  },
+  {
+    severity: 'Fix soon',
+    title: 'Days 31–60',
+    note: 'Partial controls. Something is in place; it is not finished or not verified.',
+  },
+  {
+    severity: 'Tighten',
+    title: 'Days 61–90',
+    note: 'Small gaps. Worth closing once the items above are done, not before.',
+  },
+];
 
 const FAQS = [
   {
     question: 'How does the IT risk calculator work?',
     answer:
-      'You answer 14 questions covering backups, multi-factor authentication, endpoint protection, admin accounts, monitoring, patching, email authentication, Microsoft 365 settings, offboarding, vendor and remote access, staff training, incident response, device encryption, and your IT support model. Each control carries a weight based on how much damage its absence tends to cause, your answers are added up, and the total is expressed as a 0-100 risk score with the weak areas listed in priority order.',
+      'You answer 15 questions covering backups, multi-factor authentication, endpoint protection, admin accounts, monitoring, patching, email authentication, Microsoft 365 settings, unsupported operating systems, offboarding, vendor and remote access, staff training, incident response, device encryption, and your IT support model. Each control carries a weight based on how much damage its absence tends to cause, your answers are added up, and the total is expressed as a 0-100 risk score with the weak areas listed in priority order.',
+  },
+  {
+    question: 'What do the letter grades mean?',
+    // Generated from BANDS so the FAQ, the JSON-LD and the scoring code cannot
+    // disagree about where a boundary sits.
+    answer:
+      'The score is converted to a letter grade on fixed bands: ' +
+      BANDS.map((b) => `${b.grade} is ${b.range} (${b.label.toLowerCase()})`).join(', ') +
+      '. A lower score is better, because the number counts weighted risk points rather than marks earned. The result also breaks down into five areas — ' +
+      DOMAINS.map((d) => d.name).join(', ') +
+      ' — so you can see which one is driving the overall figure.',
   },
   {
     question: 'Is anything I enter sent to IT Rapid Support?',
@@ -366,7 +496,22 @@ const RiskCalculator: React.FC = () => {
     [answers]
   );
   const score = Math.round((rawRisk / MAX_RISK) * 100);
-  const tier = getTier(score);
+  const band = getBand(score);
+
+  // Points at risk per domain, so a business can see that its overall number is
+  // being driven by one weak area rather than by everything being mediocre.
+  const domainScores = useMemo(
+    () =>
+      DOMAINS.map((d) => {
+        const max = DOMAIN_MAX[d.id] ?? 0;
+        const risk = QUESTIONS.filter((q) => q.domain === d.id).reduce(
+          (sum, q) => sum + (answers[q.id] ?? 0),
+          0
+        );
+        return { ...d, risk, max, pct: max ? Math.round((risk / max) * 100) : 0 };
+      }).sort((a, b) => b.pct - a.pct),
+    [answers]
+  );
 
   // Every control the answers scored above zero, worst first. Ties break by
   // weight so the more consequential control is actioned first.
@@ -392,7 +537,7 @@ const RiskCalculator: React.FC = () => {
   // Keeps the "nothing leaves your browser" claim literally true.
   const mailtoHref = useMemo(() => {
     const lines = [
-      `My IT risk score: ${score}/100 (${tier.label})`,
+      `My IT risk score: ${score}/100 — grade ${band.grade} (${band.label})`,
       '',
       gaps.length
         ? 'Flagged controls, worst first:'
@@ -406,14 +551,14 @@ const RiskCalculator: React.FC = () => {
       'Best number:',
     ];
     return `mailto:info@itrapidsupport.com?subject=${encodeURIComponent(
-      `IT risk assessment - score ${score}/100 (${tier.label})`
+      `IT risk assessment - score ${score}/100, grade ${band.grade}`
     )}&body=${encodeURIComponent(lines.join('\n'))}`;
-  }, [score, tier, gaps]);
+  }, [score, band, gaps]);
 
   const url = '/it-risk-calculator/';
   const title = 'Free IT Security Risk Calculator | Ontario';
   const description =
-    'Free IT security risk assessment for Ontario businesses. Answer 14 questions on backups, MFA and more for an instant risk score and a prioritised fix list.';
+    'Free IT risk assessment for Ontario businesses. Answer 15 questions on backups, MFA, email security and unsupported systems for an instant A-F risk grade.';
 
   const schema = [
     generateLocalBusinessSchema(),
@@ -433,7 +578,8 @@ const RiskCalculator: React.FC = () => {
         priceCurrency: 'CAD',
       },
       featureList: [
-        '14 weighted questions across core security control areas',
+        '15 weighted questions across core security control areas',
+        'Instant A-F risk grade with five domain sub-scores',
         'Instant 0-100 risk score with a risk band',
         'Weak areas listed in priority order with plain-English remediation steps',
         'Runs entirely in the browser — no data is transmitted or stored',
@@ -479,13 +625,13 @@ const RiskCalculator: React.FC = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center px-4 py-2 bg-red-600/10 rounded-full mb-6">
               <ShieldAlert className="h-4 w-4 text-red-200 mr-2" />
-              <span className="text-red-200 text-sm font-medium">Free · 14 questions · no sign-up</span>
+              <span className="text-red-200 text-sm font-medium">Free · 15 questions · no sign-up</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               How exposed is your business to a cyber attack?
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              Answer 14 questions about the controls that decide how bad an incident gets, and see a
+              Answer 15 questions about the controls that decide how bad an incident gets, and see a
               weighted risk score, your weakest areas in priority order, and what to do about each
               one. Built for Ontario businesses by IT Rapid Support in Vaughan.
             </p>
@@ -583,12 +729,16 @@ const RiskCalculator: React.FC = () => {
           ) : (
             <>
               {/* Result */}
-              <div className={`rounded-2xl p-8 ${tier.bg} ring-1 ${tier.ring} mb-8`}>
+              <div
+                className={`rounded-2xl p-8 ${band.bg} ring-1 ${band.ring} mb-8`}
+                aria-live="polite"
+              >
                 <div className="flex items-center gap-4 mb-6">
-                  {tier.icon}
+                  {band.icon}
                   <div>
-                    <div className={`text-sm font-semibold uppercase tracking-wide ${tier.color}`}>
-                      {tier.label} <span className="font-normal normal-case">({tier.range})</span>
+                    <div className={`text-sm font-semibold uppercase tracking-wide ${band.color}`}>
+                      Grade {band.grade} · {band.label}{' '}
+                      <span className="font-normal normal-case">({band.range})</span>
                     </div>
                     <div className="text-4xl font-bold text-gray-900">{score}/100</div>
                     <div className="text-sm text-gray-600 mt-1">
@@ -597,9 +747,47 @@ const RiskCalculator: React.FC = () => {
                   </div>
                 </div>
                 <div className="h-3 bg-white/70 rounded-full overflow-hidden mb-6">
-                  <div className={`h-full ${tier.bar}`} style={{ width: `${score}%` }} />
+                  <div className={`h-full ${band.bar}`} style={{ width: `${score}%` }} />
                 </div>
-                <p className="text-gray-700 leading-relaxed">{tier.summary}</p>
+                <p className="text-gray-700 leading-relaxed">{band.summary}</p>
+              </div>
+
+              {/* Domain sub-scores. A single overall number hides which area is
+                  actually driving it. */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm mb-8">
+                <h2 className="text-xl font-bold text-gray-900 mb-2">Where the score comes from</h2>
+                <p className="text-gray-600 mb-6">
+                  The same answers grouped into five areas, worst first. A business at 80% in one
+                  area and near zero in the rest has a very different problem from one sitting at
+                  40% across the board.
+                </p>
+                <div className="space-y-5">
+                  {domainScores.map((d) => (
+                    <div key={d.id}>
+                      <div className="flex items-baseline justify-between gap-4 mb-1">
+                        <h3 className="font-bold text-gray-900">{d.name}</h3>
+                        <span className="text-sm text-gray-600 whitespace-nowrap">
+                          {d.risk} / {d.max} points at risk
+                        </span>
+                      </div>
+                      <div className="h-2 bg-gray-100 rounded-full overflow-hidden mb-1">
+                        <div
+                          className={`h-full ${
+                            d.pct >= 70
+                              ? 'bg-red-600'
+                              : d.pct >= 50
+                              ? 'bg-orange-500'
+                              : d.pct >= 30
+                              ? 'bg-yellow-500'
+                              : 'bg-green-500'
+                          }`}
+                          style={{ width: `${d.pct}%` }}
+                        />
+                      </div>
+                      <p className="text-sm text-gray-500">{d.blurb}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {gaps.length > 0 ? (
@@ -644,12 +832,39 @@ const RiskCalculator: React.FC = () => {
                       </div>
                     ))}
                   </div>
+
+                  {/* 90-day plan — the same flagged controls, bucketed by the
+                      severity already computed above. No new judgement. */}
+                  <div className="bg-white rounded-2xl p-6 shadow-sm mt-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">A 90-day order of work</h3>
+                    <p className="text-gray-600 mb-6">
+                      The same flagged items, grouped by urgency rather than listed flat. Nothing new
+                      is added here — it is your list, sequenced.
+                    </p>
+                    <div className="space-y-6">
+                      {PHASES.map((phase) => {
+                        const items = gaps.filter((g) => g.severity === phase.severity);
+                        if (!items.length) return null;
+                        return (
+                          <div key={phase.severity}>
+                            <h4 className="font-bold text-gray-900">{phase.title}</h4>
+                            <p className="text-sm text-gray-500 mb-2">{phase.note}</p>
+                            <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                              {items.map((g) => (
+                                <li key={g.q.id}>{g.q.category}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <div className="bg-white rounded-2xl p-6 shadow-sm mb-8">
                   <h2 className="text-xl font-bold text-gray-900 mb-2">No gaps flagged</h2>
                   <p className="text-gray-700">
-                    You selected the strongest option on all 14 controls. That is an unusually
+                    You selected the strongest option on all 15 controls. That is an unusually
                     complete posture for a small business, so the useful next question is evidence:
                     when was the last restore actually tested, and when was the admin list last
                     reviewed? A self-assessment records intent — the value is in verifying it.
@@ -760,7 +975,8 @@ const RiskCalculator: React.FC = () => {
               </li>
               <li>
                 <strong>10 points</strong> — admin account hygiene, monitoring, patching, email
-                authentication. These decide how far an intruder gets and how quickly anyone notices.
+                authentication, unsupported systems. These decide how far an intruder gets and how
+                quickly anyone notices.
               </li>
               <li>
                 <strong>9 points</strong> — Microsoft 365 configuration, offboarding, vendor and
@@ -772,6 +988,22 @@ const RiskCalculator: React.FC = () => {
               </li>
             </ul>
           </div>
+
+          {/* Rendered from BANDS so the published table cannot drift from the code. */}
+          <h3 className="text-xl font-bold text-gray-900 mb-3">The grade bands</h3>
+          <div className="bg-slate-50 rounded-2xl p-6 mb-8">
+            <ul className="space-y-2 text-gray-700">
+              {BANDS.map((b) => (
+                <li key={b.grade}>
+                  <strong>
+                    {b.grade} · {b.range}
+                  </strong>{' '}
+                  — {b.label}. {b.summary.split('.')[0]}.
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="border border-gray-200 rounded-2xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-2">What this is</h3>
