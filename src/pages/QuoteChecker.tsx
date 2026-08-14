@@ -795,7 +795,7 @@ const QuoteChecker: React.FC = () => {
               },
               {
                 title: 'Free IT risk calculator',
-                body: 'Fourteen weighted control areas scored in your browser, with your weakest points ranked and explained.',
+                body: 'Fifteen weighted control areas scored in your browser, with a letter grade and your weakest points ranked.',
                 to: '/it-risk-calculator/',
                 cta: 'Score your own posture',
               },
@@ -833,8 +833,12 @@ const QuoteChecker: React.FC = () => {
           <AlertTriangle className="h-10 w-10 text-red-300 mx-auto mb-4" />
           <h2 className="text-3xl font-bold text-white mb-4">Comparing two providers?</h2>
           <p className="text-slate-300 mb-8">
-            Run both quotes through the checker and compare the scores, not the prices. If you want a third proposal to
-            measure them against, IT Rapid Support is in Vaughan and covers Toronto and the wider GTA.
+            Run both quotes through the checker and compare the scores, not the prices — our guide to{' '}
+            <Link to="/resources/how-to-compare-managed-it-quotes/" className="text-red-300 hover:text-red-200 underline">
+              comparing managed IT quotes line by line
+            </Link>{' '}
+            covers how to normalise them onto one page. If you want a third proposal to measure them against, IT Rapid
+            Support is in Vaughan and covers Toronto and the wider GTA.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

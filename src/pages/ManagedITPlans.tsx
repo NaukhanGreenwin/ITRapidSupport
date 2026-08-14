@@ -503,7 +503,11 @@ const ManagedITPlans: React.FC = () => {
           </h2>
           <p className="text-gray-600 mb-8 text-center">
             The gap between two managed IT quotes is almost never the number. It is what the cheaper
-            one left out. These are the questions that find it.
+            one left out. These are the questions that find it, and our guide to{' '}
+            <Link to="/resources/how-to-compare-managed-it-quotes/" className="text-red-600 hover:text-red-700 font-medium">
+              comparing managed IT quotes
+            </Link>{' '}
+            works through the arithmetic over a full term.
           </p>
           <ul className="space-y-4">
             {ASK_BEFORE_SIGNING.map((q) => (
