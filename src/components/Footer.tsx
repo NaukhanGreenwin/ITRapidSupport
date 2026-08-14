@@ -1,8 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, ChevronDown } from 'lucide-react';
 import { locations } from '../data/locations';
 import { industries } from '../data/industries';
+
+function FooterAccordionSection({
+  id,
+  title,
+  className,
+  children,
+}: {
+  id: string;
+  title: string;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <div className={className}>
+      <h3 className="text-white font-semibold text-base">
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-controls={id}
+          onClick={() => setOpen((prev) => !prev)}
+          className="flex w-full items-center justify-between text-left group"
+        >
+          <span>{title}</span>
+          <ChevronDown
+            className={`h-4 w-4 text-slate-400 group-hover:text-white transition-transform duration-200 flex-shrink-0 ${
+              open ? 'rotate-180' : ''
+            }`}
+          />
+        </button>
+      </h3>
+      {/* Links stay in the server-rendered DOM when collapsed; hidden only toggles visibility */}
+      <div id={id} hidden={!open} className="mt-4">
+        {children}
+      </div>
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
@@ -88,8 +127,11 @@ export default function Footer() {
         </div>
 
         {/* Service Areas */}
-        <div className="border-t border-gray-800 pt-8">
-          <h3 className="text-white font-semibold text-base mb-4">IT Support by Location</h3>
+        <FooterAccordionSection
+          id="footer-locations"
+          title="IT Support by Location"
+          className="border-t border-gray-800 pt-8"
+        >
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-2.5">
             <li>
               <Link to="/it-support/gta/" className="text-slate-400 hover:text-white text-sm block truncate">
@@ -107,11 +149,14 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </FooterAccordionSection>
 
         {/* Industries */}
-        <div className="border-t border-gray-800 pt-8 mt-8">
-          <h3 className="text-white font-semibold text-base mb-4">IT Support by Industry</h3>
+        <FooterAccordionSection
+          id="footer-industries"
+          title="IT Support by Industry"
+          className="border-t border-gray-800 pt-8 mt-8"
+        >
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-2.5">
             {industries.map((ind) => (
               <li key={ind.slug}>
@@ -132,7 +177,7 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-        </div>
+        </FooterAccordionSection>
 
         {/* Footer Links */}
         <div className="border-t border-gray-800 pt-8 mt-8">
