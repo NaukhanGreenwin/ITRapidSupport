@@ -79,6 +79,7 @@ const routes = [
   '/services/vcio-it-strategy',
   '/services/emergency-it-services',
   '/services/cottage-it-support',
+  '/services/starlink-installation-muskoka',
   '/resources/managed-it-support-cost-toronto',
   '/resources/managed-it-services-vs-in-house',
   '/resources/small-business-cybersecurity-checklist',

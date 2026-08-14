@@ -2847,7 +2847,7 @@ export const locations: CityData[] = [
         paragraphs: [
           'A cottage breaks the assumptions an ordinary home network is built on. Nobody is present for most of the year, so a fault that would be noticed within an hour at home goes undetected for months. Power is less reliable and outages last longer. The internet arrives over whatever service reaches the end of the road. Buildings are spread out and made of materials that wireless signals hate. And the consequence of an undetected failure is physical rather than merely annoying: a heating system that quits in January produces burst pipes and a flooded floor.',
           'That is why the useful frame is monitoring rather than gadgets. The value of a sensor is not the sensor, it is that something is watching what it reports, over a connection that stays up, with a way to act before the damage is done. Most Muskoka properties we are called to look at already have the devices. What they lack is a working chain from the device to an alert to a person who can do something about it.',
-          'The service itself is set out in full on our [cottage IT support and smart home automation](/services/cottage-it-support/) page.',
+          'The service itself is set out in full on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, and where the connection at the end of the road is satellite, on our [Starlink installation and support](/services/starlink-installation-muskoka/) page.',
         ],
       },
       {
@@ -2987,7 +2987,7 @@ export const locations: CityData[] = [
         paragraphs: [
           'Connectivity first: scope what actually reaches the address, install and configure it, and add failover where a dropped connection would take the monitoring with it. Then the network — a router that can be managed remotely, mesh or multi-point Wi-Fi across the main cottage, boathouse and bunkie, separate networks for guests and for cameras and controls, and a small UPS so the equipment survives a blip.',
           'Then the property layer: cameras positioned for the approach, the dock and the mechanical room rather than the view, with local recording that survives an internet outage; smart locks and keypads with codes you can issue from the city; thermostats with low-temperature alerting; leak sensors under sinks and at the pump, ideally with an automatic shutoff; and accounts handed over to you rather than held by us. Everything is documented, which is the difference between a five-minute remote fix and a two-hour drive.',
-          'The full service is set out on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, and the regional picture is on our [Muskoka cottage IT support](/it-support/muskoka/) page.',
+          'The full service is set out on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, the connectivity side on our [Starlink installation in Muskoka](/services/starlink-installation-muskoka/) page, and the regional picture on our [Muskoka cottage IT support](/it-support/muskoka/) page.',
         ],
       },
     ],
@@ -3003,7 +3003,7 @@ export const locations: CityData[] = [
     keywords:
       'cottage IT support Bracebridge, smart home automation Bracebridge, IT support Bracebridge, Bracebridge cottage Wi-Fi, Starlink setup Bracebridge, remote cottage monitoring Bracebridge',
     intro:
-      'Bracebridge is the seat of the District of Muskoka and one of the few places in cottage country that is genuinely busy in both seasons. IT Rapid Support looks after the technology in both halves of that: seasonal properties on the river and the surrounding lakes that need watching all winter, and the year-round homes and small offices in town that need a network good enough to work from.',
+      'Bracebridge is the seat of the District of Muskoka and one of the few places in cottage country that is genuinely busy in both seasons. IT Rapid Support looks after the technology in both halves of that: seasonal properties on the river and the surrounding lakes that need watching all winter, and the year-round homes and small offices in town that need a network good enough to work from. And because our team is based in Vaughan, we are on the same side of the drive as most of the owners — the people whose week is spent in the GTA and whose Bracebridge property has to look after itself in between.',
     sectionIntro:
       'Internet, Wi-Fi, cameras, smart locks, freeze and leak sensors and remote monitoring for cottages, homes and small offices in and around Bracebridge.',
     areaHeading: 'Communities We Cover Around Bracebridge',
@@ -3102,10 +3102,17 @@ export const locations: CityData[] = [
         ],
       },
       {
+        heading: 'Owned From the GTA, Watched From Here',
+        paragraphs: [
+          'Most Bracebridge cottages are not owned from Bracebridge. They are owned from Toronto, Vaughan, Markham and Mississauga, by people who make the drive up Highway 11 on a Friday and spend the other five days two hundred kilometres from their property. The local computer shops in town serve the walk-in trade well, but a walk-in counter is not much use to an owner whose problem announces itself on a Tuesday afternoon in February while they are at work in the city.',
+          'That owner is who this service is actually built for. Our office is at 7810 Keele St in Vaughan — the same side of the drive as you, and often already managing the network at your business or home in the city. The cottage becomes one more site under the same monitoring, the same account and the same phone number, watched continuously rather than checked when somebody happens to be up. When something does need hands on site, we schedule it, or work with your caretaker, instead of waiting for your next weekend north to be spent on a router.',
+        ],
+      },
+      {
         heading: 'What We Set Up and Then Watch',
         paragraphs: [
           'The connection first, then a network that can be managed remotely, with mesh coverage across separate buildings, guest traffic kept away from cameras and controls, and a small UPS under the equipment. Then cameras with local recording, smart locks and keypads, thermostats with low-temperature alerting, and leak sensors at the real failure points, ideally with a shutoff valve that can be closed remotely.',
-          'After that the job is monitoring and documentation rather than installation: knowing the sensors still report, the batteries are good, the alerts reach a phone somebody carries, and every device is written down with its network and its name. The full service is described on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, and the regional coverage on our [Muskoka cottage IT support](/it-support/muskoka/) page. To talk it through against a specific address, call (289) 582-9930.',
+          'After that the job is monitoring and documentation rather than installation: knowing the sensors still report, the batteries are good, the alerts reach a phone somebody carries, and every device is written down with its network and its name. The full service is described on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, the satellite connection itself on our [Starlink installation](/services/starlink-installation-muskoka/) page, and the regional coverage on our [Muskoka cottage IT support](/it-support/muskoka/) page. To talk it through against a specific address, call (289) 582-9930.',
         ],
       },
     ],
@@ -3117,11 +3124,11 @@ export const locations: CityData[] = [
     h1: 'Cottage IT Support & Smart Home Automation in Huntsville',
     heroEyebrow: 'Serving Huntsville, Lake of Bays & north Muskoka',
     description:
-      'Cottage and property IT support in Huntsville: rural internet and Starlink setup, mesh Wi-Fi, cameras, smart locks, sensors and remote monitoring.',
+      'Cottage and property IT support in Huntsville, Ontario: rural internet and Starlink setup, mesh Wi-Fi, cameras, smart locks, sensors and remote monitoring across north Muskoka and Lake of Bays.',
     keywords:
       'cottage IT support Huntsville, smart home automation Huntsville, IT support Huntsville Ontario, Huntsville cottage Wi-Fi, Starlink setup Huntsville, remote cottage monitoring Lake of Bays',
     intro:
-      'Huntsville is the largest town in Muskoka and the western gateway to Algonquin Park, which means a wide spread of properties: cottages on the Huntsville lakes and Lake of Bays, resorts and rentals, and year-round homes and offices in town. IT Rapid Support builds the connection, the network, the cameras and the sensors as one managed system and watches it through the winter from our office in Vaughan.',
+      'Huntsville, Ontario is the largest town in Muskoka and the western gateway to Algonquin Park, which means a wide spread of properties: cottages on the Huntsville lakes and Lake of Bays, resorts and rentals, and year-round homes and offices in town. IT Rapid Support builds the connection, the network, the cameras and the sensors as one managed system and watches it through the winter from our office in Vaughan.',
     sectionIntro:
       'Internet, Wi-Fi, cameras, smart locks, freeze and leak sensors and remote monitoring for cottages, rentals and year-round properties around Huntsville.',
     areaHeading: 'Communities We Cover Around Huntsville',
@@ -3224,7 +3231,7 @@ export const locations: CityData[] = [
         paragraphs: [
           'Connectivity first — scope what reaches the address, install and configure it, and add failover where losing it would take the monitoring down too. Then a remotely manageable network with mesh coverage across the buildings, guest traffic separated from cameras and controls, and a small UPS so equipment survives a power blip rather than rebooting into a bad state.',
           'Then the property layer: cameras with local recording that survives an outage, smart locks and keypads with codes you control from the city, thermostats with low-temperature alerting, and leak sensors with a remote or automatic shutoff where it is worth doing. Accounts are handed to you rather than held by us, and everything is documented.',
-          'The service in full is on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, with the regional picture on our [Muskoka cottage IT support](/it-support/muskoka/) page. To scope a specific property, call (289) 582-9930 or [get in touch](/contact/).',
+          'The service in full is on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, with [Starlink installation and support](/services/starlink-installation-muskoka/) covering the connection itself and the regional picture on our [Muskoka cottage IT support](/it-support/muskoka/) page. To scope a specific property, call (289) 582-9930 or [get in touch](/contact/).',
         ],
       },
     ],

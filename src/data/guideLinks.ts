@@ -185,6 +185,11 @@ export const serviceGuideMap: Record<string, string[]> = {
     'small-business-cybersecurity-checklist',
     'cloud-backup-disaster-recovery-guide',
   ],
+  'starlink-installation-muskoka': [
+    'why-24-7-it-helpdesk-matters',
+    'small-business-cybersecurity-checklist',
+    'it-support-small-business-gta',
+  ],
   'emergency-it-services': [
     'ransomware-protection-ontario-businesses',
     'disaster-recovery-plan-small-business-ontario',

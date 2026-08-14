@@ -123,6 +123,14 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                to="/services/cottage-it-support/"
+                className="text-slate-400 hover:text-white text-sm block truncate"
+              >
+                IT for Cottages & Seasonal Properties
+              </Link>
+            </li>
           </ul>
         </div>
 

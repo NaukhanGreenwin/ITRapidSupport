@@ -51,7 +51,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
       description: data.description,
       url,
       areaServed: data.areaServed ?? 'Greater Toronto Area, Ontario',
-      serviceType: 'Managed IT Services',
+      serviceType: data.serviceType ?? 'Managed IT Services',
     }),
     generateFAQSchema(data.faqs),
   ];
@@ -77,7 +77,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center px-4 py-2 bg-red-600/10 rounded-full mb-6">
               <Layers className="h-4 w-4 text-red-200 mr-2" />
-              <span className="text-red-200 text-sm font-medium">Managed IT Services</span>
+              <span className="text-red-200 text-sm font-medium">{data.eyebrow ?? 'Managed IT Services'}</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               {data.h1 ?? data.title}
@@ -208,7 +208,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to talk about {data.service.toLowerCase()}?
+            Ready to talk about {data.ctaSubject ?? data.service.toLowerCase()}?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-3xl mx-auto">
             {data.ctaIntro ?? 'Talk to our GTA team about managed IT, cybersecurity, and 24/7 support built around your business.'}

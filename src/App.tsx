@@ -121,6 +121,7 @@ function App() {
             <Route path="/services/vcio-it-strategy" element={<ServiceLanding slug="vcio-it-strategy" />} />
             <Route path="/services/emergency-it-services" element={<ServiceLanding slug="emergency-it-services" />} />
             <Route path="/services/cottage-it-support" element={<ServiceLanding slug="cottage-it-support" />} />
+            <Route path="/services/starlink-installation-muskoka" element={<ServiceLanding slug="starlink-installation-muskoka" />} />
             <Route path="/it-support/gta" element={<GTALanding />} />
             <Route path="/it-support/york-region" element={<LocationLanding slug="york-region" />} />
             <Route path="/tools/email-spoof-check" element={<EmailSpoofCheck />} />

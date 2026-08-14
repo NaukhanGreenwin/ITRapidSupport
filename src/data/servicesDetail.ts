@@ -28,6 +28,14 @@ export interface ServiceDetailData {
   areaServed?: string;
   sectionIntro?: string;
   ctaIntro?: string;
+  // Optional Service-schema serviceType; defaults to 'Managed IT Services'.
+  // Set it where the page is not a managed-IT offering (e.g. installation work).
+  serviceType?: string;
+  // Optional hero eyebrow label; defaults to 'Managed IT Services'.
+  eyebrow?: string;
+  // Optional subject used in the closing CTA heading. Without it the service
+  // name is lowercased, which mangles proper nouns like Starlink.
+  ctaSubject?: string;
   // Short chips shown in the "what we cover" band.
   tags: string[];
   highlights: ServiceHighlight[];
@@ -660,13 +668,13 @@ export const servicesDetail: ServiceDetailData[] = [
   },
   {
     slug: 'cottage-it-support',
-    service: 'Cottage IT Support & Smart Home Automation',
-    title: 'Cottage IT Support & Smart Home Automation',
-    h1: 'Cottage IT Support & Smart Home Automation for Muskoka',
+    service: 'Cottage Wi-Fi & Smart Home Installation',
+    title: 'Cottage Wi-Fi & Smart Home Installation in Muskoka',
+    h1: 'Cottage Wi-Fi and Smart Home Installation Across Muskoka',
     description:
-      'Cottage IT support and smart home automation for Muskoka: rural internet and Starlink setup, mesh Wi-Fi, cameras, smart locks, and freeze and leak sensors.',
+      'Cottage Wi-Fi installation in Muskoka: Starlink, LTE or fixed wireless, mesh Wi-Fi to the dock and boathouse, cameras, smart locks, and freeze and leak sensors.',
     keywords:
-      'cottage IT support, smart home automation Muskoka, cottage Wi-Fi, Starlink setup Muskoka, cottage security cameras, remote cottage monitoring, cottage internet Muskoka, smart cottage technology',
+      'cottage wifi installation Muskoka, cottage Wi-Fi Muskoka, smart home installation Muskoka, boathouse Wi-Fi, dock Wi-Fi, Starlink setup Muskoka, mesh Wi-Fi cottage, cottage security cameras, remote cottage monitoring, cottage internet Muskoka',
     intro:
       'A cottage is a building full of technology that nobody is standing next to for most of the year. IT Rapid Support sets up and manages the parts that matter — a rural internet connection that actually stays up, Wi-Fi that reaches the boathouse, cameras and smart locks you can check from the city, and freeze and leak sensors that tell you about a problem while it is still cheap to fix. It is the same monitoring and remote support discipline we run for businesses across the GTA, applied to a property two hours north of our office.',
     areaServed: 'Muskoka and Ontario cottage country',
@@ -774,9 +782,30 @@ export const servicesDetail: ServiceDetailData[] = [
       {
         heading: 'What We Set Up at a Cottage',
         paragraphs: [
-          'Connectivity comes first, because nothing else works without it: scoping what is genuinely available at the address, installing and configuring the service, and adding failover where a dropped connection would take the monitoring down with it. Then the network — a router that can be managed remotely, mesh or multi-point Wi-Fi covering the main building and any outbuildings, separate networks for guests and for the cameras and controls, and a small UPS so the equipment rides out a blip rather than rebooting badly.',
+          'Connectivity comes first, because nothing else works without it: scoping what is genuinely available at the address, installing and configuring the service, and adding failover where a dropped connection would take the monitoring down with it. Where satellite is the answer, [Starlink installation and support](/services/starlink-installation-muskoka/) is a service in its own right — survey, mount, cabling, and the network behind it. Then the network — a router that can be managed remotely, mesh or multi-point Wi-Fi covering the main building and any outbuildings, separate networks for guests and for the cameras and controls, and a small UPS so the equipment rides out a blip rather than rebooting badly.',
           'On top of that sits the property layer: cameras positioned for the approach, the dock, and the mechanical room rather than pointed at scenery, with local recording that survives an internet outage; smart locks and keypads with codes you can issue and revoke from the city; thermostats and heating controls with low-temperature alerting; water sensors under the sinks and at the pump, ideally paired with an automatic shutoff valve; and a documented set of accounts and apps handed over to you, not held by us.',
           'Everything is documented — what is installed, where it is, what network it is on, what it is called, and how to reach it. That document is the difference between a five-minute remote fix and a two-hour drive next season.',
+        ],
+      },
+      {
+        heading: 'Wi-Fi at the Dock and the Boathouse',
+        paragraphs: [
+          'The question every cottage Wi-Fi conversation eventually arrives at is not the living room, it is the dock. The buildings where people actually spend a Muskoka afternoon — the boathouse, the bunkie, the deck by the water — are the ones the provider router in the basement was never going to reach, and the ones a trail of plug-in extenders reaches badly, with each hop halving the speed of the one before it.',
+          'Getting coverage there is an installation problem, not a gadget problem. It means an outdoor-rated access point placed for the dock rather than the view, a real backhaul to it — buried cable where a trench is possible, a point-to-point wireless link across the yard where it is not — and a survey done against the property as it is in July, with full canopy and boats in the slips, rather than in March when everything looks like clear line of sight. Done that way, the boathouse gets the same usable Wi-Fi as the kitchen, and a camera at the waterline stops dropping off the network every time it matters.',
+        ],
+      },
+      {
+        heading: 'Starlink, LTE or Fixed Wireless — Picking the Right Source',
+        paragraphs: [
+          'Before any Wi-Fi design means anything, something has to deliver internet to the property, and in Muskoka that is a genuine decision rather than a default. Starlink works almost anywhere with open sky and is often the strongest option on the lakes, but it is not automatic — mature pine over the only workable mount can undermine it, and the dish is the start of the network, not the end. LTE or 5G fixed wireless can be quicker to stand up and cheaper to run where a tower is close, and its reliability swings street by street. Fixed wireless from a local provider and the long cable or DSL runs that reach some roads round out the field.',
+          'We scope what is actually available at the address, recommend on merit — we are not a reseller and take no commission on the service you pick — and where the answer is satellite, the [Starlink installation](/services/starlink-installation-muskoka/) is a job we do end to end. Where losing the connection would take the cameras and freeze sensors down with it, we add a cellular failover, because at a building that sits empty for five months the connection is not a convenience, it is the monitoring.',
+        ],
+      },
+      {
+        heading: 'Mesh vs Wired Access Points in a Timber Cottage',
+        paragraphs: [
+          'Cottage construction is close to a worst case for wireless. Log and heavy-timber walls, stone chimneys and fireplaces, foil-backed insulation, and metal roofs all soak up or reflect signal, which is why a mesh kit that covers a suburban house effortlessly can fall apart across one large timber building. Mesh still has a real place — it avoids opening walls, and a good tri-band system with sensible node placement will carry a mid-sized cottage — but every wireless hop through timber costs speed, and the marketing diagrams assume drywall.',
+          'The honest engineering answer is wire where you can, mesh where you must. A cable run to even one or two well-placed access points transforms what the wireless side has to do, and the cheapest moment to run it is during any renovation, before the walls close. Between separate buildings the same logic holds: a trench or a point-to-point link beats hoping a mesh signal survives the trip to the boathouse. We design against the actual building — and when the right answer is two cables and one access point rather than a five-node kit, that is what we will tell you.',
         ],
       },
       {
@@ -790,7 +819,185 @@ export const servicesDetail: ServiceDetailData[] = [
         heading: 'How This Fits With the Rest of What We Do',
         paragraphs: [
           'IT Rapid Support is a managed IT and cybersecurity provider based at 7810 Keele St in Vaughan, and this service exists because the same people kept asking for it. The business owner whose network we manage has a place on Lake Rosseau where nothing works properly. The family we already handle [private residential security](/services/high-net-worth/) for wants the cottage watched the same way the house is. The requirement is not exotic: it is remote monitoring, a properly built network, sensible security on the accounts and devices, and a number to call.',
-          'The regional pages set out what that looks like in each part of cottage country — [Muskoka](/it-support/muskoka/) as a whole, and locally in [Port Carling](/it-support/port-carling/), [Bracebridge](/it-support/bracebridge/) and [Huntsville](/it-support/huntsville/). If you want to talk it through against a specific property, call (289) 582-9930 or [get in touch](/contact/).',
+          'The regional pages set out what that looks like in each part of cottage country — [Muskoka](/it-support/muskoka/) as a whole, and locally in [Port Carling](/it-support/port-carling/), [Bracebridge](/it-support/bracebridge/) and [Huntsville](/it-support/huntsville/), and the connectivity layer under all of it is covered on our [Starlink installation in Muskoka](/services/starlink-installation-muskoka/) page. If you want to talk it through against a specific property, call (289) 582-9930 or [get in touch](/contact/).',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'starlink-installation-muskoka',
+    service: 'Starlink Installation in Muskoka',
+    title: 'Starlink Installation in Muskoka | Cottage & Rural Setup',
+    h1: 'Starlink Installation and Support for Muskoka Cottages',
+    description:
+      'Starlink installation in Muskoka: what it costs, obstruction survey, dish mounting, cabling, and the mesh Wi-Fi and monitoring behind the dish.',
+    keywords:
+      'Starlink installation Muskoka, Starlink installer Muskoka, Starlink installation cost Muskoka, Starlink cottage installation, Starlink Port Carling, Starlink Bracebridge, Starlink Huntsville, cottage internet Muskoka, Starlink mesh Wi-Fi cottage, rural internet installation Ontario',
+    intro:
+      'Starlink is straightforward to plug in and surprisingly easy to install badly, and a Muskoka cottage is where that shows up fastest. A dish placed where the trees will be in the way by July, a cable run through a window that will not close in winter, and the provider router left trying to cover a building four times the size it was designed for will all produce a connection that technically works and constantly disappoints. Most installers in cottage country will put a dish on your roof and drive away. IT Rapid Support does the dish and the network behind it: the obstruction survey before anyone spends money, a mount and cable run that survive a Muskoka winter, whole-property Wi-Fi out to the bunkie and the dock, and remote monitoring so an outage in February is an alert rather than something you discover in May.',
+    areaServed: 'Muskoka and Ontario cottage country',
+    eyebrow: 'Internet & Connectivity',
+    serviceType: 'Satellite Internet Installation and Support',
+    sectionIntro:
+      'Site survey, installation, whole-property Wi-Fi, and year-round remote monitoring for cottages across Muskoka, from our Vaughan-based team.',
+    ctaSubject: 'Starlink installation in Muskoka',
+    ctaIntro:
+      'Talk to our team about a site check, a proper install, Wi-Fi that reaches the boathouse, or fixing a Starlink setup that is not performing.',
+    tags: [
+      'Obstruction & site survey',
+      'Dish mounting',
+      'Cable routing & weatherproofing',
+      'Router & network setup',
+      'Mesh Wi-Fi to outbuildings',
+      'Dock & boathouse coverage',
+      'Winter remote monitoring',
+      'Ongoing troubleshooting',
+    ],
+    highlights: [
+      {
+        title: 'The Site Check Comes First',
+        description:
+          'The single biggest cause of a disappointing Starlink on the Shield is a dish that cannot see enough open sky through mature pine and hardwood. We check the obstruction picture at the actual mounting positions available on your building before hardware goes up, allow for trees at full summer canopy rather than in March, and tell you plainly if the address is a poor candidate.',
+      },
+      {
+        title: 'Mounted and Cabled for a Muskoka Winter',
+        description:
+          'A dish is a permanent outdoor installation on your roof, wall, or a pole, and in Muskoka it has to survive lake wind, ice load, and snow shedding off a steep cottage roof. We use a mount suited to the structure, route the cable through a properly sealed penetration rather than a propped-open window, keep the run within spec, and terminate it somewhere reachable with surge protection and clean power.',
+      },
+      {
+        title: 'The Network Behind the Dish',
+        description:
+          'This is the part most installers skip. A dish on the roof is not internet at the dock. We put in mesh or multi-access-point Wi-Fi that reaches the bunkie, the boathouse, and the garage, keep cameras and controls off the guest network, and monitor the whole thing year-round so a February outage is an alert on somebody\'s phone rather than a discovery in May.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Are you a Starlink dealer or reseller?',
+        answer:
+          'No. We are an independent IT provider — we install, configure, and support the equipment, and we help you choose it, but we do not resell the service and we take no commission on whichever plan or hardware you end up buying. That is deliberate, because it means the advice can include telling you that Starlink is the wrong answer at your address. The subscription stays in your name, on your account, billed by Starlink directly.',
+      },
+      {
+        question: 'Can you help us decide whether Starlink is right for the property?',
+        answer:
+          'That is usually the first conversation, and it is worth having before the hardware arrives. We look at what else is genuinely available at the address, because where cable or fibre reaches, it is normally cheaper and steadier. We look at sky visibility, since satellite service needs a clear view and trees decide the outcome more often than anything else. We look at what the connection has to carry — video calls, a point-of-sale system, cameras and sensors that have to keep reporting while nobody is there — and whether it needs a backup path. Hardware options and plan tiers change often enough that we check what is current at the time rather than working from last year.',
+      },
+      {
+        question: 'What does a professional Starlink installation actually include?',
+        answer:
+          'A site survey to confirm the best mounting position and check obstructions from that exact spot. A mount appropriate to the structure — roof, wall, eave, non-penetrating ballast, or a ground or pole mount where the roof is a poor choice. Cable routed and secured along a proper path, through a sealed and flashed penetration, within the manufacturer cable length. Grounding and surge protection where the installation calls for it. Termination at a sensible indoor location on reliable power. Then the configuration: the router set up correctly or bypassed in favour of your own, Wi-Fi designed for the building, devices moved over, and a test that the thing actually performs before we leave.',
+      },
+      {
+        question: 'Where should the dish go — roof, pole, or ground?',
+        answer:
+          'Wherever it sees the most sky with the shortest sensible cable run and the least risk to the building. A roof or gable mount is common because height clears obstructions, but it is not automatic: on a cottage with a metal roof, or where the only clear sky is over the water, a pole mount away from the building is often better and far easier to service. Ground mounts are simple to reach but frequently blocked by the treeline. Snow and ice shed matter in Ontario, and so does not putting a permanent hole through a roof you are replacing next year. We pick the mount after the survey, not before.',
+      },
+      {
+        question: 'Do I have to use the Starlink router?',
+        answer:
+          'No, and for anything beyond a small open-plan home you generally should not. The supplied router is fine as a starting point and limited beyond that. Putting it in bypass mode and running your own router or mesh system gives you real control: proper Wi-Fi coverage across a large or awkward building, a separate guest network, VLANs keeping cameras and controls away from everything else, VPN access, and manageable settings we can reach remotely when something needs fixing. That is the configuration we deploy on most properties.',
+      },
+      {
+        question: 'Can you get Wi-Fi from the dish to the rest of the property?',
+        answer:
+          'Yes, and this is usually where the real work is. Getting a signal from a router in one corner of a building to a garage, boathouse, shop, bunkie, or second floor is a design problem, not a shopping problem. The reliable approach is a mesh or multi-access-point layout with a wired backhaul where a cable can be run, or a point-to-point wireless link between separate structures where it cannot — rather than a chain of consumer extenders, each halving the speed of the one before it. Thick logs, stone chimneys, foil-backed insulation, and metal roofs all shape where the access points have to sit.',
+      },
+      {
+        question: 'Will Starlink work for a business, or for remote work and video calls?',
+        answer:
+          'For plenty of businesses in places wired service does not reach, it is the connection that made operating there practical at all. It handles video calls, cloud applications, and Microsoft 365 work well in normal conditions. The honest caveats: it is a shared satellite service, so performance varies with congestion and heavy weather, and consumer-tier service normally sits behind carrier-grade NAT, which means no public inbound IP address for hosting or for older site-to-site VPN setups. Business-tier service and different network design address that. Where downtime genuinely costs money, we build Starlink into a dual-WAN setup — either as the primary with a cellular backup, or as the backup behind a wired link — so a failure switches over rather than stopping the day.',
+      },
+      {
+        question: 'What about snow, ice, wind, and Ontario winters?',
+        answer:
+          'The dish has a built-in heater that melts snow off the panel, but it will not clear a drift that builds up around it, and it draws noticeably more power while it is working at that. What matters more is the install: a mount rated for the wind loads at height, positioned so snow shedding off a roof does not land on the dish or rip the cable, a cable run with a drip loop and no standing-water path into the building, and a sealed penetration that does not become an ice dam. Poor winter performance is far more often an installation problem than an equipment problem.',
+      },
+      {
+        question: 'Our Starlink is already installed but performs badly. Can you fix it?',
+        answer:
+          'That is a large share of what we get called for. The usual findings are the same few things: a dish with a partly blocked view of the sky that nobody re-checked once the leaves came in, a cable that has been kinked, pinched, or run beyond spec, the provider router struggling to cover a building it was never going to cover, everything on one flat network competing with itself, or power that keeps dropping the equipment. We read the obstruction and outage history off the setup, test the connection separately from the Wi-Fi so it is clear which one is at fault, and fix the actual cause rather than adding another extender to it.',
+      },
+      {
+        question: 'Do you support the setup after the install?',
+        answer:
+          'Yes — that is the part most installers skip and most of the value sits in. Ongoing support means monitoring where the site is unattended, so an outage is an alert rather than a discovery; remote troubleshooting for the routine faults, which is most of them, provided the site was built to allow it; firmware and configuration kept current on the network gear; and somebody to call who already has documentation of your setup. It is the same remote-first support model we run for our managed IT clients in the GTA.',
+      },
+      {
+        question: 'Which parts of Muskoka do you cover?',
+        answer:
+          'All of it, and the surrounding cottage country with it — the Lake Muskoka, Lake Rosseau, and Lake Joseph shorelines around Port Carling, the Bracebridge and Gravenhurst side, Huntsville and Lake of Bays, and the smaller lakes off the highway in between. Being straight about where we are: our office is at 7810 Keele Street in Vaughan, roughly two hours south, so we are not a walk-in shop in Bracebridge. On-site work is scheduled rather than same-day, which is the honest trade for a service designed to handle most faults remotely. Local pages set out the detail for [Port Carling](/it-support/port-carling/), [Bracebridge](/it-support/bracebridge/), and [Huntsville](/it-support/huntsville/).',
+      },
+      {
+        question: 'Do you install Starlink at cottages and seasonal properties?',
+        answer:
+          'Almost always — it is most of what this service is. A cottage adds requirements a house does not have: the connection has to stay up while nobody is there, because the cameras, thermostats, and freeze and leak sensors all depend on it, and a dish that cannot be reached in February needs to have been mounted with that in mind. Our cottage IT support service covers the whole picture — internet, whole-property Wi-Fi, cameras, locks, sensors, and remote monitoring — with Starlink usually as the connectivity layer underneath it.',
+      },
+      {
+        question: 'How much does Starlink installation cost in Muskoka?',
+        answer:
+          'There are three separate costs and it is worth keeping them apart. The hardware is bought from Starlink — the Standard kit lists around C$599 and the Mini around C$399, and Starlink has run promotions in Canada through 2026 that dropped the kit far below list or bundled it free with activation, so check the current offer before budgeting. The subscription is also billed by Starlink, with residential tiers running roughly C$75 to C$150 a month plus tax, no contract. The third cost is the installation itself, which is the only part we charge for. Independent installers around cottage country generally quote somewhere between C$250 and C$500 for a straightforward mount, cable run, and basic setup, before mounting hardware and cable extensions. A cottage job with a pole mount, a long cable run, and Wi-Fi that has to reach a boathouse sits above that, because it is a different piece of work. We quote a fixed price after the site survey rather than working hourly, so the number you get is the number you pay. Figures here are current as of August 2026; Starlink changed its Canadian pricing several times this year, so confirm the current rate at starlink.com.',
+      },
+      {
+        question: 'What makes one Muskoka install cost more than another?',
+        answer:
+          'Five things, in roughly this order. Mount type and height — a wall or eave mount on a single-storey cottage is quick, a pole mount set away from the building to clear the treeline is not, and a ballasted non-penetrating roof mount sits in between. Cable route and length, because a run from a dish on the lake side to equipment in a basement utility room can approach the manufacturer limit and needs a sealed, flashed entry rather than a hole and some caulk. How much Wi-Fi coverage the property needs, which is usually the single biggest variable — one open-plan cottage is nothing like a main building plus a bunkie, a garage, and a dock. Whether you want the site monitored over the winter and reachable remotely, which means a UPS, a remotely switchable outlet, and a router we can log into. And how much of the existing network we are rebuilding rather than adding to. The survey is what turns those five into a number.',
+      },
+      {
+        question: 'Are you cheaper than the local Starlink installers in Muskoka?',
+        answer:
+          'Not necessarily, and we would rather be straight about it than pretend otherwise. If all you want is a dish bolted to a roof and plugged in, a dedicated Starlink installer will usually do that for less than we will, and that is a perfectly sensible thing to buy. We are worth the difference when the network matters — when Wi-Fi has to reach outbuildings and the dock, when cameras and freeze sensors depend on the connection staying up while nobody is there, or when the property is already running smart locks and thermostats that have to be kept working. That is a managed IT job with a dish attached, not a dish install, and it is the part nobody else in this market is selling.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'What Starlink Installation Costs in Muskoka',
+        paragraphs: [
+          'Nobody in this market publishes a number, so here is ours in plain terms. There are three separate costs and conflating them is why the answers online are so muddled.',
+          'First, the hardware, which you buy from Starlink and which never touches our invoice. The Standard kit lists at around C$599 and the Mini at around C$399. Starlink has repeatedly discounted both in Canada through 2026 — there have been windows where the kit was heavily reduced or effectively free with activation in eligible areas — so the list price is a ceiling rather than a forecast. Check what is actually on offer at your postal code before you budget.',
+          'Second, the subscription, also billed by Starlink directly to you. Residential service in Canada currently runs roughly C$75 to C$150 a month plus tax depending on the speed tier, with no contract and no data cap. Roam and business tiers cost more and buy different things.',
+          'Third, the installation — the only part we charge for. For a straightforward job in cottage country, meaning a wall, eave, or simple roof mount with a normal cable run and basic setup, independent installers in the region generally land somewhere between C$250 and C$500 before mounting hardware and cable extensions. Mounts themselves typically run C$40 to C$150 depending on type, and a longer cable another C$40 to C$130. That is the going rate for a dish install, and if a dish install is genuinely all you need, it is a fair price to pay.',
+          'A Muskoka cottage frequently is not that job. A pole mount set out from the building to clear the treeline, a long sealed cable run into a basement or boathouse, mesh access points covering a main cottage plus a bunkie and a dock, a UPS and remote power control so the equipment can be recovered without a four-hour drive, and monitoring through the winter is a different scope and prices accordingly. We quote it fixed after the site survey rather than hourly, so the figure you approve is the figure you pay, and the survey tells you before you commit whether the address is even a good Starlink candidate.',
+          'One thing we will not do is mark up the hardware or take a commission on the plan. We are not a Starlink dealer or reseller. The subscription stays in your name on your account, which also means the advice can include telling you that satellite is the wrong answer at your address.',
+          'Figures on this page are current as of August 2026. Starlink changed its Canadian pricing several times during 2026, so confirm the current hardware and plan cost at starlink.com, and call (289) 582-9930 for an installation quote against your actual property.',
+        ],
+      },
+      {
+        heading: 'Why Most Starlink Complaints Are Installation Problems',
+        paragraphs: [
+          'The dish itself is a well-engineered piece of hardware that mostly does what it says. Almost every complaint we get called in on traces back to one of four decisions made in the first hour of the install. The dish went somewhere convenient rather than somewhere with a clear view of the sky. The cable was run the short way rather than the right way. The provider router was left to cover a building four times the size it was designed for. Or the whole thing was plugged into power that drops out and nobody noticed the equipment had been rebooting for months.',
+          'None of those show up on day one. A dish set up in March under bare trees looks perfect and then degrades every week through May as the canopy fills in. A window-run cable is fine until the first hard freeze. A single router in the corner of a cottage is fine while everyone is sitting in the same room. The failures arrive later, look like the service being unreliable, and get blamed on the satellite. Doing the survey properly and mounting it properly is not a premium add-on — it is the difference between a connection you stop thinking about and one you complain about all summer.',
+        ],
+      },
+      {
+        heading: 'What We Do, Step by Step',
+        paragraphs: [
+          'We start with the survey, before any money is committed if you have not bought yet. That means checking the sky view from each realistic mounting position on the building, allowing for how the trees will look at full leaf rather than how they look today, working out the cable path and its length, and confirming there is somewhere sensible indoors for the equipment to live on decent power. If the address is a poor candidate, that is the point at which we say so.',
+          'Then the physical install: a mount matched to the structure and the wind exposure, cable secured along its run with a drip loop and a sealed, flashed entry point rather than an open window, surge protection and grounding where the installation warrants it, and termination somewhere you can actually reach the equipment.',
+          'Then the part that decides how it feels to use. The router is configured properly or bypassed in favour of hardware that can do the job, Wi-Fi is designed around the building instead of a single box in one corner, guest traffic is separated from cameras and controls, and failover is added where an outage costs you something. See our [network management](/services/network-management/) service for how we run that layer on an ongoing basis.',
+          'Finally, documentation and handover: what is installed, where it is, what network it is on, which accounts control it, and how to reach support. The accounts stay yours. That document is what turns most future faults into a remote fix instead of a site visit.',
+        ],
+      },
+      {
+        heading: 'The Dish Is the Easy Part: What Other Installers Leave Behind',
+        paragraphs: [
+          'Search for a Starlink installer in Muskoka and you will find several good ones. What almost none of them sell is the thing that actually determines whether the cottage works: the network on the inside. A dish is bolted up, the supplied router is plugged in, the installer confirms a speed test at the kitchen table, and that is the end of the relationship. Six weeks later the Wi-Fi does not reach the bunkie, the camera at the boathouse keeps dropping, the guest network is the same network as the door locks, and there is nobody to call.',
+          'We do the dish and then keep going. Mesh or multi-access-point Wi-Fi designed around the buildings — wired backhaul where a cable can be pulled, a point-to-point link between structures where it cannot, rather than a chain of consumer extenders each halving the speed of the one before it. Separate networks so guests, cameras, and controls are not sharing one flat space. A router we can log into remotely, on a UPS, behind a remotely switchable outlet, so a stuck device is a click rather than a drive. And year-round monitoring, so an outage in the middle of February reaches somebody instead of waiting for the May long weekend.',
+          'That is ordinary managed IT work applied to a cottage, which is what we do for businesses across the GTA every day. It is also why this service exists at all: the people asking us for it were already our clients, and what they wanted was not an internet connection installed, it was a property that keeps working while they are not in it.',
+        ],
+      },
+      {
+        heading: 'Starlink for Muskoka Cottages and Seasonal Properties',
+        paragraphs: [
+          'Cottage country is where satellite internet earns its reputation, because for a great many properties on the Canadian Shield it is the only real option — service availability changes road by road, and two cottages on the same lake can have entirely different choices. But a seasonal property raises the stakes on the install rather than lowering them. The connection is not just for streaming in August; it is what the cameras, the smart locks, the thermostats, and the freeze and leak sensors depend on to reach you in January. If it drops while nobody is there, everything else on the property goes quiet at the same time.',
+          'So the design changes. Equipment goes on a small UPS so a power blip does not leave it rebooting into a bad state. A remote power controller lets a stuck modem or router be restarted without anyone driving up. Cellular failover keeps the alarms, sensors, and one camera reachable where the risk justifies it. And the mount is chosen partly on whether anyone could physically get to it in the middle of winter.',
+          'The wider service around that is set out on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, with regional coverage across [Muskoka](/it-support/muskoka/) and locally in [Port Carling](/it-support/port-carling/), [Bracebridge](/it-support/bracebridge/), and [Huntsville](/it-support/huntsville/).',
+        ],
+      },
+      {
+        heading: 'Starlink for Businesses and as a Backup Connection',
+        paragraphs: [
+          'Two business cases come up repeatedly. The first is the site wired service never reached — a yard, a shop, a farm operation, a construction office, a rural clinic — where satellite is what makes operating there practical. The second is redundancy: a business with a perfectly good wired connection that cannot afford to lose it, adding a second path over a completely different medium. A cut fibre in the street and a satellite link do not fail together, which is the whole point.',
+          'Either way the design work is the same. A dual-WAN firewall or router that fails over automatically instead of waiting for somebody to swap a cable. Awareness of what sits behind carrier-grade NAT on consumer-tier service and what that rules out for inbound access and older site-to-site VPNs. Realistic expectations about a shared service under load and in heavy weather. And monitoring, so you find out the backup path has been dead for six weeks before the day you need it, not on the day you need it.',
+          'This is ordinary network design, and it is the same work we do for GTA clients on wired connections — see [IT support across the Greater Toronto Area](/it-support/gta/) or [get in touch](/contact/) to talk it through against a specific site. Call (289) 582-9930.',
         ],
       },
     ],

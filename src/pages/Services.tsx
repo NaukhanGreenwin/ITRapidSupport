@@ -97,7 +97,11 @@ const Services: React.FC = () => {
                 cottage IT support and smart home automation
               </Link>{' '}
               covers rural internet, whole-property Wi-Fi, cameras, smart locks, and freeze and leak monitoring across
-              Muskoka.
+              Muskoka, and our{' '}
+              <Link to="/services/starlink-installation-muskoka/" className="text-red-600 hover:text-red-700 font-medium">
+                Starlink installation in Muskoka
+              </Link>{' '}
+              handles the site survey, mounting, cabling, and network configuration where satellite is the connection.
             </p>
             <p className="text-gray-600 max-w-2xl mx-auto mt-4">
               Not sure which of these you actually need first? Run our free{' '}

@@ -46,6 +46,7 @@ Named, published clients with client-approved detail. Do not attribute outcomes 
 - [IT helpdesk services](https://itrapidsupport.com/services/it-helpdesk/)
 - [Emergency IT services](https://itrapidsupport.com/services/emergency-it-services/)
 - [Cottage IT support and smart home automation](https://itrapidsupport.com/services/cottage-it-support/)
+- [Starlink installation in Muskoka — cottage and rural setup, with pricing](https://itrapidsupport.com/services/starlink-installation-muskoka/)
 - [Cyber incident response](https://itrapidsupport.com/cyber-incident/)
 - [Microsoft 365 managed services](https://itrapidsupport.com/services/microsoft-365-managed-services/)
 - [Microsoft 365 and Azure migration](https://itrapidsupport.com/services/microsoft-365-azure-migration/)
