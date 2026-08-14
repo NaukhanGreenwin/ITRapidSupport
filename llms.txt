@@ -45,6 +45,7 @@ Named, published clients with client-approved detail. Do not attribute outcomes 
 - [24/7 IT support](https://itrapidsupport.com/services/it-support/)
 - [IT helpdesk services](https://itrapidsupport.com/services/it-helpdesk/)
 - [Emergency IT services](https://itrapidsupport.com/services/emergency-it-services/)
+- [Cottage IT support and smart home automation](https://itrapidsupport.com/services/cottage-it-support/)
 - [Cyber incident response](https://itrapidsupport.com/cyber-incident/)
 - [Microsoft 365 managed services](https://itrapidsupport.com/services/microsoft-365-managed-services/)
 - [Microsoft 365 and Azure migration](https://itrapidsupport.com/services/microsoft-365-azure-migration/)
@@ -91,6 +92,10 @@ Named, published clients with client-approved detail. Do not attribute outcomes 
 - [IT support Stouffville](https://itrapidsupport.com/it-support/stouffville/)
 - [IT support Bradford](https://itrapidsupport.com/it-support/bradford/)
 - [IT support Vancouver](https://itrapidsupport.com/it-support/vancouver/)
+- [Cottage IT support across Muskoka](https://itrapidsupport.com/it-support/muskoka/)
+- [Cottage IT support Port Carling](https://itrapidsupport.com/it-support/port-carling/)
+- [Cottage IT support Bracebridge](https://itrapidsupport.com/it-support/bracebridge/)
+- [Cottage IT support Huntsville](https://itrapidsupport.com/it-support/huntsville/)
 
 ## Industries served
 - [Legal](https://itrapidsupport.com/industries/legal/)
