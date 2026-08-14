@@ -827,7 +827,7 @@ export const servicesDetail: ServiceDetailData[] = [
   {
     slug: 'starlink-installation-muskoka',
     service: 'Starlink Installation in Muskoka',
-    title: 'Starlink Installation in Muskoka | Cottage & Rural Setup',
+    title: 'Starlink Installation in Muskoka & Cottage Country',
     h1: 'Starlink Installation and Support for Muskoka Cottages',
     description:
       'Starlink installation in Muskoka: what it costs, obstruction survey, dish mounting, cabling, and the mesh Wi-Fi and monitoring behind the dish.',

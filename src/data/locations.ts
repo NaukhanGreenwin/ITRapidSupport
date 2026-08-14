@@ -3124,7 +3124,7 @@ export const locations: CityData[] = [
     h1: 'Cottage IT Support & Smart Home Automation in Huntsville',
     heroEyebrow: 'Serving Huntsville, Lake of Bays & north Muskoka',
     description:
-      'Cottage and property IT support in Huntsville, Ontario: rural internet and Starlink setup, mesh Wi-Fi, cameras, smart locks, sensors and remote monitoring across north Muskoka and Lake of Bays.',
+      'Cottage and property IT support in Huntsville, Ontario: rural internet and Starlink setup, mesh Wi-Fi, cameras, sensors and monitoring across Lake of Bays.',
     keywords:
       'cottage IT support Huntsville, smart home automation Huntsville, IT support Huntsville Ontario, Huntsville cottage Wi-Fi, Starlink setup Huntsville, remote cottage monitoring Lake of Bays',
     intro:
