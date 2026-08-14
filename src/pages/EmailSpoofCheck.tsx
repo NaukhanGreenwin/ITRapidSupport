@@ -326,7 +326,7 @@ const EmailSpoofCheck: React.FC = () => {
           <Link to="/services/managed-security/" className="text-red-600 hover:text-red-700 font-medium">
             managed email security services
           </Link>{' '}
-          for Toronto and GTA businesses. Email authentication is one of fourteen control areas in our{' '}
+          for Toronto and GTA businesses. Email authentication is one of fifteen control areas in our{' '}
           <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
             free IT risk calculator
           </Link>

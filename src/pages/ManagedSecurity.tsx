@@ -350,7 +350,7 @@ const ManagedSecurity = () => {
             <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
               IT risk calculator
             </Link>{' '}
-            scores fourteen security control areas — backups, MFA,
+            scores fifteen security control areas — backups, MFA,
             endpoint protection, admin accounts, email authentication and more — and ranks your
             weakest points in priority order. It takes a few minutes, needs no sign-up, and runs
             entirely in your browser: nothing you enter is sent to us or stored anywhere.

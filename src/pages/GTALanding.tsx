@@ -165,7 +165,7 @@ const GTALanding: React.FC = () => {
               <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
                 IT risk calculator for GTA businesses
               </Link>
-              . It scores fourteen weighted security control areas — backups, multi-factor authentication, endpoint
+              . It scores fifteen weighted security control areas — backups, multi-factor authentication, endpoint
               protection, patching, email authentication and more — and ranks your gaps in priority order. No sign-up
               and no gate: it runs entirely in your browser and nothing you enter is sent to us or stored anywhere.
             </p>

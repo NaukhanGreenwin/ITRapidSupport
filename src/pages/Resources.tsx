@@ -146,7 +146,7 @@ const Resources = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">IT Risk Calculator</h3>
               <p className="text-gray-600 mb-4">
-                Scores fourteen weighted security control areas — backups, multi-factor authentication, endpoint
+                Scores fifteen weighted security control areas — backups, multi-factor authentication, endpoint
                 protection, admin accounts, patching, offboarding, email authentication, Microsoft 365 settings and
                 more — then ranks your gaps in priority order with plain-English remediation for each. It runs entirely
                 in your browser and nothing you enter is sent to us or stored anywhere.

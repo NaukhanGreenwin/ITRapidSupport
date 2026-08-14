@@ -409,7 +409,7 @@ const ThreatDetection = () => {
             How exposed are you right now?
           </h2>
           <p className="text-gray-600 mb-8">
-            Monitoring is one of fourteen control areas in our free IT risk calculator. It scores
+            Monitoring is one of fifteen control areas in our free IT risk calculator. It scores
             your posture across backups, MFA, endpoint protection, patching, admin accounts and
             more, then ranks what to fix first. No sign-up, and it runs entirely in your browser —
             nothing you enter is sent to us or stored.

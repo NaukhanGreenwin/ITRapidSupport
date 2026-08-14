@@ -112,7 +112,7 @@ const ITEMS: Item[] = [
     group: 'Security inclusions',
     weight: 3,
     check: 'Does it include email authentication — SPF, DKIM and DMARC configured and moved to an enforcing policy?',
-    why: 'In our own scan of 479 GTA business domains, 52.6% published a DMARC record but only 20.7% had it set to actually block forged mail. A published record that is not enforcing stops nothing, and it is routinely counted as done.',
+    why: 'In our own scan of 481 GTA business domains, 52.4% published a DMARC record but only 20.6% had it set to actually block forged mail. A published record that is not enforcing stops nothing, and it is routinely counted as done.',
     ask: 'Will you configure SPF, DKIM and DMARC, move DMARC to quarantine or reject, and monitor the reports afterwards — or is that a separate project?',
     link: { label: 'Check your own domain in 10 seconds', to: '/tools/email-spoof-check/' },
   },
@@ -341,7 +341,7 @@ const FAQS = [
   {
     question: 'Why does email authentication appear in a quote checklist?',
     answer:
-      'Because it is the clearest example of an item that gets marked complete without being finished. In our own DNS scan of 479 Greater Toronto Area business domains in August 2026, 52.6% published a DMARC record but only 20.7% had a policy that actually blocks forged mail. A provider can truthfully say DMARC is in place while spoofed invoices still land in your customers’ inboxes, which is why the quote should specify an enforcing policy and ongoing monitoring rather than just configuration.',
+      'Because it is the clearest example of an item that gets marked complete without being finished. In our own DNS scan of 481 Greater Toronto Area business domains in August 2026, 52.4% published a DMARC record but only 20.6% had a policy that actually blocks forged mail. A provider can truthfully say DMARC is in place while spoofed invoices still land in your customers’ inboxes, which is why the quote should specify an enforcing policy and ongoing monitoring rather than just configuration.',
   },
   {
     question: 'How were the 22 items chosen?',
@@ -749,10 +749,10 @@ const QuoteChecker: React.FC = () => {
             </Link>
             , the questions we tell buyers to get in writing before signing with anybody, and the gaps we keep finding
             in agreements when businesses move to us from another provider. One item cites our own measurement: in a DNS
-            scan of 479 GTA business domains in August 2026, 52.6% published a DMARC record but only 20.7% had it set to
+            scan of 481 GTA business domains in August 2026, 52.4% published a DMARC record but only 20.6% had it set to
             block forged mail —{' '}
             <Link
-              to="/resources/gta-business-email-platforms-2026/"
+              to="/resources/gta-smb-cybersecurity-report-2026/"
               className="text-red-600 hover:text-red-700 font-medium"
             >
               the full dataset is published here

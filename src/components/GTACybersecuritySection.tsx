@@ -39,7 +39,7 @@ const GTACybersecuritySection: React.FC = () => {
             <p className="text-gray-700 mb-6">
               Want to know where you stand before you talk to anyone? Our
               free <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">IT risk calculator</Link> scores
-              fourteen security control areas — backups, multi-factor authentication, endpoint protection, admin accounts,
+              fifteen security control areas — backups, multi-factor authentication, endpoint protection, admin accounts,
               patching, email authentication and more — then ranks your weakest points and tells you what to fix first.
               There is no sign-up and no gate: it runs entirely in your browser and nothing you enter is sent to us or
               stored anywhere.

@@ -258,7 +258,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
             <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
               IT risk calculator
             </Link>{' '}
-            answers that in a few minutes. It scores fourteen weighted security control areas — backups, multi-factor
+            answers that in a few minutes. It scores fifteen weighted security control areas — backups, multi-factor
             authentication, endpoint protection, admin accounts, patching, staff offboarding, email authentication,
             Microsoft 365 settings, encryption and more — then ranks your gaps by how much each one is costing your
             score and gives plain-English remediation for each.

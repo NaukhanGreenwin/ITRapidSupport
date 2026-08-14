@@ -531,7 +531,7 @@ const ManagedITPlans: React.FC = () => {
             <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
               Run the free IT risk calculator
             </Link>{' '}
-            — 14 control areas, nothing leaves your browser.
+            — 15 control areas, nothing leaves your browser.
           </p>
         </div>
       </div>
