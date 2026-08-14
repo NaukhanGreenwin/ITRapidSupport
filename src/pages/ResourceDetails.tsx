@@ -10,6 +10,11 @@ export interface ResourceItem {
   // Optional CTR-tuned <title> override; the visible H1 keeps using `title`.
   seoTitle?: string;
   description: string;
+  // Optional <meta name="description"> override, used only when `description`
+  // is longer than META_DESCRIPTION_MAX. `description` is visible copy on the
+  // /resources/ listing cards and the related-guides row, so it must NOT be
+  // shortened just to fit the SERP budget — set this instead.
+  metaDescription?: string;
   content: string;
   type: 'guide' | 'whitepaper' | 'webinar' | 'video';
   date: string;
@@ -32,6 +37,37 @@ export interface ResourceItem {
   };
 }
 
+// Google truncates the SERP snippet around 155-160 chars, and the site QA gate
+// requires every meta description to land inside 110-160.
+export const META_DESCRIPTION_MAX = 160;
+
+/**
+ * Build the <meta name="description"> value for a resource article.
+ *
+ * REPLACES A LIVE BUG (found 2026-08-14, affecting all 42 resource articles):
+ * the old markup was `description.substring(0, 155) + '...'`, applied
+ * unconditionally. Consequences, both shipped to production:
+ *   - 28 articles whose description already fitted published a complete
+ *     sentence with "..." glued on, e.g. "...security for your business...."
+ *     That tells a searcher the snippet was cut when nothing was cut.
+ *   - 14 articles were genuinely over the limit and got sliced at exactly 155
+ *     characters, mid-word: "...and test it — sized for O...".
+ *
+ * `description` is visible copy on the /resources/ cards and the related-guides
+ * row, so it is never shortened here; long ones carry a `metaDescription`
+ * override instead. The word-boundary trim below is only a safety net.
+ */
+export function buildMetaDescription(
+  r: Pick<ResourceItem, 'description' | 'metaDescription'>
+): string {
+  const text = (r.metaDescription ?? r.description ?? '').trim();
+  if (text.length <= META_DESCRIPTION_MAX) return text;
+  const cut = text.slice(0, META_DESCRIPTION_MAX - 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  const trimmed = lastSpace > 0 ? cut.slice(0, lastSpace) : cut;
+  return `${trimmed.replace(/[\s,;:.—-]+$/, '')}…`;
+}
+
 // All resources data - in a real app this would come from an API or database
 export const allResources: ResourceItem[] = [
   {
@@ -39,6 +75,7 @@ export const allResources: ResourceItem[] = [
     title: "IT Companies in Toronto: Which Type Does Your Business Actually Need?",
     seoTitle: "IT Companies in Toronto: Which Type Do You Need?",
     description: "Toronto IT companies range from break-fix shops to full MSPs and security-focused MSSPs. What each type actually does, what it costs, and how to pick the right fit.",
+    metaDescription: "Toronto IT companies range from break-fix shops to full MSPs and MSSPs. What each type does, what it costs, and how to pick the right fit.",
     content: [
       "Search for an IT company in Toronto and you will get hundreds of results that all sound alike — managed services, IT solutions, technology partners, cybersecurity experts. Behind the interchangeable marketing, these firms operate on genuinely different models, and choosing the wrong type is more expensive than choosing the wrong vendor within the right type. This guide breaks down the kinds of IT companies serving Toronto businesses, what each one is actually built to do, and how to work out which model fits your situation.",
       "## Break-Fix Shops and Hourly IT Providers",
@@ -138,6 +175,7 @@ export const allResources: ResourceItem[] = [
     title: "We Checked 118 GTA Business Domains — Only 40% Are Protected Against Email Spoofing",
     seoTitle: "GTA Email Spoofing Study 2026: Only 40% Protected",
     description: "IT Rapid Support ran a non-intrusive DNS review of 118 Greater Toronto Area business domains. The results on SPF, DKIM and DMARC reveal how exposed most GTA businesses still are to email impersonation and invoice fraud.",
+    metaDescription: "A non-intrusive DNS review of 118 GTA business domains. What the SPF, DKIM and DMARC results say about exposure to email impersonation and invoice fraud.",
     content: [
       "Email impersonation is the mechanism behind most business email compromise (BEC) and invoice-redirection fraud — a criminal sends a message that looks like it came from your domain, and a client or staff member pays a fake invoice or hands over credentials. Three DNS records exist specifically to stop this: SPF, DKIM and DMARC. So we asked a simple question about our own backyard: how many Greater Toronto Area businesses actually have them in place?",
       "To find out, IT Rapid Support ran a non-intrusive review of the public DNS records for 118 GTA business domains across a mix of industries. We checked only what is publicly published — the same records any mail server on the internet can read — and we are reporting aggregate results only. No individual business is named.",
@@ -695,6 +733,7 @@ export const allResources: ResourceItem[] = [
     id: "microsoft-365-security-best-practices-2026",
     title: "Microsoft 365 Security Best Practices for 2026",
     description: "Microsoft 365 is the heart of most businesses and the top target for attackers. Here are the security best practices every GTA organization should have in place.",
+    metaDescription: "Microsoft 365 is the heart of most businesses and a top target for attackers. The security best practices every GTA organization should have in place.",
     content: [
       "For most businesses, Microsoft 365 holds everything that matters: email, files, Teams conversations, and the identities your people log in with every day. That also makes it the number one target for attackers. The default settings are a starting point, not a finished security posture. Here are the Microsoft 365 security practices every GTA business should have in place in 2026.",
       "## 1. Enforce Multi-Factor Authentication for Everyone",
@@ -822,6 +861,7 @@ export const allResources: ResourceItem[] = [
     title: "Quebec's Law 25: What Ontario & GTA Businesses Serving Quebec Customers Need to Know",
     seoTitle: "Quebec Law 25 Compliance for Ontario Businesses",
     description: "If your Ontario business collects personal information from Quebec residents, Quebec's Law 25 privacy rules can apply to you. Here is what the law requires and how your IT setup supports compliance.",
+    metaDescription: "If your Ontario business collects personal information from Quebec residents, Law 25 can apply to you. What it requires and how your IT setup supports it.",
     content: [
       "Many businesses in Toronto and the GTA sell to, market to, or serve customers in Quebec — and a surprising number do not realize that Quebec's private-sector privacy law, commonly known as Law 25, can apply to them even though they have no office in the province. Law 25 is one of the strictest privacy regimes in North America, and its obligations follow the personal information of Quebec residents, not the address of the business that holds it.",
       "This guide explains, in plain terms, what Law 25 asks of a business and where your IT environment fits. It is general information, not legal advice — for how the law applies to your specific situation, speak with a privacy lawyer. What we can help with is the technical side: the security controls, data handling, and documentation that a compliance program is built on.",
@@ -861,6 +901,7 @@ export const allResources: ResourceItem[] = [
     title: "Is Your Company Email Easy to Spoof? SPF, DKIM & DMARC Explained",
     seoTitle: "SPF, DKIM & DMARC Explained: Stop Email Spoofing",
     description: "Most small businesses have never checked whether criminals can send email as their domain. A plain-English guide to SPF, DKIM, and DMARC — and how to close the gap.",
+    metaDescription: "Can criminals send email as your domain? A plain-English guide to SPF, DKIM and DMARC for small businesses — and how to close the gap.",
     content: [
       "Here is an uncomfortable experiment: could someone send an email that appears to come from your company's own domain — to your customers, your suppliers, or your own accounting team? For a surprising number of small and mid-sized businesses in Toronto and the GTA, the answer is yes, because three DNS records that prevent it were never set up properly. Those records are called SPF, DKIM, and DMARC, and this guide explains them in plain English.",
       "## Why Spoofing Matters to a Small Business",
@@ -894,6 +935,7 @@ export const allResources: ResourceItem[] = [
     title: "Windows 10 End of Support: What GTA Businesses Must Do Now",
     seoTitle: "Windows 10 End of Support: GTA Business Action Plan",
     description: "Windows 10 reached end of support on October 14, 2025. What that actually means, the real options — upgrade, replace, or Extended Security Updates — and how to plan the transition.",
+    metaDescription: "Windows 10 reached end of support on October 14, 2025. What that means, the real options — upgrade, replace, or Extended Security Updates — and how to plan.",
     content: [
       "Windows 10 reached its end of support on October 14, 2025. If your business still has Windows 10 machines in daily use, they are no longer receiving free security updates from Microsoft — every month that passes, newly discovered vulnerabilities on those PCs stay unpatched. For businesses in Toronto and the GTA still running a fleet of Windows 10 desktops and laptops, this is now an active risk, not a future deadline.",
       "## What 'End of Support' Actually Means",
@@ -930,6 +972,7 @@ export const allResources: ResourceItem[] = [
     title: "Business VoIP Phone Systems: A Buyer's Guide for Small Business",
     seoTitle: "Business VoIP Phone Systems: A Buyer's Guide",
     description: "Moving your business phones to VoIP? What VoIP actually is, the features that matter, the questions to ask providers, and the network requirements nobody mentions until call quality suffers.",
+    metaDescription: "Moving your business phones to VoIP? What it is, the features that matter, the questions to ask providers, and the network requirements nobody mentions.",
     content: [
       "Sooner or later every small business confronts its phone system: the old lines are expensive, the hardware is aging, the team is hybrid, and someone asks 'why aren't we just using the internet for this?' That is VoIP — Voice over IP — and for most small businesses in Toronto and the GTA it is the right destination. But the difference between a VoIP rollout your team loves and one they curse daily comes down to choices made before you sign anything. This guide covers what to know.",
       "## What VoIP Is (and Why Businesses Switch)",
@@ -960,6 +1003,7 @@ export const allResources: ResourceItem[] = [
     title: "How to Build a Disaster Recovery Plan: A Guide for Ontario Small Businesses",
     seoTitle: "Disaster Recovery Plan Guide for Ontario Businesses",
     description: "A backup is not a plan. Step-by-step: set recovery objectives, map critical systems, write a runbook people can follow at 2 a.m., and test it — sized for Ontario small businesses.",
+    metaDescription: "A backup is not a plan. Set recovery objectives, map critical systems, write a runbook people can follow at 2 a.m., and test it — for Ontario businesses.",
     content: [
       "Most Ontario small businesses have some form of backup. Very few have a disaster recovery plan — the documented, tested answer to 'the server is dead / the office is inaccessible / everything is encrypted: now what, in what order, run by whom?' The difference shows up at the worst possible moment. A backup without a plan routinely turns a one-day disruption into a multi-week crisis, because nobody knows what to restore first, where credentials live, or how long anything takes. This guide walks through building the plan itself.",
       "## Step 1: Decide What Downtime Actually Costs You",
@@ -990,6 +1034,7 @@ export const allResources: ResourceItem[] = [
     title: "Threat Detection & 24/7 Threat Monitoring: An MDR Guide for GTA Businesses",
     seoTitle: "Threat Detection & 24/7 Monitoring: MDR Explained",
     description: "What managed threat detection and 24/7 threat monitoring actually do, how MDR differs from antivirus, and what to look for when choosing a provider — for Toronto & GTA businesses.",
+    metaDescription: "What managed threat detection and 24/7 monitoring actually do, how MDR differs from antivirus, and what to look for in a provider — Toronto and the GTA.",
     content: [
       "Most breaches are not stopped at the front door — they are caught, or missed, in the hours and days after an attacker is already inside. That gap between compromise and discovery is where managed threat detection lives. This guide explains what threat detection services and 24/7 threat monitoring actually do, how they differ from the antivirus you already run, and what a GTA business should look for when choosing a provider.",
       "## Antivirus Stops the Known; Detection Catches the Rest",
@@ -1267,6 +1312,7 @@ export const allResources: ResourceItem[] = [
     title: "IT Consulting Services: What a Technology Consultant Actually Does",
     seoTitle: "IT Consulting Services | Vaughan, Toronto & the GTA",
     description: "What IT consulting services cover, how consulting differs from managed IT and a vCIO, how engagements are scoped and priced, and how to choose a consultant in the GTA.",
+    metaDescription: "What IT consulting covers, how it differs from managed IT and a vCIO, how engagements are scoped and priced, and how to choose a consultant in the GTA.",
     content: [
       "\"IT consulting\" is one of the vaguest phrases in the technology market. It is used by one-person advisory shops, by hardware resellers who call a product recommendation a consultation, and by national firms selling six-figure transformation programmes. All three are technically IT consulting, and none of them solve the same problem. This guide sets out what IT consulting services actually cover, how a consulting engagement differs from managed IT support and from a vCIO relationship, what you should receive at the end of one, how the work is priced, and the questions worth asking before you engage anyone — written for businesses in Vaughan, Richmond Hill, Concord, Burlington, Pickering, Mississauga and across the Greater Toronto Area.",
       "## What IT Consulting Actually Is",
@@ -2067,7 +2113,7 @@ const ResourceDetails: React.FC = () => {
     <>
       <Helmet>
         <title>{`${currentResource.seoTitle ?? currentResource.title} | IT Rapid Support`}</title>
-        <meta name="description" content={`${currentResource.description?.substring(0, 155)}...`} />
+        <meta name="description" content={buildMetaDescription(currentResource)} />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="en-ca" href={canonicalUrl} />
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
