@@ -92,7 +92,12 @@ const Services: React.FC = () => {
               <Link to="/services/emergency-it-services/" className="text-red-600 hover:text-red-700 font-medium">
                 emergency IT services
               </Link>{' '}
-              respond around the clock.
+              respond around the clock. For seasonal properties in cottage country, our{' '}
+              <Link to="/services/cottage-it-support/" className="text-red-600 hover:text-red-700 font-medium">
+                cottage IT support and smart home automation
+              </Link>{' '}
+              covers rural internet, whole-property Wi-Fi, cameras, smart locks, and freeze and leak monitoring across
+              Muskoka.
             </p>
             <p className="text-gray-600 max-w-2xl mx-auto mt-4">
               Not sure which of these you actually need first? Run our free{' '}

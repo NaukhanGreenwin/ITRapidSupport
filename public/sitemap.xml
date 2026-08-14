@@ -393,6 +393,31 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Muskoka cottage country -->
+  <url>
+    <loc>https://itrapidsupport.com/it-support/muskoka/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/it-support/port-carling/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/it-support/bracebridge/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/it-support/huntsville/</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://itrapidsupport.com/services/it-outsourcing-services/</loc>
     <lastmod>2026-07-16</lastmod>
@@ -749,6 +774,12 @@
   <url>
     <loc>https://itrapidsupport.com/services/emergency-it-services/</loc>
     <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/services/cottage-it-support/</loc>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

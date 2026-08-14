@@ -2722,6 +2722,513 @@ export const locations: CityData[] = [
       },
     ],
   },
+  // ── Muskoka cottage-country cluster ────────────────────────────────────────
+  // These four pages sell a different service from the GTA city pages: IT
+  // support, smart home automation and remote monitoring for cottages and
+  // seasonal properties. They are deliberately kept out of the GTA "nearby
+  // cities" link rotation in LocationLanding so a Toronto page never renders a
+  // "Managed IT Services Port Carling" anchor. Our office remains Vaughan; no
+  // Muskoka address is claimed anywhere on these pages.
+  {
+    slug: 'muskoka',
+    city: 'Muskoka',
+    title: 'Cottage IT Support & Smart Homes in Muskoka',
+    h1: 'Cottage IT Support & Smart Home Automation in Muskoka',
+    heroEyebrow: 'Serving Muskoka cottage country',
+    description:
+      'Cottage IT support across Muskoka: rural internet and Starlink setup, mesh Wi-Fi, cameras, smart locks, freeze and leak sensors, and remote monitoring.',
+    keywords:
+      'cottage IT support Muskoka, smart home automation Muskoka, Muskoka cottage Wi-Fi, Starlink installation Muskoka, cottage security cameras Muskoka, remote cottage monitoring, cottage internet Muskoka',
+    intro:
+      'Muskoka cottages are full of technology that nobody stands next to for most of the year. IT Rapid Support sets up and watches the parts that matter — an internet connection that stays up at the end of a long road, Wi-Fi that reaches the boathouse, cameras and smart locks you can check from the city, and freeze and leak sensors that raise an alarm while the problem is still cheap. It is the monitoring discipline we run for businesses across the GTA, applied to a property two hours north of our office.',
+    sectionIntro:
+      'Internet, networks, cameras, locks, sensors and remote monitoring for cottages and seasonal properties across the District of Muskoka.',
+    areaHeading: 'Lakes and Communities We Cover Across Muskoka',
+    areasIntro:
+      'Remote support year-round and scheduled on-site visits across Muskoka, from the big lakes to Huntsville and the Algonquin gateway.',
+    ctaIntro:
+      'Talk to our team about internet, Wi-Fi, cameras, smart locks, freeze sensors, and remote monitoring for your Muskoka cottage.',
+    nearbyAreas: [
+      'Port Carling',
+      'Bracebridge',
+      'Huntsville',
+      'Gravenhurst',
+      'Lake Muskoka',
+      'Lake Rosseau',
+      'Lake Joseph',
+      'Lake of Bays',
+      'Bala',
+      'Windermere',
+      'Baysville',
+      'Port Sydney',
+    ],
+    highlights: [
+      {
+        title: 'Rural Internet That Holds Up',
+        description:
+          'Satellite, fixed wireless and cable are all in play depending on the road and the tree cover. We scope what is genuinely available at the address, configure it properly, and add failover where a dropped connection would take the cameras and sensors down with it.',
+      },
+      {
+        title: 'One Managed Smart-Cottage Layer',
+        description:
+          'Cameras, locks, thermostats, water sensors and lighting bought over several summers rarely work as one system. We consolidate them onto a documented network with accounts you control, so you have one setup instead of nine apps and a forgotten password.',
+      },
+      {
+        title: 'Watched Through the Winter',
+        description:
+          'Power failing, heat dropping or the internet going down becomes an alert while there is still time to act, rather than a discovery in May. Most faults are then fixed remotely, and on-site visits are scheduled rather than improvised.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is cottage IT support in Muskoka?',
+        answer:
+          'It is managed technology for a building nobody is standing next to. That covers the internet service and router, Wi-Fi across the main cottage and any outbuildings, cameras and the recorder behind them, smart locks and keypads, thermostats and heating controls, freeze and leak sensors and any automatic water shutoff, backup power for the equipment that has to stay alive, and the accounts and apps that let you reach all of it from the city. It also means somebody to call when a device stops answering and you are 200 kilometres away.',
+      },
+      {
+        question: 'Do you install Starlink at Muskoka cottages?',
+        answer:
+          'We install and configure it, and we build the network behind it. We are not an internet reseller and take no commission on the service you pick, so the advice is based on what reaches your address. Satellite is often the practical answer where cable and fibre do not run, but where a wired or fixed-wireless option exists it is usually cheaper and steadier, and sometimes the right answer is one good connection plus a cellular backup rather than paying twice for two mediocre ones.',
+      },
+      {
+        question: 'Can you get Wi-Fi to the boathouse and the bunkie?',
+        answer:
+          'Usually, but not with the router the provider left in the basement. Muskoka buildings are the hard case for wireless: log walls, stone chimneys, foil-backed insulation, metal roofs, and long spans between separate structures. The approach that works is a mesh or multi-access-point design with a real backhaul between buildings, buried cable where a trench is possible or a point-to-point wireless link across the yard where it is not, instead of a chain of consumer extenders each halving the speed of the one before it.',
+      },
+      {
+        question: 'How do you support a cottage that is two hours from your office?',
+        answer:
+          'Remote first, as with every client. Most faults — a device that dropped off the network, a camera that stopped uploading, a lock that will not sync, a router that needs restarting — are fixed remotely, provided the property was built to allow it, which is much of what a proper setup buys you. When hands are genuinely needed the visit is scheduled around your season and your caretaker. We do not publish a guaranteed arrival time for cottage country, because a number printed without the conditions attached is marketing rather than a commitment.',
+      },
+      {
+        question: 'What stops the pipes freezing while the cottage is empty?',
+        answer:
+          'Knowing about it the day it starts. Temperature sensors reporting to a monitored platform, with an alert threshold set above the point where pipes are at risk, turn a February furnace failure or a propane run-out into a phone call rather than a spring discovery. Pair that with leak sensors at the likely failure points and, where it is worth doing, a shutoff valve that can be closed remotely or automatically. Battery and connectivity health has to be checked rather than assumed, because a sensor with a dead battery reads exactly like a property with no problems.',
+      },
+      {
+        question: 'Are cameras and smart locks a security risk in themselves?',
+        answer:
+          'They can be, and it is worth being blunt. A camera sitting on the same flat network as everything else, still running the password it shipped with and exposed through port forwarding, is a genuine liability. We treat cottage kit the way we treat business kit: default credentials replaced, firmware kept current, remote access through the manufacturer cloud or a VPN rather than open ports, guests and rentals kept off the network that holds the cameras and controls, and multi-factor authentication on the accounts that control the property.',
+      },
+      {
+        question: 'Do you handle cottage winterization and spring opening?',
+        answer:
+          'Yes, on the technology side, and it is the visit that pays for itself. A shutdown pass confirms the heat and water sensors are reporting with good batteries, checks the cameras have a clear view and are recording where you think they are, sets thermostats to a holding temperature with alerting if it falls, verifies any remote water shutoff, and makes sure the alerts actually reach your phone. The spring pass is the same list in reverse, plus whatever the winter broke.',
+      },
+      {
+        question: 'Can you support a Muskoka cottage that we rent out?',
+        answer:
+          'Yes, and the requirements change once guests are involved. A rental needs guest Wi-Fi genuinely separated from the network holding your cameras and controls, keypad codes that change per booking rather than a key under a rock, and a clear documented position on where cameras are and are not installed, which carries real privacy and platform-rules implications. We build the technical side and tell you plainly which decisions are yours to make.',
+      },
+      {
+        question: 'Which parts of Muskoka do you cover?',
+        answer:
+          'The district as a whole, with dedicated local pages for Port Carling and the Muskoka Lakes, Bracebridge and Huntsville. Coverage extends around Lake Muskoka, Lake Rosseau and Lake Joseph, through Gravenhurst, Bala, Windermere and Milford Bay, east to Baysville and Lake of Bays, and north toward the Algonquin gateway. Muskoka spans roughly 6,475 square kilometres and some 1,600 lakes, so the practical question is always the specific road and shoreline rather than the district.',
+      },
+      {
+        question: 'Do you have an office in Muskoka?',
+        answer:
+          'No, and we would rather say so than imply otherwise. Our office is at 7810 Keele St in Vaughan, which is roughly a two-hour drive south of the lakes and also where most of our cottage clients spend the rest of the year. That geography is the reason the service is built remote-first: continuous monitoring, remote fixes, and planned on-site visits, rather than a promise of somebody around the corner.',
+      },
+      {
+        question: 'Do you work with our builder, electrician or caretaker?',
+        answer:
+          'Routinely, and it is far easier when we are involved early. During a build or renovation the cheapest time to run network cable, fix camera and access-point locations and decide where the equipment lives is before the walls close. On a finished property we work with whoever already looks after it, document what exists so nobody is guessing next season, and leave the caretaker with instructions that do not require a phone call to follow.',
+      },
+      {
+        question: 'What does it cost?',
+        answer:
+          'We do not publish a figure, because a price quoted before anyone has looked at the road, the tree cover, the buildings and what is already installed is a guess you would end up paying for. The number is built from the number and size of buildings, what connectivity reaches the address, how many devices are under management, whether the property is rented, and how much on-site attendance is anticipated. Call (289) 582-9930 and we will scope it against the actual property.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Why Cottage Technology Fails Differently',
+        paragraphs: [
+          'A cottage breaks the assumptions an ordinary home network is built on. Nobody is present for most of the year, so a fault that would be noticed within an hour at home goes undetected for months. Power is less reliable and outages last longer. The internet arrives over whatever service reaches the end of the road. Buildings are spread out and made of materials that wireless signals hate. And the consequence of an undetected failure is physical rather than merely annoying: a heating system that quits in January produces burst pipes and a flooded floor.',
+          'That is why the useful frame is monitoring rather than gadgets. The value of a sensor is not the sensor, it is that something is watching what it reports, over a connection that stays up, with a way to act before the damage is done. Most Muskoka properties we are called to look at already have the devices. What they lack is a working chain from the device to an alert to a person who can do something about it.',
+          'The service itself is set out in full on our [cottage IT support and smart home automation](/services/cottage-it-support/) page.',
+        ],
+      },
+      {
+        heading: 'What Muskoka Actually Is, and Why It Matters Here',
+        paragraphs: [
+          'The District Municipality of Muskoka covers about 6,475 square kilometres of Central Ontario, running from Georgian Bay in the west to the edge of Algonquin Provincial Park in the east, roughly a two-hour drive north of Toronto. It holds some 1,600 lakes, its regional seat is Bracebridge, and its largest population centre is Huntsville. It is the country\'s best-known cottage region, drawing more than two million visitors a year.',
+          'For technology that geography is not scenery, it is the design constraint. Service availability changes street by street on the Canadian Shield, so two cottages on the same lake can have completely different options. Distances between buildings on a shoreline lot are long. Access in winter can mean an unplowed private road. A plan drawn without knowing which lake, which road and which building is a plan that fails in February.',
+        ],
+      },
+      {
+        heading: 'The Big Lakes: Muskoka, Rosseau and Joseph',
+        paragraphs: [
+          'The three large lakes concentrate the most involved properties: multiple buildings, boathouses with living space above, docks with power and lighting, and often a caretaker or property manager already in the picture. These are the sites where a single router in the main cottage was never going to work, and where the practical answer is a designed network with cable or a point-to-point link between buildings and access points placed for the way the property is actually used.',
+          'Port Carling sits at the centre of this, on the Indian River where the locks join Lake Muskoka and Lake Rosseau, which is why it has been known as the Hub of the Lakes since long before anybody needed Wi-Fi at the dock. Our [Port Carling cottage IT support](/it-support/port-carling/) page covers that area in detail, including Windermere, Minett, Milford Bay and Beaumaris.',
+        ],
+      },
+      {
+        heading: 'Bracebridge, Huntsville and the Year-Round Side of Muskoka',
+        paragraphs: [
+          'Muskoka is not only seasonal. Bracebridge, the seat of the district government, and Huntsville, its largest town, both carry year-round businesses, professional offices, trades and resorts alongside the cottage economy. Plenty of properties are somewhere in between: a place used most weekends of the year, or a permanent residence for someone who moved north and now works from it.',
+          'Those properties need both halves of what we do — a home or office network that supports actual work, and the monitoring that a seasonal property needs when it does sit empty. See [Bracebridge](/it-support/bracebridge/) and [Huntsville](/it-support/huntsville/) for the local detail, or call (289) 582-9930 to talk through a specific address.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'port-carling',
+    city: 'Port Carling',
+    title: 'Cottage IT Support Port Carling | Smart Home',
+    h1: 'Cottage IT Support & Smart Home Automation in Port Carling',
+    heroEyebrow: 'Serving Port Carling & the Muskoka Lakes',
+    description:
+      'Cottage IT support in Port Carling and the Muskoka Lakes: Starlink and rural internet, boathouse Wi-Fi, cameras, smart locks and freeze sensors.',
+    keywords:
+      'cottage IT support Port Carling, smart home automation Port Carling, Muskoka Lakes cottage Wi-Fi, Starlink setup Port Carling, cottage security cameras Muskoka Lakes, remote cottage monitoring Port Carling',
+    intro:
+      'Port Carling sits where the locks join Lake Muskoka and Lake Rosseau, and the properties around it are the ones that break ordinary home networks: several buildings, a boathouse, a long dock and a road that gets no attention in February. IT Rapid Support builds the connection, the Wi-Fi, the cameras and the sensors as one managed system, then watches it year-round from our office in Vaughan.',
+    sectionIntro:
+      'Internet, whole-property Wi-Fi, cameras, smart locks, freeze and leak sensors and remote monitoring for cottages across the Muskoka Lakes.',
+    areaHeading: 'Communities We Cover Around Port Carling',
+    areasIntro:
+      'Remote support year-round and scheduled on-site visits across the Township of Muskoka Lakes and the three big lakes.',
+    ctaIntro:
+      'Talk to our team about internet, Wi-Fi, cameras, locks, sensors and remote monitoring for your Port Carling cottage.',
+    parentCity: { slug: 'muskoka', city: 'Muskoka', anchor: 'cottage IT support across Muskoka' },
+    nearbyAreas: [
+      'Lake Muskoka',
+      'Lake Rosseau',
+      'Lake Joseph',
+      'Windermere',
+      'Minett',
+      'Milford Bay',
+      'Beaumaris',
+      'Torrance',
+      'Bala',
+      'Rosseau',
+    ],
+    highlights: [
+      {
+        title: 'Whole-Property Wi-Fi, Not One Router',
+        description:
+          'Main cottage, boathouse, bunkie and dock covered by a designed mesh with a real backhaul between buildings, instead of a chain of extenders that halve the speed at every hop.',
+      },
+      {
+        title: 'Cameras, Locks and Sensors as One System',
+        description:
+          'Cameras aimed at the approach, the dock and the mechanical room, keypad locks with codes you can change from the city, and freeze and leak sensors that alert before the damage rather than after.',
+      },
+      {
+        title: 'Monitored From Closing to Opening',
+        description:
+          'Power, heat and connectivity watched all winter, with most faults fixed remotely and on-site visits scheduled around your season and your caretaker.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you support cottages on Lake Muskoka, Lake Rosseau and Lake Joseph?',
+        answer:
+          'Yes. Those three lakes are the core of the work around Port Carling, along with Windermere, Minett, Milford Bay, Beaumaris, Torrance and out toward Bala and Rosseau. What changes between properties is not the lake but the road, the tree cover and the number of buildings, and all three are things we check before proposing anything.',
+      },
+      {
+        question: 'Can you get reliable Wi-Fi from the cottage to the boathouse?',
+        answer:
+          'Usually yes, with a designed network rather than a bigger router. The reliable pattern is a mesh or multi-access-point layout with a genuine backhaul between structures, which means buried cable where a trench is possible and a point-to-point wireless link across the yard or the bay where it is not. Log walls, stone chimneys, foil-backed insulation and metal roofs all absorb or reflect wireless signal, which is why a consumer extender chain disappoints on exactly these properties.',
+      },
+      {
+        question: 'What internet options exist around Port Carling?',
+        answer:
+          'It depends on the road, and it changes street by street on the Shield. Cable reaches some shoreline roads and not others, fixed wireless works where there is line of sight, and satellite service such as Starlink is often the practical answer where nothing else runs. We scope what is genuinely available at your address rather than assuming, install and configure the service, and add a cellular failover where losing the connection would take your cameras and sensors offline too. We take no commission on whichever service you choose.',
+      },
+      {
+        question: 'How do you get to a cottage that is only reachable by boat?',
+        answer:
+          'Island and water-access properties are common here, and they are the strongest argument for building the site so that almost everything can be fixed remotely: managed equipment, remote power control for a stuck modem or router, local recording that survives an outage, and documented device inventories. When a physical visit is genuinely required it is planned around water access and the season rather than promised for the same afternoon.',
+      },
+      {
+        question: 'Do you set up cameras and smart locks for a rented cottage?',
+        answer:
+          'Yes, with the rental case handled properly. Guest Wi-Fi is kept genuinely separate from the network holding cameras and controls, keypad codes are issued and revoked per booking instead of a key left under a rock, and the position on where cameras are and are not installed is documented, because that carries real privacy and platform-rules implications. We build the technical side and are clear about which decisions are yours.',
+      },
+      {
+        question: 'What protects the cottage over the winter?',
+        answer:
+          'Monitoring, mostly. Temperature sensors with an alert threshold above the point where pipes are at risk turn a January furnace failure or propane run-out into a same-day phone call. Leak sensors go at the likely failure points, ideally paired with a shutoff valve that can be closed remotely or automatically. Equipment sits on a small UPS so a power blip does not leave it in a bad state, and battery and connectivity health is checked rather than assumed.',
+      },
+      {
+        question: 'Who does the on-site work, and where do you come from?',
+        answer:
+          'Our office is at 7810 Keele St in Vaughan, roughly two hours south, and we say that plainly rather than implying a Port Carling storefront. The service is built remote-first for exactly that reason: continuous monitoring, remote resolution for most faults, and scheduled on-site visits. We work alongside the builder, electrician or caretaker already looking after the property, and leave documentation behind so next season nobody is guessing.',
+      },
+      {
+        question: 'We are renovating. When should you be involved?',
+        answer:
+          'Before the walls close. Running network cable, fixing camera and access-point positions and deciding where the equipment lives costs very little during construction and a great deal afterwards. If the property is already finished we work with what exists, document it, and stage the improvements that matter most first.',
+      },
+      {
+        question: 'What does cottage IT support cost in Port Carling?',
+        answer:
+          'We do not publish a number, because a figure quoted before anyone has looked at the road, the buildings and the existing equipment is a guess you would end up paying for. Cost is driven by the number and size of buildings, what connectivity reaches the address, how many devices are managed, whether the cottage is rented, and how much on-site attendance is expected. Call (289) 582-9930 and we will scope it against the actual property.',
+      },
+      {
+        question: 'Do you also look after our business or home in the city?',
+        answer:
+          'Often, and it is the arrangement that makes the most sense. Many of the cottage properties we manage belong to people whose GTA business we already support, and the same team, account and monitoring platform cover both. It also works the other way: we are happy to look after the cottage alone.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'The Hub of the Lakes, and What That Means for a Network',
+        paragraphs: [
+          'Port Carling is an unincorporated community on the Indian River and has been the seat of the Township of Muskoka Lakes since 1971. A set of locks there joins Lake Muskoka and Lake Rosseau, so most boat traffic in the township passes through, which earned it the nickname Hub of the Lakes. The locks were completed in 1871 and the tourism economy followed almost immediately. Several hundred people live in Port Carling year-round, and the community serves thousands of seasonal residents around it.',
+          'That ratio is the whole design problem. The population the technology serves is largely absent, arrives in bursts, and expects everything to work on the first evening of the season. A network built for a permanently occupied house assumes somebody will notice when something breaks. Here, nobody will, so the noticing has to be built in.',
+        ],
+      },
+      {
+        heading: 'What We Build on a Muskoka Lakes Property',
+        paragraphs: [
+          'Connectivity first: scope what actually reaches the address, install and configure it, and add failover where a dropped connection would take the monitoring with it. Then the network — a router that can be managed remotely, mesh or multi-point Wi-Fi across the main cottage, boathouse and bunkie, separate networks for guests and for cameras and controls, and a small UPS so the equipment survives a blip.',
+          'Then the property layer: cameras positioned for the approach, the dock and the mechanical room rather than the view, with local recording that survives an internet outage; smart locks and keypads with codes you can issue from the city; thermostats with low-temperature alerting; leak sensors under sinks and at the pump, ideally with an automatic shutoff; and accounts handed over to you rather than held by us. Everything is documented, which is the difference between a five-minute remote fix and a two-hour drive.',
+          'The full service is set out on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, and the regional picture is on our [Muskoka cottage IT support](/it-support/muskoka/) page.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'bracebridge',
+    city: 'Bracebridge',
+    title: 'Cottage IT Support Bracebridge | Smart Home',
+    h1: 'Cottage IT Support & Smart Home Automation in Bracebridge',
+    heroEyebrow: 'Serving Bracebridge & central Muskoka',
+    description:
+      'Cottage and property IT support in Bracebridge: rural internet and Starlink setup, mesh Wi-Fi, cameras, smart locks, sensors and remote monitoring.',
+    keywords:
+      'cottage IT support Bracebridge, smart home automation Bracebridge, IT support Bracebridge, Bracebridge cottage Wi-Fi, Starlink setup Bracebridge, remote cottage monitoring Bracebridge',
+    intro:
+      'Bracebridge is the seat of the District of Muskoka and one of the few places in cottage country that is genuinely busy in both seasons. IT Rapid Support looks after the technology in both halves of that: seasonal properties on the river and the surrounding lakes that need watching all winter, and the year-round homes and small offices in town that need a network good enough to work from.',
+    sectionIntro:
+      'Internet, Wi-Fi, cameras, smart locks, freeze and leak sensors and remote monitoring for cottages, homes and small offices in and around Bracebridge.',
+    areaHeading: 'Communities We Cover Around Bracebridge',
+    areasIntro:
+      'Remote support year-round and scheduled on-site visits across central Muskoka, from the Muskoka River to the surrounding lakes.',
+    ctaIntro:
+      'Talk to our team about internet, Wi-Fi, cameras, sensors and remote monitoring for your Bracebridge property.',
+    parentCity: { slug: 'muskoka', city: 'Muskoka', anchor: 'cottage IT support across Muskoka' },
+    nearbyAreas: [
+      'Muskoka River',
+      'Gravenhurst',
+      'Milford Bay',
+      'Bala',
+      'Port Sydney',
+      'Utterson',
+      'Baysville',
+      'Vankoughnet',
+      'Lake Muskoka',
+      'Lake of Bays',
+    ],
+    highlights: [
+      {
+        title: 'Seasonal and Year-Round, One Team',
+        description:
+          'The same setup covers a cottage that sits empty for eight months and a house or small office in town that has to support real work every day, with monitoring appropriate to each.',
+      },
+      {
+        title: 'Internet and Wi-Fi That Reaches',
+        description:
+          'Scoping what genuinely serves your address, configuring it properly, and designing mesh coverage across separate buildings rather than hoping a single router carries the property.',
+      },
+      {
+        title: 'Freeze, Leak and Power Alerting',
+        description:
+          'Temperature, water and power watched continuously with alerts that reach your phone, so a January failure is a call that day rather than a discovery in the spring.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Do you cover both cottages and year-round properties in Bracebridge?',
+        answer:
+          'Yes, and the split matters. A seasonal property is a monitoring problem: nobody is there, so heat, water, power and connectivity have to report for themselves. A year-round home or small office is a productivity problem: the connection and the Wi-Fi have to be good enough to work on, with sensible security on the accounts and devices. Plenty of Bracebridge properties are both at different times of the year, and the setup can carry both.',
+      },
+      {
+        question: 'What internet is available around Bracebridge?',
+        answer:
+          'In and near town the options are usually better than on the outer lakes, and they degrade quickly as you move out along the river and the concession roads. Cable, fixed wireless and satellite services such as Starlink are all in play depending on the address and the tree cover. We check what genuinely reaches you rather than assuming, configure it properly, and add a cellular failover where losing the connection would also mean losing the cameras and sensors. We take no commission on the service you choose.',
+      },
+      {
+        question: 'Can you set up cameras and smart locks on a Bracebridge property?',
+        answer:
+          'Yes, as one system rather than a collection of apps. Cameras are positioned for the approach, the outbuildings and the mechanical room, with local recording that survives an internet outage. Smart locks and keypads let you issue and revoke codes from the city for trades, cleaners or guests. All of it is put on a network that keeps cameras and controls away from guest traffic, with default credentials replaced, firmware kept current and multi-factor authentication on the accounts that control the property.',
+      },
+      {
+        question: 'How do you handle a property on an unplowed road in winter?',
+        answer:
+          'By assuming nobody is getting there quickly and building accordingly. Managed equipment with remote power control lets us restart a stuck modem or router without a drive. Local recording and a cellular failover keep the important things reachable when the main connection drops. Sensors report heat and water continuously so the first sign of trouble arrives while it is still small. On-site visits are then scheduled around access rather than promised against a clock.',
+      },
+      {
+        question: 'Do you support small businesses and offices in Bracebridge?',
+        answer:
+          'Yes. Alongside the cottage work we provide the managed IT services we run across the GTA: monitoring and patching, Microsoft 365 administration, backups, and layered security. The practical difference in Muskoka is that on-site attendance is scheduled rather than same-day, so the environment is built to be supportable remotely. If you want the full detail of the business service, our managed IT pages cover it.',
+      },
+      {
+        question: 'What is the first thing worth fixing on most properties you see?',
+        answer:
+          'Usually the alert chain, not the hardware. Most places already have some sensors or cameras. What is missing is confirmation that the sensor still has a battery, that the platform is actually watching it, that the alert goes to a phone somebody carries, and that there is a way to act on it remotely. We check that chain end to end before recommending anyone buy anything else.',
+      },
+      {
+        question: 'Where do your technicians come from?',
+        answer:
+          'Our office is at 7810 Keele St in Vaughan, about two hours south, and we would rather state that than imply a local storefront. The service is built remote-first as a result: continuous monitoring, remote resolution for most faults, and planned on-site visits. We do not publish a guaranteed arrival time for a Muskoka property, because a number printed without the conditions attached is marketing rather than a commitment.',
+      },
+      {
+        question: 'Can you work with the trades already on the property?',
+        answer:
+          'Yes, and earlier is cheaper. During a build or renovation the right time to run cable, place cameras and access points and decide where equipment lives is before the walls close. On a finished property we work with the electrician, builder or caretaker already involved, document what exists, and leave instructions that do not require a phone call to follow.',
+      },
+      {
+        question: 'What does it cost in Bracebridge?',
+        answer:
+          'We do not publish a figure, because a price quoted before anyone has looked at the property is a guess you would end up paying for. Cost is built from the number and size of buildings, what connectivity reaches the address, how many devices are managed, whether the property is rented, and how much on-site attendance is anticipated. Call (289) 582-9930 and we will scope it properly.',
+      },
+      {
+        question: 'Do you cover Gravenhurst, Baysville and the surrounding townships?',
+        answer:
+          'Yes. Bracebridge is our anchor for central Muskoka, and coverage runs out to Gravenhurst, Milford Bay, Bala, Port Sydney, Utterson, Baysville and Vankoughnet, and around Lake Muskoka and Lake of Bays. The regional picture is on our Muskoka page, and Port Carling and Huntsville have their own.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'A Town That Works in Both Seasons',
+        paragraphs: [
+          'Bracebridge was first incorporated in 1875, grew up around a waterfall on the Muskoka River in the centre of town, and is the seat of the District Municipality of Muskoka. That combination — municipal offices, a working downtown, tourism and a shoreline economy around it — produces a client mix you do not find on the outer lakes: seasonal cottages, permanent residences, home offices belonging to people who moved north, and small businesses that need to keep operating in February.',
+          'The technology consequence is that one property may need both patterns at once. The heating and water monitoring that protects an empty building in January still matters in a house that is occupied, and the network that supports a full working day still has to be manageable from a distance when the owners are away for a month. Building for one and ignoring the other is where most setups we inherit went wrong.',
+        ],
+      },
+      {
+        heading: 'What We Set Up and Then Watch',
+        paragraphs: [
+          'The connection first, then a network that can be managed remotely, with mesh coverage across separate buildings, guest traffic kept away from cameras and controls, and a small UPS under the equipment. Then cameras with local recording, smart locks and keypads, thermostats with low-temperature alerting, and leak sensors at the real failure points, ideally with a shutoff valve that can be closed remotely.',
+          'After that the job is monitoring and documentation rather than installation: knowing the sensors still report, the batteries are good, the alerts reach a phone somebody carries, and every device is written down with its network and its name. The full service is described on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, and the regional coverage on our [Muskoka cottage IT support](/it-support/muskoka/) page. To talk it through against a specific address, call (289) 582-9930.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'huntsville',
+    city: 'Huntsville',
+    title: 'Cottage IT Support Huntsville | Smart Home',
+    h1: 'Cottage IT Support & Smart Home Automation in Huntsville',
+    heroEyebrow: 'Serving Huntsville, Lake of Bays & north Muskoka',
+    description:
+      'Cottage and property IT support in Huntsville: rural internet and Starlink setup, mesh Wi-Fi, cameras, smart locks, sensors and remote monitoring.',
+    keywords:
+      'cottage IT support Huntsville, smart home automation Huntsville, IT support Huntsville Ontario, Huntsville cottage Wi-Fi, Starlink setup Huntsville, remote cottage monitoring Lake of Bays',
+    intro:
+      'Huntsville is the largest town in Muskoka and the western gateway to Algonquin Park, which means a wide spread of properties: cottages on the Huntsville lakes and Lake of Bays, resorts and rentals, and year-round homes and offices in town. IT Rapid Support builds the connection, the network, the cameras and the sensors as one managed system and watches it through the winter from our office in Vaughan.',
+    sectionIntro:
+      'Internet, Wi-Fi, cameras, smart locks, freeze and leak sensors and remote monitoring for cottages, rentals and year-round properties around Huntsville.',
+    areaHeading: 'Communities We Cover Around Huntsville',
+    areasIntro:
+      'Remote support year-round and scheduled on-site visits across north Muskoka, from the Huntsville lakes east to Lake of Bays and the Algonquin gateway.',
+    ctaIntro:
+      'Talk to our team about internet, Wi-Fi, cameras, sensors and remote monitoring for your Huntsville property.',
+    parentCity: { slug: 'muskoka', city: 'Muskoka', anchor: 'cottage IT support across Muskoka' },
+    nearbyAreas: [
+      'Lake of Bays',
+      'Baysville',
+      'Dwight',
+      'Port Sydney',
+      'Utterson',
+      'Novar',
+      'Emsdale',
+      'Peninsula Lake',
+      'Fairy Lake',
+      'Algonquin Park gateway',
+    ],
+    highlights: [
+      {
+        title: 'Built for Distance',
+        description:
+          'Huntsville is the far end of a long drive from the city, so the property is built to be fixed remotely: managed equipment, remote power control, local recording, and documentation that survives a change of caretaker.',
+      },
+      {
+        title: 'Rentals and Resorts Handled Properly',
+        description:
+          'Guest Wi-Fi genuinely separated from cameras and controls, keypad codes issued and revoked per booking, and a documented position on where cameras are and are not installed.',
+      },
+      {
+        title: 'Winter Alerting That Works',
+        description:
+          'Heat, water, power and connectivity watched continuously, with alerts that reach a phone somebody actually carries and a way to act before the pipes do the deciding.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which areas around Huntsville do you cover?',
+        answer:
+          'Huntsville itself and the surrounding lakes, including Fairy Lake, Peninsula Lake and Vernon Lake, east to Lake of Bays, Baysville and Dwight toward the Algonquin gateway, and south through Port Sydney and Utterson. Huntsville is the largest of the Muskoka towns in both population and land area, covering roughly 710 square kilometres, so the practical question is always the specific road and shoreline rather than the town.',
+      },
+      {
+        question: 'What internet options exist around Huntsville?',
+        answer:
+          'Better in town, and increasingly limited as you move out along the lakes and the highway. Cable, fixed wireless and satellite services such as Starlink are all in play depending on the address and the tree cover. We scope what genuinely reaches the property rather than assuming, install and configure it, and add a cellular failover where a dropped connection would also take the cameras and sensors offline. We are not a reseller and take no commission on whichever service you pick.',
+      },
+      {
+        question: 'Can you cover a large property with several buildings?',
+        answer:
+          'Yes, and that is the normal case here. The reliable approach is a mesh or multi-access-point design with a real backhaul between structures — buried cable where a trench is possible, a point-to-point wireless link where it is not — rather than a chain of extenders. Log walls, metal roofs, foil-backed insulation and long spans between buildings are exactly the conditions where consumer gear disappoints.',
+      },
+      {
+        question: 'Do you support short-term rental properties?',
+        answer:
+          'Yes, with the rental requirements handled explicitly. Guest Wi-Fi is kept separate from the network holding cameras and controls, keypad codes change per booking rather than relying on a key handover, and where cameras are and are not installed is documented, because that carries real privacy and platform-rules implications. We build the technical side and are clear about which decisions belong to you as the owner.',
+      },
+      {
+        question: 'What happens if the heat fails in January?',
+        answer:
+          'You find out that day rather than in May, provided the monitoring is real. Temperature sensors report to a monitored platform with an alert threshold set above the point where pipes are at risk, so a furnace failure, a fuel run-out or a tripped breaker raises an alarm while the building is still warm. Leak sensors sit at the likely failure points, ideally paired with a shutoff valve that can be closed remotely or automatically, and battery and connectivity health is checked rather than assumed.',
+      },
+      {
+        question: 'Do you support businesses and offices in Huntsville?',
+        answer:
+          'Yes. The managed IT service we run across the GTA — monitoring and patching, Microsoft 365 administration, backups, layered security and a 24/7 helpdesk — is available here too. The difference is that on-site attendance is scheduled rather than same-day, so environments are built to be supportable remotely. We say that plainly rather than implying a local branch.',
+      },
+      {
+        question: 'How often would somebody actually come to the property?',
+        answer:
+          'As rarely as the design allows, which is the point. Most faults are resolved remotely when the site has been built for it. Beyond that, the visits worth planning are the seasonal ones: a shutdown pass in the fall to confirm sensors, cameras, thermostats and alerting are all working before the building empties, and a startup pass in spring to bring everything back and fix whatever the winter broke. Anything else is scheduled when it is genuinely needed.',
+      },
+      {
+        question: 'Can you work with our caretaker or property manager?',
+        answer:
+          'Yes, and on a Huntsville property that relationship usually matters more than it does in the city. We document what is installed, where it is and how to reach it, and leave the caretaker with instructions that do not require calling us first. When something does need hands on site, they are often the fastest route to a fix and we work with them directly.',
+      },
+      {
+        question: 'What does it cost?',
+        answer:
+          'We do not publish a figure, because a price quoted before anyone has looked at the road, the buildings and the existing equipment is a guess you would end up paying for. Cost is built from the number and size of buildings, what connectivity reaches the address, how many devices are managed, whether the property is rented, and how much on-site attendance is anticipated. Call (289) 582-9930 and we will scope it against the actual property.',
+      },
+      {
+        question: 'Where are you based?',
+        answer:
+          'At 7810 Keele St in Vaughan, roughly 215 kilometres south of Huntsville. We state that rather than implying a local office, and the service is designed around it: continuous remote monitoring, remote resolution for most faults, and scheduled on-site attendance. It also means the same team can look after your city home or business and the property up north under one arrangement.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'The Largest Town in Muskoka, and the Longest Drive',
+        paragraphs: [
+          'Huntsville sits about 215 kilometres north of Toronto in the hilly Canadian Shield country of north Muskoka, dotted with lakes and serving as the western gateway to Algonquin Provincial Park by way of Highway 60. It is the largest of the Muskoka towns in both population, 21,147 at the 2021 census, and land area at roughly 710 square kilometres, and it drew international attention when it hosted the 36th G8 summit at Deerhurst Resort in June 2010.',
+          'For a property owner the relevant part of that is distance and spread. Huntsville is the far end of the drive from the city, the properties are scattered across a very large municipality, and a fault that requires somebody physically present is expensive in time whoever attends. Everything we build here is shaped by that: manage what can be managed remotely, monitor what cannot, and document all of it so the person who is nearby can act without a two-hour phone call.',
+        ],
+      },
+      {
+        heading: 'What We Build Around Huntsville and Lake of Bays',
+        paragraphs: [
+          'Connectivity first — scope what reaches the address, install and configure it, and add failover where losing it would take the monitoring down too. Then a remotely manageable network with mesh coverage across the buildings, guest traffic separated from cameras and controls, and a small UPS so equipment survives a power blip rather than rebooting into a bad state.',
+          'Then the property layer: cameras with local recording that survives an outage, smart locks and keypads with codes you control from the city, thermostats with low-temperature alerting, and leak sensors with a remote or automatic shutoff where it is worth doing. Accounts are handed to you rather than held by us, and everything is documented.',
+          'The service in full is on our [cottage IT support and smart home automation](/services/cottage-it-support/) page, with the regional picture on our [Muskoka cottage IT support](/it-support/muskoka/) page. To scope a specific property, call (289) 582-9930 or [get in touch](/contact/).',
+        ],
+      },
+    ],
+  },
 ];
 
 export const getLocation = (slug: string): CityData | undefined =>

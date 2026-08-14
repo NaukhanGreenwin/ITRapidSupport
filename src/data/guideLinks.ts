@@ -180,6 +180,11 @@ export const serviceGuideMap: Record<string, string[]> = {
     'choosing-managed-it-provider-toronto',
     'cyber-insurance-readiness-checklist',
   ],
+  'cottage-it-support': [
+    'why-24-7-it-helpdesk-matters',
+    'small-business-cybersecurity-checklist',
+    'cloud-backup-disaster-recovery-guide',
+  ],
   'emergency-it-services': [
     'ransomware-protection-ontario-businesses',
     'disaster-recovery-plan-small-business-ontario',

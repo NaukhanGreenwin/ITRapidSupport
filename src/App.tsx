@@ -120,6 +120,7 @@ function App() {
             <Route path="/services/it-helpdesk" element={<ServiceLanding slug="it-helpdesk" />} />
             <Route path="/services/vcio-it-strategy" element={<ServiceLanding slug="vcio-it-strategy" />} />
             <Route path="/services/emergency-it-services" element={<ServiceLanding slug="emergency-it-services" />} />
+            <Route path="/services/cottage-it-support" element={<ServiceLanding slug="cottage-it-support" />} />
             <Route path="/it-support/gta" element={<GTALanding />} />
             <Route path="/it-support/york-region" element={<LocationLanding slug="york-region" />} />
             <Route path="/tools/email-spoof-check" element={<EmailSpoofCheck />} />
@@ -152,6 +153,10 @@ function App() {
             <Route path="/it-support/stouffville" element={<LocationLanding slug="stouffville" />} />
             <Route path="/it-support/bradford" element={<LocationLanding slug="bradford" />} />
             <Route path="/it-support/vancouver" element={<LocationLanding slug="vancouver" />} />
+            <Route path="/it-support/muskoka" element={<LocationLanding slug="muskoka" />} />
+            <Route path="/it-support/port-carling" element={<LocationLanding slug="port-carling" />} />
+            <Route path="/it-support/bracebridge" element={<LocationLanding slug="bracebridge" />} />
+            <Route path="/it-support/huntsville" element={<LocationLanding slug="huntsville" />} />
             <Route path="/industries/legal" element={<IndustryLanding slug="legal" />} />
             <Route path="/industries/accounting" element={<IndustryLanding slug="accounting" />} />
             <Route path="/industries/healthcare" element={<IndustryLanding slug="healthcare" />} />

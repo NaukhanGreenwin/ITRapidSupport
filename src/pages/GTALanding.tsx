@@ -130,7 +130,12 @@ const GTALanding: React.FC = () => {
               <Link to="/services/network-security-services/" className="text-red-200 hover:text-white underline underline-offset-4">
                 network security services
               </Link>{' '}
-              secure firewalls, connectivity, and access — from our Vaughan headquarters to every corner of the GTA.
+              secure firewalls, connectivity, and access — from our Vaughan headquarters to every corner of the GTA. For
+              clients with a place up north, our{' '}
+              <Link to="/services/cottage-it-support/" className="text-red-200 hover:text-white underline underline-offset-4">
+                cottage IT support and smart home automation
+              </Link>{' '}
+              covers seasonal properties across Muskoka.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

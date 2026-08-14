@@ -658,6 +658,143 @@ export const servicesDetail: ServiceDetailData[] = [
       },
     ],
   },
+  {
+    slug: 'cottage-it-support',
+    service: 'Cottage IT Support & Smart Home Automation',
+    title: 'Cottage IT Support & Smart Home Automation',
+    h1: 'Cottage IT Support & Smart Home Automation for Muskoka',
+    description:
+      'Cottage IT support and smart home automation for Muskoka: rural internet and Starlink setup, mesh Wi-Fi, cameras, smart locks, and freeze and leak sensors.',
+    keywords:
+      'cottage IT support, smart home automation Muskoka, cottage Wi-Fi, Starlink setup Muskoka, cottage security cameras, remote cottage monitoring, cottage internet Muskoka, smart cottage technology',
+    intro:
+      'A cottage is a building full of technology that nobody is standing next to for most of the year. IT Rapid Support sets up and manages the parts that matter — a rural internet connection that actually stays up, Wi-Fi that reaches the boathouse, cameras and smart locks you can check from the city, and freeze and leak sensors that tell you about a problem while it is still cheap to fix. It is the same monitoring and remote support discipline we run for businesses across the GTA, applied to a property two hours north of our office.',
+    areaServed: 'Muskoka and Ontario cottage country',
+    sectionIntro:
+      'Remote-first support and scheduled on-site visits for cottages and seasonal properties across Muskoka, delivered by our Vaughan-based team.',
+    ctaIntro:
+      'Talk to our team about internet, Wi-Fi, cameras, smart locks, sensors, and remote monitoring for your cottage or seasonal property.',
+    tags: [
+      'Starlink & rural internet',
+      'Mesh Wi-Fi coverage',
+      'Security cameras',
+      'Smart locks & access',
+      'Freeze & leak sensors',
+      'Remote monitoring',
+      'Seasonal shutdown & startup',
+      'Remote troubleshooting',
+    ],
+    highlights: [
+      {
+        title: 'Internet That Holds Up Off the Highway',
+        description:
+          'Satellite, fixed wireless, and cable are all in play depending on the road and the tree cover. We scope what is actually available at your address, install and configure it properly, and add a second path or a cellular failover where losing the connection means losing the cameras and the sensors too.',
+      },
+      {
+        title: 'One Managed Smart-Home Layer',
+        description:
+          'Cameras, locks, thermostats, water sensors, and lighting bought over several summers rarely work as one system. We consolidate them onto a documented network with proper accounts and app access, so you have one setup you understand rather than nine apps and a forgotten password.',
+      },
+      {
+        title: 'Eyes on the Place All Winter',
+        description:
+          'Remote monitoring means the power failing, the heat dropping, or the internet going down turns into an alert while there is still time to act, instead of a discovery in May. Most faults we then fix remotely; when something needs hands on hardware, the visit is scheduled and planned.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What does cottage IT support actually cover?',
+        answer:
+          'The connection, the network, and everything on it. That means the internet service and router, Wi-Fi coverage across the main building and outbuildings, cameras and the recorder they write to, smart locks and keypads, thermostats and heating controls, water shutoff valves and freeze and leak sensors, backup power for the equipment that has to stay alive, and the accounts and apps that let you reach all of it from the city. It also means somebody to call when a device stops answering and you are 200 kilometres away.',
+      },
+      {
+        question: 'Do you install Starlink at cottages?',
+        answer:
+          'We install and configure it, and we set up the network behind it. We are not an internet reseller and we do not take a commission on the service you choose, so the recommendation is based on what is available at your address and what you need it to do. Satellite service like Starlink is often the practical answer where cable and fibre do not reach, but it is not automatically the right one — where a wired or fixed-wireless option exists it is usually cheaper and steadier, and the honest answer sometimes is that one connection plus a cellular backup beats paying twice for two mediocre ones.',
+      },
+      {
+        question: 'Can you get Wi-Fi to the boathouse, the bunkie, and the dock?',
+        answer:
+          'Usually, yes, but not with the router the internet provider left in the basement. Cottage buildings are the hard case for wireless: log walls, stone chimneys, foil-backed insulation, metal roofs, and long spans between separate structures. The reliable approach is a mesh or multi-access-point design with a proper backhaul between buildings — buried cable where a trench is possible, or a point-to-point wireless link across the yard where it is not — rather than a chain of consumer extenders each halving the speed of the one before it.',
+      },
+      {
+        question: 'What happens if the internet goes down while nobody is there?',
+        answer:
+          'That is the failure that makes every other system pointless, which is why it gets designed for. Monitoring tells us the site has dropped rather than waiting for you to notice a dead camera feed. Equipment on a small UPS rides out short power blips instead of rebooting into a bad state. Where the risk warrants it, a cellular failover keeps the alarms, sensors, and one camera reachable while the main connection is out. And a remote power controller lets us restart a stuck modem or router without anyone driving up.',
+      },
+      {
+        question: 'Are smart cameras and locks at a cottage a security risk in themselves?',
+        answer:
+          'They can be, and it is worth being blunt about it. A camera on the same flat network as everything else, still running the password it shipped with and exposed to the internet through port forwarding, is a genuine liability. We treat cottage kit the way we treat business kit: default credentials replaced, firmware kept current, remote access through the manufacturer cloud or a VPN rather than open ports, guest and rental traffic on a separate network from the cameras and controls, and multi-factor authentication on the accounts that control the property.',
+      },
+      {
+        question: 'Can you help with cottage winterization on the technology side?',
+        answer:
+          'Yes, and it is the visit that pays for itself. A shutdown pass covers the things that go wrong between October and May: confirming the heat and water sensors are reporting and their batteries are good, checking that the cameras have a clear view and are recording where you think they are, setting thermostats to a holding temperature with alerting if it falls, verifying that a water shutoff can be triggered remotely if you have one, and making sure your phone actually receives the alerts. The startup pass in spring is the same list in reverse, plus whatever the winter broke.',
+      },
+      {
+        question: 'Do you support cottages that are rented out?',
+        answer:
+          'Yes, and the requirements change once guests are involved. A rental needs guest Wi-Fi that is genuinely separate from the network holding your cameras and controls, keypad locks with codes that change per booking rather than a key under a rock, and a clear, documented position on where cameras are and are not installed — a subject with real privacy and platform-rules implications that a property owner should get right rather than guess at. We build the technical side and tell you plainly where the decisions are yours.',
+      },
+      {
+        question: 'How does support work when you are two hours away?',
+        answer:
+          'Remote first, as with every client. Most cottage faults — a device that dropped off the network, a camera that stopped uploading, a lock that will not sync, an app that logged itself out, a router that needs a restart — are fixed remotely, provided the site was built to allow it, which is a large part of what a proper setup buys you. When hands are genuinely needed, the visit is scheduled with your season and your caretaker in mind. We do not publish a guaranteed arrival time for a property in cottage country, because doing so would be a marketing number rather than a commitment.',
+      },
+      {
+        question: 'Do you work with the builder, electrician, or caretaker already on site?',
+        answer:
+          'Routinely, and it is easier when we are involved early. If a build or renovation is underway, the cheapest time to run network cable, place camera and access-point locations, and plan where the equipment lives is before the walls close. If the property is finished, we work with whoever is already looking after it, document what exists so nobody is guessing next season, and leave the caretaker with instructions that do not require a phone call to follow.',
+      },
+      {
+        question: 'Is this a business service or a residential one?',
+        answer:
+          'Both, in practice. Many of the cottage properties we look at belong to people whose business we already support in the GTA, and the two jobs share a team, an account, and a monitoring platform. The service also stands on its own for a property owner who simply wants the technology at the cottage to work and to be watched. Either way the arrangement is written down, and the same honest rules apply: no guaranteed response times invented for a brochure, and no equipment recommended because it carries a margin.',
+      },
+      {
+        question: 'What does cottage IT support cost?',
+        answer:
+          'We do not publish a figure, because a price quoted before anyone has looked at the road, the tree cover, the buildings, and what is already installed is a guess you would end up paying for. The number is built from the size and number of buildings, what connectivity is available at the address, how many devices are under management, whether the property is rented, and how much on-site attendance the arrangement anticipates. Call (289) 582-9930 and we will scope it against the actual property.',
+      },
+      {
+        question: 'Which areas do you cover for cottage support?',
+        answer:
+          'Muskoka is where this service is concentrated, with dedicated coverage for Port Carling and the Muskoka Lakes, Bracebridge, and Huntsville, and support extending across the surrounding lakes and townships. Our office is at 7810 Keele St in Vaughan, which is also where most of our cottage clients spend the rest of the year — the practical result is one team looking after the house, the business, and the cottage rather than three unrelated vendors.',
+      },
+    ],
+    sections: [
+      {
+        heading: 'Why Cottage Technology Fails Differently',
+        paragraphs: [
+          'A cottage breaks the assumptions an ordinary home network is built on. Nobody is present for most of the year, so a fault that would be noticed in an hour at home goes undetected for months. The power is less reliable and the outages are longer. The internet arrives over whatever service reaches the end of the road, which may be satellite, fixed wireless, or a long copper run, and it is more likely to drop and slower to be restored. The buildings are spread out and built of materials that wireless signals hate. And the consequences of an undetected failure are physical: a heating system that quits in January does not produce an inconvenience, it produces burst pipes and a flooded floor.',
+          'That is why the useful frame here is monitoring rather than gadgets. The value of a sensor is not the sensor; it is that somebody or something is watching what it reports, on a connection that stays up, with a way to act on it before the damage is done. Most of the cottage setups we are called to look at have the devices already. What they do not have is a working chain from the device to an alert to a person who can do something about it.',
+        ],
+      },
+      {
+        heading: 'What We Set Up at a Cottage',
+        paragraphs: [
+          'Connectivity comes first, because nothing else works without it: scoping what is genuinely available at the address, installing and configuring the service, and adding failover where a dropped connection would take the monitoring down with it. Then the network — a router that can be managed remotely, mesh or multi-point Wi-Fi covering the main building and any outbuildings, separate networks for guests and for the cameras and controls, and a small UPS so the equipment rides out a blip rather than rebooting badly.',
+          'On top of that sits the property layer: cameras positioned for the approach, the dock, and the mechanical room rather than pointed at scenery, with local recording that survives an internet outage; smart locks and keypads with codes you can issue and revoke from the city; thermostats and heating controls with low-temperature alerting; water sensors under the sinks and at the pump, ideally paired with an automatic shutoff valve; and a documented set of accounts and apps handed over to you, not held by us.',
+          'Everything is documented — what is installed, where it is, what network it is on, what it is called, and how to reach it. That document is the difference between a five-minute remote fix and a two-hour drive next season.',
+        ],
+      },
+      {
+        heading: 'Freeze, Water, and the Cost of Finding Out in May',
+        paragraphs: [
+          'The single most valuable thing a monitored cottage tells you is that it is getting cold inside. A furnace failure, an oil or propane run-out, or a tripped breaker in February is a manageable problem if you know about it that day and a very expensive one if you learn about it when you open the place in spring. The same is true of water: a supply line that lets go while the building is empty will run until somebody turns it off.',
+          'The technical answer is not complicated, which is what makes it worth doing properly. Temperature sensors reporting to a monitored platform with an alert threshold set above the point where pipes are at risk. Leak sensors at the likely failure points rather than one in the middle of the floor. A shutoff valve that can be closed remotely, or automatically, when a leak sensor triggers. Battery and connectivity health checked rather than assumed, because a sensor with a dead battery reports nothing at all and reads exactly like a property with no problems.',
+        ],
+      },
+      {
+        heading: 'How This Fits With the Rest of What We Do',
+        paragraphs: [
+          'IT Rapid Support is a managed IT and cybersecurity provider based at 7810 Keele St in Vaughan, and this service exists because the same people kept asking for it. The business owner whose network we manage has a place on Lake Rosseau where nothing works properly. The family we already handle [private residential security](/services/high-net-worth/) for wants the cottage watched the same way the house is. The requirement is not exotic: it is remote monitoring, a properly built network, sensible security on the accounts and devices, and a number to call.',
+          'The regional pages set out what that looks like in each part of cottage country — [Muskoka](/it-support/muskoka/) as a whole, and locally in [Port Carling](/it-support/port-carling/), [Bracebridge](/it-support/bracebridge/) and [Huntsville](/it-support/huntsville/). If you want to talk it through against a specific property, call (289) 582-9930 or [get in touch](/contact/).',
+        ],
+      },
+    ],
+  },
 ];
 
 export const getServiceDetail = (slug: string): ServiceDetailData | undefined =>

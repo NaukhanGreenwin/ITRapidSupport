@@ -17,6 +17,24 @@ interface ServiceLandingProps {
   slug: string;
 }
 
+// Section paragraphs in servicesDetail.ts may carry `[text](/path)` links so a
+// service page can link in copy without hardcoding the sentence in JSX. Mirrors
+// the helper on the city pages. Plain paragraphs are returned untouched.
+const renderInlineLinks = (text: string): React.ReactNode => {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+    const [, label, href] = match;
+    return href.startsWith('/') ? (
+      <Link key={i} to={href} className="text-red-600 hover:text-red-700 font-medium">{label}</Link>
+    ) : (
+      <a key={i} href={href} className="text-red-600 hover:text-red-700 font-medium">{label}</a>
+    );
+  });
+};
+
 const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
   const data = getServiceDetail(slug);
 
@@ -146,7 +164,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
                 </h2>
                 {section.paragraphs.map((p) => (
                   <p key={p.slice(0, 40)} className="text-gray-600 leading-relaxed mb-4">
-                    {p}
+                    {renderInlineLinks(p)}
                   </p>
                 ))}
               </div>

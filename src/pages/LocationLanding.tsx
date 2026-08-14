@@ -8,7 +8,7 @@ import SEO, {
   generateFAQSchema,
   generateServiceSchema,
 } from '../components/SEO';
-import { getLocation, locations } from '../data/locations';
+import { getLocation, locations, type CityData } from '../data/locations';
 import { getCityGuides } from '../data/guideLinks';
 import RelatedGuides from '../components/RelatedGuides';
 import NotFound from './NotFound';
@@ -88,7 +88,16 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
     hamilton: ['burlington', 'oakville', 'mississauga'],
   };
 
-  const gtaCities = locations.filter((l) => l.slug !== 'vancouver');
+  // The Muskoka cottage pages sell a different service from the GTA city pages,
+  // so they stay out of the GTA rotation in both directions: a Toronto page
+  // never renders a "Managed IT Services Port Carling" anchor, and a Muskoka
+  // page links to its own cluster plus the two GTA pages its owners come from.
+  const MUSKOKA_SLUGS = ['muskoka', 'port-carling', 'bracebridge', 'huntsville'];
+  const isMuskoka = MUSKOKA_SLUGS.includes(data.slug);
+
+  const gtaCities = locations.filter(
+    (l) => l.slug !== 'vancouver' && !MUSKOKA_SLUGS.includes(l.slug),
+  );
   const selfIndex = gtaCities.findIndex((l) => l.slug === data.slug);
   const rotation =
     selfIndex === -1
@@ -99,12 +108,26 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
   const pinned = neighbourSlugs
     .map((slug) => bySlug.get(slug))
     .filter((l): l is (typeof gtaCities)[number] => Boolean(l));
-  const nearbyCityLinks = isVancouver || selfIndex === -1
+  const allBySlug = new Map(locations.map((l) => [l.slug, l]));
+  const muskokaLinks = MUSKOKA_SLUGS.filter((s) => s !== data.slug)
+    .concat(['toronto', 'vaughan'])
+    .map((s) => allBySlug.get(s))
+    .filter((l): l is CityData => Boolean(l));
+
+  const nearbyCityLinks = isMuskoka
+    ? muskokaLinks
+    : isVancouver || selfIndex === -1
     ? []
     : [...pinned, ...rotation.filter((l) => !neighbourSlugs.includes(l.slug))].slice(0, 6);
 
   // Vary the anchor by position instead of publishing six identical
   // "Managed IT Services {city}" exact-match phrases on all 30 city pages.
+  // Cottage-country pages get their own anchor wording: the sibling Muskoka
+  // pages sell cottage support, while the two GTA links point at the ordinary
+  // business pages and must not be labelled as cottage services.
+  const anchorForMuskoka = (loc: CityData) =>
+    MUSKOKA_SLUGS.includes(loc.slug) ? `Cottage IT Support ${loc.city}` : `IT Support ${loc.city}`;
+
   const nearbyAnchorForms = [
     (city: string) => `Managed IT Services ${city}`,
     (city: string) => `IT Support ${city}`,
@@ -115,7 +138,9 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
   const schema = [
     isVancouver ? generateVancouverLocalBusinessSchema() : generateLocalBusinessSchema(data.schemaLocation),
     generateServiceSchema({
-      name: `Managed IT Services & IT Support in ${data.city}`,
+      name: isMuskoka
+        ? `Cottage IT Support & Smart Home Automation in ${data.city}`
+        : `Managed IT Services & IT Support in ${data.city}`,
       description: data.description,
       url,
       areaServed: `${data.city}, ${data.province ?? 'Ontario'}`,
@@ -127,7 +152,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
         // a guessed identifier.
         sameAs: CITY_ENTITIES[data.slug],
       },
-      serviceType: 'Managed IT Services',
+      serviceType: isMuskoka ? 'Cottage IT Support & Smart Home Automation' : 'Managed IT Services',
     }),
     generateFAQSchema(data.faqs),
   ];
@@ -184,7 +209,9 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              IT Services for {data.city} Businesses
+              {isMuskoka
+                ? `Cottage Technology We Manage in ${data.city}`
+                : `IT Services for ${data.city} Businesses`}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               {data.sectionIntro ?? `Managed IT, cybersecurity, and 24/7 support built around the needs of ${data.city} organizations.`}
@@ -253,8 +280,8 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
             Check your IT risk before you call anyone
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Most {data.city} businesses we speak to already suspect something is weak — they just cannot say which
-            thing to fix first. Our free{' '}
+            Most {data.city} {isMuskoka ? 'owners' : 'businesses'} we speak to already suspect something is weak — they
+            just cannot say which thing to fix first. Our free{' '}
             <Link to="/it-risk-calculator/" className="text-red-600 hover:text-red-700 font-medium">
               IT risk calculator
             </Link>{' '}
@@ -340,7 +367,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
         <div className="py-12 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Managed IT Services Near {data.city}
+              {isMuskoka ? `Cottage IT Support Near ${data.city}` : `Managed IT Services Near ${data.city}`}
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
               {nearbyCityLinks.map((loc, i) => (
@@ -349,7 +376,9 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
                   to={`/it-support/${loc.slug}/`}
                   className="px-4 py-2 bg-white rounded-full text-gray-700 text-sm font-medium shadow-sm hover:text-red-600 transition-colors"
                 >
-                  {nearbyAnchorForms[i % nearbyAnchorForms.length](loc.city)}
+                  {isMuskoka
+                    ? anchorForMuskoka(loc)
+                    : nearbyAnchorForms[i % nearbyAnchorForms.length](loc.city)}
                 </Link>
               ))}
             </div>

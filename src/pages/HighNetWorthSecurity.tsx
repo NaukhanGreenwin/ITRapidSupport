@@ -488,7 +488,7 @@ export default function HighNetWorthSecurity() {
                   </Link>
                 </div>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                 <div className="mb-5">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -518,8 +518,8 @@ export default function HighNetWorthSecurity() {
                   </li>
                 </ul>
                 <div className="mt-6">
-                  <Link to="/contact/" className="text-red-600 font-medium hover:underline inline-flex items-center">
-                    Explore our property security solutions <span className="ml-2">→</span>
+                  <Link to="/services/cottage-it-support/" className="text-red-600 font-medium hover:underline inline-flex items-center">
+                    See our cottage IT support and smart home automation <span className="ml-2">→</span>
                   </Link>
                 </div>
               </div>
