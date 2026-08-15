@@ -36,11 +36,16 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
         location: cs.location,
       },
       articleSection: 'Case Study',
-      datePublished: '2026-07-19',
-      dateModified: '2026-07-19',
+      datePublished: cs.datePublished ?? '2026-07-19',
+      dateModified: cs.datePublished ?? '2026-07-19',
       mainEntityOfPage: `https://itrapidsupport.com${url}/`,
     },
   ];
+
+  // Never assert an Organization name for a client we haven't named publicly.
+  if (cs.anonymized) {
+    delete (schema[1] as Record<string, unknown>).about;
+  }
 
   return (
     <PageTransition>
@@ -94,7 +99,12 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <div className="text-sm font-medium text-gray-500 mb-1">Client</div>
-                <div className="text-gray-900 font-semibold">{cs.client}</div>
+                <div className="text-gray-900 font-semibold">
+                  {cs.client}
+                  {cs.anonymized && (
+                    <span className="text-gray-500 font-normal"> (name withheld)</span>
+                  )}
+                </div>
               </div>
               <div>
                 <div className="text-sm font-medium text-gray-500 mb-1">Industry</div>
@@ -127,6 +137,15 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ slug }) => {
               </li>
             ))}
           </ul>
+
+          {cs.quote && (
+            <blockquote className="border-l-4 border-slate-300 pl-6 mb-12">
+              <p className="text-gray-800 text-xl leading-relaxed italic">“{cs.quote.text}”</p>
+              <footer className="text-gray-500 text-sm mt-3 not-italic">
+                — {cs.quote.attribution}
+              </footer>
+            </blockquote>
+          )}
 
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">The Result</h2>
           <div className="bg-slate-50 border-l-4 border-red-600 rounded-r-xl p-8 mb-12">

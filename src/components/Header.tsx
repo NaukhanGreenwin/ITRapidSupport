@@ -390,7 +390,13 @@ export default function Header() {
                       >
                         Resource Center
                       </Link>
-                      <Link to="/faq/" 
+                      <Link to="/case-studies/"
+                        className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
+                        onClick={() => setResourcesDropdownOpen(false)}
+                      >
+                        Case Studies
+                      </Link>
+                      <Link to="/faq/"
                         className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600"
                         onClick={() => setResourcesDropdownOpen(false)}
                       >
@@ -558,6 +564,15 @@ export default function Header() {
                   </button>
                 </motion.div>
                 
+                <motion.div variants={mobileMenuItemVariants}>
+                  <button
+                    className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"
+                    onClick={() => handleNavigation("/case-studies")}
+                  >
+                    Case Studies
+                  </button>
+                </motion.div>
+
                 <motion.div variants={mobileMenuItemVariants}>
                   <button
                     className="block w-full text-left py-4 px-4 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg font-medium my-1 border-l-2 border-red-200 ml-2 text-lg"

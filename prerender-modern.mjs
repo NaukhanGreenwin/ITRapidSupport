@@ -20,6 +20,8 @@ const routes = [
   '/case-studies/finex-development-email-security',
   '/case-studies/capital-fire-security-microsoft-365-cleanup',
   '/case-studies/artistic-smart-homes-email-authentication',
+  '/case-studies/metrology-erp-database-outage',
+  '/case-studies/pharma-identity-device-management',
   '/it-risk-calculator',
   '/managed-it-plans',
   '/privacy', '/terms', '/cookies', '/accessibility',

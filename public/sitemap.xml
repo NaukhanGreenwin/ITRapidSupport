@@ -86,7 +86,7 @@
   <!-- Case Studies -->
   <url>
     <loc>https://itrapidsupport.com/case-studies/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -105,6 +105,18 @@
   <url>
     <loc>https://itrapidsupport.com/case-studies/artistic-smart-homes-email-authentication/</loc>
     <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/case-studies/metrology-erp-database-outage/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itrapidsupport.com/case-studies/pharma-identity-device-management/</loc>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

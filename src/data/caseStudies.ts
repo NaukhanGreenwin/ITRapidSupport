@@ -2,6 +2,14 @@
 // Every fact below comes from documented work records (approved drafts in
 // workspace drafts/, 2026-07-19). No invented clients, numbers, quotes, or
 // outcomes. Client staff names are deliberately omitted from public copy.
+//
+// 2026-08-15: added `metrology-erp-database-outage` and
+// `pharma-identity-device-management`. Every claim in those two entries was
+// verified first-hand against sent items in the ITRS mailbox
+// (nauman.khan@itrapidsupport.com) — see
+// workspace-seo/case-study-evidence-2026-08-15.md for the claim-by-claim
+// source map. Both clients are described by sector, not named: NK has not
+// been asked for naming permission yet. Do not add names without it.
 
 export interface CaseStudyData {
   slug: string;
@@ -22,6 +30,16 @@ export interface CaseStudyData {
   result: string;
   /** Related service pages for internal links (trailing-slash paths) */
   related: { label: string; href: string }[];
+  /**
+   * True when the client is described by sector rather than named (client has
+   * not given naming permission). Suppresses the Organization node in schema
+   * so we never assert a company name that isn't a real legal entity.
+   */
+  anonymized?: boolean;
+  /** Real, written client words. Never a paraphrase, never invented. */
+  quote?: { text: string; attribution: string };
+  /** ISO date the study was first published. Defaults to 2026-07-19. */
+  datePublished?: string;
 }
 
 export const caseStudies: CaseStudyData[] = [
@@ -135,6 +153,92 @@ export const caseStudies: CaseStudyData[] = [
       { label: 'Email Spoofing, SPF, DKIM & DMARC Explained', href: '/resources/email-spoofing-spf-dkim-dmarc-explained/' },
       { label: 'IT Support Vaughan', href: '/it-support/vaughan/' },
     ],
+  },
+  {
+    slug: 'metrology-erp-database-outage',
+    client: 'Metrology & calibration firm',
+    industry: 'Metrology and calibration services',
+    location: 'Greater Toronto Area, Ontario',
+    anonymized: true,
+    services: [
+      'Emergency IT support',
+      'ERP database troubleshooting',
+      'Backup design',
+      'Microsoft 365 management',
+    ],
+    title: 'Spire ERP Outage: Same-Morning Recovery',
+    description:
+      'How IT Rapid Support traced a total Spire database outage to a changed server network profile and had every affected workstation back the same morning.',
+    keywords:
+      'Spire database connectivity failure, ERP outage recovery Toronto, PostgreSQL connection blocked, emergency IT support GTA, business continuity case study',
+    h1: 'Recovering a Total ERP Database Outage in a Single Morning',
+    summary:
+      'Every workstation lost its Spire connection at once. Root cause found in the server’s network profile, all three PCs restored the same morning with no data loss, and a written incident report in the client’s inbox by 10:13 a.m.',
+    challenge: [
+      'This client is a metrology and calibration company that runs quoting, invoicing and accounting on the Spire business management platform, with its data in a PostgreSQL database on an on-premise server. One morning in June 2026, every workstation in the office lost its connection to that database at the same moment. Nobody could open Spire. For a business whose day is built around issuing certificates, quotes and invoices, that is not an inconvenience — it is the company standing still.',
+      'There was no obvious cause to work from. The server was powered on. The network was up. Spire itself had not been touched, updated or moved. The symptom pointed at the application; the fault was somewhere else entirely.',
+    ],
+    actions: [
+      'Took the call that morning and worked the problem remotely from symptom to root cause in a single session, rather than restarting services and hoping.',
+      'Found the real cause: the server’s network profile had changed, and the new profile applied a stricter firewall posture that blocked PostgreSQL connections. That is precisely why every workstation failed simultaneously while everything else on the network looked perfectly healthy.',
+      'Corrected the profile and restored database connectivity to all three affected workstations, with Spire coming back up with no data loss.',
+      'Delivered a written incident report the same morning — sent at 10:13 a.m. — covering what failed, why it failed, what was done about it, and what it means going forward.',
+      'Followed up three days later with two written proposals: one to design, configure and validate a proper backup solution for the Spire accounting database, and one to set up secure, password-protected external file sharing inside the client’s existing Microsoft 365 tenant so files leave the company through controlled links instead of email attachments.',
+      'Continue to manage this client’s Microsoft 365 subscriptions and licensing, as we have since their original Spire installation support, their workstation refresh, and their move to OneDrive.',
+    ],
+    result:
+      'Service was fully restored the same morning it failed, with no data loss and a documented root cause — so the failure mode is closed rather than waiting to recur. The client had a written incident report in hand before the morning was out, and a backup and file-sharing hardening plan on the table within three days. An outage became a resilience upgrade.',
+    related: [
+      { label: 'Business Continuity & Disaster Recovery', href: '/services/business-continuity-disaster-recovery/' },
+      { label: '24/7 IT Help Desk', href: '/services/it-helpdesk/' },
+      { label: 'IT Support Toronto', href: '/it-support/toronto/' },
+    ],
+    datePublished: '2026-08-15',
+  },
+  {
+    slug: 'pharma-identity-device-management',
+    client: 'Pharmaceutical services firm',
+    industry: 'Pharmaceutical packaging and distribution',
+    location: 'Canada, United States, EU and India',
+    anonymized: true,
+    services: [
+      'Email compromise forensics',
+      'Microsoft Entra ID identity management',
+      'Microsoft Intune device management',
+      'Conditional Access and MFA',
+    ],
+    title: 'Intune & Entra ID Case Study: Pharma Client',
+    description:
+      'From reconstructing a 2018 mailbox compromise minute by minute to scoping centralized Entra ID and Intune management for a 40 to 50 person pharma firm.',
+    keywords:
+      'email compromise forensics case study, Microsoft Intune deployment Toronto, Entra ID identity management, Conditional Access MFA rollout, business email compromise GTA',
+    h1: 'From Breach Forensics to a Company-Wide Identity Plan',
+    summary:
+      'A mailbox takeover reconstructed to the second — 2,706 emails sent in under forty minutes — and, eight years on, the same client returning to have centralized identity and device management designed across four countries.',
+    challenge: [
+      'This client is a pharmaceutical services company — drug sourcing, packaging, GMP storage and distribution across Canada, the United States, the EU and India. In November 2018 one of its mailboxes was taken over, and the company needed to know exactly what had happened, how far it reached, and how to shut the door.',
+      'Eight years later the question had changed shape. The company had grown to roughly 40 to 50 employees across its international operations, mostly on Windows laptops, with accounts and devices managed loosely at each location. They came back asking for something structural: one identity per person, every device enrolled and manageable, rolled out in stages rather than as a big bang.',
+    ],
+    actions: [
+      'Reconstructed the 2018 intrusion from the mail system’s own records rather than from assumption: attacker activity began at 10:10:03 a.m. on 15 November 2018, ended at 10:49:42 a.m. the same morning, and sent 2,706 emails from the compromised account inside that window.',
+      'Gave the client a defensible written account of the incident, which set the real scope for cleanup and for telling their contacts what had happened — facts, not guesses.',
+      'Returned in July 2026 to scope the environment properly before proposing anything: headcount, device mix, how accounts were being managed at each site, and what would break if it all changed at once.',
+      'Designed against the client’s stated scope — Microsoft 365 Business Premium, Microsoft Entra ID for centralized identity, Microsoft Intune for Windows laptop management, Entra Join for company devices, and security policy including multi-factor authentication, device compliance, Conditional Access and BitLocker.',
+      'Advised on licensing and deployment approach, enrolment of both existing and new devices, and a migration path to centralized management with minimal disruption to users.',
+      'Delivered a written statement of work within days of the request, and followed up on it directly rather than leaving it to chase itself.',
+    ],
+    result:
+      'The 2018 work produced a minute-by-minute forensic account from primary evidence. The relationship it earned is the point: eight years later, the company that handled the breach is the one asked to redesign identity across four countries. The 2026 engagement is at statement-of-work stage — a staged rollout of centralized identity and managed devices for the full 40 to 50 person workforce, which is the structural answer to what happened in 2018. A compromised password matters far less when sign-in is centrally controlled and a suspect device can be isolated remotely.',
+    quote: {
+      text: 'Our objective is to implement a centralized login and device management solution that can support all employees as we roll it out.',
+      attribution: 'IT systems lead, pharmaceutical services client',
+    },
+    related: [
+      { label: 'Microsoft 365 Managed Services', href: '/services/microsoft-365-managed-services/' },
+      { label: 'Managed Security Services', href: '/services/managed-security/' },
+      { label: 'Microsoft 365 & Azure Migration', href: '/services/microsoft-365-azure-migration/' },
+    ],
+    datePublished: '2026-08-15',
   },
 ];
 

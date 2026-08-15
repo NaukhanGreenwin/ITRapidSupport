@@ -34,7 +34,7 @@ const CaseStudies: React.FC = () => {
     <PageTransition>
       <SEO
         title="Client Case Studies: Real GTA Results"
-        description="Real, documented case studies from IT Rapid Support: email security and DMARC enforcement, Microsoft 365 tenant cleanup, and email authentication."
+        description="Real, documented case studies from IT Rapid Support: DMARC enforcement, Microsoft 365 tenant cleanup, ERP outage recovery, and breach forensics to Intune."
         keywords="managed IT case studies Toronto, cybersecurity case study GTA, Microsoft 365 case study, DMARC case study, IT support results Vaughan"
         canonicalUrl={url}
         schema={schema}
@@ -55,8 +55,9 @@ const CaseStudies: React.FC = () => {
               Real Work for Real GTA Businesses
             </h1>
             <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-              These are documented engagements — named clients, the actual problems they brought
-              us, and exactly what we did about them. No stock stories, no invented numbers.
+              These are documented engagements — the actual problems clients brought us, and
+              exactly what we did about them. No stock stories, no invented numbers. Some clients
+              are named with their permission; others are described by sector only.
             </p>
             <Link
               to="/contact/"
@@ -115,8 +116,9 @@ const CaseStudies: React.FC = () => {
           <div className="mt-16 max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 text-gray-500 text-sm">
               <ShieldCheck className="h-4 w-4 text-red-600" />
-              Every case study on this page is published with the client’s knowledge and describes
-              documented work. Client staff names are omitted for privacy.
+              Every case study on this page describes documented work. Named clients are published
+              with their knowledge; where a client is described by sector rather than named,
+              identifying details are withheld. Client staff names are always omitted.
             </div>
           </div>
         </div>
