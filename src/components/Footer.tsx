@@ -176,6 +176,18 @@ export default function Footer() {
                 IT for Cottages & Seasonal Properties
               </Link>
             </li>
+            {/* Added 2026-08-15. The Starlink page is the deepest page in the
+                cottage cluster and had only 6 inbound internal links against 134
+                for every other member, because it was the one cluster page not
+                carried by the sitewide footer. */}
+            <li>
+              <Link
+                to="/services/starlink-installation-muskoka/"
+                className="text-slate-400 hover:text-white text-sm block truncate"
+              >
+                Starlink Installation in Muskoka
+              </Link>
+            </li>
           </ul>
         </FooterAccordionSection>
 

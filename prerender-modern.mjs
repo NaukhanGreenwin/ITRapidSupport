@@ -51,6 +51,7 @@ const routes = [
   '/it-support/muskoka',
   '/it-support/port-carling',
   '/it-support/bracebridge',
+  '/it-support/gravenhurst',
   '/it-support/huntsville',
   '/industries/legal',
   '/industries/accounting',

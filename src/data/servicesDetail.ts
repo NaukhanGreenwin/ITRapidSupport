@@ -669,7 +669,7 @@ export const servicesDetail: ServiceDetailData[] = [
   {
     slug: 'cottage-it-support',
     service: 'Cottage Wi-Fi & Smart Home Installation',
-    title: 'Cottage Wi-Fi & Smart Home Installation in Muskoka',
+    title: 'Cottage Wi-Fi & Smart Homes in Muskoka',
     h1: 'Cottage Wi-Fi and Smart Home Installation Across Muskoka',
     description:
       'Cottage Wi-Fi installation in Muskoka: Starlink, LTE or fixed wireless, mesh Wi-Fi to the dock and boathouse, cameras, smart locks, and freeze and leak sensors.',
@@ -827,7 +827,7 @@ export const servicesDetail: ServiceDetailData[] = [
   {
     slug: 'starlink-installation-muskoka',
     service: 'Starlink Installation in Muskoka',
-    title: 'Starlink Installation in Muskoka & Cottage Country',
+    title: 'Starlink Installation in Muskoka',
     h1: 'Starlink Installation and Support for Muskoka Cottages',
     description:
       'Starlink installation in Muskoka: what it costs, obstruction survey, dish mounting, cabling, and the mesh Wi-Fi and monitoring behind the dish.',

@@ -157,6 +157,7 @@ function App() {
             <Route path="/it-support/muskoka" element={<LocationLanding slug="muskoka" />} />
             <Route path="/it-support/port-carling" element={<LocationLanding slug="port-carling" />} />
             <Route path="/it-support/bracebridge" element={<LocationLanding slug="bracebridge" />} />
+            <Route path="/it-support/gravenhurst" element={<LocationLanding slug="gravenhurst" />} />
             <Route path="/it-support/huntsville" element={<LocationLanding slug="huntsville" />} />
             <Route path="/industries/legal" element={<IndustryLanding slug="legal" />} />
             <Route path="/industries/accounting" element={<IndustryLanding slug="accounting" />} />

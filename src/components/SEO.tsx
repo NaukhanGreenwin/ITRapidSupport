@@ -127,13 +127,23 @@ export const generateLocalBusinessSchema = (location?: string) => {
   // Service-area cities. schema.org City does not accept a postalCode property
   // (only PostalAddress and GeoShape do) — listing codes here fails schema.org
   // validation on every page that embeds this block, so cities are named only.
+  // Muskoka was added 2026-08-15. The cottage cluster shipped 2026-08-14 with
+  // page-level Service nodes claiming Muskoka while the business entity's
+  // areaServed listed GTA cities only — a direct contradiction for local and
+  // AI-search entity resolution. Muskoka is a District Municipality, not a
+  // city, so it is typed AdministrativeArea.
   const serviceAreas = [
     { "@type": "City", "name": "Vaughan" },
     { "@type": "City", "name": "Toronto" },
     { "@type": "City", "name": "Mississauga" },
     { "@type": "City", "name": "Brampton" },
     { "@type": "City", "name": "Woodbridge" },
-    { "@type": "City", "name": "Concord" }
+    { "@type": "City", "name": "Concord" },
+    { "@type": "AdministrativeArea", "name": "District Municipality of Muskoka" },
+    { "@type": "City", "name": "Bracebridge" },
+    { "@type": "City", "name": "Huntsville" },
+    { "@type": "City", "name": "Gravenhurst" },
+    { "@type": "Place", "name": "Port Carling" }
   ];
 
   // Define services offered
