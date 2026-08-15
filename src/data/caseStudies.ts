@@ -6,10 +6,11 @@
 // 2026-08-15: added `metrology-erp-database-outage` and
 // `pharma-identity-device-management`. Every claim in those two entries was
 // verified first-hand against sent items in the ITRS mailbox
-// (nauman.khan@itrapidsupport.com) — see
-// workspace-seo/case-study-evidence-2026-08-15.md for the claim-by-claim
-// source map. Both clients are described by sector, not named: NK has not
-// been asked for naming permission yet. Do not add names without it.
+// (nauman.khan@itrapidsupport.com). The claim-by-claim source map lives
+// outside this repo, because it names the clients and this repo is public:
+// ~/.openclaw/workspace/content-staging-20260815/case-studies/case-study-evidence-2026-08-15.md
+// Both clients are described by sector, not named: NK has not been asked for
+// naming permission yet. Do not add names without it.
 
 export interface CaseStudyData {
   slug: string;
