@@ -74,6 +74,37 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     return () => document.removeEventListener('click', handlePhoneClick, true);
   }, []);
 
+  // Track primary CTA clicks sitewide. Same delegated pattern as the phone
+  // links: an element opts in explicitly with data-cta, or it counts by
+  // destination — the four paths below are the only ones a visitor reaches
+  // when they are actually trying to become a lead.
+  useEffect(() => {
+    if (navigator.webdriver) return; // headless prerender/bot — never send hits
+    if (process.env.NODE_ENV === 'development') return;
+
+    const CTA_DESTINATIONS = /^\/(contact|it-health-check|security-assessment|managed-it-plans)(\/|\?|$)/;
+
+    const handleCtaClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      const el = target?.closest?.('[data-cta], a[href]') as HTMLElement | null;
+      if (!el) return;
+
+      const explicit = el.getAttribute('data-cta');
+      const href = el.getAttribute('href') || '';
+      if (!explicit && !CTA_DESTINATIONS.test(href)) return;
+
+      trackEvent('cta_click', {
+        cta_name: explicit || href,
+        cta_text: (el.textContent || '').trim().slice(0, 100),
+        cta_destination: href,
+        cta_location: window.location.pathname
+      });
+    };
+
+    document.addEventListener('click', handleCtaClick, true);
+    return () => document.removeEventListener('click', handleCtaClick, true);
+  }, []);
+
   // Track user behavior
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') return;
@@ -138,11 +169,20 @@ export const trackEvent = (eventName: string, eventParams: Record<string, any> =
   }
 };
 
-// Track form submissions (conversions)
+// Track form submissions (conversions). Two events on purpose: form_submission
+// keeps the existing per-form detail, and generate_lead is GA4's recommended
+// lead event — one canonical name across every form on the site, so a single
+// key event in GA4 counts them all instead of one per form name.
 export const trackFormSubmission = (formName: string, formData: Record<string, any> = {}) => {
   trackEvent('form_submission', {
     conversion: true,
     form_name: formName,
+    ...formData
+  });
+
+  trackEvent('generate_lead', {
+    form_name: formName,
+    page_path: window.location.pathname,
     ...formData
   });
 };

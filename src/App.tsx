@@ -44,6 +44,7 @@ const ServiceLanding = lazy(() => import('./pages/ServiceLanding'));
 const RiskCalculator = lazy(() => import('./pages/RiskCalculator'));
 const QuoteChecker = lazy(() => import('./pages/QuoteChecker'));
 const ManagedITPlans = lazy(() => import('./pages/ManagedITPlans'));
+const ITHealthCheck = lazy(() => import('./pages/ITHealthCheck'));
 
 // Neutral, unbranded fallback while a route chunk loads. The data attribute lets
 // the prerenderer wait until the real route content has replaced it.
@@ -93,6 +94,7 @@ function App() {
             <Route path="/security-assessment" element={<SecurityAssessment />} />
             <Route path="/it-risk-calculator" element={<RiskCalculator />} />
             <Route path="/managed-it-plans" element={<ManagedITPlans />} />
+            <Route path="/it-health-check" element={<ITHealthCheck />} />
             <Route path="/cyber-incident" element={<CyberIncident />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/resources/:id" element={<ResourceDetails />} />

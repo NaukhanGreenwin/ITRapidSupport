@@ -24,6 +24,7 @@ const routes = [
   '/case-studies/pharma-identity-device-management',
   '/it-risk-calculator',
   '/managed-it-plans',
+  '/it-health-check',
   '/privacy', '/terms', '/cookies', '/accessibility',
   '/it-support/gta',
   '/it-support/york-region',
