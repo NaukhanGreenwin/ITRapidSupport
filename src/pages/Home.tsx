@@ -16,19 +16,26 @@ import GTACybersecuritySection from '../components/GTACybersecuritySection';
 
 const Home: React.FC = () => {
 
-  // FAQ data for schema
+  // FAQ data for schema.
+  //
+  // Deliberately region-level, not city-level. The homepage was ranking at or
+  // near position 1 for city-specific queries ("cybersecurity services vaughan",
+  // "it help desk services vaughan") that belong to the purpose-built city pages,
+  // which sat on page 3 for the same terms. City-named questions here were the
+  // strongest cannibalisation signal on the page, so every question is now
+  // answered at Toronto/GTA level and the city work is handed off by link.
   const faqs = [
     {
-      question: "What IT security services do you offer in Toronto?",
-      answer: "We offer comprehensive IT security services in Toronto including managed security services, network security, cloud security, identity management, threat detection, and 24/7 monitoring and incident response."
+      question: "What IT security services do you offer across Toronto and the GTA?",
+      answer: "We offer comprehensive IT security services across the Greater Toronto Area including managed security services, network security, cloud security, identity management, threat detection, and 24/7 monitoring and incident response."
     },
     {
-      question: "How can your managed IT support help my Mississauga business?",
-      answer: "Our managed IT support services help Mississauga businesses by providing proactive monitoring, maintenance, helpdesk support, strategic IT planning, and cybersecurity protection - all designed to minimize downtime and maximize productivity."
+      question: "How does managed IT support work for a business in the Greater Toronto Area?",
+      answer: "Our managed IT support provides proactive monitoring, maintenance, 24/7 helpdesk, strategic IT planning, and cybersecurity protection under one fixed monthly fee - all designed to minimize downtime and maximize productivity. Each city we cover has its own page with the local detail, listed on our IT support across the GTA page."
     },
     {
-      question: "Do you provide cybersecurity services for businesses in Vaughan?",
-      answer: "Yes, we provide specialized cybersecurity services for Vaughan businesses including vulnerability assessments, penetration testing, security monitoring, incident response, and compliance management tailored to your industry requirements."
+      question: "Do you provide cybersecurity services for businesses across the Greater Toronto Area?",
+      answer: "Yes. We provide managed cybersecurity across the GTA including vulnerability assessments, security monitoring, managed detection and response, incident response, and email authentication with SPF, DKIM and DMARC, tailored to your industry requirements."
     },
     {
       question: "What makes your IT support different from other providers in the Greater Toronto Area?",
@@ -46,12 +53,17 @@ const Home: React.FC = () => {
         "name": "IT Rapid Support",
         "alternateName": "IT Rapid Support Inc.",
         "url": "https://itrapidsupport.com/",
-        "description": "IT Rapid Support provides enterprise-grade cybersecurity solutions and managed IT services for businesses across the Greater Toronto Area, including Vaughan, Mississauga, Brampton, Woodbridge, and Concord.",
+        "description": "IT Rapid Support provides enterprise-grade cybersecurity solutions and managed IT services for businesses across Toronto and the Greater Toronto Area.",
         "publisher": {
           "@id": "https://itrapidsupport.com/#organization"
         }
       },
       generateOrganizationSchema(),
+      // Note: the profile argument only selects NAP + geo, which are identical
+      // for every GTA profile, and the emitted areaServed city list is
+      // hardcoded site-wide in generateLocalBusinessSchema. Changing it here
+      // does nothing — the homepage/city-page LocalBusiness blocks are
+      // identical by construction, which is the open entity-graph item.
       generateLocalBusinessSchema("vaughan"),
       generateFAQSchema(faqs),
       {
@@ -67,24 +79,8 @@ const Home: React.FC = () => {
               "name": "Toronto"
             },
             {
-              "@type": "City",
-              "name": "Vaughan"
-            },
-            {
-              "@type": "City",
-              "name": "Mississauga"
-            },
-            {
-              "@type": "City",
-              "name": "Brampton"
-            },
-            {
-              "@type": "City",
-              "name": "Woodbridge"
-            },
-            {
-              "@type": "City",
-              "name": "Concord"
+              "@type": "AdministrativeArea",
+              "name": "Greater Toronto Area"
             }
           ]
         },
@@ -108,9 +104,9 @@ const Home: React.FC = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Managed IT & Cybersecurity | Toronto & GTA" 
-        description="Your IT and your security handled by one team, not two vendors. 24/7 helpdesk, on-site from our Vaughan office, fixed monthly fee. Call (289) 582-9930."
-        keywords="IT security Toronto, managed IT services GTA, cybersecurity Ontario, Toronto IT support, Vaughan IT services, Mississauga cybersecurity, Brampton IT support, enterprise security"
+        title="Managed IT & Cybersecurity, Toronto & GTA"
+        description="Your IT and your security handled by one team, not two vendors. 24/7 helpdesk, on-site across Toronto and the GTA, fixed monthly fee. Call (289) 582-9930."
+        keywords="IT security Toronto, managed IT services GTA, cybersecurity Ontario, Toronto IT support, GTA managed security, Greater Toronto Area IT company, enterprise security"
         schema={combinedSchema}
         breadcrumbs={[{ name: 'Home', url: '/' }]}
       />

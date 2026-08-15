@@ -516,7 +516,7 @@ export const locations: CityData[] = [
       'IT support Mississauga, managed IT services Mississauga, cybersecurity Mississauga, Mississauga IT company, IT helpdesk Mississauga',
     intro:
       'IT Rapid Support helps Mississauga businesses run on reliable, secure technology. We provide proactive monitoring and maintenance, a 24/7 helpdesk, strategic IT planning, cloud services, data backup and recovery, and comprehensive cybersecurity, serving as your complete IT department.',
-    nearbyAreas: ['Port Credit', 'Streetsville', 'Meadowvale', 'Erin Mills', 'Cooksville', 'Square One'],
+    nearbyAreas: ['Port Credit', 'Streetsville', 'Meadowvale', 'Erin Mills', 'Cooksville', 'Square One', 'Malton', 'Clarkson', 'Lorne Park', 'Dixie'],
     highlights: [
       {
         title: 'Complete Managed IT',
@@ -585,6 +585,36 @@ export const locations: CityData[] = [
         answer:
           'Typically a few weeks from agreement to steady state, in four stages. We assess what you have — systems, licences, credentials, backups, security posture. We plan the transition and identify anything that has to be fixed immediately. We onboard: install monitoring and endpoint protection, take ownership of the Microsoft 365 tenant and domain records, document everything, and introduce the helpdesk to your staff. Then we move into operation, with proactive monitoring, patching and regular reviews. One thing worth insisting on with any provider: your business, not the provider, should own your Microsoft 365 tenant and domain.',
       },
+      {
+        question: 'Do you have an office in Mississauga?',
+        answer:
+          'No, and we would rather say that plainly than list a mailbox address on a map. IT Rapid Support is headquartered at 7810 Keele Street in Vaughan, and Mississauga is served from there: remote support is delivered exactly as it is everywhere else, and scheduled on-site attendance is dispatched to your premises. The question worth asking any provider — local address or not — is how on-site visits are scheduled and who actually turns up, because an office down the road does not help if the only technician is booked three days out.',
+      },
+      {
+        question: 'Which parts of Mississauga do you cover?',
+        answer:
+          'All of it. That includes the airport and Malton employment lands in the northeast, the City Centre and Square One office cluster, the Highway 401 corridor across the north end, Meadowvale and Streetsville in the northwest, Erin Mills and the Highway 403 corridor, Cooksville and Dixie in the centre and east, and the lakeshore communities of Port Credit, Lorne Park and Clarkson. We cover the neighbouring municipalities from the same team — see IT support in Brampton, managed IT services in Oakville and IT support in Etobicoke.',
+      },
+      {
+        question: 'Can you support a Mississauga business near Pearson Airport that runs around the clock?',
+        answer:
+          'Yes, and it is one of the more common requirements here. Malton, in the northeast corner of the city, is home to Toronto Pearson International Airport, Canada\'s busiest, and the freight forwarding, customs brokerage, ground handling and distribution businesses around it do not stop at 5 pm. For those operations a genuinely 24/7 helpdesk is a functional requirement rather than a line on a brochure: a scanner gun failing at 2 am or a WMS server alert on a Sunday has to reach a technician who can act, not an answering service taking a message. Our helpdesk is staffed around the clock and our monitoring runs continuously, so overnight alerts are worked overnight.',
+      },
+      {
+        question: 'What does managed IT cost for a Mississauga business?',
+        answer:
+          'We do not publish a per-user price, because a number without a scope is not useful for comparison. What drives the figure is straightforward: how many users and devices you have, whether you run on-premises servers or entirely in the cloud, how many sites need coverage, how much of the security stack is included, whether you need after-hours or weekend coverage beyond the standard 24/7 helpdesk, and how often someone needs to be physically on site. When you compare quotes from Mississauga providers, insist that each one lists what is inside the base fee and what is billed on top — security monitoring, backup testing and on-site labour are the three most commonly moved into the add-on column.',
+      },
+      {
+        question: 'Do you offer co-managed IT for Mississauga companies that already have internal IT staff?',
+        answer:
+          'Yes. Co-managed IT is common in Mississauga because the city has a lot of mid-sized offices with one or two internal IT people who are competent and permanently over capacity. In that arrangement your internal staff keep the work they are best placed to do — the applications specific to your business, the relationships, the project work — and we take the parts that do not fit one person: 24/7 helpdesk coverage, after-hours monitoring, patching at scale, security operations, and holiday and vacation cover. The split is written down rather than assumed, because the failure mode of co-managed IT is two teams both believing the other one owns backups.',
+      },
+      {
+        question: 'Can you help our Mississauga business meet its privacy obligations under PIPEDA?',
+        answer:
+          'We can put in place and maintain the technical controls that support those obligations — access control and multi-factor authentication, encryption on devices, audit logging, monitored and tested backups, defensible offboarding so departed staff lose access, and email authentication so your domain is harder to impersonate. What we do not do is tell you that you are compliant. PIPEDA obligations sit with your business and cover policy, consent, retention and breach response as well as technology, so the honest position is that we handle the controls layer and support your own or your counsel\'s assessment of the rest. Healthcare and dental practices with PHIPA obligations are handled the same way.',
+      },
     ],
     sections: [
       {
@@ -592,6 +622,15 @@ export const locations: CityData[] = [
         paragraphs: [
           'When a Mississauga employee is locked out at 7 am or a server alert fires on a Sunday, waiting until Monday is not an option. Our IT helpdesk answers 24/7 — every ticket goes to a technician who can remote in immediately, and issues that need hands-on work get on-site dispatch from our Vaughan headquarters. Alongside the helpdesk we run proactive monitoring and patching, Microsoft 365 administration, and backup monitoring so most problems are caught before your team ever notices them.',
           'That combination matters for Mississauga businesses running extended hours — logistics and distribution operations around the airport corridor, professional offices near Square One, and customer-facing teams that cannot absorb downtime.',
+        ],
+      },
+      {
+        heading: 'Why Mississauga Businesses Look for a Local IT Partner',
+        paragraphs: [
+          'Mississauga is the seventh-largest municipality in Canada and the second-largest in the Greater Toronto Area after Toronto itself, with a population of 717,961 at the 2021 census. It is also the only large GTA city whose population has started to level off — the 2021 count was down 0.5 per cent from 721,599 in 2016, the first decline in the city\'s history. That matters more than it sounds. Growth in Mississauga now comes from businesses intensifying on land they already occupy rather than from new subdivisions, which means the typical IT conversation here is about a company that has outgrown the systems it installed a decade ago, not one starting from nothing.',
+          'The second thing that shapes IT in this city is the head-office concentration. More than sixty Fortune 500 companies base their global or Canadian head offices in Mississauga, and the strongest local industries — pharmaceuticals, banking and finance, electronics and computers, aerospace, and transportation parts and equipment — are all sectors with mature internal security standards. TD Bank runs corporate IT development centres here, as do the Royal Bank of Canada and Purolator. The practical consequence for a thirty-person company in the same city is that its customers are often enterprises, and enterprise procurement now sends vendor security questionnaires down the supply chain. Questions about multi-factor authentication, backup testing, encryption and incident response arrive from a client\'s risk team long before they arrive from a regulator.',
+          'That is the specific reason Mississauga businesses go looking for a managed IT provider rather than a break-fix contact: they need someone who can answer those questionnaires accurately, keep the controls behind the answers actually running, and produce evidence when a customer asks for it. Our managed IT agreement includes the security layer in the base fee for exactly this reason — a control you only pay for when someone asks about it is a control that is not running the rest of the year.',
+          'On location, we will be direct: our office is at 7810 Keele Street in Vaughan, not in Mississauga. Remote support and monitoring are unaffected by that, and scheduled on-site work is dispatched to your premises. We would rather state it than open a nominal address and imply a presence we do not have. If proximity is genuinely the deciding factor for you, ask any shortlisted provider how on-site visits are scheduled and how many technicians could actually attend, which is the thing that determines response in practice.',
         ],
       },
       {
@@ -650,6 +689,15 @@ export const locations: CityData[] = [
         ],
       },
       {
+        heading: 'IT Consulting, vCIO and Budget Planning for Mississauga Businesses',
+        paragraphs: [
+          'Most Mississauga companies between roughly ten and two hundred staff have no one whose job is to think about technology twelve months ahead. Decisions get made when something breaks or when a licence renewal lands, which is how a business ends up with a server it cannot patch, three overlapping backup products and a security budget that was set by whoever quoted last. Our [vCIO and IT strategy service](/services/vcio-it-strategy/) fills that gap without adding a full-time hire.',
+          'In practice the vCIO work is four things. First, an asset and lifecycle plan: what hardware and software you run, how old each item is, when it stops being supported, and what it costs to replace — so replacements are scheduled and budgeted rather than paid for in a panic. Second, a budget forecast covering licensing, hardware, projects and security for the coming year, in a form a finance team can use. Third, a risk register that says plainly which gaps are open, what each one would cost you if it were exploited, and in what order we recommend closing them. Fourth, periodic business reviews where we go through what changed, what is coming, and what the last quarter\'s tickets actually tell us about where the environment is weak.',
+          'The reviews are the part clients underestimate. Ticket volume is diagnostic data: forty password resets a month is an identity problem, not forty separate incidents, and a cluster of tickets from one department usually points at one unsupported application rather than at the people using it. Reading that pattern is how the work shifts from absorbing failures to removing their causes, which is the only version of managed IT that gets cheaper over time.',
+          'For Mississauga businesses that sell into the head offices and enterprises across the city, the strategy conversation also covers what your customers will ask of you. Vendor security reviews, cyber insurance applications and renewal questionnaires all want specifics — MFA coverage, backup and restore testing, endpoint detection, patch cadence, offboarding process, incident response. Having those documented and true before the questionnaire arrives is considerably cheaper than assembling them under a deadline, and it is a standing item in our reviews rather than a scramble.',
+        ],
+      },
+      {
         heading: 'Switching IT Providers in Mississauga: The Four Stages',
         paragraphs: [
           'Changing IT providers feels risky, which is why businesses stay with an arrangement that stopped working years ago. In practice the transition runs in four stages and normally takes a few weeks rather than months.',
@@ -657,6 +705,17 @@ export const locations: CityData[] = [
           'Plan. We agree what has to be fixed immediately versus what can wait, sequence the work around your operating hours, and identify anything that needs the outgoing provider\'s cooperation so it is requested early rather than discovered late.',
           'Onboard. Monitoring agents and endpoint protection are deployed, ownership of the Microsoft 365 tenant and domain records is transferred to your business, documentation is completed, and your staff are introduced to the helpdesk so they know exactly who to contact.',
           'Operate. Steady state: proactive monitoring, patching, backup verification, security management and regular reviews of what changed and what is coming. The reviews are where the value compounds, because most IT risk arrives gradually rather than suddenly.',
+        ],
+      },
+      {
+        heading: 'Mississauga Business Districts and Employment Areas We Cover',
+        paragraphs: [
+          'Mississauga covers 292.43 square kilometres on the northwestern shore of Lake Ontario, with thirteen kilometres of shoreline, and it is bounded by Toronto — specifically Etobicoke — to the east, Brampton to the north, Milton to the northwest and Oakville to the southwest. A 2010 land purchase from Milton pushed the city limits out to Highway 407. It is not a single downtown with suburbs around it: Mississauga was assembled from separate villages and townships, none of which was clearly dominant, and the business geography still reflects that. Where your office sits changes what your IT actually has to cope with, so it is worth going district by district.',
+          'The northeast is airport country. Malton is home to Toronto Pearson International Airport, Canada\'s busiest, and the businesses around it — freight forwarding, customs brokerage, ground handling, warehousing, aerospace suppliers — run extended and overnight shifts. Here the binding constraints are around-the-clock helpdesk coverage, warehouse wireless that holds up across a full building rather than just near the office, and integrations with carrier and customs systems that fail loudly at inconvenient hours. The Airport Corporate Centre nearby, reached from the Mississauga Transitway at Renforth, is office rather than industrial and has a different profile again: mid-sized corporate teams, heavy Microsoft 365 use, and a lot of staff moving between the office and home.',
+          'The centre of the city is Mississauga City Centre, the transit-oriented downtown around Square One, where Highway 403 runs through and the professional services sit — accounting, legal, insurance, consulting, real estate. Client confidentiality, email security and defensible backup matter more here than raw uptime. The Highway 401 corridor across the north end, through Britannia and Courtneypark, is the distribution and light-manufacturing belt, where older equipment that cannot be patched or replaced on a normal cycle pushes the emphasis toward network segmentation and limiting what a compromised machine can reach.',
+          'To the northwest, Meadowvale and Streetsville hold a mix of corporate campuses and long-established smaller businesses; Erin Mills runs down the Highway 403 corridor toward the Credit River and the University of Toronto Mississauga campus at Erindale. South of the QEW, the lakeshore communities — Port Credit, Lorne Park, Clarkson, Lakeview — are smaller professional offices, clinics and owner-operated firms where the whole IT estate is a handful of laptops, a Microsoft 365 tenant and a line-of-business application, and the risk sits almost entirely in identity and backup rather than in infrastructure. Cooksville and Dixie in the centre and east mix retail, clinics and light industrial.',
+          'Transport is worth one note because it changes how people work. GO Transit runs all-day service on the Lakeshore West line and rush-hour service on the Milton and Kitchener lines, MiWay operates more than sixty bus routes, and the Hurontario LRT — the Hazel McCallion Line, an eighteen-kilometre, nineteen-stop Metrolinx line from Port Credit GO north to Brampton Gateway Terminal — is under construction along Hurontario Street, with no opening date announced yet. The practical effect on IT is hybrid work: staff who commute by transit are the ones most likely to be working from home two days a week, and that pushes security spending toward identity, device management and conditional access rather than toward the office network.',
+          'We work across all of it, and across the municipal borders too — the same team covers [IT support in Brampton](/it-support/brampton/) to the north, [managed IT services in Oakville](/it-support/oakville/) to the southwest, [IT support in Etobicoke](/it-support/etobicoke/) immediately east, and [IT support in Milton](/it-support/milton/) to the northwest. If you run more than one site across those boundaries, they are managed as one environment under one agreement rather than as separate accounts.',
         ],
       },
       {

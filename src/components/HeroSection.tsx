@@ -69,16 +69,27 @@ const HeroSection: React.FC = () => {
                 24/7 IT Support &amp; Cybersecurity
               </h2>
               
-              <p className="text-lg text-gray-200 mb-7 max-w-xl lg:mx-0">
-                Protect your digital assets with comprehensive{' '}
-                <Link to="/it-support/gta/" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
-                  managed IT services across the GTA
-                </Link>
-                , proactive security monitoring, and{' '}
+              {/* Region-level copy only. City-specific phrasing was pulling
+                  city queries onto the homepage and away from the purpose-built
+                  city pages; the two links below hand those queries down with
+                  exact-match anchors instead. */}
+              <p className="text-lg text-gray-200 mb-4 max-w-xl lg:mx-0">
+                One team for your IT and your security — proactive monitoring,{' '}
                 <Link to="/services/threat-detection/" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
                   24/7 managed threat detection and response
                 </Link>
+                , and a helpdesk that answers. See{' '}
+                <Link to="/it-support/gta/" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
+                  IT support across the GTA
+                </Link>
                 .
+              </p>
+              <p className="text-base text-gray-300 mb-7 max-w-xl lg:mx-0">
+                Based in Vaughan at 7810 Keele St — see our{' '}
+                <Link to="/it-support/vaughan/" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
+                  managed IT services in Vaughan
+                </Link>{' '}
+                page for local coverage.
               </p>
             </div>
             
