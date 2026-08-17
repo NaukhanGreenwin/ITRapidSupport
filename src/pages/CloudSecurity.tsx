@@ -1,8 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, ArrowRight, Check, CheckCircle, Lock, Shield, Database, ChevronRight } from 'lucide-react';
-import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema, generateFAQSchema } from '../components/SEO';
 import ServiceDifferentiators from '../components/ServiceDifferentiators';
+
+// Self-contained answers for AI search. Scope is limited to what ITRS actually
+// delivers — no uptime figures, pricing, or vendor certifications.
+const faqs = [
+  {
+    question: 'What is cloud security?',
+    answer:
+      'Cloud security is the protection of data, identities, and applications that live in cloud platforms rather than on hardware in your office. For most Canadian businesses that means securing Microsoft 365 and Azure: who can sign in, what they can reach, how data is shared outside the organization, and how sign-in activity is monitored.',
+  },
+  {
+    question: 'Is Microsoft 365 secure by default?',
+    answer:
+      'No. Microsoft 365 provides the security controls but does not switch all of them on for you. Default tenants commonly ship without enforced multi-factor authentication, without conditional access rules, with broad external sharing enabled, and with limited audit logging. Those settings have to be configured deliberately for the tenant to be considered secured.',
+  },
+  {
+    question: 'Does Microsoft back up my Microsoft 365 data?',
+    answer:
+      'Microsoft operates the platform and protects its own infrastructure, but that is not the same as backing up your content. Retention windows for deleted mail, files, and sites are limited, and data removed outside those windows is not recoverable from Microsoft. A separate backup is what makes point-in-time recovery possible.',
+  },
+  {
+    question: 'What cloud platforms does IT Rapid Support secure?',
+    answer:
+      'Work centres on Microsoft 365 and Azure, which is what most Toronto and GTA businesses run. That covers identity and access management, conditional access, email security, data protection and sharing controls, and monitoring of sign-in and administrative activity across the tenant.',
+  },
+  {
+    question: 'How do you secure staff working from home?',
+    answer:
+      'Remote workers are secured at the identity and device layer rather than at the office network. That means enforced multi-factor authentication, conditional access rules that evaluate the device and location of each sign-in, endpoint protection on the machines themselves, and monitoring that flags sign-in activity that does not fit the user.',
+  },
+  {
+    question: 'How do we find out where our cloud setup is exposed?',
+    answer:
+      'Start with a review of the existing tenant: how identities are configured, which security controls are enabled, how data is shared externally, and what is being logged. The review produces a specific list of gaps rather than a generic checklist. Call (289) 582-9930 or use the contact form to arrange one.',
+  },
+];
 
 const CloudSecurity = () => {
   return (
@@ -22,6 +57,7 @@ const CloudSecurity = () => {
             areaServed: 'Greater Toronto Area, Ontario',
             serviceType: 'Cloud Security Services',
           }),
+          generateFAQSchema(faqs, '/services/cloud-security/'),
         ]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -59,6 +95,23 @@ const CloudSecurity = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Direct answer block — front-loaded for answer engines. */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            What is cloud security?
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Cloud security is the protection of data, identities, and applications that live in cloud
+            platforms rather than on hardware in your office. For most Toronto and GTA businesses that
+            means securing Microsoft 365 and Azure: who can sign in, what they can reach, how data is
+            shared outside the organization, and how sign-in activity is monitored. IT Rapid Support
+            configures and manages those controls, because a Microsoft 365 tenant is not secured by
+            default — the platform supplies the controls but leaves them to be switched on and tuned.
+          </p>
         </div>
       </div>
 
@@ -370,6 +423,23 @@ const CloudSecurity = () => {
       </div>
 
       <ServiceDifferentiators />
+
+      {/* FAQ Section */}
+      <div className="py-20 bg-slate-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">
+            Cloud security: common questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">

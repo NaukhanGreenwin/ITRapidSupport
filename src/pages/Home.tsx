@@ -40,6 +40,10 @@ const Home: React.FC = () => {
     {
       question: "What makes your IT support different from other providers in the Greater Toronto Area?",
       answer: "Our IT support stands out in the GTA through our comprehensive security-first approach, 24/7 availability, rapid response times, experienced certified engineers, and personalized service plans designed for your specific business needs."
+    },
+    {
+      question: "How do I choose the best managed IT provider in the GTA?",
+      answer: "Compare providers on what is in writing, not on the pitch: unlimited versus capped helpdesk, what 24/7 actually means, whether MFA is deployed and enforced, whether backups are restore-tested, who owns your Microsoft 365 tenant, and the exit terms. IT Rapid Support publishes a free Managed IT Quote Checker that scores any provider's proposal against 22 items, and offers a free IT Health Check — a 15-minute assessment with a written report — so you can see your gaps before you sign with anyone."
     }
   ];
 

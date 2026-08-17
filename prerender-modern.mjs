@@ -96,6 +96,7 @@ const routes = [
   '/resources/windows-server-2016-end-of-support-ontario',
   '/resources/it-support-halton-region',
   '/resources/how-to-compare-managed-it-quotes',
+  '/resources/it-support-and-security-services-toronto',
   '/resources/it-support-durham-region',
   '/resources/it-outsourcing-burlington',
   '/resources/24-7-it-support-toronto',

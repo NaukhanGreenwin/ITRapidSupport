@@ -34,12 +34,12 @@ const About: React.FC = () => {
               <div className="inline-flex items-center px-4 py-2 bg-red-600/10 text-red-600 rounded-full mb-6">
                 <span className="text-sm font-medium">Our Story</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Years of IT security excellence</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Managed IT and cybersecurity since 2018</h2>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                Founded with a simple mission: to make enterprise-grade IT security accessible to organizations of all sizes. What started as a small team of security analysts has grown into a respected force in the security landscape.
+                IT Rapid Support Inc. was founded in 2018 with a simple mission: to make enterprise-grade IT security accessible to organizations of all sizes. From our headquarters at 7810 Keele St in Vaughan, Ontario, one team handles both the day-to-day IT and the security — 24/7 helpdesk, managed detection and response, Microsoft 365 and Azure management, monitored and restore-tested backups, and email authentication (SPF, DKIM, DMARC).
               </p>
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                Today, we protect businesses throughout Canada and the United States, with our headquarters in Vaughan, Ontario. Our team of security professionals continues to push the boundaries of what's possible in threat detection and response.
+                We serve small and mid-sized businesses across Toronto, the Greater Toronto Area and the rest of Canada, with local on-site support throughout the GTA and cottage-country coverage in Muskoka. We publish our own first-party research on GTA business security and free self-assessment tools, so what we claim is checkable.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">

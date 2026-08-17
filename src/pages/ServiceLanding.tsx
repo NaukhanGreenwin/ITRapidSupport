@@ -53,7 +53,7 @@ const ServiceLanding: React.FC<ServiceLandingProps> = ({ slug }) => {
       areaServed: data.areaServed ?? 'Greater Toronto Area, Ontario',
       serviceType: data.serviceType ?? 'Managed IT Services',
     }),
-    generateFAQSchema(data.faqs),
+    generateFAQSchema(data.faqs, url),
   ];
 
   return (

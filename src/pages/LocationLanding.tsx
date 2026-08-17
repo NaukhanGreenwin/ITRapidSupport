@@ -154,7 +154,7 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
       },
       serviceType: isMuskoka ? 'Cottage IT Support & Smart Home Automation' : 'Managed IT Services',
     }),
-    generateFAQSchema(data.faqs),
+    generateFAQSchema(data.faqs, url),
   ];
 
   return (
@@ -293,11 +293,11 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
           <p className="text-gray-600 leading-relaxed">
             There is no sign-up, no email gate and no report to wait for: it runs entirely in your browser and nothing
             you enter is sent to us or stored anywhere. If you want a person to look at the results with you
-            afterwards, call {phoneDisplay} or{' '}
-            <Link to="/contact/" className="text-red-600 hover:text-red-700 font-medium">
-              get in touch
-            </Link>
-            .
+            afterwards, book a{' '}
+            <Link to="/it-health-check/" className="text-red-600 hover:text-red-700 font-medium">
+              free IT Health Check
+            </Link>{' '}
+            — a 15-minute assessment with a written report, no obligation — or call {phoneDisplay}.
           </p>
         </div>
       </div>
@@ -397,10 +397,16 @@ const LocationLanding: React.FC<LocationLandingProps> = ({ slug }) => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/contact/"
+              to="/it-health-check/"
               className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-medium border border-red-500"
             >
-              Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
+              Free IT Health Check <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/contact/"
+              className="inline-flex items-center justify-center bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-medium border border-white/30"
+            >
+              Schedule a Consultation <ChevronRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/services/"

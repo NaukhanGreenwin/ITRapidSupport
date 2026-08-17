@@ -1,8 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, Check, CheckCircle, Eye, Target, AlertTriangle, ChevronRight } from 'lucide-react';
-import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema, generateFAQSchema } from '../components/SEO';
 import ServiceDifferentiators from '../components/ServiceDifferentiators';
+
+// Self-contained answers for AI search. MDR is the term buyers search, so the
+// definition answer leads with it and with the distinction from antivirus and
+// from a SIEM, which is the comparison that actually gets asked.
+const faqs = [
+  {
+    question: 'What is Managed Detection and Response (MDR)?',
+    answer:
+      'Managed Detection and Response is a service where an external team monitors your systems for attacks, investigates what the alerts mean, and acts to contain them. The difference from ordinary security tooling is the response: MDR includes people who investigate and intervene, not only software that raises an alert.',
+  },
+  {
+    question: 'How is MDR different from antivirus?',
+    answer:
+      'Antivirus blocks recognised malicious files on a device. MDR watches behaviour across your endpoints, servers, and network for activity that indicates an intrusion in progress, including attacks that use legitimate tools and valid credentials and therefore never present a file for antivirus to block. MDR also adds human investigation and containment.',
+  },
+  {
+    question: 'Is MDR the same as a SIEM?',
+    answer:
+      'No. A SIEM collects and correlates logs, and someone still has to interpret what it produces. MDR is the service around that: the monitoring, the analysts investigating alerts, and the response when something is confirmed. A SIEM is a tool; MDR is the outcome of having that tool watched and acted on.',
+  },
+  {
+    question: 'Does MDR run outside business hours?',
+    answer:
+      'Yes. Monitoring runs 24/7, which is the point of the service. Intrusions are frequently timed for evenings, weekends, and holidays precisely because in-house teams are not watching then. Alerts are reviewed as they arrive rather than queued for the next business day.',
+  },
+  {
+    question: 'Do we need MDR if we already have an IT team?',
+    answer:
+      'Most internal IT teams are sized for keeping the business running, not for watching security telemetry around the clock. MDR adds the monitoring and investigation layer without expanding headcount, and the split of responsibilities between your team and ours is defined during onboarding.',
+  },
+  {
+    question: 'How do we get MDR for our business?',
+    answer:
+      'The first step is a review of what you run and what is already being monitored, so the service is scoped to your actual environment. IT Rapid Support delivers MDR to businesses across Toronto and the Greater Toronto Area. Call (289) 582-9930 or use the contact form to start.',
+  },
+];
 
 const ThreatDetection = () => {
   return (
@@ -22,6 +58,7 @@ const ThreatDetection = () => {
             areaServed: 'Greater Toronto Area, Ontario',
             serviceType: 'Managed Detection and Response (MDR)',
           }),
+          generateFAQSchema(faqs, '/services/threat-detection/'),
         ]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -59,6 +96,23 @@ const ThreatDetection = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Direct answer block — front-loaded for answer engines. */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            What is Managed Detection and Response (MDR)?
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Managed Detection and Response is a service where an external team monitors your systems for
+            attacks, investigates what the alerts actually mean, and acts to contain them. The difference
+            from ordinary security tooling is the response: MDR includes people who investigate and
+            intervene, not only software that raises an alert for someone else to read. IT Rapid Support
+            runs MDR around the clock for businesses across Toronto and the Greater Toronto Area, which
+            matters because intrusions are commonly timed for evenings and weekends.
+          </p>
         </div>
       </div>
 
@@ -420,6 +474,23 @@ const ThreatDetection = () => {
           >
             Take the free IT risk assessment <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="py-20 bg-slate-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">
+            Managed Detection and Response: common questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

@@ -34,8 +34,8 @@ const CtaSection: React.FC = () => {
                 <Link to="/contact/" className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center font-medium text-sm">
                   Get Started <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>
-                <Link to="/contact/" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded-lg hover:bg-white/15 transition-colors flex items-center justify-center font-medium text-sm">
-                  Request a Demo
+                <Link to="/it-health-check/" className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded-lg hover:bg-white/15 transition-colors flex items-center justify-center font-medium text-sm">
+                  Free IT Health Check
                 </Link>
               </div>
             </div>

@@ -310,6 +310,11 @@ export const locations: CityData[] = [
     ],
     faqs: [
       {
+        question: 'Who provides the best IT support in Vaughan?',
+        answer:
+          'The best IT support company for a Vaughan business is one with a real local presence, security included rather than sold separately, and inclusions you can verify in writing. IT Rapid Support is headquartered at 7810 Keele St in Vaughan itself, has served GTA businesses since 2018, and backs it up two ways: a free Managed IT Quote Checker that scores any provider\'s proposal — including ours — against 22 items, and a free IT Health Check that gives you a written report on your current environment before you commit to anyone.',
+      },
+      {
         question: 'Do you provide on-site support for businesses in Vaughan?',
         answer:
           'Yes. Our certified IT professionals are based in Vaughan and can be scheduled for regular on-site visits or respond quickly to emergencies. Some issues are best resolved in person, and our local technicians are always ready to provide hands-on assistance.',

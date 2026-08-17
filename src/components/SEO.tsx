@@ -45,6 +45,32 @@ export const generateBreadcrumbSchema = (breadcrumbs: {name: string; url: string
   };
 };
 
+// Canonical postal code for the Vaughan head office. Keep the space — this is
+// the NAP string used on GBP and every directory listing, and structured data
+// that disagrees with the citation set weakens entity matching. Do not collapse
+// it to "L4K4G7"; that variant was live in two schema blocks until 2026-08-15.
+export const ITRS_POSTAL_CODE = "L4K 4G7";
+
+// Topics the ITRS entity is actually in business for. knowsAbout is one of the
+// few properties that lets an answer engine resolve "who does managed IT in the
+// GTA" to this organization rather than to a page that merely contains the
+// words. Every entry must map to a service we genuinely deliver and describe
+// elsewhere on the site — this is an entity claim, not a keyword list.
+export const ITRS_KNOWS_ABOUT = [
+  "Managed IT services",
+  "Cybersecurity",
+  "Managed security services",
+  "Threat detection and response",
+  "Cloud security",
+  "Microsoft 365 administration",
+  "Network security",
+  "IT helpdesk support",
+  "Backup and disaster recovery",
+  "Endpoint protection",
+  "Incident response",
+  "IT outsourcing"
+];
+
 // Helper function to generate organization schema
 export const generateOrganizationSchema = () => {
   return {
@@ -55,15 +81,19 @@ export const generateOrganizationSchema = () => {
     "alternateName": "IT Rapid Support",
     "url": "https://itrapidsupport.com",
     "logo": "https://itrapidsupport.com/images/logo.png",
+    "image": "https://itrapidsupport.com/images/og-image.jpg",
     "email": "info@itrapidsupport.com",
     "telephone": "+1-289-582-9930",
+    "foundingDate": "2018",
+    "knowsAbout": ITRS_KNOWS_ABOUT,
+    "knowsLanguage": ["en", "fr"],
     "description": "Enterprise-grade cybersecurity and IT management solutions for businesses across the Greater Toronto Area.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "7810 Keele St",
       "addressLocality": "Vaughan",
       "addressRegion": "ON",
-      "postalCode": "L4K4G7",
+      "postalCode": ITRS_POSTAL_CODE,
       "addressCountry": "CA"
     },
     "location": {
@@ -93,7 +123,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
       streetAddress: "7810 Keele St",
       addressLocality: "Vaughan",
       addressRegion: "ON",
-      postalCode: "L4K4G7",
+      postalCode: ITRS_POSTAL_CODE,
       latitude: 43.7944,
       longitude: -79.5279,
       areaServed: "Greater Toronto Area, Vaughan, Mississauga, Brampton, Woodbridge, Concord"
@@ -103,7 +133,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
       streetAddress: "7810 Keele St",
       addressLocality: "Vaughan",
       addressRegion: "ON",
-      postalCode: "L4K4G7",
+      postalCode: ITRS_POSTAL_CODE,
       latitude: 43.7944,
       longitude: -79.5279,
       areaServed: "Greater Toronto Area, Toronto, Vaughan, Mississauga, Brampton, Woodbridge, Concord"
@@ -113,7 +143,7 @@ export const generateLocalBusinessSchema = (location?: string) => {
       streetAddress: "7810 Keele St",
       addressLocality: "Vaughan",
       addressRegion: "ON",
-      postalCode: "L4K4G7",
+      postalCode: ITRS_POSTAL_CODE,
       latitude: 43.7944,
       longitude: -79.5279,
       areaServed: "Greater Toronto Area, Vaughan, Mississauga, Brampton, Woodbridge, Concord"
@@ -175,10 +205,19 @@ export const generateLocalBusinessSchema = (location?: string) => {
     }
   ];
 
+  // @id is deliberately "#localbusiness" (lowercase) to match the static
+  // ProfessionalService node in index.html. Until 2026-08-15 this block used
+  // "#LocalBusiness" while index.html used "#localbusiness"; @id matching is
+  // case-sensitive, so every page shipped TWO local-business entities for the
+  // same company and split its signals. Same @id merges them into one node.
+  // The @type is widened to match the static block for the same reason.
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://itrapidsupport.com/#LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://itrapidsupport.com/#localbusiness",
+    "parentOrganization": {
+      "@id": "https://itrapidsupport.com/#organization"
+    },
     "name": loc.name,
     "image": "https://itrapidsupport.com/images/og-image.jpg",
     "logo": "https://itrapidsupport.com/images/logo.png",
@@ -284,11 +323,29 @@ export const generateVancouverLocalBusinessSchema = () => {
   };
 };
 
-// Helper function to generate FAQ schema
-export const generateFAQSchema = (faqs: {question: string; answer: string}[]) => {
+// Helper function to generate FAQ schema.
+// `pageUrl` is optional and backward compatible: when supplied the FAQPage gets
+// a stable @id and is attributed to the ITRS organization, which is what lets an
+// answer engine treat the Q&A as this company's statement rather than as
+// unattributed page text.
+export const generateFAQSchema = (
+  faqs: {question: string; answer: string}[],
+  pageUrl?: string
+) => {
+  const absoluteUrl = pageUrl
+    ? (pageUrl.startsWith("http") ? pageUrl : `https://itrapidsupport.com${pageUrl}`).replace(/\/*$/, "/")
+    : undefined;
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    ...(absoluteUrl
+      ? {
+          "@id": `${absoluteUrl}#faq`,
+          "url": absoluteUrl,
+          "publisher": { "@id": "https://itrapidsupport.com/#organization" }
+        }
+      : {}),
+    "inLanguage": "en-CA",
     "mainEntity": faqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
@@ -315,15 +372,23 @@ export const generateServiceSchema = (service: {
   serviceType?: string;
 }) => {
   const place = service.areaServedPlace;
+  const absoluteUrl = service.url.startsWith("http")
+    ? service.url
+    : `https://itrapidsupport.com${service.url}`;
+  // The provider carries the organization's @id so the Service resolves to the
+  // ITRS entity in the page graph instead of to a loose Organization stub that
+  // happens to share a name. Without the @id an answer engine has no reliable
+  // way to attribute the service to the same company described everywhere else.
+  const provider = service.provider
+    ? { "@type": "Organization", "name": service.provider }
+    : { "@id": "https://itrapidsupport.com/#organization" };
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${absoluteUrl.replace(/\/*$/, "/")}#service`,
     "name": service.name,
     "description": service.description,
-    "provider": {
-      "@type": "Organization",
-      "name": service.provider || "IT Rapid Support Inc."
-    },
+    "provider": provider,
     "serviceType": service.serviceType || "IT Services",
     "areaServed": place
       ? {
@@ -336,7 +401,7 @@ export const generateServiceSchema = (service: {
           ...(place.sameAs && place.sameAs.length ? { "sameAs": place.sameAs } : {})
         }
       : service.areaServed || "Greater Toronto Area, Ontario",
-    "url": service.url.startsWith("http") ? service.url : `https://itrapidsupport.com${service.url}`
+    "url": absoluteUrl
   };
 };
 

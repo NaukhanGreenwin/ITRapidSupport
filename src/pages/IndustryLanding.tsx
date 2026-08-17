@@ -32,7 +32,7 @@ const IndustryLanding: React.FC<IndustryLandingProps> = ({ slug }) => {
       areaServed: 'Greater Toronto Area, Ontario',
       serviceType: 'Managed IT Services',
     }),
-    generateFAQSchema(data.faqs),
+    generateFAQSchema(data.faqs, url),
   ];
 
   return (

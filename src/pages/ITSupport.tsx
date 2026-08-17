@@ -1,8 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, ArrowRight, Check, CheckCircle, HeadphonesIcon, Laptop, Server, ChevronRight } from 'lucide-react';
-import SEO, { generateLocalBusinessSchema, generateServiceSchema } from '../components/SEO';
+import SEO, { generateLocalBusinessSchema, generateServiceSchema, generateFAQSchema } from '../components/SEO';
 import ServiceDifferentiators from '../components/ServiceDifferentiators';
+
+// Self-contained answers for AI search. "IT support Toronto" is a hiring-intent
+// query, so these answer the questions a buyer asks before choosing a provider:
+// coverage hours, on-site vs remote, and how the arrangement differs from
+// break-fix. No response-time numbers or pricing — those are per-agreement.
+const faqs = [
+  {
+    question: 'What does managed IT support include?',
+    answer:
+      'Managed IT support covers the day-to-day running of your technology: a helpdesk your staff can contact for problems, proactive monitoring and patching of devices and servers, Microsoft 365 and account administration, backup oversight, user onboarding and offboarding, and escalation when something larger breaks.',
+  },
+  {
+    question: 'Do you provide 24/7 IT support?',
+    answer:
+      'Yes. The helpdesk operates 24/7 rather than only during office hours, so issues that surface overnight, on weekends, or over a holiday are handled when they occur. This matters most for businesses running shifts, serving customers outside 9-to-5, or operating across time zones.',
+  },
+  {
+    question: 'Do you offer on-site IT support in Toronto and the GTA?',
+    answer:
+      'Yes. Most issues are resolved remotely because that is faster, but on-site support is available across Toronto and the Greater Toronto Area when work needs hands on the equipment: network and cabling problems, hardware failures, office moves, and new-site setups. IT Rapid Support operates from Vaughan.',
+  },
+  {
+    question: 'How is managed IT support different from calling someone when something breaks?',
+    answer:
+      'Break-fix means you pay per incident and problems are only addressed after they have already disrupted work. Managed support is ongoing: monitoring, patching, and maintenance run continuously to prevent failures, and support is included rather than billed per call, which also removes the incentive to delay asking for help.',
+  },
+  {
+    question: 'Can you support our business if we have no internal IT staff?',
+    answer:
+      'Yes. Many clients have no in-house IT function at all and use IT Rapid Support as their complete IT department, covering the helpdesk, monitoring, security, cloud, backups, and technology planning. Others keep internal staff and use us for specific layers such as after-hours coverage or security.',
+  },
+  {
+    question: 'How do we switch IT providers without disrupting the business?',
+    answer:
+      'Transitions start with documenting what you run and what access exists, then moving monitoring, accounts, and support channels over in a planned sequence rather than all at once. Call (289) 582-9930 or use the contact form to talk through what a transition would look like for your environment.',
+  },
+];
 
 const ITSupport = () => {
   return (
@@ -22,6 +59,7 @@ const ITSupport = () => {
             areaServed: 'Greater Toronto Area, Ontario',
             serviceType: 'IT Support Services',
           }),
+          generateFAQSchema(faqs, '/services/it-support/'),
         ]}
         breadcrumbs={[
           { name: 'Home', url: '/' },
@@ -59,6 +97,23 @@ const ITSupport = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Direct answer block — front-loaded for answer engines. */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            What does managed IT support include?
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Managed IT support covers the day-to-day running of your technology: a helpdesk your staff
+            can contact for problems, proactive monitoring and patching of devices and servers,
+            Microsoft 365 and account administration, backup oversight, user onboarding and offboarding,
+            and escalation when something larger breaks. IT Rapid Support delivers this to businesses
+            across Toronto and the Greater Toronto Area with a 24/7 helpdesk and on-site service
+            available from its Vaughan office when an issue needs hands on the equipment.
+          </p>
         </div>
       </div>
 
@@ -348,6 +403,23 @@ const ITSupport = () => {
 
 
       <ServiceDifferentiators />
+
+      {/* FAQ Section */}
+      <div className="py-20 bg-slate-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10">
+            IT support in Toronto and the GTA: common questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-slate-900 to-red-900 py-16">
