@@ -412,42 +412,10 @@ export const allResources: ResourceItem[] = [
     link: "#",
     readTime: "8 min read"
   },
-  {
-    id: "managed-it-services-vaughan-guide",
-    // Deliberately pulled OFF the "managed IT services Vaughan" / "IT support Vaughan"
-    // head terms and onto buyer-research intent. This article was outranking the
-    // /it-support/vaughan/ city page it is supposed to feed; the city page is the
-    // single canonical target for the Vaughan head terms.
-    title: "7 Questions to Ask a Vaughan IT Provider Before You Sign",
-    seoTitle: "7 Questions to Ask a Vaughan IT Provider",
-    description: "A buyer's checklist for comparing IT providers in Vaughan: what 24/7 really covers, on-site response, what security is included, and how backups get tested.",
-    content: [
-      "Vaughan businesses have a different IT reality than a fully remote startup or a downtown enterprise office. Many run from offices, clinics, warehouses, showrooms, industrial units, professional practices, and multi-site teams where internet, phones, Microsoft 365, Wi-Fi, security cameras, point-of-sale systems, and line-of-business software all have to work together. When one layer fails, productivity stops quickly.",
-      "That is why the provider you pick should offer more than a remote helpdesk. The right one combines day-to-day support, proactive monitoring, cybersecurity, backup and recovery, and local on-site response when hands-on work is needed. This guide is a comparison checklist — seven questions to put to any shortlist before you sign an agreement.",
-      "One note on what this page is and is not. It is a buyer's guide, written to be used on our proposal as much as anyone else's. If you already know what you need and want the service detail instead — what is covered each month, how on-site dispatch works from our Keele Street office, and how the fee is scoped — that lives on our [IT support Vaughan](/it-support/vaughan/) page.",
-      "## Start With Coverage, Not Just Price",
-      "A low monthly price does not help if support is only available during business hours and your outage happens at night, before opening, or over a weekend. Ask whether the helpdesk is available 24/7, how urgent issues are triaged, and what happens when the problem cannot be fixed remotely. Vaughan businesses with customer-facing operations, shift work, or time-sensitive service commitments should know the after-hours path before an emergency.",
-      "## Local On-Site Support Still Matters",
-      "Remote tools solve most tickets, but not everything. Network cabling, firewall swaps, Wi-Fi dead zones, failed workstations, new office setups, and warehouse coverage problems often need a technician on site. IT Rapid Support operates from 7810 Keele St in Vaughan, which keeps local dispatch practical for businesses in Vaughan, Concord, Woodbridge, Maple, and the surrounding GTA — the coverage detail is set out on our [managed IT services in Vaughan](/it-support/vaughan/) page. If a provider cannot explain when and how they send someone on site, you do not yet know the real service model.",
-      "## Managed IT Should Include Security Basics",
-      "Modern IT support and cybersecurity are no longer separate conversations. A managed IT plan should include patching, endpoint protection, multi-factor authentication, secure Microsoft 365 configuration, email security, backup monitoring, and a clear response path if something suspicious happens. For higher-risk environments, add [managed detection and response](/services/threat-detection/) so alerts are monitored around the clock instead of waiting for someone to notice them during business hours.",
-      "## Backups Need Restore Tests",
-      "Many businesses have backups. Fewer know whether those backups restore quickly enough to keep the company running. Ask how often backups are checked, whether there is an offsite or immutable copy, who runs a restore during an emergency, and what the recovery target is for email, files, servers, and key applications. A managed provider should be able to connect backup monitoring to an actual [disaster recovery plan](/resources/disaster-recovery-plan-small-business-ontario/).",
-      "## Questions to Ask a Vaughan Managed IT Provider",
-      "Before choosing a provider, ask: 1. Is support available 24/7? 2. Do you provide local on-site service in Vaughan? 3. What is included in cybersecurity versus billed separately? 4. How are backups tested? 5. Who handles Microsoft 365, email security, and user onboarding? 6. What happens during a ransomware or business email compromise incident? 7. Will we get plain-language reporting on tickets, risk, and recurring issues?",
-      "## When to Switch From Break-Fix to Managed IT",
-      "Break-fix support waits for something to fail. Managed IT is designed to reduce the failures in the first place. If your team is losing time to recurring Wi-Fi issues, slow computers, Microsoft 365 problems, unclear vendor handoffs, or security questions nobody owns, it is usually time to move to a managed model. The goal is predictable support, fewer surprises, and a team that understands your environment before the next urgent issue lands.",
-      "IT Rapid Support provides [IT support in Vaughan](/it-support/vaughan/) and across the [Greater Toronto Area](/it-support/gta/), with 24/7 helpdesk coverage, cybersecurity, backup monitoring, Microsoft 365 support, and local on-site response from our Vaughan office. Call (289) 582-9930 to review your current IT setup and where the risk or downtime is hiding."
-    ].join('\n\n'),
-    type: "guide",
-    date: "July 16, 2026",
-    author: "IT Rapid Support Team",
-    authorTitle: "Managed IT & Cybersecurity, GTA",
-    authorImage: "/images/logo.png",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80",
-    link: "#",
-    readTime: "8 min read"
-  },
+  // 2026-08-17: "managed-it-services-vaughan-guide" removed and 301'd into
+  // /it-support/vaughan/ (static redirect stub in public/). The article kept
+  // outranking the city page on the Vaughan head terms even after the 2026-08-06
+  // refocus; its checklist content now lives on the city page itself.
   {
     id: "gta-email-spoofing-study-2026",
     title: "We Checked 118 GTA Business Domains — Only 40% Are Protected Against Email Spoofing",

@@ -412,7 +412,7 @@ export const locations: CityData[] = [
         heading: 'Why Vaughan Businesses Choose a Local Managed IT Partner',
         paragraphs: [
           'A managed IT provider headquartered in Vaughan means shorter on-site response, technicians who know the local business environment, and one accountable team for support, security, and cloud instead of separate vendors. Fixed monthly pricing keeps IT costs predictable while 24/7 coverage protects shift work, customer-facing operations, and time-sensitive service commitments.',
-          'If your business is comparing providers, the seven-question checklist in our guide below is a good place to start, or call (289) 582-9930 to review your current setup with our team.',
+          'If your business is comparing providers, the seven-question checklist further down this page is a good place to start, or call (289) 582-9930 to review your current setup with our team.',
         ],
       },
       {
@@ -421,6 +421,14 @@ export const locations: CityData[] = [
           'Vaughan has no shortage of IT companies, and most of them describe themselves in the same words, so the comparison has to be made on things that can be verified. Start with hours: is the helpdesk genuinely staffed around the clock, or does after-hours mean voicemail and a callback in the morning? Ask what happens at 11pm on a Saturday, and ask who picks up. Then ask about monitoring — a provider that only responds to tickets is running break-fix work on a monthly invoice, while a managed provider is watching systems continuously and closing failures before anyone notices them.',
           'The second question is whether security is inside the service or sold beside it. Splitting the helpdesk and the security stack across two vendors reliably produces gaps that neither vendor owns, and an incident turns into a hand-off argument. Our model puts both under one team: the people who administer your Microsoft 365 tenant and patch your servers are the people running your firewalls, endpoint protection, email security, MFA, and managed detection and response.',
           'The third is proximity and pricing structure. Because we are headquartered at 7810 Keele Street in Vaughan, on-site work in Vaughan, Concord, Woodbridge, Maple, Thornhill, and Kleinburg is local rather than a cross-GTA dispatch, and fixed monthly pricing removes the incentive for a provider to profit from your downtime. Put those three questions to any shortlist — or call (289) 582-9930 and put them to us.',
+        ],
+      },
+      {
+        heading: 'Seven Questions to Ask Any IT Provider in Vaughan Before You Sign',
+        paragraphs: [
+          'This checklist is written to be used on our proposal as much as anyone else\'s. Before signing with any IT provider in Vaughan, get clear answers to seven questions. First: is support genuinely available 24/7, and who responds — a person or an alert queue? A low monthly price does not help if your outage happens at night, before opening, or over a weekend. Second: do you provide local on-site service in Vaughan? Network cabling, firewall swaps, Wi-Fi dead zones, and warehouse coverage problems need a technician on site, and a provider who cannot explain when and how they dispatch one has not told you the real service model. Third: what is included in cybersecurity versus billed separately? Patching, endpoint protection, MFA, secure Microsoft 365 configuration, and email security belong inside a managed plan, not on a second invoice.',
+          'Fourth: how are backups tested? Many businesses have backups; fewer know whether they restore quickly enough to keep the company running. Ask how often restores are actually run, whether there is an offsite or immutable copy, and what the recovery target is for email, files, and key applications. Fifth: who handles Microsoft 365, email security, and user onboarding — one accountable team, or a hand-off between vendors? Sixth: what happens during a ransomware or business email compromise incident, in the first hour, not in the brochure? Seventh: will you get plain-language reporting on tickets, risk, and recurring issues that you can act on?',
+          'Get the answers in writing, from every provider on your shortlist. If your team is losing time to recurring Wi-Fi issues, slow computers, Microsoft 365 problems, or security questions nobody owns, it is usually time to move from break-fix to a managed model — and the provider you pick should be able to answer all seven of these without hedging. Call (289) 582-9930 and put them to us first.',
         ],
       },
       {
@@ -2957,7 +2965,7 @@ export const locations: CityData[] = [
     intro:
       'Businesses in Maple get big-company IT with a neighbourhood response time. IT Rapid Support is headquartered on Keele Street in Vaughan, a short drive from Maple, and delivers managed IT services, cybersecurity, and a 24/7 helpdesk to offices, clinics, and shops across the community.',
     nearbyAreas: ['Concord', 'Kleinburg', 'Woodbridge', 'Richmond Hill', 'Teston'],
-    parentCity: { slug: 'vaughan', city: 'Vaughan', anchor: 'IT support across Vaughan' },
+    parentCity: { slug: 'vaughan', city: 'Vaughan', anchor: 'IT services in Vaughan' },
     highlights: [
       {
         title: 'Local Vaughan Technicians',

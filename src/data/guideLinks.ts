@@ -13,13 +13,9 @@ const guide = (id: string, title: string): GuideLink => ({
 });
 
 export const guideLinks: Record<string, GuideLink> = {
-  // Anchor text deliberately avoids the "managed IT services Vaughan" head term:
-  // every York Region city page renders this link, and pointing that phrase at the
-  // article was competing with the /it-support/vaughan/ city page for it.
-  'managed-it-services-vaughan-guide': guide(
-    'managed-it-services-vaughan-guide',
-    '7 Questions to Ask a Vaughan IT Provider Before You Sign'
-  ),
+  // 2026-08-17: 'managed-it-services-vaughan-guide' removed — the article was
+  // 301'd into /it-support/vaughan/ (cannibalization consolidation). York Region
+  // city pages now fall through to the default guide set.
   'managed-it-support-cost-toronto': guide(
     'managed-it-support-cost-toronto',
     'How Much Does Managed IT Support Cost in Toronto?'
@@ -197,19 +193,6 @@ export const serviceGuideMap: Record<string, string[]> = {
   ],
 };
 
-// City pages: the York Region cluster leads with the Vaughan local guide.
-const yorkRegionSlugs = new Set([
-  'vaughan',
-  'woodbridge',
-  'concord',
-  'maple',
-  'richmond-hill',
-  'aurora',
-  'newmarket',
-  'king-city',
-  'stouffville',
-]);
-
 // Halton cities lead with the regional Halton guide. RelatedGuides is
 // md:grid-cols-3, so this replaces a slot rather than adding a fourth card.
 const haltonSlugs = new Set([
@@ -243,9 +226,7 @@ export const getCityGuides = (slug: string): GuideLink[] => {
     ]);
   }
   return getGuides([
-    yorkRegionSlugs.has(slug)
-      ? 'managed-it-services-vaughan-guide'
-      : 'managed-it-support-cost-toronto',
+    'managed-it-support-cost-toronto',
     'it-support-services-gta-buyers-guide',
     'choosing-managed-it-provider-toronto',
   ]);

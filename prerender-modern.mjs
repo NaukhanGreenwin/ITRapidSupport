@@ -130,7 +130,6 @@ const routes = [
   '/resources/dental-office-it-guide-ontario',
   '/resources/gta-smb-cybersecurity-report-2026',
   '/resources/gta-email-spoofing-study-2026',
-  '/resources/managed-it-services-vaughan-guide',
   '/resources/cybersecurity-services-toronto-guide',
   '/resources/it-companies-toronto-guide',
   '/tools/email-spoof-check',
