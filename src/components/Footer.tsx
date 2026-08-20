@@ -89,6 +89,9 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li><Link to="/security-assessment/" className="text-slate-300 hover:text-white text-sm block">Security Evaluation</Link></li>
               <li><Link to="/it-risk-calculator/" className="text-slate-300 hover:text-white text-sm block">Free IT Risk Calculator</Link></li>
+              <li><Link to="/tools/it-quote-checker/" className="text-slate-300 hover:text-white text-sm block">Free Managed IT Quote Checker</Link></li>
+              <li><Link to="/resources/gta-smb-cybersecurity-report-2026/" className="text-slate-300 hover:text-white text-sm block">GTA Small-Business Cybersecurity Report 2026</Link></li>
+              <li><Link to="/resources/gta-email-spoofing-study-2026/" className="text-slate-300 hover:text-white text-sm block">GTA Email Spoofing Study 2026</Link></li>
               <li><Link to="/managed-it-plans/" className="text-slate-300 hover:text-white text-sm block">Managed IT Plans</Link></li>
               <li><Link to="/cyber-incident/" className="text-slate-300 hover:text-white text-sm block">Breach Services</Link></li>
               <li><Link to="/solutions/" className="text-slate-300 hover:text-white text-sm block">Industry Solutions</Link></li>
