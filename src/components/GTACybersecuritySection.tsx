@@ -12,7 +12,7 @@ const GTACybersecuritySection: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Cybersecurity Services for the GTA</h2>
             <p className="text-gray-700 mb-3">
               IT Rapid Support delivers <Link to="/services/managed-security/" className="text-red-600 hover:text-red-700 font-medium">managed cybersecurity services</Link> for
-              businesses across Toronto and the Greater Toronto Area: managed firewalls,
+              businesses in Toronto, Vaughan, Mississauga, Brampton, and across the Greater Toronto Area: managed firewalls,
               endpoint protection, multi-factor authentication, and <Link to="/services/threat-detection/" className="text-red-600 hover:text-red-700 font-medium">24/7 threat detection and response (MDR)</Link> —
               plus email security with SPF, DKIM, and DMARC enforcement and monitored backups you can actually restore from.
               Already dealing with an incident? Our <Link to="/cyber-incident/" className="text-red-600 hover:text-red-700 font-medium">cyber incident response</Link> line

@@ -69,12 +69,14 @@ const HeroSection: React.FC = () => {
                 24/7 IT Support &amp; Cybersecurity
               </h2>
               
-              {/* Region-level copy only. City-specific phrasing was pulling
-                  city queries onto the homepage and away from the purpose-built
-                  city pages; the two links below hand those queries down with
-                  exact-match anchors instead. */}
+              {/* City targeting restored 2026-08-21. The 2026-08-15 region-only
+                  rewrite handed the Vaughan money terms to /it-support/vaughan/,
+                  which has no external links and could not hold them — the
+                  rankings were lost, not moved. The exact-match anchors stay:
+                  they pass depth traffic down without stripping the city terms
+                  off the page that actually ranks. */}
               <p className="text-lg text-gray-200 mb-4 max-w-xl lg:mx-0">
-                One team for your IT and your security — proactive monitoring,{' '}
+                One team for your IT and your security across Vaughan, Toronto and the GTA — proactive monitoring,{' '}
                 <Link to="/services/threat-detection/" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
                   24/7 managed threat detection and response
                 </Link>
@@ -85,7 +87,7 @@ const HeroSection: React.FC = () => {
                 .
               </p>
               <p className="text-base text-gray-300 mb-7 max-w-xl lg:mx-0">
-                Based in Vaughan at 7810 Keele St — see our{' '}
+                Based in Vaughan at 7810 Keele St, we deliver managed IT support, co-managed IT and cybersecurity to Vaughan, Concord and Woodbridge businesses — see our{' '}
                 <Link to="/it-support/vaughan/" className="text-white underline decoration-red-500 underline-offset-4 hover:text-red-400 transition-colors">
                   managed IT services in Vaughan
                 </Link>{' '}

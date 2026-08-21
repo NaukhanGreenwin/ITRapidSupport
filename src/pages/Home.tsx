@@ -18,24 +18,27 @@ const Home: React.FC = () => {
 
   // FAQ data for schema.
   //
-  // Deliberately region-level, not city-level. The homepage was ranking at or
-  // near position 1 for city-specific queries ("cybersecurity services vaughan",
-  // "it help desk services vaughan") that belong to the purpose-built city pages,
-  // which sat on page 3 for the same terms. City-named questions here were the
-  // strongest cannibalisation signal on the page, so every question is now
-  // answered at Toronto/GTA level and the city work is handed off by link.
+  // City-level questions are deliberate and were RESTORED on 2026-08-21 after the
+  // 2026-08-15 de-city-ification (72de1d32) measurably cost us the Vaughan money
+  // terms: "co-managed it services vaughan" fell from position 1 to nowhere,
+  // "it support vaughan" from 10 to 25, and sitewide impressions from 6,310 to
+  // 4,840 over four sustained days. The cannibalisation theory assumed
+  // /it-support/vaughan/ would inherit those queries; it has no external links
+  // and therefore no authority, so it never did — the rankings just went away.
+  // The homepage keeps the city targeting AND keeps the exact-match anchors that
+  // hand depth traffic down to the city pages.
   const faqs = [
     {
-      question: "What IT security services do you offer across Toronto and the GTA?",
-      answer: "We offer comprehensive IT security services across the Greater Toronto Area including managed security services, network security, cloud security, identity management, threat detection, and 24/7 monitoring and incident response."
+      question: "What IT security services do you offer in Toronto?",
+      answer: "We offer comprehensive IT security services in Toronto including managed security services, network security, cloud security, identity management, threat detection, and 24/7 monitoring and incident response."
     },
     {
-      question: "How does managed IT support work for a business in the Greater Toronto Area?",
-      answer: "Our managed IT support provides proactive monitoring, maintenance, 24/7 helpdesk, strategic IT planning, and cybersecurity protection under one fixed monthly fee - all designed to minimize downtime and maximize productivity. Each city we cover has its own page with the local detail, listed on our IT support across the GTA page."
+      question: "How can your managed IT support help my Mississauga business?",
+      answer: "Our managed IT support services help Mississauga businesses by providing proactive monitoring, maintenance, helpdesk support, strategic IT planning, and cybersecurity protection - all designed to minimize downtime and maximize productivity."
     },
     {
-      question: "Do you provide cybersecurity services for businesses across the Greater Toronto Area?",
-      answer: "Yes. We provide managed cybersecurity across the GTA including vulnerability assessments, security monitoring, managed detection and response, incident response, and email authentication with SPF, DKIM and DMARC, tailored to your industry requirements."
+      question: "Do you provide cybersecurity services for businesses in Vaughan?",
+      answer: "Yes, we provide specialized cybersecurity services for Vaughan businesses including vulnerability assessments, penetration testing, security monitoring, incident response, and compliance management tailored to your industry requirements."
     },
     {
       question: "What makes your IT support different from other providers in the Greater Toronto Area?",
@@ -57,7 +60,7 @@ const Home: React.FC = () => {
         "name": "IT Rapid Support",
         "alternateName": "IT Rapid Support Inc.",
         "url": "https://itrapidsupport.com/",
-        "description": "IT Rapid Support provides enterprise-grade cybersecurity solutions and managed IT services for businesses across Toronto and the Greater Toronto Area.",
+        "description": "IT Rapid Support provides enterprise-grade cybersecurity solutions and managed IT services for businesses across the Greater Toronto Area, including Vaughan, Mississauga, Brampton, Woodbridge, and Concord.",
         "publisher": {
           "@id": "https://itrapidsupport.com/#organization"
         }
@@ -81,6 +84,26 @@ const Home: React.FC = () => {
             {
               "@type": "City",
               "name": "Toronto"
+            },
+            {
+              "@type": "City",
+              "name": "Vaughan"
+            },
+            {
+              "@type": "City",
+              "name": "Mississauga"
+            },
+            {
+              "@type": "City",
+              "name": "Brampton"
+            },
+            {
+              "@type": "City",
+              "name": "Woodbridge"
+            },
+            {
+              "@type": "City",
+              "name": "Concord"
             },
             {
               "@type": "AdministrativeArea",
@@ -108,9 +131,9 @@ const Home: React.FC = () => {
   return (
     <PageTransition>
       <SEO 
-        title="Managed IT & Cybersecurity, Toronto & GTA"
-        description="Your IT and your security handled by one team, not two vendors. 24/7 helpdesk, on-site across Toronto and the GTA, fixed monthly fee. Call (289) 582-9930."
-        keywords="IT security Toronto, managed IT services GTA, cybersecurity Ontario, Toronto IT support, GTA managed security, Greater Toronto Area IT company, enterprise security"
+        title="Managed IT & Cybersecurity | Toronto, Vaughan & GTA"
+        description="Your IT and your security handled by one team, not two vendors. 24/7 helpdesk, on-site from our Vaughan office, fixed monthly fee. Call (289) 582-9930."
+        keywords="IT security Toronto, managed IT services GTA, cybersecurity Ontario, Toronto IT support, Vaughan IT services, IT support Vaughan, co-managed IT services Vaughan, Mississauga cybersecurity, Brampton IT support, enterprise security"
         schema={combinedSchema}
         breadcrumbs={[{ name: 'Home', url: '/' }]}
       />

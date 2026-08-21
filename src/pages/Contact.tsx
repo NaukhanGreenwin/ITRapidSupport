@@ -96,9 +96,9 @@ const Contact: React.FC = () => {
   return (
     <>
       <SEO
-        title="Contact Us | Toronto & GTA"
-        description="Contact IT Rapid Support: phone, email, and our office address in Vaughan. Call (289) 582-9930 or send a message and our team will get back to you."
-        keywords="contact IT Rapid Support, IT Rapid Support phone number, IT Rapid Support address, IT Rapid Support email"
+        title="Contact Us | 24/7 IT Support Toronto & GTA"
+        description="Contact IT Rapid Support for 24/7 managed IT support and cybersecurity across Toronto, Vaughan and the GTA. Call (289) 582-9930."
+        keywords="contact IT Rapid Support, IT support Toronto contact, IT support Vaughan, managed IT services GTA contact, cybersecurity company Toronto phone"
         canonicalUrl="/contact"
         schema={generateLocalBusinessSchema('vaughan')}
         breadcrumbs={[
@@ -391,16 +391,16 @@ const Contact: React.FC = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Visit Our Vaughan Office
               </h2>
-              {/* Contact-intent copy only. This page was outranking
-                  /it-support/gta/ for "it support gta" and "24/7 it support
-                  toronto"; the service-term description moved out and the
-                  exact-match anchor below hands those queries to the page
-                  built for them. */}
+              {/* Service-term copy restored 2026-08-21 alongside the homepage:
+                  the 2026-08-15 strip-out (72de1d32) did not move these queries
+                  to /it-support/gta/, it lost them. The exact-match anchor stays
+                  so the GTA page still gets the internal signal. */}
               <p className="text-gray-600 mb-6">
                 IT Rapid Support is headquartered at 7810 Keele St in Vaughan (Concord), Ontario —
-                minutes from Highway 407 and Highway 400. Remote helpdesk and scheduled on-site
-                attendance are dispatched from this office. For what the service covers and where,
-                see{' '}
+                minutes from Highway 407 and Highway 400. From here our technicians deliver managed IT
+                support and cybersecurity services to businesses across Vaughan, Concord, Woodbridge,
+                Toronto, and the entire Greater Toronto Area, with both remote helpdesk and on-site support.
+                For what the service covers and where, see{' '}
                 <Link to="/it-support/gta/" className="text-red-600 hover:text-red-700 font-medium">
                   IT support across the GTA
                 </Link>
