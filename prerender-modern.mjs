@@ -98,6 +98,7 @@ const routes = [
   '/resources/how-to-compare-managed-it-quotes',
   '/resources/it-support-and-security-services-toronto',
   '/resources/business-it-monitoring-gta',
+  '/resources/it-network-support-gta',
   '/resources/it-services-thornhill',
   '/resources/it-support-durham-region',
   '/resources/it-outsourcing-burlington',
